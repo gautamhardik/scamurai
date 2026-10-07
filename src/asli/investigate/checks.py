@@ -19,6 +19,11 @@ from asli.risk.signals import ladder, make
 from asli.serp.client import SerpOutcome
 
 AUTHORITY_CATEGORIES = {"government", "utility", "bank", "telecom"}
+AUTHORITY_SCHEMES = {"digital_arrest", "electricity_disconnection", "kyc_update", "bank_account_block", "tax_refund",
+                     "courier_customs"}
+# Handles of consumer UPI apps (Google Pay, PhonePe, Paytm, Amazon Pay, BHIM…): personal accounts.
+PERSONAL_UPI = {"okaxis", "okhdfcbank", "oksbi", "okicici", "ybl", "ibl", "axl", "paytm", "ptyes", "ptaxis", "pthdfc",
+                "ptsbi", "apl", "yapl", "upi", "fam", "freecharge", "jupiteraxis", "slc", "naviaxis", "superyes"}
 RESIDENTIAL_TYPES = (
     "apartment", "housing society", "residential", "condominium", "hostel", "paying guest", "pg ",
     "guest house", "hotel", "homestay", "society",
@@ -53,6 +58,17 @@ class Ctx:
 
     def ok(self, purpose: str) -> list[tuple[SearchSpec, SerpOutcome]]:
         return [(s, o) for s, o in self.by_purpose(purpose) if o.status in ("done", "no_results")]
+
+
+REPORT_CLASSES = {"complaint_forum", "news", "government"}
+
+
+def report_confidence(independent: list[EvidenceItem]) -> float:
+    """Reports on complaint forums, news or government sites count fully; mentions on arbitrary pages
+    (blogs, SEO pages, other scam-checkers' examples) can't reach the strong-evidence gate on their own."""
+    if any(i.source_class in REPORT_CLASSES for i in independent):
+        return ladder(len(independent))
+    return 0.5
 
 
 def _top(items: list[EvidenceItem], n: int = 5) -> list[str]:
@@ -107,6 +123,8 @@ def message_signals(ctx: Ctx) -> list[Signal]:
         weight = None
         if hit.signal == "payment_request" and g.of("upi_id"):
             weight = 0.25
+        if hit.signal == "too_good_to_be_true" and hit.detail == "task":
+            weight = 0.5  # paid likes/reviews/tasks: the task-scam hook, not just optimistic marketing
         out.append(make(hit.signal, confidence=0.95 if hit.signal == "credential_request" else 0.9,
                         evidence_ids=[span.id], weight=weight, quote=hit.quote, detail=hit.detail))
         seen.add(hit.signal)
@@ -195,6 +213,15 @@ def identity_signals(ctx: Ctx) -> list[Signal]:
             out.append(make("official_domain_mismatch", confidence=off.confidence, evidence_ids=[span.id, *off.evidence_ids],
                             entity_ids=[e.id], domain=e.attrs["registrable"], org=off.name, official=off.domains[0]))
 
+    # Authorities, banks and utilities don't collect money into personal UPI accounts.
+    if g.org_category in AUTHORITY_CATEGORIES or g.scheme in AUTHORITY_SCHEMES:
+        for upi in g.of("upi_id"):
+            span = book.add_message_span(_context(g.haystack, upi.raw), [upi.id])
+            personal = upi.attrs.get("handle") in PERSONAL_UPI
+            out.append(make("authority_personal_upi", confidence=0.85 if personal else 0.7, evidence_ids=[span.id],
+                            entity_ids=[upi.id], upi=upi.value, category=g.org_category or "government"))
+            break
+
     # Trust: every link/email domain in the message is official.
     linked = [e for e in g.of("url", "email") if e.attrs.get("registrable") and not e.attrs.get("free_mail")]
     if off and linked and all(domains.domain_matches(e.attrs["registrable"], off.domains) for e in linked):
@@ -259,9 +286,23 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
         if pid in confirmed and len(independent) < 3:
             continue
         if independent:
-            out.append(make("phone_reported", confidence=ladder(len(independent)), evidence_ids=_top(independent),
+            out.append(make("phone_reported", confidence=report_confidence(independent), evidence_ids=_top(independent),
                             entity_ids=[pid], phone=phone.attrs.get("display"), n=len(independent),
                             sites=_sites(independent)))
+    return out
+
+
+def upi_signals(ctx: Ctx) -> list[Signal]:
+    g, book = ctx.graph, ctx.book
+    out: list[Signal] = []
+    for spec, _outcome in ctx.ok("upi_reputation"):
+        uid = spec.entity_ids[0]
+        upi = next(e for e in g.entities if e.id == uid)
+        items = [i for i in book.for_search(spec.id) if uid in i.matched_entities and i.lexicon_hits]
+        independent = EvidenceBook.independent(items)
+        if independent:
+            out.append(make("upi_reported", confidence=report_confidence(independent), evidence_ids=_top(independent),
+                            entity_ids=[uid], upi=upi.value, n=len(independent), sites=_sites(independent)))
     return out
 
 
@@ -279,7 +320,7 @@ def domain_signals(ctx: Ctx) -> list[Signal]:
         independent = EvidenceBook.independent(reports)
         display = domains.defang(reg) if reg else ent.value
         if independent:
-            out.append(make("domain_reported", confidence=ladder(len(independent)), evidence_ids=_top(independent),
+            out.append(make("domain_reported", confidence=report_confidence(independent), evidence_ids=_top(independent),
                             entity_ids=[eid], domain=display, n=len(independent), sites=_sites(independent)))
         elif not mentioning:
             span = book.add_message_span(_context(g.haystack, ent.raw), [eid])
@@ -475,7 +516,7 @@ def _sites(items: list[EvidenceItem], n: int = 3) -> str:
 
 def all_signals(ctx: Ctx) -> list[Signal]:
     signals = (
-        message_signals(ctx) + identity_signals(ctx) + phone_signals(ctx) + domain_signals(ctx)
+        message_signals(ctx) + identity_signals(ctx) + phone_signals(ctx) + upi_signals(ctx) + domain_signals(ctx)
         + pattern_signals(ctx) + shopping_signals(ctx) + job_signals(ctx) + place_signals(ctx)
     )
     # one signal per (id, entities) — keep the most confident

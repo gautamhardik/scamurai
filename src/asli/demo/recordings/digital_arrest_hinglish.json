@@ -1,0 +1,1506 @@
+{
+ "scenario": "digital_arrest_hinglish",
+ "recorded_at": "2026-10-07T15:46:09+05:30",
+ "input_hash": "eeee851057dcff39c4a96a75517fd0a727218d3ffcb50f3a93c56ae456b73a64",
+ "llm": {
+  "data": {
+   "language": "hinglish",
+   "ocr_text": "",
+   "content_kind": "whatsapp",
+   "scheme": "digital_arrest",
+   "claimed_org": {
+    "name": "CBI",
+    "category": "government"
+   },
+   "sender": {
+    "name": null,
+    "email": null,
+    "phone": null
+   },
+   "phones": [],
+   "urls": [],
+   "emails": [],
+   "upi_ids": [
+    "cbi.verify@okaxis"
+   ],
+   "amounts": [
+    {
+     "text": "50,000",
+     "purpose": "fee"
+    }
+   ],
+   "product": {
+    "name": null,
+    "brand": null,
+    "claimed_price_text": null
+   },
+   "job": {
+    "company": null,
+    "role": null,
+    "salary_text": null,
+    "location": null,
+    "fee_requested": false
+   },
+   "address": null,
+   "app_name": null,
+   "requested_actions": [
+    {
+     "type": "video_call",
+     "quote": "Video call par raho"
+    },
+    {
+     "type": "pay",
+     "quote": "Abhi 50,000 security deposit bhejo is UPI par"
+    }
+   ],
+   "pressure": [
+    {
+     "type": "threat",
+     "quote": "warna arrest warrant nikal jayega"
+    },
+    {
+     "type": "urgency",
+     "quote": "Abhi"
+    }
+   ],
+   "ai_directed_text": []
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+ },
+ "expected": {
+  "level": "HIGH_RISK",
+  "flags": [
+   "authority_personal_upi",
+   "extortion_threat",
+   "known_scam_pattern",
+   "org_impersonation_reports",
+   "payment_request",
+   "threat_or_urgency"
+  ]
+ },
+ "searches": {
+  "879adb7f22a1e42924d9d4d708ffcd5ced80d0ee4f5c5e2f00681f66cd640eb9": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"cbi.verify@okaxis\""
+   },
+   "response": {
+    "search_information": {
+     "query_displayed": "\"cbi.verify@okaxis\"",
+     "total_results": 0,
+     "time_taken_displayed": 0.19,
+     "organic_results_state": "Fully empty"
+    },
+    "_searched_at": "2026-10-07 10:12:20 UTC"
+   }
+  },
+  "dfd23becac665a763b4ae0a9903d0854f68760e28429e7d3d1a16fc72a5b1c20": {
+   "engine": "google_news",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "q": "digital arrest scam"
+   },
+   "response": {
+    "news_results": [
+     {
+      "position": 1,
+      "title": "Digital arrest scams: CBI’s nationwide crackdown and the Supreme Court’s continuing oversight",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Devesh Pandey"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/national/digital-arrest-scams-cbis-nationwide-crackdown-and-the-supreme-courts-continuing-oversight/article71431189.ece",
+      "thumbnail": "https://th-i.thgim.com/public/news/national/4fp50i/article71431191.ece/alternates/LANDSCAPE_1200/iStock-1461047320.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDVibnBSZFdvMGNrdHBWWHA1VFJDZkF4ampCU2dLTWdZTkE2U0dpZ3M",
+      "date": "09/05/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-05T07:00:00Z"
+     },
+     {
+      "position": 2,
+      "title": "Digital arrest scam: 67-year-old woman loses ₹13 lakh to fake police officials; 5 money lessons for senior citizens",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Shivam Shukla"
+       ]
+      },
+      "link": "https://www.livemint.com/money/personal-finance/digital-arrest-scam-67-year-old-woman-loses-13-lakh-to-fake-police-officials-5-money-lessons-for-senior-citizens-11791264466167.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2026/10/06/1600x900/logo/20f45808-d6f3-47c1-8404-f4d2ced1175f_1791265192481_h6qM_1791265213577_XQEj_d7eba450-fd2b-45ab-8701-7715b94b8e68_JFIA.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNVpXbnBKVTNWTlprRnVUa3AxVFJDZkF4ampCU2dLTWdB",
+      "date": "10/06/2026, 06:20 AM, +0000 UTC",
+      "iso_date": "2026-10-06T06:20:19Z"
+     },
+     {
+      "position": 3,
+      "title": "80-year-old doctor loses Rs 58.5 in digital arrest scam, 2 arrested",
+      "source": {
+       "name": "Medical Dialogues",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://medicaldialogues.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Kajal Rajput"
+       ]
+      },
+      "link": "https://medicaldialogues.in/amp/news/health/doctors/80-year-old-doctor-loses-rs-585-in-digital-arrest-scam-2-arrested-180613",
+      "thumbnail": "https://medicaldialogues.in/h-upload/2025/02/06/1500x900_272986-cyber-crime.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJVVTFDVWpKRVFsRmtOR2RYVFJDdEF4akxCU2dLTWdZQlVaU3lLQWM",
+      "date": "10/06/2026, 08:14 AM, +0000 UTC",
+      "iso_date": "2026-10-06T08:14:07Z"
+     },
+     {
+      "position": 4,
+      "title": "Rs 6L digital arrest scam opens up Rs 50L trail, 2 held",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "ishita jairath"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/delhi/rs-6l-digital-arrest-scam-opens-up-rs-50l-trail-2-held/articleshow/134679018.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-33486062,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXlZVWxXVlhWcWNGcENVVEZFVFJDZkF4ampCU2dLTWdNRm94QQ",
+      "date": "10/04/2026, 05:57 PM, +0000 UTC",
+      "iso_date": "2026-10-04T17:57:00Z"
+     },
+     {
+      "position": 5,
+      "title": "Vrindavan-based businessman duped of Rs 30 lakh in digital arrest scam",
+      "source": {
+       "name": "ThePrint",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://theprint.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://theprint.in/india/vrindavan-based-businessman-duped-of-rs-30-lakh-in-digital-arrest-scam/3062140/?amp",
+      "thumbnail": "https://staticprintenglish.theprint.in/wp-content/uploads/2023/06/theprint_default_image_new.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWpVek5zVjFaMk56WkZRVzE2VFJDZkF4ampCU2dLTWdhTmNaYUlMUWc",
+      "date": "10/05/2026, 08:48 AM, +0000 UTC",
+      "iso_date": "2026-10-05T08:48:56Z"
+     },
+     {
+      "position": 6,
+      "title": "Police Uncover Major Digital Arrest Cyber Fraud Ring",
+      "source": {
+       "name": "Rediff",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.rediff.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.rediff.com/news/report/two-held-in-delhi-digital-arrest-fraud-case-cambodia-link-under-scanner/20261004.htm",
+      "thumbnail": "https://im.rediff.com/1600-900/news/2026/oct/fraud-cyber-warning-dialogue-01.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTRkMmt6UVRaTWFGTmxSMkZEVFJDZkF4ampCU2dLTWdZQkVvWXdGUW8",
+      "date": "10/04/2026, 09:21 AM, +0000 UTC",
+      "iso_date": "2026-10-04T09:21:34Z"
+     },
+     {
+      "position": 7,
+      "title": "Digital Arrest Scam Goes Beyond The Screen: Woman Loses Gold And Rs 2-Crore Home",
+      "source": {
+       "name": "Outlook Money",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.outlookmoney.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.outlookmoney.com/news/digital-arrest-scam-goes-beyond-the-screen-woman-loses-gold-and-rs-2-crore-home",
+      "thumbnail": "https://media.assettype.com/outlookmoney/2026-01-15/vga3t4nn/fraud.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVlSM1paZGtSblgwMVNRMDB0VFJERUF4aW1CU2dLTWdhUnBKTElOUWM",
+      "date": "10/02/2026, 09:48 AM, +0000 UTC",
+      "iso_date": "2026-10-02T09:48:21Z"
+     },
+     {
+      "position": 8,
+      "title": "Digital Arrest Scams: The Hard Questions Behind The Supreme Court’s New Directions",
+      "source": {
+       "name": "LawBeat",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://lawbeat.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Salil Tiwari"
+       ]
+      },
+      "link": "https://lawbeat.in/columns/digital-arrest-scams-the-hard-questions-behind-the-supreme-courts-new-directions-1625775",
+      "thumbnail": "https://lawbeat.in/h-upload/2026/08/26/2252438-supreme-court-digital-arrest-scam-directionsjpg.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXphM3BJTkhoWFFqTXdOaTFaVFJDZkF4ampCU2dLTWdrRlVZWkxIV2tpRkFF",
+      "date": "08/25/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-25T07:00:00Z"
+     },
+     {
+      "position": 9,
+      "title": "Ahmedabad Accountant Loses Rs 50 Lakh In ‘Digital Arrest’ Scam",
+      "source": {
+       "name": "News Mobile",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.newsmobile.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.newsmobile.in/fraud-and-scam/ahmedabad-accountant-loses-rs-50-lakh-in-digital-arrest-scam/",
+      "thumbnail": "https://www.newsmobile.in/wp-content/uploads/2026/10/ChatGPT-Image-Oct-5-2026-02_00_11-PM-1.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWZVblZSVVdwdU9GUmhjMWxFVFJDZkF4amlCU2dLTWdhSklaS2xuZ2s",
+      "date": "10/05/2026, 08:34 AM, +0000 UTC",
+      "iso_date": "2026-10-05T08:34:45Z"
+     },
+     {
+      "position": 10,
+      "title": "Retired Army Officer Loses ₹12 Lakh in ‘Digital Arrest’ Scam in Pune",
+      "source": {
+       "name": "SSBCrack",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.ssbcrack.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.ssbcrack.com/2026/09/retired-army-officer-loses-%E2%82%B912-lakh-in-digital-arrest-scam-in-pune.html",
+      "thumbnail": "https://media.ssbcrack.com/2026/09/digital-arrest-scam-1200x675.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWFla1pqYmtsb1oybExhelphVFJDZkF4ampCU2dLTWdhWkk1QUtIZ2c",
+      "date": "09/25/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-25T07:00:00Z"
+     },
+     {
+      "position": 11,
+      "title": "Senior citizen loses ₹33L in ‘digital arrest’ scam; 2 held | Mumbai news",
+      "source": {
+       "name": "Hindustan Times",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hindustantimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "megha sood"
+       ]
+      },
+      "link": "https://www.hindustantimes.com/cities/mumbai-news/senior-citizen-loses-33l-in-digital-arrest-scam-2-held-101791226500689.html",
+      "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/10/05/1600x900/logo/-p-Senior-citizen-loses--33L-in--digital-arrest--s_1791226498451_WsT0.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxTMlY1UTFWWWFHZzFNVm93VFJDZkF4ampCU2dLTWdhZFE1Q0xxUVk",
+      "date": "10/06/2026, 02:18 AM, +0000 UTC",
+      "iso_date": "2026-10-06T02:18:00Z"
+     },
+     {
+      "position": 12,
+      "title": "Elderly Gujarat woman loses Rs 58 lakh in digital arrest scam; 2 arrested",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Brijesh Doshi"
+       ]
+      },
+      "link": "https://www.indiatoday.in/cities/other-cities/story/digital-arrest-scam-rajkot-retired-doctor-loses-rs-58-lakh-two-factory-owners-held-3009227-2026-10-04",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202610/cyber-fraud-023719485-16x9.jpg?VersionId=FRK6fOWhRWv1Lv0_mNjOUBrH6LE4mX2S&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTRTWGw1Vm05TmJYYzVZek5MVFJDZkF4ampCU2dLTWdZRlVvaElwZ1k",
+      "date": "10/04/2026, 09:48 AM, +0000 UTC",
+      "iso_date": "2026-10-04T09:48:19Z"
+     },
+     {
+      "position": 13,
+      "title": "Digital Arrest: A Fraud Built on Fear",
+      "source": {
+       "name": "Rising Kashmir",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://risingkashmir.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://risingkashmir.com/editorial/digital-arrest-a-fraud-built-on-fear-12610793",
+      "thumbnail": "https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/rising-kashmir/media/media_files/2026/09/30/digital-arrest-2026-09-30-23-27-28.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVNiVVZoV1Vvd2JIRnhPWEZwVFJEbkFoaUFCU2dLTWdrZEE0cEtuaWhWQXdN",
+      "date": "09/30/2026, 10:05 PM, +0000 UTC",
+      "iso_date": "2026-09-30T22:05:37Z"
+     },
+     {
+      "position": 14,
+      "title": "Man from Keralam arrested for involvement in digital arrest scam",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/cities/Coimbatore/man-from-keralam-arrested-for-involvement-in-digital-arrest-scam/article71537357.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "10/02/2026, 03:16 PM, +0000 UTC",
+      "iso_date": "2026-10-02T15:16:45Z"
+     },
+     {
+      "position": 15,
+      "title": "CBI searches 89 locations across 20 States in crackdown against ‘digital arrest’ syndicates; three held",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Devesh Pandey"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/national/cbi-searches-89-locations-across-20-states-in-crackdown-against-digital-arrest-syndicates-3-held/article71427679.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/b5erlq/article71428052.ece/alternates/LANDSCAPE_1200/2025-06-12T193054Z_2131583905_RC261FA2SPE2_RTRMADP_3_ITALY-SPYWARE-PARAGON.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXhiMVpSZW5ONGRGazNVbFZyVFJDZkF4ampCU2dLTWdhVkE0aU9sUWc",
+      "date": "09/04/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-04T07:00:00Z"
+     },
+     {
+      "position": 16,
+      "title": "Digital arrest scams: What has the Supreme Court directed to protect victims?",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Lia Maria"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/national/digital-arrest-scams-what-has-the-supreme-court-directed-to-protect-victims/article71332091.ece",
+      "thumbnail": "https://th-i.thgim.com/public/news/national/ja2df1/article71332401.ece/alternates/LANDSCAPE_1200/iStock-1608428927.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVdWWE51U1dsUFJGOHpiWFpyVFJDZkF4ampCU2dLTWdtSkFZeXRNV1praUFJ",
+      "date": "08/11/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-11T07:00:00Z"
+     },
+     {
+      "position": 17,
+      "title": "Digital Arrest Scams and the Limits of Domestic Enforcement",
+      "source": {
+       "name": "orfonline.org",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.orfonline.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.orfonline.org/expert-speak/digital-arrest-scams-and-the-limits-of-domestic-enforcement",
+      "thumbnail": "https://www.orfonline.org/public/uploads/posts/image/1784367537_img-digital-arrest.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVFWMmR6TFRZMmFrYzJVMnhzVFJEUUF4aVVCU2dLTWdZbFpKQ09xUVk",
+      "date": "07/18/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-18T07:00:00Z"
+     },
+     {
+      "position": 18,
+      "title": "Retired Karnataka Doctor Loses ₹1.79 Crore in Digital Arrest Scam",
+      "source": {
+       "name": "The420.in",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://the420.in/kalaburagi-digital-arrest-ed-nia-pfi-doctor-fraud/",
+      "thumbnail": "https://the420.in/wp-content/uploads/2025/11/Red-and-Black-Retro-Landscape-YouTube-Thumbnail-background-2-1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpiMGRmYW5GVGJqVnVUazh5VFJDZkF4ampCU2dLTWdhZE5LQ3JuUWs",
+      "date": "08/31/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-31T07:00:00Z"
+     },
+     {
+      "position": 19,
+      "title": "Digital Arrest Scam: Vadaj Accountant Coerced into Transferring ₹50 Lakh During Video Call Interrogation",
+      "source": {
+       "name": "GujaratSamachar English",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://english.gujaratsamachar.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://english.gujaratsamachar.com/news/ahmedabad/digital-arrest-scam-vadaj-accountant-coerced-into-transferring-indian-rupee50-lakh-during-video-call-interrogation-75439498949",
+      "thumbnail": "https://cdn.gujaratsamachar.com/media/post/2026/10/153cd00641957e67b1b48319bec298d2.webp?w=1060&f=webp&q=90",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVNOSHB2TUhBNFVVZHpSWEpxVFJDb0FSaXNBaWdCTWdZbGRJN3NLUWc",
+      "date": "10/05/2026, 10:06 AM, +0000 UTC",
+      "iso_date": "2026-10-05T10:06:05Z"
+     },
+     {
+      "position": 20,
+      "title": "Digital arrest scam: cyber fraudsters loot ₹10 crore from retired engineer",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/andhra-pradesh/digital-arrest-scam-cyber-fraudsters-loot-10-crore-from-retired-engineer/article71525060.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "09/29/2026, 04:59 PM, +0000 UTC",
+      "iso_date": "2026-09-29T16:59:33Z"
+     },
+     {
+      "position": 21,
+      "title": "Retired teacher duped of ₹89 lakh in digital arrest scam in Mumbai, had taken a loan to pay | India News",
+      "source": {
+       "name": "Hindustan Times",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hindustantimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "megha sood"
+       ]
+      },
+      "link": "https://www.hindustantimes.com/india-news/retired-teacher-duped-of-89-lakh-in-digital-arrest-scam-in-mumbai-chembur-had-taken-a-loan-to-pay-101791094678059.html",
+      "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/10/04/1600x900/logo/PTI01-16-2025-000023B-0_1737015306746_1791095203893_b5Jf_1fdf0ca0-efb4-4389-a19a-77cd37d10ff2_usKW.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNDFaVzAxU1Y5WmNGZDNZbmMxVFJDZkF4ampCU2dLTWdrQlFJN0pJQ2pnU1FJ",
+      "date": "10/04/2026, 06:35 AM, +0000 UTC",
+      "iso_date": "2026-10-04T06:35:34Z"
+     },
+     {
+      "position": 22,
+      "title": "Stop the scam: On the ‘digital arrest’ menace",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/opinion/editorial/stop-the-scam-on-the-digital-arrest-menace/article71314079.ece",
+      "thumbnail": "https://www.thehindu.com/static/content/images/20260921062859/editorialLeadImg.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVVjbGRQTkhZeFVtUnRWa3RaVFJDZ0F4amhCU2dLTWdZdGRKWnZyUWM",
+      "date": "08/07/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-07T07:00:00Z"
+     },
+     {
+      "position": 23,
+      "title": "‘You funded Red Fort blast’: Fake NIA officers put Delhi couple under 7-day digital arrest",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indianexpress.com/article/cities/delhi/you-funded-red-fort-blast-fake-nia-officers-put-delhi-couple-under-7-day-digital-arrest-10859495/",
+      "thumbnail": "https://images.indianexpress.com/2026/09/arrested-accused.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVFZekZoVEc1d09FbEJWVGh0VFJDZkF4ampCU2dLTWdZdE5aaXVvUWc",
+      "date": "09/02/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-02T07:00:00Z"
+     },
+     {
+      "position": 24,
+      "title": "Kerala Man Held In Rs 98 Lakh Coimbatore Digital Arrest Scam",
+      "source": {
+       "name": "News Mobile",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.newsmobile.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.newsmobile.in/fraud-and-scam/kerala-man-held-in-rs-98-lakh-coimbatore-digital-arrest-scam/",
+      "thumbnail": "https://www.newsmobile.in/wp-content/uploads/2026/10/ChatGPT-Image-Oct-3-2026-03_06_06-PM.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXBVV0ZmTTBwTGJsQklRMXBFVFJDZkF4ampCU2dLTWdrQk1JWUVVaU1taHdJ",
+      "date": "10/03/2026, 09:40 AM, +0000 UTC",
+      "iso_date": "2026-10-03T09:40:53Z"
+     },
+     {
+      "position": 25,
+      "title": "Ahmedabad Accountant Loses ₹50 Lakh in Digital Arrest Scam",
+      "source": {
+       "name": "The420.in",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://the420.in/ahmedabad-vadaj-digital-arrest-accountant-50-lakh-cyber-fraud/",
+      "thumbnail": "https://the420.in/wp-content/uploads/2025/11/Red-and-Black-Retro-Landscape-YouTube-Thumbnail-background-1-2.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHpaMGx1WW1wTlFYQjZlSE5WVFJDZkF4ampCU2dLTWdhaFZaYkxKUWc",
+      "date": "10/05/2026, 11:15 AM, +0000 UTC",
+      "iso_date": "2026-10-05T11:15:15Z"
+     },
+     {
+      "position": 26,
+      "title": "Septuagenarian from Coimbatore defrauded of ₹5.5 crore in digital arrest scam",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/cities/Coimbatore/septuagenarian-from-coimbatore-defrauded-of-55-crore-in-digital-arrest-scam/article71451632.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "09/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-10T07:00:00Z"
+     },
+     {
+      "position": 27,
+      "title": "\"You Funded Red Fort Blast\": Elderly Couple In 'Digital Arrest' Lose Rs 30 Lakh",
+      "source": {
+       "name": "NDTV",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.ndtv.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mohd Asim"
+       ]
+      },
+      "link": "https://www.ndtv.com/india-news/you-funded-red-fort-blast-elderly-couple-in-digital-arrest-lose-rs-30-lakh-11990297",
+      "thumbnail": "https://c.ndtvimg.com/2025-12/1jrp2lfo_digital-arrest-scam-2025_625x300_16_December_25.jpg?im=FitAndFill,algorithm=dnn,width=1600,height=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU5RMEkzYUc4eWRFNUJUSHBEVFJDZkF4ampCU2dLTWdZaFJZek5vUWM",
+      "date": "09/02/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-02T07:00:00Z"
+     },
+     {
+      "position": 28,
+      "title": "AI Voice Cloning: How Cybercriminals Are Using Your Voice To Steal Money",
+      "source": {
+       "name": "News Mobile",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.newsmobile.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.newsmobile.in/fraud-and-scam/ai-voice-cloning-how-cybercriminals-are-using-your-voice-to-steal-money/",
+      "thumbnail": "https://www.newsmobile.in/wp-content/uploads/2026/10/ChatGPT-Image-Oct-7-2026-01_05_34-PM.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNVdZMWR0WVZOeWN6ZFBOREJ5VFJDZkF4amlCU2dLTWdB",
+      "date": "10/07/2026, 07:41 AM, +0000 UTC",
+      "iso_date": "2026-10-07T07:41:10Z"
+     },
+     {
+      "position": 29,
+      "title": "73-year-old in ‘digital arrest’ for 7 months loses over ₹1cr",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/ahmedabad/73-year-old-in-digital-arrest-for-7-months-loses-over-1cr/articleshow/133599089.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-133599088,width-1280,height-720,imgsize-153114,resizemode-75,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDVlRzFaTjNsakxVdE5XbWhFVFJDZkF4ampCU2dLTWdhZFE0NXZvUWc",
+      "date": "08/29/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-29T07:00:00Z"
+     },
+     {
+      "position": 30,
+      "title": "75-year-old woman loses Rs 3 crore in 14-day ‘digital arrest’ scam",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mohammed Akhef"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/aurangabad/75-year-old-woman-loses-rs-3-crore-in-14-day-digital-arrest-scam/articleshow/134644726.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-134644725,width-1280,height-720,imgsize-144353,resizemode-75,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFSVWs1YTBoR2VUZGlNSE5JVFJDZkF4ampCU2dLTWdhUlE0WlJOUVU",
+      "date": "10/02/2026, 05:43 PM, +0000 UTC",
+      "iso_date": "2026-10-02T17:43:00Z"
+     },
+     {
+      "position": 31,
+      "title": "Doctor loses ₹1.19 crore in alleged digital arrest scam in Keralam’s Kasaragod; accused nabbed from Hyderabad airport",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/kerala/doctor-loses-119-crore-in-alleged-digital-arrest-scam-in-keralams-kasaragod-accused-nabbed-from-hyderabad-airport/article71491272.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "09/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-23T07:00:00Z"
+     },
+     {
+      "position": 32,
+      "title": "Pune Army Officer Loses Rs 1.28 crore in ‘Digital Arrest’ Scam",
+      "source": {
+       "name": "SSBCrack",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.ssbcrack.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.ssbcrack.com/2026/09/pune-army-officer-loses-rs-1-28-crore-in-digital-arrest-scam.html",
+      "thumbnail": "https://media.ssbcrack.com/2026/09/Pune-Army-Officer-Loses-1.28-crore-in-Digital-Arrest-Scam-1200x675.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXBTMGRIU0MxeE5XbFliSE5tVFJDZkF4ampCU2dLTWdZZE1ad3FGZ28",
+      "date": "09/16/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-16T07:00:00Z"
+     },
+     {
+      "position": 33,
+      "title": "CBI arrests 2 for 11cr 'digital arrest loot'",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/india/cbi-arrests-2-for-11cr-digital-arrest-loot/articleshow/134526237.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-134526236,width-1280,height-720,imgsize-66456,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVFObk5GWDA1WFdsZFpWekpUVFJDZkF4ampCU2dLTWdhTjBZRElTZ00",
+      "date": "09/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-28T07:00:00Z"
+     },
+     {
+      "position": 34,
+      "title": "Digital arrest fraud case: What happens when ‘scam’ money reaches one's bank account, what does court...",
+      "source": {
+       "name": "Moneycontrol.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.moneycontrol.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Rewati Karan"
+       ]
+      },
+      "link": "https://www.moneycontrol.com/news/india/digital-arrest-fraud-case-what-happens-when-scam-money-reaches-one-s-bank-account-what-does-court-say-about-money-trail-14043968.html",
+      "thumbnail": "https://images.moneycontrol.com/static-mcnews/2025/03/20250320063450_digital-arrest.jpg?impolicy=website&width=350&height=196",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1VMUE1Y0VocmMzWlFSVlZYVFJERUFSamVBaWdLTWdhZFE0YU1JUWc",
+      "date": "10/03/2026, 03:47 PM, +0000 UTC",
+      "iso_date": "2026-10-03T15:47:01Z"
+     },
+     {
+      "position": 35,
+      "title": "Cyber Alert: Today’s Biggest Cyber Crime Stories Shaking India – 7th October",
+      "source": {
+       "name": "The420.in",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://the420.in/india-cyber-tech-brief-7-october-2026/",
+      "thumbnail": "https://the420.in/wp-content/uploads/2026/10/c9f3a791-7bbc-487c-afa1-3137eb787823-375x375-1.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJWQzFpTURBeGRubHlPV05RVFJEM0FoajNBaWdLTWdhQlVvcHF3UVE",
+      "date": "10/07/2026, 07:20 AM, +0000 UTC",
+      "iso_date": "2026-10-07T07:20:28Z"
+     },
+     {
+      "position": 36,
+      "title": "Stay alert, stay safe: Why cyber awareness matters more than ever",
+      "source": {
+       "name": "The New Indian Express",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.newindianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.newindianexpress.com/lifestyle/tech/2026/Oct/06/stay-alert-stay-safe-why-cyber-awareness-matters-more-than-ever",
+      "thumbnail": "https://cf-images.assettype.com/newindianexpress/2026-09-12/82nvppm9/C_32_1_CH1535_76220928.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNU5TalF6YUVzMFRqRmlhRGx5VFJES0F4aWRCU2dLTWdB",
+      "date": "10/06/2026, 07:36 AM, +0000 UTC",
+      "iso_date": "2026-10-06T07:36:19Z"
+     },
+     {
+      "position": 37,
+      "title": "Money Trail From Rs 67 Lakh Fraud Leads Police To 'Digital Arrest' Victim",
+      "source": {
+       "name": "NDTV",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.ndtv.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Bismee Taskin"
+       ]
+      },
+      "link": "https://www.ndtv.com/india-news/money-trail-from-rs-67-lakh-fraud-leads-police-to-digital-arrest-victim-12077571",
+      "thumbnail": "https://c.ndtvimg.com/2024-12/1rpfvt8_digital-arrest_625x300_26_December_24.jpg?im=FeatureCrop,algorithm=dnn,width=1600,height=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHhMVWRCZUdJMFZXUk5hV010VFJDZkF4ampCU2dLTWdZTkE2S0dEZ3M",
+      "date": "09/21/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-21T07:00:00Z"
+     },
+     {
+      "position": 38,
+      "title": "Digital Arrest scams: CBI conducts searches at over 80 locations across India",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Devesh Pandey"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/national/digital-arrest-scams-cbi-conducts-searches-at-over-80-locations-across-india/article71144963.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/pb8nq1/article71145003.ece/alternates/LANDSCAPE_1200/2025-06-05T012402Z_162674780_RC20WEAN6WFL_RTRMADP_3_CHINA-TAIWAN-CYBERATTACK.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNUVkVFZpVWpOb1V6VkJha2s0VFJDZkF4ampCU2dLTWdPaE13UQ",
+      "date": "06/25/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-25T07:00:00Z"
+     },
+     {
+      "position": 39,
+      "title": "Delhi Police Arrest Two in Digital Arrest Fraud as Cambodia Link Emerges",
+      "source": {
+       "name": "The420.in",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://the420.in/delhi-digital-arrest-scam-cambodia-link-two-arrested/",
+      "thumbnail": "https://the420.in/wp-content/uploads/2026/08/digital-arrest-1.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWhRVk54ZWtscExVbEdSbkpLVFJDZ0FoaUFCQ2dLTWdrSkFvcXRQV1ZrS3dJ",
+      "date": "10/04/2026, 07:00 PM, +0000 UTC",
+      "iso_date": "2026-10-04T19:00:17Z"
+     },
+     {
+      "position": 40,
+      "title": "14 days under watch, Rs 2.6 crore gone: The digital arrest behind a Rs 27,850 crore bust",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sonu Vivek"
+       ]
+      },
+      "link": "https://www.indiatoday.in/business/story/digital-arrest-scam-goa-woman-rs-3-crore-loss-exposes-rs-27850-crore-fraud-network-2980055-2026-08-26",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202608/digital-arrest-scam-264518811-16x9_0.png?VersionId=ySDv79eK7ROzsdQydy90xADYYidBdAMf&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTRaMHRwU1hwWVExZDJjMHRIVFJDZkF4ampCU2dLTWdZaGs0aXR1UVE",
+      "date": "08/26/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-26T07:00:00Z"
+     },
+     {
+      "position": 41,
+      "title": "Sextortion, Digital Arrest, Cyber Slavery Grip Telangana",
+      "source": {
+       "name": "Deccan Chronicle",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.deccanchronicle.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.deccanchronicle.com/southern-states/telangana/sextortion-digital-arrest-cyber-slavery-grip-telangana-1993137",
+      "thumbnail": "https://www.deccanchronicle.com/h-upload/2024/06/25/1500x900_1871973-cybercrime.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXlabUpYTUdWMFkyTkNVR2hoVFJEOEFoajZCQ2dLTWdhVllZd01KUVk",
+      "date": "10/04/2026, 05:42 PM, +0000 UTC",
+      "iso_date": "2026-10-04T17:42:29Z"
+     },
+     {
+      "position": 42,
+      "title": "Army veteran duped of Rs 1.28 crore digital arrest scam",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indianexpress.com/article/pune/pune-retired-army-veteran-duped-crore-digital-arrest-scam-cyber-police-fir-10877999/",
+      "thumbnail": "https://images.indianexpress.com/2026/09/digital-arrest-senior-citizen-AI-IE_20260914162227.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNW5kazlLVjJwM2NuWm1WMHhrVFJDZkF4ampCU2dLTWdrQllKREZzS2Q1aXdJ",
+      "date": "09/14/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-14T07:00:00Z"
+     },
+     {
+      "position": 43,
+      "title": "Rajkot doctor, 80, loses nearly Rs 60 lakh in 4-day digital arrest; bank alerts cops",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Brijesh Doshi"
+       ]
+      },
+      "link": "https://www.indiatoday.in/cities/other-cities/story/rajkot-doctor-80-loses-nearly-rs-60-lakh-in-four-day-digital-arrest-bank-stops-second-transfer-3007538-2026-10-01",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202610/cyber-fraud-040954226-16x9.jpg?VersionId=SMOcSEho1oIbRRCaT2jZllGFBO99_uMS&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXFVemRVY1RBMmFqZENZamxOVFJDZkF4ampCU2dLTWdrZFlJQXJTV0tTendF",
+      "date": "10/01/2026, 01:58 PM, +0000 UTC",
+      "iso_date": "2026-10-01T13:58:54Z"
+     },
+     {
+      "position": 44,
+      "title": "Kerala Man Arrested in ₹98 Lakh Coimbatore Digital Arrest Scam",
+      "source": {
+       "name": "The420.in",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://the420.in/coimbatore-digital-arrest-doctor-98-lakh-kerala-arrest/",
+      "thumbnail": "https://the420.in/wp-content/uploads/2026/07/digital-arrest-1.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWZUbEpFYXpCVGVrbGhXR0pWVFJDZkF4ampCU2dLTWdZUkFvZ1JOUU0",
+      "date": "10/02/2026, 05:25 PM, +0000 UTC",
+      "iso_date": "2026-10-02T17:25:00Z"
+     },
+     {
+      "position": 45,
+      "title": "What Is A Digital Arrest Scam? A Three-Month Case Shows How Fraudsters Trap Victims",
+      "source": {
+       "name": "News18",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.news18.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.news18.com/tech/what-is-digital-arrest-scam-gujarat-case-how-to-stay-safe-10363436.html",
+      "thumbnail": "https://images.news18.com/ibnlive/uploads/2026/10/ChatGPT-Image-Oct-1-2026-08_22_58-PM-2026-10-dc1b9271594f75b0a314ac07bb1df08d.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNWhRa0ZXWTAxMmNVaGhVM0ZNVFJDZkF4ampCU2dLTWdB",
+      "date": "10/02/2026, 05:17 AM, +0000 UTC",
+      "iso_date": "2026-10-02T05:17:35Z"
+     },
+     {
+      "position": 46,
+      "title": "Retired Chandigarh schoolteacher loses ₹48 lakh in ‘digital arrest’ scam | Hindustan Times",
+      "source": {
+       "name": "Hindustan Times",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hindustantimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Ht Correspondent"
+       ]
+      },
+      "link": "https://www.hindustantimes.com/cities/chandigarh-news/retired-chandigarh-schoolteacher-loses-48-lakh-in-digital-arrest-scam-101790881997928.html",
+      "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/10/01/1600x900/logo/A-case-has-been-registered-at-the-cyber-police-sta_1790881995928_Atl9.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUtWV2R2WVdSWVRXNWtXa1ZQVFJDZkF4ampCU2dLTWdhcEFaSXZGUWc",
+      "date": "10/02/2026, 02:25 AM, +0000 UTC",
+      "iso_date": "2026-10-02T02:25:10Z"
+     },
+     {
+      "position": 47,
+      "title": "Retired Mumbai teacher loses ₹89 lakh in digital arrest scam | Tap to know more | Inshorts",
+      "source": {
+       "name": "Inshorts",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://inshorts.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://inshorts.com/en/amp_news/retired-mumbai-teacher-loses--89l-in-digital-arrest-scam-1791105438021",
+      "date": "10/04/2026, 04:59 PM, +0000 UTC",
+      "iso_date": "2026-10-04T16:59:58Z"
+     },
+     {
+      "position": 48,
+      "title": "TGCSB helps senior citizen recover ₹85 lakh in digital arrest scam",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/telangana/tgcsb-helps-senior-citizen-recover-85-lakh-in-digital-arrest-scam/article71392654.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "08/26/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-26T07:00:00Z"
+     },
+     {
+      "position": 49,
+      "title": "Chittoor police warn public against ‘digital arrest’ scams",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/andhra-pradesh/chittoor-police-warn-public-against-digital-arrest-scams/article71245280.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/nzlxw/article71245657.ece/alternates/LANDSCAPE_1200/10745_20_7_2026_18_31_18_1_IMG_20260720_WA0049.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNURNR0ZTYUdnM2JIVmtiemhmVFJDZkF4ampCU2dLTWdZcEJZYXVBUTA",
+      "date": "07/20/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-20T07:00:00Z"
+     },
+     {
+      "position": 50,
+      "title": "Digital arrest scam: CBI arrests three accused after searches in Odisha and Rajasthan",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Devesh Pandey"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/national/digital-arrest-scam-cbi-arrests-accused-after-searches-in-odisha-and-rajasthan/article71177981.ece",
+      "thumbnail": "https://th-i.thgim.com/public/news/cities/mumbai/i437mb/article71177994.ece/alternates/LANDSCAPE_1200/iStock-1608428927.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVdWWE51U1dsUFJGOHpiWFpyVFJDZkF4ampCU2dLTWdtSkFZeXRNV1praUFJ",
+      "date": "07/03/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-03T07:00:00Z"
+     },
+     {
+      "position": 51,
+      "title": "Supreme Court Moots Penal Definition For Digital Arrests As Standalone Offence",
+      "source": {
+       "name": "LawBeat",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://lawbeat.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Aishwarya Iyer"
+       ]
+      },
+      "link": "https://lawbeat.in/top-stories/supreme-court-moots-penal-definition-for-digital-arrests-as-standalone-offence-1616693",
+      "thumbnail": "https://lawbeat.in/h-upload/2026/07/28/2231382-cji-kant-justice-bagchi-and-mohana.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUdkV3h4VTJoNlFYVnNZbUpPVFJDZkF4ampCU2dLTWdZQnNJeUR3QVk",
+      "date": "07/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-28T07:00:00Z"
+     },
+     {
+      "position": 52,
+      "title": "ED arrests 3 more in Rs 30,000-crore pan-India cyber fraud network",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indiatoday.in/india/story/ed-arrests-3-more-in-rs-30000-crore-cyber-fraud-case-linked-to-goa-digital-arrest-scam-ptag-2981758-2026-08-28",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202608/ed-files-chargesheet-against-19-entities-in-arunachal-assam-liquor-smuggling-racket-293345182-16x9.png?VersionId=HtsuDdqH9NJDz60T9DxoPcvbQcD6EzHP&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUlhMncyWlc1SU1qUklhakIyVFJDZkF4ampCU2dLTWdZbFZZck5KUVk",
+      "date": "08/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-28T07:00:00Z"
+     },
+     {
+      "position": 53,
+      "title": "75-year-old digital arrest victim moves HC for CBI probe; Delhi Police asked to file status report",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Shrimansi Kaushik"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/cities/Delhi/75-year-old-digital-arrest-victim-moves-hc-for-cbi-probe-delhi-police-asked-to-file-status-report/article71298043.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/xy8864/article71299007.ece/alternates/LANDSCAPE_1200/iStock-157619625%202.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHlUMmRzY2psalpuVXRZVkYyVFJDZkF4ampCU2dLTWdhVlZaYnFvUWM",
+      "date": "08/03/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-03T07:00:00Z"
+     },
+     {
+      "position": 54,
+      "title": "Supreme Court Steps In to Curb Digital Arrest Scams",
+      "source": {
+       "name": "Vajiram & Ravi",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://vajiramandravi.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://vajiramandravi.com/current-affairs/digital-arrest-cyber-fraud/",
+      "thumbnail": "https://vajiramias.sgp1.cdn.digitaloceanspaces.com/wp/current-affairs/2026/08/Digital-Arrest-768x461.webp?v=1785905572",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhYMkozVVZNMkxWWlhlbEphVFJDdEF4akxCU2dLTWdZaEJJaUxtUWM",
+      "date": "08/05/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-05T07:00:00Z"
+     },
+     {
+      "position": 55,
+      "title": "Hyderabad Cyber Crime Crackdown: 101 Arrested",
+      "source": {
+       "name": "INDToday",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://indtoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indtoday.com/hyderabad-cyber-crime-crackdown-101-arrested/",
+      "thumbnail": "https://indtoday.com/wp-content/uploads/2026/10/YT-Thumbnails-2026-10-07T142258.196.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNW5ibVp3VG1sd05HYzVha1EwVFJDZkF4ampCU2dLTWdrQkFJREhGQ1Y2MWdB",
+      "date": "10/07/2026, 08:55 AM, +0000 UTC",
+      "iso_date": "2026-10-07T08:55:15Z"
+     },
+     {
+      "position": 56,
+      "title": "Kanpur man loses Rs 48 lakh to fake CBI officers, 3 arrested in Rs 1.42-crore fraud",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indiatoday.in/cities/kanpur/story/digital-arrest-scam-kanpur-cyber-police-arrest-three-rs-1-42-crore-fraud-3006598-2026-09-30",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202609/digital-arrest-301517601-16x9_0.jpeg?VersionId=zHRtu_rKt.yUzVq.POGvovEU.aDnNwkm&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWpMVlpvTTI5Qk1uaGpXbGQ1VFJDZkF4ampCU2dLTWdZbFZKRHNwUWc",
+      "date": "09/30/2026, 11:15 AM, +0000 UTC",
+      "iso_date": "2026-09-30T11:15:37Z"
+     },
+     {
+      "position": 57,
+      "title": "From RBI SOPs to a Call “Kill Switch”: SC’s Plan Against Digital Arrest Scams",
+      "source": {
+       "name": "SCC Online",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.scconline.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.scconline.com/blog/post/2026/08/10/sc-issues-interim-directions-on-digital-arrest-scams/",
+      "thumbnail": "https://www.scconline.com/blog/wp-content/uploads/2026/08/digital-arrest-scams.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWhNR2xGVFd3MVJqTXhiSFphVFJERUF4aW5CU2dLTWdrRmdZVFIxS09wRmdF",
+      "date": "08/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-10T07:00:00Z"
+     },
+     {
+      "position": 58,
+      "title": "Kasaragod doctor loses Rs 1.19 crore in digital arrest scam, accused arrested",
+      "source": {
+       "name": "Medical Dialogues",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://medicaldialogues.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://medicaldialogues.in/news/health/doctors/kasaragod-doctor-loses-rs-119-crore-in-digital-arrest-scam-accused-arrested-179809",
+      "thumbnail": "https://medicaldialogues.in/h-upload/2026/06/22/1500x900_355517-cyber-fraud.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDFjMnRmUTJoTVpWVkNZV0ZEVFJDdEF4akxCU2dLTWdZdFJKYU9vUWc",
+      "date": "09/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-23T07:00:00Z"
+     },
+     {
+      "position": 59,
+      "title": "Elderly woman duped of Rs13 lakh; second FIR in 3 days",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mohammed Akhef"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/aurangabad/elderly-woman-duped-of-rs13-lakh-second-fir-in-3-days/articleshow/134714412.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-134714411,width-1280,height-720,imgsize-270129,resizemode-75,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhTbTF6TUZRd1RYaG5ORTlUVFJDZkF4ampCU2dLTWdhWlk1SXhyUWM",
+      "date": "10/05/2026, 05:53 PM, +0000 UTC",
+      "iso_date": "2026-10-05T17:53:00Z"
+     },
+     {
+      "position": 60,
+      "title": "Chandigarh woman loses Rs 47 lakh in digital arrest scam",
+      "source": {
+       "name": "The Tribune",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.tribuneindia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.tribuneindia.com/news/chandigarh/chandigarh-woman-loses-47-lakh-in-digital-arrest-scam/",
+      "thumbnail": "https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYTM5ZGE0MTMwLWJkZDMtMTFmMS05N2QyLTcxMzIwNTZiZTJjZS5qcGc=",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTFiRkpqVXkxek1VUkpORUZ3VFJELUF4alpCQ2dLTWdZUlVJeUpKUWM",
+      "date": "10/01/2026, 08:03 PM, +0000 UTC",
+      "iso_date": "2026-10-01T20:03:50Z"
+     },
+     {
+      "position": 61,
+      "title": "Is Maharashtra Turning Cybercrime Into Cinema? The Story Behind ‘Digital Arrest’, Samay Raina and the 1930 Anthem",
+      "source": {
+       "name": "Open Magazine",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://openthemagazine.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mahima Pandey"
+       ]
+      },
+      "link": "https://openthemagazine.com/india/is-maharashtra-turning-cybercrime-into-cinema-the-story-behind-digital-arrest-samay-raina-and-the-1930-anthem",
+      "thumbnail": "https://media.openthemagazine.com/openthemagazine/2026-08-27/5nznfh0g/samay.jpg?w=640&auto=format,compress&q=80",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTNOQzF3V1haWE5HczFUVTU0VFJEb0FoaUFCU2dLTWdtSlFaUUxJcWsxYVFJ",
+      "date": "08/27/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-27T07:00:00Z"
+     },
+     {
+      "position": 62,
+      "title": "Calcutta High Court transfers Rs 2.7 crore digital arrest scam case to CBI",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Subrata Chattoraj"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/kolkata/calcutta-high-court-transfers-rs-2-7-crore-digital-arrest-scam-case-to-cbi/articleshow/134444246.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-33486062,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXlZVWxXVlhWcWNGcENVVEZFVFJDZkF4ampCU2dLTWdNRm94QQ",
+      "date": "09/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-23T07:00:00Z"
+     },
+     {
+      "position": 63,
+      "title": "India's Ministry of Home Affairs clarifies no legal ‘digital arrest’ procedure and I4C reports crackdown on related scams",
+      "source": {
+       "name": "Digital Watch Observatory",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://dig.watch&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://dig.watch/updates/indias-ministry-of-home-affairs-clarifies-no-legal-digital-arrest-procedure-and-i4c-reports-crackdown-on-related-scams",
+      "thumbnail": "https://diplo-media.s3.eu-central-1.amazonaws.com/2026/08/9551.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVRVVkZtTkZCc09GOVVVbFJ5VFJDaUF4amRCU2dLTWdZaGhaTHJMUWM",
+      "date": "08/26/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-26T07:00:00Z"
+     },
+     {
+      "position": 64,
+      "title": "Two people lose nearly ₹1 crore in ‘digital arrest’ cyber frauds",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/karnataka/two-people-lose-nearly-1-crore-in-digital-arrest-cyber-frauds/article71244501.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/34d486/article71245868.ece/alternates/LANDSCAPE_1200/IMG_24_City_iStock-14567_2_1_EMDKI08S.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWlNVEEwZEVWSGNuQldaWGxHVFJDZkF4ampCU2dLTWdhWk1ZaEp1Z1E",
+      "date": "07/20/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-20T07:00:00Z"
+     },
+     {
+      "position": 65,
+      "title": "NHRC holds Open House Discussion on safeguarding human rights against digital arrest scams",
+      "source": {
+       "name": "News On AIR",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://newsonair.gov.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://newsonair.gov.in/nhrc-holds-open-house-discussion-on-safeguarding-human-rights-against-digital-arrest-scams/",
+      "thumbnail": "https://newsonair.gov.in/wp-content/uploads/2026/05/NHRC-scaled.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVZZbXRNWDFodlJTMHpYMkZRVFJEZ0F4aUFCU2dLTWdZWnBJU3VUUU0",
+      "date": "06/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-10T07:00:00Z"
+     },
+     {
+      "position": 66,
+      "title": "2 arrested from Jammu and Kashmir, Rajasthan for duping Delhi man in digital arrest fraud | India News",
+      "source": {
+       "name": "Hindustan Times",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hindustantimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Ht Correspondent"
+       ]
+      },
+      "link": "https://www.hindustantimes.com/india-news/2-arrested-from-jammu-and-kashmir-rajasthan-for-duping-delhi-man-in-digital-arrest-fraud-101791091771085.html",
+      "thumbnail": "https://www.hindustantimes.com/ht-img/img/2026/10/04/1600x900/logo/Pawan-Khera-12_1776671339460_1776671353544_1791092522407_eoFV_b1810be8-fe7c-4b47-9e34-9988b3adcd77_IyWO.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWlNMWRDVkVwcFVXWTJORWxDVFJDZkF4amlCU2dLTWdZQlVwWnFvUWc",
+      "date": "10/04/2026, 05:46 AM, +0000 UTC",
+      "iso_date": "2026-10-04T05:46:12Z"
+     },
+     {
+      "position": 67,
+      "title": "Ex-Judge, 90, Duped Of Rs 2.5 Crore In 'Digital Arrest' Cyber Scam In Jaipur",
+      "source": {
+       "name": "NDTV",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.ndtv.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.ndtv.com/india-news/ex-judge-90-duped-of-rs-2-5-crore-in-digital-arrest-cyber-scam-in-jaipur-11904641",
+      "thumbnail": "https://c.ndtvimg.com/2025-12/1jrp2lfo_digital-arrest-scam-2025_625x300_16_December_25.jpg?im=FitAndFill,algorithm=dnn,width=1600,height=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU5RMEkzYUc4eWRFNUJUSHBEVFJDZkF4ampCU2dLTWdZaFJZek5vUWM",
+      "date": "08/13/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-13T07:00:00Z"
+     },
+     {
+      "position": 68,
+      "title": "West Bengal: Calcutta HC Hands Rs 2.66 Crore Narendrapur ‘Digital Arrest’ Scam To CBI",
+      "source": {
+       "name": "ETV Bharat",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.etvbharat.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.etvbharat.com/en/state/calcutta-hc-hands-narendrapur-digital-arrest-scam-to-cbi-enn26092308056",
+      "thumbnail": "https://imgs.etvbharat.com/etvbharat/prod-images/23-09-2026/1200-675-27703055-thumbnail-16x9-aghj-aspera.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNHpUMUpaV1hnMFVWRkdSR0o0VFJDZkF4ampCU2dLTWdrTlFJU3JKR1k4VlFF",
+      "date": "09/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-23T07:00:00Z"
+     },
+     {
+      "position": 69,
+      "title": "Retired WCL mechanic loses Rs63L in ‘digital arrest’ scam",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/nagpur/retired-wcl-mechanic-loses-rs63l-in-digital-arrest-scam/articleshow/134296125.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-33486062,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXlZVWxXVlhWcWNGcENVVEZFVFJDZkF4ampCU2dLTWdNRm94QQ",
+      "date": "09/17/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-17T07:00:00Z"
+     },
+     {
+      "position": 70,
+      "title": "SVC Co-op Bank Stops Rs 30-Lakh \"Digital Arrest\" Scam",
+      "source": {
+       "name": "Indian Cooperative",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.indiancooperative.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indiancooperative.com/from-states/svc-co-op-bank-stops-rs-30-lakh-digital-arrest-scam/",
+      "thumbnail": "https://www.indiancooperative.com/wp-content/uploads/2026/09/svc-bank-copy.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxjRTlZZW5BMVp6UnZMVkZ6VFJELUFoaWpCaWdLTWdhUkFvNHBEZ3c",
+      "date": "09/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-28T07:00:00Z"
+     },
+     {
+      "position": 71,
+      "title": "Retd govt employee loses Rs 74 lakh to digital arrest",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/hyderabad/retd-govt-employee-loses-rs-74-lakh-to-digital-arrest/articleshow/134644612.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-134644609,width-1280,height-720,imgsize-20761,resizemode-75,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXRRalpNV1dKc1NHMVFOSHA0VFJDZ0F4amlCU2dLTWdZcEpZek5uUWc",
+      "date": "10/02/2026, 05:37 PM, +0000 UTC",
+      "iso_date": "2026-10-02T17:37:00Z"
+     },
+     {
+      "position": 72,
+      "title": "Elderly couple in Bengaluru duped of ₹3.17 crore in ‘digital arrest’ cyber fraud",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/karnataka/elderly-couple-in-bengaluru-duped-of-317-crore-in-digital-arrest-cyber-fraud/article71173743.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "07/02/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-02T07:00:00Z"
+     },
+     {
+      "position": 73,
+      "title": "₹11.42 crore lost in ‘digital arrest’: CBI arrests 2 more in Gujarat scam, here's how the scam trapped the victim",
+      "source": {
+       "name": "Business Today",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.businesstoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.businesstoday.in/india/story/rs11-42-crore-lost-in-digital-arrest-cbi-arrests-2-more-in-gujarat-scam-heres-how-the-scam-trapped-the-victim-558973-2026-10-01",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202610/6abdef637ebd8-cbi-raids-mcd-officer-161556723-16x9.png?size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdZMHAxYUVSc01GTlRRa3RGVFJDZkF4ampCU2dLTWdZZFVZaktvQWs",
+      "date": "10/01/2026, 05:57 AM, +0000 UTC",
+      "iso_date": "2026-10-01T05:57:08Z"
+     },
+     {
+      "position": 74,
+      "title": "Prayagraj cyber cell busts inter-state digital arrest fraud gang",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/allahabad/prayagraj-cyber-cell-busts-inter-state-digital-arrest-fraud-gang/articleshow/134714724.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-33486062,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXlZVWxXVlhWcWNGcENVVEZFVFJDZkF4ampCU2dLTWdNRm94QQ",
+      "date": "10/05/2026, 06:07 PM, +0000 UTC",
+      "iso_date": "2026-10-05T18:07:00Z"
+     },
+     {
+      "position": 75,
+      "title": "Retired government doctor from Coimbatore duped of ₹98 lakh in ‘digital arrest’ scam",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/cities/Coimbatore/retired-government-doctor-from-coimbatore-duped-of-98-lakh-in-digital-arrest-scam/article71357389.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "08/18/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-18T07:00:00Z"
+     },
+     {
+      "position": 76,
+      "title": "Andhra woman loses Rs 1.43 crore in digital arrest scam",
+      "source": {
+       "name": "Telangana Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://telanganatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://telanganatoday.com/andhra-woman-loses-rs-1-43-crore-in-digital-arrest-scam",
+      "thumbnail": "https://media.telanganatoday.com/wp-content/uploads/2026/08/Cybercrime-2-1.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUlNMVo2YlY4dFVsbFdabnBMVFJDb0F4alVCU2dLTWdrVlVZeElIdWd0YmdF",
+      "date": "08/07/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-07T07:00:00Z"
+     },
+     {
+      "position": 77,
+      "title": "Bengaluru digital arrest scam: Accused linked to ₹15 crore Belagavi cyber fraud too",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/karnataka/bengaluru-digital-arrest-scam-accused-linked-to-15-crore-belagavi-cyber-fraud-too/article71022093.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/dds4pd/article71022466.ece/alternates/LANDSCAPE_1200/iStock-157619625%202.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHlUMmRzY2psalpuVXRZVkYyVFJDZkF4ampCU2dLTWdhVlZaYnFvUWM",
+      "date": "05/25/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-25T07:00:00Z"
+     },
+     {
+      "position": 78,
+      "title": "Digital arrest: How a maze of 5,436 accounts was used to funnel Rs 10.7 crore siphoned from Pune senior citizen",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sushant Kulkarni"
+       ]
+      },
+      "link": "https://indianexpress.com/article/cities/pune/pune-digital-arrest-scam-rs-10-crore-5436-bank-accounts-10830493/",
+      "thumbnail": "https://images.indianexpress.com/2026/08/digital-arrest-senior-citizen-AI-IE.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNW5kazlLVjJwM2NuWm1WMHhrVFJDZkF4ampCU2dLTWdrQllKREZzS2Q1aXdJ",
+      "date": "08/12/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-12T07:00:00Z"
+     },
+     {
+      "position": 79,
+      "title": "‘Digital arrest’ leaves Hyderabad's 79-year-old retiree poorer by Rs 15.7 lakh",
+      "source": {
+       "name": "The New Indian Express",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.newindianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.newindianexpress.com/cities/hyderabad/2026/Sep/18/digital-arrest-leaves-hyderabads-79-year-old-retiree-poorer-by-rs-157-lakh",
+      "thumbnail": "https://cf-images.assettype.com/newindianexpress/2026-09-18/jxzqwuxd/202510303558789.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTZZMjlUVVMxbFltcFRkVEJQVFJDZ0F4amlCU2dLTWdtaEFZVDAxR0tEQ3dJ",
+      "date": "09/18/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-18T07:00:00Z"
+     },
+     {
+      "position": 80,
+      "title": "SOPs, Compensation Framework: Top Court's New Directions On 'Digital Arrest'",
+      "source": {
+       "name": "NDTV",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.ndtv.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nupur Dogra"
+       ]
+      },
+      "link": "https://www.ndtv.com/india-news/sops-compensation-framework-top-courts-new-directions-on-digital-arrest-11865642",
+      "thumbnail": "https://c.ndtvimg.com/2026-06/2i683ot_supreme-court_625x300_04_June_26.jpeg?im=FaceCrop,algorithm=dnn,width=1600,height=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVRiR1YwYkhkZmJWSnVRM1pXVFJDZkF4ampCU2dLTWdZbGxZN3R0UVk",
+      "date": "08/04/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-04T07:00:00Z"
+     },
+     {
+      "position": 81,
+      "title": "Gujarat's elderly couple duped of Rs 55.5 lakh in week-long digital arrest scam",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indiatoday.in/cities/other-cities/story/digital-arrest-scam-rajkot-elderly-couple-duped-rs-55-5-lakh-fake-mumbai-crime-branch-officers-2981908-2026-08-28",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202608/an-elderly-couple-in-gujarats-rajkot-was-allegedly-duped-of-rs-5550-lakh-284458138-16x9_0.jpg?VersionId=Y6cal4IOtNKUy4SPMrXuD.5oqeFcwZSv&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUNVMmxrVTJad1gyaG5ibXhHVFJDZkF4ampCU2dLTWdZZEZaQUxFZ28",
+      "date": "08/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-28T07:00:00Z"
+     },
+     {
+      "position": 82,
+      "title": "‘Don’t leave home’: Kolkata man duped of Rs 3.26 crore in ‘digital arrest’ fraud",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sweety Kumari"
+       ]
+      },
+      "link": "https://indianexpress.com/article/cities/kolkata/kolkata-digital-arrest-scam-police-advisory-10846088/",
+      "thumbnail": "https://images.indianexpress.com/2026/08/Kolkata-digital-arrests.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHplbXR3UVV4T01VTkRUazFpVFJDZkF4ampCU2dLTWdZTk1JSUduZ2M",
+      "date": "08/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-23T07:00:00Z"
+     },
+     {
+      "position": 83,
+      "title": "CBI arrests two in digital arrest scam, conducts searches at over 80 locations | Akashvani News",
+      "source": {
+       "name": "News On AIR",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://newsonair.gov.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://newsonair.gov.in/cbi-arrests-two-in-digital-arrest-scam-conducts-searches-at-over-80-locations/",
+      "thumbnail": "https://newsonair.gov.in/wp-content/uploads/2026/05/cbi-2.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRTV05GYlhGMGRVcHNjRFJMVFJEOUFoaW1CU2dLTWdZcEpvanRtUWc",
+      "date": "06/25/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-25T07:00:00Z"
+     },
+     {
+      "position": 84,
+      "title": "Digital arrest scam: ‘Lock your house or accused will kill you’: Retiree loses Rs 50.5 lakh",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sushant Kulkarni"
+       ]
+      },
+      "link": "https://indianexpress.com/article/cities/pune/pune-cyber-crime-digital-arrest-scam-senior-citizen-50-lakh-pune-police-10807011/",
+      "thumbnail": "https://images.indianexpress.com/2026/07/Cyber-fraud-generic-picture_20260608102023_20260728075950.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNURjRU52TkdNeFpWVjFSVGg2VFJDZkF4ampCU2dLTWdhWlVaWXRvUWc",
+      "date": "07/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-28T07:00:00Z"
+     },
+     {
+      "position": 85,
+      "title": "India Launches Nationwide Cyber Campaign Against AI Scams, Deepfakes and Malicious APKs",
+      "source": {
+       "name": "The420.in",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://the420.in/dsci-be-cyber-street-smart-campaign/",
+      "thumbnail": "https://the420.in/wp-content/uploads/2026/10/IMG-20261006-WA0026.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJkV3BaWW01RVJXcEJkRzVUVFJDbkF4alZCU2dLTWdZcGRZN05yUVk",
+      "date": "10/06/2026, 05:51 AM, +0000 UTC",
+      "iso_date": "2026-10-06T05:51:35Z"
+     },
+     {
+      "position": 86,
+      "title": "Interstate 'Digital Arrest' Gang Busted After Raids In 17 States, 12 Fraudsters Nabbed",
+      "source": {
+       "name": "ETV Bharat",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.etvbharat.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.etvbharat.com/en/state/dewas-police-bust-interstate-digital-arrest-gang-arrest-12-cyber-fraudsters-across-17-states-enn26082403609",
+      "thumbnail": "https://imgs.etvbharat.com/etvbharat/prod-images/24-08-2026/1200-675-27469687-272-27469687-1787568632438.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBRVEZOT0RrMk1uTXRZa0Z5VFJDZkF4ampCU2dLTWdZZGc0aEtPUVU",
+      "date": "08/24/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-24T07:00:00Z"
+     },
+     {
+      "position": 87,
+      "title": "Enforcement Directorate arrests two in 2025 Goa \"digital arrest\" case",
+      "source": {
+       "name": "ANI News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.aninews.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.aninews.in/news/national/general-news/enforcement-directorate-arrests-two-in-2025-goa-digital-arrest-case20260824151758",
+      "thumbnail": "https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20260824094745.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNW1iMDkwYUZZNFlYUnBaemRPVFJEZ0F4aUFCU2dLTWdtTkVacjFsS3F4eEFJ",
+      "date": "08/24/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-24T07:00:00Z"
+     },
+     {
+      "position": 88,
+      "title": "Retired Army colonel cheated of Rs 15.5 lakh in ‘digital arrest’ scam; four arrested",
+      "source": {
+       "name": "ThePrint",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://theprint.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://theprint.in/india/retired-army-colonel-cheated-of-rs-15-5-lakh-in-digital-arrest-scam-four-arrested/3021373/",
+      "thumbnail": "https://staticprintenglish.theprint.in/wp-content/uploads/2023/06/theprint_default_image_new.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWpVek5zVjFaMk56WkZRVzE2VFJDZkF4ampCU2dLTWdhTmNaYUlMUWc",
+      "date": "08/21/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-21T07:00:00Z"
+     },
+     {
+      "position": 89,
+      "title": "ED arrests three more in Goa ‘digital arrest’ cyber fraud case involving Rs 2.60 crore",
+      "source": {
+       "name": "Telangana Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://telanganatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://telanganatoday.com/ed-arrests-three-more-in-goa-digital-arrest-cyber-fraud-case-involving-rs-2-60-crore",
+      "thumbnail": "https://media.telanganatoday.com/wp-content/uploads/2026/08/Enforcement-1-1-2.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVRjbVE0TW1OWFQxWnViV3R0VFJDb0F4alVCU2dLTWdZMUZJaHdsUVk",
+      "date": "08/29/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-29T07:00:00Z"
+     },
+     {
+      "position": 90,
+      "title": "330 victims, Rs 400 crore: Goa digital arrest leads ED to pan-India network of cyber fraudsters",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Pavneet Singh Chadha"
+       ]
+      },
+      "link": "https://indianexpress.com/article/india/330-victims-rs-400-crore-goa-digital-arrest-leads-ed-to-pan-india-network-of-cyber-fraudsters-10847923/",
+      "thumbnail": "https://images.indianexpress.com/2026/08/Kolkata-digital-arrests_20260824203310.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHplbXR3UVV4T01VTkRUazFpVFJDZkF4ampCU2dLTWdZTk1JSUduZ2M",
+      "date": "08/25/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-25T07:00:00Z"
+     },
+     {
+      "position": 91,
+      "title": "Rs 1.12-cr digital arrest scam: IIT Delhi graduate, bank manager among 6 held",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indianexpress.com/article/cities/mumbai/rs-1-12-cr-digital-arrest-scam-iit-delhi-graduate-bank-manager-among-6-held-10882880/",
+      "thumbnail": "https://images.indianexpress.com/2026/09/delhi-police-3-2_20260915185223_20260917231342.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTNiMDFhTkRWSWRqbDFkVGxhVFJDZkF4ampCU2dLTWdZQlk1QnJyUWM",
+      "date": "09/18/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-18T07:00:00Z"
+     },
+     {
+      "position": 92,
+      "title": "Woman Loses ₹15 Lakh in Seven-Day ‘Digital Arrest’ Scam in Palampur",
+      "source": {
+       "name": "The News Himachal",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://thenewshimachal.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://thenewshimachal.com/2026/09/woman-loses-%E2%82%B915-lakh-in-seven-day-digital-arrest-scam-in-palampur/",
+      "date": "09/26/2026, 09:23 AM, +0000 UTC",
+      "iso_date": "2026-09-26T09:23:12Z"
+     },
+     {
+      "position": 93,
+      "title": "Elderly Man Loses Rs. 18 Lakh In Digital Arrest Scam In Hyderabad",
+      "source": {
+       "name": "INDToday",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://indtoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indtoday.com/elderly-man-loses-rs-18-lakh-in-digital-arrest-scam-in-hyderabad/",
+      "thumbnail": "https://indtoday.com/wp-content/uploads/2026/05/cybercrime.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUNhVWxaVVZaRWFVMTVlRGh5VFJDZkF4ampCU2dLTWdZbFZZak5wUWM",
+      "date": "09/28/2026, 05:04 AM, +0000 UTC",
+      "iso_date": "2026-09-28T05:04:07Z"
+     },
+     {
+      "position": 94,
+      "title": "SC flags rise of digital arrest frauds, asks Centre to codify it as standalone crime",
+      "source": {
+       "name": "The New Indian Express",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.newindianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Suchitra Mohanty"
+       ]
+      },
+      "link": "https://www.newindianexpress.com/india/2026/Jul/28/sc-flags-rise-of-digital-arrest-frauds-asks-centre-to-codify-it-as-standalone-crime-2",
+      "thumbnail": "https://cf-images.assettype.com/newindianexpress%2F2026-06-05%2Fe4dgp8rn%2FC_1_1_CH1344_120360042.jpg?rect=0%2C0%2C450%2C253&w=1200&h=675&auto=format%2Ccompress&fit=crop",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTVXSGMwV2taWll6Uk9jRWN6VFJEOUFSakNBeWdLTWdZQjlJU3N5UU0",
+      "date": "07/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-28T07:00:00Z"
+     },
+     {
+      "position": 95,
+      "title": "Govt panel wants CBI to probe more digital arrest scams, wants Rs 10 crore threshold cut to Rs 1 crore",
+      "source": {
+       "name": "ThePrint",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://theprint.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Vrinda Tulsian"
+       ]
+      },
+      "link": "https://theprint.in/india/governance/govt-panel-wants-cbi-to-probe-more-digital-arrest-scams-wants-rs-10-crore-threshold-cut-to-rs-1-crore/3010864/",
+      "thumbnail": "https://staticprintenglish.theprint.in/wp-content/uploads/2026/08/SC-allows-TMC-leader-Abhishek-Banerjee-to-visit-abroad-on-assurance-that-he-would-travel-only-on-his-diplomatic-passport.-ANI-2.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFhbU5zVFhod1JUZEdRbU5GVFJDZkF4ampCU2dLTWdZQjBJaVJSUVk",
+      "date": "08/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-10T07:00:00Z"
+     },
+     {
+      "position": 96,
+      "title": "Retired teacher cheated of ₹24 crore in digital arrest scam, 6 arrested",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/karnataka/two-held-for-allegedly-duping-elderly-bengaluru-woman-of-24-crore/article71017200.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/106b0o/article71017298.ece/alternates/LANDSCAPE_1200/2025-06-12T193054Z_2131583905_RC261FA2SPE2_RTRMADP_3_ITALY-SPYWARE-PARAGON.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1jREZRUkRWMlJYRmFhRk42VFJDZkF4ampCU2dLTWdhVkE0aU9sUWc",
+      "date": "05/24/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-24T07:00:00Z"
+     },
+     {
+      "position": 97,
+      "title": "Fake CBI, IPS Officers Con Raipur Grocer Of Rs 8.5 Lakh",
+      "source": {
+       "name": "News Mobile",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.newsmobile.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.newsmobile.in/fraud-and-scam/fake-cbi-ips-officers-con-raipur-grocer-of-rs-8-5-lakh/",
+      "thumbnail": "https://www.newsmobile.in/wp-content/uploads/2026/10/ChatGPT-Image-Oct-6-2026-11_50_45-AM-1.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpVSEZOVVVSRE9YTmhhVGh5VFJDZkF4amlCU2dLTWdZTk1JeWxuZ2M",
+      "date": "10/06/2026, 06:32 AM, +0000 UTC",
+      "iso_date": "2026-10-06T06:32:45Z"
+     },
+     {
+      "position": 98,
+      "title": "Kanpur Man Duped of ₹48.20 Lakh in ‘Digital Arrest’ Scam, Three Arrested; ₹1.42 Crore Fraud Network Unearthed",
+      "source": {
+       "name": "The420.in",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://the420.in/kanpur-digital-arrest-scam-three-arrested/",
+      "thumbnail": "https://the420.in/wp-content/uploads/2026/09/133446202.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1ObmRXVFhGeVYwaGxiVTF2VFJDUUF4allCQ2dLTWdZUlE0d25zUWM",
+      "date": "09/30/2026, 11:46 AM, +0000 UTC",
+      "iso_date": "2026-09-30T11:46:03Z"
+     },
+     {
+      "position": 99,
+      "title": "On ‘digital arrests’, Supreme Court’s ‘act against mule accounts’ message",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indianexpress.com/article/legal-news/digital-arrest-fraud-sop-mule-accounts-supreme-court-states-uts-10817890/",
+      "thumbnail": "https://images.indianexpress.com/2026/08/digital-arrest.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1YM0ZNZDI5cVUyMDVMVEpPVFJDZkF4ampCU2dLTWdhZEpJN01uUVk",
+      "date": "08/04/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-04T07:00:00Z"
+     },
+     {
+      "position": 100,
+      "title": "AP woman loses Rs 1.43 crore in ‘digital arrest’ scam by fake Delhi Police officials",
+      "source": {
+       "name": "Telangana Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://telanganatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://telanganatoday.com/ap-woman-loses-rs-1-43-crore-in-digital-arrest-scam-by-fake-delhi-police-officials",
+      "thumbnail": "https://media.telanganatoday.com/wp-content/uploads/2026/07/Cyberfraud-1-1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhjMUJtWkhoalVWOUdhSFpmVFJDb0F4alVCU2dLTWdZcE1ZVE5HUW8",
+      "date": "08/07/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-07T07:00:00Z"
+     }
+    ],
+    "_searched_at": "2026-10-07 10:12:20 UTC"
+   }
+  }
+ }
+}

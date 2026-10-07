@@ -143,3 +143,9 @@ Keys as SecretStr, never sent to the browser; redaction filter for `api_key=` / 
 ## Implementation log
 
 - 2026-10-07: plan approved; repo initialised; recordings/scenarios live under `src/asli/demo/` so they ship with the package.
+- 2026-10-07 (build loop, day 0): core pipeline, web UI, 10 recorded scenarios, 224 tests, CI. Changes vs plan:
+  search-phase budget 90 s and LLM timeout 120 s (free models are slow); Google Jobs timeout 60 s;
+  narration is template-only (1 LLM call per investigation); added signals I6 helpline_is_mobile,
+  I7 authority_personal_upi, W12 upi_reported, M9 extortion_threat; reports from arbitrary pages
+  (not complaint/news/government) cap at c=0.5; `.bank.in` recognised as bank-official; official-number
+  check requires a contact/help page; Lens prices filtered to the same product variant.

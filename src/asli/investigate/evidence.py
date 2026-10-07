@@ -175,6 +175,9 @@ class EvidenceBook:
                 national = digits[-10:] if e.value.startswith("+91") else digits
                 if national and national in squashed:
                     matched.append(e.id)
+            elif e.type == "upi_id":
+                if e.value in low:
+                    matched.append(e.id)
             elif e.type in ("url", "email"):
                 reg = e.attrs.get("registrable")
                 if reg and reg in low:

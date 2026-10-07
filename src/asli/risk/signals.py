@@ -36,6 +36,7 @@ REGISTRY: dict[str, SignalDef] = {
         SignalDef("free_email_corporate", "I4", "identity", 0.35),
         SignalDef("punycode_homograph", "I5", "identity", 0.50),
         SignalDef("helpline_is_mobile", "I6", "identity", 0.30),
+        SignalDef("authority_personal_upi", "I7", "identity", 0.45),
         # web evidence — what live search found
         SignalDef("phone_reported", "W1", "web", 0.60),
         SignalDef("domain_reported", "W2", "web", 0.60),
@@ -48,6 +49,7 @@ REGISTRY: dict[str, SignalDef] = {
         SignalDef("image_reused", "W9", "web", 0.30),
         SignalDef("job_not_listed", "W10", "web", 0.15),
         SignalDef("address_mismatch", "W11", "web", 0.30),
+        SignalDef("upi_reported", "W12", "web", 0.60),
         # message patterns — deterministic, quoted from the message
         SignalDef("credential_request", "M1", "message", 0.65, critical=True),
         SignalDef("upfront_fee", "M2", "message", 0.60, critical=True),
@@ -57,6 +59,7 @@ REGISTRY: dict[str, SignalDef] = {
         SignalDef("suspicious_tld", "M6", "message", 0.15),
         SignalDef("url_shortener", "M7", "message", 0.10),
         SignalDef("too_good_to_be_true", "M8", "message", 0.25),
+        SignalDef("extortion_threat", "M9", "message", 0.65, critical=True),
         # trust — official confirmation
         SignalDef("phone_on_official_site", "T1", "trust", 0.75),
         SignalDef("domain_official", "T2", "trust", 0.70),

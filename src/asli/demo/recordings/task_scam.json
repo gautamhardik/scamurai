@@ -1,0 +1,1242 @@
+{
+ "scenario": "task_scam",
+ "recorded_at": "2026-10-07T15:46:09+05:30",
+ "input_hash": "afe42d1d7e2fe5cecb8f3885559789ed6f8770a79b9d3716b9d015e1a1164152",
+ "llm": {
+  "data": {
+   "language": "en",
+   "ocr_text": "",
+   "content_kind": "sms",
+   "scheme": "job_offer",
+   "claimed_org": {
+    "name": null,
+    "category": null
+   },
+   "sender": {
+    "name": null,
+    "email": null,
+    "phone": null
+   },
+   "phones": [],
+   "urls": [
+    "t.me/earnmore_daily"
+   ],
+   "emails": [],
+   "upi_ids": [],
+   "amounts": [
+    {
+     "text": "Rs 3000 per day",
+     "purpose": "salary"
+    }
+   ],
+   "product": {
+    "name": null,
+    "brand": null,
+    "claimed_price_text": null
+   },
+   "job": {
+    "company": null,
+    "role": "YouTube promotion",
+    "salary_text": "Rs 3000 per day",
+    "location": "from home",
+    "fee_requested": false
+   },
+   "address": null,
+   "app_name": null,
+   "requested_actions": [
+    {
+     "type": "click_link",
+     "quote": "Join our Telegram group t.me/earnmore_daily"
+    },
+    {
+     "type": "other",
+     "quote": "complete 3 tasks to get your first payment"
+    }
+   ],
+   "pressure": [
+    {
+     "type": "urgency",
+     "quote": "Limited seats!"
+    }
+   ],
+   "ai_directed_text": []
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+ },
+ "expected": {
+  "level": "HIGH_RISK",
+  "flags": [
+   "known_scam_pattern",
+   "threat_or_urgency",
+   "too_good_to_be_true"
+  ]
+ },
+ "searches": {
+  "cd8e4a2940c493f85f586e115186151e8c6bbef1bdd408aa9dafdb6691591f12": {
+   "engine": "google_news",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "q": "part time task scam like videos"
+   },
+   "response": {
+    "news_results": [
+     {
+      "position": 1,
+      "title": "I kept getting texts offering $600 a day to work from home. These odd details tipped me off.",
+      "source": {
+       "name": "Yahoo Creators",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://creators.yahoo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Brittany Anas"
+       ]
+      },
+      "link": "https://creators.yahoo.com/lifestyle/story/i-got-a-work-from-home-job-text-here-are-the-red-flags-that-told-me-it-was-a-scam-225118619.html",
+      "thumbnail": "https://s.yimg.com/lo/mysterio/api/02b8924a2fe86475df473c62a2fb959aec3df4808d70418df5f4dc21feb404d1/lightyear_networkapi/resizefill_w976%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fwork-from-home-scam_7495.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUZZMlZ3V2pocVlpMXpUMHgxVFJERUF4aW1CU2dLTWdZWlpJU09wUWc",
+      "date": "10/06/2026, 03:09 PM, +0000 UTC",
+      "iso_date": "2026-10-06T15:09:07Z"
+     },
+     {
+      "position": 2,
+      "title": "TikTok Job Scams Promise ‘Easy Money.’ How to Stay Safe.",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.bitdefender.com/en-au/blog/hotforsecurity/tiktok-job-scams",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2026/05/TikTok-Job-Scams-Promise-.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW1hMU5xU2pWZk4wUmZXazFpVFJEU0FoallCQ2dLTWdZQllZektMUVk",
+      "date": "05/21/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-21T07:00:00Z"
+     },
+     {
+      "position": 3,
+      "title": "Watch out for \"high paying, low effort\" Amazon job texts",
+      "source": {
+       "name": "Malwarebytes",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.malwarebytes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Pieter Arntz"
+       ]
+      },
+      "link": "https://www.malwarebytes.com/blog/scams/2026/06/watch-out-for-high-paying-low-effort-amazon-job-texts",
+      "thumbnail": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/06/Amazon-office.png?w=1200",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUpOMjFmZGxGZlRHOVZVWHBwVFJDZkF4ampCU2dLTWdtUlVvNklxU1pOYUFJ",
+      "date": "06/30/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-30T07:00:00Z"
+     },
+     {
+      "position": 4,
+      "title": "Part-time job scam: Pune woman loses 24 lakh after she liked a YouTube video",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/part-time-job-scam-pune-woman-loses-24-lakh-after-she-liked-a-youtube-video-2364699-2023-04-26",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202304/scam_9_1-sixteen_nine.jpg?VersionId=CQCOnEsHExOzlHaIQI5XAw5CpIwapRAQ&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRWRTB5YlhWMU1XaG5jV3BHVFJDZkF4ampCU2dLTWdZQlVvd1NJUWM",
+      "date": "04/26/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-04-26T07:00:00Z"
+     },
+     {
+      "position": 5,
+      "title": "Online part-time job scam haunts gullible victims",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/cities/chennai/online-part-time-job-scam-haunts-gullible-victims/article67442383.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "10/21/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-10-21T07:00:00Z"
+     },
+     {
+      "position": 6,
+      "title": "Part-Time Job Scams: A Growing Threat",
+      "source": {
+       "name": "www.gendigital.com",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.gendigital.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Luis Corrons"
+       ]
+      },
+      "link": "https://www.gendigital.com/blog/insights/research/part-time-job-scams",
+      "thumbnail": "https://www.gendigital.com/blog/_next/image?url=https%3A%2F%2Fwww.gendigital.com%2Fblog%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fblogs_hero_tiny%2Fpublic%2F2024-10%2FGettyImages-1198653382.jpg.webp%3Fh%3Db2774bcf%26itok%3DqcNmsHnL&w=640&q=75",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNDRNa3BrY21velRUVkRNVEpNVFJETkFSajJBU2dCTWdNSllBdw",
+      "date": "10/10/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-10T07:00:00Z"
+     },
+     {
+      "position": 7,
+      "title": "Kim Sook recounts losing money to part-time job scams in Korea - CHOSUNBIZ",
+      "source": {
+       "name": "Chosunbiz",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://biz.chosun.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://biz.chosun.com/en/en-entertainment/2026/09/02/26MHPVPXDNCLDANSVQTDD67VIQ/",
+      "thumbnail": "https://biz.chosun.com/resizer/v2/GI2DEOJUMZRDCNBVMM3WIYJRMI.jpg?auth=54fcf7c166d7827815c3875161319ec429c9f2ab3a886727304de6af23dae613&width=650&height=341&smart=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1UamQ1VkVST1FURm1ORFZNVFJEVkFoaUtCU2dLTWdZdFJZQ3VvUWc",
+      "date": "09/02/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-02T07:00:00Z"
+     },
+     {
+      "position": 8,
+      "title": "How a woman lost Rs 28.55 lakh in ‘part-time job scam’ in 17 transactions",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/how-a-woman-lost-rs-28-55-lakh-in-part-time-job-scam/articleshow/110389062.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-110389012,width-1280,height-720,resizemode-4/110389012.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWpkRGRKYXkxcWNESjNlVWx4VFJDZkF4ampCU2dLTWdtVllvd3FyV1Y2TlFF",
+      "date": "05/27/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-05-27T07:00:00Z"
+     },
+     {
+      "position": 9,
+      "title": "Lose money online working from home: Job scams spike in India",
+      "source": {
+       "name": "Rest of World",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://restofworld.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Bilal Kuchay"
+       ]
+      },
+      "link": "https://restofworld.org/2023/india-job-crisis-scams-spike/",
+      "thumbnail": "https://fastly.restofworld.org/uploads/2023/06/India-online-scam-Header2-scaled.jpg?width=800&dpr=2&crop=16:9",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXplVFJwVHpSUVFuRjZiVFEzVFJDb0FSaXNBaWdCTWdtRkFJQW9DZU10WmdF",
+      "date": "06/05/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-05T07:00:00Z"
+     },
+     {
+      "position": 10,
+      "title": "Part-time jobs new tool in online scammers’ arsenal",
+      "source": {
+       "name": "The New Indian Express",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.newindianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Gautham Selvarajan"
+       ]
+      },
+      "link": "https://www.newindianexpress.com/states/tamil-nadu/2023/Apr/03/part-time-jobs-new-tool-in-online-scammers-arsenal-2562150.html",
+      "thumbnail": "https://cf-images.assettype.com/TNIE/import/2023/4/3/original/part-time_job_scam.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNWFhWFk0TXpod2RFMTVSbWwxVFJDWEF4anhCU2dLTWdB",
+      "date": "04/03/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-04-03T07:00:00Z"
+     },
+     {
+      "position": 11,
+      "title": "Why job scam texts are on the rise",
+      "source": {
+       "name": "CNBC",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.cnbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Anuz Thapa"
+       ]
+      },
+      "link": "https://www.cnbc.com/video/2025/04/23/why-job-scam-texts-are-on-the-rise.html",
+      "thumbnail": "https://image.cnbcfm.com/api/v1/image/108135345-CNBC_YouTube_Thumbnail_Text_Scam_3.png?v=1745412682&w=750&h=422&vtcrop=y",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWtNSGRuVkc1NVZ6ZGFia2hFVFJDZkF4amlCU2dLTWdhbFFwRHNKQWc",
+      "date": "04/23/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-23T07:00:00Z"
+     },
+     {
+      "position": 12,
+      "title": "Online part-time job scam cases on the rise in Bengaluru; four cases reported on Friday alone",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/karnataka/online-part-time-job-scam-cases-on-the-rise-in-bengaluru-four-cases-reported-on-friday-alone/article66740855.ece",
+      "thumbnail": "https://th-i.thgim.com/public/incoming/3jqqug/article66691653.ece/alternates/LANDSCAPE_1200/10215_19_10_2021_18_2_5_1_IMG_20211019_174854.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWZSM0JGYTA5UWJXaGhhbVowVFJDZkF4ampCU2dLTWdhSk1vb3ltUWs",
+      "date": "04/15/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-04-15T07:00:00Z"
+     },
+     {
+      "position": 13,
+      "title": "Kim Sook Reveals Part-Time Job Scams on Bibo TV",
+      "source": {
+       "name": "조선일보",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.chosun.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.chosun.com/english/kpop-culture-en/2026/09/02/AX27ZIQ6DFHEREDILDHHJFDJ5E/",
+      "thumbnail": "https://www.chosun.com/resizer/v2/HA2GMNDDGQZWGOJXMQ2TSNDEGQ.jpg?auth=02b706be86bf80cd7c49bed3c359f8f4fefa1955d89b52c7f6228eac36574e9b&width=616",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXZYMDUxVGtWTVZFMVBSeTA1VFJEYkFoam9CQ2dLTWdZdE5ZS3VIUWs",
+      "date": "09/02/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-02T07:00:00Z"
+     },
+     {
+      "position": 14,
+      "title": "Dubai police warn against fake part-time job scams: Why easy money could cost you everything",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/world/middle-east/dubai-police-warn-against-fake-part-time-job-scams-why-easy-money-could-cost-you-everything/articleshow/124310479.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-124310672,width-1280,height-720,resizemode-4/124310672.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNHljaTB3WDFRMWIweERVamxFVFJDZkF4ampCU2dLTWdB",
+      "date": "10/04/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-04T07:00:00Z"
+     },
+     {
+      "position": 15,
+      "title": "Part-time job scam: Pune man loses Rs 96 lakh from bank account after scammer offered him part-time job",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/part-time-job-scam-pune-man-loses-ra-96-lakh-from-bank-account-after-scammer-offered-him-part-time-job-2376180-2023-05-08",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/scam_9_0-sixteen_nine.jpg?VersionId=QfHLh2HXdji6SQ0f8a1XUf7rSj9faBBc&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNTBVMmxOTmpSNmNqbGhjRUpuVFJDZkF4ampCU2dLTWdB",
+      "date": "05/08/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-05-08T07:00:00Z"
+     },
+     {
+      "position": 16,
+      "title": "The anatomy of a scam: ‘Like YouTube Videos and Get Paid’ schemes",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nicolae Postolachi"
+       ]
+      },
+      "link": "https://www.bitdefender.com/en-au/blog/labs/the-anatomy-of-a-scam-like-youtube-videos-and-get-paid-schemes",
+      "thumbnail": "https://blogapp.bitdefender.com/labs/content/images/size/w600/2023/12/scam-7478783_1920.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDFkVXBXZVVaWE4zWnJUbG93VFJDUUF4allCQ2dLTWdZTllaREpNQWM",
+      "date": "12/18/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-18T08:00:00Z"
+     },
+     {
+      "position": 17,
+      "title": "Beware of online prepaid investment task scams: Prakasam SP",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/national/andhra-pradesh/beware-of-online-prepaid-investment-task-scams-prakasam-sp/article67446255.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "10/21/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-10-21T07:00:00Z"
+     },
+     {
+      "position": 18,
+      "title": "Mumbai man falls for liking YouTube videos to earn money scam, loses Rs 8.5 lakh",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divyanshi Sharma"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/mumbai-man-falls-for-liking-youtube-videos-to-earn-money-scam-loses-rs-859-lakh-2383459-2023-05-24",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/nordwood-themes-8lfe0lywyak-unsplash-sixteen_nine.jpg?VersionId=WSqqDtPWfPiZjmgFFA_UeXQpnDh5prKo&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNHpUalUwYVhkcFlXUnRibUp3VFJDZkF4ampCU2dLTWdB",
+      "date": "05/24/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-05-24T07:00:00Z"
+     },
+     {
+      "position": 19,
+      "title": "Man duped of Rs 3.3L in ‘like video & make money’ scam",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nishikant Karlikar"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/thane/man-duped-of-3-3l-in-like-video-make-money-scam/articleshow/105486474.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-105488525,width-1280,height-720,resizemode-72/105488525.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJVR3c0VDE5MWVIaFFNVU5xVFJDZkF4ampCU2dLTWdZWlFJNnVKQWM",
+      "date": "11/25/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-11-25T08:00:00Z"
+     },
+     {
+      "position": 20,
+      "title": "'Money-for-task' scams multiply to 362 cases this yr, just 51 solved",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Narayan Namboodiri"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/mumbai/money-for-task-scams-multiply-to-362-cases-this-yr-just-51-solved/articleshow/105322285.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-105322293,width-1280,height-720,resizemode-72/105322293.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNURRbVowT0hGRU0xVkdZMVZTVFJDZkF4ampCU2dLTWdrZFFZYnF5YUkwYWdF",
+      "date": "11/21/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-11-21T08:00:00Z"
+     },
+     {
+      "position": 21,
+      "title": "Man joins Telegram group to start part time job, but ends up losing Rs 31 lakh from bank account",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/man-joins-telegram-group-to-start-part-time-job-but-ends-up-losing-rs-31-lakh-from-bank-account-2410920-2023-07-24",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202307/scam_9_0-sixteen_nine.jpg?VersionId=qhqLqkTSxTg08.3_I4fJfJEIkXw.zQOX&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNVlialk0UldaeGNYWTRUMjFDVFJDZkF4ampCU2dLTWdB",
+      "date": "07/24/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-07-24T07:00:00Z"
+     },
+     {
+      "position": 22,
+      "title": "Govt blocks 100 websites involved in job scams, illegal investments",
+      "source": {
+       "name": "The News Minute",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.thenewsminute.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thenewsminute.com/news/govt-blocks-100-websites-involved-in-job-scams-illegal-investments",
+      "thumbnail": "https://cf-images.assettype.com/tnm/import/sites/default/files/cyber-security_750x500_passwrod_lock_Yu_Samoilov_flickr_2.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNHphbFl4ZG1jdFpVOVJlV05IVFJERUF4aW1CU2dLTWdB",
+      "date": "12/06/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-06T08:00:00Z"
+     },
+     {
+      "position": 23,
+      "title": "Many Indian WhatsApp users have lost lakhs by clicking on links and liking YouTube videos, you could be next",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/many-indian-whatsapp-users-have-lost-lakhs-by-clicking-on-links-and-liking-youtube-videos-you-could-be-next-2382535-2023-05-22",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/scam_9_1-sixteen_nine.jpg?VersionId=nGG2bo3XSIFu6Z3gNqxp1TX59AOONnBF&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxZWGhSU3poQlJsOHpNVWhmVFJDZkF4ampCU2dLTWdZQlVvd1NJUWM",
+      "date": "05/22/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-05-22T07:00:00Z"
+     },
+     {
+      "position": 24,
+      "title": "Got a part-time job to like, review, and subscribe YouTube videos? Beware of this scam",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/news/new-updates/got-a-part-time-job-to-like-review-and-subscribe-youtube-videos-beware-of-this-scam/articleshow/104779712.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-104779654,width-1200,height-900,resizemode-4,imgsize-1665373/online-scam.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTBVbGRpWTNVMlJUQmlNRkZZVFJEZ0F4aUFCU2dLTWdhVmhZN0tzUVk",
+      "date": "10/28/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-10-28T07:00:00Z"
+     },
+     {
+      "position": 25,
+      "title": "Pune man loses Rs 8.56 lakh after falling for part-time job scam on Telegram: here is what happened",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/pune-man-loses-rs-856-lakh-to-scammers-after-falling-for-part-time-job-scam-on-telegram-2367821-2023-05-03",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/scam_9-sixteen_nine.jpg?VersionId=0jwCWLelJ0r3.0zfzYfT3bA7fPJajQUd&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRWRTB5YlhWMU1XaG5jV3BHVFJDZkF4ampCU2dLTWdZQlVvd1NJUWM",
+      "date": "05/03/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-05-03T07:00:00Z"
+     },
+     {
+      "position": 26,
+      "title": "Avoiding part-time job scams: Essential tips for job seekers",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-tips/avoiding-part-time-job-scams-essential-tips-for-job-seekers/articleshow/113325168.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-113325322,width-1280,height-720,imgsize-23504,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXVTMnBEWDNwbVNtb3dYMjR3VFJDZkF4ampCU2dLTWdZaFlKQVJzUVU",
+      "date": "09/13/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-09-13T07:00:00Z"
+     },
+     {
+      "position": 27,
+      "title": "Part-Time Job Scam: Pune Woman Falls For 'Earn Money By Liking YouTube Video' Trick, Loses Rs 24 Lakh",
+      "source": {
+       "name": "India.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.india.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.india.com/news/india/part-time-job-scam-pune-ophthalmologist-woman-loses-rs-24-lakh-by-liking-youtube-videos-falls-for-earn-money-by-liking-youtube-video-trick-6017770/",
+      "thumbnail": "https://static.india.com/wp-content/uploads/2023/03/scam.jpg?impolicy=Medium_Resize&w=1200&h=800",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNVZNREJ1TWpOaGRVWmhiMWRyVFJERUF4aW1CU2dLTWdB",
+      "date": "04/27/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-04-27T07:00:00Z"
+     },
+     {
+      "position": 28,
+      "title": "I spoke to a task scammer. Here’s how it went",
+      "source": {
+       "name": "Malwarebytes",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.malwarebytes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Pieter Arntz"
+       ]
+      },
+      "link": "https://www.malwarebytes.com/blog/news/2025/03/i-spoke-to-a-task-scammer-heres-how-it-went",
+      "thumbnail": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2024/12/task_scam_at_work.png?w=600",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVRMV0Z3WVUxSVVucHJabk5IVFJEUkFoallCQ2dLTWdrZEFJYU1GYWlpNHdJ",
+      "date": "03/05/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-03-05T08:00:00Z"
+     },
+     {
+      "position": 29,
+      "title": "Bengaluru techie loses Rs 17 lakh in 24 hours in part-time work-from-home fraud",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Hm Chaithanya Swamy",
+        "Chaithanya Swamy"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-techie-loses-rs-17-lakh-in-24-hours-in-part-time-work-from-home-fraud/articleshow/120439851.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-120446779,width-1280,height-720,resizemode-72/120446779.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUViVXBETVY5T1lsVnFTSE16VFJDZkF4ampCU2dLTWdhWkZJak5GUWc",
+      "date": "04/20/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-20T07:00:00Z"
+     },
+     {
+      "position": 30,
+      "title": "Woman loses Rs 3.37 lakh in a part time job scam, here is what happened",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Ankita Garg"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/woman-loses-rs-337-lakh-in-a-part-time-job-scam-here-is-what-happened-2474471-2023-12-11",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202312/representative-image-061337167-16x9.jpg?VersionId=nSWU9HS8.qhHcIKcDrM_4RY3DoJ.QA6I&size=690:388",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUZPRTlNVUZsUmRucHFZbFExVFJDRUF4aXlCU2dLTWdZWmFJaHBMZ1k",
+      "date": "12/11/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-11T08:00:00Z"
+     },
+     {
+      "position": 31,
+      "title": "Easy Tasks, Real Money? The Hidden Danger Behind Task Scams",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Alina Bizga"
+       ]
+      },
+      "link": "https://www.bitdefender.com/en-us/blog/hotforsecurity/easy-tasks-real-money-the-hidden-danger-behind-task-scams",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2025/07/Easy-Tasks--Real-Money-The-Hidden-Danger-Behind-Task-Scams.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWZSazlUVTFaRE5rWnZTWEJKVFJDUUF4allCQ2dLTWdrSmxZNG12dVZ6N0FF",
+      "date": "07/18/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-18T07:00:00Z"
+     },
+     {
+      "position": 32,
+      "title": "Watch Out: The Netflix Review Job Scam Is Not the Kind of Show You Want to Star In",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Cristina Popov"
+       ]
+      },
+      "link": "https://www.bitdefender.com/en-au/blog/hotforsecurity/netflix-review-job-scam",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2025/05/Watch-Out-The-Netflix-Review-Job-Scam-Is-Not-the-Kind-of-Show-You-Want-to-Star-In.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJZakZrVEhGTk5XaEVRalp0VFJEU0FoallCQ2dLTWdhaE5JN3JIUWs",
+      "date": "05/12/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-05-12T07:00:00Z"
+     },
+     {
+      "position": 33,
+      "title": "Moonlighting gone awry: Bengaluru man loses over Rs 67 lakh in part-time job fraud",
+      "source": {
+       "name": "Deccan Herald",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.deccanherald.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Prajwal D'Souza"
+       ]
+      },
+      "link": "https://www.deccanherald.com/india/karnataka/bengaluru/moonlighting-gone-awry-bengaluru-man-loses-over-rs-67-lakh-in-part-time-job-fraud-3756646",
+      "thumbnail": "https://media.assettype.com/deccanherald%2F2025-10-08%2Fykubfaeh%2Fistockphoto-586746884-612x612.jpg?rect=0%2C0%2C612%2C344&w=undefined&auto=format%2Ccompress&fit=max",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU5ZVTlYUm5aeGNURlFRMGszVFJEWUFoamtCQ2dLTWdZaGdJclJQQVU",
+      "date": "10/07/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-07T07:00:00Z"
+     },
+     {
+      "position": 34,
+      "title": "Man from Mangaluru loses Rs 56.7 lakh after falling for Like YouTube Video scam",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/man-from-mangaluru-loses-rs-567-lakh-after-falling-for-like-youtube-video-scam-2622317-2024-10-24",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/online-scam-photo-created-using-ai-044831444-16x9_1.png?VersionId=QYa6idfpLGEwFO1d8jIU.8XdR4CshmI_&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUZkVEEwTjBKb1YwdGtUV0ZvVFJDZkF4ampCU2dLTWdhcE5JYXRIUWc",
+      "date": "10/24/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-24T07:00:00Z"
+     },
+     {
+      "position": 35,
+      "title": "How to avoid work-from-home scams",
+      "source": {
+       "name": "Kaspersky",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.kaspersky.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Olga Altukhova"
+       ]
+      },
+      "link": "https://www.kaspersky.com/blog/work-proposal-schemes/48752/",
+      "thumbnail": "https://media.kasperskydaily.com/wp-content/uploads/sites/92/2023/08/07123141/work-proposal-schemes-feature.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFjSE5NTUZwWlRWTm9iRmxZVFJEQkF4aXJCU2dLTWdZaGxJeXRPUVk",
+      "date": "08/07/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-08-07T07:00:00Z"
+     },
+     {
+      "position": 36,
+      "title": "PART-TIME JOB SCAM: Beware of growing WhatsApp and Telegram fraud",
+      "source": {
+       "name": "Forbes India",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.forbesindia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Naandika Tripathi",
+        "Pankti Mehta"
+       ]
+      },
+      "link": "https://www.forbesindia.com/video/explainers/parttime-job-scam-beware-of-growing-whatsapp-and-telegram-fraud/84823",
+      "thumbnail": "https://images.forbesindia.com/blog/wp-content/uploads//media/video/2023/May/parttimejobscamonwhatsappandtelegram.jpg?im=FitAndFill,width=1200,height=675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDNNSGRUTjFCaFVVdzJUV3hyVFJDZkF4ampCU2dLTWdZTk00Q0duUWM",
+      "date": "05/09/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-05-09T07:00:00Z"
+     },
+     {
+      "position": 37,
+      "title": "Cyber Talk: Beware of these app-based part-time job frauds",
+      "source": {
+       "name": "Telangana Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://telanganatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://telanganatoday.com/cyber-talk-beware-of-these-app-based-part-time-job-frauds",
+      "thumbnail": "https://media.telanganatoday.com/wp-content/uploads/2022/11/CYBER-TALK.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUVhbkI2WW1KUE0zUkRTamQzVFJDb0F4alVCU2dLTWdZbFpaYU5LUWM",
+      "date": "11/29/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-11-29T08:00:00Z"
+     },
+     {
+      "position": 38,
+      "title": "Dubai Police Warn Residents Against Fake Part-Time Remote Job Scams; Details Inside",
+      "source": {
+       "name": "Curly Tales",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://curlytales.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://curlytales.com/middle-east/ct-scoop/dubai-police-warn-residents-against-fake-part-time-remote-job-scams-details-inside/",
+      "thumbnail": "https://curlytales.com/wp-content/uploads/2026/02/Dubai-Part-Time-Jobs-scam.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNXNlVEZLVVhKUlpHRkRiMFJYVFJDZkF4ampCU2dLTWdB",
+      "date": "02/02/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-02-02T08:00:00Z"
+     },
+     {
+      "position": 39,
+      "title": "Man receives Rs 150 after liking YouTube videos, ends up losing Rs 40 lakh in the online scam",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/man-receives-rs-150-after-liking-youtube-videos-ends-losing-rs-40-lakh-in-the-online-scam-2406421-2023-07-14",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202307/scam_5_1-sixteen_nine.jpg?VersionId=vyHJo_Zv5P.xPs_akYu5hKZMBCmQiMRD&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTZNWGhhTFY5SVl6Z3RVMVp1VFJDZkF4ampCU2dLTWdhbFJZck5vUWM",
+      "date": "07/14/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-07-14T07:00:00Z"
+     },
+     {
+      "position": 40,
+      "title": "Delhi Police busts job fraud racket, arrests three accused | Delhi News",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/delhi/delhi-police-busts-job-fraud-racket-arrests-three-accused-chinese-module-pan-india-ring-abhishek-garg-40-satish-yadav-36-sandeep-mahla-youtube-instagram-telegram-whatsapp-artificial-intelligence/articleshow/97376658.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-97376652,imgsize-294873,width-400,height-225,resizemode-72/97376652.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUJkWGt6Y0MweVVXUm5RWFl5VFJEaEFSaVFBeWdLTWdtVklvYUkwaU5OcGdJ",
+      "date": "01/27/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-01-27T08:00:00Z"
+     },
+     {
+      "position": 41,
+      "title": "Job scams are on the rise and more people are falling for them. Protect yourself with these tips.",
+      "source": {
+       "name": "NBC News",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.nbcnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.nbcnews.com/business/consumer/job-scams-are-rise-people-are-falling-protect-tips-rcna217816",
+      "thumbnail": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2024-09/240919-phones-ch-1420-4994a2.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHlZVzVtZUU1WE1qbG5SV3N5VFJDUkF4ajhCU2dLTWdZRmFKYUZLZ2c",
+      "date": "07/09/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-09T07:00:00Z"
+     },
+     {
+      "position": 42,
+      "title": "Part-time job offer top bait that victims of cyber crimes fell to",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mahesh Buddi"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/gurgaon/part-time-job-offer-top-bait-that-victims-of-cyber-crimes-fell-to/articleshow/107836252.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-107841794,width-1280,height-720,resizemode-72/107841794.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNWlWWEJOY1d0VlZTMTVWMlV3VFJDZkF4ampCU2dLTWdB",
+      "date": "02/20/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-02-20T08:00:00Z"
+     },
+     {
+      "position": 43,
+      "title": "Noida woman falls prey to ‘like and subscribe’ YouTube channel job offer; loses over Rs 13 lakh",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indianexpress.com/article/cities/delhi/noida-woman-falls-prey-to-like-and-subscribe-youtube-channel-job-offer-loses-over-rs-13-lakh-8852139/",
+      "thumbnail": "https://images.indianexpress.com/2023/07/Youtube.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUNXRlpHVTNkYWRUY3pMVzlNVFJDZEF4am5CU2dLTWdhSmtZWkkwZ00",
+      "date": "07/21/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-07-21T07:00:00Z"
+     },
+     {
+      "position": 44,
+      "title": "UVA warns of scam job postings",
+      "source": {
+       "name": "WVIR",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.29news.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.29news.com/2025/08/15/uva-warns-scam-job-postings/",
+      "thumbnail": "https://gray-wvir-prod.gtv-cdn.com/resizer/v2/GQ6YFRNBINASTBE2RUBWG4TKVY.bmp?auth=d3b8c2c62271c621572a240cc2f9d37621ebcf5e42509e80fd76e756ea08a9c4&width=1200&height=600&smart=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDNZVkUxVlRoNFprTnVORlF4VFJDSEF4aVBCaWdLTWdZTnBKS252UVk",
+      "date": "08/15/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-08-15T07:00:00Z"
+     },
+     {
+      "position": 45,
+      "title": "Pune techie lost Rs 17.6 lakh to like and earn scam: What it is and how to stay safe",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/gadgets-news/pune-techie-lost-rs-17-6-lakh-to-like-and-earn-scam-what-it-is-and-how-to-stay-safe/articleshow/106159278.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-106159330,width-1280,height-720,imgsize-67394,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRhbVJpWDJ3MVJWaGxNbXBaVFJDZkF4ampCU2dLTWdhWmNwSXRMUWM",
+      "date": "12/20/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-20T08:00:00Z"
+     },
+     {
+      "position": 46,
+      "title": "WhatsApp Fake Job Scams: Earn Rs 10,000 a day — How one message can take all your life savings away",
+      "source": {
+       "name": "CNBC TV18",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.cnbctv18.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Pihu Yadav"
+       ]
+      },
+      "link": "https://www.cnbctv18.com/education/job-scams-in-india-youtube-video-likes-how-one-whatsapp-message-can-take-away-all-your-life-savings-16474901.htm",
+      "thumbnail": "https://images.cnbctv18.com/uploads/2023/04/Online-Job-Scams.png?impolicy=website&width=1600&height=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVdlbkJTUTJ4a01HeDBTRWRzVFJDZkF4ampCU2dLTWdrTlVJaU93T01kREFJ",
+      "date": "04/29/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-04-29T07:00:00Z"
+     },
+     {
+      "position": 47,
+      "title": "Baiting the Scammers",
+      "source": {
+       "name": "Open Magazine",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://openthemagazine.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Madhavankutty Pillai"
+       ]
+      },
+      "link": "https://openthemagazine.com/feature/baiting-the-scammers",
+      "thumbnail": "https://media.openthemagazine.com/openthemagazine/import/wp-content/uploads/2025/05/Scammers.jpg?w=640&auto=format,compress&q=80",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXBkMlZzVkZweVZIbERVamwyVFJDcUF4aUFCU2dLTWdZcEE0YVBFUVE",
+      "date": "05/23/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-05-23T07:00:00Z"
+     },
+     {
+      "position": 48,
+      "title": "Job scams are surging as fake listings blend into real job ads and outreach",
+      "source": {
+       "name": "KOMO",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://komonews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Herb Weisbaum"
+       ]
+      },
+      "link": "https://komonews.com/news/local/job-scams-how-to-spot-bogus-employment-offers-victims-fake-checks-fake-jobs-consumer-awareness-fake-job-application",
+      "thumbnail": "https://komonews.com/resources/media2/16x9/1032/800/0x139/80/c0b1666f-5f85-46d3-96b1-9e03f106641b-thumb_76834.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUZVVGhwTlVFMlJHNXdObWs1VFJDZkF4ampCU2dLTWdhVlVJek54UVE",
+      "date": "04/04/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-04T07:00:00Z"
+     },
+     {
+      "position": 49,
+      "title": "Scammers Luring Job Hunters with Fake Remote Jobs (VIDEO)",
+      "source": {
+       "name": "Scripps News",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.scrippsnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "John Matarese"
+       ]
+      },
+      "link": "https://www.scrippsnews.com/business/jobs-employment/scammers-luring-job-hunters-with-fake-remote-jobs",
+      "thumbnail": "https://ewscripps.brightspotcdn.com/dims4/default/0d1c6bb/2147483647/strip/false/crop/720x720+280+0/resize/1200x1200!/quality/90/?url=https%3A%2F%2Fewscripps.brightspotcdn.com%2F5c%2F4e%2F3567b8ff462a9eed8e81315c2f87%2F1675105117-no9pjg.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJhMVV3UlVadVltaFRSM0p5VFJEaEFSamhBU2dCTWdZTlFvQkxwUWc",
+      "date": "04/25/2024, 07:36 PM, +0000 UTC",
+      "iso_date": "2024-04-25T19:36:39Z"
+     },
+     {
+      "position": 50,
+      "title": "Dubai Police warn against fake ads offering part-time jobs with high salaries",
+      "source": {
+       "name": "Gulf News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://gulfnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://gulfnews.com/uae/crime/dubai-police-warn-against-fake-ads-offering-part-time-jobs-with-high-salaries-1.500294416",
+      "thumbnail": "https://media.assettype.com/gulfnews/2024-11-19/aumrpn36/ILOE_UAE_18af0911aec_original_ratio.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVpORXB4ZGw5WmNubERaekpRVFJEZ0F4aUFCU2dLTWdZcGNJN1dPQWM",
+      "date": "10/04/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-04T07:00:00Z"
+     },
+     {
+      "position": 51,
+      "title": "13 ways to make money from watching videos",
+      "source": {
+       "name": "Save the Student",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.savethestudent.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Laura Brown",
+        "Hannah Williams"
+       ]
+      },
+      "link": "https://www.savethestudent.org/make-money/get-paid-watching-videos.html",
+      "thumbnail": "https://www.savethestudent.org/uploads/money-videos-laptop-pounds-man10.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU5WM1JWZERNNFNUUTJialJtVFJDTUF4anhCU2dLTWdZcEZaek5sUW8",
+      "date": "06/26/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-26T07:00:00Z"
+     },
+     {
+      "position": 52,
+      "title": "In Serbia, Pay-Per-Like Scammers Still Evading Punishment",
+      "source": {
+       "name": "Balkan Insight",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://balkaninsight.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Ana Curic"
+       ]
+      },
+      "link": "https://balkaninsight.com/2025/10/07/in-serbia-pay-per-like-scammers-still-evading-punishment/bi/",
+      "thumbnail": "https://balkaninsight.com/wp-content/uploads/2025/10/cover-v1-1-1280x768.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBTR2ROTVhWT1JXbDRSMFl0VFJDdEF4akxCU2dLTWdZVlU1SktxUWM",
+      "date": "10/07/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-07T07:00:00Z"
+     },
+     {
+      "position": 53,
+      "title": "‘Earn £1,000 a day!’: The insidious rise of the get-rich-quick job scam text",
+      "source": {
+       "name": "The Independent",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.independent.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Katie Rosseinsky"
+       ]
+      },
+      "link": "https://www.independent.co.uk/life-style/job-scam-text-flexible-work-b2828176.html",
+      "thumbnail": "https://static.independent.co.uk/2025/09/17/11/34/iStock-1874372805.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpkRlJJYldWUmFGWnZha2MxVFJERUF4aW1CU2dLTWdZbHBJcU1QUVU",
+      "date": "09/19/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-09-19T07:00:00Z"
+     },
+     {
+      "position": 54,
+      "title": "7 On Your Side warns scammers using text messaging to trick job seekers",
+      "source": {
+       "name": "ABC7 Eyewitness News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://abc7ny.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nina Pineda"
+       ]
+      },
+      "link": "https://abc7ny.com/post/7-side-warns-scammers-text-messaging-trick-job/14851740/",
+      "thumbnail": "https://cdn.abcotvs.com/dip/images/14851743_052124-wabc-texting-job-scam-img.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNURaRkZUTjBKWE1tWXRTbmRpVFJDZkF4ampCU2dLTWdZQnhJUmxVZ00",
+      "date": "05/21/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-05-21T07:00:00Z"
+     },
+     {
+      "position": 55,
+      "title": "What happened when Sam responded to a text most would delete",
+      "source": {
+       "name": "ABC News & Headlines – Australian Broadcasting Corporation",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.abc.net.au&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Widia Jalal"
+       ]
+      },
+      "link": "https://www.abc.net.au/news/2025-07-26/employment-scams-work-marketing-messages/105089062",
+      "thumbnail": "https://live-production.wcms.abc-cdn.net.au/8372beb2b745ec791c8a4f8fc579fde8?impolicy=wcms_crop_resize&cropH=1080&cropW=1440&xPos=240&yPos=0&width=862&height=647",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhUa3R3VGtsSkxYTTBYMEpXVFJEZ0F4al9CQ2dLTWdhaFpJYXR2UVU",
+      "date": "07/25/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-25T07:00:00Z"
+     },
+     {
+      "position": 56,
+      "title": "All you need to know about task scams",
+      "source": {
+       "name": "Which?",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.which.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Chiara Cavaglieri"
+       ]
+      },
+      "link": "https://www.which.co.uk/news/article/all-you-need-to-know-about-task-scams-ahqWP8Q1MreC",
+      "thumbnail": "https://media.product.which.co.uk/prod/images/original/eab448caf786-convincing-scams.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNibTVMYUZGVk0xRlJTVnA1VFJDSEF4aVBCaWdLTWdhMUpKUndHUWs",
+      "date": "07/16/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-16T07:00:00Z"
+     },
+     {
+      "position": 57,
+      "title": "Beware of international numbers on WhatsApp! It is a fraud waiting to happen",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.livemint.com/money/personal-finance/beware-of-international-numbers-on-whatsapp-it-is-a-fraud-waiting-to-happen-151683800982030.html",
+      "thumbnail": "https://images.livemint.com/img/2023/05/11/382x214/54dbae78-39da-11ed-8b5b-641320d18bc4_1664849713267_1664849713267_1683801088920.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUlaVVpSVW1ab1JWOWZUa3hGVFJEV0FSajhBaWdLTWdhSk1vNVBKUWM",
+      "date": "05/17/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-05-17T07:00:00Z"
+     },
+     {
+      "position": 58,
+      "title": "'I am devastated': Dubai hotelier loses entire life savings to part-time job scam",
+      "source": {
+       "name": "Khaleej Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.khaleejtimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mazhar Farooqui (Journalist)"
+       ]
+      },
+      "link": "https://www.khaleejtimes.com/uae/i-am-devastated-dubai-hotelier-loses-entire-life-savings-to-part-time-job-scam",
+      "thumbnail": "https://imgengine.khaleejtimes.com/khaleejtimes/import/images/e809aa64-64c1-4880-91ef-d64c8eead296-org.png?width=1200&height=630&q=60&format=auto&ogImage=true&mode=fill&fill=blur",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNTJjVlYxTmpCTFQzVm9aSEF4VFJDUkF4ajhCU2dLTWdB",
+      "date": "05/28/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-05-28T07:00:00Z"
+     },
+     {
+      "position": 59,
+      "title": "Amazon job text scam warning signs",
+      "source": {
+       "name": "Fox News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.foxnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.foxnews.com/tech/amazon-job-text-scam-warning-signs",
+      "thumbnail": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/04/1280/720/amazon-job-text-scam-1.jpg?ve=1&tl=1",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJSWEpuVEZCMVV6WnZVSGRrVFJDZkF4ampCU2dLTWdZQklJeDNqQW8",
+      "date": "04/06/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-06T07:00:00Z"
+     },
+     {
+      "position": 60,
+      "title": "Be wary of job scams which appear to originate from TikTok, and always #thinkb4youdo",
+      "source": {
+       "name": "TikTok Newsroom",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://newsroom.tiktok.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://newsroom.tiktok.com/en-sg/be-wary-of-scams",
+      "thumbnail": "https://p16-tiktokcdn-com.akamaized.net/obj/tiktok-obj/94a911a85ac0b7dad3ec259eb196f190.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNHpNM0E0U3psZk9GRlpRVGhNVFJDVEJCakJCQ2dLTWdtaFFvd0x2dVZNYUFJ",
+      "date": "01/17/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-01-17T08:00:00Z"
+     },
+     {
+      "position": 61,
+      "title": "Is it your dream job or a deepfake?",
+      "source": {
+       "name": "TELUS",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.telus.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.telus.com/en/wise/resources/content/article/dream-job-or-deepfake",
+      "thumbnail": "https://images.ctfassets.net/1izjqx4qtt8c/2un6c0jA1yfM9dXZ8H8rUX/182a0f686864e6529d10d47cad408ebe/Person_looking_for_jobs_on_their_laptop.jpg?w=1440&q=75",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFVak41YTJvd2VuRk5USEptVFJDNkFSaVBBaWdCTWdhUklvaUhsZ28",
+      "date": "07/28/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-28T07:00:00Z"
+     },
+     {
+      "position": 62,
+      "title": "Bay Area software rep. lost $176K of savings after accepting remote job she thought to be with Facebook",
+      "source": {
+       "name": "ABC7 San Francisco",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://abc7news.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Stephanie Sierra"
+       ]
+      },
+      "link": "https://abc7news.com/post/bay-area-software-rep-lost-176k-savings-accepting-remote-job-she-thought-facebook/18444685/",
+      "thumbnail": "https://cdn.abcotvs.com/dip/images/18446712_012126-kgo-facebook-job-img.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTVUVkpZT0hoSGRVRkNZVkJxVFJDZkF4ampCU2dLTWdtTkU1QlJGU3FxeHdJ",
+      "date": "01/22/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-22T08:00:00Z"
+     },
+     {
+      "position": 63,
+      "title": "Georgia woman loses nearly $30K in 'task scam' targeting remote job seekers",
+      "source": {
+       "name": "11Alive.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.11alive.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Liza Lauren Lucas"
+       ]
+      },
+      "link": "https://www.11alive.com/article/news/investigations/11alive-news-investigates/georgia-woman-remote-job-task-scam/85-0fab32e4-d6a1-4a99-83b3-7839a7969beb",
+      "thumbnail": "https://media.11alive.com/assets/WXIA/images/e3945711-c41d-4822-b0b5-de7f9b7aae41/20250702T202841/e3945711-c41d-4822-b0b5-de7f9b7aae41_1920x1080.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW1PVW8xTUVrMGIzZzJOVTlvVFJDZkF4ampCU2dLTWdhcFJKQ3VuUWs",
+      "date": "07/03/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-03T07:00:00Z"
+     },
+     {
+      "position": 64,
+      "title": "I responded to scammers offering me lucrative 'job offers'. This was what happened",
+      "source": {
+       "name": "CNA",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.channelnewsasia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Taufiq Zalizan"
+       ]
+      },
+      "link": "https://www.channelnewsasia.com/singapore/i-responded-scammers-offering-me-lucrative-job-offers-was-what-happened-5626481",
+      "thumbnail": "https://dam.mediacorp.sg/image/upload/s--MwnO8yaU--/c_fill,g_center,h_598,w_747/f_auto,q_auto/v1/mediacorp/tdy/image/2022/01/20/20220120-sw-jobscam.jpg?itok=k1KKfsGV",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUtlbHAxZDI1M1prWnhZMmxVVFJEdkF4anJCQ2dLTWdhZGRJN0x1UVk",
+      "date": "01/20/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-01-20T08:00:00Z"
+     },
+     {
+      "position": 65,
+      "title": "Scam alert: job scams to watch out for",
+      "source": {
+       "name": "Which?",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.which.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Tali Ramsey"
+       ]
+      },
+      "link": "https://www.which.co.uk/news/article/scam-alert-job-scams-to-watch-out-for-aGT6A6D3uzZI",
+      "thumbnail": "https://media.product.which.co.uk/prod/images/original/3c2285649eab-remote-working-scam.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxTVU53UjJkd01GZGlTMFJZVFJDSEF4aVBCaWdLTWdZMUpJcVFsUW8",
+      "date": "03/24/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-03-24T07:00:00Z"
+     },
+     {
+      "position": 66,
+      "title": "‘I’m on the verge of losing my house’: Man’s attempt to earn extra income leads to financial ruin",
+      "source": {
+       "name": "CityNews Toronto",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://toronto.citynews.ca&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Pat Taney"
+       ]
+      },
+      "link": "https://toronto.citynews.ca/2023/11/08/job-scam-fraud-speakers-corner/",
+      "thumbnail": "https://cf-images.us-east-1.prod.boltdns.net/v1/jit/593482582001/8ee7419e-db85-419d-8f57-12548b5037c3/main/1920x1080/1m4s554ms/match/image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNHpVREJvYTFWa01FaFVTMjFMVFJDZkF4ampCU2dLTWdB",
+      "date": "11/08/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-11-08T08:00:00Z"
+     },
+     {
+      "position": 67,
+      "title": "Working at TDI",
+      "source": {
+       "name": "Texas Department of Insurance (.gov)",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.tdi.texas.gov&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.tdi.texas.gov/blog/category/working-at-tdi.html",
+      "thumbnail": "https://www.tdi.texas.gov/blog/artwork/jackie-whelpley.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNDJXVE5vUzIwNU5VaGlXamRoVFJDZkF4ampCU2dLTWdrVllwTDFMQ2VpNndF",
+      "date": "06/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-23T07:00:00Z"
+     },
+     {
+      "position": 68,
+      "title": "Too good to be true? The Netflix reviewer job scam",
+      "source": {
+       "name": "The Olympian",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.theolympian.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.theolympian.com/news/business/article312258840.html",
+      "date": "09/25/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-09-25T07:00:00Z"
+     },
+     {
+      "position": 69,
+      "title": "I Answered a Job Scam Text on Purpose, and Here’s What I Learned",
+      "source": {
+       "name": "Lifehacker",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://lifehacker.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Stephen Johnson"
+       ]
+      },
+      "link": "https://lifehacker.com/entertainment/what-happens-when-you-respond-to-a-job-offer-scam-text",
+      "thumbnail": "https://lifehacker.com/imagery/articles/01JP68GVTCVQC6GGZEK70RE27W/hero-image.fill.size_1248x702.v1742919378.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxjWEF3WjJaTWFtdEJWblI2VFJDZkF4ampCU2dLTWdZTlpZcnNxUWM",
+      "date": "04/04/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-04T07:00:00Z"
+     },
+     {
+      "position": 70,
+      "title": "TikTok scam warning over dodgy texts offering ‘part-time’ jobs - what to watch for",
+      "source": {
+       "name": "Yorkshire Post",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.yorkshirepost.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Matthew Mohan-hickson"
+       ]
+      },
+      "link": "https://www.yorkshirepost.co.uk/news/crime/tiktok-job-text-scam-warning-4844879",
+      "thumbnail": "https://www.yorkshirepost.co.uk/jpim-static/image/2022/07/08/14/Tiktok.jpg?width=1200&enable=upscale",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTRMVVZ3WVhWeVdYZzNURU0wVFJERUF4aW1CU2dLTWdhWm81SnN0UVk",
+      "date": "10/30/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-30T07:00:00Z"
+     },
+     {
+      "position": 71,
+      "title": "AP report: Trump administration admits a glaring error in its New York health fraud accusations",
+      "source": {
+       "name": "PBS",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.pbs.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Ali Swenson"
+       ]
+      },
+      "link": "https://www.pbs.org/newshour/politics/ap-report-trump-administration-admits-a-glaring-error-in-its-new-york-health-fraud-accusations",
+      "thumbnail": "https://d3i6fh83elv35t.cloudfront.net/static/2026/04/2026-03-26T211335Z_1246539614_RC2JCKAMK0WS_RTRMADP_3_USA-ELECTION-CPAC-1024x683.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNaR2hIVWpoZlRGTmFaRlYzVFJERUF4aW1CU2dLTWdZUk01UVR0UVk",
+      "date": "04/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-10T07:00:00Z"
+     },
+     {
+      "position": 72,
+      "title": "TikTok warning over 'scam' texts promising jobs with 'up to £500 a day'",
+      "source": {
+       "name": "Manchester Evening News",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.manchestereveningnews.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Fionnula Hainey",
+        "Eve Wagstaff"
+       ]
+      },
+      "link": "https://www.manchestereveningnews.co.uk/news/uk-news/tiktok-warning-over-scam-texts-29999200",
+      "thumbnail": "https://i2-prod.lancs.live/incoming/article26929303.ece/ALTERNATES/s1200b/1_JS294083646.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNXRYM0JPZWpKblIyaG9TVFZKVFJEZ0F4aUFCU2dLTWdzQk1JcDRFQ3JnQ3NwZ2dn",
+      "date": "09/24/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-09-24T07:00:00Z"
+     },
+     {
+      "position": 73,
+      "title": "Scam tracker: What are the trends in Singapore and how much money was lost in 2025?",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "David Sun"
+       ]
+      },
+      "link": "https://www.straitstimes.com/singapore/scam-tracker-what-are-the-latest-trends-in-spore-and-how-much-money-has-been-lost",
+      "thumbnail": "https://cassette.sphdigital.com.sg/image/straitstimes/f31c0be18cb59a48691ccaeec7133f83f5e9c1e8726a29cd9f5283c71ada7c27",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWhObFZyZEY5WFgwOVpMVU5KVFJEeUJCanFBeWdLTWdhTlU0am9wUWM",
+      "date": "02/25/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-02-25T08:00:00Z"
+     },
+     {
+      "position": 74,
+      "title": "How Pinoys turn tables on job, WFH scams flooding inboxes",
+      "source": {
+       "name": "Interaksyon",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://interaksyon.philstar.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jeline Malasig"
+       ]
+      },
+      "link": "https://interaksyon.philstar.com/trends-spotlights/2025/06/18/297961/job-scammers-text-messages-filipinos/",
+      "thumbnail": "https://media.interaksyon.com/wp-content/uploads/2025/06/Online-scammer.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHdZbmRIZFcweWQyMDNjMmRFVFJDMkF4aTlCU2dLTWdhWkE0NnFsUVk",
+      "date": "06/18/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-06-18T07:00:00Z"
+     },
+     {
+      "position": 75,
+      "title": "“Get paid to chat online with Japanese girls” part-time job sounds like scam, is apparently legit",
+      "source": {
+       "name": "SoraNews24",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://soranews24.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Casey Baseel"
+       ]
+      },
+      "link": "https://soranews24.com/2024/12/04/get-paid-to-chat-online-with-japanese-girls-part-time-job-sounds-like-scam-is-apparently-legit/",
+      "thumbnail": "https://soranews24.com/wp-content/uploads/sites/3/2024/12/OB-1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHdkMVpMY21WaFUySnBUVkZIVFJERUF4aW5CU2dLTWdaQkk0Z3pGUW8",
+      "date": "12/04/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-12-04T08:00:00Z"
+     },
+     {
+      "position": 76,
+      "title": "Noida woman loses Rs 50,000 to online part-time job fraud: A cautionary tale",
+      "source": {
+       "name": "News9live",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.news9live.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.news9live.com/technology/noida-woman-loses-rs-50000-to-online-part-time-job-fraud-a-cautionary-tale-2370273",
+      "thumbnail": "https://images.news9live.com/wp-content/uploads/2023/12/part-time-job-scam-1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNTRTV2hFY0ZrM1pFaFBPRlZJVFJDZkF4ampCU2dLTWdB",
+      "date": "12/06/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-06T08:00:00Z"
+     },
+     {
+      "position": 77,
+      "title": "TikTok issues urgent warning to anyone who has received specific text",
+      "source": {
+       "name": "The Mirror",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.mirror.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Eve Wagstaff"
+       ]
+      },
+      "link": "https://www.mirror.co.uk/tech/tiktok-issues-urgent-warning-anyone-33739070",
+      "thumbnail": "https://i2-prod.mirror.co.uk/incoming/article33739022.ece/ALTERNATES/s1200b/0_Remote-work-at-home-Woman-in-headset-working-on-Laptop-at-Kitchen-Table-in-tiny-flat-Student-has-o.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHhTa2RtU0RSa1gxWnNMV0p5VFJEZ0F4aUFCU2dLTWdZaGRwVHNLUWc",
+      "date": "09/24/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-09-24T07:00:00Z"
+     }
+    ],
+    "_searched_at": "2026-10-07 10:14:42 UTC"
+   }
+  }
+ }
+}

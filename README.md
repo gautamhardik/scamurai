@@ -60,7 +60,7 @@ SerpApi supplies all of Asli's evidence. Without it, Asli could only look for wo
 | Engine | Question it answers | How Asli queries it | What it can prove |
 |---|---|---|---|
 | **Google Search** (`google`) | What is the claimed organisation's official website and contact? | `"{org}" official website` (knowledge graph + top result) | The link or email domain isn't the organisation's (**I2**); all links are official (**T2**) |
-| **Google Search** | Has this exact number or domain been reported? | `"7000012345" OR "70000 12345" OR "+91 70000 12345"` / `"{domain}"` | Reported in scam/complaint posts on independent sites (**W1/W2**); domain has no web presence (**W4**) |
+| **Google Search** | Has this exact number, UPI ID or domain been reported? | `"7000012345" OR "70000 12345" OR "+91 70000 12345"` / `"{upi}"` / `"{domain}"` | Reported in scam/complaint posts on independent sites (**W1/W12/W2**); domain has no web presence (**W4**) |
 | **Google Search** (round 2) | Does the official site list this number? | `site:{official} ("…")` | Listed on an official contact page (**T1**), or not listed (**W3**) |
 | **Google News** (`google_news`) | Has this kind of message been reported as a scam? | Curated per-scheme query (e.g. `electricity bill disconnection SMS scam`) | Independent news reports of the same script (**W6**); the brand is often impersonated (**W7**) |
 | **Image API + Google Lens** (`google_lens`) | Where else does this product photo appear, and at what price? | Upload the screenshot (≤480 KB, 0 credits) → `image_id` | The photo is reused from real listings (**W9**); real ₹ prices for the same product |
@@ -73,7 +73,7 @@ SerpApi supplies all of Asli's evidence. Without it, Asli could only look for wo
 - Identical searches within one investigation share a single request.
 - Each investigation is limited to 8 searches and 2 rounds, with a daily cap and a credit reserve read from SerpApi's free account endpoint.
 - Once SerpApi reports the quota is used up, queued searches are skipped instead of retried.
-- The 7 demo scenarios replay from recorded real responses at zero credits.
+- The 10 demo scenarios replay from recorded real responses at zero credits.
 
 ---
 
@@ -87,16 +87,16 @@ trust  = 1 − Π (1 − vⱼ · cⱼ)      over trust signals  (official confir
 points = round(100 · risk · (1 − 0.75 · trust))     → risk points, not a probability
 ```
 
-Each signal has a fixed weight **w** and a confidence **c**. The confidence comes from its evidence, for example 0.60 / 0.80 / 0.95 for 1 / 2 / 3+ independent sites. There are 30 signals in four groups:
+Each signal has a fixed weight **w** and a confidence **c**. The confidence comes from its evidence, for example 0.60 / 0.80 / 0.95 for 1 / 2 / 3+ independent sites. There are 33 signals in four groups:
 
-- **Identity:** lookalike domain, official-domain mismatch, free-mail sender, punycode, helpline that is a personal mobile number.
-- **Web evidence:** reported number or domain, reported scam pattern, price anomaly, reused photo, missing job listing, address mismatch, and others.
-- **Message patterns:** OTP or remote-access requests, upfront fees, threats, payment requests, hidden instructions aimed at AI tools, risky TLDs, and others.
+- **Identity:** lookalike domain, official-domain mismatch, free-mail sender, punycode, helpline that is a personal mobile number, an authority collecting money to a personal UPI ID.
+- **Web evidence:** reported number, UPI ID or domain, reported scam pattern, price anomaly, reused photo, missing job listing, address mismatch, and others.
+- **Message patterns:** OTP or remote-access requests, upfront fees, money demanded under threat of arrest ("digital arrest"), paid "tasks", threats, payment requests, hidden instructions aimed at AI tools, risky TLDs, and others.
 - **Trust:** number on an official site, links to the official domain, matching job listing, Maps match, plausible price.
 
 **Gates that keep weak evidence from producing strong verdicts:**
 
-- **G1:** *High risk* requires either one strong identity or web signal (c ≥ 0.6 and w·c ≥ 0.25) or a critical request (OTP, PIN or an upfront fee). The absence of results alone can never make something high risk.
+- **G1:** *High risk* requires either one strong identity or web signal (c ≥ 0.6 and w·c ≥ 0.25) or a critical request (OTP or PIN, an upfront fee, or money demanded under threat of arrest). The absence of results alone can never make something high risk.
 - **G2:** If only message patterns fired, the score is capped at 55.
 - **G3:** If an official source confirms an entity that also has risk evidence (scammers spoof real helplines), the verdict is *Be careful – mixed evidence*.
 - **Coverage:** If too few checks finished, or nothing could be checked, the verdict is *Couldn't verify* rather than "safe".
@@ -128,6 +128,8 @@ Each signal has a fixed weight **w** and a confidence **c**. The confidence come
 | Fake customer-care number | "Amazon customer care 98765…" | Official contact pages, helpline is a mobile number, complaint reports |
 | Too-good-to-be-true deal | "Nike ₹1,499, 90% off" | Google Lens photo matches and prices, Shopping prices, lookalike shop domain |
 | Fake job offer | "Selected! Pay a ₹2,500 registration fee" | Free-mail sender, Google Jobs, Google Maps address, fee request |
+| Task scam | "Like videos and earn ₹3,000/day" | Paid-task hook, news reports of the pattern |
+| "Digital arrest" / extortion | "CBI officer: stay on video call, send a deposit" | Threat + payment, personal UPI ID for an authority, UPI reputation, news reports |
 | Anything else | Vague openers, unknown links | Returns *Couldn't verify* rather than guessing |
 
 ---
@@ -210,7 +212,7 @@ src/asli/
   risk/                   signal registry, engine, report builder
   web/                    FastAPI app + static UI
   demo/                   scenarios + recorded real SerpApi responses
-tests/                    unit · integration · e2e (212 tests, run offline)
+tests/                    unit · integration · e2e (224 tests, run offline)
 ```
 
 ## Security and privacy
@@ -234,7 +236,7 @@ tests/                    unit · integration · e2e (212 tests, run offline)
 ## Testing
 
 ```bash
-uv run pytest -q          # 212 tests, no keys or network needed
+uv run pytest -q          # 224 tests, no keys or network needed
 ```
 
 - **Unit tests:** extraction and grounding, redaction, domain and lookalike analysis, message patterns in English, Hindi and Hinglish, risk-engine gates, and properties (adding risk never lowers the score, adding trust never raises it).
@@ -242,7 +244,7 @@ uv run pytest -q          # 212 tests, no keys or network needed
 - **Image safety.**
 - **Failure injection:** timeouts, quota exhaustion, empty results, and the budget cap.
 - **API streaming.**
-- **End to end:** all 7 demo scenarios replayed from recorded real searches, each with expected verdicts and must/forbid flags.
+- **End to end:** all 10 demo scenarios replayed from recorded real searches, each with expected verdicts and must/forbid flags.
 
 CI runs on Ubuntu and Windows.
 

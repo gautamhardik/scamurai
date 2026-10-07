@@ -45,6 +45,27 @@ FLAGS: dict[str, dict[Lang, tuple[str, str]]] = {
         "hinglish": ("Free {provider} email se bheja gaya",
                      "{org} ke offer {email} jaise free email se nahi aate.{official_part}"),
     },
+    "authority_personal_upi": {
+        "en": ("Payment to a personal UPI ID",
+               "Government offices, banks and utilities don't collect money into personal UPI accounts like {upi}."),
+        "hi": ("निजी UPI ID पर भुगतान",
+               "सरकारी विभाग, बैंक और बिजली कंपनियाँ {upi} जैसे निजी UPI खातों में पैसे नहीं लेते।"),
+        "hinglish": ("Personal UPI ID par payment",
+                     "Sarkari vibhaag, bank aur bijli companies {upi} jaise personal UPI accounts mein paise nahi lete."),
+    },
+    "upi_reported": {
+        "en": ("UPI ID reported online", "{upi} appears in {n} scam or complaint report(s) ({sites})."),
+        "hi": ("इस UPI ID की ऑनलाइन शिकायतें हैं", "{upi} {n} स्कैम/शिकायत रिपोर्ट ({sites}) में मिलती है।"),
+        "hinglish": ("Is UPI ID ki online complaints hain", "{upi} {n} scam/complaint reports ({sites}) mein milti hai."),
+    },
+    "extortion_threat": {
+        "en": ("Demands money under threat of arrest",
+               "Police, CBI, customs and courts never ask for money, deposits or video calls to avoid an arrest. This is the “digital arrest” scam."),
+        "hi": ("गिरफ़्तारी का डर दिखाकर पैसे माँगता है",
+               "पुलिस, CBI, कस्टम या अदालत गिरफ़्तारी से बचाने के लिए कभी पैसे, डिपॉज़िट या वीडियो कॉल नहीं माँगते। यह ‘डिजिटल अरेस्ट’ स्कैम है।"),
+        "hinglish": ("Arrest ka darr dikhakar paise maangta hai",
+                     "Police, CBI, customs ya court arrest se bachane ke liye kabhi paise, deposit ya video call nahi maangte. Yeh ‘digital arrest’ scam hai."),
+    },
     "punycode_homograph": {
         "en": ("Link uses look-alike letters",
                "{domain} contains letters from other alphabets that can imitate a familiar website name."),
@@ -202,6 +223,14 @@ FLAGS: dict[str, dict[Lang, tuple[str, str]]] = {
         "en": ("Promise that's too good to be true", "Easy money for little work is a common hook."),
         "hi": ("ज़रूरत से ज़्यादा अच्छा वादा", "थोड़े काम में आसान कमाई का लालच ठगी का आम तरीका है।"),
         "hinglish": ("Zaroorat se zyada achha promise", "Thode kaam mein aasan kamai ka laalach thagi ka common tareeka hai."),
+    },
+    "too_good_to_be_true:task": {
+        "en": ("Pays you for likes or “tasks”",
+               "Getting paid to like videos, rate hotels or finish “tasks” is how task scams start: small payouts first, then you're asked to deposit money to unlock bigger ones."),
+        "hi": ("लाइक या ‘टास्क’ के बदले पैसे",
+               "वीडियो लाइक करने, होटल रेट करने या ‘टास्क’ पूरे करने के पैसे — टास्क स्कैम ऐसे ही शुरू होता है: पहले छोटी कमाई, फिर बड़ी रकम के लिए पैसे जमा करवाए जाते हैं।"),
+        "hinglish": ("Likes ya ‘tasks’ ke badle paise",
+                     "Videos like karne, hotels rate karne ya ‘tasks’ ke paise — task scam aise hi shuru hota hai: pehle chhoti kamai, phir badi rakam ke liye paise jama karwaye jaate hain."),
     },
     "phone_on_official_site": {
         "en": ("Number is listed on {official}", "{phone} appears on the official website {official}."),

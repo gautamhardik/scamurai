@@ -23,6 +23,7 @@ LABELS = {
     "job_listing": "Checking if {name} is really hiring for this role",
     "address_check": "Checking the address on Google Maps",
     "official_phone_check": "Checking if {official} lists this number",
+    "upi_reputation": "Searching the web for reports about UPI ID {name}",
 }
 
 
@@ -108,6 +109,9 @@ def plan_round1(graph: ClaimGraph, max_searches: int, *, has_image: bool, image_
         variants = phone.attrs.get("variants") or [phone.value]
         q = " OR ".join(f'"{v}"' for v in variants[:3])
         spec("google", {"q": q}, "phone_reputation", phone.attrs.get("display") or phone.value, [phone.id], 2)
+
+    for upi in graph.of("upi_id")[:1]:
+        spec("google", {"q": f'"{upi.value}"'}, "upi_reputation", upi.value, [upi.id], 2)
 
     for dom in suspicious_domains(graph)[:2]:
         reg = dom.attrs["registrable"]

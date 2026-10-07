@@ -12,7 +12,7 @@ from dataclasses import dataclass
 # --------------------------------------------------------------------------- schemes
 # Ordered: earlier schemes win when keyword fallback classification is ambiguous.
 SCHEME_KEYWORDS: dict[str, list[str]] = {
-    "digital_arrest": [r"digital arrest", r"\bcbi\b", r"narcotics", r"money laundering", r"arrest warrant",
+    "digital_arrest": [r"digital arrest", r"\bcbi\b", r"narcotics", r"money laundering", r"arrest warrant", r"video call",
                        r"डिजिटल अरेस्ट", r"गिरफ्तार"],
     "courier_customs": [r"fedex", r"\bdhl\b", r"courier", r"parcel", r"customs", r"india post", r"speed post",
                         r"पार्सल", r"कूरियर"],
@@ -61,7 +61,7 @@ NEWS_TEMPLATES: dict[str, tuple[str, str]] = {
     "kyc_update": ("{org} KYC update SMS link fraud", "KYC update SMS link fraud"),
     "bank_account_block": ("{org} account blocked SMS fraud", "bank account blocked SMS fraud"),
     "courier_customs": ("{org} parcel customs scam call", "courier parcel customs scam call"),
-    "digital_arrest": ("digital arrest scam {org}", "digital arrest scam"),
+    "digital_arrest": ("digital arrest scam", "digital arrest scam"),
     "tax_refund": ("income tax refund SMS scam", "income tax refund SMS scam"),
     "job_offer": ("{company} fake job offer fraud", "fake job offer registration fee scam"),
     "task_scam": ("part time task scam like videos", "part time task scam like videos"),
@@ -176,8 +176,16 @@ _THREAT = re.compile(
     re.IGNORECASE,
 )
 _PAYMENT = re.compile(
-    r"\b(pay|make (?:the |a )?payment|complete (?:the |your )?payment|payment link|transfer|send money|recharge|"
+    # "pay" as a verb only: not wallet/brand names like "Amazon Pay", "Google Pay", "Pay Later"
+    r"(?<!amazon )(?<!google )(?<!samsung )(?<!apple )(?<!phone)(?<!sbi )\b(pay(?! later)(?!tm)|"
+    r"make (?:the |a )?payment|complete (?:the |your )?payment|payment link|transfer|send money|recharge|"
     r"scan (?:the |this )?qr|pay karke|pay karein|pay karo|paise bhejo|bhugtan kare\w*)\b|भुगतान कर",
+    re.IGNORECASE,
+)
+# Paid "tasks" (like/subscribe/review for money) are the hallmark of task scams.
+_TASK_PAYOUT = re.compile(
+    r"\b(?:like|subscribe|rate|review|follow)\s+\w*\s*(?:videos?|posts?|hotels?|products?|channels?|pages?)\b.{0,60}"
+    r"\b(?:earn|paid|payment|commission|income)\b|\bcomplete\s+\d*\s*tasks?\b|\btask\b.{0,40}\b(?:earn|commission|payment)\b",
     re.IGNORECASE,
 )
 _AI_INJECTION = [
@@ -196,6 +204,18 @@ _TOO_GOOD = re.compile(
     r"\s+(?:and|&)\s+earn\b|\bghar\s*baithe\b|घर\s*बैठे|\b\d{1,3}\s*%\s*(?:daily|monthly|weekly)\s*(?:returns?|profits?)",
     re.IGNORECASE,
 )
+
+
+_LAW_THREAT = re.compile(
+    r"\b(arrest(?:ed)?|warrant|digital arrest|cbi|ed officer|enforcement directorate|narcotics|ncb|"
+    r"police|court|fir|legal case|money laundering|customs officer|jail)\b|गिरफ्तार|पुलिस|वारंट",
+    re.IGNORECASE,
+)
+_HOLD_ON_CALL = re.compile(r"video call|skype|stay on (?:the )?call|call par (?:raho|rahe|rahiye)|disconnect mat", re.IGNORECASE)
+_UPI_LIKE = re.compile(r"\b[a-z0-9._-]{2,64}@[a-z]{2,20}\b(?!\.[a-z0-9])", re.IGNORECASE)
+# Fraud-safety advice mentions police and money too ("report to 1930", "beware") — not a threat.
+_ADVISORY = re.compile(r"\breport (?:it|this|to)|helpline|\b1930\b|cybercrime\.gov|beware|alert:", re.IGNORECASE)
+_MONEY_WORDS = re.compile(r"\b(deposit|bhejo|bhejiye|transfer|send|pay|paise|amount)\b|₹|\brs\.?\s*\d", re.IGNORECASE)
 
 
 def _sentences(text: str) -> list[str]:
@@ -251,5 +271,11 @@ def detect_message_patterns(text: str) -> list[PatternHit]:
                 break
         good = _TOO_GOOD.search(sentence)
         if good:
-            add("too_good_to_be_true", sentence, good)
+            add("too_good_to_be_true", sentence, good, "task" if _TASK_PAYOUT.search(text) else "")
+    # Money (or an open video call) demanded under threat of arrest: police, CBI and courts never do this.
+    threat_sentence = next((s for s in _sentences(text) if _LAW_THREAT.search(s) and not _NEGATION.search(s)
+                            and not _ADVISORY.search(s)), None)
+    if threat_sentence and (_PAYMENT.search(text) or _HOLD_ON_CALL.search(text) or _UPI_LIKE.search(text)
+                            or _MONEY_WORDS.search(text)):
+        add("extortion_threat", threat_sentence, _LAW_THREAT.search(threat_sentence))
     return hits

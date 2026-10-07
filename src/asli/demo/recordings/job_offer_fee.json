@@ -1,6 +1,6 @@
 {
  "scenario": "job_offer_fee",
- "recorded_at": "2026-10-07T15:24:39+05:30",
+ "recorded_at": "2026-10-07T15:46:08+05:30",
  "input_hash": "4aa24701c0d05660beb373735e4801c38f0a347b65a1c7fc9cb96026c440b752",
  "llm": {
   "data": {
@@ -1702,6 +1702,251 @@
      }
     ],
     "_searched_at": "2026-10-07 09:33:22 UTC"
+   }
+  },
+  "de74942c73909d6cb97ef655220571655f9520b1fba3afdd935739e3b1d633de": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"infosyshr@ybl\""
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "Infosys Lead Hr Bp Salaries",
+      "link": "https://6figr.com/in/salary/infosys--lead-hr-bp",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESagHrOzAVRU5wU8DIoW53PGxYI5W-2-d5lLaOpkXI8gTj-BuAgZ8RvhEFJV4Xijtj5GdjiOVoJkvzne6AtfuV5QRDPJMYO3n5Zalqotvr1RYEWhZpUQdeQE4tYTp7RpTonoXsoLI5IrZJhmU&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECCcQAQ&uoh=1",
+      "displayed_link": "https://6figr.com › salary › infosys--lead-hr-bp",
+      "favicon": "https://serpapi.com/images/i/UklGRgACAABXRUJQVlA4IPQBAADQCACdASofACAAAsBMJbAC1GuI2dIBuGN4g3lWzBGkWAGQBWAywNIFMu8Zv1N6LW-q_pmfZL7u6sGHcs5ptCGhqS-9tqsx5jmIDTGs8kAAAP77Zn9_30rY8zXbwtVcoDlRB-75Sfoq51DKl4eup2DS7nOOA6htyJ35dSjA8xBY9l5n1AwyX_5kBvTH8XsVP587d3geF8ZS2fbb-jSqNexqbrv4StzFCnXDY5l_0f8L74y11N_lVqAhLoUQIIwneaABUvxuw3THn8WD-CjN-Do1RaEJszth1b-h9ikbKV7a8ceK2FOIZJPgC9w9r_rjj5hm7U1d7QV-DCQW8pX0CIvrT7xEWa3lhDS3LDxfZdhXnYN7__a34I0n9RrwGY0LaC2cn5imvRLthENJFpbkT0G7OjDF8hckJ_hu1sxshbMceax1635M3s589-d5ICGc4Aa-7K5w6nGhZshKf2VejBap2-cjeEITwgjR66hrw_Us2rZzFhz8anxVEph195wUkZdYUVDkRyju7hD0CIzXOGnJ2LaoT4iBhqOvK1WCiDsGz6zg6r3M0027pfHf7kpL4894cdncI6kJfSbNE7-NMvlZXEh5s_Now32Ut6NbcmeuHSMHCsK5GBWqwEJNmv7NQ9RHonJgt-EQilR03uFtBLZkQFcAAA.webp",
+      "snippet": "Employees at Infosys as Lead Hr Bp earn an average of ₹13.5lakhs, mostly ranging from ₹12.0lakhs to ₹20.0lakhs based on 19 profiles.",
+      "about_this_result": {
+       "source": {
+        "description": "Employees at Infosys as Lead Hr Bp earn an average of ₹13.5lakhs, mostly ranging from ₹12.0lakhs to ₹20.0lakhs based on 19 profiles.",
+        "source_info_link": "https://6figr.com/in/salary/infosys--lead-hr-bp",
+        "icon": "https://serpapi.com/images/i/UklGRgACAABXRUJQVlA4IPQBAADQCACdASofACAAAsBMJbAC1GuI2dIBuGN4g3lWzBGkWAGQBWAywNIFMu8Zv1N6LW-q_pmfZL7u6sGHcs5ptCGhqS-9tqsx5jmIDTGs8kAAAP77Zn9_30rY8zXbwtVcoDlRB-75Sfoq51DKl4eup2DS7nOOA6htyJ35dSjA8xBY9l5n1AwyX_5kBvTH8XsVP587d3geF8ZS2fbb-jSqNexqbrv4StzFCnXDY5l_0f8L74y11N_lVqAhLoUQIIwneaABUvxuw3THn8WD-CjN-Do1RaEJszth1b-h9ikbKV7a8ceK2FOIZJPgC9w9r_rjj5hm7U1d7QV-DCQW8pX0CIvrT7xEWa3lhDS3LDxfZdhXnYN7__a34I0n9RrwGY0LaC2cn5imvRLthENJFpbkT0G7OjDF8hckJ_hu1sxshbMceax1635M3s589-d5ICGc4Aa-7K5w6nGhZshKf2VejBap2-cjeEITwgjR66hrw_Us2rZzFhz8anxVEph195wUkZdYUVDkRyju7hD0CIzXOGnJ2LaoT4iBhqOvK1WCiDsGz6zg6r3M0027pfHf7kpL4894cdncI6kJfSbNE7-NMvlZXEh5s_Now32Ut6NbcmeuHSMHCsK5GBWqwEJNmv7NQ9RHonJgt-EQilR03uFtBLZkQFcAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cp0BL2dvdG8_dXJsPUNBRVNhZ0hyT3pBVlJVNXdVOERJb1c1M1BHeFlJNVctMi1kNWxMYU9wa1hJOGdUai1CdUFnWjhSdmhFRkpWNFhpanRqNUdkamlPVm9Ka3Z6bmU2QXRmdVY1UVJEUEpNWU8zbjVaYWxxb3R2cjFSWUVXaFpwVVFkZVFFNHRZVHA3UnBUb25vWHNvTEk1SXJaSmhtVRIEGgIIABq7AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCXAwgAEAAYACAAKhAKCWluZm9zeXNochUAAAAAKgoKA3libBUAAAAAMp0BL2dvdG8_dXJsPUNBRVNhZ0hyT3pBVlJVNXdVOERJb1c1M1BHeFlJNVctMi1kNWxMYU9wa1hJOGdUai1CdUFnWjhSdmhFRkpWNFhpanRqNUdkamlPVm9Ka3Z6bmU2QXRmdVY1UVJEUEpNWU8zbjVaYWxxb3R2cjFSWUVXaFpwVVFkZVFFNHRZVHA3UnBUb25vWHNvTEk1SXJaSmhtVTpCSW5mb3N5cyBMZWFkIEhyIEJwIFNhbGFyaWVzIDIwMjYgaW4gSW5kaWEsIEF2ZXJhZ2UgLi4uIC0gNmZpZ3IuY29tQooBRW1wbG95ZWVzIGF0IEluZm9zeXMgYXMgTGVhZCBIciBCcCBlYXJuIGFuIGF2ZXJhZ2Ugb2Yg4oK5MTMuNWxha2hzLCBtb3N0bHkgcmFuZ2luZyBmcm9tIOKCuTEyLjBsYWtocyB0byDigrkyMC4wbGFraHMgYmFzZWQgb24gMTkgcHJvZmlsZXMuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cp0BL2dvdG8_dXJsPUNBRVNhZ0hyT3pBVlJVNXdVOERJb1c1M1BHeFlJNVctMi1kNWxMYU9wa1hJOGdUai1CdUFnWjhSdmhFRkpWNFhpanRqNUdkamlPVm9Ka3Z6bmU2QXRmdVY1UVJEUEpNWU8zbjVaYWxxb3R2cjFSWUVXaFpwVVFkZVFFNHRZVHA3UnBUb25vWHNvTEk1SXJaSmhtVRIEGgIIABq7AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCXAwgAEAAYACAAKhAKCWluZm9zeXNochUAAAAAKgoKA3libBUAAAAAMp0BL2dvdG8_dXJsPUNBRVNhZ0hyT3pBVlJVNXdVOERJb1c1M1BHeFlJNVctMi1kNWxMYU9wa1hJOGdUai1CdUFnWjhSdmhFRkpWNFhpanRqNUdkamlPVm9Ka3Z6bmU2QXRmdVY1UVJEUEpNWU8zbjVaYWxxb3R2cjFSWUVXaFpwVVFkZVFFNHRZVHA3UnBUb25vWHNvTEk1SXJaSmhtVTpCSW5mb3N5cyBMZWFkIEhyIEJwIFNhbGFyaWVzIDIwMjYgaW4gSW5kaWEsIEF2ZXJhZ2UgLi4uIC0gNmZpZ3IuY29tQooBRW1wbG95ZWVzIGF0IEluZm9zeXMgYXMgTGVhZCBIciBCcCBlYXJuIGFuIGF2ZXJhZ2Ugb2Yg4oK5MTMuNWxha2hzLCBtb3N0bHkgcmFuZ2luZyBmcm9tIOKCuTEyLjBsYWtocyB0byDigrkyMC4wbGFraHMgYmFzZWQgb24gMTkgcHJvZmlsZXMuIgIQAUgAWABoAA",
+      "source": "6figr.com"
+     },
+     {
+      "position": 2,
+      "title": "Infosys' HR Journey and My Reflections on Scalable ...",
+      "link": "https://www.linkedin.com/pulse/infosys-hr-journey-my-reflections-scalable-human-capital-singh-1gike",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESngEB6zswFXp9SUYJuafCm6bcpxV5twZaGlaFOU_YDR1PaIh9bcoC5mAEmc7IKJENMbFxbaQGj98hZz5JzDbfoIGFwyNzZA8I7GfaxwKddBBGnaTsU8rak-JhzENBoz0ewTu_IVxvwf2vVMbvsu1fPhQmrJHqEDhkjlue-3EV949WSvW2qMewNlKHzQwqpMrdZxe9CFF9z6W1PnZSWGiR_A&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECCIQAQ&uoh=1",
+      "displayed_link": "10+ reactions · 1 year ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "Recently, I revisited the Harvard Business School case on 'Infosys (A): Strategic Human Resource Management'. It's more than a business case— ...",
+      "about_this_result": {
+       "source": {
+        "description": "Recently, I revisited the Harvard Business School case on 'Infosys (A): Strategic Human Resource Management'. It's more than a business case— ...",
+        "source_info_link": "https://www.linkedin.com/pulse/infosys-hr-journey-my-reflections-scalable-human-capital-singh-1gike",
+        "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuQBL2dvdG8_dXJsPUNBRVNuZ0VCNnpzd0ZYcDlTVVlKdWFmQ202YmNweFY1dHdaYUdsYUZPVV9ZRFIxUGFJaDliY29DNW1BRW1jN0lLSkVOTWJGeGJhUUdqOThoWno1SnpEYmZvSUdGd3lOelpBOEk3R2ZheHdLZGRCQkduYVRzVThyYWstSmh6RU5Cb3owZXdUdV9JVnh2d2YydlZNYnZzdTFmUGhRbXJKSHFFRGhramx1ZS0zRVY5NDlXU3ZXMnFNZXdObEtIelF3cXBNcmRaeGU5Q0ZGOXo2VzFQblpTV0dpUl9BEgQaAggAGpoEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQPYDCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy5AEvZ290bz91cmw9Q0FFU25nRUI2enN3RlhwOVNVWUp1YWZDbTZiY3B4VjV0d1phR2xhRk9VX1lEUjFQYUloOWJjb0M1bUFFbWM3SUtKRU5NYkZ4YmFRR2o5OGhaejVKekRiZm9JR0Z3eU56WkE4STdHZmF4d0tkZEJCR25hVHNVOHJhay1KaHpFTkJvejBld1R1X0lWeHZ3ZjJ2Vk1idnN1MWZQaFFtckpIcUVEaGtqbHVlLTNFVjk0OVdTdlcycU1ld05sS0h6UXdxcE1yZFp4ZTlDRkY5ejZXMVBuWlNXR2lSX0E6QEluZm9zeXMmIzM5OyBIUiBKb3VybmV5IGFuZCBNeSBSZWZsZWN0aW9ucyBvbiBTY2FsYWJsZSBIdW1hbiAuLi5CpAFSZWNlbnRseSwgSSByZXZpc2l0ZWQgdGhlIEhhcnZhcmQgQnVzaW5lc3MgU2Nob29sIGNhc2Ugb24gJiMzOTtJbmZvc3lzIChBKTogU3RyYXRlZ2ljIEh1bWFuIFJlc291cmNlIE1hbmFnZW1lbnQmIzM5Oy4gSXQmIzM5O3MgbW9yZSB0aGFuIGEgYnVzaW5lc3MgY2FzZeKAlCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuQBL2dvdG8_dXJsPUNBRVNuZ0VCNnpzd0ZYcDlTVVlKdWFmQ202YmNweFY1dHdaYUdsYUZPVV9ZRFIxUGFJaDliY29DNW1BRW1jN0lLSkVOTWJGeGJhUUdqOThoWno1SnpEYmZvSUdGd3lOelpBOEk3R2ZheHdLZGRCQkduYVRzVThyYWstSmh6RU5Cb3owZXdUdV9JVnh2d2YydlZNYnZzdTFmUGhRbXJKSHFFRGhramx1ZS0zRVY5NDlXU3ZXMnFNZXdObEtIelF3cXBNcmRaeGU5Q0ZGOXo2VzFQblpTV0dpUl9BEgQaAggAGpoEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQPYDCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy5AEvZ290bz91cmw9Q0FFU25nRUI2enN3RlhwOVNVWUp1YWZDbTZiY3B4VjV0d1phR2xhRk9VX1lEUjFQYUloOWJjb0M1bUFFbWM3SUtKRU5NYkZ4YmFRR2o5OGhaejVKekRiZm9JR0Z3eU56WkE4STdHZmF4d0tkZEJCR25hVHNVOHJhay1KaHpFTkJvejBld1R1X0lWeHZ3ZjJ2Vk1idnN1MWZQaFFtckpIcUVEaGtqbHVlLTNFVjk0OVdTdlcycU1ld05sS0h6UXdxcE1yZFp4ZTlDRkY5ejZXMVBuWlNXR2lSX0E6QEluZm9zeXMmIzM5OyBIUiBKb3VybmV5IGFuZCBNeSBSZWZsZWN0aW9ucyBvbiBTY2FsYWJsZSBIdW1hbiAuLi5CpAFSZWNlbnRseSwgSSByZXZpc2l0ZWQgdGhlIEhhcnZhcmQgQnVzaW5lc3MgU2Nob29sIGNhc2Ugb24gJiMzOTtJbmZvc3lzIChBKTogU3RyYXRlZ2ljIEh1bWFuIFJlc291cmNlIE1hbmFnZW1lbnQmIzM5Oy4gSXQmIzM5O3MgbW9yZSB0aGFuIGEgYnVzaW5lc3MgY2FzZeKAlCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "LinkedIn · Charanpal Singh",
+      "read_more_link": "https://www.linkedin.com/pulse/infosys-hr-journey-my-reflections-scalable-human-capital-singh-1gike#:~:text=Recently%2C%20I%20revisited%20the%20Harvard,leader%20balancing%20growth%20with%20values."
+     },
+     {
+      "position": 3,
+      "title": "Mr Srisha Y R",
+      "link": "https://www.linkedin.com/posts/mr-srisha-y-r-79a337178_infosys-hiring-it-activity-7292152398284763136-Uds-",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESpQEB6zswFUy6JaEf0X_CN7vc98aplx5_IMzLY5K_de4QP5y9FM3q0oUbgvYw5_xK48Lu4RRJIQzcwUJX5gnRIYRH9KiNJrAGIuhhh0ZCGy6M7JpdEkyuKzW4O6WtYRLZUv-dX3obTOR55mLmW47B2jsjpLTQOg0i27lvNL5QsVWJYbGPJhrUA0PhLI-Ov51z3__t6ywO9c1GuEGCRWxUdudn9ZC21pA&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECCMQAQ&uoh=1",
+      "displayed_link": "10+ reactions · 1 year ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "Mr Srisha Y R Senior Associate Lead(TPD)🚨|For ・ |Data Science|Java|Python|SQL|PowerBI|AWS|AZURE|AMAZON|Network|.Net|SAP ・ srishayr3344@gmail. ...",
+      "about_this_result": {
+       "source": {
+        "description": "Mr Srisha Y R Senior Associate Lead(TPD)🚨|For ・ |Data Science|Java|Python|SQL|PowerBI|AWS|AZURE|AMAZON|Network|.Net|SAP ・ srishayr3344@gmail. ...",
+        "source_info_link": "https://www.linkedin.com/posts/mr-srisha-y-r-79a337178_infosys-hiring-it-activity-7292152398284763136-Uds-",
+        "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cu0BL2dvdG8_dXJsPUNBRVNwUUVCNnpzd0ZVeTZKYUVmMFhfQ043dmM5OGFwbHg1X0lNekxZNUtfZGU0UVA1eTlGTTNxMG9VYmd2WXc1X3hLNDhMdTRSUkpJUXpjd1VKWDVnblJJWVJIOUtpTkpyQUdJdWhoaDBaQ0d5Nk03SnBkRWt5dUt6VzRPNld0WVJMWlV2LWRYM29iVE9SNTVtTG1XNDdCMmpzanBMVFFPZzBpMjdsdk5MNVFzVldKWWJHUEpoclVBMFBoTEktT3Y1MXozX190Nnl3TzljMUd1RUdDUld4VWR1ZG45WkMyMXBBEgQaAggAGvQDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQNADCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy7QEvZ290bz91cmw9Q0FFU3BRRUI2enN3RlV5NkphRWYwWF9DTjd2Yzk4YXBseDVfSU16TFk1S19kZTRRUDV5OUZNM3Ewb1ViZ3ZZdzVfeEs0OEx1NFJSSklRemN3VUpYNWduUklZUkg5S2lOSnJBR0l1aGhoMFpDR3k2TTdKcGRFa3l1S3pXNE82V3RZUkxaVXYtZFgzb2JUT1I1NW1MbVc0N0IyanNqcExUUU9nMGkyN2x2Tkw1UXNWV0pZYkdQSmhyVUEwUGhMSS1PdjUxejNfX3Q2eXdPOWMxR3VFR0NSV3hVZHVkbjlaQzIxcEE6GE1yIFNyaXNoYSBZIFIgLSBMaW5rZWRJbkKdAU1yIFNyaXNoYSBZIFIgU2VuaW9yIEFzc29jaWF0ZSBMZWFkKFRQRCnwn5qofEZvciDjg7sgfERhdGEgU2NpZW5jZXxKYXZhfFB5dGhvbnxTUUx8UG93ZXJCSXxBV1N8QVpVUkV8QU1BWk9OfE5ldHdvcmt8Lk5ldHxTQVAg44O7IHNyaXNoYXlyMzM0NEBnbWFpbC4mbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cu0BL2dvdG8_dXJsPUNBRVNwUUVCNnpzd0ZVeTZKYUVmMFhfQ043dmM5OGFwbHg1X0lNekxZNUtfZGU0UVA1eTlGTTNxMG9VYmd2WXc1X3hLNDhMdTRSUkpJUXpjd1VKWDVnblJJWVJIOUtpTkpyQUdJdWhoaDBaQ0d5Nk03SnBkRWt5dUt6VzRPNld0WVJMWlV2LWRYM29iVE9SNTVtTG1XNDdCMmpzanBMVFFPZzBpMjdsdk5MNVFzVldKWWJHUEpoclVBMFBoTEktT3Y1MXozX190Nnl3TzljMUd1RUdDUld4VWR1ZG45WkMyMXBBEgQaAggAGvQDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQNADCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy7QEvZ290bz91cmw9Q0FFU3BRRUI2enN3RlV5NkphRWYwWF9DTjd2Yzk4YXBseDVfSU16TFk1S19kZTRRUDV5OUZNM3Ewb1ViZ3ZZdzVfeEs0OEx1NFJSSklRemN3VUpYNWduUklZUkg5S2lOSnJBR0l1aGhoMFpDR3k2TTdKcGRFa3l1S3pXNE82V3RZUkxaVXYtZFgzb2JUT1I1NW1MbVc0N0IyanNqcExUUU9nMGkyN2x2Tkw1UXNWV0pZYkdQSmhyVUEwUGhMSS1PdjUxejNfX3Q2eXdPOWMxR3VFR0NSV3hVZHVkbjlaQzIxcEE6GE1yIFNyaXNoYSBZIFIgLSBMaW5rZWRJbkKdAU1yIFNyaXNoYSBZIFIgU2VuaW9yIEFzc29jaWF0ZSBMZWFkKFRQRCnwn5qofEZvciDjg7sgfERhdGEgU2NpZW5jZXxKYXZhfFB5dGhvbnxTUUx8UG93ZXJCSXxBV1N8QVpVUkV8QU1BWk9OfE5ldHdvcmt8Lk5ldHxTQVAg44O7IHNyaXNoYXlyMzM0NEBnbWFpbC4mbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "LinkedIn · Mr Srisha Y R"
+     },
+     {
+      "position": 4,
+      "title": "Freshers promoted faster, get big hikes: Infosys HR head",
+      "link": "https://hr.economictimes.indiatimes.com/news/trends/freshers-promoted-faster-get-big-hikes-infosys-hr-head/98793021",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESrgEB6zswFVekyI5th-99Ykko02kh8wWzun56QEZr9KOHxvvPaAbwXlv4XRSAkzmDs5sznkKauYvdUKJDw6QcDDNkg4EmTxrzs6XYfBWPieJZVquz0IgoxCZcUfR3syfo6qMWIR-psGK365N3pzjENx8oq_dtXYauypWzvF_ldetM3bkkgV7MYQINVMuG-oW7tqkkhh7UzTTCmmX6QJqW0-F8MMBhpIhd1EeKCe_nRWk&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECCgQAQ&uoh=1",
+      "displayed_link": "https://hr.economictimes.indiatimes.com › News › Trends",
+      "favicon": "https://serpapi.com/images/i/UklGRrABAABXRUJQVlA4IKQBAADQBwCdASogACAAPtEutFooIagoGAEAGglsAJ0upLjAc87pgHoAfqB5IHweFBJ_wHqW536cfQxZdpkDV5D45nRWD-Dj0lXnAAD-6_j18OcVaQA-pq3FeXcY-a5W4632j3_9BHikH6WJR6Gf-nPfvPcwxh57dzTbse6LQ9wL4ycC4ebivGPzeNznAe-4pTjOL-_zcQlPR2cA8TyhYs6__eT9o7_WQx_c7_3GlktoTn_2gmbC_kQ6_xbNfbn_ouvevXazDmRvQ73AEDN0MP49_n1bJSTi9l9T_3CsAv-WAEETXERXV8_nyIXGD5T0JiicQevdJwsn8Gos-Cean8yZk_7dinsKlt3NtV_ETV-Su6OMwwkCErhHZSQ-ykXYFnFwHeRGi1F_UI_GvlRkpVh7CCkrDk7iX-gPrd1xOfpb90n9oc25Mylk_JA7THs4R2nHtri2Hy3yvkec3VROJz5xPDnlFH6NZ1UnaiArpC0ATi6Pfx1DFbLGp3zOa2V-4gTO_s2rTf7j3Du7_3F1K500eS9S0A2ouQb28jTs_fqHq1sw5ADIAAA.webp",
+      "date": "20 Mar 2023",
+      "snippet": "Infosys EVP and group HR head Krish Shankar told TOI in an exclusive interaction that freshers in the company today get promoted much faster ...",
+      "about_this_result": {
+       "source": {
+        "description": "Infosys EVP and group HR head Krish Shankar told TOI in an exclusive interaction that freshers in the company today get promoted much faster ...",
+        "source_info_link": "https://hr.economictimes.indiatimes.com/news/trends/freshers-promoted-faster-get-big-hikes-infosys-hr-head/98793021",
+        "icon": "https://serpapi.com/images/i/UklGRrABAABXRUJQVlA4IKQBAADQBwCdASogACAAPtEutFooIagoGAEAGglsAJ0upLjAc87pgHoAfqB5IHweFBJ_wHqW536cfQxZdpkDV5D45nRWD-Dj0lXnAAD-6_j18OcVaQA-pq3FeXcY-a5W4632j3_9BHikH6WJR6Gf-nPfvPcwxh57dzTbse6LQ9wL4ycC4ebivGPzeNznAe-4pTjOL-_zcQlPR2cA8TyhYs6__eT9o7_WQx_c7_3GlktoTn_2gmbC_kQ6_xbNfbn_ouvevXazDmRvQ73AEDN0MP49_n1bJSTi9l9T_3CsAv-WAEETXERXV8_nyIXGD5T0JiicQevdJwsn8Gos-Cean8yZk_7dinsKlt3NtV_ETV-Su6OMwwkCErhHZSQ-ykXYFnFwHeRGi1F_UI_GvlRkpVh7CCkrDk7iX-gPrd1xOfpb90n9oc25Mylk_JA7THs4R2nHtri2Hy3yvkec3VROJz5xPDnlFH6NZ1UnaiArpC0ATi6Pfx1DFbLGp3zOa2V-4gTO_s2rTf7j3Du7_3F1K500eS9S0A2ouQb28jTs_fqHq1sw5ADIAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvkBL2dvdG8_dXJsPUNBRVNyZ0VCNnpzd0ZWZWt5STV0aC05OVlra28wMmtoOHdXenVuNTZRRVpyOUtPSHh2dlBhQWJ3WGx2NFhSU0Frem1EczVzem5rS2F1WXZkVUtKRHc2UWNERE5rZzRFbVR4cnpzNlhZZkJXUGllSlpWcXV6MElnb3hDWmNVZlIzc3lmbzZxTVdJUi1wc0dLMzY1TjNwempFTng4b3FfZHRYWWF1eXBXenZGX2xkZXRNM2Jra2dWN01ZUUlOVk11Ry1vVzd0cWtraGg3VXpUVENtbVg2UUpxVzAtRjhNTUJocEloZDFFZUtDZV9uUldrEgQaAggAGpgEEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPQDCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy-QEvZ290bz91cmw9Q0FFU3JnRUI2enN3RlZla3lJNXRoLTk5WWtrbzAya2g4d1d6dW41NlFFWnI5S09IeHZ2UGFBYndYbHY0WFJTQWt6bURzNXN6bmtLYXVZdmRVS0pEdzZRY0RETmtnNEVtVHhyenM2WFlmQldQaWVKWlZxdXowSWdveENaY1VmUjNzeWZvNnFNV0lSLXBzR0szNjVOM3B6akVOeDhvcV9kdFhZYXV5cFd6dkZfbGRldE0zYmtrZ1Y3TVlRSU5WTXVHLW9XN3Rxa2toaDdVelRUQ21tWDZRSnFXMC1GOE1NQmhwSWhkMUVlS0NlX25SV2s6OEZyZXNoZXJzIHByb21vdGVkIGZhc3RlciwgZ2V0IGJpZyBoaWtlczogSW5mb3N5cyBIUiBoZWFkQpUBSW5mb3N5cyBFVlAgYW5kIGdyb3VwIEhSIGhlYWQgS3Jpc2ggU2hhbmthciB0b2xkIFRPSSBpbiBhbiBleGNsdXNpdmUgaW50ZXJhY3Rpb24gdGhhdCBmcmVzaGVycyBpbiB0aGUgY29tcGFueSB0b2RheSBnZXQgcHJvbW90ZWQgbXVjaCBmYXN0ZXImbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvkBL2dvdG8_dXJsPUNBRVNyZ0VCNnpzd0ZWZWt5STV0aC05OVlra28wMmtoOHdXenVuNTZRRVpyOUtPSHh2dlBhQWJ3WGx2NFhSU0Frem1EczVzem5rS2F1WXZkVUtKRHc2UWNERE5rZzRFbVR4cnpzNlhZZkJXUGllSlpWcXV6MElnb3hDWmNVZlIzc3lmbzZxTVdJUi1wc0dLMzY1TjNwempFTng4b3FfZHRYWWF1eXBXenZGX2xkZXRNM2Jra2dWN01ZUUlOVk11Ry1vVzd0cWtraGg3VXpUVENtbVg2UUpxVzAtRjhNTUJocEloZDFFZUtDZV9uUldrEgQaAggAGpgEEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPQDCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy-QEvZ290bz91cmw9Q0FFU3JnRUI2enN3RlZla3lJNXRoLTk5WWtrbzAya2g4d1d6dW41NlFFWnI5S09IeHZ2UGFBYndYbHY0WFJTQWt6bURzNXN6bmtLYXVZdmRVS0pEdzZRY0RETmtnNEVtVHhyenM2WFlmQldQaWVKWlZxdXowSWdveENaY1VmUjNzeWZvNnFNV0lSLXBzR0szNjVOM3B6akVOeDhvcV9kdFhZYXV5cFd6dkZfbGRldE0zYmtrZ1Y3TVlRSU5WTXVHLW9XN3Rxa2toaDdVelRUQ21tWDZRSnFXMC1GOE1NQmhwSWhkMUVlS0NlX25SV2s6OEZyZXNoZXJzIHByb21vdGVkIGZhc3RlciwgZ2V0IGJpZyBoaWtlczogSW5mb3N5cyBIUiBoZWFkQpUBSW5mb3N5cyBFVlAgYW5kIGdyb3VwIEhSIGhlYWQgS3Jpc2ggU2hhbmthciB0b2xkIFRPSSBpbiBhbiBleGNsdXNpdmUgaW50ZXJhY3Rpb24gdGhhdCBmcmVzaGVycyBpbiB0aGUgY29tcGFueSB0b2RheSBnZXQgcHJvbW90ZWQgbXVjaCBmYXN0ZXImbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "ETHRWorld.com"
+     },
+     {
+      "position": 5,
+      "title": "Infosys Experience Candidates Joining, HR Call, Documents ...",
+      "link": "https://www.youtube.com/watch?v=akwqz4_fFKc",
+      "displayed_link": "4.2K+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac61be9759dbca9ee4b6b16/images/B_lQTicieh9lRxN6zbH9DrWCqlWKU5pNnNsQ9AsJzJA.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "Infosys Experience Candidates Joining, HR Call, Documents Verification Latest Update. Onboarding/Joining Shortly?",
+      "duration": "4:28",
+      "about_this_result": {
+       "source": {
+        "description": "Infosys Experience Candidates Joining, HR Call, Documents Verification Latest Update. Onboarding/Joining Shortly?",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjVQZ3Y3S1dGa3ZkVnJSNXVXdGNWenZHXzRUb0JtYktJZEkxUGRkTFg4UmZwd0tGeGx2RXZZMkZyeVFxOGVWRVR6a1M5dlgxWXNEQjEtVHJ2VnZaMlZkMXNsUGpjOUtDc05PTmZET0FuRTdCSnVkLVRzUS1qRTVaN01lOHdGMEF2encSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjVQZ3Y3S1dGa3ZkVnJSNXVXdGNWenZHXzRUb0JtYktJZEkxUGRkTFg4UmZwd0tGeGx2RXZZMkZyeVFxOGVWRVR6a1M5dlgxWXNEQjEtVHJ2VnZaMlZkMXNsUGpjOUtDc05PTmZET0FuRTdCSnVkLVRzUS1qRTVaN01lOHdGMEF2encSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTR8H3m8HnfdR4d6fcictXkwTxU1MI6_YhRRA",
+      "source": "YouTube · Comfort Zone With Manish 2.0"
+     },
+     {
+      "position": 6,
+      "title": "I work 100 hrs a week. HR: We will offer you 22 LPA, join ...",
+      "link": "https://www.linkedin.com/posts/sanchit-goyal14_my-friend-applied-to-infosys-hr-salary-activity-7264989618024902657-nTGb",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESsgEB6zswFUfV5X2PoA6zdySDYmSfzcgAigqRcy7hqrngX9FChRjAmsb5C_NWM6lUEB3GzOJAj8J-5ebZp8K04XvrNx2tW4gz8GkzH0LdaNzQUx2bUs0IxurW_YJWoHj5--vJyYwG3Vw-y2d7s-bMcGJMpGAax0o2RET2NbGhlF8Mio0dU_CUzywm32s4FEpywOM1B4Z7wh7qKt8t7DIMZCUGCBxxqVpNJAuAbokQ28SLK9lZ&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECCEQAQ&uoh=1",
+      "displayed_link": "690+ reactions · 1 year ago",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "My friend applied to Infosys. HR: Salary expectation? Friend: 19 LPA HR: What is your strength? Friend: I work 100 hrs a week.",
+      "about_this_result": {
+       "source": {
+        "description": "My friend applied to Infosys. HR: Salary expectation? Friend: 19 LPA HR: What is your strength? Friend: I work 100 hrs a week.",
+        "source_info_link": "https://www.linkedin.com/posts/sanchit-goyal14_my-friend-applied-to-infosys-hr-salary-activity-7264989618024902657-nTGb",
+        "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cv4BL2dvdG8_dXJsPUNBRVNzZ0VCNnpzd0ZVZlY1WDJQb0E2emR5U0RZbVNmemNnQWlncVJjeTdocXJuZ1g5RkNoUmpBbXNiNUNfTldNNmxVRUIzR3pPSkFqOEotNWViWnA4SzA0WHZyTngydFc0Z3o4R2t6SDBMZGFOelFVeDJiVXMwSXh1cldfWUpXb0hqNS0tdkp5WXdHM1Z3LXkyZDdzLWJNY0dKTXBHQWF4MG8yUkVUMk5iR2hsRjhNaW8wZFVfQ1V6eXdtMzJzNEZFcHl3T00xQjRaN3doN3FLdDh0N0RJTVpDVUdDQnh4cVZwTkpBdUFib2tRMjhTTEs5bFoSBBoCCAAajQQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA6QMIABAAGAAgACoQCglpbmZvc3lzaHIVAAAAACoKCgN5YmwVAAAAADL-AS9nb3RvP3VybD1DQUVTc2dFQjZ6c3dGVWZWNVgyUG9BNnpkeVNEWW1TZnpjZ0FpZ3FSY3k3aHFybmdYOUZDaFJqQW1zYjVDX05XTTZsVUVCM0d6T0pBajhKLTVlYlpwOEswNFh2ck54MnRXNGd6OEdrekgwTGRhTnpRVXgyYlVzMEl4dXJXX1lKV29IajUtLXZKeVl3RzNWdy15MmQ3cy1iTWNHSk1wR0FheDBvMlJFVDJOYkdobEY4TWlvMGRVX0NVenl3bTMyczRGRXB5d09NMUI0Wjd3aDdxS3Q4dDdESU1aQ1VHQ0J4eHFWcE5KQXVBYm9rUTI4U0xLOWxaOkBNeSBmcmllbmQgYXBwbGllZCB0byBJbmZvc3lzLiBIUjogU2FsYXJ5IGV4cGVjdGF0aW9uPyBGcmllbmQgLi4uQn5NeSBmcmllbmQgYXBwbGllZCB0byBJbmZvc3lzLiBIUjogU2FsYXJ5IGV4cGVjdGF0aW9uPyBGcmllbmQ6IDE5IExQQSBIUjogV2hhdCBpcyB5b3VyIHN0cmVuZ3RoPyBGcmllbmQ6IEkgd29yayAxMDAgaHJzIGEgd2Vlay4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cv4BL2dvdG8_dXJsPUNBRVNzZ0VCNnpzd0ZVZlY1WDJQb0E2emR5U0RZbVNmemNnQWlncVJjeTdocXJuZ1g5RkNoUmpBbXNiNUNfTldNNmxVRUIzR3pPSkFqOEotNWViWnA4SzA0WHZyTngydFc0Z3o4R2t6SDBMZGFOelFVeDJiVXMwSXh1cldfWUpXb0hqNS0tdkp5WXdHM1Z3LXkyZDdzLWJNY0dKTXBHQWF4MG8yUkVUMk5iR2hsRjhNaW8wZFVfQ1V6eXdtMzJzNEZFcHl3T00xQjRaN3doN3FLdDh0N0RJTVpDVUdDQnh4cVZwTkpBdUFib2tRMjhTTEs5bFoSBBoCCAAajQQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA6QMIABAAGAAgACoQCglpbmZvc3lzaHIVAAAAACoKCgN5YmwVAAAAADL-AS9nb3RvP3VybD1DQUVTc2dFQjZ6c3dGVWZWNVgyUG9BNnpkeVNEWW1TZnpjZ0FpZ3FSY3k3aHFybmdYOUZDaFJqQW1zYjVDX05XTTZsVUVCM0d6T0pBajhKLTVlYlpwOEswNFh2ck54MnRXNGd6OEdrekgwTGRhTnpRVXgyYlVzMEl4dXJXX1lKV29IajUtLXZKeVl3RzNWdy15MmQ3cy1iTWNHSk1wR0FheDBvMlJFVDJOYkdobEY4TWlvMGRVX0NVenl3bTMyczRGRXB5d09NMUI0Wjd3aDdxS3Q4dDdESU1aQ1VHQ0J4eHFWcE5KQXVBYm9rUTI4U0xLOWxaOkBNeSBmcmllbmQgYXBwbGllZCB0byBJbmZvc3lzLiBIUjogU2FsYXJ5IGV4cGVjdGF0aW9uPyBGcmllbmQgLi4uQn5NeSBmcmllbmQgYXBwbGllZCB0byBJbmZvc3lzLiBIUjogU2FsYXJ5IGV4cGVjdGF0aW9uPyBGcmllbmQ6IDE5IExQQSBIUjogV2hhdCBpcyB5b3VyIHN0cmVuZ3RoPyBGcmllbmQ6IEkgd29yayAxMDAgaHJzIGEgd2Vlay4iAhABSABYAGgA",
+      "source": "LinkedIn · Sanchit Goyal"
+     },
+     {
+      "position": 7,
+      "title": "Infosys - Enterprises must seize the opportunity and ...",
+      "link": "https://www.facebook.com/Infosys/photos/enterprises-must-seize-the-opportunity-and-institute-best-practices-to-keep-empl/10164251568430481/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESxwEB6zswFcOmyfvtVId9Rrg2EoeqXQr0yzRzN-rDOgV52-ARIJCvsXQvbg9pDAk0XXIpEFFQVq-scxOxUKE0hkVDNRleGSY5kRjUxL2JeQp8VigWuKOChyFbP_8WZSwPQbRSg4CVPssGF2lOc0BrgiYYdMiBveYs6_-LPxM2_4ERlv0vbzE0_m6wAqtJL8A4UIALjBC_RSINrACc4gSWChgoXX3tViSL3znq1K7ZaIUKjCb6UhTtEl5hQZnAbgsNKibv9kFY0Rvf&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECEQQAQ&uoh=1",
+      "displayed_link": "10+ reactions · 5 years ago",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "In this insightful conversation with The Hindu Businessline, he discusses how Infosys is advancing AI readiness through large-scale upskilling ...",
+      "about_this_result": {
+       "source": {
+        "description": "In this insightful conversation with The Hindu Businessline, he discusses how Infosys is advancing AI readiness through large-scale upskilling ...",
+        "source_info_link": "https://www.facebook.com/Infosys/photos/enterprises-must-seize-the-opportunity-and-institute-best-practices-to-keep-empl/10164251568430481/",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpoCL2dvdG8_dXJsPUNBRVN4d0VCNnpzd0ZjT215ZnZ0VklkOVJyZzJFb2VxWFFyMHl6UnpOLXJET2dWNTItQVJJSkN2c1hRdmJnOXBEQWswWFhJcEVGRlFWcS1zY3hPeFVLRTBoa1ZETlJsZUdTWTVrUmpVeEwySmVRcDhWaWdXdUtPQ2h5RmJQXzhXWlN3UFFiUlNnNENWUHNzR0YybE9jMEJyZ2lZWWRNaUJ2ZVlzNl8tTFB4TTJfNEVSbHYwdmJ6RTBfbTZ3QXF0Skw4QTRVSUFMakJDX1JTSU5yQUNjNGdTV0NoZ29YWDN0VmlTTDN6bnExSzdaYUlVS2pDYjZVaFR0RWw1aFFabkFiZ3NOS2lidjlrRlkwUnZmEgQaAggAGsUEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKEECAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAymgIvZ290bz91cmw9Q0FFU3h3RUI2enN3RmNPbXlmdnRWSWQ5UnJnMkVvZXFYUXIweXpSek4tckRPZ1Y1Mi1BUklKQ3ZzWFF2Ymc5cERBazBYWElwRUZGUVZxLXNjeE94VUtFMGhrVkROUmxlR1NZNWtSalV4TDJKZVFwOFZpZ1d1S09DaHlGYlBfOFdaU3dQUWJSU2c0Q1ZQc3NHRjJsT2MwQnJnaVlZZE1pQnZlWXM2Xy1MUHhNMl80RVJsdjB2YnpFMF9tNndBcXRKTDhBNFVJQUxqQkNfUlNJTnJBQ2M0Z1NXQ2hnb1hYM3RWaVNMM3pucTFLN1phSVVLakNiNlVoVHRFbDVoUVpuQWJnc05LaWJ2OWtGWTBSdmY6QkluZm9zeXMgLSBFbnRlcnByaXNlcyBtdXN0IHNlaXplIHRoZSBvcHBvcnR1bml0eSBhbmQgaW5zdGl0dXRlIC4uLkKXAUluIHRoaXMgaW5zaWdodGZ1bCBjb252ZXJzYXRpb24gd2l0aCBUaGUgSGluZHUgQnVzaW5lc3NsaW5lLCBoZSBkaXNjdXNzZXMgaG93IEluZm9zeXMgaXMgYWR2YW5jaW5nIEFJIHJlYWRpbmVzcyB0aHJvdWdoIGxhcmdlLXNjYWxlIHVwc2tpbGxpbmcmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpoCL2dvdG8_dXJsPUNBRVN4d0VCNnpzd0ZjT215ZnZ0VklkOVJyZzJFb2VxWFFyMHl6UnpOLXJET2dWNTItQVJJSkN2c1hRdmJnOXBEQWswWFhJcEVGRlFWcS1zY3hPeFVLRTBoa1ZETlJsZUdTWTVrUmpVeEwySmVRcDhWaWdXdUtPQ2h5RmJQXzhXWlN3UFFiUlNnNENWUHNzR0YybE9jMEJyZ2lZWWRNaUJ2ZVlzNl8tTFB4TTJfNEVSbHYwdmJ6RTBfbTZ3QXF0Skw4QTRVSUFMakJDX1JTSU5yQUNjNGdTV0NoZ29YWDN0VmlTTDN6bnExSzdaYUlVS2pDYjZVaFR0RWw1aFFabkFiZ3NOS2lidjlrRlkwUnZmEgQaAggAGsUEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKEECAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAymgIvZ290bz91cmw9Q0FFU3h3RUI2enN3RmNPbXlmdnRWSWQ5UnJnMkVvZXFYUXIweXpSek4tckRPZ1Y1Mi1BUklKQ3ZzWFF2Ymc5cERBazBYWElwRUZGUVZxLXNjeE94VUtFMGhrVkROUmxlR1NZNWtSalV4TDJKZVFwOFZpZ1d1S09DaHlGYlBfOFdaU3dQUWJSU2c0Q1ZQc3NHRjJsT2MwQnJnaVlZZE1pQnZlWXM2Xy1MUHhNMl80RVJsdjB2YnpFMF9tNndBcXRKTDhBNFVJQUxqQkNfUlNJTnJBQ2M0Z1NXQ2hnb1hYM3RWaVNMM3pucTFLN1phSVVLakNiNlVoVHRFbDVoUVpuQWJnc05LaWJ2OWtGWTBSdmY6QkluZm9zeXMgLSBFbnRlcnByaXNlcyBtdXN0IHNlaXplIHRoZSBvcHBvcnR1bml0eSBhbmQgaW5zdGl0dXRlIC4uLkKXAUluIHRoaXMgaW5zaWdodGZ1bCBjb252ZXJzYXRpb24gd2l0aCBUaGUgSGluZHUgQnVzaW5lc3NsaW5lLCBoZSBkaXNjdXNzZXMgaG93IEluZm9zeXMgaXMgYWR2YW5jaW5nIEFJIHJlYWRpbmVzcyB0aHJvdWdoIGxhcmdlLXNjYWxlIHVwc2tpbGxpbmcmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Facebook · Infosys",
+      "read_more_link": "https://www.facebook.com/Infosys/photos/enterprises-must-seize-the-opportunity-and-institute-best-practices-to-keep-empl/10164251568430481/#:~:text=In%20this%20insightful%20conversation%20with,on%20developing%20talent%20from%20within."
+     },
+     {
+      "position": 8,
+      "title": "Human Resources Accounting in Infosys |HR Case Study",
+      "link": "http://ibscdc.org/Case_Studies/Human%20Resource%20and%20Organization%20Behavior/Human%20Resource%20and%20Organization%20Behavior/Human%20Resources-Infosys-Management%20Case%20Study.htm",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAES9AEB6zswFf7EAvTA8TCcfbL269n8-rRtsl_isdML3ff5-p1LkhP-E6_nKSYttj2yTZWY4JlG68fQ1Rrckdbw1gvUXDrJnoLpRUGkwuUY2kGQawSyJozkDaLZrq-iZDnVDw5rfe1MFbp3_Vozn2j4xYiJakZ8eq-I4VB7mq-4RgRnFHx0vtfEKH6VOOiWNGVN7HdBkLaPr8xa6g25c-xjOnybBR5x2H5JY-TbgvExoD_ztKoUjADpzTJQPD7cpi9IUf_8dP0rn9Pu5jj-UBndSz6KmpVs1LXVSHDLjHjbKG6t5kG5KfzU0GIpTXFEaEr9H2IrFJoT&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECEEQAQ&uoh=1",
+      "displayed_link": "http://ibscdc.org › Case_Studies",
+      "favicon": "https://serpapi.com/images/i/UklGRrQAAABXRUJQVlA4IKgAAACQAgCdASoQABAAAsBMJbACdDBQyIXK32RT_8pegAD-C5cACFloiYI90Zpyp3Z1PU6lbgxFf369CS9NKeY3PWFES3alTNlV5tq_F8BEEB3f3v4_sIMZtVcwJc6OHLloD6_XBdSFiPwdvYKUhZWCV1dxiDm2mnh74h-p7e3wfFPqWvvKApt_Qa51t3Rpd_u_weeF6X3g3_itG_38v7Jf7keBFNUv4_uJEAA.webp",
+      "snippet": "This case examines the various models of human resources accounting (HRA) for valuing human assets in an organization. Case Length : 14 Pages Period : 1990 - ...",
+      "about_this_result": {
+       "source": {
+        "description": "This case examines the various models of human resources accounting (HRA) for valuing human assets in an organization. Case Length : 14 Pages Period : 1990 - ...",
+        "source_info_link": "http://ibscdc.org/Case_Studies/Human%20Resource%20and%20Organization%20Behavior/Human%20Resource%20and%20Organization%20Behavior/Human%20Resources-Infosys-Management%20Case%20Study.htm",
+        "icon": "https://serpapi.com/images/i/UklGRrQAAABXRUJQVlA4IKgAAACQAgCdASoQABAAAsBMJbACdDBQyIXK32RT_8pegAD-C5cACFloiYI90Zpyp3Z1PU6lbgxFf369CS9NKeY3PWFES3alTNlV5tq_F8BEEB3f3v4_sIMZtVcwJc6OHLloD6_XBdSFiPwdvYKUhZWCV1dxiDm2mnh74h-p7e3wfFPqWvvKApt_Qa51t3Rpd_u_weeF6X3g3_itG_38v7Jf7keBFNUv4_uJEAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtYCL2dvdG8_dXJsPUNBRVM5QUVCNnpzd0ZmN0VBdlRBOFRDY2ZiTDI2OW44LXJSdHNsX2lzZE1MM2ZmNS1wMUxraFAtRTZfbktTWXR0ajJ5VFpXWTRKbEc2OGZRMVJyY2tkYncxZ3ZVWERySm5vTHBSVUdrd3VVWTJrR1Fhd1N5Sm96a0RhTFpycS1pWkRuVkR3NXJmZTFNRmJwM19Wb3puMmo0eFlpSmFrWjhlcS1JNFZCN21xLTRSZ1JuRkh4MHZ0ZkVLSDZWT09pV05HVk43SGRCa0xhUHI4eGE2ZzI1Yy14ak9ueWJCUjV4Mkg1SlktVGJndkV4b0RfenRLb1VqQURwelRKUVBEN2NwaTlJVWZfOGRQMHJuOVB1NWpqLVVCbmRTejZLbXBWczFMWFZTSERMakhqYktHNnQ1a0c1S2Z6VTBHSXBUWEZFYUVyOUgySXJGSm9UEgQaAggAGoIFEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQN4ECAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy1gIvZ290bz91cmw9Q0FFUzlBRUI2enN3RmY3RUF2VEE4VENjZmJMMjY5bjgtclJ0c2xfaXNkTUwzZmY1LXAxTGtoUC1FNl9uS1NZdHRqMnlUWldZNEpsRzY4ZlExUnJja2RidzFndlVYRHJKbm9McFJVR2t3dVVZMmtHUWF3U3lKb3prRGFMWnJxLWlaRG5WRHc1cmZlMU1GYnAzX1Zvem4yajR4WWlKYWtaOGVxLUk0VkI3bXEtNFJnUm5GSHgwdnRmRUtINlZPT2lXTkdWTjdIZEJrTGFQcjh4YTZnMjVjLXhqT255YkJSNXgySDVKWS1UYmd2RXhvRF96dEtvVWpBRHB6VEpRUEQ3Y3BpOUlVZl84ZFAwcm45UHU1amotVUJuZFN6NkttcFZzMUxYVlNIRExqSGpiS0c2dDVrRzVLZnpVMEdJcFRYRkVhRXI5SDJJckZKb1Q6NEh1bWFuIFJlc291cmNlcyBBY2NvdW50aW5nIGluIEluZm9zeXMgfEhSIENhc2UgU3R1ZHlCpgFUaGlzIGNhc2UgZXhhbWluZXMgdGhlIHZhcmlvdXMgbW9kZWxzIG9mIGh1bWFuIHJlc291cmNlcyBhY2NvdW50aW5nIChIUkEpIGZvciB2YWx1aW5nIGh1bWFuIGFzc2V0cyBpbiBhbiBvcmdhbml6YXRpb24uIENhc2UgTGVuZ3RoIDogMTQgUGFnZXMgUGVyaW9kIDogMTk5MCAtJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtYCL2dvdG8_dXJsPUNBRVM5QUVCNnpzd0ZmN0VBdlRBOFRDY2ZiTDI2OW44LXJSdHNsX2lzZE1MM2ZmNS1wMUxraFAtRTZfbktTWXR0ajJ5VFpXWTRKbEc2OGZRMVJyY2tkYncxZ3ZVWERySm5vTHBSVUdrd3VVWTJrR1Fhd1N5Sm96a0RhTFpycS1pWkRuVkR3NXJmZTFNRmJwM19Wb3puMmo0eFlpSmFrWjhlcS1JNFZCN21xLTRSZ1JuRkh4MHZ0ZkVLSDZWT09pV05HVk43SGRCa0xhUHI4eGE2ZzI1Yy14ak9ueWJCUjV4Mkg1SlktVGJndkV4b0RfenRLb1VqQURwelRKUVBEN2NwaTlJVWZfOGRQMHJuOVB1NWpqLVVCbmRTejZLbXBWczFMWFZTSERMakhqYktHNnQ1a0c1S2Z6VTBHSXBUWEZFYUVyOUgySXJGSm9UEgQaAggAGoIFEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQN4ECAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy1gIvZ290bz91cmw9Q0FFUzlBRUI2enN3RmY3RUF2VEE4VENjZmJMMjY5bjgtclJ0c2xfaXNkTUwzZmY1LXAxTGtoUC1FNl9uS1NZdHRqMnlUWldZNEpsRzY4ZlExUnJja2RidzFndlVYRHJKbm9McFJVR2t3dVVZMmtHUWF3U3lKb3prRGFMWnJxLWlaRG5WRHc1cmZlMU1GYnAzX1Zvem4yajR4WWlKYWtaOGVxLUk0VkI3bXEtNFJnUm5GSHgwdnRmRUtINlZPT2lXTkdWTjdIZEJrTGFQcjh4YTZnMjVjLXhqT255YkJSNXgySDVKWS1UYmd2RXhvRF96dEtvVWpBRHB6VEpRUEQ3Y3BpOUlVZl84ZFAwcm45UHU1amotVUJuZFN6NkttcFZzMUxYVlNIRExqSGpiS0c2dDVrRzVLZnpVMEdJcFRYRkVhRXI5SDJJckZKb1Q6NEh1bWFuIFJlc291cmNlcyBBY2NvdW50aW5nIGluIEluZm9zeXMgfEhSIENhc2UgU3R1ZHlCpgFUaGlzIGNhc2UgZXhhbWluZXMgdGhlIHZhcmlvdXMgbW9kZWxzIG9mIGh1bWFuIHJlc291cmNlcyBhY2NvdW50aW5nIChIUkEpIGZvciB2YWx1aW5nIGh1bWFuIGFzc2V0cyBpbiBhbiBvcmdhbml6YXRpb24uIENhc2UgTGVuZ3RoIDogMTQgUGFnZXMgUGVyaW9kIDogMTk5MCAtJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "ibscdc.org"
+     },
+     {
+      "position": 9,
+      "title": "Infosys HR round update",
+      "link": "https://www.grapevine.in/post/infosys-hr-round-update-3edd6804-5748-4e73-9759-6afe1d36c776",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESlQEB6zswFb8m5AWWu8vPpQKa0_32ACQa5lWnKhJP3PFBrKHXQDpzud5tdAeGLB_OgH_L0DLkMozA_Bk3P_FWPlYhhaGND374ecWL2o8pD-jk8ik8ceXVCG5NyjuruGINSC5Ll6Q1RPHgvA829_RtwGxxCCtB5z0i07rM7OMZuhPDX-ph6LpExTSPI87wuhB-zFOdMkAnTQ&ved=2ahUKEwifrou71qeXAxWV1fACHXW3HKoQFnoECEUQAQ&uoh=1",
+      "displayed_link": "https://www.grapevine.in › Home › Ask Grapeviners",
+      "favicon": "https://serpapi.com/images/i/UklGRnoBAABXRUJQVlA4IG4BAABQCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHA3qvDn7JGNEJjbJ7h7eO_QA6T9GghANYq9VI39LlknTsJmDGSmgzVcsOXzcrPrdgRoCFQ0QAD-9_Fmoo77O9W1T_YtYlNubgtIkaiKlzLPiBiV0BSCqprXYqhR55-C1mmAQOoZD7gUB9RZN1WA4lVTp1S2ZZO5KpDMTbrXjwcKPLrezEc3SlyBzklwFXWmIql_3v9ICaQtkTqhMANjWu0dM7z9DbKzAGcXqpbWUJauigLEhgdzOR-mq4-as-3srgeU7eHv6-E7T_1nIaH7T4HN1SNZNdIok7VbYR09UQVghFeAweuua7WfoLFvQNPpXrcTV4MnVQQhjZP-WjokBi_lb4kf6_fjuz-QYROE4BgWdLpZjhtwxmGAh3p2arD5O9adyuVOwpavprAcJGbyGVfnJ5n6qyKKo8ze0vVqxFHaZpheymApCIC_jCRhx0CWgAA.webp",
+      "date": "20 Nov 2024",
+      "snippet": "I gave 2 rounds of interview in Infosys and shortlisted gave HR round this months . After telling my expected salary Hr told them they will ...",
+      "about_this_result": {
+       "source": {
+        "description": "I gave 2 rounds of interview in Infosys and shortlisted gave HR round this months . After telling my expected salary Hr told them they will ...",
+        "source_info_link": "https://www.grapevine.in/post/infosys-hr-round-update-3edd6804-5748-4e73-9759-6afe1d36c776",
+        "icon": "https://serpapi.com/images/i/UklGRnoBAABXRUJQVlA4IG4BAABQCQCdASocABwAPrkurlcnIacnG_DgFwlsAJ0yhHA3qvDn7JGNEJjbJ7h7eO_QA6T9GghANYq9VI39LlknTsJmDGSmgzVcsOXzcrPrdgRoCFQ0QAD-9_Fmoo77O9W1T_YtYlNubgtIkaiKlzLPiBiV0BSCqprXYqhR55-C1mmAQOoZD7gUB9RZN1WA4lVTp1S2ZZO5KpDMTbrXjwcKPLrezEc3SlyBzklwFXWmIql_3v9ICaQtkTqhMANjWu0dM7z9DbKzAGcXqpbWUJauigLEhgdzOR-mq4-as-3srgeU7eHv6-E7T_1nIaH7T4HN1SNZNdIok7VbYR09UQVghFeAweuua7WfoLFvQNPpXrcTV4MnVQQhjZP-WjokBi_lb4kf6_fjuz-QYROE4BgWdLpZjhtwxmGAh3p2arD5O9adyuVOwpavprAcJGbyGVfnJ5n6qyKKo8ze0vVqxFHaZpheymApCIC_jCRhx0CWgAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtgBL2dvdG8_dXJsPUNBRVNsUUVCNnpzd0ZiOG01QVdXdTh2UHBRS2EwXzMyQUNRYTVsV25LaEpQM1BGQnJLSFhRRHB6dWQ1dGRBZUdMQl9PZ0hfTDBETGtNb3pBX0JrM1BfRldQbFloaGFHTkQzNzRlY1dMMm84cEQtams4aWs4Y2VYVkNHNU55anVydUdJTlNDNUxsNlExUlBIZ3ZBODI5X1J0d0d4eENDdEI1ejBpMDdyTTdPTVp1aFBEWC1waDZMcEV4VFNQSTg3d3VoQi16Rk9kTWtBblRREgQaAggAGuEDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQL0DCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy2AEvZ290bz91cmw9Q0FFU2xRRUI2enN3RmI4bTVBV1d1OHZQcFFLYTBfMzJBQ1FhNWxXbktoSlAzUEZCcktIWFFEcHp1ZDV0ZEFlR0xCX09nSF9MMERMa01vekFfQmszUF9GV1BsWWhoYUdORDM3NGVjV0wybzhwRC1qazhpazhjZVhWQ0c1TnlqdXJ1R0lOU0M1TGw2UTFSUEhndkE4MjlfUnR3R3h4Q0N0QjV6MGkwN3JNN09NWnVoUERYLXBoNkxwRXhUU1BJODd3dWhCLXpGT2RNa0FuVFE6I0luZm9zeXMgSFIgcm91bmQgdXBkYXRlIC0gR3JhcGV2aW5lQpQBSSBnYXZlIDIgcm91bmRzIG9mIGludGVydmlldyBpbiBJbmZvc3lzIGFuZCBzaG9ydGxpc3RlZCBnYXZlIEhSIHJvdW5kIHRoaXMgbW9udGhzIC4gQWZ0ZXIgdGVsbGluZyBteSBleHBlY3RlZCBzYWxhcnkgSHIgdG9sZCB0aGVtIHRoZXkgd2lsbCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtgBL2dvdG8_dXJsPUNBRVNsUUVCNnpzd0ZiOG01QVdXdTh2UHBRS2EwXzMyQUNRYTVsV25LaEpQM1BGQnJLSFhRRHB6dWQ1dGRBZUdMQl9PZ0hfTDBETGtNb3pBX0JrM1BfRldQbFloaGFHTkQzNzRlY1dMMm84cEQtams4aWs4Y2VYVkNHNU55anVydUdJTlNDNUxsNlExUlBIZ3ZBODI5X1J0d0d4eENDdEI1ejBpMDdyTTdPTVp1aFBEWC1waDZMcEV4VFNQSTg3d3VoQi16Rk9kTWtBblRREgQaAggAGuEDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQL0DCAAQABgAIAAqEAoJaW5mb3N5c2hyFQAAAAAqCgoDeWJsFQAAAAAy2AEvZ290bz91cmw9Q0FFU2xRRUI2enN3RmI4bTVBV1d1OHZQcFFLYTBfMzJBQ1FhNWxXbktoSlAzUEZCcktIWFFEcHp1ZDV0ZEFlR0xCX09nSF9MMERMa01vekFfQmszUF9GV1BsWWhoYUdORDM3NGVjV0wybzhwRC1qazhpazhjZVhWQ0c1TnlqdXJ1R0lOU0M1TGw2UTFSUEhndkE4MjlfUnR3R3h4Q0N0QjV6MGkwN3JNN09NWnVoUERYLXBoNkxwRXhUU1BJODd3dWhCLXpGT2RNa0FuVFE6I0luZm9zeXMgSFIgcm91bmQgdXBkYXRlIC0gR3JhcGV2aW5lQpQBSSBnYXZlIDIgcm91bmRzIG9mIGludGVydmlldyBpbiBJbmZvc3lzIGFuZCBzaG9ydGxpc3RlZCBnYXZlIEhSIHJvdW5kIHRoaXMgbW9udGhzIC4gQWZ0ZXIgdGVsbGluZyBteSBleHBlY3RlZCBzYWxhcnkgSHIgdG9sZCB0aGVtIHRoZXkgd2lsbCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Grapevine"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"infosyshr@ybl\"",
+     "total_results": 56,
+     "time_taken_displayed": 0.17,
+     "organic_results_state": "Showing results for exact spelling despite spelling suggestion",
+     "spelling_fix": "\"infosys hr@ybl\""
+    },
+    "_searched_at": "2026-10-07 10:16:09 UTC"
    }
   },
   "4f9b936b315ebdf819bf72dfab7f043239af8338555cd783a20af9b3a3789cb3": {

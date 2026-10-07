@@ -1,0 +1,1501 @@
+{
+ "scenario": "kyc_sbi_link",
+ "recorded_at": "2026-10-07T15:46:09+05:30",
+ "input_hash": "f23eb5668d0d97d9ba2e031ca93f340bb4e05dc55a2100048404c88f3ea90301",
+ "llm": {
+  "data": {
+   "language": "en",
+   "ocr_text": "",
+   "content_kind": "sms",
+   "scheme": "kyc_update",
+   "claimed_org": {
+    "name": "SBI",
+    "category": "bank"
+   },
+   "sender": {
+    "name": null,
+    "email": null,
+    "phone": "70000 12345"
+   },
+   "phones": [
+    "70000 12345"
+   ],
+   "urls": [
+    "https://sbi-kyc-update.in/yono"
+   ],
+   "emails": [],
+   "upi_ids": [],
+   "amounts": [],
+   "product": {
+    "name": null,
+    "brand": null,
+    "claimed_price_text": null
+   },
+   "job": {
+    "company": null,
+    "role": null,
+    "salary_text": null,
+    "location": null,
+    "fee_requested": false
+   },
+   "address": null,
+   "app_name": null,
+   "requested_actions": [
+    {
+     "type": "click_link",
+     "quote": "Update your PAN and KYC immediately at https://sbi-kyc-update.in/yono"
+    },
+    {
+     "type": "call",
+     "quote": "call our KYC desk 70000 12345"
+    }
+   ],
+   "pressure": [
+    {
+     "type": "urgency",
+     "quote": "your YONO account will be blocked today"
+    }
+   ],
+   "ai_directed_text": []
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+ },
+ "expected": {
+  "level": "HIGH_RISK",
+  "flags": [
+   "brand_lookalike_domain",
+   "domain_reported",
+   "helpline_is_mobile",
+   "known_scam_pattern",
+   "official_contact_mismatch",
+   "org_impersonation_reports",
+   "threat_or_urgency"
+  ]
+ },
+ "searches": {
+  "a0fe9b974d9a3db7d6af9eb1b72bc65be898ccca60d9629beada8181cd8f510d": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"7000012345\" OR \"70000 12345\" OR \"+91 70000 12345\""
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "1 Large NumbersGet Going1. Write the number names for ...",
+      "link": "https://brainly.in/question/40962049",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAVETBSnIZb5HtffFi4Lc2RslgTkk-_d_1vr9C_Kv4-3Y0rNIudm8ZMrs8I2g6Z_QtuBJIc4W-H0OkB-QewfXssiRpqASdsshixcUa94Rt-jtX8dem6bl0ynM_C&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECBsQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › Math › Secondary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "26 May 2021",
+      "snippet": "1 Large Numbers. Get Going. Write the number names for the following. a) 12345 b) 789654 c) 99999 d) 100000; Write in expanded form.",
+      "about_this_result": {
+       "source": {
+        "description": "1 Large Numbers. Get Going. Write the number names for the following. a) 12345 b) 789654 c) 99999 d) 100000; Write in expanded form.",
+        "source_info_link": "https://brainly.in/question/40962049",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVkVUQlNuSVpiNUh0ZmZGaTRMYzJSc2xnVGtrLV9kXzF2cjlDX0t2NC0zWTByTkl1ZG04Wk1yczhJMmc2Wl9RdHVCSkljNFctSDBPa0ItUWV3Zlhzc2lScHFBU2Rzc2hpeGNVYTk0UnQtanRYOGRlbTZibDB5bk1fQxIEGgIIABqwAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCMAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVkVUQlNuSVpiNUh0ZmZGaTRMYzJSc2xnVGtrLV9kXzF2cjlDX0t2NC0zWTByTkl1ZG04Wk1yczhJMmc2Wl9RdHVCSkljNFctSDBPa0ItUWV3Zlhzc2lScHFBU2Rzc2hpeGNVYTk0UnQtanRYOGRlbTZibDB5bk1fQzo9MSBMYXJnZSBOdW1iZXJzR2V0IEdvaW5nMS4gV3JpdGUgdGhlIG51bWJlciBuYW1lcyBmb3IgdGhlIC4uLkKEATEgTGFyZ2UgTnVtYmVycy4gR2V0IEdvaW5nLiBXcml0ZSB0aGUgbnVtYmVyIG5hbWVzIGZvciB0aGUgZm9sbG93aW5nLiBhKSAxMjM0NSBiKSA3ODk2NTQgYykgOTk5OTkgZCkgMTAwMDAwOyBXcml0ZSBpbiBleHBhbmRlZCBmb3JtLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVkVUQlNuSVpiNUh0ZmZGaTRMYzJSc2xnVGtrLV9kXzF2cjlDX0t2NC0zWTByTkl1ZG04Wk1yczhJMmc2Wl9RdHVCSkljNFctSDBPa0ItUWV3Zlhzc2lScHFBU2Rzc2hpeGNVYTk0UnQtanRYOGRlbTZibDB5bk1fQxIEGgIIABqwAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCMAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVkVUQlNuSVpiNUh0ZmZGaTRMYzJSc2xnVGtrLV9kXzF2cjlDX0t2NC0zWTByTkl1ZG04Wk1yczhJMmc2Wl9RdHVCSkljNFctSDBPa0ItUWV3Zlhzc2lScHFBU2Rzc2hpeGNVYTk0UnQtanRYOGRlbTZibDB5bk1fQzo9MSBMYXJnZSBOdW1iZXJzR2V0IEdvaW5nMS4gV3JpdGUgdGhlIG51bWJlciBuYW1lcyBmb3IgdGhlIC4uLkKEATEgTGFyZ2UgTnVtYmVycy4gR2V0IEdvaW5nLiBXcml0ZSB0aGUgbnVtYmVyIG5hbWVzIGZvciB0aGUgZm9sbG93aW5nLiBhKSAxMjM0NSBiKSA3ODk2NTQgYykgOTk5OTkgZCkgMTAwMDAwOyBXcml0ZSBpbiBleHBhbmRlZCBmb3JtLiICEAFIAFgAaAA",
+      "source": "Brainly.in",
+      "read_more_link": "https://brainly.in/question/40962049#:~:text=1%20Large%20Numbers,Write%20in%20expanded%20form."
+     },
+     {
+      "position": 2,
+      "title": "(i) 800123457 (ii) 73254263 (iii) 225725328 (iv) 620917 ( ...",
+      "link": "https://brainly.in/question/25000205",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAVT9qL8X4a5F3CjB6Zs-OaFUbm04SigINmwT0vGp67Rh3v_KjlRK0KfPBJYx3TfkJ_v1Zs7oVkiE-vY-YTs3sPIHHhpUGq8EtJ0zSvJS7dyOhI6Kg8P8YbZ45z&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECB0QAQ&uoh=1",
+      "displayed_link": "https://brainly.in › Math › Primary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "7 Oct 2020",
+      "snippet": "Find an answer to your question Exercise 1.31. Write the following in the Indian System:(i) 800123457(ii) 73254263(iii) 225725328(iv) ...",
+      "about_this_result": {
+       "source": {
+        "description": "Find an answer to your question Exercise 1.31. Write the following in the Indian System:(i) 800123457(ii) 73254263(iii) 225725328(iv) ...",
+        "source_info_link": "https://brainly.in/question/25000205",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVlQ5cUw4WDRhNUYzQ2pCNlpzLU9hRlVibTA0U2lnSU5td1QwdkdwNjdSaDN2X0tqbFJLMEtmUEJKWXgzVGZrSl92MVpzN29Wa2lFLXZZLVlUczNzUElISGhwVUdxOEV0SjB6U3ZKUzdkeU9oSTZLZzhQOFliWjQ1ehIEGgIIABq9AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCZAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVlQ5cUw4WDRhNUYzQ2pCNlpzLU9hRlVibTA0U2lnSU5td1QwdkdwNjdSaDN2X0tqbFJLMEtmUEJKWXgzVGZrSl92MVpzN29Wa2lFLXZZLVlUczNzUElISGhwVUdxOEV0SjB6U3ZKUzdkeU9oSTZLZzhQOFliWjQ1ejpAKGkpIDgwMDEyMzQ1NyAoaWkpIDczMjU0MjYzIChpaWkpIDIyNTcyNTMyOCAoaXYgLi4uIC0gQnJhaW5seS5pbkKOAUZpbmQgYW4gYW5zd2VyIHRvIHlvdXIgcXVlc3Rpb24gRXhlcmNpc2UgMS4zMS4gV3JpdGUgdGhlIGZvbGxvd2luZyBpbiB0aGUgSW5kaWFuIFN5c3RlbTooaSkgODAwMTIzNDU3KGlpKSA3MzI1NDI2MyhpaWkpIDIyNTcyNTMyOChpdikmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVlQ5cUw4WDRhNUYzQ2pCNlpzLU9hRlVibTA0U2lnSU5td1QwdkdwNjdSaDN2X0tqbFJLMEtmUEJKWXgzVGZrSl92MVpzN29Wa2lFLXZZLVlUczNzUElISGhwVUdxOEV0SjB6U3ZKUzdkeU9oSTZLZzhQOFliWjQ1ehIEGgIIABq9AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCZAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVlQ5cUw4WDRhNUYzQ2pCNlpzLU9hRlVibTA0U2lnSU5td1QwdkdwNjdSaDN2X0tqbFJLMEtmUEJKWXgzVGZrSl92MVpzN29Wa2lFLXZZLVlUczNzUElISGhwVUdxOEV0SjB6U3ZKUzdkeU9oSTZLZzhQOFliWjQ1ejpAKGkpIDgwMDEyMzQ1NyAoaWkpIDczMjU0MjYzIChpaWkpIDIyNTcyNTMyOCAoaXYgLi4uIC0gQnJhaW5seS5pbkKOAUZpbmQgYW4gYW5zd2VyIHRvIHlvdXIgcXVlc3Rpb24gRXhlcmNpc2UgMS4zMS4gV3JpdGUgdGhlIGZvbGxvd2luZyBpbiB0aGUgSW5kaWFuIFN5c3RlbTooaSkgODAwMTIzNDU3KGlpKSA3MzI1NDI2MyhpaWkpIDIyNTcyNTMyOChpdikmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 3,
+      "title": "Write 12345 in reverse order and test now which numbers ...",
+      "link": "https://brainly.in/question/52184854",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAV1TmpRO9UPs5fToUoFQIW6fZYoaft7-CTjkKp2fjN14uHswVCNPyDWqjutfCedhdxhJDo_wxsyeNE-hjqE94r5CNJHVd6H9uByDE6TCNC7nn12Okwzr8HrUhL&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECCMQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › Math › Secondary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "3 Jun 2022",
+      "snippet": "Click here 👆 to get an answer to your question ✍️ Write 12345 in reverse order and test now which numbers divide it exactly​",
+      "about_this_result": {
+       "source": {
+        "description": "Click here 👆 to get an answer to your question ✍️ Write 12345 in reverse order and test now which numbers divide it exactly​",
+        "source_info_link": "https://brainly.in/question/52184854",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVjFUbXBSTzlVUHM1ZlRvVW9GUUlXNmZaWW9hZnQ3LUNUamtLcDJmak4xNHVIc3dWQ05QeURXcWp1dGZDZWRoZHhoSkRvX3d4c3llTkUtaGpxRTk0cjVDTkpIVmQ2SDl1QnlERTZUQ05DN25uMTJPa3d6cjhIclVoTBIEGgIIABqvAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCLAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVjFUbXBSTzlVUHM1ZlRvVW9GUUlXNmZaWW9hZnQ3LUNUamtLcDJmak4xNHVIc3dWQ05QeURXcWp1dGZDZWRoZHhoSkRvX3d4c3llTkUtaGpxRTk0cjVDTkpIVmQ2SDl1QnlERTZUQ05DN25uMTJPa3d6cjhIclVoTDo7V3JpdGUgMTIzNDUgaW4gcmV2ZXJzZSBvcmRlciBhbmQgdGVzdCBub3cgd2hpY2ggbnVtYmVycyAuLi5ChQFDbGljayBoZXJlIPCfkYYgdG8gZ2V0IGFuIGFuc3dlciB0byB5b3VyIHF1ZXN0aW9uIOKcje-4jyBXcml0ZSAxMjM0NSBpbiByZXZlcnNlIG9yZGVyIGFuZCB0ZXN0IG5vdyB3aGljaCBudW1iZXJzIGRpdmlkZSBpdCBleGFjdGx54oCLIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVjFUbXBSTzlVUHM1ZlRvVW9GUUlXNmZaWW9hZnQ3LUNUamtLcDJmak4xNHVIc3dWQ05QeURXcWp1dGZDZWRoZHhoSkRvX3d4c3llTkUtaGpxRTk0cjVDTkpIVmQ2SDl1QnlERTZUQ05DN25uMTJPa3d6cjhIclVoTBIEGgIIABqvAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCLAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVjFUbXBSTzlVUHM1ZlRvVW9GUUlXNmZaWW9hZnQ3LUNUamtLcDJmak4xNHVIc3dWQ05QeURXcWp1dGZDZWRoZHhoSkRvX3d4c3llTkUtaGpxRTk0cjVDTkpIVmQ2SDl1QnlERTZUQ05DN25uMTJPa3d6cjhIclVoTDo7V3JpdGUgMTIzNDUgaW4gcmV2ZXJzZSBvcmRlciBhbmQgdGVzdCBub3cgd2hpY2ggbnVtYmVycyAuLi5ChQFDbGljayBoZXJlIPCfkYYgdG8gZ2V0IGFuIGFuc3dlciB0byB5b3VyIHF1ZXN0aW9uIOKcje-4jyBXcml0ZSAxMjM0NSBpbiByZXZlcnNlIG9yZGVyIGFuZCB0ZXN0IG5vdyB3aGljaCBudW1iZXJzIGRpdmlkZSBpdCBleGFjdGx54oCLIgIQAUgAWABoAA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 4,
+      "title": "find the value of the following using various properties ...",
+      "link": "https://brainly.in/question/60813404",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAVp7CYDXNHbLvkutJpdOkjNCeqqZ2Y6B7zMrWj4qaxNuYel2QKlcHdK5gpKL4qIrRVuSPX5oyZHEkB5zrKKUYy5seac0sZ3VEtFZMasfO-hPi2hNfq05sKkc20&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECBoQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › Math › Primary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "14 Jul 2024",
+      "snippet": "Click here 👆 to get an answer to your question ✍️ find the value of the following using various properties 12345 × 12345 - 12345 ×2345​",
+      "about_this_result": {
+       "source": {
+        "description": "Click here 👆 to get an answer to your question ✍️ find the value of the following using various properties 12345 × 12345 - 12345 ×2345​",
+        "source_info_link": "https://brainly.in/question/60813404",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnA3Q1lEWE5IYkx2a3V0SnBkT2tqTkNlcXFaMlk2Qjd6TXJXajRxYXhOdVllbDJRS2xjSGRLNWdwS0w0cUlyUlZ1U1BYNW95WkhFa0I1enJLS1VZeTVzZWFjMHNaM1ZFdEZaTWFzZk8taFBpMmhOZnEwNXNLa2MyMBIEGgIIABrDAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCfAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnA3Q1lEWE5IYkx2a3V0SnBkT2tqTkNlcXFaMlk2Qjd6TXJXajRxYXhOdVllbDJRS2xjSGRLNWdwS0w0cUlyUlZ1U1BYNW95WkhFa0I1enJLS1VZeTVzZWFjMHNaM1ZFdEZaTWFzZk8taFBpMmhOZnEwNXNLa2MyMDpCZmluZCB0aGUgdmFsdWUgb2YgdGhlIGZvbGxvd2luZyB1c2luZyB2YXJpb3VzIHByb3BlcnRpZXMgMTIzNDUgLi4uQpIBQ2xpY2sgaGVyZSDwn5GGIHRvIGdldCBhbiBhbnN3ZXIgdG8geW91ciBxdWVzdGlvbiDinI3vuI8gZmluZCB0aGUgdmFsdWUgb2YgdGhlIGZvbGxvd2luZyB1c2luZyB2YXJpb3VzIHByb3BlcnRpZXMgMTIzNDUgw5cgMTIzNDUgLSAxMjM0NSDDlzIzNDXigIsiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnA3Q1lEWE5IYkx2a3V0SnBkT2tqTkNlcXFaMlk2Qjd6TXJXajRxYXhOdVllbDJRS2xjSGRLNWdwS0w0cUlyUlZ1U1BYNW95WkhFa0I1enJLS1VZeTVzZWFjMHNaM1ZFdEZaTWFzZk8taFBpMmhOZnEwNXNLa2MyMBIEGgIIABrDAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCfAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1Mo4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnA3Q1lEWE5IYkx2a3V0SnBkT2tqTkNlcXFaMlk2Qjd6TXJXajRxYXhOdVllbDJRS2xjSGRLNWdwS0w0cUlyUlZ1U1BYNW95WkhFa0I1enJLS1VZeTVzZWFjMHNaM1ZFdEZaTWFzZk8taFBpMmhOZnEwNXNLa2MyMDpCZmluZCB0aGUgdmFsdWUgb2YgdGhlIGZvbGxvd2luZyB1c2luZyB2YXJpb3VzIHByb3BlcnRpZXMgMTIzNDUgLi4uQpIBQ2xpY2sgaGVyZSDwn5GGIHRvIGdldCBhbiBhbnN3ZXIgdG8geW91ciBxdWVzdGlvbiDinI3vuI8gZmluZCB0aGUgdmFsdWUgb2YgdGhlIGZvbGxvd2luZyB1c2luZyB2YXJpb3VzIHByb3BlcnRpZXMgMTIzNDUgw5cgMTIzNDUgLSAxMjM0NSDDlzIzNDXigIsiAhABSABYAGgA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 5,
+      "title": "Question 7, 4. Operations On Large Numbers, R S ...",
+      "link": "https://brainly.in/textbook-solutions/q-8986-700",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESawHrOzAVamx0dWIvBOCEC-6aqBAqtKJxIr3M2TYCfGml6sXQOxddFBDazyrAqkT7Ghe0bBtKw3dQ4LG-g06oQYRBV6iRxmJslUhi029gmmgUlb-OJz06y_jdXIWEkVxnVpaECekn52_Sr9FC&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECBkQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › textbook-solutions",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "snippet": "Take out zeros in last from each number, multiply the obtained numbers then add the zeros at last of the product of numbers.",
+      "about_this_result": {
+       "source": {
+        "description": "Take out zeros in last from each number, multiply the obtained numbers then add the zeros at last of the product of numbers.",
+        "source_info_link": "https://brainly.in/textbook-solutions/q-8986-700",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVmFteDBkV0l2Qk9DRUMtNmFxQkFxdEtKeElyM00yVFlDZkdtbDZzWFFPeGRkRkJEYXp5ckFxa1Q3R2hlMGJCdEt3M2RRNExHLWcwNm9RWVJCVjZpUnhtSnNsVWhpMDI5Z21tZ1VsYi1PSnowNnlfamRYSVdFa1Z4blZwYUVDZWtuNTJfU3I5RkMSBBoCCAAatgMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAkgMIABAAGAAgACorCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Ggs3MDAwMCAxMjM0NTKeAS9nb3RvP3VybD1DQUVTYXdIck96QVZhbXgwZFdJdkJPQ0VDLTZhcUJBcXRLSnhJcjNNMlRZQ2ZHbWw2c1hRT3hkZEZCRGF6eXJBcWtUN0doZTBiQnRLdzNkUTRMRy1nMDZvUVlSQlY2aVJ4bUpzbFVoaTAyOWdtbWdVbGItT0p6MDZ5X2pkWElXRWtWeG5WcGFFQ2VrbjUyX1NyOUZDOjxRdWVzdGlvbiA3LCA0LiBPcGVyYXRpb25zIE9uIExhcmdlIE51bWJlcnMsIFIgUyBBZ2dhcndhbCAuLi5CfFRha2Ugb3V0IHplcm9zIGluIGxhc3QgZnJvbSBlYWNoIG51bWJlciwgbXVsdGlwbHkgdGhlIG9idGFpbmVkIG51bWJlcnMgdGhlbiBhZGQgdGhlIHplcm9zIGF0IGxhc3Qgb2YgdGhlIHByb2R1Y3Qgb2YgbnVtYmVycy4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVmFteDBkV0l2Qk9DRUMtNmFxQkFxdEtKeElyM00yVFlDZkdtbDZzWFFPeGRkRkJEYXp5ckFxa1Q3R2hlMGJCdEt3M2RRNExHLWcwNm9RWVJCVjZpUnhtSnNsVWhpMDI5Z21tZ1VsYi1PSnowNnlfamRYSVdFa1Z4blZwYUVDZWtuNTJfU3I5RkMSBBoCCAAatgMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAkgMIABAAGAAgACorCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Ggs3MDAwMCAxMjM0NTKeAS9nb3RvP3VybD1DQUVTYXdIck96QVZhbXgwZFdJdkJPQ0VDLTZhcUJBcXRLSnhJcjNNMlRZQ2ZHbWw2c1hRT3hkZEZCRGF6eXJBcWtUN0doZTBiQnRLdzNkUTRMRy1nMDZvUVlSQlY2aVJ4bUpzbFVoaTAyOWdtbWdVbGItT0p6MDZ5X2pkWElXRWtWeG5WcGFFQ2VrbjUyX1NyOUZDOjxRdWVzdGlvbiA3LCA0LiBPcGVyYXRpb25zIE9uIExhcmdlIE51bWJlcnMsIFIgUyBBZ2dhcndhbCAuLi5CfFRha2Ugb3V0IHplcm9zIGluIGxhc3QgZnJvbSBlYWNoIG51bWJlciwgbXVsdGlwbHkgdGhlIG9idGFpbmVkIG51bWJlcnMgdGhlbiBhZGQgdGhlIHplcm9zIGF0IGxhc3Qgb2YgdGhlIHByb2R1Y3Qgb2YgbnVtYmVycy4iAhABSABYAGgA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 6,
+      "title": "the numbers that can be formed using the digits of 12345 ...",
+      "link": "https://askfilo.com/maths-question-answers/all-the-numbers-that-can-be-formed-using-the-digitcwb",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESmwEB6zswFY-AnYb-ODbCdHpLnUJ_jo40UXtWVv9TM_gaSkDoTC_TOXxeGic7rT6Hm-YFT5nG84Y-LCRe1oRry4oVXCDIoB2MFKbZLnITG_xrC5QxUjZK1fiET3H4E8ppTKBZwixcPTF4FDSV6_3YRpJ_O063WfeoYtJJyVRfsfWHy2lwHG67T92X23dkdxVaroehxHN_rhXSNUGV1w&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECCAQAQ&uoh=1",
+      "displayed_link": "https://askfilo.com › maths-question-answers › all-the-nu...",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png",
+      "date": "1 Jan 2021",
+      "snippet": "All the numbers that can be formed using the digits of 12345 are arranged in the decreasing order of magnitude. The rank of 32415 is: (A) 64 (B) 62 (C) ...",
+      "about_this_result": {
+       "source": {
+        "description": "All the numbers that can be formed using the digits of 12345 are arranged in the decreasing order of magnitude.",
+        "source_info_link": "https://askfilo.com/maths-question-answers/all-the-numbers-that-can-be-formed-using-the-digitcwb",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZZLUFuWWItT0RiQ2RIcExuVUpfam80MFVYdFdWdjlUTV9nYVNrRG9UQ19UT1h4ZUdpYzdyVDZIbS1ZRlQ1bkc4NFktTENSZTFvUnJ5NG9WWENESW9CMk1GS2JaTG5JVEdfeHJDNVF4VWpaSzFmaUVUM0g0RThwcFRLQlp3aXhjUFRGNEZEU1Y2XzNZUnBKX08wNjNXZmVvWXRKSnlWUmZzZldIeTJsd0hHNjdUOTJYMjNka2R4VmFyb2VoeEhOX3JoWFNOVUdWMXcSBBoCCAAa7wMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAywMIABAAGAAgACorCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Ggs3MDAwMCAxMjM0NTLgAS9nb3RvP3VybD1DQUVTbXdFQjZ6c3dGWS1BblliLU9EYkNkSHBMblVKX2pvNDBVWHRXVnY5VE1fZ2FTa0RvVENfVE9YeGVHaWM3clQ2SG0tWUZUNW5HODRZLUxDUmUxb1JyeTRvVlhDRElvQjJNRktiWkxuSVRHX3hyQzVReFVqWksxZmlFVDNINEU4cHBUS0Jad2l4Y1BURjRGRFNWNl8zWVJwSl9PMDYzV2Zlb1l0Skp5VlJmc2ZXSHkybHdIRzY3VDkyWDIzZGtkeFZhcm9laHhITl9yaFhTTlVHVjF3OkBBbGwgdGhlIG51bWJlcnMgdGhhdCBjYW4gYmUgZm9ybWVkIHVzaW5nIHRoZSBkaWdpdHMgb2YgMTIzNDUgLi4uQm9BbGwgdGhlIG51bWJlcnMgdGhhdCBjYW4gYmUgZm9ybWVkIHVzaW5nIHRoZSBkaWdpdHMgb2YgMTIzNDUgYXJlIGFycmFuZ2VkIGluIHRoZSBkZWNyZWFzaW5nIG9yZGVyIG9mIG1hZ25pdHVkZS4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZZLUFuWWItT0RiQ2RIcExuVUpfam80MFVYdFdWdjlUTV9nYVNrRG9UQ19UT1h4ZUdpYzdyVDZIbS1ZRlQ1bkc4NFktTENSZTFvUnJ5NG9WWENESW9CMk1GS2JaTG5JVEdfeHJDNVF4VWpaSzFmaUVUM0g0RThwcFRLQlp3aXhjUFRGNEZEU1Y2XzNZUnBKX08wNjNXZmVvWXRKSnlWUmZzZldIeTJsd0hHNjdUOTJYMjNka2R4VmFyb2VoeEhOX3JoWFNOVUdWMXcSBBoCCAAa7wMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAywMIABAAGAAgACorCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Ggs3MDAwMCAxMjM0NTLgAS9nb3RvP3VybD1DQUVTbXdFQjZ6c3dGWS1BblliLU9EYkNkSHBMblVKX2pvNDBVWHRXVnY5VE1fZ2FTa0RvVENfVE9YeGVHaWM3clQ2SG0tWUZUNW5HODRZLUxDUmUxb1JyeTRvVlhDRElvQjJNRktiWkxuSVRHX3hyQzVReFVqWksxZmlFVDNINEU4cHBUS0Jad2l4Y1BURjRGRFNWNl8zWVJwSl9PMDYzV2Zlb1l0Skp5VlJmc2ZXSHkybHdIRzY3VDkyWDIzZGtkeFZhcm9laHhITl9yaFhTTlVHVjF3OkBBbGwgdGhlIG51bWJlcnMgdGhhdCBjYW4gYmUgZm9ybWVkIHVzaW5nIHRoZSBkaWdpdHMgb2YgMTIzNDUgLi4uQm9BbGwgdGhlIG51bWJlcnMgdGhhdCBjYW4gYmUgZm9ybWVkIHVzaW5nIHRoZSBkaWdpdHMgb2YgMTIzNDUgYXJlIGFycmFuZ2VkIGluIHRoZSBkZWNyZWFzaW5nIG9yZGVyIG9mIG1hZ25pdHVkZS4iAhABSABYAGgA",
+      "source": "Filo"
+     },
+     {
+      "position": 7,
+      "title": "How do you convert 012345 345 repeating to a fract class ...",
+      "link": "https://www.vedantu.com/question-answer/convert-012345-345-repeating-to-a-fract-class-7-maths-cbse-60273b0dec08ce075514128d",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEStgEB6zswFW-N6EHn6GWw24iOli6HAanXzKkUSB_dim8vm3QVt97pu1-DuT_ZvaGaArdh1APTuexIMtOl9J_OpO6uZvpmipOJcWFrojF-HbzYppPGXHjDFgrmRg0XFD67Yym5hSinp54-etU2pap9oqybmK3lx_kzwKj8XMRndD8O8d5d-HfmWNDiFYX4nDQUO8SmHfMoEwD3d_8hsVTVKojXojNjOX-V_cVsqEaJmBJBnQ1qqu_W9A&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECBwQAQ&uoh=1",
+      "displayed_link": "https://www.vedantu.com › question-answer",
+      "favicon": "https://serpapi.com/images/i/UklGRl4BAABXRUJQVlA4IFIBAABQCACdASocABwAPtEutFooIagoGAEAGglsAJ0yhHmfmfFBPdwJdtRz6voU3gDeYEaBtKDHys9OCCjHVsAdXwZmxLAS58DXj_F-EEAA_vYTQm9sWp3tRJA9dnG2F5dyP0yU-CAK-0Jq7znbqkX7r4uKbGTgW9TLJ_COCRhOnX7s-HrdaedCgznzh6bg3U391Czi_UqDhl0vEwu6E2B8cJAGOFxXDmRtaBobEL85i9QSAMTr48sb2JEfRfgRDkr4Lqq6DbZVK9hgp0DUoMm3gSvP4-vCYWzDpbdA84tc0RL63-4DC7lfvXkzEyVC8y4hZzxYINIP9kU9c9BdNqizI2V1B49X7PgwNImTWKji3lMe8Mrun25bJMDN8WnSeOZ9uMo3t55wsrA0jP5YljxexaPwdLI8AGz25UJP4SUB2OrDDmGDziMPSGRIOQjVncxHioAAAA.webp",
+      "snippet": "the decimal number 0.12345 is given to us, in which the digits 345 are being repeated. So the actual representation of the decimal number will be 0.12 345 ― . ...",
+      "about_this_result": {
+       "source": {
+        "description": "the decimal number 0.12345 is given to us, in which the digits 345 are being repeated. So the actual representation of the decimal number will be 0.12 345 ― . ...",
+        "source_info_link": "https://www.vedantu.com/question-answer/convert-012345-345-repeating-to-a-fract-class-7-maths-cbse-60273b0dec08ce075514128d",
+        "icon": "https://serpapi.com/images/i/UklGRl4BAABXRUJQVlA4IFIBAABQCACdASocABwAPtEutFooIagoGAEAGglsAJ0yhHmfmfFBPdwJdtRz6voU3gDeYEaBtKDHys9OCCjHVsAdXwZmxLAS58DXj_F-EEAA_vYTQm9sWp3tRJA9dnG2F5dyP0yU-CAK-0Jq7znbqkX7r4uKbGTgW9TLJ_COCRhOnX7s-HrdaedCgznzh6bg3U391Czi_UqDhl0vEwu6E2B8cJAGOFxXDmRtaBobEL85i9QSAMTr48sb2JEfRfgRDkr4Lqq6DbZVK9hgp0DUoMm3gSvP4-vCYWzDpbdA84tc0RL63-4DC7lfvXkzEyVC8y4hZzxYINIP9kU9c9BdNqizI2V1B49X7PgwNImTWKji3lMe8Mrun25bJMDN8WnSeOZ9uMo3t55wsrA0jP5YljxexaPwdLI8AGz25UJP4SUB2OrDDmGDziMPSGRIOQjVncxHioAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CoQCL2dvdG8_dXJsPUNBRVN0Z0VCNnpzd0ZXLU42RUhuNkdXdzI0aU9saTZIQWFuWHpLa1VTQl9kaW04dm0zUVZ0OTdwdTEtRHVUX1p2YUdhQXJkaDFBUFR1ZXhJTXRPbDlKX09wTzZ1WnZwbWlwT0pjV0Zyb2pGLUhiellwcFBHWEhqREZncm1SZzBYRkQ2N1l5bTVoU2lucDU0LWV0VTJwYXA5b3F5Ym1LM2x4X2t6d0tqOFhNUm5kRDhPOGQ1ZC1IZm1XTkRpRllYNG5EUVVPOFNtSGZNb0V3RDNkXzhoc1ZUVktvalhvak5qT1gtVl9jVnNxRWFKbUJKQm5RMXFxdV9XOUESBBoCCAAazAQSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAqAQIABAAGAAgACorCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Ggs3MDAwMCAxMjM0NTKEAi9nb3RvP3VybD1DQUVTdGdFQjZ6c3dGVy1ONkVIbjZHV3cyNGlPbGk2SEFhblh6S2tVU0JfZGltOHZtM1FWdDk3cHUxLUR1VF9admFHYUFyZGgxQVBUdWV4SU10T2w5Sl9PcE82dVp2cG1pcE9KY1dGcm9qRi1IYnpZcHBQR1hIakRGZ3JtUmcwWEZENjdZeW01aFNpbnA1NC1ldFUycGFwOW9xeWJtSzNseF9rendLajhYTVJuZEQ4TzhkNWQtSGZtV05EaUZZWDRuRFFVTzhTbUhmTW9Fd0QzZF84aHNWVFZLb2pYb2pOak9YLVZfY1ZzcUVhSm1CSkJuUTFxcXVfVzlBOj5Ib3cgZG8geW91IGNvbnZlcnQgMDEyMzQ1IDM0NSByZXBlYXRpbmcgdG8gYSBmcmFjdCBjbGFzcyA3IC4uLkKpAXRoZSBkZWNpbWFsIG51bWJlciAwLjEyMzQ1IGlzIGdpdmVuIHRvIHVzLCBpbiB3aGljaCB0aGUgZGlnaXRzIDM0NSBhcmUgYmVpbmcgcmVwZWF0ZWQuIFNvIHRoZSBhY3R1YWwgcmVwcmVzZW50YXRpb24gb2YgdGhlIGRlY2ltYWwgbnVtYmVyIHdpbGwgYmUgMC4xMiAzNDUg4oCVIC4mbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CoQCL2dvdG8_dXJsPUNBRVN0Z0VCNnpzd0ZXLU42RUhuNkdXdzI0aU9saTZIQWFuWHpLa1VTQl9kaW04dm0zUVZ0OTdwdTEtRHVUX1p2YUdhQXJkaDFBUFR1ZXhJTXRPbDlKX09wTzZ1WnZwbWlwT0pjV0Zyb2pGLUhiellwcFBHWEhqREZncm1SZzBYRkQ2N1l5bTVoU2lucDU0LWV0VTJwYXA5b3F5Ym1LM2x4X2t6d0tqOFhNUm5kRDhPOGQ1ZC1IZm1XTkRpRllYNG5EUVVPOFNtSGZNb0V3RDNkXzhoc1ZUVktvalhvak5qT1gtVl9jVnNxRWFKbUJKQm5RMXFxdV9XOUESBBoCCAAazAQSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAqAQIABAAGAAgACorCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Ggs3MDAwMCAxMjM0NTKEAi9nb3RvP3VybD1DQUVTdGdFQjZ6c3dGVy1ONkVIbjZHV3cyNGlPbGk2SEFhblh6S2tVU0JfZGltOHZtM1FWdDk3cHUxLUR1VF9admFHYUFyZGgxQVBUdWV4SU10T2w5Sl9PcE82dVp2cG1pcE9KY1dGcm9qRi1IYnpZcHBQR1hIakRGZ3JtUmcwWEZENjdZeW01aFNpbnA1NC1ldFUycGFwOW9xeWJtSzNseF9rendLajhYTVJuZEQ4TzhkNWQtSGZtV05EaUZZWDRuRFFVTzhTbUhmTW9Fd0QzZF84aHNWVFZLb2pYb2pOak9YLVZfY1ZzcUVhSm1CSkJuUTFxcXVfVzlBOj5Ib3cgZG8geW91IGNvbnZlcnQgMDEyMzQ1IDM0NSByZXBlYXRpbmcgdG8gYSBmcmFjdCBjbGFzcyA3IC4uLkKpAXRoZSBkZWNpbWFsIG51bWJlciAwLjEyMzQ1IGlzIGdpdmVuIHRvIHVzLCBpbiB3aGljaCB0aGUgZGlnaXRzIDM0NSBhcmUgYmVpbmcgcmVwZWF0ZWQuIFNvIHRoZSBhY3R1YWwgcmVwcmVzZW50YXRpb24gb2YgdGhlIGRlY2ltYWwgbnVtYmVyIHdpbGwgYmUgMC4xMiAzNDUg4oCVIC4mbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Vedantu"
+     },
+     {
+      "position": 8,
+      "title": "12345 \\times 2345",
+      "link": "https://askfilo.com/user-question-answers-smart-solutions/12345-times-12345-12345-times-2345-3334393130303430",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESqAEB6zswFT2cN1zDY5Q0MIarR_ZIHJi7burHzLvBVwSQYDqGgjzC6z2hIlBMIJPbaFLiJx3rBXcNW56wL5Exm8qgXssPKTIOpuvoEn6en7Dl_ZqAT830foYxwgke3bsYtHJN-RayFo9DC2Lf49waOd3ijlvtM_NSjKGrm71VRH9Jz6ZuYuzReIAdFH2moMvrNEd-_PoQaqAQnhs4MywUp0w2sgFDPRPLXLs&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECEsQAQ&uoh=1",
+      "displayed_link": "https://askfilo.com › CBSE › Smart Solutions",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png",
+      "date": "23 May 2025",
+      "snippet": "12345×12345−12345×2345",
+      "about_this_result": {
+       "source": {
+        "description": "Step-By-Step Solution. Step 1. Calculate 12345×12345. 12345×12345=152399025. Step 2. Calculate 12345×2345. 12345×2345=28963545. Step 3.",
+        "source_info_link": "https://askfilo.com/user-question-answers-smart-solutions/12345-times-12345-12345-times-2345-3334393130303430",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CvEBL2dvdG8_dXJsPUNBRVNxQUVCNnpzd0ZUMmNOMXpEWTVRME1JYXJSX1pJSEppN2J1ckh6THZCVndTUVlEcUdnanpDNnoyaElsQk1JSlBiYUZMaUp4M3JCWGNOVzU2d0w1RXhtOHFnWHNzUEtUSU9wdXZvRW42ZW43RGxfWnFBVDgzMGZvWXh3Z2tlM2JzWXRISk4tUmF5Rm85REMyTGY0OXdhT2QzaWpsdnRNX05TaktHcm03MVZSSDlKejZadVl1elJlSUFkRkgybW9NdnJORWQtX1BvUWFxQVFuaHM0TXl3VXAwdzJzZ0ZEUFJQTFhMcxIEGgIIABr1AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDRAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1MvEBL2dvdG8_dXJsPUNBRVNxQUVCNnpzd0ZUMmNOMXpEWTVRME1JYXJSX1pJSEppN2J1ckh6THZCVndTUVlEcUdnanpDNnoyaElsQk1JSlBiYUZMaUp4M3JCWGNOVzU2d0w1RXhtOHFnWHNzUEtUSU9wdXZvRW42ZW43RGxfWnFBVDgzMGZvWXh3Z2tlM2JzWXRISk4tUmF5Rm85REMyTGY0OXdhT2QzaWpsdnRNX05TaktHcm03MVZSSDlKejZadVl1elJlSUFkRkgybW9NdnJORWQtX1BvUWFxQVFuaHM0TXl3VXAwdzJzZ0ZEUFJQTFhMczoYMTIzNDUgXHRpbWVzIDIzNDUgfCBGaWxvQosBU3RlcC1CeS1TdGVwIFNvbHV0aW9uLiBTdGVwIDEuIENhbGN1bGF0ZSAxMjM0NcOXMTIzNDUuIDEyMzQ1w5cxMjM0NT0xNTIzOTkwMjUuIFN0ZXAgMi4gQ2FsY3VsYXRlIDEyMzQ1w5cyMzQ1LiAxMjM0NcOXMjM0NT0yODk2MzU0NS4gU3RlcCAzLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CvEBL2dvdG8_dXJsPUNBRVNxQUVCNnpzd0ZUMmNOMXpEWTVRME1JYXJSX1pJSEppN2J1ckh6THZCVndTUVlEcUdnanpDNnoyaElsQk1JSlBiYUZMaUp4M3JCWGNOVzU2d0w1RXhtOHFnWHNzUEtUSU9wdXZvRW42ZW43RGxfWnFBVDgzMGZvWXh3Z2tlM2JzWXRISk4tUmF5Rm85REMyTGY0OXdhT2QzaWpsdnRNX05TaktHcm03MVZSSDlKejZadVl1elJlSUFkRkgybW9NdnJORWQtX1BvUWFxQVFuaHM0TXl3VXAwdzJzZ0ZEUFJQTFhMcxIEGgIIABr1AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDRAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1MvEBL2dvdG8_dXJsPUNBRVNxQUVCNnpzd0ZUMmNOMXpEWTVRME1JYXJSX1pJSEppN2J1ckh6THZCVndTUVlEcUdnanpDNnoyaElsQk1JSlBiYUZMaUp4M3JCWGNOVzU2d0w1RXhtOHFnWHNzUEtUSU9wdXZvRW42ZW43RGxfWnFBVDgzMGZvWXh3Z2tlM2JzWXRISk4tUmF5Rm85REMyTGY0OXdhT2QzaWpsdnRNX05TaktHcm03MVZSSDlKejZadVl1elJlSUFkRkgybW9NdnJORWQtX1BvUWFxQVFuaHM0TXl3VXAwdzJzZ0ZEUFJQTFhMczoYMTIzNDUgXHRpbWVzIDIzNDUgfCBGaWxvQosBU3RlcC1CeS1TdGVwIFNvbHV0aW9uLiBTdGVwIDEuIENhbGN1bGF0ZSAxMjM0NcOXMTIzNDUuIDEyMzQ1w5cxMjM0NT0xNTIzOTkwMjUuIFN0ZXAgMi4gQ2FsY3VsYXRlIDEyMzQ1w5cyMzQ1LiAxMjM0NcOXMjM0NT0yODk2MzU0NS4gU3RlcCAzLiICEAFIAFgAaAA",
+      "source": "Filo"
+     },
+     {
+      "position": 9,
+      "title": "book 4 chap 1 WS",
+      "link": "https://ldbentinckschoo.weebly.com/uploads/1/9/8/7/19879553/c_4_math_1__1__1.pdf",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiwEB6zswFa_SNQhHJvTrDIYcNoy6-4RyeHnGwa4-3TgSeNfz02EaifIW4iKHGm27CepBssumNp8ZWpyAU-8FVDYkHhnUVfEDuTj0dwWPyNX0d0gpRl0BJC0ekmR6zDW1eYWyigp-tdc3pqAP4IC5f-T0bBWlpHIAys2h9mCzXNIBPGndwbu9LVyWKnHh&ved=2ahUKEwjbivKsyqeXAxUTxzgGHaznAHAQFnoECEoQAQ&uoh=1",
+      "displayed_link": "https://ldbentinckschoo.weebly.com › uploads › c...",
+      "favicon": "https://serpapi.com/images/i/UklGRnABAABXRUJQVlA4IGQBAAAQCACdASogACAAPtE-tFooIigoFAEAGglnABPHf2PlYT6r73XQywNJfNA8n70lGwL1AirD-nz64bhFuFG7ZOADSRbaH_7v35mAAP79K48B5RUWj-udODhvzyd6TnkY6BjF0LGDOECXPBLx4Xoa3r-DyLcbYhQ-RXhrcY6T2ZnqsVINR2-_7ic7WxT2QatboI7Ks7BOX6gxT9LWIUgvcLk5i827-u-Xm3N-yCBmnmgSeiQJCj5MuKkmCG65L7FOjeWKzUwcqftXQ59K8mF1tD0Afyd0u4nM4hUT6d-Wy2uJlfBNTM3ucRa6wzBi7Wf9a6RSuk9hjoFe69d3nVSWfeff7xv8cDCo53uR2Rr06478BZB1IO0MHavEc9IxRnLeo7IWH1FOftE0Dl1SflrkRyoZNLmD9PyZ_42OJ9i-ZIFwBp4xBHql-2ixXPw_Fp6NEAa-KHN9oaxvHQ-w6fv3XP1_8rCAAA.webp",
+      "snippet": "Fill in the blanks : (a) The predecessor of the smallest 5-digit number is ................................. . (b) The short form of 70,000 + 6,000 + 800 + ...",
+      "rich_snippet": {
+       "top": {
+        "detected_extensions": {
+         "pages": 2
+        },
+        "extensions": [
+         "2 pages"
+        ]
+       }
+      },
+      "about_this_result": {
+       "source": {
+        "description": "Fill in the blanks : (a) The predecessor of the smallest 5-digit number is ................................. . (b) The short form of 70,000 + 6,000 + 800 + ...",
+        "source_info_link": "https://ldbentinckschoo.weebly.com/uploads/1/9/8/7/19879553/c_4_math_1__1__1.pdf",
+        "icon": "https://serpapi.com/images/i/UklGRnABAABXRUJQVlA4IGQBAAAQCACdASogACAAPtE-tFooIigoFAEAGglnABPHf2PlYT6r73XQywNJfNA8n70lGwL1AirD-nz64bhFuFG7ZOADSRbaH_7v35mAAP79K48B5RUWj-udODhvzyd6TnkY6BjF0LGDOECXPBLx4Xoa3r-DyLcbYhQ-RXhrcY6T2ZnqsVINR2-_7ic7WxT2QatboI7Ks7BOX6gxT9LWIUgvcLk5i827-u-Xm3N-yCBmnmgSeiQJCj5MuKkmCG65L7FOjeWKzUwcqftXQ59K8mF1tD0Afyd0u4nM4hUT6d-Wy2uJlfBNTM3ucRa6wzBi7Wf9a6RSuk9hjoFe69d3nVSWfeff7xv8cDCo53uR2Rr06478BZB1IO0MHavEc9IxRnLeo7IWH1FOftE0Dl1SflrkRyoZNLmD9PyZ_42OJ9i-ZIFwBp4xBHql-2ixXPw_Fp6NEAa-KHN9oaxvHQ-w6fv3XP1_8rCAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZhX1NOUWhISnZUckRJWWNOb3k2LTRSeWVIbkd3YTQtM1RnU2VOZnowMkVhaWZJVzRpS0hHbTI3Q2VwQnNzdW1OcDhaV3B5QVUtOEZWRFlrSGhuVVZmRUR1VGowZHdXUHlOWDBkMGdwUmwwQkpDMGVrbVI2ekRXMWVZV3lpZ3AtdGRjM3BxQVA0SUM1Zi1UMGJCV2xwSElBeXMyaDltQ3pYTklCUEduZHdidTlMVnlXS25IaBIEGgIIABr1AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDRAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1MsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZhX1NOUWhISnZUckRJWWNOb3k2LTRSeWVIbkd3YTQtM1RnU2VOZnowMkVhaWZJVzRpS0hHbTI3Q2VwQnNzdW1OcDhaV3B5QVUtOEZWRFlrSGhuVVZmRUR1VGowZHdXUHlOWDBkMGdwUmwwQkpDMGVrbVI2ekRXMWVZV3lpZ3AtdGRjM3BxQVA0SUM1Zi1UMGJCV2xwSElBeXMyaDltQ3pYTklCUEduZHdidTlMVnlXS25IaDomYm9vayA0IGNoYXAgMSBXUyAtIExkLiBCZW50aW5jayBTY2hvb2xCpAFGaWxsIGluIHRoZSBibGFua3MgOiAoYSkgVGhlIHByZWRlY2Vzc29yIG9mIHRoZSBzbWFsbGVzdCA1LWRpZ2l0IG51bWJlciBpcyAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gLiAoYikgVGhlIHNob3J0IGZvcm0gb2YgNzAsMDAwICsgNiwwMDAgKyA4MDAgKyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZhX1NOUWhISnZUckRJWWNOb3k2LTRSeWVIbkd3YTQtM1RnU2VOZnowMkVhaWZJVzRpS0hHbTI3Q2VwQnNzdW1OcDhaV3B5QVUtOEZWRFlrSGhuVVZmRUR1VGowZHdXUHlOWDBkMGdwUmwwQkpDMGVrbVI2ekRXMWVZV3lpZ3AtdGRjM3BxQVA0SUM1Zi1UMGJCV2xwSElBeXMyaDltQ3pYTklCUEduZHdidTlMVnlXS25IaBIEGgIIABr1AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDRAwgAEAAYACAAKisKCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUaCzcwMDAwIDEyMzQ1MsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZhX1NOUWhISnZUckRJWWNOb3k2LTRSeWVIbkd3YTQtM1RnU2VOZnowMkVhaWZJVzRpS0hHbTI3Q2VwQnNzdW1OcDhaV3B5QVUtOEZWRFlrSGhuVVZmRUR1VGowZHdXUHlOWDBkMGdwUmwwQkpDMGVrbVI2ekRXMWVZV3lpZ3AtdGRjM3BxQVA0SUM1Zi1UMGJCV2xwSElBeXMyaDltQ3pYTklCUEduZHdidTlMVnlXS25IaDomYm9vayA0IGNoYXAgMSBXUyAtIExkLiBCZW50aW5jayBTY2hvb2xCpAFGaWxsIGluIHRoZSBibGFua3MgOiAoYSkgVGhlIHByZWRlY2Vzc29yIG9mIHRoZSBzbWFsbGVzdCA1LWRpZ2l0IG51bWJlciBpcyAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gLiAoYikgVGhlIHNob3J0IGZvcm0gb2YgNzAsMDAwICsgNiwwMDAgKyA4MDAgKyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Ld. Bentinck School",
+      "read_more_link": "https://ldbentinckschoo.weebly.com/uploads/1/9/8/7/19879553/c_4_math_1__1__1.pdf#:~:text=Fill%20in%20the%20blanks%20%3A,%2B%206%2C000%20%2B%20800%20%2B"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"7000012345\" OR \"70000 12345\" OR \"+91 70000 12345\"",
+     "total_results": 53,
+     "time_taken_displayed": 0.31,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:21:53 UTC"
+   }
+  },
+  "159d8463e493f6efc9abf6d2cc40bf07eea64e111cca2d2a1fe42757f70d2d46": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"sbi-kyc-update.in\""
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "Aadhar kyc update 2023 | Ipg subsidy kaise check kare",
+      "link": "https://www.youtube.com/watch?v=ea0Jb4V-HQs",
+      "displayed_link": "190+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac619dbd58a7ac134d43489/images/8PZBy1i0w6uGRM3WxEylmzjJYQ0ZKESDBjHU1IN4KvY.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "... sbi kyc update in sbi bank account kyc gas form online submission kyc ka matlab kya hota hai aadhaar e kyc kaise kare, aadhaar e kyc kaise ...",
+      "duration": "3:53",
+      "about_this_result": {
+       "source": {
+        "description": "... sbi kyc update in sbi bank account kyc gas form online submission kyc ka matlab kya hota hai aadhaar e kyc kaise kare, aadhaar e kyc kaise ...",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVnA4RllWTURIQWVuV2NEeU9EMUduTGZQY3R2dXNwNFhGZW01bDdpbTR5ZHd3WjVJd29yR1p6WlVOWEptbEdSZXR0UWk2ZDRndk9yckFTZzZGZ0poNGFOQkZmQ2lOcWNzNldCd19VZVJaenVja2Y4MWppb0RrNk03dXp1UG5feVJEY2cSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVnA4RllWTURIQWVuV2NEeU9EMUduTGZQY3R2dXNwNFhGZW01bDdpbTR5ZHd3WjVJd29yR1p6WlVOWEptbEdSZXR0UWk2ZDRndk9yckFTZzZGZ0poNGFOQkZmQ2lOcWNzNldCd19VZVJaenVja2Y4MWppb0RrNk03dXp1UG5feVJEY2cSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcReanVojCzfsSaXoAHx0n8wORbfnMRH75S11w",
+      "source": "YouTube · MRH3 RAJU"
+     },
+     {
+      "position": 2,
+      "title": "मोबाइल से e-kyc कैसे करें घर बैठे#breakingnews#explore",
+      "link": "https://www.youtube.com/watch?v=rofzugU4PKQ",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESZgHrOzAV5rPa-nAqACfkinC27CoIeitDT-Tk-DmnoiwRKHuYiDZuWcNFZ0ieaK8VbpB1oJ9y5PtXfFGsa5bfikjLwTzTKBw1dH8w6uPbpkuDvArHzC8zLTDNu-eZSpS006nVYVF_3A&ved=2ahUKEwjg7r7A1KeXAxVAj2oFHb6wN2sQFnoECCgQAQ&uoh=1",
+      "displayed_link": "70+ views · 3 years ago",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "... sbi, kyc update in sbi bank account, touch n go ewallet ekyc, tendu patta kyc kaise kare, trust bank ekyc, ekyc receiving kaise nikale ...",
+      "snippet_highlighted_words": [
+       "sbi, kyc update in"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "... sbi, kyc update in sbi bank account, touch n go ewallet ekyc, tendu patta kyc kaise kare, trust bank ekyc, ekyc receiving kaise nikale ...",
+        "source_info_link": "https://www.youtube.com/watch?v=rofzugU4PKQ",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjVyUGEtbkFxQUNma2luQzI3Q29JZWl0RFQtVGstRG1ub2l3UktIdVlpRFp1V2NORlowaWVhSzhWYnBCMW9KOXk1UHRYZkZHc2E1YmZpa2pMd1R6VEtCdzFkSDh3NnVQYnBrdUR2QXJIekM4ekxURE51LWVaU3BTMDA2blZZVkZfM0ESBBoCCAAa6AMSABoAIgAqADIGCAMSAmluOgBCBAgCEABKAFoAcgB6AIJAxAMIABAAGAAgACoKCgNzYmkVVe7kPioKCgNreWMVmsF5PyoNCgZ1cGRhdGUVwgALPyoJCgJpbhX2tRA_MpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjVyUGEtbkFxQUNma2luQzI3Q29JZWl0RFQtVGstRG1ub2l3UktIdVlpRFp1V2NORlowaWVhSzhWYnBCMW9KOXk1UHRYZkZHc2E1YmZpa2pMd1R6VEtCdzFkSDh3NnVQYnBrdUR2QXJIekM4ekxURE51LWVaU3BTMDA2blZZVkZfM0E6UGhvdyB0byBkbyBla3ljIGZyb20gbW9iaWxlIHNpdHRpbmcgYXQgaG9tZXx8IOCkruCli-CkrOCkvuCkh-CksiDgpLjgpYcgZS1reWMgLi4uQpoBLi4uIDxiPnNiaSwga3ljIHVwZGF0ZSBpbjwvYj4gc2JpIGJhbmsgYWNjb3VudCwgdG91Y2ggbiBnbyBld2FsbGV0IGVreWMsIHRlbmR1IHBhdHRhIGt5YyBrYWlzZSBrYXJlLCB0cnVzdCBiYW5rIGVreWMsIGVreWMgcmVjZWl2aW5nIGthaXNlIG5pa2FsZSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjVyUGEtbkFxQUNma2luQzI3Q29JZWl0RFQtVGstRG1ub2l3UktIdVlpRFp1V2NORlowaWVhSzhWYnBCMW9KOXk1UHRYZkZHc2E1YmZpa2pMd1R6VEtCdzFkSDh3NnVQYnBrdUR2QXJIekM4ekxURE51LWVaU3BTMDA2blZZVkZfM0ESBBoCCAAa6AMSABoAIgAqADIGCAMSAmluOgBCBAgCEABKAFoAcgB6AIJAxAMIABAAGAAgACoKCgNzYmkVVe7kPioKCgNreWMVmsF5PyoNCgZ1cGRhdGUVwgALPyoJCgJpbhX2tRA_MpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjVyUGEtbkFxQUNma2luQzI3Q29JZWl0RFQtVGstRG1ub2l3UktIdVlpRFp1V2NORlowaWVhSzhWYnBCMW9KOXk1UHRYZkZHc2E1YmZpa2pMd1R6VEtCdzFkSDh3NnVQYnBrdUR2QXJIekM4ekxURE51LWVaU3BTMDA2blZZVkZfM0E6UGhvdyB0byBkbyBla3ljIGZyb20gbW9iaWxlIHNpdHRpbmcgYXQgaG9tZXx8IOCkruCli-CkrOCkvuCkh-CksiDgpLjgpYcgZS1reWMgLi4uQpoBLi4uIDxiPnNiaSwga3ljIHVwZGF0ZSBpbjwvYj4gc2JpIGJhbmsgYWNjb3VudCwgdG91Y2ggbiBnbyBld2FsbGV0IGVreWMsIHRlbmR1IHBhdHRhIGt5YyBrYWlzZSBrYXJlLCB0cnVzdCBiYW5rIGVreWMsIGVreWMgcmVjZWl2aW5nIGthaXNlIG5pa2FsZSZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "YouTube · Sadguru digital studio & mixing Lab"
+     },
+     {
+      "position": 3,
+      "title": "Jai Kumar - Business & Marketing Enthusiast",
+      "link": "https://in.linkedin.com/in/jai-kumar-25b023365",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaQHrOzAVkelNWicKpQSCZkGY95CVt8hY7k6J3kDg0k_Pv1HoSbWq7NuIC7e5vOfScLS4FJIY_5simK6y18BJWwO8NBiwjDO_EYIg5RMVBnj9EeUocr_5x_ZSvznuxUJqwThntNxDNhsjDg&ved=2ahUKEwjg7r7A1KeXAxVAj2oFHb6wN2sQFnoECCcQAQ&uoh=1",
+      "displayed_link": "330+ followers",
+      "favicon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp",
+      "snippet": "As an MBA candidate at JIMS Kalkaji, I am building a career at the intersection of AI, business strategy, operations, and modern marketing.",
+      "rich_snippet": {
+       "top": {
+        "extensions": [
+         "Delhi, India",
+         "Sales Intern",
+         "L'Oréal"
+        ]
+       }
+      },
+      "about_this_result": {
+       "source": {
+        "description": "As an MBA candidate at JIMS Kalkaji, I am building a career at the intersection of AI, business strategy, operations, and modern marketing.",
+        "source_info_link": "https://in.linkedin.com/in/jai-kumar-25b023365",
+        "icon": "https://serpapi.com/images/i/UklGRsAAAABXRUJQVlA4ILQAAABQAwCdASoQABAAAsBMJbACdLoBLf4oANRJj6d2SZLhF7_ohAD-4n1FofdRna1o8FCt-OiJvVc8lzO8Rt17R6yr0CRJL0FBwsd8OIDxQ356R55Xei0KcLjbfh5C05X1nTKIh8X8ekP3RBUogy_jZ3kCUPbBWjzINpJUmDhbtDZS1e3a8_aUBwnkYz0mnTj4n4__aq6btWmAus7Zjw7JLZ_kNfUgtaLPXB6k1U8MVzX5_C1AAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVmtlbE5XaWNLcFFTQ1prR1k5NUNWdDhoWTdrNkoza0RnMGtfUHYxSG9TYldxN051SUM3ZTV2T2ZTY0xTNEZKSVlfNXNpbUs2eTE4QkpXd084TkJpd2pET19FWUlnNVJNVkJuajlFZVVvY3JfNXhfWlN2em51eFVKcXdUaG50TnhETmhzakRnEgQaAggAGscDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKMDCAAQABgAIAAqCgoDc2JpFRSblz0qCgoDa3ljFRSblz0qDQoGdXBkYXRlFRSblz0qCQoCaW4VfaiOQDKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZrZWxOV2ljS3BRU0Naa0dZOTVDVnQ4aFk3azZKM2tEZzBrX1B2MUhvU2JXcTdOdUlDN2U1dk9mU2NMUzRGSklZXzVzaW1LNnkxOEJKV3dPOE5CaXdqRE9fRVlJZzVSTVZCbmo5RWVVb2NyXzV4X1pTdnpudXhVSnF3VGhudE54RE5oc2pEZzo6SmFpIEt1bWFyIC0gQnVzaW5lc3MgJmFtcDsgTWFya2V0aW5nIEVudGh1c2lhc3QgLSBMaW5rZWRJbkKLAUFzIGFuIE1CQSBjYW5kaWRhdGUgYXQgSklNUyBLYWxrYWppLCBJIGFtIGJ1aWxkaW5nIGEgY2FyZWVyIGF0IHRoZSBpbnRlcnNlY3Rpb24gb2YgQUksIGJ1c2luZXNzIHN0cmF0ZWd5LCBvcGVyYXRpb25zLCBhbmQgbW9kZXJuIG1hcmtldGluZy4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVmtlbE5XaWNLcFFTQ1prR1k5NUNWdDhoWTdrNkoza0RnMGtfUHYxSG9TYldxN051SUM3ZTV2T2ZTY0xTNEZKSVlfNXNpbUs2eTE4QkpXd084TkJpd2pET19FWUlnNVJNVkJuajlFZVVvY3JfNXhfWlN2em51eFVKcXdUaG50TnhETmhzakRnEgQaAggAGscDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKMDCAAQABgAIAAqCgoDc2JpFRSblz0qCgoDa3ljFRSblz0qDQoGdXBkYXRlFRSblz0qCQoCaW4VfaiOQDKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZrZWxOV2ljS3BRU0Naa0dZOTVDVnQ4aFk3azZKM2tEZzBrX1B2MUhvU2JXcTdOdUlDN2U1dk9mU2NMUzRGSklZXzVzaW1LNnkxOEJKV3dPOE5CaXdqRE9fRVlJZzVSTVZCbmo5RWVVb2NyXzV4X1pTdnpudXhVSnF3VGhudE54RE5oc2pEZzo6SmFpIEt1bWFyIC0gQnVzaW5lc3MgJmFtcDsgTWFya2V0aW5nIEVudGh1c2lhc3QgLSBMaW5rZWRJbkKLAUFzIGFuIE1CQSBjYW5kaWRhdGUgYXQgSklNUyBLYWxrYWppLCBJIGFtIGJ1aWxkaW5nIGEgY2FyZWVyIGF0IHRoZSBpbnRlcnNlY3Rpb24gb2YgQUksIGJ1c2luZXNzIHN0cmF0ZWd5LCBvcGVyYXRpb25zLCBhbmQgbW9kZXJuIG1hcmtldGluZy4iAhABSABYAGgA",
+      "source": "LinkedIn · Jai Kumar",
+      "read_more_link": "https://in.linkedin.com/in/jai-kumar-25b023365#:~:text=As%20an%20MBA%20candidate%20at,strategy%2C%20operations%2C%20and%20modern%20marketing."
+     },
+     {
+      "position": 4,
+      "title": "ScamCheck: A Free AI Scam Detector Built for India | How It Works",
+      "link": "https://asquaresolution.com/blog/scamcheck-india-ai-scam-detector/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESfQHrOzAV_4xY9WT0xe_AyRJtqVdKPa6RjQ41wiBy9qnBqgA1BNegPE2__-Xq1nNATzP6NQUDEZwZNWIaVmSUb3PQa_5233U837aI44hx2Dp1tWCFj8ymey7DI9JmQFsFHATb5QvYMD9aiU7NZxPOoQiPnu1PBf-soUreJfw_&ved=2ahUKEwjg7r7A1KeXAxVAj2oFHb6wN2sQFnoECEAQAQ&uoh=1",
+      "displayed_link": "https://asquaresolution.com › Digital Marketing",
+      "favicon": "https://serpapi.com/images/i/UklGRogAAABXRUJQVlA4IHwAAABwBACdASocABwAPtE-tFooIigoFAEAGglpAAPjwQr-MfD6hrmv6TU7LZXQAAD-9gFnc4TnW58w-KA72wZiaKrK_ggRO0XCbPuYdfcR4_bYXBFuHwTWe43DoCv_THmwHgUo41Qqcsm2Y4_0XwE0v-MwCks_xz9ja0FAAAAA.webp",
+      "snippet": "... sbi-kyc-update.in/verify”. ScamCheck result: Verdict: SCAM (Confidence: 97%) Type: KYC Fraud / Banking Impersonation Red flags: Non-official domain ...",
+      "snippet_highlighted_words": [
+       "sbi-kyc-update.in"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "... sbi-kyc-update.in/verify”. ScamCheck result: Verdict: SCAM (Confidence: 97%) Type: KYC Fraud / Banking Impersonation Red flags: Non-official domain ...",
+        "source_info_link": "https://asquaresolution.com/blog/scamcheck-india-ai-scam-detector/",
+        "icon": "https://serpapi.com/images/i/UklGRogAAABXRUJQVlA4IHwAAABwBACdASocABwAPtE-tFooIigoFAEAGglpAAPjwQr-MfD6hrmv6TU7LZXQAAD-9gFnc4TnW58w-KA72wZiaKrK_ggRO0XCbPuYdfcR4_bYXBFuHwTWe43DoCv_THmwHgUo41Qqcsm2Y4_0XwE0v-MwCks_xz9ja0FAAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVl80eFk5V1QweGVfQXlSSnRxVmRLUGE2UmpRNDF3aUJ5OXFuQnFnQTFCTmVnUEUyX18tWHExbk5BVHpQNk5RVURFWndaTldJYVZtU1ViM1BRYV81MjMzVTgzN2FJNDRoeDJEcDF0V0NGajh5bWV5N0RJOUptUUZzRkhBVGI1UXZZTUQ5YWlVN05aeFBPb1FpUG51MVBCZi1zb1VyZUpmd18SBBoCCAAahgQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA4gMIABAAGAAgACoKCgNzYmkVJgKiPyoKCgNreWMVRFsZQCoNCgZ1cGRhdGUVLNWEPyoJCgJpbhW0eFBAMrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVl80eFk5V1QweGVfQXlSSnRxVmRLUGE2UmpRNDF3aUJ5OXFuQnFnQTFCTmVnUEUyX18tWHExbk5BVHpQNk5RVURFWndaTldJYVZtU1ViM1BRYV81MjMzVTgzN2FJNDRoeDJEcDF0V0NGajh5bWV5N0RJOUptUUZzRkhBVGI1UXZZTUQ5YWlVN05aeFBPb1FpUG51MVBCZi1zb1VyZUpmd186QVNjYW1DaGVjazogQSBGcmVlIEFJIFNjYW0gRGV0ZWN0b3IgQnVpbHQgZm9yIEluZGlhIHwgSG93IEl0IFdvcmtzQqkBLi4uIDxiPnNiaS1reWMtdXBkYXRlLmluPC9iPi92ZXJpZnnigJ0uIFNjYW1DaGVjayByZXN1bHQ6IFZlcmRpY3Q6IFNDQU0gKENvbmZpZGVuY2U6IDk3JSkgVHlwZTogS1lDIEZyYXVkIC8gQmFua2luZyBJbXBlcnNvbmF0aW9uIFJlZCBmbGFnczogTm9uLW9mZmljaWFsIGRvbWFpbiZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVl80eFk5V1QweGVfQXlSSnRxVmRLUGE2UmpRNDF3aUJ5OXFuQnFnQTFCTmVnUEUyX18tWHExbk5BVHpQNk5RVURFWndaTldJYVZtU1ViM1BRYV81MjMzVTgzN2FJNDRoeDJEcDF0V0NGajh5bWV5N0RJOUptUUZzRkhBVGI1UXZZTUQ5YWlVN05aeFBPb1FpUG51MVBCZi1zb1VyZUpmd18SBBoCCAAahgQSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJA4gMIABAAGAAgACoKCgNzYmkVJgKiPyoKCgNreWMVRFsZQCoNCgZ1cGRhdGUVLNWEPyoJCgJpbhW0eFBAMrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVl80eFk5V1QweGVfQXlSSnRxVmRLUGE2UmpRNDF3aUJ5OXFuQnFnQTFCTmVnUEUyX18tWHExbk5BVHpQNk5RVURFWndaTldJYVZtU1ViM1BRYV81MjMzVTgzN2FJNDRoeDJEcDF0V0NGajh5bWV5N0RJOUptUUZzRkhBVGI1UXZZTUQ5YWlVN05aeFBPb1FpUG51MVBCZi1zb1VyZUpmd186QVNjYW1DaGVjazogQSBGcmVlIEFJIFNjYW0gRGV0ZWN0b3IgQnVpbHQgZm9yIEluZGlhIHwgSG93IEl0IFdvcmtzQqkBLi4uIDxiPnNiaS1reWMtdXBkYXRlLmluPC9iPi92ZXJpZnnigJ0uIFNjYW1DaGVjayByZXN1bHQ6IFZlcmRpY3Q6IFNDQU0gKENvbmZpZGVuY2U6IDk3JSkgVHlwZTogS1lDIEZyYXVkIC8gQmFua2luZyBJbXBlcnNvbmF0aW9uIFJlZCBmbGFnczogTm9uLW9mZmljaWFsIGRvbWFpbiZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "A Square Solutions"
+     },
+     {
+      "position": 5,
+      "title": "यह ईमेल किसका है? भेजने वाले का पता कैसे लगाएं",
+      "link": "https://storycheck.com/hi/yah-email-kiska-hai",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaAHrOzAV7VpDWd8HJvYQfQwAZqEp6l2oKivmbofacGcP-4ghJ_D2FNgRKVw81mkWwTO_oOs_SxhyKKZlBObmF-K9fG1B317VoEqg_Qdrrs2BrEs-CL3UAcRrBNxDkPIceHwfbI-wlh1L&ved=2ahUKEwjg7r7A1KeXAxVAj2oFHb6wN2sQFnoECEEQAQ&uoh=1",
+      "displayed_link": "https://storycheck.com › yah-emai...",
+      "favicon": "https://serpapi.com/images/i/UklGRsoAAABXRUJQVlA4IL4AAACwBACdASocABwAPtEutFooIagoGAEAGglsAJ0y0H7uEoAUtQZ6-PgJMddxxswAAPxMCAHH_DLVZ2pSQmO8fMhq2ZQFG69estgEFLWA4iylnIz7su__FodaHM4lzgC-ydSxJfbBxLLS4YbnfJmdSXz4KJt-9qPB_sFhaw0D_JhrOlYNZ6P_tw2cH-UqTE-gi59ys5HHQar_9OUN_g-Fs_uRyh4Tf96FZ_FtG2qrAd_tTJx7AxO7_pZWUQ8EAAAA.webp",
+      "snippet": "\"support@hdfc-secure-verify.com\" HDFC नहीं है, और \"@sbi-kyc-update.in\" SBI नहीं है। भारतीय बैंक और सरकारी विभाग ...",
+      "snippet_highlighted_words": [
+       "sbi-kyc-update.in"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "\"support@hdfc-secure-verify.com\" HDFC नहीं है, और \"@sbi-kyc-update.in\" SBI नहीं है। भारतीय बैंक और सरकारी विभाग ...",
+        "source_info_link": "https://storycheck.com/hi/yah-email-kiska-hai",
+        "icon": "https://serpapi.com/images/i/UklGRsoAAABXRUJQVlA4IL4AAACwBACdASocABwAPtEutFooIagoGAEAGglsAJ0y0H7uEoAUtQZ6-PgJMddxxswAAPxMCAHH_DLVZ2pSQmO8fMhq2ZQFG69estgEFLWA4iylnIz7su__FodaHM4lzgC-ydSxJfbBxLLS4YbnfJmdSXz4KJt-9qPB_sFhaw0D_JhrOlYNZ6P_tw2cH-UqTE-gi59ys5HHQar_9OUN_g-Fs_uRyh4Tf96FZ_FtG2qrAd_tTJx7AxO7_pZWUQ8EAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpoBL2dvdG8_dXJsPUNBRVNhQUhyT3pBVjdWcERXZDhISnZZUWZRd0FacUVwNmwyb0tpdm1ib2ZhY0djUC00Z2hKX0QyRk5nUktWdzgxbWtXd1RPX29Pc19TeGh5S0tabEJPYm1GLUs5ZkcxQjMxN1ZvRXFnX1FkcnJzMkJyRXMtQ0wzVUFjUnJCTnhEa1BJY2VId2ZiSS13bGgxTBIEGgIIABrjBBIAGgAiACoAMgYIARICaW46AEIECAIQAEoAWgByAHoAgkC_BAgAEAAYACAAKgoKA3NiaRU8gbY_KgoKA2t5YxVG4tI_Kg0KBnVwZGF0ZRUPhIY_KgkKAmluFTjfuz8ymgEvZ290bz91cmw9Q0FFU2FBSHJPekFWN1ZwRFdkOEhKdllRZlF3QVpxRXA2bDJvS2l2bWJvZmFjR2NQLTRnaEpfRDJGTmdSS1Z3ODFta1d3VE9fb09zX1N4aHlLS1psQk9ibUYtSzlmRzFCMzE3Vm9FcWdfUWRycnMyQnJFcy1DTDNVQWNSckJOeERrUEljZUh3ZmJJLXdsaDFMOoMB4KSv4KS5IOCkiOCkruClh-CksiDgpJXgpL_gpLjgpJXgpL4g4KS54KWIPyDgpK3gpYfgpJzgpKjgpYcg4KS14KS-4KSy4KWHIOCkleCkviDgpKrgpKTgpL4g4KSV4KWI4KS44KWHIOCksuCkl-CkvuCkj-CkgiAtIFN0b3J5Q2hlY2tC3wEmcXVvdDtzdXBwb3J0QGhkZmMtc2VjdXJlLXZlcmlmeS5jb20mcXVvdDsgSERGQyDgpKjgpLngpYDgpIIg4KS54KWILCDgpJTgpLAgJnF1b3Q7QDxiPnNiaS1reWMtdXBkYXRlLmluPC9iPiZxdW90OyBTQkkg4KSo4KS54KWA4KSCIOCkueCliOClpCDgpK3gpL7gpLDgpKTgpYDgpK8g4KSs4KWI4KSC4KSVIOCklOCksCDgpLjgpLDgpJXgpL7gpLDgpYAg4KS14KS_4KSt4KS-4KSXJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpoBL2dvdG8_dXJsPUNBRVNhQUhyT3pBVjdWcERXZDhISnZZUWZRd0FacUVwNmwyb0tpdm1ib2ZhY0djUC00Z2hKX0QyRk5nUktWdzgxbWtXd1RPX29Pc19TeGh5S0tabEJPYm1GLUs5ZkcxQjMxN1ZvRXFnX1FkcnJzMkJyRXMtQ0wzVUFjUnJCTnhEa1BJY2VId2ZiSS13bGgxTBIEGgIIABrjBBIAGgAiACoAMgYIARICaW46AEIECAIQAEoAWgByAHoAgkC_BAgAEAAYACAAKgoKA3NiaRU8gbY_KgoKA2t5YxVG4tI_Kg0KBnVwZGF0ZRUPhIY_KgkKAmluFTjfuz8ymgEvZ290bz91cmw9Q0FFU2FBSHJPekFWN1ZwRFdkOEhKdllRZlF3QVpxRXA2bDJvS2l2bWJvZmFjR2NQLTRnaEpfRDJGTmdSS1Z3ODFta1d3VE9fb09zX1N4aHlLS1psQk9ibUYtSzlmRzFCMzE3Vm9FcWdfUWRycnMyQnJFcy1DTDNVQWNSckJOeERrUEljZUh3ZmJJLXdsaDFMOoMB4KSv4KS5IOCkiOCkruClh-CksiDgpJXgpL_gpLjgpJXgpL4g4KS54KWIPyDgpK3gpYfgpJzgpKjgpYcg4KS14KS-4KSy4KWHIOCkleCkviDgpKrgpKTgpL4g4KSV4KWI4KS44KWHIOCksuCkl-CkvuCkj-CkgiAtIFN0b3J5Q2hlY2tC3wEmcXVvdDtzdXBwb3J0QGhkZmMtc2VjdXJlLXZlcmlmeS5jb20mcXVvdDsgSERGQyDgpKjgpLngpYDgpIIg4KS54KWILCDgpJTgpLAgJnF1b3Q7QDxiPnNiaS1reWMtdXBkYXRlLmluPC9iPiZxdW90OyBTQkkg4KSo4KS54KWA4KSCIOCkueCliOClpCDgpK3gpL7gpLDgpKTgpYDgpK8g4KSs4KWI4KSC4KSVIOCklOCksCDgpLjgpLDgpJXgpL7gpLDgpYAg4KS14KS_4KSt4KS-4KSXJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "StoryCheck"
+     },
+     {
+      "position": 6,
+      "title": "team-scriptix/phantomclick-et",
+      "link": "https://github.com/team-scriptix/phantomclick-et",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESawHrOzAVODPEO7SAz4rtfOZ7XBfSUV5ZzBF36YxLo-gBzHWlXLxeUBNSqDHf62jDsyBKAOq6dAR8AMEVGjujjYtZR-zoY4-uNG9m0f4YrSXrzIukzQBjgvxzdj3ocquasxP9BACvwkL_r1hf&ved=2ahUKEwjg7r7A1KeXAxVAj2oFHb6wN2sQFnoECDkQAQ&uoh=1",
+      "displayed_link": "https://github.com › team-scriptix › phantomclick-et",
+      "favicon": "https://serpapi.com/images/i/UklGRloBAABXRUJQVlA4IE4BAABQBwCdASogACAAPtE-tFooIigoFAEAGglpABOY66msBQAhm_jie7on_u43Y8wznTq3o6RYivaXQwLqgtFvGxqSxD0AAP79L-I2CJh157_guzOImTEj4KETbf3LoXG53uwsqC7TNrPYvnj0JCbHaYHsiJ0dZxjZp00AIDh71pmydvV9rbfX7pBwD6xKTC28fi7cmmnaetDkFUKtNDh1oyUvgEJ5B0Jos2E3N5Wf9ywcn5v3_j66N4LrWwMgFUK8OJeK59_R9U8Iq0vdjaoGaiwCdWiWFqTkHXGL7cy9_twJalsMPdZeuuD4BKfDlkDiZPTQbYNs-KpL44LixNJqixiQZYn6Pg05yAzQrotV5msFHgGjybbpLCJP2Jxb24id-1ooSLAITw21MsGq7M_mh1A1SG77Y3rdqY4h760MO7-2OyFmK97IagzfP7hUwAAA.webp",
+      "snippet": "Detects typosquatting (e.g., sbi-kyc-update.in vs sbi.co.in ); Risk Weight: 30%. 2. Domain Age Analysis. WHOIS lookup for creation date; Age-based risk scoring ...",
+      "snippet_highlighted_words": [
+       "sbi-kyc-update.in"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Detects typosquatting (e.g., sbi-kyc-update.in vs sbi.co.in ); Risk Weight: 30%. 2. Domain Age Analysis. WHOIS lookup for creation date; Age-based risk scoring ...",
+        "source_info_link": "https://github.com/team-scriptix/phantomclick-et",
+        "icon": "https://serpapi.com/images/i/UklGRloBAABXRUJQVlA4IE4BAABQBwCdASogACAAPtE-tFooIigoFAEAGglpABOY66msBQAhm_jie7on_u43Y8wznTq3o6RYivaXQwLqgtFvGxqSxD0AAP79L-I2CJh157_guzOImTEj4KETbf3LoXG53uwsqC7TNrPYvnj0JCbHaYHsiJ0dZxjZp00AIDh71pmydvV9rbfX7pBwD6xKTC28fi7cmmnaetDkFUKtNDh1oyUvgEJ5B0Jos2E3N5Wf9ywcn5v3_j66N4LrWwMgFUK8OJeK59_R9U8Iq0vdjaoGaiwCdWiWFqTkHXGL7cy9_twJalsMPdZeuuD4BKfDlkDiZPTQbYNs-KpL44LixNJqixiQZYn6Pg05yAzQrotV5msFHgGjybbpLCJP2Jxb24id-1ooSLAITw21MsGq7M_mh1A1SG77Y3rdqY4h760MO7-2OyFmK97IagzfP7hUwAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVk9EUEVPN1NBejRydGZPWjdYQmZTVVY1WnpCRjM2WXhMby1nQnpIV2xYTHhlVUJOU3FESGY2MmpEc3lCS0FPcTZkQVI4QU1FVkdqdWpqWXRaUi16b1k0LXVORzltMGY0WXJTWHJ6SXVrelFCamd2eHpkajNvY3F1YXN4UDlCQUN2d2tMX3IxaGYSBBoCCAAa4wMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAvwMIABAAGAAgACoKCgNzYmkVWjN7PyoKCgNreWMVWjN7PyoNCgZ1cGRhdGUVRMurPyoJCgJpbhVQsxxAMp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVk9EUEVPN1NBejRydGZPWjdYQmZTVVY1WnpCRjM2WXhMby1nQnpIV2xYTHhlVUJOU3FESGY2MmpEc3lCS0FPcTZkQVI4QU1FVkdqdWpqWXRaUi16b1k0LXVORzltMGY0WXJTWHJ6SXVrelFCamd2eHpkajNvY3F1YXN4UDlCQUN2d2tMX3IxaGY6MEdpdEh1YiAtIHRlYW0tc2NyaXB0aXgvcGhhbnRvbWNsaWNrLWV0IMK3IEdpdEh1YkKvAURldGVjdHMgdHlwb3NxdWF0dGluZyAoZS5nLiwgPGI-c2JpLWt5Yy11cGRhdGUuaW48L2I-IHZzIHNiaS5jby5pbiApOyBSaXNrIFdlaWdodDogMzAlLiAyLiBEb21haW4gQWdlIEFuYWx5c2lzLiBXSE9JUyBsb29rdXAgZm9yIGNyZWF0aW9uIGRhdGU7IEFnZS1iYXNlZCByaXNrIHNjb3JpbmcmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVk9EUEVPN1NBejRydGZPWjdYQmZTVVY1WnpCRjM2WXhMby1nQnpIV2xYTHhlVUJOU3FESGY2MmpEc3lCS0FPcTZkQVI4QU1FVkdqdWpqWXRaUi16b1k0LXVORzltMGY0WXJTWHJ6SXVrelFCamd2eHpkajNvY3F1YXN4UDlCQUN2d2tMX3IxaGYSBBoCCAAa4wMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAvwMIABAAGAAgACoKCgNzYmkVWjN7PyoKCgNreWMVWjN7PyoNCgZ1cGRhdGUVRMurPyoJCgJpbhVQsxxAMp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVk9EUEVPN1NBejRydGZPWjdYQmZTVVY1WnpCRjM2WXhMby1nQnpIV2xYTHhlVUJOU3FESGY2MmpEc3lCS0FPcTZkQVI4QU1FVkdqdWpqWXRaUi16b1k0LXVORzltMGY0WXJTWHJ6SXVrelFCamd2eHpkajNvY3F1YXN4UDlCQUN2d2tMX3IxaGY6MEdpdEh1YiAtIHRlYW0tc2NyaXB0aXgvcGhhbnRvbWNsaWNrLWV0IMK3IEdpdEh1YkKvAURldGVjdHMgdHlwb3NxdWF0dGluZyAoZS5nLiwgPGI-c2JpLWt5Yy11cGRhdGUuaW48L2I-IHZzIHNiaS5jby5pbiApOyBSaXNrIFdlaWdodDogMzAlLiAyLiBEb21haW4gQWdlIEFuYWx5c2lzLiBXSE9JUyBsb29rdXAgZm9yIGNyZWF0aW9uIGRhdGU7IEFnZS1iYXNlZCByaXNrIHNjb3JpbmcmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "GitHub"
+     },
+     {
+      "position": 7,
+      "title": "আর যে কেউ রেশনের #epos মেশিন চালাতে পারবেন না",
+      "link": "https://www.youtube.com/watch?v=jgxtsgB_jvI",
+      "displayed_link": "15K+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac619dbd58a7ac134d43489/images/8PZBy1i0w6uGRM3WxEylmzWpMqlEGjjGI5fBwer2RBU.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "... sbi kyc update in sbi bank account kyc kaise kare kyc form kyc full form kyc temporarily unavailable paytm kyc ration card kyc ration card ...",
+      "duration": "7:25",
+      "about_this_result": {
+       "source": {
+        "description": "... sbi kyc update in sbi bank account kyc kaise kare kyc form kyc full form kyc temporarily unavailable paytm kyc ration card kyc ration card ...",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVnpHWG43SmNndjJrSU9tY3NYVzNCRzBDQUN6T0tlVEM4YlpxZ0IxT0lHS2wtMFF5dWhhZkhiZUExX3JudFkzb2hKYkZjNFZaVHpkOWtZa05KbjRTTTI1SmctT1JtcFdaWXJ2YWhDamtwVXFjaDFVdzE3eWRGTVV1cUI5RGZkNFBCNHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVnpHWG43SmNndjJrSU9tY3NYVzNCRzBDQUN6T0tlVEM4YlpxZ0IxT0lHS2wtMFF5dWhhZkhiZUExX3JudFkzb2hKYkZjNFZaVHpkOWtZa05KbjRTTTI1SmctT1JtcFdaWXJ2YWhDamtwVXFjaDFVdzE3eWRGTVV1cUI5RGZkNFBCNHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcS3QxC-OeRh0BzyXCrqLzYIK0ujIYMCLIE4kw",
+      "source": "YouTube · Info Wala"
+     },
+     {
+      "position": 8,
+      "title": "Munshi — the first hour after a UPI scam, handled",
+      "link": "https://munshi-upi.vercel.app/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESWQHrOzAV-6l79tgQdGkUdW7fr6i-IPuQWXL1FwCHZCRAPYHSoj5hrNk7unnHiagHap52TkP0_W_e6nwj32QNYe_AvDKx1cUK0wtU5i40li9o4lP9lDQhrkKm&ved=2ahUKEwjg7r7A1KeXAxVAj2oFHb6wN2sQFnoECDwQAQ&uoh=1",
+      "displayed_link": "https://munshi-upi.vercel.app",
+      "date": "21 Sept 2026",
+      "snippet": "Update KYC immediately at http://sbi-kyc-update.in. nine minutes later. VM-HDFCBK · 14:55 Sent Rs.12,000.00 From HDFC Bank A/C *4521 To kyc ...",
+      "snippet_highlighted_words": [
+       "sbi-kyc-update.in"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Update KYC immediately at http://sbi-kyc-update.in. nine minutes later. VM-HDFCBK · 14:55 Sent Rs.12,000.00 From HDFC Bank A/C *4521 To kyc ...",
+        "source_info_link": "https://munshi-upi.vercel.app/"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CoYBL2dvdG8_dXJsPUNBRVNXUUhyT3pBVi02bDc5dGdRZEdrVWRXN2ZyNmktSVB1UVdYTDFGd0NIWkNSQVBZSFNvajVock5rN3VubkhpYWdIYXA1MlRrUDBfV19lNm53ajMyUU5ZZV9BdkRLeDFjVUswd3RVNWk0MGxpOW80bFA5bERRaHJrS20SBBoCCAAauwMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAlwMIABAAGAAgACoKCgNzYmkVuqQYQCoKCgNreWMV8sw7QCoNCgZ1cGRhdGUVeMsLQCoJCgJpbhVodoxAMoYBL2dvdG8_dXJsPUNBRVNXUUhyT3pBVi02bDc5dGdRZEdrVWRXN2ZyNmktSVB1UVdYTDFGd0NIWkNSQVBZSFNvajVock5rN3VubkhpYWdIYXA1MlRrUDBfV19lNm53ajMyUU5ZZV9BdkRLeDFjVUswd3RVNWk0MGxpOW80bFA5bERRaHJrS206M011bnNoaSDigJQgdGhlIGZpcnN0IGhvdXIgYWZ0ZXIgYSBVUEkgc2NhbSwgaGFuZGxlZEKcAVVwZGF0ZSBLWUMgaW1tZWRpYXRlbHkgYXQgaHR0cDovLzxiPnNiaS1reWMtdXBkYXRlLmluPC9iPi4gbmluZSBtaW51dGVzIGxhdGVyLiBWTS1IREZDQksgwrcgMTQ6NTUgU2VudCBScy4xMiwwMDAuMDAgRnJvbSBIREZDIEJhbmsgQS9DICo0NTIxIFRvIGt5YyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CoYBL2dvdG8_dXJsPUNBRVNXUUhyT3pBVi02bDc5dGdRZEdrVWRXN2ZyNmktSVB1UVdYTDFGd0NIWkNSQVBZSFNvajVock5rN3VubkhpYWdIYXA1MlRrUDBfV19lNm53ajMyUU5ZZV9BdkRLeDFjVUswd3RVNWk0MGxpOW80bFA5bERRaHJrS20SBBoCCAAauwMSABoAIgAqADIGCAMSAmluOgBCBAgBEABKAFoAcgB6AIJAlwMIABAAGAAgACoKCgNzYmkVuqQYQCoKCgNreWMV8sw7QCoNCgZ1cGRhdGUVeMsLQCoJCgJpbhVodoxAMoYBL2dvdG8_dXJsPUNBRVNXUUhyT3pBVi02bDc5dGdRZEdrVWRXN2ZyNmktSVB1UVdYTDFGd0NIWkNSQVBZSFNvajVock5rN3VubkhpYWdIYXA1MlRrUDBfV19lNm53ajMyUU5ZZV9BdkRLeDFjVUswd3RVNWk0MGxpOW80bFA5bERRaHJrS206M011bnNoaSDigJQgdGhlIGZpcnN0IGhvdXIgYWZ0ZXIgYSBVUEkgc2NhbSwgaGFuZGxlZEKcAVVwZGF0ZSBLWUMgaW1tZWRpYXRlbHkgYXQgaHR0cDovLzxiPnNiaS1reWMtdXBkYXRlLmluPC9iPi4gbmluZSBtaW51dGVzIGxhdGVyLiBWTS1IREZDQksgwrcgMTQ6NTUgU2VudCBScy4xMiwwMDAuMDAgRnJvbSBIREZDIEJhbmsgQS9DICo0NTIxIFRvIGt5YyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Vercel",
+      "read_more_link": "https://munshi-upi.vercel.app/#:~:text=Update%20KYC%20immediately%20at%20http%3A%2F%2Fsbi%2Dkyc%2Dupdate.in,kyc.update9%40ybl%20On%2012%2F09%2F26%20Ref%20624511873920."
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"sbi-kyc-update.in\"",
+     "total_results": 10,
+     "time_taken_displayed": 0.35,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 10:07:23 UTC"
+   }
+  },
+  "03b49e9663a2d9d704dc077c22033f46eaea46a874964df445ad909f392baaa3": {
+   "engine": "google_news",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "q": "State Bank of India KYC update SMS link fraud"
+   },
+   "response": {
+    "news_results": [
+     {
+      "position": 1,
+      "title": "SBI warns customers: Scammers are sending fake messages claiming your YONO app is ...",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/sbi-warns-customers-scammers-are-sending-fake-messages-claiming-your-yono-app-is-/articleshow/130366174.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-130366167,width-1280,height-720,imgsize-64728,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVFXRmhwZFc1dE0wZE9VMTl5VFJDZkF4ampCU2dLTWdrQlVwb0lwYWlSRHdJ",
+      "date": "04/19/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-19T07:00:00Z"
+     },
+     {
+      "position": 2,
+      "title": "\"Account closes in 2 hours\" — the fake KYC message emptying bank accounts",
+      "source": {
+       "name": "www.indianpaycalculator.in",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.indianpaycalculator.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indianpaycalculator.in/govt-news/rbi-fake-kyc-account-closure-2-hours-scam-2026",
+      "thumbnail": "https://www.indianpaycalculator.in/news-images/rbi-fake-kyc-account-closure-2-hours-scam-2026-en.jpg?v=44340205",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFVM2xtWmtveFlUTlNiRlJGVFJDUkF4ajhCU2dLTWdZcEpZaXVtUWs",
+      "date": "07/26/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-26T07:00:00Z"
+     },
+     {
+      "position": 3,
+      "title": "SBI Warns Customers against Fake KYC, Reward Messages",
+      "source": {
+       "name": "Kashmir Life",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://kashmirlife.net&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://kashmirlife.net/sbi-warns-customers-against-fake-kyc-reward-messages-420146/",
+      "thumbnail": "https://kashmirlife.net/wp-content/uploads/2016/04/SBI.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNU5ZWEp0U1RSblNWVXhjMDR5VFJEM0FoajBBeWdLTWdzWmM0S3RyZUpVdHBnbUxn",
+      "date": "01/08/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-08T08:00:00Z"
+     },
+     {
+      "position": 4,
+      "title": "Will your SBI YONO app be disabled if Aadhaar is not linked? Government fact-checks viral claim",
+      "source": {
+       "name": "Moneycontrol.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.moneycontrol.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.moneycontrol.com/news/business/personal-finance/received-an-aadhaar-update-message-for-sbi-yono-wait-your-money-could-be-at-risk-13765541.html",
+      "thumbnail": "https://images.moneycontrol.com/static-mcnews/2023/04/Yono.jpg?impolicy=website&width=1600&height=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTVWbVp4VkdwRVRrOVdNSEpwVFJDZkF4ampCU2dLTWdrRllJaklPS1llUndJ",
+      "date": "01/09/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-09T08:00:00Z"
+     },
+     {
+      "position": 5,
+      "title": "#FactCheck: Busting Fake SBI Self-KYC APK Scam – Don’t Fall for Phishing Tricks!",
+      "source": {
+       "name": "CyberPeace",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cyberpeace.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.cyberpeace.org/resources/blogs/factcheck-busting-fake-sbi-self-kyc-apk-scam---dont-fall-for-phishing-tricks",
+      "thumbnail": "https://cdn.prod.website-files.com/64b94adadbfa4c824629b337/67370c9c4a7688c7b82a6a44_SBI%20KYC%20Scam.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU9ValJEYkVRMU1XaGZZVkJEVFJDaUF4amRCU2dLTWdhVkU0eXROUVU",
+      "date": "11/15/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-11-15T08:00:00Z"
+     },
+     {
+      "position": 6,
+      "title": "‘Update your KYC’, a new fraud trick adopted by cybercrooks to siphon off the money",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Abhinay Deshpande"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/national/telangana/update-your-kyc-a-new-fraud-trick-adopted-by-cybercrooks-to-siphon-off-the-money/article36856680.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "10/06/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-10-06T07:00:00Z"
+     },
+     {
+      "position": 7,
+      "title": "SBI Alerts Customers About KYC Fraud: Don't Miss Taking These Steps For Safety",
+      "source": {
+       "name": "The Better India",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://thebetterindia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sanchari Pal"
+       ]
+      },
+      "link": "https://thebetterindia.com/258436/sbi-online-banking-fraud-kyc-update-customer-care-number-cybercrime-complaint-india/",
+      "thumbnail": "https://img-cdn.publive.online/fit-in/1200x675/filters:format(webp)/english-betterindia/media/post_attachments/uploads/2021/07/SBI.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUZjVWRqUjNrd1ZHOUlUVU15VFJDUUF4ai1CU2dLTWdZMWc1WXhzUWM",
+      "date": "07/12/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-07-12T07:00:00Z"
+     },
+     {
+      "position": 8,
+      "title": "🚨 SBI’s Major Warning! Scammers Are Draining YONO Users’ Money — Here’s What’s Happening",
+      "source": {
+       "name": "indiaherald.com",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.indiaherald.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indiaherald.com/Viral/Read/994890061/-SBIs-Major-Warning-Scammers-Are-Draining-YONO-Users-Money-Heres-Whats-Happening",
+      "thumbnail": "https://www.indiaherald.com/imagestore/images/viral/127/-sbis-major-warning-scammers-are-draining-yono-users-money-heres-whats-happeningfc4138ef-8277-4206-84b9-1eea08ce857a-415x250-IndiaHerald.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNWFOMGwzVTBOYWRXeEpWR3RGVFJDZ0F4amhCU2dLTWdB",
+      "date": "05/08/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-08T07:00:00Z"
+     },
+     {
+      "position": 9,
+      "title": "SBI KYC Update Online: State Bank of India Customers Beware Of 3 Points",
+      "source": {
+       "name": "India.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.india.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.india.com/business/sbi-kyc-update-online-state-bank-of-india-customers-beware-of-3-points-4747078/",
+      "thumbnail": "https://static.india.com/wp-content/uploads/2021/06/sbi-kyc-update-online-fraud.jpg?impolicy=Medium_Resize&w=1200&h=800",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXpTMHhIV1Y5UVRYbENSazFJVFJERUF4aW1CU2dLTWdrUmhJNXVOU2FxemdF",
+      "date": "06/17/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-06-17T07:00:00Z"
+     },
+     {
+      "position": 10,
+      "title": "Senior citizen man clicks fake bank KYC link, loses Rs 45,000, wins Rs 55,000 compensation",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Vineet Upadhyay"
+       ]
+      },
+      "link": "https://indianexpress.com/article/legal-news/senior-citizen-fake-bank-kyc-link-money-rs-55000-payout-10786091/",
+      "thumbnail": "https://images.indianexpress.com/2026/07/SBI-Consumer-Commission.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHdabVJ3VWxadE4wNXdSRmR0VFJDZkF4ampCU2dLTWdZbEVZNk9HUWs",
+      "date": "07/15/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-15T07:00:00Z"
+     },
+     {
+      "position": 11,
+      "title": "Will SBI YONO be blocked for not updating Aadhaar? Check details",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Kulkarni"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/will-sbi-yono-be-blocked-for-not-updating-aadhaar-check-details/sbi-customers-alert/slideshow/129150534.cms",
+      "thumbnail": "https://img.etimg.com/thumb/msid-129150534,width-480,height-360,imgsize-512574,resizemode-75/sbi-customers-alert.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWFhVTk2WjJWdE5sOXBka1JOVFJEb0FoamdBeWdLTWdZZFk0eE9zUVk",
+      "date": "03/06/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-03-06T08:00:00Z"
+     },
+     {
+      "position": 12,
+      "title": "State Bank of India customers, here's a 'cricket warning' for you from the bank",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/state-bank-of-india-customers-heres-a-cricket-warning-for-you-from-the-bank/articleshow/111507793.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-111507768,width-1280,height-720,resizemode-4/111507768.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDVkRGxsV2pkb1RVNXRkMjV0VFJDZkF4ampCU2dLTWdhWkJZd3JRZ1U",
+      "date": "07/07/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-07-07T07:00:00Z"
+     },
+     {
+      "position": 13,
+      "title": "SBI alerts customers about KYC fraud: Here are the details",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Kulkarni"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/sbi-alerts-customers-about-kyc-fraud-here-are-the-details/articleshow/89991488.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-89991564,width-1200,height-900,resizemode-4,imgsize-46557/sms-alert-mss.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJlRzVhWVVkcldHWkpUMDgxVFJEZ0F4aUFCU2dLTWdZaE5aVExIUWs",
+      "date": "03/04/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-03-04T08:00:00Z"
+     },
+     {
+      "position": 14,
+      "title": "SBI Customers Alert! 'Delete THIS Message Immediately Or ...', Govt's Warning Amid Rising Phishing Scams",
+      "source": {
+       "name": "India.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.india.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.india.com/business/sbi-customers-alert-delete-this-message-immediately-or-govts-warning-amid-rising-phishing-scams-5409524/",
+      "thumbnail": "https://static.india.com/wp-content/uploads/2022/04/SBI-Alert-3.png?impolicy=Medium_Resize&w=1200&h=800",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxhWFF0TURaYWFWWTRZV3RZVFJERUF4aW1CU2dLTWdhUkE0aXRtUWM",
+      "date": "05/24/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-05-24T07:00:00Z"
+     },
+     {
+      "position": 15,
+      "title": "SBI users, government wants you to delete this SMS right away",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/gadgets-news/sbi-users-government-wants-you-to-delete-this-sms-right-away/articleshow/91704383.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-91704463,width-1280,height-720,resizemode-4/91704463.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iNkNnNDVXWFl6VkhwV1gxZGpkSFpqVFJDZkF4ampCU2dLTWc0QlFJUkFxQ2pZeHJxQnNUNEVIdw",
+      "date": "05/21/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-05-21T07:00:00Z"
+     },
+     {
+      "position": 16,
+      "title": "How HDFC Bank customers can identify fake SMS messages",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Kulkarni"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/how-hdfc-bank-customers-can-identify-fake-sms-messages/articleshow/98690855.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-98691212,width-1200,height-900,resizemode-4,imgsize-321290/fake.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUpORzFmWWxOVkxYWmxiMFpOVFJEZ0F4aUFCU2dLTWdiQmNvZ1R0UVU",
+      "date": "03/16/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-03-16T07:00:00Z"
+     },
+     {
+      "position": 17,
+      "title": "State Bank of India customers, a big OTP scam is targeting you",
+      "source": {
+       "name": "ET CISO",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://ciso.economictimes.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://ciso.economictimes.indiatimes.com/news/state-bank-of-india-customers-a-big-otp-scam-is-targeting-you/84203322",
+      "thumbnail": "https://etimg.etb2bimg.com/thumb/msid-84203322,imgsize-99587,width-1200,height=627,overlay-etciso,resizemode-75/news/state-bank-of-india-customers-a-big-otp-scam-is-targeting-you.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNTNja1JNWjFJNVUyTjNWbXRhVFJDUUF4ai1CU2dLTWdB",
+      "date": "07/07/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-07-07T07:00:00Z"
+     },
+     {
+      "position": 18,
+      "title": "Will your SBI YONO app be blocked if you don’t update your Aadhaar? Check reality",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Kulkarni"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/will-your-sbi-yono-app-be-blocked-if-you-dont-update-your-aadhaar-check-reality/articleshow/126375696.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-126375699,width-1200,height-900,resizemode-4,imgsize-1626119/et-online.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHlVVXRKUzJoWFEzcEZhVW8wVFJEZ0F4aUFCU2dLTWdZTmNwTEtzUWM",
+      "date": "01/07/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-07T08:00:00Z"
+     },
+     {
+      "position": 19,
+      "title": "SBI warns customers about ‘risky’ calls from these numbers",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/gadgets-news/sbi-warns-customers-about-risky-calls-from-these-numbers/articleshow/90999096.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-90999070,width-1280,height-720,resizemode-4/90999070.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXBabUpGTW1oNWNITm9VR2xzVFJDZkF4ampCU2dLTWdZSkJJNEtRZ1U",
+      "date": "04/22/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-04-22T07:00:00Z"
+     },
+     {
+      "position": 20,
+      "title": "SBI account holders, State Bank of India never sends these messages; warns the government",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/gadgets-news/sms-asking-users-to-update-their-pan-card-to-avoid-their-account-getting-blocked-is-a-scam-pib-fact-check/articleshow/106000916.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-106000916,width-1280,height-720,resizemode-4/106000916.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHhNbkkyUWpCVGNVdE9iRUZJVFJDZkF4ampCU2dLTWdZTk1vcW1JUWs",
+      "date": "12/15/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-15T08:00:00Z"
+     },
+     {
+      "position": 21,
+      "title": "KYC Nightmare: How Banks Are Asking for Re-KYCs Illegally and in the Process Collecting Additional Data from Customers",
+      "source": {
+       "name": "Moneylife",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.moneylife.in/article/kyc-nightmare-how-banks-are-asking-for-rekycs-illegally-and-in-the-process-collecting-additional-data-from-customers/75585.html",
+      "thumbnail": "https://www.moneylife.in/site/userimage/image/responsive/KYC1111024Mian.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTBRa1pFUm1jeVlXSkdaVmg1VFJDZUF4amxCU2dLTWdZQmtJeXlOQVk",
+      "date": "11/15/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-11-15T08:00:00Z"
+     },
+     {
+      "position": 22,
+      "title": "Reverse Disputed Transaction of Rs18.36 Lakh, Consumer Commission Tells SBI",
+      "source": {
+       "name": "Moneylife",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.moneylife.in/article/reverse-disputed-transaction-of-rs1836-lakh-consumer-commission-tells-sbi/64896.html",
+      "thumbnail": "https://www.moneylife.in/site/userimage/image/responsive/bankbig18aug2021.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTZPR2RFY0c5UkxXSmxUV3R6VFJDZUF4amxCU2dLTWdZQmNJYkcxZ00",
+      "date": "08/18/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-08-18T07:00:00Z"
+     },
+     {
+      "position": 23,
+      "title": "'If you don't update KYC, your bank account will be blocked': New APK fraud scam could cost you lakhs, how",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Neelanjit Das"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/if-you-dont-click-on-this-link-and-update-kyc-bank-account-will-be-blocked-new-apk-fraud-scam-could-cost-you-lakhs-how-to-prevent/articleshow/112242449.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-112242487,width-1200,height-900,resizemode-4,imgsize-20714/punjab-and-sind-bank-warns-about-apk-fraud-scam-which-can-take-your-money-personal-details.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWZOMWhCYUVSa01rNU5kemxwVFJEZ0F4aUFCU2dLTWdhTlVvd3pNUVE",
+      "date": "08/03/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-08-03T07:00:00Z"
+     },
+     {
+      "position": 24,
+      "title": "SBI, government warn customers against fake SMS about updating PAN, KYC details",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Kulkarni"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/personal-finance-news/sbi-government-warn-customers-against-fake-sms-about-updating-pan-kyc-details/articleshow/94002587.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-94002747,width-1200,height-900,resizemode-4,imgsize-321290/fake.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUpORzFmWWxOVkxYWmxiMFpOVFJEZ0F4aUFCU2dLTWdiQmNvZ1R0UVU",
+      "date": "09/05/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-09-05T07:00:00Z"
+     },
+     {
+      "position": 25,
+      "title": "Government is warning SBI users to delete this message immediately or lose money",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/government-users-warning-sbi-users-to-delete-this-message-immediately-or-lose-money-1952653-2022-05-22",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/sbi_1200x768.jpeg?VersionId=mzBFejTqDdZpi9ePnl6CuU0o6lXRTk4K&size=1200:675",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWhSbE5VZWpCdFZqYzRkR040VFJDZkF4ampCU2dLTWdtRlVKcnBJQ2t0RGdJ",
+      "date": "05/22/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-05-22T07:00:00Z"
+     },
+     {
+      "position": 26,
+      "title": "Receiving unknown SBI bank account notifications? Here's how to unlink your phone number and avoid fraud",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sharmila Bhadoria"
+       ]
+      },
+      "link": "https://www.livemint.com/money/personal-finance/are-you-receiving-unknown-sbi-account-notifications-heres-how-your-can-unlink-your-number-from-the-bank-account-11732175143810.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2024/11/21/1600x900/SBI_spam_message_1732176382715_1732176382923.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVFNbEJMY1doZlFqTnhWVEZ5VFJDZkF4ampCU2dLTWdhQk1JeXNQUVU",
+      "date": "11/22/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-11-22T08:00:00Z"
+     },
+     {
+      "position": 27,
+      "title": "Beware! Scammers sending fraud messages to HDFC customers, do not click on the link",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Divya Bhati"
+       ]
+      },
+      "link": "https://www.indiatoday.in/technology/news/story/scammers-sending-fraud-messages-to-hdfc-customers-aim-to-empty-their-bank-account-2341570-2023-03-02",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202303/mobile_scam-sixteen_nine.jpg?VersionId=6qAS6oxte71Do5meYBsh_6v2HN0nrODG&size=690:388",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVVUMW8zVUUweFlsVmlkWEZQVFJDRUF4aXlCU2dLTWdhaE00U3hyUWc",
+      "date": "03/02/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-03-02T08:00:00Z"
+     },
+     {
+      "position": 28,
+      "title": "How is APK fraud done - SBI warns customers about this latest money fraud: What is APK fraud, tips to protect yourself",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Kulkarni"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/sbi-warns-customers-about-this-latest-money-fraud-what-is-apk-fraud-tips-to-protect-yourself/how-is-apk-fraud-done/slideshow/114939259.cms",
+      "thumbnail": "https://img.etimg.com/thumb/msid-114939622,width-480,height-360,imgsize-2159434,resizemode-75/sbi-rewards-fraud.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdSbTAzWWs5TGNFTnRSVWRmVFJEb0FoamdBeWdLTWdhZFZJenJKUWc",
+      "date": "11/04/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-11-04T08:00:00Z"
+     },
+     {
+      "position": 29,
+      "title": "One tap, ₹6 lakh gone: the 'APK file' scam emptying bank accounts",
+      "source": {
+       "name": "www.indianpaycalculator.in",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.indianpaycalculator.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.indianpaycalculator.in/govt-news/apk-file-bank-fraud-scam-how-it-works-2026",
+      "thumbnail": "https://www.indianpaycalculator.in/news-images/apk-file-bank-fraud-scam-how-it-works-2026-en.jpg?v=1ee53190",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpiM0JOTkVKUVprRnRiblV6VFJDUkF4ajhCU2dLTWdZSkU0WnZKUVk",
+      "date": "06/26/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-26T07:00:00Z"
+     },
+     {
+      "position": 30,
+      "title": "SBI warns customers against engaging with these numbers: Here's why",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Kulkarni"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/personal-finance-news/sbi-warns-customers-against-engaging-with-these-numbers-heres-why/articleshow/90971776.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-90971784,width-1200,height-900,resizemode-4,imgsize-419379/banking-fraud.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNDVRWEZ0ZWxoMVExcG1OVTUxVFJEZ0F4aUFCU2dLTWdreEpJQnhHU2wwOVFB",
+      "date": "04/21/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-04-21T07:00:00Z"
+     },
+     {
+      "position": 31,
+      "title": "SBI YONO Users Alert: Will SBI Block Your YONO App If Aadhaar Isn't Updated? What PIB Fact Check Reveals",
+      "source": {
+       "name": "Goodreturns",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.goodreturns.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Madhulika Pandey"
+       ]
+      },
+      "link": "https://www.goodreturns.in/news/sbi-yono-users-alert-will-sbi-block-your-yono-app-if-aadhaar-isnt-updated-what-pib-fact-check-rev-1470555.html",
+      "thumbnail": "https://images.goodreturns.in/img/2025/11/sbiyonousers6-1763468018.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNW9lRVpOUVdSUlRVdDZPREZKVFJEU0FoallCQ2dLTWdzQkVZelRqS3MxOUVnc2N3",
+      "date": "11/18/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-18T08:00:00Z"
+     },
+     {
+      "position": 32,
+      "title": "Fraud Alert: Stay Away from Dangerous Links in 'Bank' SMS",
+      "source": {
+       "name": "Moneylife",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Yogesh Sapkale"
+       ]
+      },
+      "link": "https://www.moneylife.in/article/fraud-alert-stay-away-from-dangerous-links-in-bank-sms/70038.html",
+      "thumbnail": "https://www.moneylife.in/site/userimage/image/responsive/Fraudbig3march2023.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBUaTFTTFRkdVRXcEJjRVkwVFJDb0FSaXRBaWdCTWdhVkFKUUpEZ28",
+      "date": "03/02/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-03-02T08:00:00Z"
+     },
+     {
+      "position": 33,
+      "title": "This SMS about your electricity bill is fake",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/gadgets-news/this-sms-about-your-electricity-bill-is-fake/articleshow/95102658.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-95102729,width-1280,height-720,resizemode-4/95102729.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWlPRlp3VmtOZlJGYzFTbnAzVFJDZkF4ampCU2dLTWdZZEZwTHFzUVk",
+      "date": "10/26/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-10-26T07:00:00Z"
+     },
+     {
+      "position": 34,
+      "title": "PIB flags fake SBI YONO message urging Aadhaar update, warns customers against phishing scam",
+      "source": {
+       "name": "Eastern Mirror Nagaland",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.easternmirrornagaland.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.easternmirrornagaland.com/pib-flags-fake-sbi-yono-message-urging-aadhaar-update-warns-customers-against-phishing-scam",
+      "thumbnail": "https://easternmirror-assets.s3.ap-south-1.amazonaws.com/images/2026/03/PIB%20fact%20check-1774186034971.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNDJSM0ZGU0hRell6RTJTbTVEVFJDaUJCaXhCQ2dLTWdB",
+      "date": "03/22/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-03-22T07:00:00Z"
+     },
+     {
+      "position": 35,
+      "title": "SBI Warns Customers About Phishing Links Offering Freebies",
+      "source": {
+       "name": "Moneylife",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.moneylife.in/article/sbi-warns-customers-about-phishing-links-offering-freebies/64560.html",
+      "thumbnail": "https://www.moneylife.in/site/userimage/image/responsive/sbibig16july2021.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTRjVTB3Wm0xWVkxbE5Oeko2VFJDZUF4amxCU2dLTWdZQm9JcXR1QWM",
+      "date": "07/13/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-07-13T07:00:00Z"
+     },
+     {
+      "position": 36,
+      "title": "SBI Highlights 14 Types Of Common Frauds Hackers Use For Stealing Money",
+      "source": {
+       "name": "Outlook Business",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.outlookbusiness.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.outlookbusiness.com/banking/sbi-highlights-14-types-of-common-frauds-hackers-use-for-stealing-money-news-297599",
+      "thumbnail": "https://media.assettype.com/outlookbusiness/import/uploadimage/library/16_9/16_9_5/IMAGE_1652614127.webp?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNU9aa1JaUlRCa1VUbHRSbVF3VFJDZkF4ampCU2dLTWdB",
+      "date": "06/24/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-24T07:00:00Z"
+     },
+     {
+      "position": 37,
+      "title": "Cybercriminals make fake SBI website to dupe customers, Commissionerate Police issues advisory",
+      "source": {
+       "name": "OrissaPOST",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.orissapost.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.orissapost.com/cybercriminals-make-fake-sbi-website-to-dupe-customers-commissionerate-police-issues-advisory/",
+      "thumbnail": "https://www.orissapost.com/wp-content/uploads/2021/07/Cybercriminals-make-fake-SBI-website-to-dupe-customers-Commissionerate-Police-issues-advisory.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNUtXa0kzV2xZd1FXODVObWhMVFJDWEF4anhCU2dLTWdNZFl3SQ",
+      "date": "07/08/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-07-08T07:00:00Z"
+     },
+     {
+      "position": 38,
+      "title": "'Your electricity will be disconnected tonight...': Know the latest scam to save yourself",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Anulekha Ray"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/electricity-bill-scam-whatsapp-sms-your-electricity-will-be-disconnected-tonight-know-the-latest-scam-to-save-yourself/articleshow/94875288.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-94875517,width-1200,height-900,resizemode-4,imgsize-377640/whatsapp-electricity-bill-scam.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJNRzF0VUZKVmVtY3RWbmx2VFJEZ0F4aUFCU2dLTWdZcGM1U3VxUWM",
+      "date": "10/15/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-10-15T07:00:00Z"
+     },
+     {
+      "position": 39,
+      "title": "Scammers Are Using This Message To Steal Money From SBI Customers, Here's How To Stay Safe",
+      "source": {
+       "name": "Times Now",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.timesnownews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nishit Singh Raghuwanshi"
+       ]
+      },
+      "link": "https://www.timesnownews.com/technology-science/scammers-are-using-this-message-to-steal-money-from-sbi-customers-heres-how-to-stay-safe-article-154112188",
+      "thumbnail": "https://images.timesnownews.com/thumb/msid-154112206,thumbsize-44092,width-1280,height-720,resizemode-75/154112206.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNXBOQzB4WjB0SFZrOURMVzEwVFJDZkF4ampCU2dLTWdB",
+      "date": "04/19/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-19T07:00:00Z"
+     },
+     {
+      "position": 40,
+      "title": "SBI Warns Customers About New Scam Message That Can Empty Bank Accounts",
+      "source": {
+       "name": "PUNE PULSE",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.mypunepulse.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.mypunepulse.com/sbi-warns-customers-about-new-scam-message-that-can-empty-bank-accounts/",
+      "thumbnail": "https://www.mypunepulse.com/wp-content/uploads/2026/04/SBI-Warns-Customers-About-New-Scam-Message-That-Can-Empty-Bank-Accounts-300x169.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNTNWRFkyYm1WRmF6TnlTa1pPVFJDcEFSaXNBaWdLTWdB",
+      "date": "04/21/2026, 06:38 AM, +0000 UTC",
+      "iso_date": "2026-04-21T06:38:58Z"
+     },
+     {
+      "position": 41,
+      "title": "SBI Customers ALERT! BEWARE of KYC Fraud! Protect your account with THESE simple safety tips",
+      "source": {
+       "name": "Zee Business",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.zeebiz.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.zeebiz.com/personal-finance/news-sbi-customers-alert-beware-of-kyc-fraud-protect-your-account-with-these-simple-safety-tips-160340",
+      "thumbnail": "https://cdn.zeebiz.com/sites/default/files/2021/07/09/153755-sbi-pti.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWhaSFJzUXkxcFpUWldPRTFGVFJDVUF4ajNCU2dLTWdhTmdaYm5NQWc",
+      "date": "07/09/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-07-09T07:00:00Z"
+     },
+     {
+      "position": 42,
+      "title": "KYC Fraud: SBI warns customers, shares TIPS to keep money safe; says report such matters to cybercrime.gov.in",
+      "source": {
+       "name": "Zee Business",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.zeebiz.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.zeebiz.com/personal-finance/news-kyc-fraud-sbi-warns-customers-shares-tips-to-keep-money-safe-says-report-such-matters-to-cybercrimegovin-159416",
+      "thumbnail": "https://cdn.zeebiz.com/sites/default/files/2021/06/26/152681-sbi-ians.JPG?im=FitAndFill=(448,252)&format=webp&quality=medium",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXRPRk5rVDE5amJFdzVibVpCVFJEOEFSakFBeWdLTWdZQlFZcUNIZ28",
+      "date": "06/26/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-06-26T07:00:00Z"
+     },
+     {
+      "position": 43,
+      "title": "Fraud Alert! SBI warns customers not to entertain THESE numbers, here's why",
+      "source": {
+       "name": "Zee News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://zeenews.india.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://zeenews.india.com/personal-finance/fraud-alert-sbi-warns-customers-not-to-entertain-these-numbers-heres-why-2456633.html",
+      "thumbnail": "https://english.cdn.zeenews.com/sites/default/files/2022/04/23/1034923-sbi-2.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNXVibVk0ZWt4b1JHMXhWa0pZVFJDZkF4ampCU2dLTWdB",
+      "date": "04/23/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-04-23T07:00:00Z"
+     },
+     {
+      "position": 44,
+      "title": "\"Dear SBI User...:\" Are You Also Getting This SMS? Check Truth About SBI Fake Message Scam",
+      "source": {
+       "name": "Zee News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://zeenews.india.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://zeenews.india.com/photos/business/dear-sbi-user-are-you-also-getting-this-sms-check-truth-about-sbi-fake-message-scam-2576981",
+      "thumbnail": "https://english.cdn.zeenews.com/sites/default/files/2023/02/25/1159188-untitled-design-68.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNOMDVCTTBoaU5Ia3lkSEpmVFJDZ0F4amlCU2dLTWdZWk5ZSm9vZ2c",
+      "date": "02/25/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-02-25T08:00:00Z"
+     },
+     {
+      "position": 45,
+      "title": "Scam Alert! Your HDFC account will be closed today: HDFC customers receive fraudulent messages from scammers",
+      "source": {
+       "name": "Free Press Journal",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.freepressjournal.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.freepressjournal.in/business/hdfc-customers-are-receiving-fraudulent-messages-from-scammers-do-not-click-on-the-link",
+      "thumbnail": "https://media.assettype.com/freepressjournal/2023-03/ddd2639f-9ad6-487b-ae97-fac016a0c4a6/hdfc_bank_16531207113x2.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWtYemhuWmtkM2RYZG9halIwVFJDZkF4ampCU2dLTWdhZGdwQXNNUWM",
+      "date": "03/03/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-03-03T08:00:00Z"
+     },
+     {
+      "position": 46,
+      "title": "Scam Alert! SMS Claiming Your SBI Account Has Been Blocked is Fake; PIB Fact Check Reveals Truth Behind",
+      "source": {
+       "name": "LatestLY",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.latestly.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.latestly.com/fact-check/scam-alert-sms-claiming-your-sbi-account-has-been-blocked-is-fake-pib-fact-check-reveals-truth-behind-viral-message-2803933.html",
+      "thumbnail": "https://st1.latestly.com/wp-content/uploads/2021/09/unnamed-4.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW1jelJTVXpGU1lrdHdZMUZUVFJDZ0FoaUFCQ2dLTWdZbEJJaXVpUXM",
+      "date": "09/01/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-09-01T07:00:00Z"
+     }
+    ],
+    "_searched_at": "2026-10-07 10:07:24 UTC"
+   }
+  },
+  "0345613a126815d627841bf43da13cdf0fb087dd7719d945ce2d1ddb88a355f4": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "site:sbi.co.in (\"7000012345\" OR \"70000 12345\")"
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "1221234567890*12345678900987654321",
+      "link": "https://brainly.in/question/7760598",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXgHrOzAVPpA-ptu77lygnY4xPEg298iwOLAdoZb4Xpzrj57oi0NXgaltPuWmiDh-3L_mqSCOLvf4Mun6K-TII4cPrYuvBWwzmtf30uZqZxd0V-n3xctmT8PjkofpoAw&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBgQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › Math › Secondary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "21 Jan 2019",
+      "snippet": "Answer: 1221234567890*12345678900987654321 = 1.534157875140984e + 24. gr8 22 kuch bhi ................. Explore all similar answers.",
+      "about_this_result": {
+       "source": {
+        "description": "Answer: 1221234567890*12345678900987654321 = 1.534157875140984e + 24. gr8 22 kuch bhi ................. Explore all similar answers.",
+        "source_info_link": "https://brainly.in/question/7760598",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co0BL2dvdG8_dXJsPUNBRVNYZ0hyT3pBVlBwQS1wdHU3N2x5Z25ZNHhQRWcyOThpd09MQWRvWmI0WHB6cmo1N29pME5YZ2FsdFB1V21pRGgtM0xfbXFTQ09MdmY0TXVuNkstVElJNGNQcll1dkJXd3ptdGYzMHVacVp4ZDBWLW4zeGN0bVQ4UGprb2Zwb0F3EgQaAggAGpQDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPACCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKNAS9nb3RvP3VybD1DQUVTWGdIck96QVZQcEEtcHR1NzdseWduWTR4UEVnMjk4aXdPTEFkb1piNFhwenJqNTdvaTBOWGdhbHRQdVdtaURoLTNMX21xU0NPTHZmNE11bjZLLVRJSTRjUHJZdXZCV3d6bXRmMzB1WnFaeGQwVi1uM3hjdG1UOFBqa29mcG9BdzovMTIyMTIzNDU2Nzg5MCoxMjM0NTY3ODkwMDk4NzY1NDMyMSAtIEJyYWlubHkuaW5ChAFBbnN3ZXI6IDEyMjEyMzQ1Njc4OTAqMTIzNDU2Nzg5MDA5ODc2NTQzMjEgPSAxLjUzNDE1Nzg3NTE0MDk4NGUgKyAyNC4gZ3I4IDIyIGt1Y2ggYmhpIC4uLi4uLi4uLi4uLi4uLi4uIEV4cGxvcmUgYWxsIHNpbWlsYXIgYW5zd2Vycy4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co0BL2dvdG8_dXJsPUNBRVNYZ0hyT3pBVlBwQS1wdHU3N2x5Z25ZNHhQRWcyOThpd09MQWRvWmI0WHB6cmo1N29pME5YZ2FsdFB1V21pRGgtM0xfbXFTQ09MdmY0TXVuNkstVElJNGNQcll1dkJXd3ptdGYzMHVacVp4ZDBWLW4zeGN0bVQ4UGprb2Zwb0F3EgQaAggAGpQDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPACCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKNAS9nb3RvP3VybD1DQUVTWGdIck96QVZQcEEtcHR1NzdseWduWTR4UEVnMjk4aXdPTEFkb1piNFhwenJqNTdvaTBOWGdhbHRQdVdtaURoLTNMX21xU0NPTHZmNE11bjZLLVRJSTRjUHJZdXZCV3d6bXRmMzB1WnFaeGQwVi1uM3hjdG1UOFBqa29mcG9BdzovMTIyMTIzNDU2Nzg5MCoxMjM0NTY3ODkwMDk4NzY1NDMyMSAtIEJyYWlubHkuaW5ChAFBbnN3ZXI6IDEyMjEyMzQ1Njc4OTAqMTIzNDU2Nzg5MDA5ODc2NTQzMjEgPSAxLjUzNDE1Nzg3NTE0MDk4NGUgKyAyNC4gZ3I4IDIyIGt1Y2ggYmhpIC4uLi4uLi4uLi4uLi4uLi4uIEV4cGxvcmUgYWxsIHNpbWlsYXIgYW5zd2Vycy4iAhABSABYAGgA",
+      "source": "Brainly.in",
+      "read_more_link": "https://brainly.in/question/7760598#:~:text=Answer%3A,Explore%20all%20similar%20answers"
+     },
+     {
+      "position": 2,
+      "title": "What is 10000000000000000 + 678901234567 - 5870485=",
+      "link": "https://brainly.in/question/48810351",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAVy2AQrZqQLbRrlL8TkiW15C2zKW68VV5OL9Wssez9Lj9NgdLOa2T_Q_c7ZecAZj9msQqnHDPHUXf9Z7bokpgwkfFp2SQ1e2EE__Iae5zFfGsQ3XtuTlALxKT3&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECA4QAQ&uoh=1",
+      "displayed_link": "https://brainly.in › Math › Secondary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "29 Nov 2021",
+      "snippet": "5870485= - 48810351. Answer: your answer is 10,000,678,895,364,082",
+      "about_this_result": {
+       "source": {
+        "description": "5870485= - 48810351. Answer: your answer is 10,000,678,895,364,082",
+        "source_info_link": "https://brainly.in/question/48810351",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnkyQVFyWnFRTGJScmxMOFRraVcxNUMyektXNjhWVjVPTDlXc3NlejlMajlOZ2RMT2EyVF9RX2M3WmVjQVpqOW1zUXFuSERQSFVYZjlaN2Jva3Bnd2tmRnAyU1ExZTJFRV9fSWFlNXpGZkdzUTNYdHVUbEFMeEtUMxIEGgIIABrVAhIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCxAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWeTJBUXJacVFMYlJybEw4VGtpVzE1QzJ6S1c2OFZWNU9MOVdzc2V6OUxqOU5nZExPYTJUX1FfYzdaZWNBWmo5bXNRcW5IRFBIVVhmOVo3Ym9rcGd3a2ZGcDJTUTFlMkVFX19JYWU1ekZmR3NRM1h0dVRsQUx4S1QzOjJXaGF0IGlzIDEwMDAwMDAwMDAwMDAwMDAwICsgNjc4OTAxMjM0NTY3IC0gNTg3MDQ4NUJCNTg3MDQ4NT0gLSA0ODgxMDM1MS4gQW5zd2VyOiB5b3VyIGFuc3dlciBpcyAxMCwwMDAsNjc4LDg5NSwzNjQsMDgyIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnkyQVFyWnFRTGJScmxMOFRraVcxNUMyektXNjhWVjVPTDlXc3NlejlMajlOZ2RMT2EyVF9RX2M3WmVjQVpqOW1zUXFuSERQSFVYZjlaN2Jva3Bnd2tmRnAyU1ExZTJFRV9fSWFlNXpGZkdzUTNYdHVUbEFMeEtUMxIEGgIIABrVAhIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCxAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWeTJBUXJacVFMYlJybEw4VGtpVzE1QzJ6S1c2OFZWNU9MOVdzc2V6OUxqOU5nZExPYTJUX1FfYzdaZWNBWmo5bXNRcW5IRFBIVVhmOVo3Ym9rcGd3a2ZGcDJTUTFlMkVFX19JYWU1ekZmR3NRM1h0dVRsQUx4S1QzOjJXaGF0IGlzIDEwMDAwMDAwMDAwMDAwMDAwICsgNjc4OTAxMjM0NTY3IC0gNTg3MDQ4NUJCNTg3MDQ4NT0gLSA0ODgxMDM1MS4gQW5zd2VyOiB5b3VyIGFuc3dlciBpcyAxMCwwMDAsNjc4LDg5NSwzNjQsMDgyIgIQAUgAWABoAA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 3,
+      "title": "Question 11, 4. Operations On Large Numbers, R S ...",
+      "link": "https://brainly.in/textbook-solutions/q-13256978-6975684-23679",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESeQHrOzAVaPsg-rRy1QjnWXEsLnqPNS_kAil3j-nVxDPpDrZMq-hk3M2BDuCTte56JUucw2AWf9EIIk2eBQm8qUGHM4XJED6KJguS8q0DEfvi7hJpHTHegfqs3Vus8g08LvXBjjddwlP86UtlOC81mMeG09Ui_Dy6QqQ&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECA8QAQ&uoh=1",
+      "displayed_link": "https://brainly.in › textbook-solutions",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "snippet": "Step by step explanation · Starting with addition of unit's place digit of both addends. The resulting number will be the unit's place number of the sum.",
+      "about_this_result": {
+       "source": {
+        "description": "Step by step explanation · Starting with addition of unit's place digit of both addends. The resulting number will be the unit's place number of the sum.",
+        "source_info_link": "https://brainly.in/textbook-solutions/q-13256978-6975684-23679",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrEBL2dvdG8_dXJsPUNBRVNlUUhyT3pBVmFQc2ctclJ5MVFqbldYRXNMbnFQTlNfa0FpbDNqLW5WeERQcERyWk1xLWhrM00yQkR1Q1R0ZTU2SlV1Y3cyQVdmOUVJSWsyZUJRbThxVUdITTRYSkVENktKZ3VTOHEwREVmdmk3aEpwSFRIZWdmcXMzVnVzOGcwOEx2WEJqamRkd2xQODZVdGxPQzgxbU1lRzA5VWlfRHk2UXFREgQaAggAGuoDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMYDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKxAS9nb3RvP3VybD1DQUVTZVFIck96QVZhUHNnLXJSeTFRam5XWEVzTG5xUE5TX2tBaWwzai1uVnhEUHBEclpNcS1oazNNMkJEdUNUdGU1NkpVdWN3MkFXZjlFSUlrMmVCUW04cVVHSE00WEpFRDZLSmd1UzhxMERFZnZpN2hKcEhUSGVnZnFzM1Z1czhnMDhMdlhCampkZHdsUDg2VXRsT0M4MW1NZUcwOVVpX0R5NlFxUTo9UXVlc3Rpb24gMTEsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKoAVN0ZXAgYnkgc3RlcCBleHBsYW5hdGlvbiAmbWlkZG90OyBTdGFydGluZyB3aXRoIGFkZGl0aW9uIG9mIHVuaXQmIzM5O3MgcGxhY2UgZGlnaXQgb2YgYm90aCBhZGRlbmRzLiBUaGUgcmVzdWx0aW5nIG51bWJlciB3aWxsIGJlIHRoZSB1bml0JiMzOTtzIHBsYWNlIG51bWJlciBvZiB0aGUgc3VtLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrEBL2dvdG8_dXJsPUNBRVNlUUhyT3pBVmFQc2ctclJ5MVFqbldYRXNMbnFQTlNfa0FpbDNqLW5WeERQcERyWk1xLWhrM00yQkR1Q1R0ZTU2SlV1Y3cyQVdmOUVJSWsyZUJRbThxVUdITTRYSkVENktKZ3VTOHEwREVmdmk3aEpwSFRIZWdmcXMzVnVzOGcwOEx2WEJqamRkd2xQODZVdGxPQzgxbU1lRzA5VWlfRHk2UXFREgQaAggAGuoDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMYDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKxAS9nb3RvP3VybD1DQUVTZVFIck96QVZhUHNnLXJSeTFRam5XWEVzTG5xUE5TX2tBaWwzai1uVnhEUHBEclpNcS1oazNNMkJEdUNUdGU1NkpVdWN3MkFXZjlFSUlrMmVCUW04cVVHSE00WEpFRDZLSmd1UzhxMERFZnZpN2hKcEhUSGVnZnFzM1Z1czhnMDhMdlhCampkZHdsUDg2VXRsT0M4MW1NZUcwOVVpX0R5NlFxUTo9UXVlc3Rpb24gMTEsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKoAVN0ZXAgYnkgc3RlcCBleHBsYW5hdGlvbiAmbWlkZG90OyBTdGFydGluZyB3aXRoIGFkZGl0aW9uIG9mIHVuaXQmIzM5O3MgcGxhY2UgZGlnaXQgb2YgYm90aCBhZGRlbmRzLiBUaGUgcmVzdWx0aW5nIG51bWJlciB3aWxsIGJlIHRoZSB1bml0JiMzOTtzIHBsYWNlIG51bWJlciBvZiB0aGUgc3VtLiICEAFIAFgAaAA",
+      "source": "Brainly.in",
+      "read_more_link": "https://brainly.in/textbook-solutions/q-13256978-6975684-23679#:~:text=Step%20by%20step%20explanation&text=%E2%80%A2%20Starting%20with%20addition%20of,place%20number%20of%20the%20sum."
+     },
+     {
+      "position": 4,
+      "title": "Question 13, 4. Operations On Large Numbers, R S ...",
+      "link": "https://brainly.in/textbook-solutions/q-474361279-236554385-53168837-20716314",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiAEB6zswFffzAcR9i-wcjX_hxeu_GeO7mnmKWrKpj4GdPNTCd2RecCBjdxPjn0nP4frJ4ePtb_72k8z4bt0p38qLQfKX5tSFwp3vJvBFH_7j_o5rmbYEp0vcsv3PfkJ6lfMMmJSGbFmP50ghB1DmsWNrezeHFxrV1Dm0YghHdEYCTix0eUedMCBB&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECA0QAQ&uoh=1",
+      "displayed_link": "https://brainly.in › textbook-solutions",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "snippet": "Solution for Question 13 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
+      "about_this_result": {
+       "source": {
+        "description": "Solution for Question 13 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
+        "source_info_link": "https://brainly.in/textbook-solutions/q-474361279-236554385-53168837-20716314",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZmZnpBY1I5aS13Y2pYX2h4ZXVfR2VPN21ubUtXcktwajRHZFBOVENkMlJlY0NCamR4UGpuMG5QNGZySjRlUHRiXzcyazh6NGJ0MHAzOHFMUWZLWDV0U0Z3cDN2SnZCRkhfN2pfbzVybWJZRXAwdmNzdjNQZmtKNmxmTU1tSlNHYkZtUDUwZ2hCMURtc1dOcmV6ZUhGeHJWMURtMFlnaEhkRVlDVGl4MGVVZWRNQ0JCEgQaAggAGuMDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQL8DCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTLGAS9nb3RvP3VybD1DQUVTaUFFQjZ6c3dGZmZ6QWNSOWktd2NqWF9oeGV1X0dlTzdtbm1LV3JLcGo0R2RQTlRDZDJSZWNDQmpkeFBqbjBuUDRmcko0ZVB0Yl83Mms4ejRidDBwMzhxTFFmS1g1dFNGd3Azdkp2QkZIXzdqX281cm1iWUVwMHZjc3YzUGZrSjZsZk1NbUpTR2JGbVA1MGdoQjFEbXNXTnJlemVIRnhyVjFEbTBZZ2hIZEVZQ1RpeDBlVWVkTUNCQjo9UXVlc3Rpb24gMTMsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMyBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZmZnpBY1I5aS13Y2pYX2h4ZXVfR2VPN21ubUtXcktwajRHZFBOVENkMlJlY0NCamR4UGpuMG5QNGZySjRlUHRiXzcyazh6NGJ0MHAzOHFMUWZLWDV0U0Z3cDN2SnZCRkhfN2pfbzVybWJZRXAwdmNzdjNQZmtKNmxmTU1tSlNHYkZtUDUwZ2hCMURtc1dOcmV6ZUhGeHJWMURtMFlnaEhkRVlDVGl4MGVVZWRNQ0JCEgQaAggAGuMDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQL8DCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTLGAS9nb3RvP3VybD1DQUVTaUFFQjZ6c3dGZmZ6QWNSOWktd2NqWF9oeGV1X0dlTzdtbm1LV3JLcGo0R2RQTlRDZDJSZWNDQmpkeFBqbjBuUDRmcko0ZVB0Yl83Mms4ejRidDBwMzhxTFFmS1g1dFNGd3Azdkp2QkZIXzdqX281cm1iWUVwMHZjc3YzUGZrSjZsZk1NbUpTR2JGbVA1MGdoQjFEbXNXTnJlemVIRnhyVjFEbTBZZ2hIZEVZQ1RpeDBlVWVkTUNCQjo9UXVlc3Rpb24gMTMsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMyBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 5,
+      "title": "find the value of the following using various properties ...",
+      "link": "https://brainly.in/question/60813404",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAVgUOG9zqVsS_zhAgc6A9Bm_rSB2xwnbaAx0HGRNgOigsWkkAOT-FVtAgjFDTUJsvTZvxSGMSSChvmOK53VU_7cRZvCVg-pJ5ZEMCa2rAeg8emYP5O4JaUf5M9&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › Math › Primary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "14 Jul 2024",
+      "snippet": "Click here 👆 to get an answer to your question ✍️ find the value of the following using various properties 12345 × 12345 - 12345 ×2345​",
+      "about_this_result": {
+       "source": {
+        "description": "Click here 👆 to get an answer to your question ✍️ find the value of the following using various properties 12345 × 12345 - 12345 ×2345​",
+        "source_info_link": "https://brainly.in/question/60813404",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVmdVT0c5enFWc1NfemhBZ2M2QTlCbV9yU0IyeHduYmFBeDBIR1JOZ09pZ3NXa2tBT1QtRlZ0QWdqRkRUVUpzdlRadnhTR01TU0Nodm1PSzUzVlVfN2NSWnZDVmctcEo1WkVNQ2EyckFlZzhlbVlQNU80SmFVZjVNORIEGgIIABq2AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCSAwgAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWZ1VPRzl6cVZzU196aEFnYzZBOUJtX3JTQjJ4d25iYUF4MEhHUk5nT2lnc1dra0FPVC1GVnRBZ2pGRFRVSnN2VFp2eFNHTVNTQ2h2bU9LNTNWVV83Y1JadkNWZy1wSjVaRU1DYTJyQWVnOGVtWVA1TzRKYVVmNU05OkJmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSAuLi5CkgFDbGljayBoZXJlIPCfkYYgdG8gZ2V0IGFuIGFuc3dlciB0byB5b3VyIHF1ZXN0aW9uIOKcje-4jyBmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSDDlyAxMjM0NSAtIDEyMzQ1IMOXMjM0NeKAiyICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVmdVT0c5enFWc1NfemhBZ2M2QTlCbV9yU0IyeHduYmFBeDBIR1JOZ09pZ3NXa2tBT1QtRlZ0QWdqRkRUVUpzdlRadnhTR01TU0Nodm1PSzUzVlVfN2NSWnZDVmctcEo1WkVNQ2EyckFlZzhlbVlQNU80SmFVZjVNORIEGgIIABq2AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCSAwgAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWZ1VPRzl6cVZzU196aEFnYzZBOUJtX3JTQjJ4d25iYUF4MEhHUk5nT2lnc1dra0FPVC1GVnRBZ2pGRFRVSnN2VFp2eFNHTVNTQ2h2bU9LNTNWVV83Y1JadkNWZy1wSjVaRU1DYTJyQWVnOGVtWVA1TzRKYVVmNU05OkJmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSAuLi5CkgFDbGljayBoZXJlIPCfkYYgdG8gZ2V0IGFuIGFuc3dlciB0byB5b3VyIHF1ZXN0aW9uIOKcje-4jyBmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSDDlyAxMjM0NSAtIDEyMzQ1IMOXMjM0NeKAiyICEAFIAFgAaAA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 6,
+      "title": "Question 10, 4. Operations On Large Numbers, R S ...",
+      "link": "https://brainly.in/textbook-solutions/q-10-182",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaQHrOzAVkFvriB5PuTCXG-t8Mj8K3weYcK6uOAihEyyAlHzTk4aUn7U8BkljcU9sk0OXljro2iLNGWFs6i1-QPNOUD70GCZJsgtLwRJhWWjbKSG-9KEQO5eqI5H4dgFuU-REyxj2JE90jg&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › textbook-solutions",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "snippet": "Solution for Question 10 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
+      "about_this_result": {
+       "source": {
+        "description": "Solution for Question 10 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
+        "source_info_link": "https://brainly.in/textbook-solutions/q-10-182",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVmtGdnJpQjVQdVRDWEctdDhNajhLM3dlWWNLNnVPQWloRXl5QWxIelRrNGFVbjdVOEJrbGpjVTlzazBPWGxqcm8yaUxOR1dGczZpMS1RUE5PVUQ3MEdDWkpzZ3RMd1JKaFdXamJLU0ctOUtFUU81ZXFJNUg0ZGdGdVUtUkV5eGoySkU5MGpnEgQaAggAGrkDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJUDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZrRnZyaUI1UHVUQ1hHLXQ4TWo4SzN3ZVljSzZ1T0FpaEV5eUFsSHpUazRhVW43VThCa2xqY1U5c2swT1hsanJvMmlMTkdXRnM2aTEtUVBOT1VENzBHQ1pKc2d0THdSSmhXV2piS1NHLTlLRVFPNWVxSTVINGRnRnVVLVJFeXhqMkpFOTBqZzo9UXVlc3Rpb24gMTAsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMCBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVmtGdnJpQjVQdVRDWEctdDhNajhLM3dlWWNLNnVPQWloRXl5QWxIelRrNGFVbjdVOEJrbGpjVTlzazBPWGxqcm8yaUxOR1dGczZpMS1RUE5PVUQ3MEdDWkpzZ3RMd1JKaFdXamJLU0ctOUtFUU81ZXFJNUg0ZGdGdVUtUkV5eGoySkU5MGpnEgQaAggAGrkDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJUDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZrRnZyaUI1UHVUQ1hHLXQ4TWo4SzN3ZVljSzZ1T0FpaEV5eUFsSHpUazRhVW43VThCa2xqY1U5c2swT1hsanJvMmlMTkdXRnM2aTEtUVBOT1VENzBHQ1pKc2d0THdSSmhXV2piS1NHLTlLRVFPNWVxSTVINGRnRnVVLVJFeXhqMkpFOTBqZzo9UXVlc3Rpb24gMTAsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMCBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 7,
+      "title": "write an algorithm to print that numbers 12345 ...",
+      "link": "https://brainly.in/question/39796703",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAV_EujLGXgHOjWSyTah0UQeCQiIKVTB_8poQ_gFW8PcFOGZwg8nCl6q_UCBr70eeGVwrXWakFHD2wlxXKbYPEPvzsykZnLL1VKb4L72oDkeyM1pefhpQYQ_aTs&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBcQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › English › Secondary School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "4 May 2021",
+      "snippet": "Click here 👆 to get an answer to your question ✍️ write an algorithm to print that numbers 12345 12345 12345.",
+      "about_this_result": {
+       "source": {
+        "description": "Click here 👆 to get an answer to your question ✍️ write an algorithm to print that numbers 12345 12345 12345.",
+        "source_info_link": "https://brainly.in/question/39796703",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVl9FdWpMR1hnSE9qV1N5VGFoMFVRZUNRaUlLVlRCXzhwb1FfZ0ZXOFBjRk9HWndnOG5DbDZxX1VDQnI3MGVlR1Z3clhXYWtGSEQyd2x4WEtiWVBFUHZ6c3lrWm5MTDFWS2I0TDcyb0RrZXlNMXBlZmhwUVlRX2FUcxIEGgIIABqUAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDwAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWX0V1akxHWGdIT2pXU3lUYWgwVVFlQ1FpSUtWVEJfOHBvUV9nRlc4UGNGT0dad2c4bkNsNnFfVUNCcjcwZWVHVndyWFdha0ZIRDJ3bHhYS2JZUEVQdnpzeWtabkxMMVZLYjRMNzJvRGtleU0xcGVmaHBRWVFfYVRzOj93cml0ZSBhbiBhbGdvcml0aG0gdG8gcHJpbnQgdGhhdCBudW1iZXJzIDEyMzQ1IC4uLiAtIEJyYWlubHkuaW5CdENsaWNrIGhlcmUg8J-RhiB0byBnZXQgYW4gYW5zd2VyIHRvIHlvdXIgcXVlc3Rpb24g4pyN77iPIHdyaXRlIGFuIGFsZ29yaXRobSB0byBwcmludCB0aGF0IG51bWJlcnMgMTIzNDUgMTIzNDUgMTIzNDUuIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVl9FdWpMR1hnSE9qV1N5VGFoMFVRZUNRaUlLVlRCXzhwb1FfZ0ZXOFBjRk9HWndnOG5DbDZxX1VDQnI3MGVlR1Z3clhXYWtGSEQyd2x4WEtiWVBFUHZ6c3lrWm5MTDFWS2I0TDcyb0RrZXlNMXBlZmhwUVlRX2FUcxIEGgIIABqUAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDwAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWX0V1akxHWGdIT2pXU3lUYWgwVVFlQ1FpSUtWVEJfOHBvUV9nRlc4UGNGT0dad2c4bkNsNnFfVUNCcjcwZWVHVndyWFdha0ZIRDJ3bHhYS2JZUEVQdnpzeWtabkxMMVZLYjRMNzJvRGtleU0xcGVmaHBRWVFfYVRzOj93cml0ZSBhbiBhbGdvcml0aG0gdG8gcHJpbnQgdGhhdCBudW1iZXJzIDEyMzQ1IC4uLiAtIEJyYWlubHkuaW5CdENsaWNrIGhlcmUg8J-RhiB0byBnZXQgYW4gYW5zd2VyIHRvIHlvdXIgcXVlc3Rpb24g4pyN77iPIHdyaXRlIGFuIGFsZ29yaXRobSB0byBwcmludCB0aGF0IG51bWJlcnMgMTIzNDUgMTIzNDUgMTIzNDUuIgIQAUgAWABoAA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 8,
+      "title": "Question 7, 4. Operations On Large Numbers, R S ...",
+      "link": "https://brainly.in/textbook-solutions/q-8986-700",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESawHrOzAVk7gkyUToIGn9l3UIcr3cGl2RzDmEJwzzIFCd-KXwwr3rmlNZTcOWjojhBwO453UQ2iWSkHNetKhvYY27zymea4cojpzBb88rbia7YsdmU8cBiHJN--2WZPvPr7p2q-VVly2wRJ8r&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBIQAQ&uoh=1",
+      "displayed_link": "https://brainly.in › textbook-solutions",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "snippet": "Take out zeros in last from each number, multiply the obtained numbers then add the zeros at last of the product of numbers.",
+      "about_this_result": {
+       "source": {
+        "description": "Take out zeros in last from each number, multiply the obtained numbers then add the zeros at last of the product of numbers.",
+        "source_info_link": "https://brainly.in/textbook-solutions/q-8986-700",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHISBBoCCAAaqQMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAhQMIABAAGAAgACoeCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Mp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHI6PFF1ZXN0aW9uIDcsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkJ8VGFrZSBvdXQgemVyb3MgaW4gbGFzdCBmcm9tIGVhY2ggbnVtYmVyLCBtdWx0aXBseSB0aGUgb2J0YWluZWQgbnVtYmVycyB0aGVuIGFkZCB0aGUgemVyb3MgYXQgbGFzdCBvZiB0aGUgcHJvZHVjdCBvZiBudW1iZXJzLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHISBBoCCAAaqQMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAhQMIABAAGAAgACoeCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Mp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHI6PFF1ZXN0aW9uIDcsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkJ8VGFrZSBvdXQgemVyb3MgaW4gbGFzdCBmcm9tIGVhY2ggbnVtYmVyLCBtdWx0aXBseSB0aGUgb2J0YWluZWQgbnVtYmVycyB0aGVuIGFkZCB0aGUgemVyb3MgYXQgbGFzdCBvZiB0aGUgcHJvZHVjdCBvZiBudW1iZXJzLiICEAFIAFgAaAA",
+      "source": "Brainly.in"
+     },
+     {
+      "position": 9,
+      "title": "What number has to be added to 345670 to make it divisible by 6",
+      "link": "https://www.youtube.com/watch?v=o2vGLOeU2uw",
+      "displayed_link": "650+ views · 3 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac619f922abf7b40eca6ff4/images/1ZWQ_Ydt-vArqBKupOrduZ4Kw9u8E0R-p0PtEJ74Kbw.png",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "What number has to be added to 345670 to make it divisible by 6 ?",
+      "duration": "2:09",
+      "about_this_result": {
+       "source": {
+        "description": "What number has to be added to 345670 to make it divisible by 6 ?",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlE0Q196SkhXSi1Ub2oyN1V3T2thN3ZqWW10dXpSZHJjdXhDUVRkMmhodjBSVUt3dW9BdEQ2Nk9MeTN0VlRTb2g4UHRieEphXzB2eHN2UU9KMlBaNjFwdTNOR1pkaFhiTXNObVNhbGJMSFlnRmVVS3Iwejg1QWxLaXNJY2UtbFdCeXcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlE0Q196SkhXSi1Ub2oyN1V3T2thN3ZqWW10dXpSZHJjdXhDUVRkMmhodjBSVUt3dW9BdEQ2Nk9MeTN0VlRTb2g4UHRieEphXzB2eHN2UU9KMlBaNjFwdTNOR1pkaFhiTXNObVNhbGJMSFlnRmVVS3Iwejg1QWxLaXNJY2UtbFdCeXcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "source": "YouTube · Question Dictionary"
+     },
+     {
+      "position": 10,
+      "title": "Number system 12345 #math #question #reelviral #treding",
+      "link": "https://www.instagram.com/reel/DdnuUBvTbO5/",
+      "displayed_link": "2 likes · 2 weeks ago",
+      "thumbnail": "https://serpapi.com/searches/6ac619f922abf7b40eca6ff4/images/1ZWQ_Ydt-vArqBKupOrduea3wGEcRxXLVRnZ3tvQiEs.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp",
+      "snippet": "Complete mathe Number System superb quick revision part 2 with tricks for ssc railway upsc ukpsc uppsc upsssc bpsc bpsssc uksssc and all ...",
+      "duration": "0:05",
+      "about_this_result": {
+       "source": {
+        "description": "Complete mathe Number System superb quick revision part 2 with tricks for ssc railway upsc ukpsc uppsc upsssc bpsc bpsssc uksssc and all ...",
+        "icon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVl9sSENBMUtsTDlaQVF0alRJYmZWNXM1MlMtbGg5VjFwQ0podDN3RFlPTWlabGZaQ2FiYUo0RUlFVWhmeWFpTWo4UWNuQXVRSFlIcFBOczZuX3I4RWlsLVY0WFVoVGNVeFM2LVlNQkZEQmIwYWo4Qm1JMC1udVBKMmNYQjNDeDl0eHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVl9sSENBMUtsTDlaQVF0alRJYmZWNXM1MlMtbGg5VjFwQ0podDN3RFlPTWlabGZaQ2FiYUo0RUlFVWhmeWFpTWo4UWNuQXVRSFlIcFBOczZuX3I4RWlsLVY0WFVoVGNVeFM2LVlNQkZEQmIwYWo4Qm1JMC1udVBKMmNYQjNDeDl0eHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "source": "Instagram · dream.sarkarinaukari"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "site:sbi.co.in (\"7000012345\" OR \"70000 12345\")",
+     "total_results": 56,
+     "time_taken_displayed": 0.21,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 10:07:53 UTC"
+   }
+  }
+ }
+}

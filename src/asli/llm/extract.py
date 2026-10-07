@@ -224,7 +224,7 @@ def build_graph(inp: InvestigationInput, text: str, llm: dict[str, Any] | None, 
     if org_name and domains.is_generic_org_name(org_name):
         org_name = None  # a role ("Electricity Officer"), not an organisation; category is kept
     curated = domains.match_org(org_name) if org_name else None
-    if curated is None:  # deterministic alias scan (works without the LLM)
+    if curated is None and not org_name:  # deterministic alias scan (works without the LLM)
         for org in domains.orgs():
             if any(re.search(rf"(?<![a-z0-9]){re.escape(a)}(?![a-z0-9])", hay_lower) for a in org.aliases if len(a) >= 3):
                 curated = org
@@ -300,6 +300,8 @@ def build_graph(inp: InvestigationInput, text: str, llm: dict[str, Any] | None, 
     keyword_scheme = classify_scheme(haystack)
     if scheme in (None, "other"):
         scheme = keyword_scheme
+    elif scheme == "job_offer" and keyword_scheme == "task_scam":
+        scheme = "task_scam"  # "jobs" paid per like/review/task are the task-scam pattern
     if any(e.type == "product" for e in entities) and scheme == "other":
         scheme = "shopping_deal"
     language = llm.get("language") if llm.get("language") in ("en", "hi", "hinglish", "mixed", "other") else None
