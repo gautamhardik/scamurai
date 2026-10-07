@@ -88,6 +88,8 @@ def create_app() -> FastAPI:
         response.headers["Referrer-Policy"] = "no-referrer"
         response.headers["X-Frame-Options"] = "DENY"
         response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
+        if request.url.path.startswith("/static/"):
+            response.headers.setdefault("Cache-Control", "no-cache")  # revalidate, so UI updates show up
         if token and request.url.path == "/" and request.query_params.get("token") == token:
             response.set_cookie("asli_token", token, httponly=True, samesite="strict")
         return response

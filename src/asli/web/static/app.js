@@ -1,6 +1,12 @@
 // Asli front end. No framework, no innerHTML with data: everything is built with textContent.
+// Motion (flip words, vanish input, moving cards, tracing beam, gauge, meteors) is plain DOM/CSS and
+// switches off under prefers-reduced-motion.
 
 const $ = (sel, root = document) => root.querySelector(sel);
+const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Next frame, with a timer fallback: rAF pauses in background tabs and must never stall a check.
+const frame = () => new Promise((r) => { requestAnimationFrame(r); setTimeout(r, 60); });
 
 function h(tag, props = {}, ...children) {
   const el = document.createElement(tag);
@@ -18,6 +24,7 @@ function h(tag, props = {}, ...children) {
   return el;
 }
 
+const SVG_NS = "http://www.w3.org/2000/svg";
 const ICONS = {
   check: ["M5 12.5l4.2 4.2L19 7"],
   x: ["M6 6l12 12", "M18 6L6 18"],
@@ -38,14 +45,15 @@ const ICONS = {
   message: ["M4 5h16v11H9l-5 4z"],
   image: ["M4 5h16v14H4z", "M4 16l5-5 4 4 3-3 4 4"],
   refresh: ["M20 11a8 8 0 1 0-2.3 5.7", "M20 5v6h-6"],
+  arrow: ["M5 12h14", "M13 6l6 6-6 6"],
 };
 
 function icon(name) {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  const svg = document.createElementNS(SVG_NS, "svg");
   svg.setAttribute("viewBox", "0 0 24 24");
   svg.setAttribute("aria-hidden", "true");
   for (const d of ICONS[name] || []) {
-    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    const p = document.createElementNS(SVG_NS, "path");
     p.setAttribute("d", d);
     svg.append(p);
   }
@@ -73,16 +81,19 @@ const T = {
     now: "What to do now", why: "Why", ok: "What checks out", checked: "What Asli checked", how: "How Asli decided",
     read: "What Asli read", sources: (n) => `${n} source${n === 1 ? "" : "s"}`, again: "Check another message",
     copy: "Copy summary", copied: "Copied", confidence: "Confidence", conf: { high: "High", medium: "Medium", low: "Low" },
+    points: "risk points",
   },
   hi: {
     now: "अब क्या करें", why: "क्यों", ok: "क्या सही निकला", checked: "Asli ने क्या जाँचा", how: "Asli ने कैसे तय किया",
     read: "Asli ने मैसेज से क्या पढ़ा", sources: (n) => `${n} स्रोत`, again: "दूसरा मैसेज जाँचें",
     copy: "सारांश कॉपी करें", copied: "कॉपी हो गया", confidence: "भरोसा", conf: { high: "ज़्यादा", medium: "मध्यम", low: "कम" },
+    points: "जोखिम अंक",
   },
   hinglish: {
     now: "Ab kya karein", why: "Kyun", ok: "Kya sahi nikla", checked: "Asli ne kya check kiya", how: "Asli ne kaise decide kiya",
     read: "Asli ne message se kya padha", sources: (n) => `${n} source`, again: "Doosra message check karein",
     copy: "Summary copy karein", copied: "Copy ho gaya", confidence: "Bharosa", conf: { high: "High", medium: "Medium", low: "Low" },
+    points: "risk points",
   },
 };
 
@@ -98,12 +109,25 @@ const CAPS = {
 };
 const VERDICT_ICON = { HIGH_RISK: "octagon", SUSPICIOUS: "alert", LOW_RISK: "shield", UNVERIFIED: "help" };
 
+const FLIP_WORDS = ["message", "SMS", "KYC link", "job offer", "₹1,499 deal", "screenshot", "helpline", "बिजली बिल"];
+const PLACEHOLDERS = [
+  "Paste the message here — English, हिंदी or Hinglish. You can also paste a screenshot (Ctrl+V).",
+  "“Dear customer, your electricity will be disconnected tonight at 9:30 PM. Call our officer…”",
+  "“प्रिय उपभोक्ता, आपका बिजली कनेक्शन आज रात काट दिया जाएगा…”",
+  "“Aapka KYC pending hai. Account block ho jayega, is link par update karein…”",
+  "“Congratulations! Selected for work from home. Earn ₹5,000/day. Pay ₹499 registration…”",
+  "“Nike Air Jordan 1 at ₹1,499 only. 85% off, today only!”",
+];
+
 // ------------------------------------------------------------------ state
-const state = { file: null, imageUrl: null, exampleId: null, health: null, controller: null, lastForm: null };
+const state = { file: null, imageUrl: null, exampleId: null, health: null, controller: null, lastForm: null, busy: false, flipFit: null };
 
 // ------------------------------------------------------------------ boot
 document.addEventListener("DOMContentLoaded", () => {
   bindForm();
+  bindPointerFx();
+  flipWords($("#flip"), FLIP_WORDS);
+  cyclePlaceholders();
   loadHealth();
   loadExamples();
   openFromHash();
@@ -146,30 +170,157 @@ async function loadHealth() {
   } catch { /* health is informational */ }
 }
 
+// Examples scroll past as a slow marquee (after Aceternity's "Infinite Moving Cards"). The second
+// copy exists only to make the loop seamless, so it is hidden from assistive tech and the tab order.
 async function loadExamples() {
   try {
     const list = await (await fetch("/api/examples")).json();
-    const box = $("#examples");
-    for (const ex of list) {
-      const ic = ex.kind === "screenshot" ? "image" : ex.image_url ? "tag" : "message";
-      box.append(h("button", { class: "chip", type: "button", onclick: () => useExample(ex) }, icon(ic), ex.title));
-    }
+    const track = h("div", { class: "marquee-track" },
+      list.map((ex) => exampleCard(ex, false)), list.map((ex) => exampleCard(ex, true)));
+    $("#examples").replaceChildren(track);
   } catch { /* optional */ }
 }
 
+function exampleCard(ex, clone) {
+  const [ic, kind] = ex.kind === "screenshot" ? ["image", "Screenshot"] : ex.image_url ? ["tag", "Product photo"] : ["message", "Message"];
+  const snippet = ex.text ? ex.text.replace(/\s+/g, " ") : "A Hindi SMS screenshot, read by an AI vision model.";
+  const thumb = ex.image_url || ex.image;
+  return h("button", { class: "ex-card", type: "button", onclick: () => useExample(ex), "aria-hidden": clone ? "true" : null, tabindex: clone ? "-1" : null },
+    h("span", { class: "ex-top" }, h("span", { class: "ex-ic" }, icon(ic)), kind),
+    h("span", { class: "ex-title", text: ex.title }),
+    h("span", { class: "ex-snippet", text: snippet }),
+    thumb ? h("img", { class: "ex-thumb", src: thumb, alt: "", loading: "lazy", referrerpolicy: "no-referrer" }) : null);
+}
+
 async function useExample(ex) {
-  clearForm();
-  state.exampleId = ex.id;
-  $("#text").value = ex.text || "";
-  if (ex.image) {
-    const blob = await (await fetch(ex.image)).blob();
-    setFile(new File([blob], ex.image.split("/").pop(), { type: blob.type || "image/jpeg" }));
+  if (state.busy) return;
+  state.busy = true;
+  try {
+    clearForm();
+    $("#form").scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "center" });
+    await sleep(REDUCED ? 0 : 320);
+    if (ex.image) {
+      const blob = await (await fetch(ex.image)).blob();
+      setFile(new File([blob], ex.image.split("/").pop(), { type: blob.type || "image/jpeg" }));
+    }
+    if (ex.image_url) {
+      state.imageUrl = ex.image_url;
+      showAttachment(ex.image_url, "Product photo", "Image link · searched with Google Lens");
+    }
+    await typeInto($("#text"), ex.text || "");
+    state.exampleId = ex.id;
+    await sleep(REDUCED ? 0 : 280);
+  } finally {
+    state.busy = false;
   }
-  if (ex.image_url) {
-    state.imageUrl = ex.image_url;
-    showAttachment(ex.image_url, "Product photo", "Image link · searched with Google Lens");
+  $("#form").requestSubmit();
+}
+
+async function typeInto(ta, text) {
+  if (REDUCED || !text) { ta.value = text; syncPlaceholder(); return; }
+  const chunk = Math.max(1, Math.ceil(text.length / 36));
+  for (let i = chunk; i < text.length + chunk; i += chunk) {
+    ta.value = text.slice(0, i);
+    syncPlaceholder();
+    ta.scrollTop = ta.scrollHeight;
+    await frame();
   }
-  setTimeout(() => $("#form").requestSubmit(), 350);
+}
+
+// ------------------------------------------------------------------ hero motion
+// Container text flip: one word visible at a time, the slot's width eases to fit it.
+function flipWords(el, words, every = 2600) {
+  if (!el) return;
+  const items = words.map((w, i) => h("span", { class: `flip-word${i === 0 ? " on" : ""}`, text: w }));
+  el.replaceChildren(...items);
+  let i = 0;
+  const fit = () => {
+    const w = items[i].offsetWidth;
+    if (w) el.style.setProperty("--w", `${w}px`);
+    else el.style.removeProperty("--w");
+  };
+  state.flipFit = fit;
+  fit();
+  document.fonts?.ready.then(fit); // local display fonts can load after the first measure
+  window.addEventListener("resize", fit);
+  if (REDUCED) return;
+  setInterval(() => {
+    if (document.hidden || $("#view-home").hidden) return;
+    const prev = items[i];
+    prev.classList.replace("on", "off");
+    setTimeout(() => prev.classList.remove("off"), 600);
+    i = (i + 1) % items.length;
+    items[i].classList.add("on");
+    fit();
+  }, every);
+}
+
+// Placeholders that slide through real scam openings (after Aceternity's "Placeholders and Vanish Input").
+function cyclePlaceholders() {
+  const ph = $("#ph");
+  let i = 0;
+  let cur = null;
+  const set = () => {
+    const next = h("span", { text: PLACEHOLDERS[i] });
+    if (cur) {
+      const old = cur;
+      old.classList.add("out");
+      setTimeout(() => old.remove(), 420);
+    }
+    ph.append(next);
+    cur = next;
+  };
+  set();
+  syncPlaceholder();
+  if (REDUCED) return;
+  setInterval(() => {
+    if (document.hidden || $("#text").value || $("#view-home").hidden) return;
+    i = (i + 1) % PLACEHOLDERS.length;
+    set();
+  }, 3400);
+}
+
+function syncPlaceholder() {
+  $("#ph").classList.toggle("gone", $("#text").value.length > 0);
+}
+
+// Pointer-driven light: the input card's glowing edge turns toward the cursor, cards get a
+// spotlight under it, and product cards tilt a little.
+function bindPointerFx() {
+  const card = $("#form");
+  let target = 0;
+  let cur = 0;
+  let raf = 0;
+  const step = () => {
+    const d = ((target - cur + 540) % 360) - 180;
+    cur += d * 0.2;
+    card.style.setProperty("--start", cur.toFixed(1));
+    raf = Math.abs(d) > 0.5 ? requestAnimationFrame(step) : 0;
+  };
+  card.addEventListener("pointermove", (e) => {
+    const r = card.getBoundingClientRect();
+    target = (Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180) / Math.PI + 90;
+    if (!raf) raf = requestAnimationFrame(step);
+  }, { passive: true });
+
+  document.addEventListener("pointermove", (e) => {
+    const spot = e.target.closest?.(".spot-card");
+    if (spot) {
+      const r = spot.getBoundingClientRect();
+      spot.style.setProperty("--mx", `${e.clientX - r.left}px`);
+      spot.style.setProperty("--my", `${e.clientY - r.top}px`);
+    }
+    const p = !REDUCED && e.target.closest?.(".product");
+    if (p) {
+      const r = p.getBoundingClientRect();
+      p.style.setProperty("--ry", `${((e.clientX - r.left) / r.width - 0.5) * 14}deg`);
+      p.style.setProperty("--rx", `${(0.5 - (e.clientY - r.top) / r.height) * 14}deg`);
+    }
+  }, { passive: true });
+  document.addEventListener("pointerout", (e) => {
+    const p = e.target.closest?.(".product");
+    if (p && !p.contains(e.relatedTarget)) { p.style.removeProperty("--rx"); p.style.removeProperty("--ry"); }
+  });
 }
 
 // ------------------------------------------------------------------ form
@@ -184,13 +335,13 @@ function bindForm() {
     e.currentTarget.setAttribute("aria-expanded", String(!extra.hidden));
     if (!extra.hidden) $("#url").focus();
   });
-  $("#text").addEventListener("input", () => { state.exampleId = null; });
+  $("#text").addEventListener("input", () => { state.exampleId = null; syncPlaceholder(); });
   $("#text").addEventListener("paste", (e) => {
     const item = [...(e.clipboardData?.items || [])].find((i) => i.type.startsWith("image/"));
     if (item) { e.preventDefault(); setFile(item.getAsFile()); }
   });
   form.addEventListener("dragover", (e) => { e.preventDefault(); form.classList.add("dragging"); });
-  form.addEventListener("dragleave", () => form.classList.remove("dragging"));
+  form.addEventListener("dragleave", (e) => { if (!form.contains(e.relatedTarget)) form.classList.remove("dragging"); });
   form.addEventListener("drop", (e) => {
     e.preventDefault(); form.classList.remove("dragging");
     const f = [...(e.dataTransfer?.files || [])].find((x) => x.type.startsWith("image/"));
@@ -220,6 +371,7 @@ function clearForm() {
   $("#text").value = ""; $("#url").value = ""; $("#phone").value = "";
   state.file = null; state.imageUrl = null; state.exampleId = null;
   $("#file").value = ""; $("#attachment").hidden = true; formError(null);
+  syncPlaceholder();
 }
 
 function formError(msg) {
@@ -228,7 +380,8 @@ function formError(msg) {
   el.hidden = !msg;
 }
 
-function submit() {
+async function submit() {
+  if (state.submitting) return;
   const text = $("#text").value.trim();
   const url = $("#url").value.trim();
   const phone = $("#phone").value.trim();
@@ -244,25 +397,114 @@ function submit() {
   if (state.exampleId) fd.append("example_id", state.exampleId);
   fd.append("lang", "auto");
   state.lastForm = { fd, text, preview: state.file ? URL.createObjectURL(state.file) : state.imageUrl };
+  state.submitting = true;
+  try { await vanish(); } finally { state.submitting = false; }
   run(fd);
+}
+
+// The message dissolves into particles, swept from right to left, before the check starts.
+async function vanish() {
+  const ta = $("#text");
+  const canvas = $("#vanish");
+  if (REDUCED || !ta.value.trim() || !canvas.getContext) return;
+  const w = ta.clientWidth;
+  const ht = ta.clientHeight;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = Math.round(w * dpr);
+  canvas.height = Math.round(ht * dpr);
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  const cs = getComputedStyle(ta);
+  const size = parseFloat(cs.fontSize);
+  const lh = parseFloat(cs.lineHeight) || size * 1.55;
+  const padL = parseFloat(cs.paddingLeft);
+  const padT = parseFloat(cs.paddingTop);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  ctx.textBaseline = "top";
+  ctx.fillStyle = "#fff";
+  const lines = wrapText(ctx, ta.value, w - padL - parseFloat(cs.paddingRight));
+  const first = Math.floor(ta.scrollTop / lh);
+  lines.slice(first, first + Math.ceil(ht / lh)).forEach((ln, i) => ctx.fillText(ln, padL, padT + i * lh + (lh - size) / 2));
+
+  const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  const pts = [];
+  const gap = Math.max(1, Math.round(2 * dpr));
+  for (let y = 0; y < canvas.height; y += gap) {
+    for (let x = 0; x < canvas.width; x += gap) {
+      if (data[(y * canvas.width + x) * 4 + 3] > 110) pts.push({ x: x / dpr, y: y / dpr, r: 1.7, hue: 185 + (x / canvas.width) * 95 });
+    }
+  }
+  ta.classList.add("vanishing");
+  let sweep = w;
+  const speed = w / 28;
+  const animation = new Promise((resolve) => {
+    let resolved = false;
+    const tick = () => {
+      ctx.clearRect(0, 0, w, ht);
+      sweep -= speed;
+      let alive = 0;
+      for (const p of pts) {
+        if (p.r <= 0) continue;
+        if (p.x > sweep) {
+          p.x += Math.random() * 2.6 - 0.8;
+          p.y += Math.random() * 2.4 - 1.2;
+          p.r -= 0.05 + Math.random() * 0.06;
+          if (p.r <= 0) continue;
+          ctx.fillStyle = `hsl(${p.hue} 90% 72%)`;
+        } else {
+          ctx.fillStyle = "#f4f4f6";
+        }
+        alive++;
+        ctx.fillRect(p.x, p.y, p.r, p.r);
+      }
+      if (!resolved && sweep < -30) { resolved = true; resolve(); }
+      if (alive) requestAnimationFrame(tick);
+      else { ctx.clearRect(0, 0, w, ht); ta.classList.remove("vanishing"); if (!resolved) resolve(); }
+    };
+    requestAnimationFrame(tick);
+  });
+  await Promise.race([animation, sleep(900)]);
+}
+
+function wrapText(ctx, text, maxW) {
+  const out = [];
+  for (const para of text.split("\n")) {
+    let line = "";
+    for (const word of para.split(/(\s+)/)) {
+      const next = line + word;
+      if (line.trim() && ctx.measureText(next).width > maxW) { out.push(line.trimEnd()); line = word.trimStart(); }
+      else line = next;
+    }
+    out.push(line);
+  }
+  return out;
 }
 
 // ------------------------------------------------------------------ investigation stream
 function show(view) {
   for (const id of ["view-home", "view-run", "view-report"]) $("#" + id).hidden = id !== view;
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  if (view === "view-home") { $("#text").classList.remove("vanishing"); $("#vanish").width = 0; state.flipFit?.(); }
+  window.scrollTo({ top: 0, behavior: REDUCED ? "auto" : "smooth" });
 }
 
 async function run(fd) {
   const view = $("#view-run");
   const timeline = h("ol", { class: "timeline" });
+  const card = h("div", { class: "card timeline-card" }, h("span", { class: "beam", "aria-hidden": "true" }), timeline);
   const steps = {};
+  // The tracing beam fills as checks finish.
+  const progress = () => {
+    const all = Object.values(steps);
+    const finished = all.filter((li) => /\b(done|empty|failed)\b/.test(li.className)).length;
+    card.style.setProperty("--p", all.length ? (finished / all.length).toFixed(3) : "0");
+  };
   const addStep = (id, label, opts = {}) => {
     const li = h("li", { class: `step ${opts.status || "pending"}` },
       h("span", { class: "ic" }), h("div", { class: "label" }, opts.engine ? engineTag(opts.engine) : null, label),
       h("span", { class: "meta" }));
     steps[id] = li;
     timeline.append(li);
+    progress();
     return li;
   };
   const setStep = (id, status, meta) => {
@@ -272,13 +514,17 @@ async function run(fd) {
     const ic = li.querySelector(".ic");
     ic.replaceChildren(status === "done" ? icon("check") : status === "empty" ? icon("dash") : status === "failed" ? icon("x") : "");
     if (meta !== undefined) li.querySelector(".meta").textContent = meta;
+    progress();
   };
 
   const cancel = h("button", { class: "btn ghost", type: "button", onclick: () => { state.controller?.abort(); show("view-home"); } }, "Cancel");
   view.replaceChildren(...[
-    h("div", { class: "run-head" }, h("h2", { text: "Checking…" }), cancel),
+    h("div", { class: "run-head" },
+      h("div", { class: "scanner", "aria-hidden": "true" }, icon("shield")),
+      h("div", {}, h("h2", { class: "shimmer", text: "Checking…" }), h("p", { class: "run-sub", text: "Reading the claims, then searching the live web" })),
+      cancel),
     inputPreview(),
-    h("div", { class: "card" }, timeline),
+    card,
   ].filter(Boolean));
   addStep("read", "Reading the message", { status: "running" });
   show("view-run");
@@ -307,6 +553,7 @@ async function run(fd) {
         setStep("read", "running", "waiting for a free slot…"); break;
       case "claims": {
         clearTimeout(slow);
+        view.querySelector(".thumb.scan")?.classList.remove("scan");
         setStep("read", "done", ev.extraction === "llm" ? "" : "basic reading");
         const chips = h("div", { class: "claim-chips" }, (ev.chips || []).map((c) => h("span", { class: "claim" }, h("b", { text: c.label }), c.value)));
         if (!ev.chips?.length) chips.append(h("span", { class: "claim" }, "No phone, link or organisation found"));
@@ -361,13 +608,13 @@ function inputPreview() {
   const lf = state.lastForm || {};
   if (!lf.text && !lf.preview) return null;
   return h("div", { class: "card input-preview" },
-    lf.preview ? h("img", { src: lf.preview, alt: "Your screenshot" }) : null,
+    lf.preview ? h("div", { class: "thumb scan" }, h("img", { src: lf.preview, alt: "Your screenshot", referrerpolicy: "no-referrer" })) : null,
     lf.text ? h("p", { text: lf.text }) : h("p", { text: "Screenshot" }));
 }
 
 function engineTag(engine) {
   const [label, ic] = ENGINES[engine] || [engine, "search"];
-  return h("span", { class: "engine" }, icon(ic), label);
+  return h("span", { class: `engine ${engine}` }, icon(ic), label);
 }
 
 function renderError(title, message, retryable = true) {
@@ -380,6 +627,93 @@ function renderError(title, message, retryable = true) {
   show("view-report");
 }
 
+// ------------------------------------------------------------------ report motion
+function gauge(score, label) {
+  const C = 2 * Math.PI * 52;
+  const svg = document.createElementNS(SVG_NS, "svg");
+  svg.setAttribute("viewBox", "0 0 120 120");
+  svg.setAttribute("aria-hidden", "true");
+  const circle = (cls) => {
+    const c = document.createElementNS(SVG_NS, "circle");
+    for (const [k, v] of Object.entries({ cx: 60, cy: 60, r: 52, class: cls })) c.setAttribute(k, v);
+    return c;
+  };
+  const arc = circle("arc");
+  arc.setAttribute("stroke-dasharray", C.toFixed(2));
+  arc.style.strokeDashoffset = REDUCED ? C * (1 - score / 100) : C;
+  svg.append(circle("track"), arc);
+  const num = h("b", { text: REDUCED ? String(score) : "0" });
+  if (!REDUCED) {
+    requestAnimationFrame(() => requestAnimationFrame(() => { arc.style.strokeDashoffset = C * (1 - score / 100); }));
+    const t0 = performance.now();
+    const tick = (t) => {
+      const k = Math.min(1, (t - t0) / 1300);
+      num.textContent = String(Math.round(score * (1 - Math.pow(1 - k, 3))));
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+  return h("div", { class: "gauge", role: "img", "aria-label": `${score} ${label} / 100` }, svg,
+    h("div", { class: "gauge-num", "aria-hidden": "true" }, num, h("small", { text: label })));
+}
+
+// Meteors for risky verdicts, sparkles for the rest (after Aceternity's "Meteors" and "Sparkles").
+function verdictFx(level) {
+  const box = h("div", { class: "verdict-fx", "aria-hidden": "true" });
+  if (REDUCED) return box;
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  const meteors = level === "HIGH_RISK" ? 16 : level === "SUSPICIOUS" ? 8 : 0;
+  for (let i = 0; i < meteors; i++) {
+    const m = h("span", { class: "meteor" });
+    m.style.setProperty("--t", `${rnd(-15, 35).toFixed(1)}%`);
+    m.style.setProperty("--l", `${rnd(-10, 90).toFixed(1)}%`);
+    m.style.setProperty("--d", `${rnd(0, 7).toFixed(2)}s`);
+    m.style.setProperty("--dur", `${rnd(4, 9).toFixed(2)}s`);
+    box.append(m);
+  }
+  for (let i = 0; i < (meteors ? 0 : 28); i++) {
+    const s = h("span", { class: "sparkle" });
+    s.style.setProperty("--t", `${rnd(4, 96).toFixed(1)}%`);
+    s.style.setProperty("--l", `${rnd(2, 98).toFixed(1)}%`);
+    s.style.setProperty("--s", `${rnd(1.5, 3.4).toFixed(1)}px`);
+    s.style.setProperty("--d", `${rnd(0, 4).toFixed(2)}s`);
+    s.style.setProperty("--dur", `${rnd(2, 4.5).toFixed(2)}s`);
+    box.append(s);
+  }
+  return box;
+}
+
+// Words fade in from a blur, one after another (after Aceternity's "Text Generate Effect").
+function textGenerate(text, cls) {
+  const p = h("p", { class: cls });
+  if (REDUCED) { p.textContent = text; return p; }
+  let n = 0;
+  for (const part of text.split(/(\s+)/)) {
+    if (!part) continue;
+    if (/^\s+$/.test(part)) { p.append(part); continue; }
+    const s = h("span", { class: "tg", text: part });
+    s.style.setProperty("--d", `${(0.3 + n++ * 0.045).toFixed(3)}s`);
+    p.append(s);
+  }
+  return p;
+}
+
+function reveal(el, delay = 0) {
+  if (!el || REDUCED) return el;
+  el.classList.add("reveal");
+  if (delay) el.style.setProperty("--d", `${delay.toFixed(2)}s`);
+  return el;
+}
+
+function observeReveals(root) {
+  const els = root.querySelectorAll(".reveal:not(.in)");
+  if (!("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("in")); return; }
+  const io = new IntersectionObserver((entries) => {
+    for (const en of entries) if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+  }, { rootMargin: "0px 0px -6% 0px" });
+  els.forEach((e) => io.observe(e));
+}
+
 // ------------------------------------------------------------------ report
 function renderReport(r) {
   if (location.hash !== `#r=${r.id}`) history.replaceState(null, "", `#r=${r.id}`);
@@ -390,40 +724,44 @@ function renderReport(r) {
   const trust = r.flags.filter((f) => f.polarity === "trust");
 
   const verdict = h("div", { class: `verdict ${r.level}` },
-    h("div", { class: "verdict-top" },
-      h("div", { class: "verdict-icon" }, icon(VERDICT_ICON[r.level])),
-      h("div", {}, h("h2", { text: r.level_title }), h("div", { class: "sub", text: r.level_subtitle }))),
-    h("p", { class: "headline", text: r.headline }),
+    verdictFx(r.level),
+    h("div", { class: "verdict-main" },
+      gauge(r.score, t.points),
+      h("div", {},
+        h("div", { class: "verdict-kicker" }, icon(VERDICT_ICON[r.level]), h("span", { text: r.level_subtitle })),
+        h("h2", { text: r.level_title }))),
+    textGenerate(r.headline, "headline"),
     h("div", { class: "confidence" },
       h("span", {}, `${t.confidence}: `, h("span", { class: "conf-badge", text: t.conf[r.confidence] || r.confidence })),
       h("span", { text: r.confidence_reason }),
       r.mode === "replay" ? h("span", { class: "mode-note", text: `Recorded evidence${r.recorded_at ? " · " + r.recorded_at.slice(0, 10) : ""}` }) : null));
 
-  const todo = h("section", { class: "section" }, h("h3", { text: t.now }),
+  const todo = reveal(h("section", { class: "section" }, h("h3", { text: t.now }),
     h("div", { class: "card todo" }, h("ol", {}, r.recommendations.map((rec) =>
-      h("li", {}, rec.text, rec.link ? [" ", h("a", { href: rec.link, target: "_blank", rel: "noopener noreferrer" }, icon("external"))] : null)))));
+      h("li", {}, rec.text, rec.link ? [" ", h("a", { href: rec.link, target: "_blank", rel: "noopener noreferrer", "aria-label": "Open link" }, icon("external"))] : null))))));
 
-  const why = risk.length ? h("section", { class: "section" }, h("h3", { text: t.why }),
-    h("div", { class: "flags" }, risk.map((f) => flagCard(f, ev, t)))) : null;
-  const ok = trust.length ? h("section", { class: "section" }, h("h3", { text: t.ok }),
-    h("div", { class: "flags" }, trust.map((f) => flagCard(f, ev, t)))) : null;
+  const why = risk.length ? h("section", { class: "section" }, reveal(h("h3", { text: t.why })),
+    h("div", { class: "flags" }, risk.map((f, i) => reveal(flagCard(f, ev, t), Math.min(i, 6) * 0.06)))) : null;
+  const ok = trust.length ? h("section", { class: "section" }, reveal(h("h3", { text: t.ok })),
+    h("div", { class: "flags" }, trust.map((f, i) => reveal(flagCard(f, ev, t), Math.min(i, 6) * 0.06)))) : null;
 
-  const checked = h("section", { class: "section" }, h("h3", { text: t.checked }),
+  const checked = reveal(h("section", { class: "section" }, h("h3", { text: t.checked }),
     h("div", { class: "card checks" }, h("ol", { class: "timeline" },
       r.checks.length ? r.checks.map((c) => {
         const status = c.status === "done" ? "done" : c.status === "no_results" ? "empty" : "failed";
         const meta = c.status === "done" ? `${c.n_results} result${c.n_results === 1 ? "" : "s"}${c.cached ? " · cached" : ""}`
           : c.status === "no_results" ? "no results" : c.status === "skipped_quota" ? "skipped (search limit)" : "couldn't run";
-        const li = h("li", { class: `step ${status}` }, h("span", { class: "ic" }, status === "done" ? icon("check") : status === "empty" ? icon("dash") : icon("x")),
+        return h("li", { class: `step ${status}` }, h("span", { class: "ic" }, status === "done" ? icon("check") : status === "empty" ? icon("dash") : icon("x")),
           h("div", { class: "label" }, engineTag(c.engine), c.label), h("span", { class: "meta", text: meta }));
-        return li;
-      }) : h("li", { class: "step empty" }, h("span", { class: "ic" }, icon("dash")), h("div", { class: "label", text: r.confidence_reason }), h("span")))));
+      }) : h("li", { class: "step empty" }, h("span", { class: "ic" }, icon("dash")), h("div", { class: "label", text: r.confidence_reason }), h("span"))))));
 
-  const decided = h("section", { class: "section" }, h("details", { class: "card decided" },
+  const decided = reveal(h("section", { class: "section" }, h("details", { class: "card decided" },
     h("summary", {}, icon("chevron"), t.how),
     h("div", { class: "decided-body" },
       h("p", {}, "Asli adds up independent pieces of evidence. Each has a fixed weight (w) and a confidence (c) based on how strong its sources are. The AI only reads the message; it never sets the score."),
-      h("div", { class: "formula", text: `risk = 1 − Π(1 − w·c)   trust = 1 − Π(1 − w·c)\npoints = 100 · risk · (1 − 0.75 · trust) = ${r.score}` }),
+      h("div", { class: "formula-term" },
+        h("div", { class: "term-bar" }, h("i"), h("i"), h("i"), h("span", { text: "asli · risk engine" })),
+        h("div", { class: "formula", text: `risk   = 1 − Π(1 − w·c)\ntrust  = 1 − Π(1 − w·c)\npoints = 100 · risk · (1 − 0.75 · trust) = ${r.score}` })),
       h("div", { class: "table-wrap" }, h("table", {},
         h("thead", {}, h("tr", {}, h("th", { text: "Signal" }), h("th", { class: "num", text: "w" }), h("th", { class: "num", text: "c" }), h("th", { class: "num", text: "w·c" }))),
         h("tbody", {}, r.flags.map((f) => h("tr", {},
@@ -432,20 +770,20 @@ function renderReport(r) {
           h("td", { class: "num", text: (f.polarity === "trust" ? "−" : "+") + f.contribution.toFixed(2) })))))),
       h("p", {}, `Risk points: ${r.score}/100. This is a weighted total of evidence, not a probability. High risk needs 65+ points and at least one strong web or identity signal.`),
       (r.caps_applied || []).map((c) => h("p", { text: CAPS[c] || c })),
-      h("p", { class: "mode-note", text: `Searches: ${r.stats.searches_run} (${r.stats.cache_hits} from cache, ${r.stats.credits_spent} live) · reading: ${r.stats.llm_model || r.stats.extraction} · ${Math.round(r.stats.latency_ms / 100) / 10}s` }))));
+      h("p", { class: "mode-note", text: `Searches: ${r.stats.searches_run} (${r.stats.cache_hits} from cache, ${r.stats.credits_spent} live) · reading: ${r.stats.llm_model || r.stats.extraction} · ${Math.round(r.stats.latency_ms / 100) / 10}s` })))));
 
-  const read = r.claims_summary.length ? h("section", { class: "section" }, h("details", { class: "card decided" },
+  const read = r.claims_summary.length ? reveal(h("section", { class: "section" }, h("details", { class: "card decided" },
     h("summary", {}, icon("chevron"), t.read),
     h("div", { class: "decided-body" }, h("div", { class: "claim-chips" },
-      r.claims_summary.map((c) => h("span", { class: "claim" }, h("b", { text: c.label }), c.value)))))) : null;
+      r.claims_summary.map((c) => h("span", { class: "claim" }, h("b", { text: c.label }), c.value))))))) : null;
 
-  const copyBtn = h("button", { class: "btn ghost", type: "button" }, icon("copy"), t.copy);
+  const copyBtn = h("button", { class: "btn ghost", type: "button" }, icon("copy"), h("span", { text: t.copy }));
   copyBtn.addEventListener("click", async () => {
     try { await navigator.clipboard.writeText(summaryText(r, ev)); copyBtn.lastChild.textContent = t.copied; } catch { /* clipboard blocked */ }
   });
-  const actions = h("div", { class: "report-actions" },
-    h("button", { class: "btn primary", type: "button", onclick: () => { clearForm(); history.replaceState(null, "", "/"); show("view-home"); $("#text").focus(); } }, t.again),
-    copyBtn);
+  const again = h("span", { class: "cta-wrap" }, h("button", { class: "btn primary", type: "button",
+    onclick: () => { clearForm(); history.replaceState(null, "", "/"); show("view-home"); $("#text").focus(); } }, t.again, icon("arrow")));
+  const actions = reveal(h("div", { class: "report-actions" }, again, copyBtn));
 
   const llmDown = r.stats.extraction !== "llm" && (r.notes || []).some((n) => n.startsWith("llm:"));
   const notice = llmDown ? h("p", { class: "notice", text: r.mode === "replay"
@@ -455,6 +793,7 @@ function renderReport(r) {
   const urgentFirst = r.level === "HIGH_RISK" || r.level === "SUSPICIOUS";
   view.replaceChildren(...[verdict, urgentFirst ? todo : null, why, ok, urgentFirst ? null : todo, checked, decided, read, actions].filter(Boolean));
   show("view-report");
+  observeReveals(view);
 }
 
 function flagCard(f, ev, t) {
@@ -471,7 +810,7 @@ function flagCard(f, ev, t) {
   });
   // The strongest visual evidence is open by default.
   if (products.length || f.severity === "critical") { list.hidden = false; toggle.setAttribute("aria-expanded", "true"); }
-  return h("article", { class: `card flag ${f.severity}` },
+  return h("article", { class: `card flag spot-card ${f.severity}` },
     h("div", { class: "flag-head" }, h("span", { class: "flag-title", text: f.title }), h("span", { class: "sev", text: (t.sev || SEVERITY.en)[f.severity] || f.severity })),
     h("p", { text: f.explanation }),
     items.length ? toggle : null, list);

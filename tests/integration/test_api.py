@@ -27,6 +27,7 @@ def test_health_and_security_headers(client):
 
 def test_index_and_examples(client):
     assert "Ask Asli" in client.get("/").text
+    assert client.get("/static/app.css").headers["cache-control"] == "no-cache"
     ex = client.get("/api/examples").json()
     assert {e["id"] for e in ex} >= {"electricity_hi", "nike_deal", "sbi_alert_genuine"}
 
