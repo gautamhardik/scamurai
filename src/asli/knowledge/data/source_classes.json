@@ -1,0 +1,35 @@
+{
+  "_comment": "Registrable domains (eTLD+1) grouped by the kind of source they are. Used to rank evidence and count independent reports.",
+  "complaint_forum": [
+    "consumercomplaints.in", "voxya.com", "complaintboard.in", "mouthshut.com", "reddit.com", "quora.com",
+    "scamadviser.com", "trustpilot.com", "tellows.co.in", "tellows.com", "shouldianswer.com", "scam-detector.com",
+    "sitejabber.com", "scamwatcher.com", "complaintsboard.com", "akosha.com", "grahakseva.com", "consumerhelpline.gov.in",
+    "unknownphone.com", "whocallsme.com", "callfilter.app", "sync.me", "scamalert.in", "spamcalls.net", "numberguru.com"
+  ],
+  "news": [
+    "thehindu.com", "indianexpress.com", "timesofindia.com", "indiatimes.com", "hindustantimes.com", "ndtv.com",
+    "indiatoday.in", "livemint.com", "economictimes.com", "business-standard.com", "moneycontrol.com", "news18.com",
+    "thenewsminute.com", "scroll.in", "theprint.in", "deccanherald.com", "deccanchronicle.com", "tribuneindia.com",
+    "thequint.com", "firstpost.com", "financialexpress.com", "zeenews.com", "abplive.com", "aajtak.in", "bhaskar.com",
+    "jagran.com", "amarujala.com", "livehindustan.com", "navbharattimes.com", "mathrubhumi.com", "onmanorama.com",
+    "newindianexpress.com", "telanganatoday.com", "freepressjournal.in", "mid-day.com", "outlookindia.com", "bbc.com",
+    "reuters.com", "pib.gov.in", "boomlive.in", "factly.in", "altnews.in", "vishvasnews.com", "republicworld.com",
+    "dnaindia.com", "india.com", "businesstoday.in", "cnbctv18.com", "zeebiz.com", "medianama.com", "inc42.com"
+  ],
+  "registry": ["zaubacorp.com", "tofler.in", "thecompanycheck.com", "falconebiz.com", "instafinancials.com", "mca.gov.in"],
+  "marketplace": [
+    "amazon.in", "amazon.com", "flipkart.com", "myntra.com", "ajio.com", "tatacliq.com", "nykaa.com", "meesho.com",
+    "snapdeal.com", "jiomart.com", "croma.com", "reliancedigital.in", "superkicks.in", "vegnonveg.com", "nike.com",
+    "adidas.co.in", "puma.com", "limitededt.in", "crepdogcrew.com", "culture-circle.com", "mainstreetmarketplace.com",
+    "farfetch.com", "ebay.com", "1mg.com", "pharmeasy.in", "bigbasket.com", "blinkit.com", "zeptonow.com"
+  ],
+  "job_board": [
+    "naukri.com", "linkedin.com", "indeed.com", "foundit.in", "glassdoor.co.in", "glassdoor.com", "shine.com",
+    "timesjobs.com", "internshala.com", "apna.co", "workindia.in", "instahyre.com", "cutshort.io", "wellfound.com",
+    "ambitionbox.com", "freshersworld.com", "hirist.tech", "iimjobs.com"
+  ],
+  "social": [
+    "instagram.com", "facebook.com", "x.com", "twitter.com", "youtube.com", "threads.net", "t.me", "telegram.me",
+    "wa.me", "whatsapp.com", "sharechat.com", "pinterest.com", "tiktok.com", "snapchat.com"
+  ]
+}
