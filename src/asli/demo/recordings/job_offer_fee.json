@@ -1,0 +1,1727 @@
+{
+ "scenario": "job_offer_fee",
+ "recorded_at": "2026-10-07T15:24:39+05:30",
+ "input_hash": "4aa24701c0d05660beb373735e4801c38f0a347b65a1c7fc9cb96026c440b752",
+ "llm": {
+  "data": {
+   "language": "en",
+   "ocr_text": "",
+   "content_kind": "sms",
+   "scheme": "job_offer",
+   "claimed_org": {
+    "name": "Infosys Ltd",
+    "category": "employer"
+   },
+   "sender": {
+    "name": null,
+    "email": "hr.infosys.careers@gmail.com",
+    "phone": "98765-43210"
+   },
+   "phones": [
+    "98765-43210"
+   ],
+   "urls": [],
+   "emails": [
+    "hr.infosys.careers@gmail.com"
+   ],
+   "upi_ids": [
+    "infosyshr@ybl"
+   ],
+   "amounts": [
+    {
+     "text": "Rs. 45,000/month",
+     "purpose": "salary"
+    },
+    {
+     "text": "Rs 2,500",
+     "purpose": "fee"
+    }
+   ],
+   "product": {
+    "name": null,
+    "brand": null,
+    "claimed_price_text": null
+   },
+   "job": {
+    "company": "Infosys Ltd",
+    "role": "Data Entry Executive",
+    "salary_text": "Rs. 45,000/month",
+    "location": "work from home",
+    "fee_requested": true
+   },
+   "address": "4th Floor, Shanti Residency, Sector 62, Noida",
+   "app_name": null,
+   "requested_actions": [
+    {
+     "type": "pay",
+     "quote": "Pay the refundable registration fee of Rs 2,500 to hr.infosys.careers@gmail.com via UPI infosyshr@ybl"
+    },
+    {
+     "type": "call",
+     "quote": "Contact HR 98765-43210"
+    }
+   ],
+   "pressure": [
+    {
+     "type": "reward",
+     "quote": "Congratulations! You are selected for Data Entry Executive at Infosys Ltd, salary Rs. 45,000/month, work from home."
+    },
+    {
+     "type": "urgency",
+     "quote": "Pay the refundable registration fee of Rs 2,500 to hr.infosys.careers@gmail.com via UPI infosyshr@ybl to confirm your joining."
+    }
+   ],
+   "ai_directed_text": []
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+ },
+ "expected": {
+  "level": "HIGH_RISK",
+  "flags": [
+   "address_mismatch",
+   "free_email_corporate",
+   "job_not_listed",
+   "known_scam_pattern",
+   "official_contact_mismatch",
+   "payment_request",
+   "upfront_fee"
+  ]
+ },
+ "searches": {
+  "8b7d6fb20f04ce014b4d8e7c95d1fa00ae93f757938a854b61d4b06e11b3d878": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"9876543210\" OR \"98765 43210\" OR \"+91 98765 43210\""
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "https://pbssd.gov.in/partners/centres/944bdd963674...",
+      "link": "https://pbssd.gov.in/partners/centres/944bdd9636749a0801c39b6e449dbedc/8f14e45fceea167a5a36dedd4bea2543/c4ca4238a0b923820dcc509a6f75849b/0",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESxgEB6zswFWMWg8dKNH8uWhUg7-6wBTOq1Nrglz1DQntVxvloCdCoS9OcHc79n1lrUNzEVP1xU8zqkdpAoXW_L1fsCHV-HjQ0CnxK_bvSjYUigV0R0B0RiGn5JgkHimtgdQUafw_X7Z4hy8LBeg5W4yiMbwTpYuzwXdxmXkK3-iiPYGcCq6mEo-xJK33CPj9WdmzOYiuc9STUXy8MT0K5dKElgYUZynJjaZ3zjiC9zAhABK_lm1OA5hcX9zJFhny8xNkb4dWJxrM&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://pbssd.gov.in › partners › centres",
+      "about_this_result": {
+       "source": {
+        "source_info_link": "https://pbssd.gov.in/partners/centres/944bdd9636749a0801c39b6e449dbedc/8f14e45fceea167a5a36dedd4bea2543/c4ca4238a0b923820dcc509a6f75849b/0"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpkCL2dvdG8_dXJsPUNBRVN4Z0VCNnpzd0ZXTVdnOGRLTkg4dVdoVWc3LTZ3QlRPcTFOcmdsejFEUW50Vnh2bG9DZENvUzlPY0hjNzluMWxyVU56RVZQMXhVOHpxa2RwQW9YV19MMWZzQ0hWLUhqUTBDbnhLX2J2U2pZVWlnVjBSMEIwUmlHbjVKZ2tIaW10Z2RRVWFmd19YN1o0aHk4TEJlZzVXNHlpTWJ3VHBZdXp3WGR4bVhrSzMtaWlQWUdjQ3E2bUVvLXhKSzMzQ1BqOVdkbXpPWWl1YzlTVFVYeThNVDBLNWRLRWxnWVVaeW5KamFaM3pqaUM5ekFoQUJLX2xtMU9BNWhjWDl6SkZobnk4eE5rYjRkV0p4ck0SBBoCCAAa9wISABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA0wIIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDKZAi9nb3RvP3VybD1DQUVTeGdFQjZ6c3dGV01XZzhkS05IOHVXaFVnNy02d0JUT3ExTnJnbHoxRFFudFZ4dmxvQ2RDb1M5T2NIYzc5bjFsclVOekVWUDF4VTh6cWtkcEFvWFdfTDFmc0NIVi1IalEwQ254S19idlNqWVVpZ1YwUjBCMFJpR241SmdrSGltdGdkUVVhZndfWDdaNGh5OExCZWc1VzR5aU1id1RwWXV6d1hkeG1Ya0szLWlpUFlHY0NxNm1Fby14SkszM0NQajlXZG16T1lpdWM5U1RVWHk4TVQwSzVkS0VsZ1lVWnluSmphWjN6amlDOXpBaEFCS19sbTFPQTVoY1g5ekpGaG55OHhOa2I0ZFdKeHJNOgAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpkCL2dvdG8_dXJsPUNBRVN4Z0VCNnpzd0ZXTVdnOGRLTkg4dVdoVWc3LTZ3QlRPcTFOcmdsejFEUW50Vnh2bG9DZENvUzlPY0hjNzluMWxyVU56RVZQMXhVOHpxa2RwQW9YV19MMWZzQ0hWLUhqUTBDbnhLX2J2U2pZVWlnVjBSMEIwUmlHbjVKZ2tIaW10Z2RRVWFmd19YN1o0aHk4TEJlZzVXNHlpTWJ3VHBZdXp3WGR4bVhrSzMtaWlQWUdjQ3E2bUVvLXhKSzMzQ1BqOVdkbXpPWWl1YzlTVFVYeThNVDBLNWRLRWxnWVVaeW5KamFaM3pqaUM5ekFoQUJLX2xtMU9BNWhjWDl6SkZobnk4eE5rYjRkV0p4ck0SBBoCCAAa9wISABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA0wIIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDKZAi9nb3RvP3VybD1DQUVTeGdFQjZ6c3dGV01XZzhkS05IOHVXaFVnNy02d0JUT3ExTnJnbHoxRFFudFZ4dmxvQ2RDb1M5T2NIYzc5bjFsclVOekVWUDF4VTh6cWtkcEFvWFdfTDFmc0NIVi1IalEwQ254S19idlNqWVVpZ1YwUjBCMFJpR241SmdrSGltdGdkUVVhZndfWDdaNGh5OExCZWc1VzR5aU1id1RwWXV6d1hkeG1Ya0szLWlpUFlHY0NxNm1Fby14SkszM0NQajlXZG16T1lpdWM5U1RVWHk4TVQwSzVkS0VsZ1lVWnluSmphWjN6amlDOXpBaEFCS19sbTFPQTVoY1g5ekpGaG55OHhOa2I0ZFdKeHJNOgAiAhABSABYAGgA",
+      "source": "Pbssd"
+     },
+     {
+      "position": 2,
+      "title": "Contact Us",
+      "link": "https://beginedindia.com/contact",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESWwHrOzAVW7wr01nmk9ZOFyi_Z-YXTsZ2RAeaUSrEGGjuvR427Wm47rU5xSP1dsMqm1hrMBTOXEQM823-GcfCQagi8GneBrnSCkwuySKwjUXlMTlqQD3CJQdy2LU&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBgQAQ&uoh=1",
+      "displayed_link": "https://beginedindia.com › contact",
+      "favicon": "https://serpapi.com/images/i/UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASocABwAPtEutFooIagoGAEAGglkAMTYaGBOWaBZ73P0t2FedFXOP_jEklLhI6EAAP7-q9qsUOKMqbsdakd95TlLNGorCcFgjdFC19naK2E4c-0Ve-4EMnSN7GZbeygYf3bJaJQuKGb-S2LpUUuj67w682bdf8WNrKNOMOWxXd6mt6aJ1mUMe0BNPS-imUpNh7QZRke0-z_7mghMZMT482wC3ID6sqvsI4lteTjV52OiVIlyX75KXqZJ037S4bZ8GAAAAA.webp",
+      "snippet": "Contact the team at Begin Ed India to start or continue your lactation professional journey. connect@beginedindia.com +91 70605 00754",
+      "about_this_result": {
+       "source": {
+        "description": "Contact the team at Begin Ed India to start or continue your lactation professional journey. connect@beginedindia.com +91 70605 00754",
+        "source_info_link": "https://beginedindia.com/contact",
+        "icon": "https://serpapi.com/images/i/UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASocABwAPtEutFooIagoGAEAGglkAMTYaGBOWaBZ73P0t2FedFXOP_jEklLhI6EAAP7-q9qsUOKMqbsdakd95TlLNGorCcFgjdFC19naK2E4c-0Ve-4EMnSN7GZbeygYf3bJaJQuKGb-S2LpUUuj67w682bdf8WNrKNOMOWxXd6mt6aJ1mUMe0BNPS-imUpNh7QZRke0-z_7mghMZMT482wC3ID6sqvsI4lteTjV52OiVIlyX75KXqZJ037S4bZ8GAAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CokBL2dvdG8_dXJsPUNBRVNXd0hyT3pBVlc3d3IwMW5tazlaT0Z5aV9aLVlYVHNaMlJBZWFVU3JFR0dqdXZSNDI3V200N3JVNXhTUDFkc01xbTFock1CVE9YRVFNODIzLUdjZkNRYWdpOEduZUJyblNDa3d1eVNLd2pVWGxNVGxxUUQzQ0pRZHkyTFUSBBoCCAAaigMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA5gIIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDKJAS9nb3RvP3VybD1DQUVTV3dIck96QVZXN3dyMDFubWs5Wk9GeWlfWi1ZWFRzWjJSQWVhVVNyRUdHanV2UjQyN1dtNDdyVTV4U1AxZHNNcW0xaHJNQlRPWEVRTTgyMy1HY2ZDUWFnaThHbmVCcm5TQ2t3dXlTS3dqVVhsTVRscVFEM0NKUWR5MkxVOhtDb250YWN0IFVzIHwgQmVnaW4gRWQgSW5kaWFChQFDb250YWN0IHRoZSB0ZWFtIGF0IEJlZ2luIEVkIEluZGlhIHRvIHN0YXJ0IG9yIGNvbnRpbnVlIHlvdXIgbGFjdGF0aW9uIHByb2Zlc3Npb25hbCBqb3VybmV5LiBjb25uZWN0QGJlZ2luZWRpbmRpYS5jb20gKzkxIDcwNjA1IDAwNzU0IgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CokBL2dvdG8_dXJsPUNBRVNXd0hyT3pBVlc3d3IwMW5tazlaT0Z5aV9aLVlYVHNaMlJBZWFVU3JFR0dqdXZSNDI3V200N3JVNXhTUDFkc01xbTFock1CVE9YRVFNODIzLUdjZkNRYWdpOEduZUJyblNDa3d1eVNLd2pVWGxNVGxxUUQzQ0pRZHkyTFUSBBoCCAAaigMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA5gIIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDKJAS9nb3RvP3VybD1DQUVTV3dIck96QVZXN3dyMDFubWs5Wk9GeWlfWi1ZWFRzWjJSQWVhVVNyRUdHanV2UjQyN1dtNDdyVTV4U1AxZHNNcW0xaHJNQlRPWEVRTTgyMy1HY2ZDUWFnaThHbmVCcm5TQ2t3dXlTS3dqVVhsTVRscVFEM0NKUWR5MkxVOhtDb250YWN0IFVzIHwgQmVnaW4gRWQgSW5kaWFChQFDb250YWN0IHRoZSB0ZWFtIGF0IEJlZ2luIEVkIEluZGlhIHRvIHN0YXJ0IG9yIGNvbnRpbnVlIHlvdXIgbGFjdGF0aW9uIHByb2Zlc3Npb25hbCBqb3VybmV5LiBjb25uZWN0QGJlZ2luZWRpbmRpYS5jb20gKzkxIDcwNjA1IDAwNzU0IgIQAUgAWABoAA",
+      "source": "Begin Ed India"
+     },
+     {
+      "position": 3,
+      "title": "National Council for Teacher Education",
+      "link": "http://web.ncte.gov.in/page-regional-committee-institution-lists/17/www.ctesbped.org?page=53",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESlwEB6zswFSVSWeEHaKliDhmlIOJBsAun8I6LSFqj6lvDhjEfoJld55d35krWO7BctQzhDIoqMX4cR83wx_DhNQwiAOVPMkJKCmd6uJl4AbuVovSV5DOCHSjEdYdzx8DD1UbkG7Q6Upf7ZwOgd7jVXuIQ_LkNI7ciKjAvgDe3UssrkCre6P6TDuOJaznKI-J3VHKCS-h8kwi4&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBkQAQ&uoh=1",
+      "displayed_link": "http://web.ncte.gov.in › www.ctesbped.org",
+      "snippet": "National Council for Teacher Education is a statutory body of Indian government. Contact No: 9620931026 Email ID: subramanya.bed04@ ...",
+      "about_this_result": {
+       "source": {
+        "description": "National Council for Teacher Education is a statutory body of Indian government. Contact No: 9620931026 Email ID: subramanya.bed04@ ...",
+        "source_info_link": "http://web.ncte.gov.in/page-regional-committee-institution-lists/17/www.ctesbped.org?page=53"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZTVlNXZUVIYUtsaURobWxJT0pCc0F1bjhJNkxTRnFqNmx2RGhqRWZvSmxkNTVkMzVrcldPN0JjdFF6aERJb3FNWDRjUjgzd3hfRGhOUXdpQU9WUE1rSktDbWQ2dUpsNEFidVZvdlNWNURPQ0hTakVkWWR6eDhERDFVYmtHN1E2VXBmN1p3T2dkN2pWWHVJUV9Ma05JN2NpS2pBdmdEZTNVc3Nya0NyZTZQNlREdU9KYXpuS0ktSjNWSEtDUy1oOGt3aTQSBBoCCAAa8gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAzgMIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDLaAS9nb3RvP3VybD1DQUVTbHdFQjZ6c3dGU1ZTV2VFSGFLbGlEaG1sSU9KQnNBdW44STZMU0ZxajZsdkRoakVmb0psZDU1ZDM1a3JXTzdCY3RRemhESW9xTVg0Y1I4M3d4X0RoTlF3aUFPVlBNa0pLQ21kNnVKbDRBYnVWb3ZTVjVET0NIU2pFZFlkeng4REQxVWJrRzdRNlVwZjdad09nZDdqVlh1SVFfTGtOSTdjaUtqQXZnRGUzVXNzcmtDcmU2UDZURHVPSmF6bktJLUozVkhLQ1MtaDhrd2k0Ois1MyAtIE5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uQowBTmF0aW9uYWwgQ291bmNpbCBmb3IgVGVhY2hlciBFZHVjYXRpb24gaXMgYSBzdGF0dXRvcnkgYm9keSBvZiBJbmRpYW4gZ292ZXJubWVudC4gQ29udGFjdCBObzogOTYyMDkzMTAyNiBFbWFpbCBJRDogc3VicmFtYW55YS5iZWQwNEAmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CtoBL2dvdG8_dXJsPUNBRVNsd0VCNnpzd0ZTVlNXZUVIYUtsaURobWxJT0pCc0F1bjhJNkxTRnFqNmx2RGhqRWZvSmxkNTVkMzVrcldPN0JjdFF6aERJb3FNWDRjUjgzd3hfRGhOUXdpQU9WUE1rSktDbWQ2dUpsNEFidVZvdlNWNURPQ0hTakVkWWR6eDhERDFVYmtHN1E2VXBmN1p3T2dkN2pWWHVJUV9Ma05JN2NpS2pBdmdEZTNVc3Nya0NyZTZQNlREdU9KYXpuS0ktSjNWSEtDUy1oOGt3aTQSBBoCCAAa8gMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAzgMIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDLaAS9nb3RvP3VybD1DQUVTbHdFQjZ6c3dGU1ZTV2VFSGFLbGlEaG1sSU9KQnNBdW44STZMU0ZxajZsdkRoakVmb0psZDU1ZDM1a3JXTzdCY3RRemhESW9xTVg0Y1I4M3d4X0RoTlF3aUFPVlBNa0pLQ21kNnVKbDRBYnVWb3ZTVjVET0NIU2pFZFlkeng4REQxVWJrRzdRNlVwZjdad09nZDdqVlh1SVFfTGtOSTdjaUtqQXZnRGUzVXNzcmtDcmU2UDZURHVPSmF6bktJLUozVkhLQ1MtaDhrd2k0Ois1MyAtIE5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uQowBTmF0aW9uYWwgQ291bmNpbCBmb3IgVGVhY2hlciBFZHVjYXRpb24gaXMgYSBzdGF0dXRvcnkgYm9keSBvZiBJbmRpYW4gZ292ZXJubWVudC4gQ29udGFjdCBObzogOTYyMDkzMTAyNiBFbWFpbCBJRDogc3VicmFtYW55YS5iZWQwNEAmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "NCTE Website"
+     },
+     {
+      "position": 4,
+      "title": "National Council for Teacher Education",
+      "link": "http://web.ncte.gov.in/page-regional-committee-institution-lists/17/www.alnazartrust.com?page=53",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESmwEB6zswFVPL2zbsRUHV6zeH5BGygO_1JLcG2Dk-WUSpPtDUcU7BOjv3ODJOAyYYSClxZE7gg9qonj-q1rJ-dc_StUfRsMLSQDgRBqCk-QwojG-6eZAIkuOTemBSyH3s-lG0aysDcRddzJgFLsc9QcUlWqpKgFUrNaTETaVWvY1332OrQA-olW4ghm4AIkHCnop4p43_vf-HoAgEHQ&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBMQAQ&uoh=1",
+      "displayed_link": "http://web.ncte.gov.in › www.alnazartrust.com",
+      "snippet": "National Council for Teacher Education is a statutory body of Indian government. Contact No: 9620931026 Email ID: subramanya.bed04@ ...",
+      "about_this_result": {
+       "source": {
+        "description": "National Council for Teacher Education is a statutory body of Indian government. Contact No: 9620931026 Email ID: subramanya.bed04@ ...",
+        "source_info_link": "http://web.ncte.gov.in/page-regional-committee-institution-lists/17/www.alnazartrust.com?page=53"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZWUEwyemJzUlVIVjZ6ZUg1Qkd5Z09fMUpMY0cyRGstV1VTcFB0RFVjVTdCT2p2M09ESk9BeVlZU0NseFpFN2dnOXFvbmotcTFySi1kY19TdFVmUnNNTFNRRGdSQnFDay1Rd29qRy02ZVpBSWt1T1RlbUJTeUgzcy1sRzBheXNEY1JkZHpKZ0ZMc2M5UWNVbFdxcEtnRlVyTmFURVRhVld2WTEzMzJPclFBLW9sVzRnaG00QUlrSENub3A0cDQzX3ZmLUhvQWdFSFESBBoCCAAa-AMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA1AMIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDLgAS9nb3RvP3VybD1DQUVTbXdFQjZ6c3dGVlBMMnpic1JVSFY2emVINUJHeWdPXzFKTGNHMkRrLVdVU3BQdERVY1U3Qk9qdjNPREpPQXlZWVNDbHhaRTdnZzlxb25qLXExckotZGNfU3RVZlJzTUxTUURnUkJxQ2stUXdvakctNmVaQUlrdU9UZW1CU3lIM3MtbEcwYXlzRGNSZGR6SmdGTHNjOVFjVWxXcXBLZ0ZVck5hVEVUYVZXdlkxMzMyT3JRQS1vbFc0Z2htNEFJa0hDbm9wNHA0M192Zi1Ib0FnRUhROis1MyAtIE5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uQowBTmF0aW9uYWwgQ291bmNpbCBmb3IgVGVhY2hlciBFZHVjYXRpb24gaXMgYSBzdGF0dXRvcnkgYm9keSBvZiBJbmRpYW4gZ292ZXJubWVudC4gQ29udGFjdCBObzogOTYyMDkzMTAyNiBFbWFpbCBJRDogc3VicmFtYW55YS5iZWQwNEAmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZWUEwyemJzUlVIVjZ6ZUg1Qkd5Z09fMUpMY0cyRGstV1VTcFB0RFVjVTdCT2p2M09ESk9BeVlZU0NseFpFN2dnOXFvbmotcTFySi1kY19TdFVmUnNNTFNRRGdSQnFDay1Rd29qRy02ZVpBSWt1T1RlbUJTeUgzcy1sRzBheXNEY1JkZHpKZ0ZMc2M5UWNVbFdxcEtnRlVyTmFURVRhVld2WTEzMzJPclFBLW9sVzRnaG00QUlrSENub3A0cDQzX3ZmLUhvQWdFSFESBBoCCAAa-AMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA1AMIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDLgAS9nb3RvP3VybD1DQUVTbXdFQjZ6c3dGVlBMMnpic1JVSFY2emVINUJHeWdPXzFKTGNHMkRrLVdVU3BQdERVY1U3Qk9qdjNPREpPQXlZWVNDbHhaRTdnZzlxb25qLXExckotZGNfU3RVZlJzTUxTUURnUkJxQ2stUXdvakctNmVaQUlrdU9UZW1CU3lIM3MtbEcwYXlzRGNSZGR6SmdGTHNjOVFjVWxXcXBLZ0ZVck5hVEVUYVZXdlkxMzMyT3JRQS1vbFc0Z2htNEFJa0hDbm9wNHA0M192Zi1Ib0FnRUhROis1MyAtIE5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uQowBTmF0aW9uYWwgQ291bmNpbCBmb3IgVGVhY2hlciBFZHVjYXRpb24gaXMgYSBzdGF0dXRvcnkgYm9keSBvZiBJbmRpYW4gZ292ZXJubWVudC4gQ29udGFjdCBObzogOTYyMDkzMTAyNiBFbWFpbCBJRDogc3VicmFtYW55YS5iZWQwNEAmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "NCTE Website"
+     },
+     {
+      "position": 5,
+      "title": "Correspondence Education - Aurangabad Maharashtra",
+      "link": "https://www.justdial.com/Aurangabad-Maharashtra/Correspondence-Education-in-Deolali-Chowk/nct-10138890",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESoQEB6zswFW8BqYfhXW6b9UVD5zeQVPKq7xOnqO9gYn75tJg49UU6O4b1QE7oQGqaxKqO-PjpAv813lY6RYqGN1VNcQhsyUXEhOhmy_60sJpzoPvjchW5HsPX5V7LXH80ddgF4oxNq08zLZhh1tyD16zAMka4ZQuiVtCI7RR0pD20QDHL413aOvBye7VOw5A4TSeJ7s-xX2Q9nH28zkKCs5hxVQ&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://www.justdial.com › ... › 18+ Listings",
+      "favicon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp",
+      "snippet": "Correspondence Education in Deolali Chowk , Aurangabad-Maharashtra. Correspondence education has emerged as a flexible and accessible learning option for ...",
+      "rich_snippet": {
+       "top": {
+        "detected_extensions": {
+         "rating": 4.6,
+         "reviews": 471
+        },
+        "extensions": [
+         "4.6(471)"
+        ]
+       }
+      },
+      "about_this_result": {
+       "source": {
+        "description": "Correspondence Education in Deolali Chowk , Aurangabad-Maharashtra. Correspondence education has emerged as a flexible and accessible learning option for ...",
+        "source_info_link": "https://www.justdial.com/Aurangabad-Maharashtra/Correspondence-Education-in-Deolali-Chowk/nct-10138890",
+        "icon": "https://serpapi.com/images/i/UklGRqgAAABXRUJQVlA4IJwAAADwAgCdASoQABAAAsBMJbACdDiAP0A4CkFq58psin0SkAD--q31jH7d5W1uxfXO5nb8LSdefKaagozfP45QnxuH4vNL1KtsnPCpMJUuGP_FrEFbNoaquFgwJzn34CIyxoWia3lxLLsb-8VB4cmZOAYN_1krQMDF0t8L_p2aqhj9f-w2zUnHUm8H7QdRLxoFBciseJRQuvI02frQAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CugBL2dvdG8_dXJsPUNBRVNvUUVCNnpzd0ZXOEJxWWZoWFc2YjlVVkQ1emVRVlBLcTd4T25xTzlnWW43NXRKZzQ5VVU2TzRiMVFFN29RR3FheEtxTy1QanBBdjgxM2xZNlJZcUdOMVZOY1Foc3lVWEVoT2hteV82MHNKcHpvUHZqY2hXNUhzUFg1VjdMWEg4MGRkZ0Y0b3hOcTA4ekxaaGgxdHlEMTZ6QU1rYTRaUXVpVnRDSTdSUjBwRDIwUURITDQxM2FPdkJ5ZTdWT3c1QTRUU2VKN3MteFgyUTluSDI4emtLQ3M1aHhWURIEGgIIABqcBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkD4AwgAEAAYACAAKisKCjk4NzY1NDMyMTAVAAAAABoLOTg3NjUgNDMyMTAaCzk4NzY1IDQzMjEwMugBL2dvdG8_dXJsPUNBRVNvUUVCNnpzd0ZXOEJxWWZoWFc2YjlVVkQ1emVRVlBLcTd4T25xTzlnWW43NXRKZzQ5VVU2TzRiMVFFN29RR3FheEtxTy1QanBBdjgxM2xZNlJZcUdOMVZOY1Foc3lVWEVoT2hteV82MHNKcHpvUHZqY2hXNUhzUFg1VjdMWEg4MGRkZ0Y0b3hOcTA4ekxaaGgxdHlEMTZ6QU1rYTRaUXVpVnRDSTdSUjBwRDIwUURITDQxM2FPdkJ5ZTdWT3c1QTRUU2VKN3MteFgyUTluSDI4emtLQ3M1aHhWUToxQ29ycmVzcG9uZGVuY2UgRWR1Y2F0aW9uIC0gQXVyYW5nYWJhZCBNYWhhcmFzaHRyYUKiAUNvcnJlc3BvbmRlbmNlIEVkdWNhdGlvbiBpbiBEZW9sYWxpIENob3drICwgQXVyYW5nYWJhZC1NYWhhcmFzaHRyYS4gQ29ycmVzcG9uZGVuY2UgZWR1Y2F0aW9uIGhhcyBlbWVyZ2VkIGFzIGEgZmxleGlibGUgYW5kIGFjY2Vzc2libGUgbGVhcm5pbmcgb3B0aW9uIGZvciZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CugBL2dvdG8_dXJsPUNBRVNvUUVCNnpzd0ZXOEJxWWZoWFc2YjlVVkQ1emVRVlBLcTd4T25xTzlnWW43NXRKZzQ5VVU2TzRiMVFFN29RR3FheEtxTy1QanBBdjgxM2xZNlJZcUdOMVZOY1Foc3lVWEVoT2hteV82MHNKcHpvUHZqY2hXNUhzUFg1VjdMWEg4MGRkZ0Y0b3hOcTA4ekxaaGgxdHlEMTZ6QU1rYTRaUXVpVnRDSTdSUjBwRDIwUURITDQxM2FPdkJ5ZTdWT3c1QTRUU2VKN3MteFgyUTluSDI4emtLQ3M1aHhWURIEGgIIABqcBBIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkD4AwgAEAAYACAAKisKCjk4NzY1NDMyMTAVAAAAABoLOTg3NjUgNDMyMTAaCzk4NzY1IDQzMjEwMugBL2dvdG8_dXJsPUNBRVNvUUVCNnpzd0ZXOEJxWWZoWFc2YjlVVkQ1emVRVlBLcTd4T25xTzlnWW43NXRKZzQ5VVU2TzRiMVFFN29RR3FheEtxTy1QanBBdjgxM2xZNlJZcUdOMVZOY1Foc3lVWEVoT2hteV82MHNKcHpvUHZqY2hXNUhzUFg1VjdMWEg4MGRkZ0Y0b3hOcTA4ekxaaGgxdHlEMTZ6QU1rYTRaUXVpVnRDSTdSUjBwRDIwUURITDQxM2FPdkJ5ZTdWT3c1QTRUU2VKN3MteFgyUTluSDI4emtLQ3M1aHhWUToxQ29ycmVzcG9uZGVuY2UgRWR1Y2F0aW9uIC0gQXVyYW5nYWJhZCBNYWhhcmFzaHRyYUKiAUNvcnJlc3BvbmRlbmNlIEVkdWNhdGlvbiBpbiBEZW9sYWxpIENob3drICwgQXVyYW5nYWJhZC1NYWhhcmFzaHRyYS4gQ29ycmVzcG9uZGVuY2UgZWR1Y2F0aW9uIGhhcyBlbWVyZ2VkIGFzIGEgZmxleGlibGUgYW5kIGFjY2Vzc2libGUgbGVhcm5pbmcgb3B0aW9uIGZvciZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Justdial",
+      "read_more_link": "https://www.justdial.com/Aurangabad-Maharashtra/Correspondence-Education-in-Deolali-Chowk/nct-10138890#:~:text=Correspondence%20Education%20in%20Deolali%20Chowk,constraints%20of%20traditional%20classroom%20settings."
+     },
+     {
+      "position": 6,
+      "title": "18 - National Council for Teacher Education - NCTE",
+      "link": "http://web.ncte.gov.in/page-regional-committee-institution-lists/37/www.yunushbed.org.in?page=18",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESmwEB6zswFf70H6SQT19LOqXqKchNn1VoGT25pjrKDNIthDj5DiWbTzKSjtwEVhC31x92iVwIX0p707rYZxmC4POiQpqX4tJqCL63kmzqYwgyH_wTZYquj1lcrvYpyv7jH-SZgYXZO16KnYXVJfkWMNVMMgJ7_iZv9HX0775pPppn3XpdkEfMP1-eUSf_3guSIpULT32z7K3lGbWJPw&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBIQAQ&uoh=1",
+      "displayed_link": "http://web.ncte.gov.in › www.yunushbed.org.in",
+      "snippet": "National Council for Teacher Education is a statutory body of Indian government. Contact No: 3481-232112. Contact No: 0351-1252053",
+      "about_this_result": {
+       "source": {
+        "description": "National Council for Teacher Education is a statutory body of Indian government. Contact No: 3481-232112. Contact No: 0351-1252053",
+        "source_info_link": "http://web.ncte.gov.in/page-regional-committee-institution-lists/37/www.yunushbed.org.in?page=18"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZmNzBINlNRVDE5TE9xWHFLY2hObjFWb0dUMjVwanJLRE5JdGhEajVEaVdiVHpLU2p0d0VWaEMzMXg5MmlWd0lYMHA3MDdyWVp4bUM0UE9pUXBxWDR0SnFDTDYza216cVl3Z3lIX3dUWllxdWoxbGNydllweXY3akgtU1pnWVhaTzE2S25ZWFZKZmtXTU5WTU1nSjdfaVp2OUhYMDc3NXBQcHBuM1hwZGtFZk1QMS1lVVNmXzNndVNJcFVMVDMyejdLM2xHYldKUHcSBBoCCAAa9QMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA0QMIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDLgAS9nb3RvP3VybD1DQUVTbXdFQjZ6c3dGZjcwSDZTUVQxOUxPcVhxS2NoTm4xVm9HVDI1cGpyS0ROSXRoRGo1RGlXYlR6S1NqdHdFVmhDMzF4OTJpVndJWDBwNzA3cllaeG1DNFBPaVFwcVg0dEpxQ0w2M2ttenFZd2d5SF93VFpZcXVqMWxjcnZZcHl2N2pILVNaZ1lYWk8xNktuWVhWSmZrV01OVk1NZ0o3X2ladjlIWDA3NzVwUHBwbjNYcGRrRWZNUDEtZVVTZl8zZ3VTSXBVTFQzMno3SzNsR2JXSlB3OjIxOCAtIE5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uIC0gTkNURUKCAU5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uIGlzIGEgc3RhdHV0b3J5IGJvZHkgb2YgSW5kaWFuIGdvdmVybm1lbnQuIENvbnRhY3QgTm86IDM0ODEtMjMyMTEyLiBDb250YWN0IE5vOiAwMzUxLTEyNTIwNTMiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CuABL2dvdG8_dXJsPUNBRVNtd0VCNnpzd0ZmNzBINlNRVDE5TE9xWHFLY2hObjFWb0dUMjVwanJLRE5JdGhEajVEaVdiVHpLU2p0d0VWaEMzMXg5MmlWd0lYMHA3MDdyWVp4bUM0UE9pUXBxWDR0SnFDTDYza216cVl3Z3lIX3dUWllxdWoxbGNydllweXY3akgtU1pnWVhaTzE2S25ZWFZKZmtXTU5WTU1nSjdfaVp2OUhYMDc3NXBQcHBuM1hwZGtFZk1QMS1lVVNmXzNndVNJcFVMVDMyejdLM2xHYldKUHcSBBoCCAAa9QMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJA0QMIABAAGAAgACorCgo5ODc2NTQzMjEwFQAAAAAaCzk4NzY1IDQzMjEwGgs5ODc2NSA0MzIxMDLgAS9nb3RvP3VybD1DQUVTbXdFQjZ6c3dGZjcwSDZTUVQxOUxPcVhxS2NoTm4xVm9HVDI1cGpyS0ROSXRoRGo1RGlXYlR6S1NqdHdFVmhDMzF4OTJpVndJWDBwNzA3cllaeG1DNFBPaVFwcVg0dEpxQ0w2M2ttenFZd2d5SF93VFpZcXVqMWxjcnZZcHl2N2pILVNaZ1lYWk8xNktuWVhWSmZrV01OVk1NZ0o3X2ladjlIWDA3NzVwUHBwbjNYcGRrRWZNUDEtZVVTZl8zZ3VTSXBVTFQzMno3SzNsR2JXSlB3OjIxOCAtIE5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uIC0gTkNURUKCAU5hdGlvbmFsIENvdW5jaWwgZm9yIFRlYWNoZXIgRWR1Y2F0aW9uIGlzIGEgc3RhdHV0b3J5IGJvZHkgb2YgSW5kaWFuIGdvdmVybm1lbnQuIENvbnRhY3QgTm86IDM0ODEtMjMyMTEyLiBDb250YWN0IE5vOiAwMzUxLTEyNTIwNTMiAhABSABYAGgA",
+      "source": "NCTE"
+     },
+     {
+      "position": 7,
+      "title": "Contact us",
+      "link": "https://mail.nied.co.in/contact.php?data=1",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESZQHrOzAVrGat6LAqsNk_KFoL83VVCULAK3lU3clf9uswgpc3jZWWkXOX4FHe3fMJM_ITLEDgjFJT0jIQy-tH8PyW0GLZ-I3-I1zCxithepLXCfk-zpG0BXc4GRPkqto-Dh90HaGn&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBcQAQ&uoh=1",
+      "displayed_link": "https://mail.nied.co.in › contact",
+      "favicon": "https://serpapi.com/images/i/UklGRrQBAABXRUJQVlA4IKgBAABQCACdASogACAAPtEutFooIagoG_EAGglkALYZrjGBWgywNIFM38XeoL0kPRALDP0zebUdhR8ln7v7Xe0-Mkwli45EYbwYXa0IGQAA_vYQSaoPhH7NTeGrTsHzoNByz9tvEP3AFln9lAMbu9rYvt0OD34NVkgyIO17hjS4Wepq9IFvqb2V5I4p8F32j7zgTZcJP_b2PLzCDlgFnzI5g0MUs_CYvaPkt1_4vfMbXLi64D5_37MSKVaXGv3Rm45QCcXetT7DD5Gc7UGl4GLNVwbVzJUGerPvoQoPHh4O5gbGUkeBgeJ3rTZLl4FXsWXR_vKqamwW4ka5pRVoW9TfqzOkJo5_3MT_3BNiH_SP1p2RnF_CGJa1ZLT2x2go38vLON8WckReKIz1suuP_Ijv4W6nC8YpA75zGWBakjsk5VKc-Zrg4qnTsbxjyESFvs112wXPFmVgZXmQr37VQ_sHxi0_QBPibmwRgzc-AefvD3cAwbvO6-GinkVgSsS7hEBA7BnB021BAk5K9OnUSp1kdqKovscWciGghEAbLc3_ujpuaS6VCiIDveAA.webp",
+      "snippet": "Call Timing 10.00 AM to 05.30 PM (Monday to Saturday / | Correspondence Office. Main Road, Vatika, Jaipur, Rajasthan .council@gmail.com",
+      "about_this_result": {
+       "source": {
+        "description": "Call Timing 10.00 AM to 05.30 PM (Monday to Saturday / | Correspondence Office. Main Road, Vatika, Jaipur, Rajasthan .council@gmail.com",
+        "source_info_link": "https://mail.nied.co.in/contact.php?data=1",
+        "icon": "https://serpapi.com/images/i/UklGRrQBAABXRUJQVlA4IKgBAABQCACdASogACAAPtEutFooIagoG_EAGglkALYZrjGBWgywNIFM38XeoL0kPRALDP0zebUdhR8ln7v7Xe0-Mkwli45EYbwYXa0IGQAA_vYQSaoPhH7NTeGrTsHzoNByz9tvEP3AFln9lAMbu9rYvt0OD34NVkgyIO17hjS4Wepq9IFvqb2V5I4p8F32j7zgTZcJP_b2PLzCDlgFnzI5g0MUs_CYvaPkt1_4vfMbXLi64D5_37MSKVaXGv3Rm45QCcXetT7DD5Gc7UGl4GLNVwbVzJUGerPvoQoPHh4O5gbGUkeBgeJ3rTZLl4FXsWXR_vKqamwW4ka5pRVoW9TfqzOkJo5_3MT_3BNiH_SP1p2RnF_CGJa1ZLT2x2go38vLON8WckReKIz1suuP_Ijv4W6nC8YpA75zGWBakjsk5VKc-Zrg4qnTsbxjyESFvs112wXPFmVgZXmQr37VQ_sHxi0_QBPibmwRgzc-AefvD3cAwbvO6-GinkVgSsS7hEBA7BnB021BAk5K9OnUSp1kdqKovscWciGghEAbLc3_ujpuaS6VCiIDveAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpYBL2dvdG8_dXJsPUNBRVNaUUhyT3pBVnJHYXQ2TEFxc05rX0tGb0w4M1ZWQ1VMQUszbFUzY2xmOXVzd2dwYzNqWldXa1hPWDRGSGUzZk1KTV9JVExFRGdqRkpUMGpJUXktdEg4UHlXMEdMWi1JMy1JMXpDeGl0aGVwTFhDZmstenBHMEJYYzRHUlBrcXRvLURoOTBIYUduEgQaAggAGpcDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPMCCAAQABgAIAAqKwoKOTg3NjU0MzIxMBUAAAAAGgs5ODc2NSA0MzIxMBoLOTg3NjUgNDMyMTAylgEvZ290bz91cmw9Q0FFU1pRSHJPekFWckdhdDZMQXFzTmtfS0ZvTDgzVlZDVUxBSzNsVTNjbGY5dXN3Z3BjM2paV1drWE9YNEZIZTNmTUpNX0lUTEVEZ2pGSlQwaklReS10SDhQeVcwR0xaLUkzLUkxekN4aXRoZXBMWENmay16cEcwQlhjNEdSUGtxdG8tRGg5MEhhR246GUNvbnRhY3QgdXMgLSBOSUVEIENPVU5DSUxChwFDYWxsIFRpbWluZyAxMC4wMCBBTSB0byAwNS4zMCBQTSAoTW9uZGF5IHRvIFNhdHVyZGF5IC8gfCBDb3JyZXNwb25kZW5jZSBPZmZpY2UuIE1haW4gUm9hZCwgVmF0aWthLCBKYWlwdXIsIFJhamFzdGhhbiAuY291bmNpbEBnbWFpbC5jb20iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpYBL2dvdG8_dXJsPUNBRVNaUUhyT3pBVnJHYXQ2TEFxc05rX0tGb0w4M1ZWQ1VMQUszbFUzY2xmOXVzd2dwYzNqWldXa1hPWDRGSGUzZk1KTV9JVExFRGdqRkpUMGpJUXktdEg4UHlXMEdMWi1JMy1JMXpDeGl0aGVwTFhDZmstenBHMEJYYzRHUlBrcXRvLURoOTBIYUduEgQaAggAGpcDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPMCCAAQABgAIAAqKwoKOTg3NjU0MzIxMBUAAAAAGgs5ODc2NSA0MzIxMBoLOTg3NjUgNDMyMTAylgEvZ290bz91cmw9Q0FFU1pRSHJPekFWckdhdDZMQXFzTmtfS0ZvTDgzVlZDVUxBSzNsVTNjbGY5dXN3Z3BjM2paV1drWE9YNEZIZTNmTUpNX0lUTEVEZ2pGSlQwaklReS10SDhQeVcwR0xaLUkzLUkxekN4aXRoZXBMWENmay16cEcwQlhjNEdSUGtxdG8tRGg5MEhhR246GUNvbnRhY3QgdXMgLSBOSUVEIENPVU5DSUxChwFDYWxsIFRpbWluZyAxMC4wMCBBTSB0byAwNS4zMCBQTSAoTW9uZGF5IHRvIFNhdHVyZGF5IC8gfCBDb3JyZXNwb25kZW5jZSBPZmZpY2UuIE1haW4gUm9hZCwgVmF0aWthLCBKYWlwdXIsIFJhamFzdGhhbiAuY291bmNpbEBnbWFpbC5jb20iAhABSABYAGgA",
+      "source": "NIED COUNCIL"
+     },
+     {
+      "position": 8,
+      "title": "https://www.time4education.com/local/articlecms/pa...",
+      "link": "https://www.time4education.com/local/articlecms/page.php?id=386",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESegHrOzAVIb5jS7vyRyMOH8dljxEL_uw4W56nTTb-v9YKZp8Szl0lqcKLr8bm5eNaUIdqoI045sNjxgkYb8KPQBMKvbX4HnITz3dtS4a5F8I16zc5USllw5yQ6A92LcZ_25P0wEHSoth0rh7UKk3G8nIvUkLSwrD9yHUq&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBYQAQ&uoh=1",
+      "displayed_link": "https://www.time4education.com › articlecms › page",
+      "favicon": "https://serpapi.com/images/i/UklGRlYCAABXRUJQVlA4IEoCAADQCwCdASogACAAPrEurFYnIacnG_DgFglsAJ0bWPPAXYBvG3-emeD4fH7_vdcDnlLYFggfar8XGaz59_6PuAfrB_uetz6Df7DtXfhbsKJXCBBPPm5KNixEmj9og1Azaq0c61QNdFLAAP7-wsuNufG1husEVE3c8UfnRps_FVDNDwnOLKT3MNB4GV59lZcsfnUv-o72i_GaQNkMALC37sfZXGGQrMyRBhWqO3n5G_9v48fNZmvdxGwOljwr7KA9_fOXfrf7-yuYGUfCy_gMksd_-UBNBfsVKQ51b4vxtScSlPXTlfxdnT41j5rnL9dtMEV5Sh13W1o346q0TnP7hvHQF7vO3viDCpFEcnrneLiEtwmR9QXRtvbC7Ruy6gwjHzvQsrq3WTmUQxAjnKuR_Ln8SB-RggBtSt_06AHsme36xIp9aoBHvrDuTjxe6IczxAFx5LtV1iBAnAu1uhXyf8zncD5Z_sxdAtmvw6f6qzyUhMkFtD_rXHfCLpmUIm2J2SwD-ensa7675VQLocacbsohpeK28wGUfZex-DBvuVI-IwPEoNGzRO0x0D1sW8GyMhX3_tOlMJyYoeRG9OpdsDILnV6HerIerM0ccbXkViNR4JYdNYl8UtGvyqZmmjV0-QnSZJCNasGTgv1Cbwp5AOXQTflKm6H6kodh6lwAij79TqV39zOLNSOJzUX4wI0eb3zBHnJNDMo5e61kPOVCEOg68hr3RH7Xk5Y0Ka6lgw4h2BeFfjDrdoUaiCOXSu4zPbjNJEb8LJ8-bgAA.webp",
+      "snippet": "No information is available for this page.",
+      "about_this_result": {
+       "source": {
+        "source_info_link": "https://www.time4education.com/local/articlecms/page.php?id=386",
+        "icon": "https://serpapi.com/images/i/UklGRlYCAABXRUJQVlA4IEoCAADQCwCdASogACAAPrEurFYnIacnG_DgFglsAJ0bWPPAXYBvG3-emeD4fH7_vdcDnlLYFggfar8XGaz59_6PuAfrB_uetz6Df7DtXfhbsKJXCBBPPm5KNixEmj9og1Azaq0c61QNdFLAAP7-wsuNufG1husEVE3c8UfnRps_FVDNDwnOLKT3MNB4GV59lZcsfnUv-o72i_GaQNkMALC37sfZXGGQrMyRBhWqO3n5G_9v48fNZmvdxGwOljwr7KA9_fOXfrf7-yuYGUfCy_gMksd_-UBNBfsVKQ51b4vxtScSlPXTlfxdnT41j5rnL9dtMEV5Sh13W1o346q0TnP7hvHQF7vO3viDCpFEcnrneLiEtwmR9QXRtvbC7Ruy6gwjHzvQsrq3WTmUQxAjnKuR_Ln8SB-RggBtSt_06AHsme36xIp9aoBHvrDuTjxe6IczxAFx5LtV1iBAnAu1uhXyf8zncD5Z_sxdAtmvw6f6qzyUhMkFtD_rXHfCLpmUIm2J2SwD-ensa7675VQLocacbsohpeK28wGUfZex-DBvuVI-IwPEoNGzRO0x0D1sW8GyMhX3_tOlMJyYoeRG9OpdsDILnV6HerIerM0ccbXkViNR4JYdNYl8UtGvyqZmmjV0-QnSZJCNasGTgv1Cbwp5AOXQTflKm6H6kodh6lwAij79TqV39zOLNSOJzUX4wI0eb3zBHnJNDMo5e61kPOVCEOg68hr3RH7Xk5Y0Ka6lgw4h2BeFfjDrdoUaiCOXSu4zPbjNJEb8LJ8-bgAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkliNWpTN3Z5UnlNT0g4ZGxqeEVMX3V3NFc1Nm5UVGItdjlZS1pwOFN6bDBscWNLTHI4Ym01ZU5hVUlkcW9JMDQ1c05qeGdrWWI4S1BRQk1LdmJYNEhuSVR6M2R0UzRhNUY4STE2emM1VVNsbHc1eVE2QTkyTGNaXzI1UDB3RUhTb3RoMHJoN1VLazNHOG5JdlVrTFN3ckQ5eUhVcRIEGgIIABqQAhIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDsAQgAEAAYACAAKisKCjk4NzY1NDMyMTAVAAAAABoLOTg3NjUgNDMyMTAaCzk4NzY1IDQzMjEwMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkliNWpTN3Z5UnlNT0g4ZGxqeEVMX3V3NFc1Nm5UVGItdjlZS1pwOFN6bDBscWNLTHI4Ym01ZU5hVUlkcW9JMDQ1c05qeGdrWWI4S1BRQk1LdmJYNEhuSVR6M2R0UzRhNUY4STE2emM1VVNsbHc1eVE2QTkyTGNaXzI1UDB3RUhTb3RoMHJoN1VLazNHOG5JdlVrTFN3ckQ5eUhVcToAIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkliNWpTN3Z5UnlNT0g4ZGxqeEVMX3V3NFc1Nm5UVGItdjlZS1pwOFN6bDBscWNLTHI4Ym01ZU5hVUlkcW9JMDQ1c05qeGdrWWI4S1BRQk1LdmJYNEhuSVR6M2R0UzRhNUY4STE2emM1VVNsbHc1eVE2QTkyTGNaXzI1UDB3RUhTb3RoMHJoN1VLazNHOG5JdlVrTFN3ckQ5eUhVcRIEGgIIABqQAhIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDsAQgAEAAYACAAKisKCjk4NzY1NDMyMTAVAAAAABoLOTg3NjUgNDMyMTAaCzk4NzY1IDQzMjEwMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkliNWpTN3Z5UnlNT0g4ZGxqeEVMX3V3NFc1Nm5UVGItdjlZS1pwOFN6bDBscWNLTHI4Ym01ZU5hVUlkcW9JMDQ1c05qeGdrWWI4S1BRQk1LdmJYNEhuSVR6M2R0UzRhNUY4STE2emM1VVNsbHc1eVE2QTkyTGNaXzI1UDB3RUhTb3RoMHJoN1VLazNHOG5JdlVrTFN3ckQ5eUhVcToAIgIQAUgAWABoAA",
+      "source": "T.I.M.E. - Triumphant Institute of Management Education"
+     },
+     {
+      "position": 9,
+      "title": "https://shabdakosh.marathi.gov.in/node/214775",
+      "link": "https://shabdakosh.marathi.gov.in/node/214775",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaAHrOzAVGUjBwuo4JpUE9VZOcbVje0k88qFgcDqmhgWxwLPYVCeW34iC_i25pOzVP4eK8Tj7hzSbte6yHKZ85dOMActuiMBCyENplUsnNgs5m1mVEJaORUeoTVtyc8Hsv48Ev9YjmFmK&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECA8QAQ&uoh=1",
+      "displayed_link": "https://shabdakosh.marathi.gov.in › ...",
+      "favicon": "https://serpapi.com/images/i/UklGRtYAAABXRUJQVlA4IMoAAAAwBQCdASocABwAPtEutFooIagoGAEAGgliAMogqeCtF-FOtXwT0Th5x68_chWshTTDgAD-9geG_VuYvb4qIXyxB6AAQR6xW0YyF8Sbta78pTakea2O2bYidMFtM-QfbDDTmvyD6map-4Y19xz1VpR_btb0-aF0t-BQETe5bFK28yTSCWb6YFIU43SektrGCj-Hd_ymyhiTfJTI4TA6rkkAnBhDjanThRkZrCKhH6uAGrrXi_8FVIVJrcnIxmDzQNZS5kA6x6x1QAAA.webp",
+      "about_this_result": {
+       "source": {
+        "source_info_link": "https://shabdakosh.marathi.gov.in/node/214775",
+        "icon": "https://serpapi.com/images/i/UklGRtYAAABXRUJQVlA4IMoAAAAwBQCdASocABwAPtEutFooIagoGAEAGgliAMogqeCtF-FOtXwT0Th5x68_chWshTTDgAD-9geG_VuYvb4qIXyxB6AAQR6xW0YyF8Sbta78pTakea2O2bYidMFtM-QfbDDTmvyD6map-4Y19xz1VpR_btb0-aF0t-BQETe5bFK28yTSCWb6YFIU43SektrGCj-Hd_ymyhiTfJTI4TA6rkkAnBhDjanThRkZrCKhH6uAGrrXi_8FVIVJrcnIxmDzQNZS5kA6x6x1QAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpoBL2dvdG8_dXJsPUNBRVNhQUhyT3pBVkdVakJ3dW80SnBVRTlWWk9jYlZqZTBrODhxRmdjRHFtaGdXeHdMUFlWQ2VXMzRpQ19pMjVwT3pWUDRlSzhUajdoelNidGU2eUhLWjg1ZE9NQWN0dWlNQkN5RU5wbFVzbk5nczVtMW1WRUphT1JVZW9UVnR5YzhIc3Y0OEV2OVlqbUZtSxIEGgIIABr4ARIAGgAiACoAMgYIARICaW46AEIECAIQAEoAWgByAHoAgkDUAQgAEAAYACAAKisKCjk4NzY1NDMyMTAVAAAAABoLOTg3NjUgNDMyMTAaCzk4NzY1IDQzMjEwMpoBL2dvdG8_dXJsPUNBRVNhQUhyT3pBVkdVakJ3dW80SnBVRTlWWk9jYlZqZTBrODhxRmdjRHFtaGdXeHdMUFlWQ2VXMzRpQ19pMjVwT3pWUDRlSzhUajdoelNidGU2eUhLWjg1ZE9NQWN0dWlNQkN5RU5wbFVzbk5nczVtMW1WRUphT1JVZW9UVnR5YzhIc3Y0OEV2OVlqbUZtSzoAIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpoBL2dvdG8_dXJsPUNBRVNhQUhyT3pBVkdVakJ3dW80SnBVRTlWWk9jYlZqZTBrODhxRmdjRHFtaGdXeHdMUFlWQ2VXMzRpQ19pMjVwT3pWUDRlSzhUajdoelNidGU2eUhLWjg1ZE9NQWN0dWlNQkN5RU5wbFVzbk5nczVtMW1WRUphT1JVZW9UVnR5YzhIc3Y0OEV2OVlqbUZtSxIEGgIIABr4ARIAGgAiACoAMgYIARICaW46AEIECAIQAEoAWgByAHoAgkDUAQgAEAAYACAAKisKCjk4NzY1NDMyMTAVAAAAABoLOTg3NjUgNDMyMTAaCzk4NzY1IDQzMjEwMpoBL2dvdG8_dXJsPUNBRVNhQUhyT3pBVkdVakJ3dW80SnBVRTlWWk9jYlZqZTBrODhxRmdjRHFtaGdXeHdMUFlWQ2VXMzRpQ19pMjVwT3pWUDRlSzhUajdoelNidGU2eUhLWjg1ZE9NQWN0dWlNQkN5RU5wbFVzbk5nczVtMW1WRUphT1JVZW9UVnR5YzhIc3Y0OEV2OVlqbUZtSzoAIgIQAUgAWABoAA",
+      "source": "मराठी भाषा विभाग"
+     },
+     {
+      "position": 10,
+      "title": "Samagra Shiksha,Education Department,Delhi",
+      "link": "https://www.edudel.nic.in/Mis/DiseNew/CRC_Status/frmDiseDistrictWiseFormReportsCRC2020_21.aspx?type=4D3uZax3ZFs=&schoolid=PqSlQhx9foA=",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESwgEB6zswFfJ2fGJtfoNNPB4NSltKp3nbIgZ2zDyz8iXPcPHbo0VrFhLa-MYGyDdQDps_DEBJph4yY78RlaPzfjb-yKkIo07fnlKad2ICEkQxCzya1Df7V7tLOrvMi90_yzurjrQIaGB6ROJbVqMWodrF9g0BTovTQS0cM3LAwjE09TAZi_-HQrl8Xcscva7Dle6ShvBWBr0_dUWLR6T5fWHKAfqoTN1H3jTxSzfoyLoRwqCs0n_WftCgZN98HD4QQ2GTzg&ved=2ahUKEwjM1ND1zKeXAxVpxTgGHSsdC50QFnoECBQQAQ&uoh=1",
+      "displayed_link": "https://www.edudel.nic.in › Mis › DiseNew › CRC_Status",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAKlBMVEX4Gxv____9RET8FRX8NDT_4OD9c3P-oaH9goL-kpL9U1P-wcH9Y2P8JSVqm_qQAAAARElEQVR4AWPABIJQgGAIGbsKCooZmzMIC7aITpSaKAhkCG9eLOW1EMRYITTr5EQgY_MxkSqQlLF5rJGUsRlcOz4GBgAAzKYQOtknz1oAAAAASUVORK5CYII.png",
+      "snippet": "Samagra Shiksha,Education Department,Delhi for Upper Pry Schools Only. School Address Laxmi Park, Nangloi, New Delhi. School Category:- Middle c.",
+      "about_this_result": {
+       "source": {
+        "description": "Samagra Shiksha,Education Department,Delhi for Upper Pry Schools Only. School Address Laxmi Park, Nangloi, New Delhi. School Category:- Middle c.",
+        "source_info_link": "https://www.edudel.nic.in/Mis/DiseNew/CRC_Status/frmDiseDistrictWiseFormReportsCRC2020_21.aspx?type=4D3uZax3ZFs=&schoolid=PqSlQhx9foA=",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAKlBMVEX4Gxv____9RET8FRX8NDT_4OD9c3P-oaH9goL-kpL9U1P-wcH9Y2P8JSVqm_qQAAAARElEQVR4AWPABIJQgGAIGbsKCooZmzMIC7aITpSaKAhkCG9eLOW1EMRYITTr5EQgY_MxkSqQlLF5rJGUsRlcOz4GBgAAzKYQOtknz1oAAAAASUVORK5CYII.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZmSjJmR0p0Zm9OTlBCNE5TbHRLcDNuYklnWjJ6RHl6OGlYUGNQSGJvMFZyRmhMYS1NWUd5RGRRRHBzX0RFQkpwaDR5WTc4UmxhUHpmamIteUtrSW8wN2ZubEthZDJJQ0VrUXhDenlhMURmN1Y3dExPcnZNaTkwX3l6dXJqclFJYUdCNlJPSmJWcU1Xb2RyRjlnMEJUb3ZUUVMwY00zTEF3akUwOVRBWmlfLUhRcmw4WGNzY3ZhN0RsZTZTaHZCV0JyMF9kVVdMUjZUNWZXSEtBZnFvVE4xSDNqVHhTemZveUxvUndxQ3Mwbl9XZnRDZ1pOOThIRDRRUTJHVHpnEgQaAggAGrAEEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQIwECAAQABgAIAAqKwoKOTg3NjU0MzIxMBUAAAAAGgs5ODc2NSA0MzIxMBoLOTg3NjUgNDMyMTAylAIvZ290bz91cmw9Q0FFU3dnRUI2enN3RmZKMmZHSnRmb05OUEI0TlNsdEtwM25iSWdaMnpEeXo4aVhQY1BIYm8wVnJGaExhLU1ZR3lEZFFEcHNfREVCSnBoNHlZNzhSbGFQemZqYi15S2tJbzA3Zm5sS2FkMklDRWtReEN6eWExRGY3Vjd0TE9ydk1pOTBfeXp1cmpyUUlhR0I2Uk9KYlZxTVdvZHJGOWcwQlRvdlRRUzBjTTNMQXdqRTA5VEFaaV8tSFFybDhYY3NjdmE3RGxlNlNodkJXQnIwX2RVV0xSNlQ1ZldIS0FmcW9UTjFIM2pUeFN6Zm95TG9Sd3FDczBuX1dmdENnWk45OEhENFFRMkdUemc6KlNhbWFncmEgU2hpa3NoYSxFZHVjYXRpb24gRGVwYXJ0bWVudCxEZWxoaUKRAVNhbWFncmEgU2hpa3NoYSxFZHVjYXRpb24gRGVwYXJ0bWVudCxEZWxoaSBmb3IgVXBwZXIgUHJ5IFNjaG9vbHMgT25seS4gU2Nob29sIEFkZHJlc3MgTGF4bWkgUGFyaywgTmFuZ2xvaSwgTmV3IERlbGhpLiBTY2hvb2wgQ2F0ZWdvcnk6LSBNaWRkbGUgYy4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZmSjJmR0p0Zm9OTlBCNE5TbHRLcDNuYklnWjJ6RHl6OGlYUGNQSGJvMFZyRmhMYS1NWUd5RGRRRHBzX0RFQkpwaDR5WTc4UmxhUHpmamIteUtrSW8wN2ZubEthZDJJQ0VrUXhDenlhMURmN1Y3dExPcnZNaTkwX3l6dXJqclFJYUdCNlJPSmJWcU1Xb2RyRjlnMEJUb3ZUUVMwY00zTEF3akUwOVRBWmlfLUhRcmw4WGNzY3ZhN0RsZTZTaHZCV0JyMF9kVVdMUjZUNWZXSEtBZnFvVE4xSDNqVHhTemZveUxvUndxQ3Mwbl9XZnRDZ1pOOThIRDRRUTJHVHpnEgQaAggAGrAEEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQIwECAAQABgAIAAqKwoKOTg3NjU0MzIxMBUAAAAAGgs5ODc2NSA0MzIxMBoLOTg3NjUgNDMyMTAylAIvZ290bz91cmw9Q0FFU3dnRUI2enN3RmZKMmZHSnRmb05OUEI0TlNsdEtwM25iSWdaMnpEeXo4aVhQY1BIYm8wVnJGaExhLU1ZR3lEZFFEcHNfREVCSnBoNHlZNzhSbGFQemZqYi15S2tJbzA3Zm5sS2FkMklDRWtReEN6eWExRGY3Vjd0TE9ydk1pOTBfeXp1cmpyUUlhR0I2Uk9KYlZxTVdvZHJGOWcwQlRvdlRRUzBjTTNMQXdqRTA5VEFaaV8tSFFybDhYY3NjdmE3RGxlNlNodkJXQnIwX2RVV0xSNlQ1ZldIS0FmcW9UTjFIM2pUeFN6Zm95TG9Sd3FDczBuX1dmdENnWk45OEhENFFRMkdUemc6KlNhbWFncmEgU2hpa3NoYSxFZHVjYXRpb24gRGVwYXJ0bWVudCxEZWxoaUKRAVNhbWFncmEgU2hpa3NoYSxFZHVjYXRpb24gRGVwYXJ0bWVudCxEZWxoaSBmb3IgVXBwZXIgUHJ5IFNjaG9vbHMgT25seS4gU2Nob29sIEFkZHJlc3MgTGF4bWkgUGFyaywgTmFuZ2xvaSwgTmV3IERlbGhpLiBTY2hvb2wgQ2F0ZWdvcnk6LSBNaWRkbGUgYy4iAhABSABYAGgA",
+      "source": "edudel.nic.in"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"9876543210\" OR \"98765 43210\" OR \"+91 98765 43210\"",
+     "total_results": 55,
+     "time_taken_displayed": 0.31,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:33:26 UTC"
+   }
+  },
+  "cc22a7a04f47288496bfcee526d22fae7fc39c136687439f7582a14d4f93f776": {
+   "engine": "google_jobs",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "q": "Data Entry Executive Infosys Ltd Noida"
+   },
+   "response": {
+    "error": "Google hasn't returned any results for this query.",
+    "_searched_at": "2026-10-07 09:33:22 UTC"
+   }
+  },
+  "dea83cb2d97b4b6aedcd94cedae55521e3438938c43ce31b428a45a7f403cb7f": {
+   "engine": "google_maps",
+   "params": {
+    "type": "search",
+    "gl": "in",
+    "hl": "en",
+    "q": "4th Floor, Shanti Residency, Sector 62, Noida"
+   },
+   "response": {
+    "local_results": [
+     {
+      "position": 1,
+      "title": "Hotel O by OYO A P Residency",
+      "place_id": "ChIJ2XsCAUXlDDkRb1-dp6qSsJI",
+      "data_id": "0x390ce54501027bd9:0x92b092aaa79d5f6f",
+      "data_cid": "10570109587092758383",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce54501027bd9%3A0x92b092aaa79d5f6f&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce54501027bd9%3A0x92b092aaa79d5f6f&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.619887499999997,
+       "longitude": 77.3695908
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ2XsCAUXlDDkRb1-dp6qSsJI",
+      "provider_id": "/g/11h56rp09j",
+      "rating": 2.7,
+      "reviews": 252,
+      "price": "€18",
+      "extracted_price": 18,
+      "type": "Hotel",
+      "types": [
+       "Hotel",
+       "Bed & breakfast",
+       "Guest house",
+       "Holiday home",
+       "Inn",
+       "Lodge",
+       "Motel",
+       "Service Apartment",
+       "Villa"
+      ],
+      "address": "RN 44 RN 44, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "phone": "0124 620 1516",
+      "website": "https://www.oyorooms.com/60948/?utm_source=Google&utm_medium=GMB",
+      "description": "Simple hotel with a restaurant & Wi-Fi. Straightforward hotel featuring a relaxed restaurant & breakfast, plus Wi-Fi & parking.",
+      "amenities": [
+       "Free breakfast",
+       "Free Wi-Fi",
+       "Breakfast",
+       "Wi-Fi"
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmOHM8uyKKZ4vTj-PCrF7GMBHtU9K6ULONY0c5tBpwOMUM1IYknxpBueysKPTnEuS2CFEjZt7XzhaqEpBiBa77o3Czai32TVxkls1xA-630JW796H7ofqXN-6DclOtSJ1CePOK07=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/DRdpmXicHcRdDsEwAADgE9U6Y0XiQWuMmi6x-XtbmtpQba0d44LO4DYS38P3_VTOGTvyPFkFnVLrUorGippr5YRyHa5vXlkX1gJuvQl5GHljcTJoXpQee4_sAlJSz9A8wbHLhzTMV2x9gLzvsHmyJE_8xeGqWoMb8bI0zVTUbLpkFl2ODu3fVXGPDD7jAiEdkHdxDrrZtr1K67cTEAZwuUPDMEb6dN-vQTjlkrnN0iciZRSi8dOHEILqPwfqBz7rQzk"
+     },
+     {
+      "position": 2,
+      "title": "A Chaudhary residency",
+      "place_id": "ChIJO_1ue_jlDDkRU47uNBdzYQc",
+      "data_id": "0x390ce5f87b6efd3b:0x761731734ee8e53",
+      "data_cid": "531832774515920467",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce5f87b6efd3b%3A0x761731734ee8e53&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce5f87b6efd3b%3A0x761731734ee8e53&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6282873,
+       "longitude": 77.3505031
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJO_1ue_jlDDkRU47uNBdzYQc",
+      "provider_id": "/g/11j6pl3pwq",
+      "rating": 3.8,
+      "reviews": 44,
+      "type": "Condominium rental agency",
+      "types": [
+       "Condominium rental agency"
+      ],
+      "address": "Gali Number 2, Makanpur Colony, Sector 62A, Noida, Uttar Pradesh 201020",
+      "country": "India",
+      "open_state": "Open · Closes 11 pm",
+      "hours": "Open · Closes 11 pm",
+      "operating_hours": {
+       "wednesday": "6 am–11 pm",
+       "thursday": "6 am–11 pm",
+       "friday": "6 am–11 pm",
+       "saturday": "6 am–11 pm",
+       "sunday": "6 am–11 pm",
+       "monday": "6 am–11 pm",
+       "tuesday": "6 am–11 pm"
+      },
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmNEdXSjaHxypvC24jdsZe3WQVIGNMYS26WkYdnRSdHqlimwq7px4EBFdULlh1ioHVkFu7lmF6rCVzMUYAm0hlz3eeZrGbOC5Vwz81aciML5YIz7pKhjzl7sOqm32jIUJyWGt2dr1Q=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/R-yaOHicHcTbDoIgAADQLzKvZWvroVxeKmvl1OzNgIkGgkBZ_GGf0N-0dR7O94OV4nJhmgS7k4axhqCHRAKwXqFeTQCjZiNqKQ0gzVXw5IQeNvCSdXX8evNn4HgdlFfklqciiQ5plTmz8l7B_pzBeCAtHQefv7zNOoT5nmC7ZXFxDx8-oeFMBIVO82pFLUy0i9BVRLdjMC1GPbdr0Kb7aZVon-9wp4kvjwN1nS7Jt-8yUg4U9mk52pZlGfg_MPofpBZGyg"
+     },
+     {
+      "position": 3,
+      "title": "Hotel O by OYO Basera Residency",
+      "place_id": "ChIJ_Z5ao7nlDDkREUW-WqbXrf8",
+      "data_id": "0x390ce5b9a35a9efd:0xffadd7a65abe4511",
+      "data_cid": "18423618760129529105",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce5b9a35a9efd%3A0xffadd7a65abe4511&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce5b9a35a9efd%3A0xffadd7a65abe4511&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6183554,
+       "longitude": 77.3695749
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ_Z5ao7nlDDkREUW-WqbXrf8",
+      "provider_id": "/g/11sb3jt1lj",
+      "rating": 2.9,
+      "reviews": 12,
+      "type": "Hotel",
+      "types": [
+       "Hotel",
+       "Bed & breakfast",
+       "Guest house",
+       "Holiday home",
+       "Inn",
+       "Lodge",
+       "Motel",
+       "Service Apartment",
+       "Villa"
+      ],
+      "address": "J999+7QH, Sl1, Rasoolpur Nawada, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "phone": "0124 620 1516",
+      "website": "https://www.oyorooms.com/194924/?utm_source=Google&utm_medium=GMB",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeU56IQE7DB1u68kEPtprxsuo8iDHZzsCe4VwPZq8BncKuXdpZ6szbBJEwb0eis_DCr-wntW1AmwHn6beYIuVol8wj0BatLMWz9cy4-8mSZbGWU-qnj-si-YfKCLrOQ8EKui89R6w=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/KKGfXXicHcTbboIwGADgJ6qU6Lq6xAsKxAMYT1EGN0a6Cii02L9NlTfcI_g2S_ZdfO_f2pgevjyvrcejSqmqFRaE5koaIc2Iq86r9AUAcfCCgN27VBw_yHIXf0bMt4Te463p9ROsok20KAYIxeTktsWDMskT-_3TFwSGkq1iV2LRwDkKNXLSZH7QuYUkpciX9qRa6m6YXUy6zoYpf00Q7Q5FOc-O6CFvCBqUX5Mw1ZsdjRPb0OmeuJnzMcao_p8j-QdCs0Xj"
+     },
+     {
+      "position": 4,
+      "title": "Trikuta Hills",
+      "place_id": "ChIJpSW5ZGflDDkRDUuGg7npFoQ",
+      "data_id": "0x390ce56764b925a5:0x8416e9b983864b0d",
+      "data_cid": "9518051845478959885",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce56764b925a5%3A0x8416e9b983864b0d&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce56764b925a5%3A0x8416e9b983864b0d&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.614549,
+       "longitude": 77.37055869999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJpSW5ZGflDDkRDUuGg7npFoQ",
+      "provider_id": "/g/1tdhcd7t",
+      "rating": 3.8,
+      "reviews": 71,
+      "type": "Apartment complex",
+      "types": [
+       "Apartment complex",
+       "Apartment building"
+      ],
+      "address": "BOIGroup Housing Society, Institutional Area, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdz7PJjFHYGJ7L93LpUVpZXXSC1ruZNLzcm2QLZ7XN2uD9d2ifHv7Zvg_bYIrIjLYfAkfiMXx34epvs-9yXZeel-gi-mKODSEOX2dUMXVrM3cakaJzvZQaRFHPZw-gnD4VJbo0m=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/PkltrXicHcRJDoIwAADAF1UQSAgmHlBUwOIaSenFYCllKyUtoPJB3-BvTJzDfD9F33dqoWlNYc6YEKyhg6KSiLanbT8jgmtMpkoBojTXXdUcZpN9Cqutn-xCGzom7G5xhxG6rudywAc4EW6cIbbRwRg8JzPK3B9tPLL7IwlkUMEkd-u8jNDLtGg3KuC8Eaa0AawEfH_0rpsjMrJbhGIZmSSt03Aa8Tm9bP0TfgLWelYcPoTOl8-5ruug-E9A-wNe1USu"
+     },
+     {
+      "position": 5,
+      "title": "ShaktiKunj Apartment",
+      "place_id": "ChIJq-n1KVvlDDkR2AARF1Fqo6M",
+      "data_id": "0x390ce55b29f5e9ab:0xa3a36a51171100d8",
+      "data_cid": "11791385145897976024",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55b29f5e9ab%3A0xa3a36a51171100d8&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55b29f5e9ab%3A0xa3a36a51171100d8&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6203181,
+       "longitude": 77.371225
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJq-n1KVvlDDkR2AARF1Fqo6M",
+      "provider_id": "/g/11cn06q9xm",
+      "rating": 4,
+      "reviews": 61,
+      "unclaimed_listing": true,
+      "type": "Apartment building",
+      "types": [
+       "Apartment building",
+       "Condominium complex"
+      ],
+      "address": "9/3, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "open_state": "Open 24 hours",
+      "hours": "Open 24 hours",
+      "operating_hours": {
+       "wednesday": "Open 24 hours",
+       "thursday": "Open 24 hours",
+       "friday": "Open 24 hours",
+       "saturday": "Open 24 hours",
+       "sunday": "Open 24 hours",
+       "monday": "Open 24 hours",
+       "tuesday": "Open 24 hours"
+      },
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfUocp3IhAlW-k6Gae3az2if0SsQjgdj_ivn4wDcNCLfjtAmfjO1h57wdceqs-bBPEIUmbY0W9VeBZ28M3NUN6NdfiQD7qIOtlnQ2LxwNdqJWMRjzSHWVTpgTq6zLtKzEwU_6onjQ=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/tSdiGnicHcTbboIwAADQL6pU2PCS7AGUKIpVpkjcC8HSCxVasHU1_OE-wb8x2Xk4rz9uTKfnjtNwb8SUYg15aHLHShoizQir1mH3UmuAtRME4a1NaKZw58U8aHJw81cl8crBrSk86lSwShT1r_ywS4wWCRUmaKnYj_nnxFaY9Bpcw0MUZ-31AvPZmYQ_7nTnoQz5qKJ1upz08d40MnWTp0VVv8l332I4rvPzqWOn3h8Ssx0imxW-kiL9smMIIeD_YyDfUYNGew"
+     },
+     {
+      "position": 6,
+      "title": "Akanksha Apartments",
+      "place_id": "ChIJc7qtE1vlDDkRejgaqtMcDXw",
+      "data_id": "0x390ce55b13adba73:0x7c0d1cd3aa1a387a",
+      "data_cid": "8938832530817824890",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55b13adba73%3A0x7c0d1cd3aa1a387a&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55b13adba73%3A0x7c0d1cd3aa1a387a&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6225456,
+       "longitude": 77.36801729999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJc7qtE1vlDDkRejgaqtMcDXw",
+      "provider_id": "/g/11c55j74jx",
+      "rating": 3.7,
+      "reviews": 169,
+      "type": "Apartment building",
+      "types": [
+       "Apartment building"
+      ],
+      "address": "Akanksha Apartment, B-9/12, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmPldZ_tHkCeZs7obErP5K8d7yPdnDJPvyiJG-GINx8lnrCBSnfSxcGDuovtab6zjqwylVWA_jFBaO-H_2x1ss8DzEcsco9oClfOcPlN_txOfGhic6uWIT-FSMR1_pOCHR94VwuY9g=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/iQ8ZOnicHcRbjoIwFADQFVVARwUTP6QoqFEamWjGnwYvL7W2yC0vd-gS3I3JnI_zeRdalzgzDFGMBrlSuUhrTCtQUqdSD0A9jLyKEQmgsaBNKR5MJGeugztNzzhVl2XFxls7mfYskd6GNf114xN_ve9sISvqRjKLOvC9WjU6vkxet2fbi-NpwW8rNw5JwIedhWh7ryUgKEdRkYXAxJ7rLsz84gqT-rT-Jatod7B4GdLg4Pwc2_rPyeetZZomKf4HIr_ou0dR"
+     },
+     {
+      "position": 7,
+      "title": "Yarrows Apartments",
+      "place_id": "ChIJOww1fUTlDDkRRHQmV2yq2cM",
+      "data_id": "0x390ce5447d350c3b:0xc3d9aa6c57267444",
+      "data_cid": "14112498289637487684",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce5447d350c3b%3A0xc3d9aa6c57267444&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce5447d350c3b%3A0xc3d9aa6c57267444&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.613249,
+       "longitude": 77.3722907
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJOww1fUTlDDkRRHQmV2yq2cM",
+      "provider_id": "/g/11c3ty5rnz",
+      "rating": 4,
+      "reviews": 243,
+      "unclaimed_listing": true,
+      "type": "Apartment complex",
+      "types": [
+       "Apartment complex"
+      ],
+      "address": "Plot no. C58/5, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmOeIqbiybQ1aW-wiz70zxA8QpqYnePnPQgTMk2EiluLypGSHgdDcjPq4-By7yin5OJwdf92a2QiJQsxRFxeyp5HRkmQ8U1RkU4YFtqMjGnsn-JYmNmaRNdTFuWP4FM186RuNOaG=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/_Lu5aHicHcRLcoIwAADQE0U-YsXOuLCtYBn5JNVxWMYQQ4SEYIIQL-gZvE1nfIv3etbGKP3pOG09n7GuYy0dNL2RThoqzYx0wmE3rDUg2tl831Urcvrbn7k9Qw-fwMgfS_cxbUKo-lLSQhaQHdLG3_J22FsV_-1Y9UOuRR-AL7u0XC7yZKwuKx_7kCdQTyiaqFWLHWoEDI8eao5BGZk-vcZSS5CUIhMYZdUhGk5FEKVe-IGGLMfxevRc1wX1ewLkPzLDRes"
+     },
+     {
+      "position": 8,
+      "title": "Varun Apartment",
+      "place_id": "ChIJD49diF3lDDkROpRlWy0IHjU",
+      "data_id": "0x390ce55d885d8f0f:0x351e082d5b65943a",
+      "data_cid": "3827505724211434554",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55d885d8f0f%3A0x351e082d5b65943a&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55d885d8f0f%3A0x351e082d5b65943a&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6152238,
+       "longitude": 77.3702696
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJD49diF3lDDkROpRlWy0IHjU",
+      "provider_id": "/g/1hm46rkzf",
+      "rating": 4,
+      "reviews": 70,
+      "unclaimed_listing": true,
+      "type": "Apartment complex",
+      "types": [
+       "Apartment complex",
+       "Apartment building"
+      ],
+      "address": "C-58/28, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmNSzeBdWtrBIVR1vaB4b8N6uutlGDErdS_5InIt-HZtk63I1t8nWuy7drt1RnnVpPKFF8qGGRLaP2ukvoy_25Y0v-ez7ZhNZxnXfhNKQsSG8ya2569hhYUBqrNOp6PzPyyW9JTVEw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/SR41IHicHcTdboIwGADQJ6r8KIhLdiGbImo6BgqDG8Kg0kRssf1aV95wj-DbLNm5OM9fCjDKF8sa6HzWc94PREkiWs6AMJi1_Gb1opEStdJav-lxuOFsImFXgAjjPHV0Ey6-A-wrBUP0vhFdVnsxiwHtKrj689iBgBXKLDsBTspYPiaH7Ta4R1F6bBJXXTU3teuVtkZkWlYUVz_s60Lx4VNmUWAa1_NXlJbn8C7wx-gnU2JMsdqf8s3j9eHYto3o_y1if2NkRkA"
+     },
+     {
+      "position": 9,
+      "title": "Mecon Apartments",
+      "place_id": "ChIJSW9TdF7lDDkRqbxSiFyvxo0",
+      "data_id": "0x390ce55e74536f49:0x8dc6af5c8852bca9",
+      "data_cid": "10216045616695524521",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55e74536f49%3A0x8dc6af5c8852bca9&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55e74536f49%3A0x8dc6af5c8852bca9&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.616899099999998,
+       "longitude": 77.3731121
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJSW9TdF7lDDkRqbxSiFyvxo0",
+      "provider_id": "/g/1hfbr3qyx",
+      "rating": 4.2,
+      "reviews": 160,
+      "type": "Apartment complex",
+      "types": [
+       "Apartment complex"
+      ],
+      "address": "C-58/10, C-58/10, Sector 62 Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "open_state": "Open · Closes 7 pm",
+      "hours": "Open · Closes 7 pm",
+      "operating_hours": {
+       "wednesday": "9 am–7 pm",
+       "thursday": "9 am–7 pm",
+       "friday": "9 am–7 pm",
+       "saturday": "9 am–7 pm",
+       "sunday": "9 am–7 pm",
+       "monday": "9 am–7 pm",
+       "tuesday": "9 am–7 pm"
+      },
+      "phone": "098100 66158",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdws6pwg4zvSHuC6yDpPLEKlFr7IiGrs5qFlmEyiPMvEMOXermDob7ILrAVlxjadDtsJDF5HzNxZjxIj0lZjuR0qYFCYBl5DAf60K3aP5E9W8MjdqiviFB-jkFJAZ6IhrVFGFzp=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/nZ5_JnicHcRJDoIwAADAFwE1CqiJh2IpoKBEExduCAjUQqEti3zQN_gbE-cw308hZSPWmkaLuZozltOsExlPWC2zWqoJq7Scx0IoidAgtF6Vnw7CaIZ8MfVnt9sab9SEvr2nmJte6XCht5hW9rsMg94OjreMV4g9TM_n8EJHEqdIih3CujsdxoiMHgE0It0JtHe8vVtUR_BpgP08DnV7dV0GJG3LvsSWQl54ByPDK_gFO3hqNsMMAKAU_xOl_gECJEV2"
+     },
+     {
+      "position": 10,
+      "title": "Swagatam Apartments",
+      "place_id": "ChIJbxymVGflDDkROJJz1581-tg",
+      "data_id": "0x390ce56754a61c6f:0xd8fa359fd7739238",
+      "data_cid": "15634868017000845880",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce56754a61c6f%3A0xd8fa359fd7739238&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce56754a61c6f%3A0xd8fa359fd7739238&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6147457,
+       "longitude": 77.3726132
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJbxymVGflDDkROJJz1581-tg",
+      "provider_id": "/g/11b6sp1hy8",
+      "rating": 3.4,
+      "reviews": 67,
+      "unclaimed_listing": true,
+      "type": "Apartment complex",
+      "types": [
+       "Apartment complex",
+       "Apartment building"
+      ],
+      "address": "C-58/7, Sector 62 Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeuJlvUC2MnmDzUldQouZTKwVwtT5e5ayNu5e8mCkqxfEMbW_7-mmVCo7oVjLn_mSsIaIk_M1ssKdHIDvprY1GaNN5B6oWZjekDmRV5cR0dGMF39fCpIfCKGWwqCauIWg3fFQSL=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/hkajA3icHcTbDoIgAADQLzI1R1ZbD4Vp5GXrpqsXR4i6FDCBrH6wb-hv2joP5_uplerk3DTb2hlVQlQt1ZL2RHBFuRoRwcyqx1IaRJrL5aphEdXb9nGC45gz731qi53Ql2M4pIM6AgrwK9GAThls7s9yHV-z3DUYS6FwRXqLeM4OEmHU5LEtZVhskPfo-rMd4CQBq4nILjfaeGyfArK3iiD2nVkJO1TCMMiGO8QaZZVT-rtDtBhsy7KM-j8x-A8eF0W9"
+     },
+     {
+      "position": 11,
+      "title": "Designers Park Apartments",
+      "place_id": "ChIJAQAAb1vlDDkRFBJTTX1d07I",
+      "data_id": "0x390ce55b6f000001:0xb2d35d7d4d531214",
+      "data_cid": "12885745751586705940",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55b6f000001%3A0xb2d35d7d4d531214&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55b6f000001%3A0xb2d35d7d4d531214&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6218307,
+       "longitude": 77.3687985
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJAQAAb1vlDDkRFBJTTX1d07I",
+      "provider_id": "/g/11bwh58dym",
+      "rating": 4.1,
+      "reviews": 595,
+      "unclaimed_listing": true,
+      "type": "Apartment complex",
+      "types": [
+       "Apartment complex",
+       "Apartment building"
+      ],
+      "address": "Oshy Marg, behind Fortis Hospital Residential, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmOHVOHLF4veMgDGgTrQvtRcYpTCux3uVYveAQD9wppLn8NE9N6PEzSR4fNOKYQq18EF2IsYLhCSkbHQ-wdmrOSb4GiVHwAKAujtYnI8QZmix54ptGvq3Op4s-PzAzPtX3sIfHlx=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/IEFZ4HicHcRRboIwAADQE1VQugWX-NEgUiKjVAxZ9ze7WlQolZZCuKBn8DYmvo_3fNTWavPleU0dLGTXyUYMRvS8U1You-Bd68n-zxjAjYcip5uW4IrgbAed-JbbRB576uyBM32MhikYKuYEotv1qHWmwjxe559FPJcHeM7JntH7Mox3q9SwrI7K2wlTMP63PSlPMLlUeER7NFwtU2lIf9vL9AG1Tdw9IBoaUMxoLuxPYNIzbqbNuPR9H9TvOVAvvGVFiw"
+     },
+     {
+      "position": 12,
+      "title": "Sagar Apartments",
+      "place_id": "ChIJ9TCj9V3lDDkR2i2lNyNjnOE",
+      "data_id": "0x390ce55df5a330f5:0xe19c632337a52dda",
+      "data_cid": "16256977757809225178",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55df5a330f5%3A0xe19c632337a52dda&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55df5a330f5%3A0xe19c632337a52dda&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6145578,
+       "longitude": 77.3712816
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ9TCj9V3lDDkR2i2lNyNjnOE",
+      "provider_id": "/g/11clpt1xj2",
+      "rating": 3.9,
+      "reviews": 32,
+      "unclaimed_listing": true,
+      "type": "Apartment building",
+      "types": [
+       "Apartment building"
+      ],
+      "address": "near by Shramdeep Apartments, C Block, sec 62 CH1, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "open_state": "Open · Closes 4 pm",
+      "hours": "Open · Closes 4 pm",
+      "operating_hours": {
+       "wednesday": "8 am–4 pm",
+       "thursday": "8 am–4 pm",
+       "friday": "8 am–4 pm",
+       "saturday": "8 am–4 pm",
+       "sunday": "Closed",
+       "monday": "8 am–4 pm",
+       "tuesday": "8 am–4 pm"
+      },
+      "phone": "0120 426 0157",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park",
+         "Wheelchair-accessible entrance"
+        ]
+       }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcWNqXbRsdtDgHUDGVCrNqITZmAI54KSwmvwQUnPOFb4OoDGjo3bjdJo3DuWurKQMBsQVCqP9SxBqzQiovM4gdUnJUSwN4XwOo-w86L_u0yk_78G4_0Ja3cJR-KKaQDBWi6bYQ1=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/8F-6_HicHcTbboIwGADgJ6rUUI_JLsBmKChYGaC7IVBI8UB_ocXOvaDPsLdZ4nfx_b0are9qaVm3xh4JAHGrB1X3HKSupR5xaC3RF0ohrizHca_tlmdhdywPqtJUrBPqpas-7DZf362zmZAgNu3DsETuo8-SREC9C9jlpfLBpkM29AHbuYqlq26_iH_c7ped4bEjokqkn8QmJEcTATLz6TYf8POaz-YeybFf2Nw_oCAoGHWz87Q8sfGHGWOMUfOeI_kPu6tElw"
+     },
+     {
+      "position": 13,
+      "title": "Golden Nest Society",
+      "place_id": "ChIJF_U7klzlDDkRPAo8atakHYk",
+      "data_id": "0x390ce55c923bf517:0x891da4d66a3c0a3c",
+      "data_cid": "9880234398333012540",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55c923bf517%3A0x891da4d66a3c0a3c&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55c923bf517%3A0x891da4d66a3c0a3c&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6193906,
+       "longitude": 77.3689369
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJF_U7klzlDDkRPAo8atakHYk",
+      "provider_id": "/g/11f2s04_lh",
+      "rating": 3,
+      "reviews": 29,
+      "unclaimed_listing": true,
+      "type": "Apartment building",
+      "types": [
+       "Apartment building"
+      ],
+      "address": "J999+QH3, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "extensions": [
+       {
+        "accessibility": [
+         "Wheelchair-accessible car park"
+        ]
+       }
+      ],
+      "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=p4PEFbKHghUqA3N4syuTpQ&cb_client=search.gws-prod.grass&w=80&h=92&yaw=207.04477&pitch=0&thumbfov=100",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/9Mu09HicHc1RCsIgGADg2_iWuhJWgUQPRRBEQT2Hc6aCm3_-brbrdKtuU3SB7_u8Xc6Aa8YwJ2Py6E0B_zIBZ6CojdEGo8Aj1bFjY8WyG7qmVz5sQPXRtxLEebdvjgfrbs_t4iRwGq5wIbq56-BNnyUalbSjtvzEFFtqk0IkRS45cXI1J5Mqcs5ryoWoawI-ayc5-T-POMqK8y_zljpU"
+     },
+     {
+      "position": 14,
+      "title": "Snehkunj Apartments",
+      "place_id": "ChIJO69zw13lDDkRJetH6rvFOns",
+      "data_id": "0x390ce55dc373af3b:0x7b3ac5bbea47eb25",
+      "data_cid": "8879627026194492197",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55dc373af3b%3A0x7b3ac5bbea47eb25&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55dc373af3b%3A0x7b3ac5bbea47eb25&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6166949,
+       "longitude": 77.3716614
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJO69zw13lDDkRJetH6rvFOns",
+      "provider_id": "/g/11b6hwd_xk",
+      "rating": 4.2,
+      "reviews": 31,
+      "type": "Apartment building",
+      "types": [
+       "Apartment building"
+      ],
+      "address": "58/13, Sector 62 Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "open_state": "Open 24 hours",
+      "hours": "Open 24 hours",
+      "operating_hours": {
+       "wednesday": "Open 24 hours",
+       "thursday": "Open 24 hours",
+       "friday": "Open 24 hours",
+       "saturday": "Open 24 hours",
+       "sunday": "Open 24 hours",
+       "monday": "Open 24 hours",
+       "tuesday": "Open 24 hours"
+      },
+      "phone": "093507 07325",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLe0jTeRUQ_DXsPmHu5NPJLR-_p4dYWdmiT6vgKd33wiosAKsu6ccpblQYQIeXCc2vG5uYXGDOiycXU39TQPMC5JwsxfqwKcDRvKxJHHlpgiPDGOkVqI3QYSNfyrXHr1TsvLWQ=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/NwS-zXicHcTdEoFAGADQJ0qxMsOMi2imVGgTbVeGr7VFtdXXnwf0EN7GjHNxvp-0bStcqWqekomQUuS8Q96ALFtethOQhSqaG6ICqBrG5lV4XHuGPDjTq8nQL-xOP_iOFyjXap7EUVJk4aIXbkLIkEk0XOwWANU9pzHdcbaFWW_pXcws85i9gZ3JMqT-fqs7A46PenDBDHp3dGw7r0Tmm9bxdal3hManw-PdMLuZhth7EV0PU03TlPQ_KOUPNGJFJw"
+     },
+     {
+      "position": 15,
+      "title": "Oriental Apartments",
+      "place_id": "ChIJ9RargWflDDkRbDLqHIsftN8",
+      "data_id": "0x390ce56781ab16f5:0xdfb41f8b1cea326c",
+      "data_cid": "16119543648611873388",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce56781ab16f5%3A0xdfb41f8b1cea326c&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x390ce56781ab16f5%3A0xdfb41f8b1cea326c&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+       "latitude": 28.6149314,
+       "longitude": 77.3694215
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ9RargWflDDkRbDLqHIsftN8",
+      "provider_id": "/g/11c208lk7g",
+      "rating": 3.8,
+      "reviews": 13,
+      "unclaimed_listing": true,
+      "type": "Apartment building",
+      "types": [
+       "Apartment building"
+      ],
+      "address": "C-28/26, BHA Millenium Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+      "country": "India",
+      "open_state": "Open 24 hours",
+      "hours": "Open 24 hours",
+      "operating_hours": {
+       "wednesday": "Open 24 hours",
+       "thursday": "Open 24 hours",
+       "friday": "Open 24 hours",
+       "saturday": "Open 24 hours",
+       "sunday": "Open 24 hours",
+       "monday": "Open 24 hours",
+       "tuesday": "Open 24 hours"
+      },
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeC93O2I0Vl85NcCcCL3R49vyBnfvurWn5NKKKGfsbl73ao_JeQbOcNysFXcNWo5cBF111F0Tr0i0BaQbfKAj4DvtfjsqGAoI4CgHGjHJWpOhN5ntngQIu39zaSd2p_FDpTNjM=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/cjgKgXicHcTBDYIwFADQiZBCIYqJB8CAiJagRrwR-JYiYou0YHBAd3AbE9_hfT-1Up1c6npb4xkTgrV0kLQHwRXlagbiobO-kFIDqbuud3_sqO_gxIzQuV3YBHzwd_hgOePk8Woc-ozbJI7jsJJlO8eFyLc0LRMgkwwuQDJhgxcYhhGgU49uyCvSsordxlqPqmrkM3RFZPlsEzabbdYlNbG54iyNBuy8i-PV7PJg3Z1Is1-9DISQVv8Hjf8ArrZDbw"
+     }
+    ],
+    "_searched_at": "2026-10-07 09:21:53 UTC"
+   }
+  },
+  "8a5a9ddf366d24def90e72dedaac046e1a25001cc5b651aa038c6497060bba29": {
+   "engine": "google_news",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "q": "Infosys Ltd fake job offer fraud"
+   },
+   "response": {
+    "news_results": [
+     {
+      "position": 1,
+      "title": "Impersonation, cheating pause hiring tests at Infosys",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Shilpa Phadnis"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/business/india-business/impersonation-cheating-pause-hiring-tests-at-infosys/articleshow/131599849.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-131599885,width-1280,height-720,imgsize-97532,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1kelpQY1hZeE1EZHBRM280VFJDZkF4ampCU2dLTWdZQlJLQ09JUW8",
+      "date": "06/09/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-09T07:00:00Z"
+     },
+     {
+      "position": 2,
+      "title": "The LinkedIn job scam is global. The hook is local",
+      "source": {
+       "name": "Rest of World",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://restofworld.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Damilare Dosunmu"
+       ]
+      },
+      "link": "https://restofworld.org/2025/linkedin-job-scams/",
+      "thumbnail": "https://fastly.restofworld.org/uploads/2025/10/ROW_Illustration_V5-scaled.jpg?width=800&dpr=2&crop=16:9",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW9NMHhLZVVRelNuRnhVRmt3VFJDb0FSaXNBaWdCTWdZaFJJak9NUVk",
+      "date": "12/22/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-12-22T08:00:00Z"
+     },
+     {
+      "position": 3,
+      "title": "Neeraj Sharma case: How fake job offers triggered major H-1B visa fraud probe in the US",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/news/new-updates/neeraj-sharma-case-how-fake-job-offers-triggered-major-h-1b-visa-fraud-probe-in-the-us/articleshow/131629764.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-131629845,width-1200,height-900,resizemode-4,imgsize-38530/neeraj-sharma-case-how-fake-job-offers-triggered-major-h-1b-visa-fraud-probe-in-the-us.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNHdUVFJHYzFKMVVVTlRla2QzVFJEZ0F4aUFCU2dLTWdzRkVJaXFrZW9zTWtrdVpB",
+      "date": "06/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-10T07:00:00Z"
+     },
+     {
+      "position": 4,
+      "title": "Infosys defers hiring tests for 20,000+ candidates after spotting impersonation, assessment malpractice:...",
+      "source": {
+       "name": "Moneycontrol.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.moneycontrol.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.moneycontrol.com/news/business/infosys-defers-hiring-tests-for-20-000-candidates-after-spotting-impersonation-assessment-malpractice-report-13944356.html",
+      "thumbnail": "https://images.moneycontrol.com/static-mcnews/2025/02/20250228134340_Infosys.jpg?impolicy=website&width=1600&height=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXZOVU5QV0VaSGRqaFhMVTFFVFJDZkF4ampCU2dLTWdtaEJZYkx5V043SWdN",
+      "date": "06/09/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-09T07:00:00Z"
+     },
+     {
+      "position": 5,
+      "title": "IIM graduate scammed with job offer, spends ₹75,000 to relocate to Delhi, no office found: ‘CEO blocked me’",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sneha Biswas"
+       ]
+      },
+      "link": "https://www.livemint.com/news/trends/iim-graduate-scammed-with-job-offer-spends-rs-75-000-to-relocate-to-delhi-no-office-found-ceo-blocked-me-11779332664271.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2026/05/21/1600x900/logo/pexels-photo-12526862_1779334682408_1779334691828_6683f685-df57-4fcb-86f8-e5a3143b44aa.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNVJZWGszVmtSMmFXZHJkRU5WVFJDZkF4ampCU2dLTWdzQkFJZ3J0YVVXUVh1cVJB",
+      "date": "05/21/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-21T07:00:00Z"
+     },
+     {
+      "position": 6,
+      "title": "Fake job call centre busted, five arrested",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/lucknow/fake-job-call-centre-busted-five-arrested/articleshow/131693519.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-33486062,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXlZVWxXVlhWcWNGcENVVEZFVFJDZkF4ampCU2dLTWdNRm94QQ",
+      "date": "06/13/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-13T07:00:00Z"
+     },
+     {
+      "position": 7,
+      "title": "Recruitment scams abound in Tamil Nadu",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sangeetha Kandavel"
+       ]
+      },
+      "link": "https://www.thehindu.com/news/national/tamil-nadu/recruitment-scams-abound-in-tamil-nadu/article30233872.ece",
+      "thumbnail": "https://th-i.thgim.com/public/news/national/tamil-nadu/4ec594/article53303826.ece/alternates/LANDSCAPE_1200/FakeJobScamTNgraphic",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWFPVWRZYmtGNmJVa3RTR1ZUVFJDZkF4ampCU2dLTWdrTlFwS21HaWs5Q1FJ",
+      "date": "12/08/2019, 08:00 AM, +0000 UTC",
+      "iso_date": "2019-12-08T08:00:00Z"
+     },
+     {
+      "position": 8,
+      "title": "Telangana engineer tries ‘Dragon’-style impersonation fraud to get Infosys job, busted in 15 Days",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indianexpress.com/article/trending/trending-in-india/telangana-engineer-tries-dragon-style-impersonation-fraud-to-get-infosys-job-busted-in-15-days-9962926/",
+      "thumbnail": "https://images.indianexpress.com/2025/04/Telangana-engineer-Dragon-movie-fraud.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTBkMnhCYld0QlYzVkRkMDl4VFJDZkF4ampCU2dLTWdhbFJJU3VPUVU",
+      "date": "04/24/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-24T07:00:00Z"
+     },
+     {
+      "position": 9,
+      "title": "Online Job Scam: 2 held in Cyberabad for taking money, providing fake offer letters",
+      "source": {
+       "name": "NewsMeter",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://newsmeter.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://newsmeter.in/crime/online-job-scam-2-held-in-cyberabad-for-taking-money-providing-fake-offer-letters-725318",
+      "thumbnail": "https://newsmeter.in/h-upload/2024/02/24/364721-whatsapp-image-2024-02-24-at-70140-pm.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUhURmhHVFRKSlNqaEdWazh5VFJDZkF4ampCU2dLTWdtTklaN1dGS3F4cFFJ",
+      "date": "02/24/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-02-24T08:00:00Z"
+     },
+     {
+      "position": 10,
+      "title": "Fraud check: Infosys candidates need to check system for info",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sameer Ranjan Bakshi"
+       ]
+      },
+      "link": "https://m.economictimes.com/tech/information-tech/fraud-check-infosys-candidates-need-to-check-system-for-info/articleshow/114023197.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-114023204,width-1200,height-900,resizemode-4,imgsize-34412/infosys-freshers-hiring.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHpTSFpsZFY4elowaG1UR293VFJEZ0F4aUFCU2dLTWdhbGRKS3RMUWc",
+      "date": "10/08/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-08T07:00:00Z"
+     },
+     {
+      "position": 11,
+      "title": "Beware of recruitment fraud! Why Infosys is discontinuing issuing job offer letters to new recruits throu",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/business/india-business/beware-of-recruitment-fraud-why-infosys-has-discontinuing-issuing-job-offer-letters-to-new-recruits-through-emails/articleshow/114038360.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-114041477,width-1280,height-720,resizemode-4/114041477.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTVVREJIVEc5ck5UTTVZVnBRVFJDZkF4ampCU2dLTWdZZE1wTDFuQWs",
+      "date": "10/08/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-08T07:00:00Z"
+     },
+     {
+      "position": 12,
+      "title": "Tata’s Chandrasekaran expresses deep pain over job scam at TCS",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Shouvik Das"
+       ]
+      },
+      "link": "https://www.livemint.com/companies/tatas-chandrasekaran-expresses-deep-pain-over-job-scam-at-tcs-11688061496259.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2023/06/29/1600x900/2-0-124631600-TCS-4C-0_1681873930418_1688061636700.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXZWbmd3WjJVMFNFcEZjMlZyVFJDZkF4ampCU2dLTWdrQnNJSW93aU04OWdB",
+      "date": "06/30/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-30T07:00:00Z"
+     },
+     {
+      "position": 13,
+      "title": "Infosys tweaks hiring process, not to send job offer letters via email; here’s the reason",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.livemint.com/companies/news/infosys-tweaks-hiring-process-not-to-send-job-offer-letters-via-email-here-s-the-reason-11728637302409.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2024/10/11/1600x900/INFOSYS-MOVES--0_1707982092330_1728637329449.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxkek5ZYUZwa1JHbFFlWGxPVFJDZkF4ampCU2dLTWdhUmdvd3NQUVU",
+      "date": "10/11/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-11T07:00:00Z"
+     },
+     {
+      "position": 14,
+      "title": "Infosys updates hiring process; govt pulls up Ola Electric",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/tech/newsletters/morning-dispatch/infosys-updates-hiring-process-govt-pulls-up-ola-electric/articleshow/114028655.cms",
+      "thumbnail": "https://img.etimg.com/thumb/msid-114028655,width-1200,height-900,imgsize-66080,overlay-ettech/editionshow-amp.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXljSGRDUkMxcVprRlpVa2g1VFJEZ0F4aUFCU2dLTWdZWk40eG9HZ28",
+      "date": "10/07/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-07T07:00:00Z"
+     },
+     {
+      "position": 15,
+      "title": "Microsoft reveals how AI tools have made e-commerce fraud, job scams and tech support frauds more dangero",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/microsoft-reveals-how-ai-tools-have-made-e-commerce-fraud-job-scams-and-tech-support-frauds-more-dangerous/articleshow/120488112.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-120488076,width-1280,height-720,resizemode-4/120488076.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBPVEEyZUdkNWMwSnNabE0wVFJDZkF4ampCU2dLTWdhTklZWEoxQUk",
+      "date": "04/21/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-21T07:00:00Z"
+     },
+     {
+      "position": 16,
+      "title": "How scammers are cashing in on India's job problem",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/jobs/breaking-the-code-of-job-racketeers/articleshow/65715370.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-65715681,width-1200,height-900,resizemode-4,imgsize-481083/job-racket.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iNkNnNVRZVXBZZFUxWFNGQXlUR3hmVFJEZ0F4aUFCU2dLTWc0QkFZYXN1U1UxNFFvMExZNmNJZw",
+      "date": "09/07/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-09-07T07:00:00Z"
+     },
+     {
+      "position": 17,
+      "title": "Man uses imposter to land Infosys job in Bengaluru, faces legal action",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Chaithanya Swamy",
+        "Hm Chaithanya Swamy"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/bengaluru/man-uses-imposter-to-land-infosys-job-in-bengaluru-faces-legal-action/articleshow/120495283.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-117518778,width-1280,height-720,resizemode-72/117518778.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW1ialIwWkMxUE5Fb3pNbGQ2VFJDZkF4ampCU2dLTWdZQklZcW9MUWc",
+      "date": "04/22/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-22T07:00:00Z"
+     },
+     {
+      "position": 18,
+      "title": "Infosys to no longer send job offer letters and attachments, the company will ...",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/infosys-to-no-longer-send-job-offer-letters-and-attachments-the-company-will-/articleshow/114135716.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-114135707,width-1280,height-720,imgsize-24092,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJUbkpYVGkxSlFYWnBRMHg2VFJDZkF4ampCU2dLTWdZRlVwYnNwQWc",
+      "date": "10/16/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-10-16T07:00:00Z"
+     },
+     {
+      "position": 19,
+      "title": "Four running fake cruise ship job racket in Noida arrested",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Advitya Bahl"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/city/noida/four-running-fake-cruise-ship-job-racket-in-noida-arrested/articleshow/129935356.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-129935355,imgsize-59820,width-400,height-225,resizemode-72/image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJZVzFLVlMxd2FqY3laVTFmVFJEaEFSaVFBeWdLTWdhVmdwQm9zZ2M",
+      "date": "04/01/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-01T07:00:00Z"
+     },
+     {
+      "position": 20,
+      "title": "Don't fall for job scams: Tips for spotting fake job offers",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/news/how-to/dont-fall-for-job-scams-tips-for-spotting-fake-job-offers/articleshow/98723214.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-98723267,width-1200,height-900,resizemode-4,imgsize-1926283/job-offer.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1NVlJNYzFRNFpITmpWbkpRVFJEZ0F4aUFCU2dLTWdhUlFZNEtuZ2s",
+      "date": "03/17/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-03-17T07:00:00Z"
+     },
+     {
+      "position": 21,
+      "title": "Telangana man tries to pull off Dragon movie-like scam to land job at software company; gets caught in 15 days | Hindustan Times",
+      "source": {
+       "name": "Hindustan Times",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hindustantimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Neeshita Nyayapati"
+       ]
+      },
+      "link": "https://www.hindustantimes.com/entertainment/tamil-cinema/telangana-man-tries-to-pull-off-dragon-movie-like-scam-to-land-job-at-software-company-gets-caught-in-15-days-101745650633547.html",
+      "thumbnail": "https://www.hindustantimes.com/ht-img/img/2025/04/26/1600x900/Dragon_movie_1745651117792_1745651118196.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXNlalpWUTIxUVVVcE5Sa1pLVFJDZkF4amlCU2dLTWdrQlVJNlhIQ25KU0FJ",
+      "date": "04/26/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-26T07:00:00Z"
+     },
+     {
+      "position": 22,
+      "title": "Fraud alert: Govt warns of work abroad scams, shares tips to identify fake job offers",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.livemint.com/news/india/ministry-of-external-affairs-warns-of-work-abroad-scams-shares-tips-to-identify-fake-job-offers-details-here-11702571771233.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2023/12/14/1600x900/job_scam_1665631164620_1702572240713.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHpNVjlIYVdzNVEwRnNPVlo1VFJDZkF4amlCU2dLTWdZUlJZeEhMZ1k",
+      "date": "12/14/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-14T08:00:00Z"
+     },
+     {
+      "position": 23,
+      "title": "How to stay protected from pig butchering financial scams? Here are 7 key steps",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.livemint.com/money/personal-finance/how-to-stay-protected-from-pig-butchering-financial-scams-here-are-7-key-steps-investments-frauds-11714119032126.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2024/04/26/1600x900/scam_1712716613902_1714119723041.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNURRMkkyU0RaSlNtVkxPSEJ1VFJDZkF4ampCU2dLTWdZaFJKaUxJUWc",
+      "date": "04/27/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-04-27T07:00:00Z"
+     },
+     {
+      "position": 24,
+      "title": "Fake job offers in India or abroad: How to spot a fraudulent job offer, know the full list of authorised a",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Neelanjit Das"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/save/fake-job-offers-in-india-or-abroad-how-to-spot-a-fraudulent-job-offer-know-the-full-list-of-authorised-agents-for-foreign-jobs/articleshow/110567268.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-110567393,width-1200,height-900,resizemode-4,imgsize-36574/fake-job.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXRjR1ZhVVZKbVZIWmFlVzl0VFJEZ0F4aUFCU2dLTWdZdFZZeXVJUVk",
+      "date": "05/31/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-05-31T07:00:00Z"
+     },
+     {
+      "position": 25,
+      "title": "Fake job alert! Check out these signs to spot a fake recruiter",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Riya Tandon"
+       ]
+      },
+      "link": "https://m.economictimes.com/jobs/hr-policies-trends/fake-job-alert-check-out-these-signs-to-spot-a-fake-recruiter/articleshow/101786361.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-101786604,width-1200,height-900,resizemode-4,imgsize-50798/fake-job-alert.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUhkazR3WTFWMWFVcGlUVUpyVFJEZ0F4aUFCU2dLTWdZbGNKQVJOUVk",
+      "date": "07/15/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-07-15T07:00:00Z"
+     },
+     {
+      "position": 26,
+      "title": "Registration scam: Karnataka Govt examining whether fraudulent transactions are fit for cancellation",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://indianexpress.com/article/cities/bangalore/registration-scam-karnataka-govt-examining-whether-fraudulent-transactions-are-fit-for-cancellation-10500202/",
+      "thumbnail": "https://images.indianexpress.com/2026/01/krishna-byre-gowda.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVpNMGRUY1c1VldqVmZPV2xRVFJDZkF4ampCU2dLTWdhdFE1U3VIUWs",
+      "date": "01/28/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-28T08:00:00Z"
+     },
+     {
+      "position": 27,
+      "title": "Thousands of H-1B Visas Are Going to Middlemen Gaming the System",
+      "source": {
+       "name": "Bloomberg.com",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.bloomberg.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Eric Fan",
+        "Denise Lu",
+        "Marie Patino"
+       ]
+      },
+      "link": "https://www.bloomberg.com/graphics/2024-staffing-firms-game-h1b-visa-lottery-system/",
+      "thumbnail": "https://www.bloomberg.com/graphics/2024-staffing-firms-game-h1b-visa-lottery-system/img/visa_red.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNU5kMFZtZVhkaGVtUmFOV1UxVFJEWkFoajVCaWdLTWdNSkFEbw",
+      "date": "07/31/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-07-31T07:00:00Z"
+     },
+     {
+      "position": 28,
+      "title": "Woman exposes new LinkedIn scam after spending hours preparing for ‘fake interview’: 'Everything looked legit'",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Anjali Thakur"
+       ]
+      },
+      "link": "https://www.livemint.com/news/trends/woman-exposes-new-linkedin-scam-after-spending-hours-preparing-for-fake-interview-everything-looked-legit-11766145077685.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2025/12/19/1600x900/logo/MixCollage-19-Dec-2025-05-26-PM-9745_1766145388039_1766145392812.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTRaakppT1hKbmJHVjNZV05MVFJDZkF4ampCU2dLTWdrSlFZelZLR2F4cVFF",
+      "date": "12/19/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-12-19T08:00:00Z"
+     },
+     {
+      "position": 29,
+      "title": "4 remote job scams to watch out for in 2025",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Riya Tandon"
+       ]
+      },
+      "link": "https://m.economictimes.com/jobs/hr-policies-trends/4-remote-job-scams-to-watch-out-for-in-2025/articleshow/119155892.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-119155874,width-1200,height-900,resizemode-4,imgsize-1024602/cms-18.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNTZiSE5pTWpKcFNtaFRaelZKVFJEZ0F4aUFCU2dLTWdB",
+      "date": "03/18/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-03-18T07:00:00Z"
+     },
+     {
+      "position": 30,
+      "title": "There's a guy named Soham Parekh in India who…: Silicon Valley CEO exposes the moonlighting scam of India",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/theres-a-guy-named-soham-parekh-in-india-who-silicon-valley-ceo-exposes-the-moonlighting-scam-of-indian-techie/articleshow/122223553.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-122223569,width-1280,height-720,resizemode-4/122223569.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNWhkV3RWWkZVeWEycG9lVGhLVFJDZkF4ampCU2dLTWdB",
+      "date": "07/03/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-03T07:00:00Z"
+     },
+     {
+      "position": 31,
+      "title": "Rs 100 crore TCS job scam can lead to HR cleanup in major IT companies",
+      "source": {
+       "name": "ETHRWorld.com",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://hr.economictimes.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://hr.economictimes.indiatimes.com/news/workplace-4-0/recruitment/rs-100-crore-tcs-job-scam-can-lead-to-hr-cleanup-in-major-it-companies/101240370",
+      "thumbnail": "https://etimg.etb2bimg.com/thumb/msid-101240370,width-1600,height-900,resizemode-4/.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNDJNbkpXVVdsR2NURmxWRXh3VFJDZkF4ampCU2dLTWdtUkJwSXFBbTJpelFF",
+      "date": "06/24/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-24T07:00:00Z"
+     },
+     {
+      "position": 32,
+      "title": "Fake job offers: How to avoid getting duped in job scams",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Riju Mehta"
+       ]
+      },
+      "link": "https://m.economictimes.com/wealth/earn/fake-job-offers-how-to-avoid-getting-duped-in-job-scams/articleshow/69173183.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-69173237,width-1200,height-900,resizemode-4,imgsize-589785/covscam.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNUtla1YyUW5SRVRGTnFkVlI0VFJEZ0F4aUFCU2dLTWdB",
+      "date": "05/06/2019, 07:00 AM, +0000 UTC",
+      "iso_date": "2019-05-06T07:00:00Z"
+     },
+     {
+      "position": 33,
+      "title": "Job scam: Here are 5 ways to identify a fake job offer letter",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.livemint.com/technology/tech-news/job-scam-here-are-5-ways-to-identify-a-fake-job-offer-letter-11665628755479.html",
+      "thumbnail": "https://images.livemint.com/img/2022/10/13/1600x900/job_scam_1665631164620_1665631181690_1665631181690.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTRSRXcxU0VNMGQxbDBkSGQ0VFJDZkF4amlCU2dLTWdhSlZJYUdQZ1E",
+      "date": "10/13/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-10-13T07:00:00Z"
+     },
+     {
+      "position": 34,
+      "title": "Internship fraud alert: Mumbai influencer scammed by ‘Dream Job’ shares how to spot a fake company",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/magazines/panache/internship-fraud-alert-mumbai-influencer-scammed-by-dream-job-shares-how-to-spot-a-fake-company/articleshow/112699528.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-112700989,width-1200,height-900,resizemode-4,imgsize-1340466/job-scam.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUtNMEpmV2xKWVlreHNUbWx1VFJEZ0F4aUFCU2dLTWdZSmdaUzJyQWM",
+      "date": "08/22/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-08-22T07:00:00Z"
+     },
+     {
+      "position": 35,
+      "title": "LinkedIn's 2025 top companies in India: TCS, Accenture, Infosys top in list",
+      "source": {
+       "name": "Business Standard",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.business-standard.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Zakariya Khan"
+       ]
+      },
+      "link": "https://www.business-standard.com/industry/news/linkedin-s-2025-top-companies-in-india-tcs-accenture-infosys-top-in-list-125040801047_1.html",
+      "thumbnail": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-10/11/full/1728626960-9854.JPG",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdRV1JHY0hGVE9IUnhXVU4xVFJDN0F4aTBCU2dLTWdZQk1LSmtHQW8",
+      "date": "04/08/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-08T07:00:00Z"
+     },
+     {
+      "position": 36,
+      "title": "IAS AB Pandey and Infosys chairman Nandan Nilekani accused of 10,000 crore scam",
+      "source": {
+       "name": "Vibes Of India",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.vibesofindia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.vibesofindia.com/ias-ab-pandey-and-infosys-chairman-nandan-nilekani-accused-of-10000-crore-scam/",
+      "thumbnail": "https://www.vibesofindia.com/wp-content/uploads/2021/07/A4F7F03F-3971-47F7-AF2B-62965F08E446-930x527.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVRNVk4zUW01T01uSjNiMjFNVFJDaEF4amdCU2dLTWdhdFZZek5wUWc",
+      "date": "07/10/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-07-10T07:00:00Z"
+     },
+     {
+      "position": 37,
+      "title": "Accenture Fires Employees With Fake Experience Letters In India. Check Details Here",
+      "source": {
+       "name": "India.com",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.india.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.india.com/business/accenture-fires-employees-with-fake-experience-letters-in-india-check-details-here-5727693/",
+      "thumbnail": "https://static.india.com/wp-content/uploads/2021/12/noname-59.png?impolicy=Medium_Resize&w=1200&h=800",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUlTamhNVUdONGVuVlJXbW94VFJERUF4aW1CU2dLTWdhQms0WnF2UVE",
+      "date": "11/06/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-11-06T07:00:00Z"
+     },
+     {
+      "position": 38,
+      "title": "Never pay - How to determine if a job offer is scam",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/jobs/how-to-determine-if-a-job-offer-is-scam/never-pay/slideshow/62871759.cms",
+      "thumbnail": "https://img.etimg.com/thumb/msid-62871760,width-480,height-360,imgsize-396170,resizemode-75/whether-a-job-offer-is-fake-or-a-legitimate-one.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNXFRamhwYVdoeVVsbHRZbGhKVFJEb0FoamdBeWdLTWdB",
+      "date": "02/11/2018, 08:00 AM, +0000 UTC",
+      "iso_date": "2018-02-11T08:00:00Z"
+     },
+     {
+      "position": 39,
+      "title": "This WhatsApp scam can empty your bank balance. See details",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/news/new-updates/this-whatsapp-scam-can-empty-your-bank-balance-see-details/articleshow/97229967.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-97229946,width-1200,height-900,resizemode-4,imgsize-24186/this-whatsapp-scam-can-empty-your-bank-balance-see-details.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDFWbGx6YzNodWRUTjFSVkEyVFJEZ0F4aUFCU2dLTWdZaFZZb3NzZ2M",
+      "date": "01/22/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-01-22T08:00:00Z"
+     },
+     {
+      "position": 40,
+      "title": "Nasscom: Con job: Fake interview menace may get worse",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sujit John"
+       ]
+      },
+      "link": "https://timesofindia.indiatimes.com/jobs/con-job-fake-interview-menace-may-get-worse/articleshow/20744777.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-20744777,imgsize-19291,width-400,resizemode-4/20744777.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNHRibXh2VURSdFpGVndTa2xUVFJDTEFoaVFBeWdLTWdB",
+      "date": "06/26/2013, 07:00 AM, +0000 UTC",
+      "iso_date": "2013-06-26T07:00:00Z"
+     },
+     {
+      "position": 41,
+      "title": "The new American dream: getting paid to do nothing?",
+      "source": {
+       "name": "The Verge",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.theverge.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Emma Rindlisbacher"
+       ]
+      },
+      "link": "https://www.theverge.com/c/22820291/csk-infosys",
+      "thumbnail": "https://cdn.vox-cdn.com/thumbor/-_dLSjaxjZKwLeUBXBKKdOVX9-E=/0x0:3000x2000/fit-in/3000x2000/cdn.vox-cdn.com/uploads/chorus_asset/file/23067495/VERGE_LEAD.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWtja0p0ZW5KaWEwUkhObkk1VFJERUF4aW1CU2dLTWdZSlVvd0dLUWs",
+      "date": "12/07/2021, 08:00 AM, +0000 UTC",
+      "iso_date": "2021-12-07T08:00:00Z"
+     },
+     {
+      "position": 42,
+      "title": "Fake bank alerts to job offers: Six cyber scams that wiped out Indian bank accounts in 2025",
+      "source": {
+       "name": "The Financial Express",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.financialexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.financialexpress.com/life/technology-fake-bank-alerts-to-job-offers-six-cyber-scams-that-wiped-out-indian-bank-accounts-in-2025-4094233/",
+      "thumbnail": "https://images.financialexpressdigital.com/2025/10/IMG_6647_b2642b_20251010083215.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNjMngxUTFKR1lrWm5SQzF0VFJDZkF4ampCU2dLTWdZbGRvd01NZ1k",
+      "date": "01/01/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-01T08:00:00Z"
+     },
+     {
+      "position": 43,
+      "title": "CBI Arrests Mumbai Man Sunil Ramakrishnan For Trafficking Indians To Myanmar Cyber Scam Compounds",
+      "source": {
+       "name": "Free Press Journal",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.freepressjournal.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.freepressjournal.in/mumbai/cbi-arrests-mumbai-man-sunil-ramakrishnan-for-trafficking-indians-to-myanmar-cyber-scam-compounds",
+      "thumbnail": "https://media.assettype.com/freepressjournal/2026-03-15/jcli4sqh/ChatGPT-Image-Mar-15-2026-103652-PM.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWlURWd6Y0ZweGRVdG5jM0Z6VFJDZkF4ampCU2dLTWdZQklvcmdHQWs",
+      "date": "04/01/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-01T07:00:00Z"
+     },
+     {
+      "position": 44,
+      "title": "Infosys Stops Online Test Of 20,000 Candidates After Cheating Cases Detected",
+      "source": {
+       "name": "Trak.in",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://trak.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mohul Ghosh"
+       ]
+      },
+      "link": "https://trak.in/stories/infosys-stops-online-test-of-20000-candidates-after-cheating-cases-detected/",
+      "thumbnail": "https://trak.in/stories/wp-content/uploads/2026/06/ChatGPT-Image-Jun-10-2026-09_02_11-AM.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXdkRU5oZHpNMmVFbHhPV2hFVFJERUF4aW1CU2dLTWdZQlFZYWp2Z00",
+      "date": "06/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-10T07:00:00Z"
+     },
+     {
+      "position": 45,
+      "title": "Beware of this Job Scam Carried Out in the name of IndiGo Airlines… |",
+      "source": {
+       "name": "FactCrescendo",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://english.factcrescendo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mary Princy Deepa"
+       ]
+      },
+      "link": "https://english.factcrescendo.com/2024/06/08/indigo-airlines-job-offer-not-real-but-scam/",
+      "thumbnail": "http://english.factcrescendo.com/wp-content/uploads/2024/06/Hindi_20240608_220742_0000-1024x576.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTZZa2xSUjJwcVYxQTVTR0p5VFJDZkF4ampCU2dLTWdtSklZeG5KcWMwcFFJ",
+      "date": "06/08/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-06-08T07:00:00Z"
+     },
+     {
+      "position": 46,
+      "title": "Land for job scam: Home Ministry permits prosecution of Lalu Prasad Yadav in money laundering case",
+      "source": {
+       "name": "India TV News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.indiatvnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Atul Bhatia",
+        "Sheenu Sharma"
+       ]
+      },
+      "link": "https://www.indiatvnews.com/news/india/land-for-job-scam-home-ministry-permits-lalu-prasad-yadav-prosecution-in-money-laundering-case-latest-updates-2024-09-20-953102",
+      "thumbnail": "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/09/lalu-prasad-yadav-pti-1726808055.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNHdTbkV6VEV0Wk4zRnZPWEZCVFJDZkF4ampCU2dLTWdrZFFvSVNuZWx5bUFB",
+      "date": "09/20/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-09-20T07:00:00Z"
+     },
+     {
+      "position": 47,
+      "title": "Delhi court summons former Bihar CM Lalu Prasad, his sons Tejashwi and Tej in land for job scam case",
+      "source": {
+       "name": "India TV News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.indiatvnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Arushi Jaiswal"
+       ]
+      },
+      "link": "https://www.indiatvnews.com/delhi/delhi-court-summons-former-bihar-cm-lalu-prasad-tejashwi-yadav-in-land-for-job-scam-case-latest-updates-2024-09-18-952722",
+      "date": "09/18/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-09-18T07:00:00Z"
+     },
+     {
+      "position": 48,
+      "title": "Hindustan Pencils denies offering WFH pencil packing jobs, takes legal action against scammers falsely attributing Nataraj and Apsara",
+      "source": {
+       "name": "The Financial Express",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.financialexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.financialexpress.com/jobs-career/education-hindustan-pencils-denies-offering-wfh-pencil-packing-jobs-takes-legal-action-against-scammers-falsely-attributing-nataraj-and-apsara-3221187/",
+      "thumbnail": "https://images.financialexpressdigital.com/2023/08/Untitled-design-2023-08-24T131449.051.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXVTbXh4Tm04MlIxQnVUa2hvVFJDZkF4ampCU2dLTWdZTmtaWUdOUWM",
+      "date": "08/24/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-08-24T07:00:00Z"
+     },
+     {
+      "position": 49,
+      "title": "Jobs at Shah Rukh Khan's Red Chillies Entertainment? Company clarifies - Read",
+      "source": {
+       "name": "ET Now",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.etnownews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Gunjan Rajput"
+       ]
+      },
+      "link": "https://www.etnownews.com/news/jobs-at-shah-rukh-khans-red-chillies-entertainment-company-clarifies-read-article-110801339",
+      "date": "06/17/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-06-17T07:00:00Z"
+     },
+     {
+      "position": 50,
+      "title": "IT Company Cheats Pune Engineers of Crores: Police Case Registered",
+      "source": {
+       "name": "Punekar News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.punekarnews.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.punekarnews.in/it-company-cheats-pune-engineers-of-crores-police-case-registered/",
+      "thumbnail": "https://www.punekarnews.in/wp-content/uploads/2025/10/Bavdhan-police-station-300x169.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXJRbGs0VmtOaVoyWjJlakZZVFJDcEFSaXNBaWdLTWdZVlU1REtJUWs",
+      "date": "10/23/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-23T07:00:00Z"
+     },
+     {
+      "position": 51,
+      "title": "Former CEO Vijay Agarwal, Associates Booked For ₹19.66 Crore Corporate Fraud In Mumbai",
+      "source": {
+       "name": "Free Press Journal",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.freepressjournal.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "POONAM APRAJ"
+       ]
+      },
+      "link": "https://www.freepressjournal.in/mumbai/former-ceo-vijay-agarwal-associates-booked-for-1966-crore-corporate-fraud-in-mumbai",
+      "thumbnail": "https://media.assettype.com/freepressjournal/2023-05/298da218-d3d2-4e6f-8a84-82e53c302d82/fraud_aug_d.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdVVmMwYzJ4aGQxQlpNa2hwVFJDZkF4ampCU2dLTWdhVlJaYnBIUWc",
+      "date": "10/15/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-15T07:00:00Z"
+     }
+    ],
+    "_searched_at": "2026-10-07 09:33:22 UTC"
+   }
+  },
+  "4f9b936b315ebdf819bf72dfab7f043239af8338555cd783a20af9b3a3789cb3": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "site:infosys.com (\"9876543210\" OR \"98765 43210\")"
+   },
+   "response": {
+    "search_information": {
+     "query_displayed": "site:infosys.com (\"9876543210\" OR \"98765 43210\")",
+     "total_results": 0,
+     "time_taken_displayed": 0.13,
+     "organic_results_state": "Fully empty"
+    },
+    "error": "Google hasn't returned any results for this query.",
+    "_searched_at": "2026-10-07 09:33:35 UTC"
+   }
+  }
+ }
+}

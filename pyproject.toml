@@ -47,3 +47,6 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP"]
 ignore = ["E501"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"src/asli/web/app.py" = ["B008"]  # FastAPI's Form()/File() defaults are the documented pattern

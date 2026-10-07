@@ -15,6 +15,7 @@ from typing import Any
 
 from asli.config import Settings
 from asli.errors import AsliError
+from asli.i18n import report_language
 from asli.ingest.images import PreparedImage, prepare_image
 from asli.investigate import planner
 from asli.investigate.checks import Ctx, all_signals, resolve_official, verifiable_entities
@@ -28,7 +29,6 @@ from asli.risk.report import build_report, claim_chips, enforce_citations, indep
 from asli.serp.client import Budget, Recorder, Recordings, SerpClient, SerpOutcome
 from asli.serp.normalize import NORMALIZERS
 from asli.store import Store
-from asli.i18n import report_language
 
 log = logging.getLogger("asli.investigate")
 
@@ -139,7 +139,7 @@ class Investigator:
             scheme=graph.scheme, language=lang, extraction=graph.extraction, llm_model=graph.llm_model,
             engines=sorted({c.engine for c in check_list}), searches=budget.used, cache_hits=budget.cache_hits,
             credits=budget.live, evidence=len(book.items), flags=[f.code for f in report.flags],
-            level=report.level, score=report.score, confidence=report.confidence,
+            verdict=report.level, score=report.score, confidence=report.confidence,
             latency_ms=stats.latency_ms, errors=[c.error for c in check_list if c.error] + graph.notes,
         )
         if self.settings.asli_store_reports:

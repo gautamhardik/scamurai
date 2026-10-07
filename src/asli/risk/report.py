@@ -13,7 +13,16 @@ from asli.i18n import HEADLINES, LEVELS, RECS, TARGET_GENERIC, UI, flag_text, fm
 from asli.investigate.checks import Official, verifiable_entities
 from asli.investigate.evidence import EvidenceBook
 from asli.logs import log_event
-from asli.models import CheckResult, ClaimChip, ClaimGraph, Flag, Recommendation, ReportStats, RiskReport, Signal
+from asli.models import (
+    CheckResult,
+    ClaimChip,
+    ClaimGraph,
+    Flag,
+    Recommendation,
+    ReportStats,
+    RiskReport,
+    Signal,
+)
 from asli.risk.engine import Evaluation
 from asli.risk.signals import REGISTRY
 

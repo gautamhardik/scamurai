@@ -1,0 +1,2526 @@
+{
+ "scenario": "nike_deal",
+ "recorded_at": "2026-10-07T15:24:39+05:30",
+ "input_hash": "b4658d9331ba33be761cc6f108643e0f340cf75df57b1565ef19a3133f569147",
+ "llm": {
+  "data": {
+   "language": "en",
+   "ocr_text": "",
+   "content_kind": "whatsapp",
+   "scheme": "shopping_deal",
+   "claimed_org": {
+    "name": "Nike",
+    "category": "brand"
+   },
+   "sender": {
+    "name": null,
+    "email": null,
+    "phone": "9123456780"
+   },
+   "phones": [
+    "9123456780"
+   ],
+   "urls": [
+    "nike-outlet-sale.shop"
+   ],
+   "emails": [],
+   "upi_ids": [],
+   "amounts": [
+    {
+     "text": "₹1,499",
+     "purpose": "price"
+    }
+   ],
+   "product": {
+    "name": "Nike Air Jordan 1 Low",
+    "brand": "Nike",
+    "claimed_price_text": "₹1,499"
+   },
+   "job": {
+    "company": null,
+    "role": null,
+    "salary_text": null,
+    "location": null,
+    "fee_requested": false
+   },
+   "address": null,
+   "app_name": null,
+   "requested_actions": [
+    {
+     "type": "visit",
+     "quote": "visit nike-outlet-sale.shop"
+    }
+   ],
+   "pressure": [
+    {
+     "type": "urgency",
+     "quote": "Limited stock"
+    },
+    {
+     "type": "reward",
+     "quote": "90% OFF"
+    }
+   ],
+   "ai_directed_text": []
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+ },
+ "expected": {
+  "level": "HIGH_RISK",
+  "flags": [
+   "brand_lookalike_domain",
+   "image_reused",
+   "known_scam_pattern",
+   "price_anomaly",
+   "suspicious_tld",
+   "threat_or_urgency"
+  ]
+ },
+ "searches": {
+  "6c4e76e5d66d5cca6cd0c2030c26daa53f984825b3f565b57087fb79b8887b1b": {
+   "engine": "google_lens",
+   "params": {
+    "country": "in",
+    "hl": "en"
+   },
+   "response": {
+    "visual_matches": [
+     {
+      "position": 1,
+      "title": "Buy Nike Air Jordan 1 Low Men's Shoes - Casual Shoes for Men ...",
+      "link": "https://www.myntra.com/casual-shoes/nike/nike-air-jordan-1-low-mens-shoes/43092169/buy",
+      "source": "Myntra",
+      "source_icon": "https://serpapi.com/images/i/_9j_4AAQSkZJRgABAQAAAQABAAD_2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys_RD84QzQ5OjcBCgoKDQwNGg8PGjclHyM3Nzc3Nzc3NzU3Nzc3Nzc3NzcyNzA3Nzc0Nzc3Nzc3Nzc1NzU3Nzc3Nzc1MSw4Nzc4Mf_AABEIACAAIAMBEQACEQEDEQH_xAAZAAADAAMAAAAAAAAAAAAAAAAAAwYCBAf_xAAnEAABAwIFBAIDAAAAAAAAAAABAgMRAAQGEiExQRNRYZEFFGJxof_EABoBAQACAwEAAAAAAAAAAAAAAAADBQECBgT_xAAsEQABAgMFBQkAAAAAAAAAAAAAAQIDBBEFITEy8BNBYXGBEiJCUZGhwdHh_9oADAMBAAIRAxEAPwDthVFAGvJ9UASeD7oACpoBYOp9VkEq1ipT2Irhhsj6FusMqMbkyCufBBH6BPIjzzkR0q6Ersr69MKF0tlKko2Iudb6cPLXI17HGLj2KPrOZR8Y-rosHLqFjZU85p24lPmZZV6TMJ72-FadKJfrcSRbH7EntEzpeqcPz7LInUeq3KEU4VdNYbMLIOU-aGW0qlcCT-Owq7aYZetFOIN86ouFQnKDEAd4j-k1HajEnW0bdTAvY9rtiTiRETuJd811uF32EHV4etre2cbTfsuF3qGQCpUSJieE6_iK3s1qSjOw6-uOvY2g2y1Jtz3ouzclKctL6llJMTvuayc-YE0AZj2oAzHtQADFAf_Z.jpeg",
+      "rating": 4.8,
+      "reviews": 79,
+      "price": {
+       "value": "₹6,297*",
+       "extracted_value": 6297.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3h6yF6tNxVQj6caAY2kQAI_qhXfyDdFuP7XchG32nXmm-0ISO",
+      "thumbnail_width": 259,
+      "thumbnail_height": 194,
+      "image": "https://assets.myntassets.com/w_412,q_50,,dpr_3,fl_progressive,f_webp/assets/images/2026/JUNE/15/ATFN2G6N_94137ab8df9a46a39d664770f459df7f.jpg",
+      "image_width": 1440,
+      "image_height": 1080
+     },
+     {
+      "position": 2,
+      "title": "Buy Nike Air Jordan 1 Low Men's Shoes Online | Nike India",
+      "link": "https://www.nike.in/nike-air-jordan-1-low-men-s-shoes/p/27762909",
+      "source": "Buy Nike Air Jordan 1 Low Men's Shoes Online | Nike India",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABE0lEQVRYhe2SMU7DQBBF_9hIcSrGit37CL5BtqTDJSUcgZuQE4BPgHMD3wBKSkoaS9vZkqX9NEaKEtuJoWRftzPz94--BvB4PB7Pfyecamw2m6Jt24-_fJ6maR5F0d16vb5ZrVa267qv45mrMaGq5iRvAVRLDFVVwzAsSG5Jmr7vSwBP1lo7pTlZQFVVRF4BlBcamsGwAJA552qSewCPc8aTCwRBcE8yI7kdEyRJYpxzW5IGgHHO_bQqkg_W2vqc6SFyXIjj-A1APjw_RaQEcE0yH-p6MG5J7nAm5qUL8AJdHQTBrmmaRTcyxtgR1gDMSN2KSOmcq5bGPMdJAqqaicjzsIQF8D4c1ctvY_Z4PB6PZ45vRpF0ec0xtzcAAAAASUVORK5CYII.png",
+      "price": {
+       "value": "₹7,646*",
+       "extracted_value": 7646.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCMRlpn9DOPww8Xs40gliaDKffgj1dOQn6qW-gZrJrulojYVA",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/d/ad22b92Nike-553558-200_1.jpg?rnd=20200526195200&tr=w-1536",
+      "image_width": 1536,
+      "image_height": 1536
+     },
+     {
+      "position": 3,
+      "title": "Nike Men Air Jordan 1 Low Brown Casual Sneaker",
+      "link": "https://luxury.tatacliq.com/nike-men-air-jordan-1-low-brown-casual-sneaker/p-mp000000031499447",
+      "source": "TATA CLiQ Luxury",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAOVBMVEVHcEwODhAODhAODhAPDxAODhEODhAODhAODg4ODhCFe_8DBABuZtQ6NmobGit4b-deV7JMR49HcExdSyG5AAAAE3RSTlMA1dT_SOXklg_3__________8AFlK4AAAAAPZJREFUOI2NU1u2gyAMxKLFQkjC_jd7Eyg1Fax3PjzCjJOYh3OCNTz9gGdYXcMeXiOteIW98o85rVhUEa5574PEv_B_R1l_G6iFzT95RJSnweYMnTIDAOdkJYcgZYoNlGeClIUCLgyiKGkQKE9iLsgiyWkQkPLtHSkCngRq8PlKD58g3YEjHXERIp8E9kosjPwQmMxTmQl-O0gOYOo35vD9F8UcbB2wXaZZHWonKKMUEov0hP1ZUH17L-KkUOoB724Cq2IQSOzCRMQZvbj1LIxAR0ZR40GfCTdZGUX_i-1-aG_H_nZx3L5c88v-n-Wt67-N9NbW_w-LGhSr_7sH3gAAAABJRU5ErkJggg.png",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS5gP7zEStFn55-xrc2lDdVP4vPHPVcXx00xdaXotkvx15VBj7K",
+      "thumbnail_width": 237,
+      "thumbnail_height": 213,
+      "image": "https://img.tatacliq.com/images/i32/658Wx734H/MP000000031499437_658Wx734H_202606211336061.jpeg",
+      "image_width": 734,
+      "image_height": 658
+     },
+     {
+      "position": 4,
+      "title": "Jordan - AIR JORDAN 1 LOW - VegNonVeg",
+      "link": "https://www.vegnonveg.com/products/jordan-air-jordan-1-low-palominoblack-phantom-sail",
+      "source": "VegNonVeg",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8_9hAAABP0lEQVQ4je2TPUgCARiGn_NODQkyWnQwCAkikBQkKiioJRKiscm2xoSitalmo9mtXwwaiqaiNIoMFRUaKiSJhHRQaIh-vDuvITgx3dyid_rg-94fXvgETdNoBYaW2H9DQAgcLBe9NpfUbHmci26FTp8x-3z-Zns5lVAkr80l-Ufmuh5e7ohmL-judDDpmsIgGDh5ujIKJiPm2aUuqlXk8z3U_COmsWkMTg8QLEsA2cI944eLFFQVgI1SjsDEQp3bZ2iF97V9AD6su3QchWsdpPMZnQwQK2Qa4lZu4vqsvaoo6cuagMfhxi6K-sGw3d0gYBoarBVnFZE8owBIAL32PiIz63Ud_Ebb_Cqis7_WQc8AxM-QksVbhevNMoDFaKH0VmYntv0Tu6rIWkXmKxws6-6WduRkBJIR5FRCEf5_gW86OHMRdI_F0AAAAABJRU5ErkJggg.png",
+      "price": {
+       "value": "₹8,995*",
+       "extracted_value": 8995.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ59j-OWNzdimGJyfqLxs1LGrK8bhmXDrGnYCSIUB64avx6Ynus",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://images.vegnonveg.com/resized/500X500/15561/jordan-air-jordan-1-low-palominoblack-phantom-sail-6a4e3aa25ec2b.jpg?format=webp",
+      "image_width": 500,
+      "image_height": 500
+     },
+     {
+      "position": 5,
+      "title": "JORDAN | AIR JORDAN 1 LOW { PALOMINO/BLACK-PHANTOM-SAIL ...",
+      "link": "https://www.superkicks.in/products/jordan-air-jordan-1-low-palomino-black-phantom-sail",
+      "source": "Superkicks",
+      "source_icon": "https://serpapi.com/searches/6ac605d4bc3f0ba401e74fd1/images/dS0XXscQ1Dr_MqUmgV51YiYBf1O9aNOSsQcDmwxMxMs.png",
+      "price": {
+       "value": "₹8,995*",
+       "extracted_value": 8995.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTgyjcB_Eg5wFQe8BTTSg7czXOlmAewMs0l5W6RENhEeHirVEaV",
+      "thumbnail_width": 246,
+      "thumbnail_height": 205,
+      "image": "http://www.superkicks.in/cdn/shop/files/2_13fb9725-eb47-49b1-ba3f-1fe53995dd46.jpg?v=1782208979",
+      "image_width": 1300,
+      "image_height": 1080
+     },
+     {
+      "position": 6,
+      "title": "Jordan Air Jordan 1 Low \"Light Olive\" Sneakers | Green ...",
+      "link": "https://www.farfetch.com/in/shopping/women/jordan-air-jordan-1-low-light-olive-sneakers-item-19084463.aspx",
+      "source": "Farfetch",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAXVBMVEX___8PDw-SkpIAAAAiIiLe3t4cHBxISEgXFxc5OTns7Oz6-voKCgoSEhKOjo5LS0uDg4MnJyfOzs7AwMCbm5v29vZZWVmpqanR0dEvLy9PT09DQ0O5ubk0NDSenp7Jt3f3AAAAtElEQVQ4jd2PyRKDIBAFhZmwiRhc4pb4_58poAcxkENuSV_GKrqsfkXxXzQdPWPa-LnnQCLAxMKDINNwJhYaQCaH8XZCRUKnEcZPhZTgVPqPMvMHSljthWau9M6l4RAUCmRVIC0MrnW57zxTgkvRuUg2-zGuNbvCcl6_EJHvLOtVQCEEw3A8QN8EKeWE4Xim7trAlepNhVYd9KkVLtJmVxwzvxUMwOIF0CIttIauZTg0Lfw4G5szCW0At_xJAAAAAElFTkSuQmCC.png",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQYresyVA1VXaYXX_ed9mUGHyxPHcqbhTpqCD1APKRkXqIeoxC-",
+      "thumbnail_width": 259,
+      "thumbnail_height": 194,
+      "image": "https://cdn-images.farfetch-contents.com/19/08/44/63/19084463_44389932_1000.jpg",
+      "image_width": 1334,
+      "image_height": 1000
+     },
+     {
+      "position": 7,
+      "title": "Got these yesterday from Footlocker for 9k now its listed in ...",
+      "link": "https://www.reddit.com/r/SneakersIndia/comments/1wuwzwv/got_these_yesterday_from_footlocker_for_9k_now/",
+      "source": "Reddit",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAh1BMVEVHcEz_RQD_RgD_RQD_RQD_RQD_RAD_RQD_RQD_RQD-____RQD_NwD_PQD_QQDw9vj3_P3i7O_M2eD07-z6fFvQ4OcBBAb_Ug30uKz408n7Zjr7jnLa5Ojcj4T5cEzYop7Qz9HDycv0nYrLQiXpWzwZJChaNitkZWaiLgTvGwCIfHuOW01HcEyTqjndAAAALXRSTlMAyU9SiuIMIvWe_____________________________________________wAEJt9nAAABrUlEQVQ4jYVTWXaDMAyEpKyyvBA7Zg9kb3v_-1U2JYG2eZ0fY8_YEtIoCB6It1mYAqRhto2D30gyIh_Ikp_8G_zA2_p6tCKRMQ7R4pEkXfGsqaoaIU1e8HjMCZY_Fev3-f2mSHBEgOiv_E6X64eSUjrBlGmyzv5y4rpVquB-54Jky-f5_co51ofOToKM6ucJpD1naPX1U1vGGHJ_BGkcbN1_Wa2B9eUu99iVPQNNQqI2LgJrBJ1W-QIVaUXDXIwQUOcvoBHCIAVWvRJUDNIAHoLDYSbmLxKAE5RCyjzv3uvv8-6972iRonSCFHhtSCFOUJ8nwRnqkyDe1NQPShKwb0lxtrb_zs3aMxW77anaoS8kBRGy0s1ch0ZXUvgA9JuuUNiIHUmkKoZxHArXKyFEg75QMZmBg1FKCXHZe1yIVaoFV-t4ahZq07ZKjJNgdHSrcWrW1G7sTFEYNd72-9uoWlOYDud2T4ZheigKp1HGrYNmC2t7y6E9DsaTxgxH6-9HK9NyhLopCU0N3gsLW8-m4jQQzizT7sn_miqP6B_-OXqbP9g0ez13bvw3i_H_Asr5MBnHLL6RAAAAAElFTkSuQmCC.png",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcCe_jhsT7inWc9TTj1q80QqEjjR78P82-Chf4hg99WbydGAyN",
+      "thumbnail_width": 251,
+      "thumbnail_height": 201,
+      "image": "https://i.redd.it/0cwrq124dush1.jpg",
+      "image_width": 1501,
+      "image_height": 1206
+     },
+     {
+      "position": 8,
+      "title": "Air Jordan 1 Low Men's Shoes These classic low-tops feature ...",
+      "link": "https://www.instagram.com/p/DbNO1gnIJAd/",
+      "source": "Instagram",
+      "source_icon": "https://serpapi.com/searches/6ac605d4bc3f0ba401e74fd1/images/Mn3biAZgLbuP8KZ11fxkoX7_j28msC6Ku2Cfh-1woSI.png",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSPZsFgSaUIl4IRY8HviGf5-tRgZAmXG0tetG7p4f_LMqo6fJtS",
+      "thumbnail_width": 251,
+      "thumbnail_height": 201,
+      "image": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3948877564340359430",
+      "image_width": 1800,
+      "image_height": 1440
+     },
+     {
+      "position": 9,
+      "title": "Air Jordan 1 Low Palomino/Black/Phantom/Sail Price in India ...",
+      "link": "https://www.culture-circle.com/products/all/air-jordan-1-low-palomino-black-phantom-sail",
+      "source": "Culture Circle",
+      "source_icon": "https://serpapi.com/searches/6ac605d4bc3f0ba401e74fd1/images/qrTTzY4WhHF5RAbfqdPBy8LHepIYvI_WKJBj1tFOYrA.png",
+      "price": {
+       "value": "₹7,915*",
+       "extracted_value": 7915.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-sHp2X2fUewLAu-CtFm8UDrL6QHaftO6T-0zJzBiRV0nspPh5",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://culture-circle.gumlet.io/productsimages/product/632192/6299215.jpg",
+      "image_width": 1200,
+      "image_height": 1200
+     },
+     {
+      "position": 10,
+      "title": "Jordan 1 Low Mocha Gs India | Kicks Machine",
+      "link": "https://www.kicksmachine.com/products/jordan-1-low-mocha-gs-sale",
+      "source": "Kicks Machine",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAclBMVEUAAAABAQH___8CAgIDAwMEBAQGBgYFBQUODg4KCgrl5eUvLy8SEhKpqakoKCja2toXFxdcXFyZmZn29vZQUFBXV1c7OztLS0tBQUGjo6MiIiIbGxvu7u5_f3-9vb2Li4tmZmY9PT3U1NSNjY1ra2vJyckF6-SyAAABy0lEQVQ4jd2SaXIiMQyFnyWvuLdAgKY7BBLg_lecJ9M1_-YC43LhQv0kfVqA7bjt_Ov__y7In1UDEBDjcKzz6TwpXCpAwWme5wnxfC_I0AT87ITnUuAZQdH1IldGLEuNCErbupPdQb4GxGBJFgo-Wrph0WwuZZRf8zKxD92yp6CDQykDnZw3wXgW-V3N6IfuIfJJWsq7YQKiTqPs8jetGhmkphsjMFm27GdEj0wGPEX6iIilYr8xRDjNZ6gvFBSqpDJjXTeBJ13A8TCzHgqymfdIHUvbInjVLjJ7NcGYtR5kXDCs3gRHQpIe5B3rRMgxOhDziVNUNYG2RlQ5yFyGyjgF6VPkxcKT0u3oW09fIg8-py9jCJ7tfFohj8bAGVxFdpMvWCgIpL62D2ETACcWdrdq82iCjPXwmmzQ-2YPHaG-2SfnbFgrSkB_g3fQCwUO07Xv-7u3CMdLf_ngm4YlsLR66_trRwgOm_tBSzCVQZVoqUM2Iy_HFYvnE6Jn21MrXUNhEtiyudIc2jKqtd7s7ZcTQeskAuevbdHQgsN7hBDeLjT75NS-uFj-7rQBcXebkxqJewdgu0KwwMm9g8V2jZCXm50ajHGaypj_AKmXFNG-G7L-AAAAAElFTkSuQmCC.png",
+      "price": {
+       "value": "₹17,499*",
+       "extracted_value": 17499.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSak9wPkqf0PIuPPKkldC8oaZvvtgncAHFvONay7ifpWoUVgCNK",
+      "thumbnail_width": 190,
+      "thumbnail_height": 266,
+      "image": "https://www.kicksmachine.com/cdn/shop/files/Air-Jordan-1-Low-Mocha-GS-Product.webp?v=1770206165&width=1400",
+      "image_width": 1000,
+      "image_height": 1400
+     },
+     {
+      "position": 11,
+      "title": "Air Jordan 1 Low Men's Shoes. Nike ID",
+      "link": "https://www.nike.com/id/t/air-jordan-1-low-mens-shoes-6Q1tFM",
+      "source": "Nike",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAVFBMVEUAAAD___-ysrJJSUkwMDAYGBg_Pz9lZWU2NjatrKwQERFiYmLCwsJzc3MFBQWoqKiMjIzX19f5-fnOzc1dXV0lJSXy8fGfn5_r6-vGxsYfHx_e3d2FbOCMAAAAbUlEQVQ4je2OSQ6AIBAEp0FxAxU3UP__T2M0BhGvxgN16k5lJk0U-QG1W5LUsyLLb71wS1kxqW731Mgr8lZ3_eD9G9EfQbEJKHLyMUDDB6MB2Da0V-JEq5AmYoeeeVgTLSs6a8Y3vSOewyIfswG3wALPBba-OgAAAABJRU5ErkJggg.png",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTmsT-n6gFjqHVpfsS_eENAZXtXNibjlFSMyzxrbDxXMpkH5enw",
+      "thumbnail_width": 144,
+      "thumbnail_height": 144,
+      "image": "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/07c27cf9-cf7c-4158-8620-652d6bea8d90/AIR+JORDAN+1+LOW.png",
+      "image_width": 144,
+      "image_height": 144
+     },
+     {
+      "position": 12,
+      "title": "Buy Jordan Brand - Air Jordan 1 Low 'PALOMINO/BLACK/PHANTOM ...",
+      "link": "https://limitededt.in/products/air-jordan-1-low-palomino-black-phantom-sail",
+      "source": "Limited Edt",
+      "source_icon": "https://serpapi.com/searches/6ac605d4bc3f0ba401e74fd1/images/BQ0kGtDU9crkBseXtZVJVCrSIoZjQoSt3T7XPZzekm8.png",
+      "price": {
+       "value": "₹8,995*",
+       "extracted_value": 8995.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRHl7ZYk_PDLhQYits1rWTfssAzzzAYpLyHHevULULalp9yydS9",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://limitededt.in/cdn/shop/files/553558-200-8.jpg?v=1783170176&width=1200",
+      "image_width": 1200,
+      "image_height": 1200
+     },
+     {
+      "position": 13,
+      "title": "Jordan AJ 1 Low - Men's | Foot Locker",
+      "link": "https://www.footlocker.com/en/product/~/53558200.html",
+      "source": "Foot Locker",
+      "source_icon": "https://serpapi.com/searches/6ac605d4bc3f0ba401e74fd1/images/BQ0kGtDU9crkBseXtZVJVCM4fHnavFj_hn7SuqP6Qr0.png",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRgar1e4eawiTJXo76vmNWVHgRkjyaJ-1ivPbDxy4RrjukDHRRu",
+      "thumbnail_width": 157,
+      "thumbnail_height": 321,
+      "image": "https://assets.footlocker.com/is/image/FLDM/53558200_01",
+      "image_width": 625,
+      "image_height": 1280
+     },
+     {
+      "position": 14,
+      "title": "Nike - Jordan Story Launch",
+      "link": "https://www.nykaaman.com/nike-jordan-story-launch/c/116240",
+      "source": "Nykaa Man",
+      "source_icon": "https://serpapi.com/images/i/_9j_4AAQSkZJRgABAQAAAQABAAD_2wCEAAkGBwgHBgkIBwgKCgkFDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tNTUtLi86Iys8Oz8tTTUtLisBCgoKDQwNFw8PFyshHyU3Nys3NysrKysrNzc3OC03LS03NysrKysrKzcrKys3KysrKysrLSstKysrKzcrKystLf_AABEIACAAIAMBIgACEQEDEQH_xAAZAAACAwEAAAAAAAAAAAAAAAAGBwEDBAD_xAAqEAABAwIFAwIHAAAAAAAAAAABAgMEBREABhIxYSFBURNxBxQjQoGCkf_EABcBAQADAAAAAAAAAAAAAAAAAAABAgP_xAAXEQEBAQEAAAAAAAAAAAAAAAABACER_9oADAMBAAIRAxEAPwANqU-VU5rsya8p1-WoqUom-_YeANgOwxNKp8irVGPAhpCn6gsISDsPJPAFyeBjJhrfByiIYaer0wAGSr5eLqG9zYke5sL8HGrhVgepZWmwczooAW2_JkKQlKm72OoA3N-oAv19sWVmI5kzMqWabUy9JpYSpbraNASo9Si1zcWtfzcgjDFlJapGYcyZvnoChTNMeEg_c5oSCR-bC_KvGE7KkOy5LsmQsremrK1qO5JNyf6cQbK2mQX6nUI8GKnU9UHAhI7Ak7ngbngYc6n2oWbct5Wgr-hQGluvgdLkNqCb89SSOQcLKhT3sk5kcen00uyICVtpbWso0k9NQNjcWuPBB3x1LzfKhZrdzC-wiQ_L13bKikAEWAB62AFgOBgkif4zVv1p8eisLHp04eq-B3cI6A8gG_7YWmNVTnP1OoSZ0o3eqLhWq2wJOw4Gw4GIpsCVU5rUOEyp1-WoJSkC-_c-ANyewxIcJf_Z.jpeg",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU_WbetMPqaIvB_KML2HhOEz1d36dzoben-4YuHabuQZg65KO_",
+      "thumbnail_width": 259,
+      "thumbnail_height": 194,
+      "image": "https://images-static.nykaa.com/media/catalog/product/e/d/ed54293553558200Brown_2.jpg?tr=cm-pad_resize,w-300,h-400",
+      "image_width": 400,
+      "image_height": 300
+     },
+     {
+      "position": 15,
+      "title": "Buy Nike Air Jordan 1 Low Older Kids' Shoes Online | Nike India",
+      "link": "https://www.nike.in/nike-air-jordan-1-low-older-kids-shoes/p/27765267",
+      "source": "Buy Nike Air Jordan 1 Low Older Kids' Shoes Online | Nike India",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABE0lEQVRYhe2SMU7DQBBF_9hIcSrGit37CL5BtqTDJSUcgZuQE4BPgHMD3wBKSkoaS9vZkqX9NEaKEtuJoWRftzPz94--BvB4PB7Pfyecamw2m6Jt24-_fJ6maR5F0d16vb5ZrVa267qv45mrMaGq5iRvAVRLDFVVwzAsSG5Jmr7vSwBP1lo7pTlZQFVVRF4BlBcamsGwAJA552qSewCPc8aTCwRBcE8yI7kdEyRJYpxzW5IGgHHO_bQqkg_W2vqc6SFyXIjj-A1APjw_RaQEcE0yH-p6MG5J7nAm5qUL8AJdHQTBrmmaRTcyxtgR1gDMSN2KSOmcq5bGPMdJAqqaicjzsIQF8D4c1ctvY_Z4PB6PZ45vRpF0ec0xtzcAAAAASUVORK5CYII.png",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS6TFFJ68s80CoZ5o3ksXknzwfLgCIco_y-gySgpbbjZHVBjPPj",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/d/ad22b92Nike-553560-200_8.jpg?rnd=20200526195200&tr=w-1536",
+      "image_width": 1536,
+      "image_height": 1536
+     },
+     {
+      "position": 16,
+      "title": "Air Jordan 1 Low Grade School Palomino/Blackphantom - Sail ...",
+      "link": "https://www.culture-circle.com/products/all/air-jordan-1-low-grade-school-palomino-blackphantom-sail",
+      "source": "Culture Circle",
+      "source_icon": "https://serpapi.com/searches/6ac605d4bc3f0ba401e74fd1/images/BQ0kGtDU9crkBseXtZVJVLwWQNIQtO8VejRk0mk9Wac.png",
+      "price": {
+       "value": "₹6,385*",
+       "extracted_value": 6385.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT0k08aUhYqhWGshnxPFqbPXc3tJ-Gtk6D2K3kU0gDrwpAXSF2F",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://culture-circle.gumlet.io/productsimages/product/637269/6319564.jpg",
+      "image_width": 1200,
+      "image_height": 1200
+     },
+     {
+      "position": 17,
+      "title": "Buy Nike Women Colourblocked Air Jordan 1 Low Casual ...",
+      "link": "https://www.myntra.com/sports-shoes/nike/nike-women-white--brown-colourblocked-air-jordan-1-low-basketball-shoes/14528326/buy",
+      "source": "Myntra",
+      "source_icon": "https://serpapi.com/images/i/_9j_4AAQSkZJRgABAQAAAQABAAD_2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys_RD84QzQ5OjcBCgoKDQwNGg8PGjclHyM3Nzc3Nzc3NzU3Nzc3Nzc3NzcyNzA3Nzc0Nzc3Nzc3Nzc1NzU3Nzc3Nzc1MSw4Nzc4Mf_AABEIACAAIAMBEQACEQEDEQH_xAAZAAADAAMAAAAAAAAAAAAAAAAAAwYCBAf_xAAnEAABAwIFBAIDAAAAAAAAAAABAgMRAAQGEiExQRNRYZEFFGJxof_EABoBAQACAwEAAAAAAAAAAAAAAAADBQECBgT_xAAsEQABAgMFBQkAAAAAAAAAAAAAAQIDBBEFITEy8BNBYXGBEiJCUZGhwdHh_9oADAMBAAIRAxEAPwDthVFAGvJ9UASeD7oACpoBYOp9VkEq1ipT2Irhhsj6FusMqMbkyCufBBH6BPIjzzkR0q6Ersr69MKF0tlKko2Iudb6cPLXI17HGLj2KPrOZR8Y-rosHLqFjZU85p24lPmZZV6TMJ72-FadKJfrcSRbH7EntEzpeqcPz7LInUeq3KEU4VdNYbMLIOU-aGW0qlcCT-Owq7aYZetFOIN86ouFQnKDEAd4j-k1HajEnW0bdTAvY9rtiTiRETuJd811uF32EHV4etre2cbTfsuF3qGQCpUSJieE6_iK3s1qSjOw6-uOvY2g2y1Jtz3ouzclKctL6llJMTvuayc-YE0AZj2oAzHtQADFAf_Z.jpeg",
+      "rating": 4.3,
+      "reviews": 26,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSyLvIwCNvs9Bw9PEAtfZ-VhYQldA9Eng1kSyeXIpERF10sXIgK",
+      "thumbnail_width": 259,
+      "thumbnail_height": 194,
+      "image": "https://assets.myntassets.com/w_412,q_50,,dpr_3,fl_progressive,f_webp/assets/images/14528326/2021/8/6/ba0881a0-f19d-47ff-861c-3954e2b553591628231320881-Air-Jordan-1-Low-Womens-Shoe-2111628231320480-2.jpg",
+      "image_width": 1440,
+      "image_height": 1080
+     },
+     {
+      "position": 18,
+      "title": "Brown Jordan Air 1 Low Junior - JD Sports Global",
+      "link": "https://www.global.jdsports.com/product/brown-jordan-air-1-low-junior/800491/",
+      "source": "JD Sports",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEUAAAD____-_v4jIyNiYmJmZmbm5uYGBgYvLy_6-voRERFHR0c4ODhXV1dUVFTX19dOTk54eHi5ubmCgoKWlpb09PSLi4scHBxcXFyvr6_FxcUXFxcpKSmRkZGcnJzd3d3Ozs4YgzhGAAAA2ElEQVQ4je1RWRaDIAwkuFDFpW4gtbXe_5QdUHyovUE7H7yEGZJMYOz3UCZJpWOL8fZVMBC1CTnw-n7lI06kXrSBNxfByIlXLaiMO8WlxoxLnRIZkcsHNPVZAO6dg-gQiwXq6MgX4PoCtUubNQjktYOMcTiL1s1xiAkmUwETmbCp8sodveve-tlqokGEvAQ_THZQ4y3PBx4NeMe8iQpp9txZnRi7mkWsTsrGbsEJN6z7T2E7pn3TJqiv3O9EW-SQqXAAg-edG7ldX6fzM-RZIb1jHVnk7I8zPou2B-8awbJ0AAAAAElFTkSuQmCC.png",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ9sEpCdeTwGQtNUmB_09VmRTaCsAcXB4W6_xg4KST14ByOj5yX",
+      "thumbnail_width": 189,
+      "thumbnail_height": 267,
+      "image": "https://i8.amplience.net/i/jpl/jd_800491_b?v=1",
+      "image_width": 3039,
+      "image_height": 4288
+     },
+     {
+      "position": 19,
+      "title": "Nike Men Air Jordan 1 Low Brown Casual Sneaker",
+      "link": "https://www.tatacliq.com/nike-mens-air-jordan-1-low-palomino-black-phantom-sail-casual-sneakers/p-mp000000031497131",
+      "source": "Tata CliQ",
+      "source_icon": "https://serpapi.com/searches/6ac605d4bc3f0ba401e74fd1/images/BQ0kGtDU9crkBseXtZVJVIQPfEoT6vNjzG9zMxRx1gc.jpeg",
+      "rating": 4.3,
+      "reviews": 23,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRhSaEVHZ6LsuPmMmkdrDDdTNTByJmhBhgzcCrW_PvGXG-hMRfa",
+      "thumbnail_width": 260,
+      "thumbnail_height": 194,
+      "image": "https://img.tatacliq.com/images/i32/437Wx649H/MP000000031497042_437Wx649H_202606202234411.jpeg",
+      "image_width": 649,
+      "image_height": 486
+     },
+     {
+      "position": 20,
+      "title": "Air Jordan 1 Retro Low OG Mocha – Limited Edition",
+      "link": "https://pickyourkiicks.com/products/air-jordan-1-retro-low-og-mocha",
+      "source": "PickYourKiicks",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAOVBMVEVHcEwCGCoADiMAARYBFyoBGCoBGCkBGCkBFykBFylbZnA9SFNsdX4mM0BKV2GPl55_iJDW2ty5vsMDML-uAAAACnRSTlMA____yaJMEeiQGBwfHQAAAVpJREFUOI2NU9GSwyAIDJAmCogm__-xhzWNpNOH46GTysquCyzLjC2vCSCteVt-xP6CEK_9O59jGhEgP6-ncTqCRPw7hSJ7v8UKA0LcKvWPPeaB1Cr3c7Jm7Q24EenNK2KqBOjZUcBZHvpIUU2pcCn8kZNvgoGgaiZCF8GHZL6fGFrzfPTDAeEvqQJowXDk_oZ8FUY0CnnYgoUu3oV6iYjIyzoNPishYFGDSbIOE64KKgSFQWq5D1PQiKU1LY3VphGuMj5CqjRjlGIBkEKFymbAtcmskIJIUmYrWs3tuAFreKbLUzFqhWhS5GkUKjlJPc9Tg8htWo1cvZPkIcGq0CxkaaMNNCW8QruR4bpI7QbsYWDwPar9A_UxMMvHChqN9pm258hdJKQCjN7QDiG8CebYHyqlnkdt9TjOThcXoy8OFTH2MCngFdJz-_KQh0j9B75X7x_L2-Pn-v8BBUUOCyV-r00AAAAASUVORK5CYII.png",
+      "price": {
+       "value": "₹22,999*",
+       "extracted_value": 22999.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnu3sA-r4nhtpvBe2m1T67zV9ltx01bt1yKCqvDFTmmqlyOH2X",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://pickyourkiicks.com/cdn/shop/files/Mocha.webp?crop=center&height=1200&v=1738837966&width=1200",
+      "image_width": 1000,
+      "image_height": 1000
+     },
+     {
+      "position": 21,
+      "title": "Air Jordan 1 Low Mocha Sneakers in India | Kicks Machine",
+      "link": "https://www.kicksmachine.com/products/air-jordan-1-low-mocha-gadarsale",
+      "source": "Kicks Machine",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAclBMVEUAAAABAQH___8CAgIDAwMEBAQGBgYFBQUODg4KCgrl5eUvLy8SEhKpqakoKCja2toXFxdcXFyZmZn29vZQUFBXV1c7OztLS0tBQUGjo6MiIiIbGxvu7u5_f3-9vb2Li4tmZmY9PT3U1NSNjY1ra2vJyckF6-SyAAABy0lEQVQ4jd2SaXIiMQyFnyWvuLdAgKY7BBLg_lecJ9M1_-YC43LhQv0kfVqA7bjt_Ov__y7In1UDEBDjcKzz6TwpXCpAwWme5wnxfC_I0AT87ITnUuAZQdH1IldGLEuNCErbupPdQb4GxGBJFgo-Wrph0WwuZZRf8zKxD92yp6CDQykDnZw3wXgW-V3N6IfuIfJJWsq7YQKiTqPs8jetGhmkphsjMFm27GdEj0wGPEX6iIilYr8xRDjNZ6gvFBSqpDJjXTeBJ13A8TCzHgqymfdIHUvbInjVLjJ7NcGYtR5kXDCs3gRHQpIe5B3rRMgxOhDziVNUNYG2RlQ5yFyGyjgF6VPkxcKT0u3oW09fIg8-py9jCJ7tfFohj8bAGVxFdpMvWCgIpL62D2ETACcWdrdq82iCjPXwmmzQ-2YPHaG-2SfnbFgrSkB_g3fQCwUO07Xv-7u3CMdLf_ngm4YlsLR66_trRwgOm_tBSzCVQZVoqUM2Iy_HFYvnE6Jn21MrXUNhEtiyudIc2jKqtd7s7ZcTQeskAuevbdHQgsN7hBDeLjT75NS-uFj-7rQBcXebkxqJewdgu0KwwMm9g8V2jZCXm50ajHGaypj_AKmXFNG-G7L-AAAAAElFTkSuQmCC.png",
+      "price": {
+       "value": "₹18,499*",
+       "extracted_value": 18499.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRn3L5tOaCSkpUahfbJsvsTgqxVMQxuceglCuczN5qEmYibQmDB",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://www.kicksmachine.com/cdn/shop/products/shopping_11_c35e1a5e-67ce-4e55-bd10-14b2b036b916.webp?v=1734478878&width=600",
+      "image_width": 600,
+      "image_height": 600
+     },
+     {
+      "position": 22,
+      "title": "Nike Jordan 1 Low Premium Pale Ivory Off Noir Baroque Brown",
+      "link": "https://www.hypeelixir.com/products/nike-jordan-1-low-premium-pale-ivory-off-noir-baroque-brown",
+      "source": "Hype Elixir",
+      "source_icon": "https://serpapi.com/images/i/_9j_4AAQSkZJRgABAQAAAQABAAD_2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMFxsUFRAWIB0iIiAdHR8kKDQsJCYxJx8fLT0tMTUrLi46Iy0zOD82PS4tLiwBCgoKDQwMGg8PGjclHyU3Nzc3Nzc1NzI3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzU3Nzc3LSszMDUvNzIvODc1LS84Nf_AABEIACAAIAMBEQACEQEDEQH_xAAaAAEAAgMBAAAAAAAAAAAAAAAABQYDBAcC_8QAJRAAAgEEAgEDBQAAAAAAAAAAAQIDAAQREgUhQRRxoRMiMTNR_8QAGgEBAAIDAQAAAAAAAAAAAAAAAAIFAwQGAf_EACgRAAEDBAAEBgMAAAAAAAAAAAEAAhEDBCExElFhcRMyQYGx8AUiof_aAAwDAQACEQMRAD8A4dREoiURKIlehFYeR4ofrtbfWR7jVD32mo79s57roLz8ePJSZBLoHaPiZVXb3R8z3YA_sr3Hx9j6lbPXLfT7mbIDMpBOo_mMipssrbxRQIzG-ZBBMe0ydKLritwGr110Op94UDcMj3EjRLrGWOoHgVQVi11RxYIE4VnTDgwBxysIGTWMKas03JQlW9Pcqs0_byHbES4H2qMd_iulq31Mg8D4c7Zz-o5Dr29VUstnyOJuBoYz1K0-OvLeG6M8rHWKMJGHySQSAfjNaVndUWV_EdpogTvl21Kz3FGo6nwD1Mn73hRdwqJcSLE20YY6sPI8VV1g1tRwYZE4W5TJLASMrDWJTSiJREoi_9k.jpeg",
+      "price": {
+       "value": "₹18,990*",
+       "extracted_value": 18990.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQAmidkbAA2-X43XTtWummcb5uI3pUnoNzijPCiSSAVhVGHnozC",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "http://www.hypeelixir.com/cdn/shop/files/Jordan1LowPremiumPaleIvoryOffNoirBaroqueBrown1.png?v=1745532580",
+      "image_width": 700,
+      "image_height": 700
+     },
+     {
+      "position": 23,
+      "title": "Jordan 1 Low SE Legend Light Brown",
+      "link": "https://crepdogcrew.com/products/jordan-1-low-se-legend-light-brown",
+      "source": "Crepdog Crew",
+      "source_icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAKlBMVEVHcEwAAAAEBAQAAAAJCQkEBAQKCgoFBQUDAwMCAgIEBAQBAQELCwsAAAANH4y8AAAADXRSTlMAy6LzS2AjNbqReN8OXKvjcAAAAQpJREFUOI3tUUmSBCEIZFNwyf9_d5LqPtZhrhMxGCIiJgmI_MsvRaETjjXcsY-jkre4ByUGTxmYOqsGBHuPjYk4trF9YiDWZgBRDIz3E7zBRVdgHOkALLo2_6h5wnQZrlzX8t1uLF8iw4aYXYu1eqfctejedKftoKWqVw61hlQfmqpncmfpks2sIMPnyPocvE3uPDDyC7GSoFk0yXHWHThy-M3QBYzuBun3t0tlIvOL4CUPQnR9payJCHeOK-zXs0YH6CJY4TBzkNFSZDfGm8l9Ws2Hhh4L5p9MndGkm_YqkTJDMiXm6zsn1oyIh_0awAFNvycU5xWhhnNMWj2dVwQSmHKp8-Y7hz8oP8UrDDZMxXmtAAAAAElFTkSuQmCC.png",
+      "price": {
+       "value": "₹14,499*",
+       "extracted_value": 14499.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSTtWbkCOBw41FEoW8NsOr21kln0iOAXIZh2viILA5GTmfSlLWM",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://crepdogcrew.com/cdn/shop/files/LEGEND_LIGHT_BRO_grande.png?v=1755096177",
+      "image_width": 600,
+      "image_height": 600
+     },
+     {
+      "position": 24,
+      "title": "Nike Air Jordan 1 Retro Low SE Brown Blue Grey – The ...",
+      "link": "https://marketplace.mainstreet.co.in/products/jordan-1-retro-low-se-brown-blue-grey-1",
+      "source": "The Mainstreet Marketplace",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcSoXoVyiqsi33iNhmMcPKZ1WrtTrntH4OY5D3hQwnk2NP6slRhgZfxnzsNTwgirxeUyyrcfyug7jwGN_qHIOnONXVsA_HXMxhbFNw3U1txdz25iKV6jIltorXi9FanitZx6",
+      "price": {
+       "value": "₹16,599*",
+       "extracted_value": 16599.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWYejePtvzV3oytfPBj4fvarW2iVYzrFwdPcyvFCEuKQJXpJFO",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "http://marketplace.mainstreet.co.in/cdn/shop/files/Artboard2_636d6d67-cec4-4bac-985f-aee6f9c03088.png?v=1761542749",
+      "image_width": 2000,
+      "image_height": 2000
+     },
+     {
+      "position": 25,
+      "title": "Nike's AJ1 Low Is Browned-Out and All Grown Up",
+      "link": "https://www.highsnobiety.com/p/aj1nike/",
+      "source": "Highsnobiety",
+      "source_icon": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcT-iH_OKtU3y8uQBL1ZCia68YIyrtsGOO7HGKUm9Q3TQ_S2e3itmy9Kv4N0fQHZfbIBguw04061IIvn96HNA6D_Pe7KokqaqiJYvMotWtC8ZgyS4ylWYVADFA",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTStOmENTiidJgbQCZwxS30Gj_kFB36iLg3Y2tLUVLzYNeUUv5d",
+      "thumbnail_width": 183,
+      "thumbnail_height": 275,
+      "image": "https://www.highsnobiety.com/static-assets/dato/1779368064-nike-aj1-low.png",
+      "image_width": 1400,
+      "image_height": 2100
+     },
+     {
+      "position": 26,
+      "title": "JORDAN | AIR JORDAN 1 LOW { LEGEND MD BROWN/LT BRITISH TAN ...",
+      "link": "https://www.superkicks.in/products/jordan-air-jordan-1-low-legend-md-brown-lt-british-tan-chalk",
+      "source": "Superkicks",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQk7ULunQFHX-H9Qu8_ZdP9VeasHSz8_6iILjsZYaPvTMq2OwoJmlLBdAtoxYVwu3SaoNg4cc6OHY2QuM_rXmQiCHJE25-KARBHD4eCyi1zSNCo20zwzw",
+      "price": {
+       "value": "₹8,295*",
+       "extracted_value": 8295.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTHZTY6aCJRNbo3gOUk7yhUgoqM2OfS5o9t3uh1hAHOxIUtADvB",
+      "thumbnail_width": 246,
+      "thumbnail_height": 205,
+      "image": "http://www.superkicks.in/cdn/shop/files/4_65433bdb-b5b2-4c0f-b7af-475a3e73dd48.jpg?v=1781614312",
+      "image_width": 1300,
+      "image_height": 1080
+     },
+     {
+      "position": 27,
+      "title": "Jordan Aj1 Low - Grade School Shoes | Foot Locker Czech Republic",
+      "link": "https://www.footlocker.cz/product/model/jordan-aj1-low-grade-school-shoes/206483.html",
+      "source": "Foot Locker Czech Republic",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcR3gs5trcgrATQKfZSVUZy_G4IUWUXO05A8ikMWh03xiV_z1UXM53xNgyskbtHur-bWuGcHYfClSVsz02eNWu7ssU4g3nOZAheW8Ndwrlxor1lBCpRLgg",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqPqsFJy5OhtQo74ZrxxvYJ-g44IPoZBJHxygcM9WO3NUh9PZ3",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://assets.footlocker.com/is/image/FLDM/316707281404_08?fmt=webp-alpha&bfc=on&wid=500&hei=500",
+      "image_width": 500,
+      "image_height": 500
+     },
+     {
+      "position": 28,
+      "title": "Jordan - AIR JORDAN 1 LOW - VegNonVeg",
+      "link": "https://www.vegnonveg.com/products/jordan-air-jordan-1-low-palominoblack-phantom-sail_1",
+      "source": "VegNonVeg",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQX5oDXsScy96KHSWdsb2Tt-8A9FCxnKGAIct1OmOIRfEoprdy3wd5147A_PfgxE9tsWdRyJQcmNYBEd0bHWH_Qkvn8Q-K0AkSfsSc3mZ7QQpIsOb5uTQ",
+      "price": {
+       "value": "₹7,295*",
+       "extracted_value": 7295.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzwfnPijdS2ZwuBL6ZMPgKsazWDS0TOPTdO3TASGt0dWEMrcSK",
+      "thumbnail_width": 244,
+      "thumbnail_height": 207,
+      "image": "https://images.vegnonveg.com/resized/1020X1200/15562/jordan-air-jordan-1-low-palominoblack-phantom-sail_1-6a4e3ae501983.jpg?format=webp",
+      "image_width": 1200,
+      "image_height": 1020
+     },
+     {
+      "position": 29,
+      "title": "Nike Air Jordan Air Jordan 1 Low Hemp Light British Tan ...",
+      "link": "https://freesociety.in/products/air-jordan-1-low-hemp-light-british-tan",
+      "source": "Free Society",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQWXKYkV9mwCgS6dDfz8W_7t80C6E-M68BcIx3k9iWAlbGfLoegqMKkC6KDNdtPhK6_kMqlSyRrz7QKLXtUnnRnL-RxkvtkE8qUerrAEMeLKxaCkQ",
+      "price": {
+       "value": "₹12,000*",
+       "extracted_value": 12000.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEieo85B-JG_Nd4nZTHcDf1qsp-NFc5G0VnrGlwThkyj6JWgJZ",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://freesociety.in/cdn/shop/files/AirJordan1LowHempLightBritishTan2.webp?v=1755333585&width=1680",
+      "image_width": 1680,
+      "image_height": 1680
+     },
+     {
+      "position": 30,
+      "title": "Jordan Air Jordan 1 Low \"Tan/Brown\" Sneakers | Brown ...",
+      "link": "https://www.farfetch.com/in/shopping/women/jordan-air-jordan-1-low-tanbrown-sneakers-item-22561245.aspx",
+      "source": "Farfetch",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcS6SU1h9TcIgh8C10g5o2X1WFVk3wwixm_dT-z-Cyg_BKHYIDV5td8pqcbeCzNMBootgsUYNOqmmY_zifTln526X-UIO_PGhrg4gUCoQnpKe8_L_d0S",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjdsSG33b5t1RieB_4IcMzUIdUButnMbUlT1VurbMRgJL4kgMS",
+      "thumbnail_width": 259,
+      "thumbnail_height": 194,
+      "image": "https://cdn-images.farfetch-contents.com/22/56/12/45/22561245_52827144_1000.jpg",
+      "image_width": 1334,
+      "image_height": 1000
+     },
+     {
+      "position": 31,
+      "title": "Air Jordan 1 Low Shadow Brown",
+      "link": "https://pickyourkiicks.com/products/jordan-1-low-shadow-brown",
+      "source": "PickYourKiicks",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcRWRNB0v2ITh3gkc7EJ6yZaRlruTjBPkOYBgRP4rLhvfMygTWngbxr4zpOwetGGd5SCOwSyz7ViBlAwrQnb_88lTsnQDQIZRiljUqd6HOVJJDyNbJ2Y3S0",
+      "price": {
+       "value": "₹12,999*",
+       "extracted_value": 12999.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1OygFJz7WHox4TjeXffa1fyUhyJc2WEwCaBFx3sjS08vORtR1",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "http://pickyourkiicks.com/cdn/shop/files/image_b70a968b-0cd9-49e5-87de-d58871293b9e.jpg?v=1724232419&width=2048",
+      "image_width": 700,
+      "image_height": 700
+     },
+     {
+      "position": 32,
+      "title": "Nike Air Jordan Air Jordan 1 Mule Golf Baroque Brown ...",
+      "link": "https://freesociety.in/products/air-jordan-1-mule-golf-baroque-brown",
+      "source": "Free Society",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQWXKYkV9mwCgS6dDfz8W_7t80C6E-M68BcIx3k9iWAlbGfLoegqMKkC6KDNdtPhK6_kMqlSyRrz7QKLXtUnnRnL-RxkvtkE8qUerrAEMeLKxaCkQ",
+      "price": {
+       "value": "₹14,750*",
+       "extracted_value": 14750.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSoR-YiFJ7SOyuWL25rBbsgi5CDjdsLrrK5eRW7lkL5ZDBqwurE",
+      "thumbnail_width": 215,
+      "thumbnail_height": 234,
+      "image": "https://freesociety.in/cdn/shop/files/AirJordan1MuleGolfBaroqueBrown_9e892b7a-e7e8-43fd-aa99-a2e78fbdc5c9.webp?v=1757154649&width=850",
+      "image_width": 783,
+      "image_height": 850
+     },
+     {
+      "position": 33,
+      "title": "Air Jordan 1 Mid \"Chocolate\" – Dawntown",
+      "link": "https://dawntown.co.in/products/air-jordan-1-mid-chocolate",
+      "source": "Dawntown",
+      "source_icon": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQYp01GNSxvQs0Zbum5rGbNFD4hfdTWS5rfkxb8e5HBX11Z7RrW6GiqSo7qO5CqUsgS4KaLtymVKGcxXAEock23E-fkOFwJB40-nljJujT9De1Zmg",
+      "price": {
+       "value": "₹20,999*",
+       "extracted_value": 20999.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQvJwsbaQb8bC54w9pesnzUmLldfwhcMwICf6U7uRV1YYYRiPJ0",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://dawntown.co.in/cdn/shop/files/choco-1.webp?v=1769626048&width=1920",
+      "image_width": 1999,
+      "image_height": 1999
+     },
+     {
+      "position": 34,
+      "title": "Nike Men Air Jordan 1 Low Brown Casual Sneaker",
+      "link": "https://luxury.tatacliq.com/nike-men-air-jordan-1-low-brown-casual-sneaker/p-mp000000031499448",
+      "source": "TATA CLiQ Luxury",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcREFWxbMxDVfF32TOeKDxNxzkDSEU-pn9NyGMx9vG5O6v4LjSPNs1J-1mDbyQE-1NPRfoynTfxATfLzc3jZVeeDajVFBwK9qErF7zVRWo_cEaV8p2hCPlFk",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRVXPUl0HDiRCLSg2xnyIZvXcsxC13XuMsddtkuTQQdi0a3fV54",
+      "thumbnail_width": 237,
+      "thumbnail_height": 213,
+      "image": "https://img.tatacliq.com/images/i32/320Wx357H/MP000000031499437_320Wx357H_202606211336044.jpeg",
+      "image_width": 357,
+      "image_height": 320
+     },
+     {
+      "position": 35,
+      "title": "Air Jordan Jordan 1 Low Archaeo Brown White (Women's ...",
+      "link": "https://www.culture-circle.com/products/all/air-jordan-jordan-1-low-archaeo-brown-white-women-s-instant-ship",
+      "source": "Culture Circle",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcRI00gk4oo3JOCgWLVwhezgF_q6Yw25k-9EpAT4CVzO0Vx-DdZye4xjnjMEOywpQovi8Has1daUYuG97qZnSezYTogF33BrBl0apFsi6BV83BN6zOPdgnLrVU6o",
+      "price": {
+       "value": "₹8,811*",
+       "extracted_value": 8811.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSv87x_r_hgtJ-OWbxyBEqHOT8edHxlAY3NOLt0Kg-RmsSm45v5",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://culture-circle.gumlet.io/productsimages/product/636046/6314801.png",
+      "image_width": 700,
+      "image_height": 700
+     },
+     {
+      "position": 36,
+      "title": "Buy Air Jordan 1 Low Men's Shoes - Palomino/Phantom/Sail ...",
+      "link": "https://www.nike.com.kw/en/air-jordan-1-low-mens-shoes/NK553558-200.html",
+      "source": "Nike",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcTQNgE-3htVKwqQ8j-u5lEvULLoFCxtWFXSpIQLkQJPr-us0lvnkKnBOoT9Ro8BKGig2OZISqgSIB6_YVgoP30-Cd0V8FsomkZEojYNS5zJxzi1C68",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUtea7mTlRKLw_6oJAhao7D9VwHFsnFTITuB3WQDP84lJ0iKD8",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://www.nike.com.kw/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw77d6ca93/nk/07c/2/7/c/f/9/07c27cf9_cf7c_4158_8620_652d6bea8d90.png?sw=2000&sh=2000&sm=fit",
+      "image_width": 2000,
+      "image_height": 2000
+     },
+     {
+      "position": 37,
+      "title": "Air Jordan 1 Retro Low SE 'Brown Blue Grey' – Free Society",
+      "link": "https://freesociety.in/products/air-jordan-1-retro-low-se-brown-blue-grey-1",
+      "source": "Free Society",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQWXKYkV9mwCgS6dDfz8W_7t80C6E-M68BcIx3k9iWAlbGfLoegqMKkC6KDNdtPhK6_kMqlSyRrz7QKLXtUnnRnL-RxkvtkE8qUerrAEMeLKxaCkQ",
+      "price": {
+       "value": "₹11,500*",
+       "extracted_value": 11500.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRz2llMG4BkpGL8KuXY-FBevKoYDaaLxn8oKIOJZpu0zXTR5PDi",
+      "thumbnail_width": 154,
+      "thumbnail_height": 327,
+      "image": "https://freesociety.in/cdn/shop/files/1368762_01_jpg.webp?v=1751989705&width=360",
+      "image_width": 170,
+      "image_height": 360
+     },
+     {
+      "position": 38,
+      "title": "Buy Nike Air Jordan 1 Low SE Men's Shoes - Casual Shoes for ...",
+      "link": "https://www.myntra.com/casual-shoes/nike/nike-air-jordan-1-low-se-mens-shoes/41438069/buy",
+      "source": "Myntra",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcSrR7Ml_19H_B-zDu_Z_bQZGw0QqQ9U4wrcsyIsLYTUdUbRnR8dQRl2hFbwwMTnrsx4dn8RSieDAX0xgOMr90CKQT2BqGauj6jT9xLf-SQOorNViw",
+      "rating": 4.8,
+      "reviews": 20,
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSWkawHqBkjjGjQ65xCZgxaLFqbeycXLGlBgJPehukcW1cdodgq",
+      "thumbnail_width": 260,
+      "thumbnail_height": 194,
+      "image": "https://assets.myntassets.com/f_auto,q_auto:eco,dpr_1.3,w_158,c_limit,fl_progressive/v1/assets/images/2026/JUNE/15/QuwamI2G_eeae148ec5c54d3eaa5cbadd4a7c979e.jpg",
+      "image_width": 274,
+      "image_height": 205
+     },
+     {
+      "position": 39,
+      "title": "Jordan Air Jordan 1 Low Sneakers | White | FARFETCH IN",
+      "link": "https://www.farfetch.com/in/shopping/women/jordan-air-jordan-1-low-sneakers-item-20767601.aspx",
+      "source": "Farfetch",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcS6SU1h9TcIgh8C10g5o2X1WFVk3wwixm_dT-z-Cyg_BKHYIDV5td8pqcbeCzNMBootgsUYNOqmmY_zifTln526X-UIO_PGhrg4gUCoQnpKe8_L_d0S",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkM9vCfIaKFYWWifYDFIrdUlikQMCGICJscNnKUmGNCUY8wA9h",
+      "thumbnail_width": 260,
+      "thumbnail_height": 194,
+      "image": "https://cdn-images.farfetch-contents.com/22/36/22/02/22362202_55450348_300.jpg",
+      "image_width": 401,
+      "image_height": 300
+     },
+     {
+      "position": 40,
+      "title": "Buy Nike Kids Air Jordan 1 Low Sneakers Online | Footlocker ...",
+      "link": "https://www.footlocker.co.in/nike-kids-air-jordan-1-low-sneakers/p/28342120",
+      "source": "Foot Locker",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcRblgev7ip30kp0DPXBDlrtcrUQYo10NFmwT07zySKLck9LqTjM4taRvTv0XpAZPQNRd2NauxMhibmcXHPfk31CfZzO8lPGH6NwheqcFVGNlUf9lO4hN4SKxA",
+      "price": {
+       "value": "₹7,295*",
+       "extracted_value": 7295.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQoGu7lxi2pm8ILpjYbxqorH2OLQP9LOEy7o3dQ2aqnGxVuN6Fx",
+      "thumbnail_width": 259,
+      "thumbnail_height": 194,
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/1/tr:h-400,w-300,cm-pad_resize/518cfe5553560-200_1.jpg?rnd=20200526195200",
+      "image_width": 400,
+      "image_height": 300
+     },
+     {
+      "position": 41,
+      "title": "Buy Air Jordan 1 Low Men's Shoes Online | Nike India",
+      "link": "https://www.nike.in/nike-air-jordan-1-low-men-s-shoes/p/24933557",
+      "source": "Buy Air Jordan 1 Low Men's Shoes Online | Nike India",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcS4Im6hWQwpqC7P4XiiPMPDcQWxI-P_jc5yuPOpMjVdwf3JKHhu_68v22HabVOa4C9a9wrFsl45MHOls1WUgf8V1TByJbkc6ujBcjTarvxxKw",
+      "price": {
+       "value": "₹6,297*",
+       "extracted_value": 6297.0,
+       "currency": "₹"
+      },
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRH_kJ5jSUqThgT2LN9ahfvXchBtHDh4uFC7VqHPFzIujIOYP4X",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/d/ad22b92Nike-553558-300_1.jpg?rnd=20200526195200&tr=w-1536",
+      "image_width": 1536,
+      "image_height": 1536
+     },
+     {
+      "position": 42,
+      "title": "Air Jordan 1 Low Shadow Brown Women's Price in India ...",
+      "link": "https://www.culture-circle.com/products/all/air-jordan-1-low-shadow-brown-women-s",
+      "source": "Culture Circle",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcRI00gk4oo3JOCgWLVwhezgF_q6Yw25k-9EpAT4CVzO0Vx-DdZye4xjnjMEOywpQovi8Has1daUYuG97qZnSezYTogF33BrBl0apFsi6BV83BN6zOPdgnLrVU6o",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTedikTihqieV0W7omj4_ITPXU2G5GCT_pRgztHpYwrRfLstiTj",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://culture-circle.gumlet.io/productsimages/product/632950/6302797.jpg",
+      "image_width": 2000,
+      "image_height": 2000
+     },
+     {
+      "position": 43,
+      "title": "Air Jordan 1 Low Men's Shoes. Nike JP",
+      "link": "https://www.nike.com/jp/en/t/air-jordan-1-low-mens-shoes-2G45fb",
+      "source": "Nike",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcRWlEjj_iq0nhBgVSGIjEEITRCavJs_kdXxJzBXFWcvpoVt2jBoT03w-CQ0OcTmiDSHQotOVtZTLzqLoAV8VttDXtd5BOdxLhNqKnaOYaDxBgY",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTdaKU4XTb8mupIRdTw68b0UGDcrycoe1b57nbgVCMYxaXuPNGV",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://static.nike.com/a/images/t_default/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/07c27cf9-cf7c-4158-8620-652d6bea8d90/AIR+JORDAN+1+LOW.png",
+      "image_width": 400,
+      "image_height": 400
+     },
+     {
+      "position": 44,
+      "title": "Nike Women Air Jordan 1 Low Brown Casual Sneaker",
+      "link": "https://luxury.tatacliq.com/nike-women-air-jordan-1-low-brown-casual-sneaker/p-mp000000031382017",
+      "source": "TATA CLiQ Luxury",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcREFWxbMxDVfF32TOeKDxNxzkDSEU-pn9NyGMx9vG5O6v4LjSPNs1J-1mDbyQE-1NPRfoynTfxATfLzc3jZVeeDajVFBwK9qErF7zVRWo_cEaV8p2hCPlFk",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQVnUmGvTEaNGE357CEL6Q5NizFwUwRayS4H9GZgiCsBPzynQjV",
+      "thumbnail_width": 237,
+      "thumbnail_height": 213,
+      "image": "https://img.tatacliq.com/images/i32/658Wx734H/MP000000031382017_658Wx734H_202606071152151.jpeg",
+      "image_width": 734,
+      "image_height": 658
+     },
+     {
+      "position": 45,
+      "title": "Brown Jordan Air 1 Low SE - JD Sports Global",
+      "link": "https://www.global.jdsports.com/product/brown-jordan-air-1-low-se/800147/",
+      "source": "JD Sports",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcQQ8nAgIfFSQmuGtL-BkIyfyPcWNuJeqiXF9K6D6iAgxwVy3PIk3Xbql2El_XS9b1eTt5O-DaGG7KMZ6rb-th57HosItIXOvnZIGrxjZCddgz_AGPzPzLZzArG_0Q",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT273J7l-HAgBHYTBE7To4YyYaoL-jCKujZO2qYs5zpYxsadjrQ",
+      "thumbnail_width": 189,
+      "thumbnail_height": 267,
+      "image": "https://i8.amplience.net/i/jpl/jd_800147_d?v=1",
+      "image_width": 3039,
+      "image_height": 4288
+     },
+     {
+      "position": 46,
+      "title": "Women's New In – Country Road",
+      "link": "https://www.countryroad.com.au/collections/woman-new-in",
+      "source": "Country Road",
+      "source_icon": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcRq6C_aQ1yEyoxP7NZxf43sb2RwV5ideWjHMiUx6lE5xdaUF9nAYg_gjPm4Xq5C9vqDZrL9ztkbKrz1T6Je1bMtQvCtpHafdrvj3gSW-T8oQqyRhdmyD15LrD-D",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSf5r9SKdFQzjG40dhZvmZWklx9BCBX-m25sKX7pB-Zc-SIFuYT",
+      "thumbnail_width": 275,
+      "thumbnail_height": 183,
+      "image": "https://www.countryroad.com.au/cdn/shop/files/60320451_4998_2.jpg?v=1790561863&width=1999",
+      "image_width": 2999,
+      "image_height": 1999
+     },
+     {
+      "position": 47,
+      "title": "Wmns Air Jordan 1 Low 'Archaeo Brown' – Free Society",
+      "link": "https://freesociety.in/products/wmns-air-jordan-1-low-archaeo-brown",
+      "source": "Free Society",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQWXKYkV9mwCgS6dDfz8W_7t80C6E-M68BcIx3k9iWAlbGfLoegqMKkC6KDNdtPhK6_kMqlSyRrz7QKLXtUnnRnL-RxkvtkE8qUerrAEMeLKxaCkQ",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRur4V36jkEdT-dZFTPOVWqMf0q98KLkI1oUCtVVhmrhItox82I",
+      "thumbnail_width": 154,
+      "thumbnail_height": 327,
+      "image": "https://freesociety.in/cdn/shop/files/1476248_01_jpg.webp?v=1744876903&width=360",
+      "image_width": 170,
+      "image_height": 360
+     },
+     {
+      "position": 48,
+      "title": "Air Jordan 1 Low Men's Shoes. Nike IE",
+      "link": "https://www.nike.com/ie/t/air-jordan-1-low-mens-shoes-9g1Rdg/553558-200",
+      "source": "Nike",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcRWlEjj_iq0nhBgVSGIjEEITRCavJs_kdXxJzBXFWcvpoVt2jBoT03w-CQ0OcTmiDSHQotOVtZTLzqLoAV8VttDXtd5BOdxLhNqKnaOYaDxBgY",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTWrjlMj1vLKrWYxJxUyagA8XdvRzY4mpf0AvH-HjyVBBqtkgCd",
+      "thumbnail_width": 251,
+      "thumbnail_height": 201,
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ee40c439-e6c0-46d3-932d-c8c3d5501cb1/AIR+JORDAN+1+LOW.png",
+      "image_width": 2340,
+      "image_height": 1872
+     },
+     {
+      "position": 49,
+      "title": "Disruptive Technologies Innovation Fund (DTIF) webinar - DETE",
+      "link": "https://enterprise.gov.ie/en/news-and-events/department-events/dtif-call-8-webinar.html",
+      "source": "Department of Enterprise, Tourism and Employment",
+      "source_icon": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTV8dlmSVbVIN014YJHfNIZV9g3b9ihov84THkBe3bkQto3DEeHYdHZjBvg4sg1eLcW_Rig5di7m7bgqAeoLl2FOJaX6058UtdCKaIcchWnZLNGT2uWZg",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTHEIfiISBDrwzA4egyWh6sSBscHmdQWT3SOYYubyUn3PU0AkIC",
+      "thumbnail_width": 100,
+      "thumbnail_height": 450,
+      "image": "https://enterprise.gov.ie/djei/en/imagelibrary/dete-logo-2025.png",
+      "image_width": 100,
+      "image_height": 450
+     },
+     {
+      "position": 50,
+      "title": "Nike Men Air Jordan 1 Retro High OG Brown Casual Sneakers",
+      "link": "https://luxury.tatacliq.com/nike-men-air-jordan-1-retro-high-og-brown-casual-sneakers/p-mp000000031745119",
+      "source": "TATA CLiQ Luxury",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcREFWxbMxDVfF32TOeKDxNxzkDSEU-pn9NyGMx9vG5O6v4LjSPNs1J-1mDbyQE-1NPRfoynTfxATfLzc3jZVeeDajVFBwK9qErF7zVRWo_cEaV8p2hCPlFk",
+      "price": {
+       "value": "₹12,151*",
+       "extracted_value": 12151.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSVcw8YzMx61ksap-sPISzCkrA6C3HIBcvKWRxx2X8s_jUYdxC-",
+      "thumbnail_width": 237,
+      "thumbnail_height": 213,
+      "image": "https://img.tatacliq.com/images/i32/320Wx357H/MP000000031745113_320Wx357H_202607162059261.jpeg",
+      "image_width": 357,
+      "image_height": 320
+     },
+     {
+      "position": 51,
+      "title": "Nike Air Jordan 1 Low Palomino – The Mainstreet Marketplace",
+      "link": "https://marketplace.mainstreet.co.in/products/nike-air-jordan-1-low-palomino",
+      "source": "The Mainstreet Marketplace",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcSoXoVyiqsi33iNhmMcPKZ1WrtTrntH4OY5D3hQwnk2NP6slRhgZfxnzsNTwgirxeUyyrcfyug7jwGN_qHIOnONXVsA_HXMxhbFNw3U1txdz25iKV6jIltorXi9FanitZx6",
+      "price": {
+       "value": "₹27,299*",
+       "extracted_value": 27299.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQumBuqZk5hI2UwR-ThioQT26-ISwWo2rs9xJ1FRf5_mdzwLJFn",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "http://marketplace.mainstreet.co.in/cdn/shop/files/553558-200_1.jpg?v=1787346972",
+      "image_width": 2000,
+      "image_height": 2000
+     },
+     {
+      "position": 52,
+      "title": "Nike – Official Online Store for Athletic Shoes, Clothing & Gear",
+      "link": "https://www.nike.in/men/shoes/jordan/c/92581",
+      "source": "Nike – Official Online Store for Athletic Shoes, Clothing & Gear",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcS4Im6hWQwpqC7P4XiiPMPDcQWxI-P_jc5yuPOpMjVdwf3JKHhu_68v22HabVOa4C9a9wrFsl45MHOls1WUgf8V1TByJbkc6ujBcjTarvxxKw",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRECOv8xTp6APwA03NV_lFGiua-pRRuNceDepE2twnBkAvFFrvE",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/d/ad22b92Nike-553558-200_1.jpg?rnd=20200526195200&tr=w-512",
+      "image_width": 512,
+      "image_height": 512
+     },
+     {
+      "position": 53,
+      "title": "Jordan 1 Brown Low Top Shoes. Nike.com",
+      "link": "https://www.nike.com/w/jordan-1-brown-low-top-shoes-4fokyz557pqz7hf8ezy7ok",
+      "source": "Nike",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcRWlEjj_iq0nhBgVSGIjEEITRCavJs_kdXxJzBXFWcvpoVt2jBoT03w-CQ0OcTmiDSHQotOVtZTLzqLoAV8VttDXtd5BOdxLhNqKnaOYaDxBgY",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcShqg_mWU4I2lOdoxA5Pjam7ON3buDGrCcjVyJ6M5LDbp5xLfgJ",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/07c27cf9-cf7c-4158-8620-652d6bea8d90/AIR+JORDAN+1+LOW.png",
+      "image_width": 1184,
+      "image_height": 1184
+     },
+     {
+      "position": 54,
+      "title": "Jordan AJ 1 Low | Men's | Palomino/Black/Phamtom/Sail | ShopWSS",
+      "link": "https://www.shopwss.com/products/553558_200",
+      "source": "WSS",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcTzKvu6Mr483dJA6WqrxnpzTcBtX0as_dY6RrMrpD_CPmsTfZ4U76UXB0VDijY-o8XAPMnoo4on3zuDTw7FWP6OLxlFYtg0CiIx-YCogl3cvipVCJs",
+      "rating": 4.5,
+      "reviews": 462,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTe1N9C3212yNwbYQNloGoGQplI1NK2fe2HSlTzWpZJAKOPyG1l",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "http://www.shopwss.com/cdn/shop/files/553558200_1.jpg?v=1781127537&width=1024",
+      "image_width": 1024,
+      "image_height": 1024
+     },
+     {
+      "position": 55,
+      "title": "Nike Jordan Rot Grau Nike Jordan MercadoLibre ?",
+      "link": "https://www.kiswok.com/?p=606128011470",
+      "source": "kiswok",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcSLS87dHnzZRAFv_87MlYMEWHlKeAFzv5_1C-krPaCEwqSVwRW8vzAyWm511XQcxx0dhY2XbXvHPVhErsUSPqAdbWLknaH4bSakP2RvtW_-YTbJKQ",
+      "rating": 4.8,
+      "reviews": 5,
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRKuVSYTMIEiXeTostdd5-EYgeW3gOehTJWti4Sug3o_UlSx1VP",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://nikeco.vtexassets.com/arquivos/ids/1090831/553558-200_A.jpg?v=639187096386570000",
+      "image_width": 1000,
+      "image_height": 1000
+     },
+     {
+      "position": 56,
+      "title": "Buy Air Jordan 1 Low Men's Shoes - Palomino/Phantom/Sail ...",
+      "link": "https://www.nike.sa/en/air-jordan-1-low-mens-shoes/NK553558-200.html",
+      "source": "Nike",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcRHyhyof0nYo5kTUnIpR885MxfS9Aa8kWSI6hx-xwEJRCQSi-_PuDZ3pliZQVfxJPabpgpictC9H60jRwbUEU7qJr2fFk1PmzvvDgQeFhGxEg",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQZ0dxNiPAQmTc8tgP0CqdQyamARN4jkpYxVgSRvqAZVa1-VnPa",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "https://www.nike.sa/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw77d6ca93/nk/07c/2/7/c/f/9/07c27cf9_cf7c_4158_8620_652d6bea8d90.png",
+      "image_width": 3144,
+      "image_height": 3144
+     },
+     {
+      "position": 57,
+      "title": "Air Jordan 1 Low Mocha",
+      "link": "https://www.hypeelixir.com/products/copy-of-air-jordan-4-retro-university-blue-unc",
+      "source": "Hype Elixir",
+      "source_icon": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcT7lwHlIS6xrzoPhqTJZ9vVJww2rxT9TgrJNbrvRxTQmmqFHXMXA4d3KTQjgmsK_UX2pksCzWtzIOYq-Z5Sb4QgEr93wooS2wZnaa7AGH3ExG7S_BmuYnU",
+      "price": {
+       "value": "₹17,999*",
+       "extracted_value": 17999.0,
+       "currency": "₹"
+      },
+      "in_stock": true,
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT2qYI5irpmQk2e6lTJTte0FXRCjO1j_RM92UaiiPQwD1qZdIfN",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "http://www.hypeelixir.com/cdn/shop/products/810848_01_jpg_540x_036c9cd3-f39e-4ee6-a330-c9614e7445b7-312060.jpg?v=1698352970",
+      "image_width": 540,
+      "image_height": 540
+     },
+     {
+      "position": 58,
+      "title": "AIR JORDAN 1 LOW – CourtSide Melbourne",
+      "link": "https://www.courtsidemelbourne.com/products/air-jordan-1-low-20",
+      "source": "CourtSide Melbourne",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcQsZxdMjfACr24y-ho7ElRMSmTSb8MbcmPi0mztR09wZU6yA76Oowh84sPtOEhAuTEjYovh-VK7r38jVPIIhYtzDQnLd2u99XND7Rbu7FshaaZhuhf3rCOztx5PN04m1Q",
+      "rating": 5.0,
+      "reviews": 4,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA9FAAOMZDTNcJBQIuxTfsP-l7uWhjO4w1e3HY1oMBhHE3900X",
+      "thumbnail_width": 225,
+      "thumbnail_height": 225,
+      "image": "http://www.courtsidemelbourne.com/cdn/shop/files/media_c5117681-df8f-45e8-a177-f8a4ec5e9db0.jpg?v=1786947169",
+      "image_width": 2000,
+      "image_height": 2000
+     },
+     {
+      "position": 59,
+      "title": "Shop Air Jordan Sneakers & Shoes Online in India | VegNonVeg",
+      "link": "https://www.vegnonveg.com/footwear/jordan",
+      "source": "VegNonVeg",
+      "source_icon": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQX5oDXsScy96KHSWdsb2Tt-8A9FCxnKGAIct1OmOIRfEoprdy3wd5147A_PfgxE9tsWdRyJQcmNYBEd0bHWH_Qkvn8Q-K0AkSfsSc3mZ7QQpIsOb5uTQ",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_YQjAB7lzzbrvUWNhCprKdQhSFKb_oPaHyvuX1ML1u_KJDiE",
+      "thumbnail_width": 244,
+      "thumbnail_height": 207,
+      "image": "https://images.vegnonveg.com/resized/680X800/15561/jordan-air-jordan-1-low-palominoblack-phantom-sail-6a4e3aa25ec2b.jpg?format=webp",
+      "image_width": 800,
+      "image_height": 680
+     }
+    ],
+    "_searched_at": "2026-10-07 08:41:56 UTC"
+   }
+  },
+  "7d9b8dd42949c59ce03ec7cec4b0ddf0b0f71b0a77dbb3680ca20a8b196b6aa6": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"9123456780\" OR \"91234 56780\" OR \"+91 91234 56780\""
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "9123456780 (@baby572120) • Instagram photos and videos",
+      "link": "https://www.instagram.com/baby572120/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESYAHrOzAVcMG9k7f_0V5_qyR8wme18DGZpLn_2vpzDXa47WjstZTEqMQmzdLjY3OWNkR0Mba9pDlgAfGUkqaqyq1CW2smMl3dAhgcwUBOicTcXo_pfhw90lyH8HZxL3hONQ&ved=2ahUKEwjC76Cbz6eXAxUnkYkEHY4SNqIQFnoECBEQAQ&uoh=1",
+      "displayed_link": "100+ followers",
+      "favicon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp",
+      "snippet": "Log in · Open app · baby572120's profile picture. baby572120. 9123456780. 108 followers. 83 following. Mansi. Follow. Message.",
+      "snippet_highlighted_words": [
+       "9123456780"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Log in · Open app · baby572120's profile picture. baby572120. 9123456780. 108 followers. 83 following. Mansi. Follow. Message.",
+        "source_info_link": "https://www.instagram.com/baby572120/",
+        "icon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpABL2dvdG8_dXJsPUNBRVNZQUhyT3pBVmNNRzlrN2ZfMFY1X3F5Ujh3bWUxOERHWnBMbl8ydnB6RFhhNDdXanN0WlRFcU1RbXpkTGpZM09XTmtSME1iYTlwRGxnQWZHVWtxYXF5cTFDVzJzbU1sM2RBaGdjd1VCT2ljVGNYb19wZmh3OTBseUg4SFp4TDNoT05REgQaAggAGscDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKMDCAAQABgAIAAqKwoKOTEyMzQ1Njc4MBV5mSpAGgs5MTIzNCA1Njc4MBoLOTEyMzQgNTY3ODAykAEvZ290bz91cmw9Q0FFU1lBSHJPekFWY01HOWs3Zl8wVjVfcXlSOHdtZTE4REdacExuXzJ2cHpEWGE0N1dqc3RaVEVxTVFtemRMalkzT1dOa1IwTWJhOXBEbGdBZkdVa3FhcXlxMUNXMnNtTWwzZEFoZ2N3VUJPaWNUY1hvX3BmaHc5MGx5SDhIWnhMM2hPTlE6PzxiPjkxMjM0NTY3ODA8L2I-IChAYmFieTU3MjEyMCkg4oCiIEluc3RhZ3JhbSBwaG90b3MgYW5kIHZpZGVvc0KXAUxvZyBpbiAmbWlkZG90OyBPcGVuIGFwcCAmbWlkZG90OyBiYWJ5NTcyMTIwJiMzOTtzIHByb2ZpbGUgcGljdHVyZS4gYmFieTU3MjEyMC4gPGI-OTEyMzQ1Njc4MDwvYj4uIDEwOCBmb2xsb3dlcnMuIDgzIGZvbGxvd2luZy4gTWFuc2kuIEZvbGxvdy4gTWVzc2FnZS4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpABL2dvdG8_dXJsPUNBRVNZQUhyT3pBVmNNRzlrN2ZfMFY1X3F5Ujh3bWUxOERHWnBMbl8ydnB6RFhhNDdXanN0WlRFcU1RbXpkTGpZM09XTmtSME1iYTlwRGxnQWZHVWtxYXF5cTFDVzJzbU1sM2RBaGdjd1VCT2ljVGNYb19wZmh3OTBseUg4SFp4TDNoT05REgQaAggAGscDEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKMDCAAQABgAIAAqKwoKOTEyMzQ1Njc4MBV5mSpAGgs5MTIzNCA1Njc4MBoLOTEyMzQgNTY3ODAykAEvZ290bz91cmw9Q0FFU1lBSHJPekFWY01HOWs3Zl8wVjVfcXlSOHdtZTE4REdacExuXzJ2cHpEWGE0N1dqc3RaVEVxTVFtemRMalkzT1dOa1IwTWJhOXBEbGdBZkdVa3FhcXlxMUNXMnNtTWwzZEFoZ2N3VUJPaWNUY1hvX3BmaHc5MGx5SDhIWnhMM2hPTlE6PzxiPjkxMjM0NTY3ODA8L2I-IChAYmFieTU3MjEyMCkg4oCiIEluc3RhZ3JhbSBwaG90b3MgYW5kIHZpZGVvc0KXAUxvZyBpbiAmbWlkZG90OyBPcGVuIGFwcCAmbWlkZG90OyBiYWJ5NTcyMTIwJiMzOTtzIHByb2ZpbGUgcGljdHVyZS4gYmFieTU3MjEyMC4gPGI-OTEyMzQ1Njc4MDwvYj4uIDEwOCBmb2xsb3dlcnMuIDgzIGZvbGxvd2luZy4gTWFuc2kuIEZvbGxvdy4gTWVzc2FnZS4iAhABSABYAGgA",
+      "source": "Instagram",
+      "read_more_link": "https://www.instagram.com/baby572120/#:~:text=Log%20in,Message"
+     },
+     {
+      "position": 2,
+      "title": "Create a Customer",
+      "link": "https://razorpay.com/docs/api/customers/create",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaQHrOzAVml7dik1TlE8nDUxbnEyuB-IG6QCtOeIRRqYMxV20__GCRwJgKpcqlS9r4sHc9TaAlRZVE5_p4gBTZACv1nPncGgRSupiuWOd1Oyo7xVgBLR0zoXpB3Xv3qgHVha3BZVrajtNXA&ved=2ahUKEwjC76Cbz6eXAxUnkYkEHY4SNqIQFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://razorpay.com › Payments › Customers",
+      "favicon": "https://serpapi.com/images/i/UklGRkoBAABXRUJQVlA4ID4BAACwBwCdASogACAAPtEutFooIagoGAEAGglsALsoycYehPbAXZ3vNCNBCAcoZoGZlf6zLa1u003hEa9zbz67GzvrZlc2sCs4AP7-wg0wjrFJ2q6JZBHywqBgCWIQ8PnUjqGLZi3vycmn7eKKg0sND1m3CCRQaNBF9cXZVWCxwZXd_pIScEX1xkAppc_QYNUTQ8IRoqAjZ_qlpwXh13nlCEwr63Aarc-w-Bc35EmcyLDNofCHMMp5i3PK6ze3PgycSYm5nQaxvG80Q6MQfCN-set_KZ7cKhR-sO-RFgxPyByeR7TnbdKhDXRc80TzhvhP60iz56FXV3NFb9OAmz4XuqOlZXyVSrmIFhjXeac-2zlDgRGh42k-6qja-YQgL5Hv-CjdBc2_qOhGUVUJ9bdNtvnhElra6otKvD7hfswgAAA.webp",
+      "snippet": "Create a Customer ; client · \"YOUR_SECRET\" ; \"name\" · \"Gaurav Kumar\" ; \"contact\" · 9123456780 ; \"email\" · \"gaurav.kumar@example.com\" ; \"fail_existing\" · \"0\" ...",
+      "snippet_highlighted_words": [
+       "9123456780"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Create a Customer ; client · \"YOUR_SECRET\" ; \"name\" · \"Gaurav Kumar\" ; \"contact\" · 9123456780 ; \"email\" · \"gaurav.kumar@example.com\" ; \"fail_existing\" · \"0\" ...",
+        "source_info_link": "https://razorpay.com/docs/api/customers/create",
+        "icon": "https://serpapi.com/images/i/UklGRkoBAABXRUJQVlA4ID4BAACwBwCdASogACAAPtEutFooIagoGAEAGglsALsoycYehPbAXZ3vNCNBCAcoZoGZlf6zLa1u003hEa9zbz67GzvrZlc2sCs4AP7-wg0wjrFJ2q6JZBHywqBgCWIQ8PnUjqGLZi3vycmn7eKKg0sND1m3CCRQaNBF9cXZVWCxwZXd_pIScEX1xkAppc_QYNUTQ8IRoqAjZ_qlpwXh13nlCEwr63Aarc-w-Bc35EmcyLDNofCHMMp5i3PK6ze3PgycSYm5nQaxvG80Q6MQfCN-set_KZ7cKhR-sO-RFgxPyByeR7TnbdKhDXRc80TzhvhP60iz56FXV3NFb9OAmz4XuqOlZXyVSrmIFhjXeac-2zlDgRGh42k-6qja-YQgL5Hv-CjdBc2_qOhGUVUJ9bdNtvnhElra6otKvD7hfswgAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVm1sN2RpazFUbEU4bkRVeGJuRXl1Qi1JRzZRQ3RPZUlSUnFZTXhWMjBfX0dDUndKZ0twY3FsUzlyNHNIYzlUYUFsUlpWRTVfcDRnQlRaQUN2MW5QbmNHZ1JTdXBpdVdPZDFPeW83eFZnQkxSMHpvWHBCM1h2M3FnSFZoYTNCWlZyYWp0TlhBEgQaAggAGroEEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAlAQIABAAGAAgACorCgo5MTIzNDU2NzgwFWt5A0AaCzkxMjM0IDU2NzgwGgs5MTIzNCA1Njc4MDKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZtbDdkaWsxVGxFOG5EVXhibkV5dUItSUc2UUN0T2VJUlJxWU14VjIwX19HQ1J3SmdLcGNxbFM5cjRzSGM5VGFBbFJaVkU1X3A0Z0JUWkFDdjFuUG5jR2dSU3VwaXVXT2QxT3lvN3hWZ0JMUjB6b1hwQjNYdjNxZ0hWaGEzQlpWcmFqdE5YQTocQ3JlYXRlIGEgQ3VzdG9tZXIgLSBSYXpvcnBheUKfAkNyZWF0ZSBhIEN1c3RvbWVyIDsgY2xpZW50ICZtaWRkb3Q7ICZxdW90O1lPVVJfU0VDUkVUJnF1b3Q7IDsgJnF1b3Q7bmFtZSZxdW90OyAmbWlkZG90OyAmcXVvdDtHYXVyYXYgS3VtYXImcXVvdDsgOyAmcXVvdDtjb250YWN0JnF1b3Q7ICZtaWRkb3Q7IDxiPjkxMjM0NTY3ODA8L2I-IDsgJnF1b3Q7ZW1haWwmcXVvdDsgJm1pZGRvdDsgJnF1b3Q7Z2F1cmF2Lmt1bWFyQGV4YW1wbGUuY29tJnF1b3Q7IDsgJnF1b3Q7ZmFpbF9leGlzdGluZyZxdW90OyAmbWlkZG90OyAmcXVvdDswJnF1b3Q7Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVm1sN2RpazFUbEU4bkRVeGJuRXl1Qi1JRzZRQ3RPZUlSUnFZTXhWMjBfX0dDUndKZ0twY3FsUzlyNHNIYzlUYUFsUlpWRTVfcDRnQlRaQUN2MW5QbmNHZ1JTdXBpdVdPZDFPeW83eFZnQkxSMHpvWHBCM1h2M3FnSFZoYTNCWlZyYWp0TlhBEgQaAggAGroEEgIIABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAlAQIABAAGAAgACorCgo5MTIzNDU2NzgwFWt5A0AaCzkxMjM0IDU2NzgwGgs5MTIzNCA1Njc4MDKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZtbDdkaWsxVGxFOG5EVXhibkV5dUItSUc2UUN0T2VJUlJxWU14VjIwX19HQ1J3SmdLcGNxbFM5cjRzSGM5VGFBbFJaVkU1X3A0Z0JUWkFDdjFuUG5jR2dSU3VwaXVXT2QxT3lvN3hWZ0JMUjB6b1hwQjNYdjNxZ0hWaGEzQlpWcmFqdE5YQTocQ3JlYXRlIGEgQ3VzdG9tZXIgLSBSYXpvcnBheUKfAkNyZWF0ZSBhIEN1c3RvbWVyIDsgY2xpZW50ICZtaWRkb3Q7ICZxdW90O1lPVVJfU0VDUkVUJnF1b3Q7IDsgJnF1b3Q7bmFtZSZxdW90OyAmbWlkZG90OyAmcXVvdDtHYXVyYXYgS3VtYXImcXVvdDsgOyAmcXVvdDtjb250YWN0JnF1b3Q7ICZtaWRkb3Q7IDxiPjkxMjM0NTY3ODA8L2I-IDsgJnF1b3Q7ZW1haWwmcXVvdDsgJm1pZGRvdDsgJnF1b3Q7Z2F1cmF2Lmt1bWFyQGV4YW1wbGUuY29tJnF1b3Q7IDsgJnF1b3Q7ZmFpbF9leGlzdGluZyZxdW90OyAmbWlkZG90OyAmcXVvdDswJnF1b3Q7Jm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Razorpay",
+      "read_more_link": "https://razorpay.com/docs/api/customers/create#:~:text=Create%20a%20Customer&text=Success&text=Success&text=Success&text=Success&text=Success&text=Success&text=Success&text=Success&text=Success&text=Success"
+     },
+     {
+      "position": 3,
+      "title": "Techknowmics",
+      "link": "https://www.techknowmics.com/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESWAHrOzAVFvsKAHlRlkZAofzxHfGBGxk4JugX76dMpVOqm6oMqqrBEJgHCeBYTE4qZbnhSEMfORQImDV045as3uw9zv7FRRn8bfea0A5K5ys73QEbwmVzAfw&ved=2ahUKEwjC76Cbz6eXAxUnkYkEHY4SNqIQFnoECA4QAQ&uoh=1",
+      "displayed_link": "https://www.techknowmics.com",
+      "snippet": "+91 9123456780 +91 9123456780. Office Address. A-145, Sector 63, Noida Uttar Pradesh, India. © Techknowmics 2024. All right reserved.",
+      "snippet_highlighted_words": [
+       "9123456780",
+       "9123456780"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "+91 9123456780 +91 9123456780. Office Address. A-145, Sector 63, Noida Uttar Pradesh, India. © Techknowmics 2024. All right reserved.",
+        "source_info_link": "https://www.techknowmics.com/"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CoUBL2dvdG8_dXJsPUNBRVNXQUhyT3pBVkZ2c0tBSGxSbGtaQW9menhIZkdCR3hrNEp1Z1g3NmRNcFZPcW02b01xcXJCRUpnSENlQllURTRxWmJuaFNFTWZPUlFJbURWMDQ1YXMzdXc5enY3RlJSbjhiZmVhMEE1SzV5czczUUVid21WekFmdxIEGgIIABqGAxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDiAggAEAAYACAAKisKCjkxMjM0NTY3ODAViDZGPhoLOTEyMzQgNTY3ODAaCzkxMjM0IDU2NzgwMoUBL2dvdG8_dXJsPUNBRVNXQUhyT3pBVkZ2c0tBSGxSbGtaQW9menhIZkdCR3hrNEp1Z1g3NmRNcFZPcW02b01xcXJCRUpnSENlQllURTRxWmJuaFNFTWZPUlFJbURWMDQ1YXMzdXc5enY3RlJSbjhiZmVhMEE1SzV5czczUUVid21WekFmdzoMVGVjaGtub3dtaWNzQpQBKzkxIDxiPjkxMjM0NTY3ODA8L2I-ICs5MSA8Yj45MTIzNDU2NzgwPC9iPi4gT2ZmaWNlIEFkZHJlc3MuIEEtMTQ1LCBTZWN0b3IgNjMsIE5vaWRhIFV0dGFyIFByYWRlc2gsIEluZGlhLiDCqSBUZWNoa25vd21pY3MgMjAyNC4gQWxsIHJpZ2h0IHJlc2VydmVkLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CoUBL2dvdG8_dXJsPUNBRVNXQUhyT3pBVkZ2c0tBSGxSbGtaQW9menhIZkdCR3hrNEp1Z1g3NmRNcFZPcW02b01xcXJCRUpnSENlQllURTRxWmJuaFNFTWZPUlFJbURWMDQ1YXMzdXc5enY3RlJSbjhiZmVhMEE1SzV5czczUUVid21WekFmdxIEGgIIABqGAxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDiAggAEAAYACAAKisKCjkxMjM0NTY3ODAViDZGPhoLOTEyMzQgNTY3ODAaCzkxMjM0IDU2NzgwMoUBL2dvdG8_dXJsPUNBRVNXQUhyT3pBVkZ2c0tBSGxSbGtaQW9menhIZkdCR3hrNEp1Z1g3NmRNcFZPcW02b01xcXJCRUpnSENlQllURTRxWmJuaFNFTWZPUlFJbURWMDQ1YXMzdXc5enY3RlJSbjhiZmVhMEE1SzV5czczUUVid21WekFmdzoMVGVjaGtub3dtaWNzQpQBKzkxIDxiPjkxMjM0NTY3ODA8L2I-ICs5MSA8Yj45MTIzNDU2NzgwPC9iPi4gT2ZmaWNlIEFkZHJlc3MuIEEtMTQ1LCBTZWN0b3IgNjMsIE5vaWRhIFV0dGFyIFByYWRlc2gsIEluZGlhLiDCqSBUZWNoa25vd21pY3MgMjAyNC4gQWxsIHJpZ2h0IHJlc2VydmVkLiICEAFIAFgAaAA",
+      "source": "Techknowmics",
+      "read_more_link": "https://www.techknowmics.com/#:~:text=%C2%A9%20Techknowmics%202024.%20All%20right,reserved."
+     },
+     {
+      "position": 4,
+      "title": "Pavan Kumar Premi on Reels",
+      "link": "https://www.facebook.com/100068979803929/videos/2316288545573814/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESfAHrOzAVEGPIehh57hhLPIwd-V3m7YtvyoKYJ0G1SjFL36kiZboWtjUcWZ5JBLxZwUU1zsapvUz3rnMhRSz4sI9BxgLCz1wGHTte3A9xQfW9-0ps-ZRscsp2AW5mB5DR-27umYE-WjJCGlEroIVn7tdKNPIwn8XPobLe7MQ&ved=2ahUKEwjC76Cbz6eXAxUnkYkEHY4SNqIQFnoECBcQAQ&uoh=1",
+      "displayed_link": "10+ reactions · 1 month ago",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "No photo description available. नखतेश बन्ना धाम जानेवा-नागौर . Nakhat banna dham janewa - Nagaur. नखतेश बन्ना ...",
+      "about_this_result": {
+       "source": {
+        "description": "No photo description available. नखतेश बन्ना धाम जानेवा-नागौर . Nakhat banna dham janewa - Nagaur. नखतेश बन्ना ...",
+        "source_info_link": "https://www.facebook.com/100068979803929/videos/2316288545573814/",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVkVHUEllaGg1N2hoTFBJd2QtVjNtN1l0dnlvS1lKMEcxU2pGTDM2a2laYm9XdGpVY1daNUpCTHhad1VVMXpzYXB2VXozcm5NaFJTejRzSTlCeGdMQ3oxd0dIVHRlM0E5eFFmVzktMHBzLVpSc2NzcDJBVzVtQjVEUi0yN3VtWUUtV2pKQ0dsRXJvSVZuN3RkS05QSXduOFhQb2JMZTdNURIEGgIIABr1AxIAGgAiACoAMgYIARICaW46AEIECAIQAEoAWgByAHoAgkDRAwgAEAAYACAAKisKCjkxMjM0NTY3ODAVGGZgQBoLOTEyMzQgNTY3ODAaCzkxMjM0IDU2NzgwMrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVkVHUEllaGg1N2hoTFBJd2QtVjNtN1l0dnlvS1lKMEcxU2pGTDM2a2laYm9XdGpVY1daNUpCTHhad1VVMXpzYXB2VXozcm5NaFJTejRzSTlCeGdMQ3oxd0dIVHRlM0E5eFFmVzktMHBzLVpSc2NzcDJBVzVtQjVEUi0yN3VtWUUtV2pKQ0dsRXJvSVZuN3RkS05QSXduOFhQb2JMZTdNUTolUGF2YW4gS3VtYXIgUHJlbWkgb24gUmVlbHMgLSBGYWNlYm9va0K6AU5vIHBob3RvIGRlc2NyaXB0aW9uIGF2YWlsYWJsZS4g4KSo4KSW4KSk4KWH4KS2IOCkrOCkqOCljeCkqOCkviDgpKfgpL7gpK4g4KSc4KS-4KSo4KWH4KS14KS-LeCkqOCkvuCkl-CljOCksCAuIE5ha2hhdCBiYW5uYSBkaGFtIGphbmV3YSAtIE5hZ2F1ci4g4KSo4KSW4KSk4KWH4KS2IOCkrOCkqOCljeCkqOCkviZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVkVHUEllaGg1N2hoTFBJd2QtVjNtN1l0dnlvS1lKMEcxU2pGTDM2a2laYm9XdGpVY1daNUpCTHhad1VVMXpzYXB2VXozcm5NaFJTejRzSTlCeGdMQ3oxd0dIVHRlM0E5eFFmVzktMHBzLVpSc2NzcDJBVzVtQjVEUi0yN3VtWUUtV2pKQ0dsRXJvSVZuN3RkS05QSXduOFhQb2JMZTdNURIEGgIIABr1AxIAGgAiACoAMgYIARICaW46AEIECAIQAEoAWgByAHoAgkDRAwgAEAAYACAAKisKCjkxMjM0NTY3ODAVGGZgQBoLOTEyMzQgNTY3ODAaCzkxMjM0IDU2NzgwMrUBL2dvdG8_dXJsPUNBRVNmQUhyT3pBVkVHUEllaGg1N2hoTFBJd2QtVjNtN1l0dnlvS1lKMEcxU2pGTDM2a2laYm9XdGpVY1daNUpCTHhad1VVMXpzYXB2VXozcm5NaFJTejRzSTlCeGdMQ3oxd0dIVHRlM0E5eFFmVzktMHBzLVpSc2NzcDJBVzVtQjVEUi0yN3VtWUUtV2pKQ0dsRXJvSVZuN3RkS05QSXduOFhQb2JMZTdNUTolUGF2YW4gS3VtYXIgUHJlbWkgb24gUmVlbHMgLSBGYWNlYm9va0K6AU5vIHBob3RvIGRlc2NyaXB0aW9uIGF2YWlsYWJsZS4g4KSo4KSW4KSk4KWH4KS2IOCkrOCkqOCljeCkqOCkviDgpKfgpL7gpK4g4KSc4KS-4KSo4KWH4KS14KS-LeCkqOCkvuCkl-CljOCksCAuIE5ha2hhdCBiYW5uYSBkaGFtIGphbmV3YSAtIE5hZ2F1ci4g4KSo4KSW4KSk4KWH4KS2IOCkrOCkqOCljeCkqOCkviZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Facebook · Pavan Kumar Premi",
+      "read_more_link": "https://www.facebook.com/100068979803929/videos/2316288545573814/#:~:text=%E0%A4%A8%E0%A4%96%E0%A4%A4%E0%A5%87%E0%A4%B6%20%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE%20%E0%A4%A7%E0%A4%BE%E0%A4%AE%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A5%87%E0%A4%B5%E0%A4%BE%2D..."
+     },
+     {
+      "position": 5,
+      "title": "+91 add பண்ண formula கூட தேவையில்லை! Excel ...",
+      "link": "https://www.facebook.com/mrexceltamil/videos/91-add-%E0%AE%AA%E0%AE%A3%E0%AF%8D%E0%AE%A3-formula-%E0%AE%95%E0%AF%82%E0%AE%9F-%E0%AE%A4%E0%AF%87%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AF%88-excel-custom-format-%E0%AE%B2-%E0%AE%92%E0%AE%B0%E0%AF%81-line-%E0%AE%AA%E0%AF%8B%E0%AE%A4%E0%AF%81%E0%AE%AE%E0%AF%8D/4662692050687256/",
+      "displayed_link": "5 reactions · 5 days ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6144f37ff8dacf9748cb5/images/OILSbs5mKMAi-lt6Cb0z_FJEjpEaRN0fGuamliOcMoE.png",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "+91 add பண்ண formula கூட தேவையில்லை! How to add +91 in Microsoft Excel … calculating Running Total manually?",
+      "duration": "1:12",
+      "about_this_result": {
+       "source": {
+        "description": "+91 add பண்ண formula கூட தேவையில்லை! How to add +91 in Microsoft Excel … calculating Running Total manually?",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrUEL2dvdG8_dXJsPUNBRVNtd01CNnpzd0ZXcmVZRHNnWXplVUo3d0ZoQ18zb2JOdFk3NW5hMllpbDJuTjk3UWNQakF6aVNQRWhYOHFuY1VodTF6NmFyY0NnbDJmcDdHU1N4Zi1PU1NtN0dWUHIyTXk4S250cEVkWUI5Z3VGMEdleUJYYmNhUzFJSERBaVJaajdldnhUeEczNDgtb2g4OFVxeUktTjl1V0Q3WGxQOFRHQWVwWTlESEkxbTVMTktwRnpRbEl5VmY4d0VDQjQ5WHNxQnJ0RHNMLUd4NXNXRkFBVzVpdld1WF84Mm5QMVo5RklvMG4zdkhHWGxVRy16blRfZVJZbGxPb0NlWTBrby1TRzVUQVFZbWpwNDdCbnBPZzhVbk5JeUN4WjZUS2hsMDEyYW9CRVdXR294OVdSaGpRdjlxc0w4eUJVQzdKVGJybWx0Qm40TGtfMDNXSWQ1RVVMQ0JUSUZKZmFXUmxNd2htZ2hPNmNkQkpCUlpSbm90NmJZeWFZendKX0d2SlhrcGd0bVFvNXZHVGRldTJFaEVhVkd4WjFURGdfVWlINjVBSWhRUGI5U1dSSHd1T2FaNVZ6akFOX2ZibDB2LW1laTdKSjJEcjQ2WUI3ZUVMRkxmMm11c0NyX3p0NmljQzF6X1NTTzhtajhUQXVYWkJLN25zUFNjZC03LVNmeUhkOWRSV0xDRzhpMzlwN2V3ZEpwZENTb0NsOGZEemg4Rml1dk0zLU45Y0hJRRIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrUEL2dvdG8_dXJsPUNBRVNtd01CNnpzd0ZXcmVZRHNnWXplVUo3d0ZoQ18zb2JOdFk3NW5hMllpbDJuTjk3UWNQakF6aVNQRWhYOHFuY1VodTF6NmFyY0NnbDJmcDdHU1N4Zi1PU1NtN0dWUHIyTXk4S250cEVkWUI5Z3VGMEdleUJYYmNhUzFJSERBaVJaajdldnhUeEczNDgtb2g4OFVxeUktTjl1V0Q3WGxQOFRHQWVwWTlESEkxbTVMTktwRnpRbEl5VmY4d0VDQjQ5WHNxQnJ0RHNMLUd4NXNXRkFBVzVpdld1WF84Mm5QMVo5RklvMG4zdkhHWGxVRy16blRfZVJZbGxPb0NlWTBrby1TRzVUQVFZbWpwNDdCbnBPZzhVbk5JeUN4WjZUS2hsMDEyYW9CRVdXR294OVdSaGpRdjlxc0w4eUJVQzdKVGJybWx0Qm40TGtfMDNXSWQ1RVVMQ0JUSUZKZmFXUmxNd2htZ2hPNmNkQkpCUlpSbm90NmJZeWFZendKX0d2SlhrcGd0bVFvNXZHVGRldTJFaEVhVkd4WjFURGdfVWlINjVBSWhRUGI5U1dSSHd1T2FaNVZ6akFOX2ZibDB2LW1laTdKSjJEcjQ2WUI3ZUVMRkxmMm11c0NyX3p0NmljQzF6X1NTTzhtajhUQXVYWkJLN25zUFNjZC03LVNmeUhkOWRSV0xDRzhpMzlwN2V3ZEpwZENTb0NsOGZEemg4Rml1dk0zLU45Y0hJRRIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "source": "Facebook · Mr Excel Tamil"
+     },
+     {
+      "position": 6,
+      "title": "Consider the tables given below: Table: Customer",
+      "link": "https://askfilo.com/user-question-answers-smart-solutions/consider-the-tables-given-below-table-customer-customerid-3335343934343131",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESwAEB6zswFUgvSLVKvjFSfy7unIAnyzfwoKCa1E5CDt5gEusRURSP4lhvCHKy3xUN9ek8YNhk1Rs1kI_4piiz6pXjTvzw16dN0dTrqQgP6qfhlz8GHfhG5CSHZ7d02vQV8JUkIpcV9DFivZcNBh1Bz9bm4Wnrg9xzpK1PWZ2taI9MBbThKb_K7Uvn0bKFnEq76yp9HGtBDHxkOAXHOuZVWAeawgKM33bl05D0qoRF_Ov1HqwlqkDQwEgx_7KLsAzBEwE&ved=2ahUKEwjC76Cbz6eXAxUnkYkEHY4SNqIQFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://askfilo.com › CBSE › Smart Solutions",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png",
+      "date": "11 Dec 2025",
+      "snippet": "Consider the tables given below: ; C002, Liel Mary, 2222233333 ; C003, Mark William, 9123456780 ; C004, Nick Henry, 9333012345 ; C005, Tick Mark ...",
+      "snippet_highlighted_words": [
+       "9123456780"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Consider the tables given below: ; C002, Liel Mary, 2222233333 ; C003, Mark William, 9123456780 ; C004, Nick Henry, 9333012345 ; C005, Tick Mark ...",
+        "source_info_link": "https://askfilo.com/user-question-answers-smart-solutions/consider-the-tables-given-below-table-customer-customerid-3335343934343131",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpECL2dvdG8_dXJsPUNBRVN3QUVCNnpzd0ZVZ3ZTTFZLdmpGU2Z5N3VuSUFueXpmd29LQ2ExRTVDRHQ1Z0V1c1JVUlNQNGxodkNIS3kzeFVOOWVrOFlOaGsxUnMxa0lfNHBpaXo2cFhqVHZ6dzE2ZE4wZFRycVFnUDZxZmhsejhHSGZoRzVDU0haN2QwMnZRVjhKVWtJcGNWOURGaXZaY05CaDFCejlibTRXbnJnOXh6cEsxUFdaMnRhSTlNQmJUaEtiX0s3VXZuMGJLRm5FcTc2eXA5SEd0QkRIeGtPQVhIT3VaVldBZWF3Z0tNMzNibDA1RDBxb1JGX092MUhxd2xxa0RRd0VneF83S0xzQXpCRXdFEgQaAggAGs8EEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKsECAAQABgAIAAqKwoKOTEyMzQ1Njc4MBUysQM_Ggs5MTIzNCA1Njc4MBoLOTEyMzQgNTY3ODAykQIvZ290bz91cmw9Q0FFU3dBRUI2enN3RlVndlNMVkt2akZTZnk3dW5JQW55emZ3b0tDYTFFNUNEdDVnRXVzUlVSU1A0bGh2Q0hLeTN4VU45ZWs4WU5oazFSczFrSV80cGlpejZwWGpUdnp3MTZkTjBkVHJxUWdQNnFmaGx6OEdIZmhHNUNTSFo3ZDAydlFWOEpVa0lwY1Y5REZpdlpjTkJoMUJ6OWJtNFducmc5eHpwSzFQV1oydGFJOU1CYlRoS2JfSzdVdm4wYktGbkVxNzZ5cDlIR3RCREh4a09BWEhPdVpWV0FlYXdnS00zM2JsMDVEMHFvUkZfT3YxSHF3bHFrRFF3RWd4XzdLTHNBekJFd0U6PUNvbnNpZGVyIHRoZSB0YWJsZXMgZ2l2ZW4gYmVsb3c6IFRhYmxlOiBDdXN0b21lciB8IGN1c3RvbWVyaWRCoAFDb25zaWRlciB0aGUgdGFibGVzIGdpdmVuIGJlbG93OiA7IEMwMDIsIExpZWwgTWFyeSwgMjIyMjIzMzMzMyA7IEMwMDMsIE1hcmsgV2lsbGlhbSwgPGI-OTEyMzQ1Njc4MDwvYj4gOyBDMDA0LCBOaWNrIEhlbnJ5LCA5MzMzMDEyMzQ1IDsgQzAwNSwgVGljayBNYXJrJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpECL2dvdG8_dXJsPUNBRVN3QUVCNnpzd0ZVZ3ZTTFZLdmpGU2Z5N3VuSUFueXpmd29LQ2ExRTVDRHQ1Z0V1c1JVUlNQNGxodkNIS3kzeFVOOWVrOFlOaGsxUnMxa0lfNHBpaXo2cFhqVHZ6dzE2ZE4wZFRycVFnUDZxZmhsejhHSGZoRzVDU0haN2QwMnZRVjhKVWtJcGNWOURGaXZaY05CaDFCejlibTRXbnJnOXh6cEsxUFdaMnRhSTlNQmJUaEtiX0s3VXZuMGJLRm5FcTc2eXA5SEd0QkRIeGtPQVhIT3VaVldBZWF3Z0tNMzNibDA1RDBxb1JGX092MUhxd2xxa0RRd0VneF83S0xzQXpCRXdFEgQaAggAGs8EEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQKsECAAQABgAIAAqKwoKOTEyMzQ1Njc4MBUysQM_Ggs5MTIzNCA1Njc4MBoLOTEyMzQgNTY3ODAykQIvZ290bz91cmw9Q0FFU3dBRUI2enN3RlVndlNMVkt2akZTZnk3dW5JQW55emZ3b0tDYTFFNUNEdDVnRXVzUlVSU1A0bGh2Q0hLeTN4VU45ZWs4WU5oazFSczFrSV80cGlpejZwWGpUdnp3MTZkTjBkVHJxUWdQNnFmaGx6OEdIZmhHNUNTSFo3ZDAydlFWOEpVa0lwY1Y5REZpdlpjTkJoMUJ6OWJtNFducmc5eHpwSzFQV1oydGFJOU1CYlRoS2JfSzdVdm4wYktGbkVxNzZ5cDlIR3RCREh4a09BWEhPdVpWV0FlYXdnS00zM2JsMDVEMHFvUkZfT3YxSHF3bHFrRFF3RWd4XzdLTHNBekJFd0U6PUNvbnNpZGVyIHRoZSB0YWJsZXMgZ2l2ZW4gYmVsb3c6IFRhYmxlOiBDdXN0b21lciB8IGN1c3RvbWVyaWRCoAFDb25zaWRlciB0aGUgdGFibGVzIGdpdmVuIGJlbG93OiA7IEMwMDIsIExpZWwgTWFyeSwgMjIyMjIzMzMzMyA7IEMwMDMsIE1hcmsgV2lsbGlhbSwgPGI-OTEyMzQ1Njc4MDwvYj4gOyBDMDA0LCBOaWNrIEhlbnJ5LCA5MzMzMDEyMzQ1IDsgQzAwNSwgVGljayBNYXJrJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Filo",
+      "read_more_link": "https://askfilo.com/user-question-answers-smart-solutions/consider-the-tables-given-below-table-customer-customerid-3335343934343131#:~:text=Consider%20the%20tables%20given%20below%3A&text=C002,2222233333&text=C003,9123456780&text=C004,9333012345&text=C005,Tick%20Mark"
+     },
+     {
+      "position": 7,
+      "title": "Smart Work Trick to Separate Numbers and Text in Excel...",
+      "link": "https://www.facebook.com/manohar.jha.1297943/videos/smart-work-trick-to-separate-numbers-and-text-in-excel-excel-office-shorts-compu/1384230323649096/",
+      "displayed_link": "40+ reactions · 1 month ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6144f37ff8dacf9748cb5/images/OILSbs5mKMAi-lt6Cb0z_K2dO3okpnvS5P1OGJJoI68.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Video · Smart Work Trick to Separate Numbers and Text in Excel... #excel #office #shorts #computer #shortcut ...",
+      "duration": "0:51",
+      "about_this_result": {
+       "source": {
+        "description": "Video · Smart Work Trick to Separate Numbers and Text in Excel... #excel #office #shorts #computer #shortcut ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqkCL2dvdG8_dXJsPUNBRVMwZ0VCNnpzd0ZRWlZyM0FWLVhZRUlFai1WRHFRTHJvNHFqRE5qMkUzLWJ0NVBPbDRrQ2p1TDVRY3FQTmxJeWJibG1Wb25zZ3FXUmhKdHhaSC1xcGdUemo4c2R3VjEyNmluTHpfN1FfUlB6OFFWcXJZaThhamlRWmNzT3N0RnA3Vm5VeUd0enltb0hkYzhoNWU2a0d4cmlOM19HWjhaQU9VYmItTldLenFTb0o0Qko3TkxIMzdUbmJhZlNxOU81RTlNbWVLdXVuSE1jN2p6eFdrcTJVTldELWNRSHpxZ2Z6TU1SWnl0bnlPalVuRFFuR0JDN21jdzEzT096VGdGOEFuQkVPVVQ0ZDRSLXkwMFZaUlFQbW9fYlpWVldBEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGhYSABoAIgAqADIAOgBCAEoAWgByAHoAIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqkCL2dvdG8_dXJsPUNBRVMwZ0VCNnpzd0ZRWlZyM0FWLVhZRUlFai1WRHFRTHJvNHFqRE5qMkUzLWJ0NVBPbDRrQ2p1TDVRY3FQTmxJeWJibG1Wb25zZ3FXUmhKdHhaSC1xcGdUemo4c2R3VjEyNmluTHpfN1FfUlB6OFFWcXJZaThhamlRWmNzT3N0RnA3Vm5VeUd0enltb0hkYzhoNWU2a0d4cmlOM19HWjhaQU9VYmItTldLenFTb0o0Qko3TkxIMzdUbmJhZlNxOU81RTlNbWVLdXVuSE1jN2p6eFdrcTJVTldELWNRSHpxZ2Z6TU1SWnl0bnlPalVuRFFuR0JDN21jdzEzT096VGdGOEFuQkVPVVQ0ZDRSLXkwMFZaUlFQbW9fYlpWVldBEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGhYSABoAIgAqADIAOgBCAEoAWgByAHoAIgIQAUgAWABoAA",
+      "source": "Facebook · Manohar Jha"
+     },
+     {
+      "position": 8,
+      "title": "Bank Mobile Number Update Application Format for English ...",
+      "link": "https://www.facebook.com/Englishwithdebusir/videos/-need-to-update-your-bank-mobile-number-heres-the-perfect-application-format-/2256971341720204/",
+      "displayed_link": "610+ reactions · 2 months ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6144f37ff8dacf9748cb5/images/OILSbs5mKMAi-lt6Cb0z_MqkIViHOcUfdsz48cwjAR0.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "This video presents a template for writing a formal application to a bank to update a registered mobile number. It outlines the standard ...",
+      "duration": "0:16",
+      "about_this_result": {
+       "source": {
+        "description": "This video presents a template for writing a formal application to a bank to update a registered mobile number. It outlines the standard ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZZRThZVEhGRjE0Sk5uWG9HYVNHVkxYUU03NG5OeUJVeXpnc3FseWdxV29fODlHZVdRTHVXUDdkMThocXBUR3p5U2tNYm5oQUJkTEJJZ3VFbTBLNzVZRzVZcTN5aG1YbmUzZ3pTTEdzSlNSVmxPR19uX056RE5MMHNWaGs4OHR2NVptQUxjSlhnTVhaYm5ma0lJVzJmVmg0N2xmdjl0Zi1jQWhESnlJaU05X2NXdVV0SjBiUGdoRFRNaUpydUxKM01UMXdGZnR5MXdDQkZrRUE4WVVxYmZqV0NZbVRjbVZJYmk0RVBZcWVxYWJRSlhEeU5JOHItMUpjaE9icU05UFBnWEhOVmxpXzRDMjEyZxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZZRThZVEhGRjE0Sk5uWG9HYVNHVkxYUU03NG5OeUJVeXpnc3FseWdxV29fODlHZVdRTHVXUDdkMThocXBUR3p5U2tNYm5oQUJkTEJJZ3VFbTBLNzVZRzVZcTN5aG1YbmUzZ3pTTEdzSlNSVmxPR19uX056RE5MMHNWaGs4OHR2NVptQUxjSlhnTVhaYm5ma0lJVzJmVmg0N2xmdjl0Zi1jQWhESnlJaU05X2NXdVV0SjBiUGdoRFRNaUpydUxKM01UMXdGZnR5MXdDQkZrRUE4WVVxYmZqV0NZbVRjbVZJYmk0RVBZcWVxYWJRSlhEeU5JOHItMUpjaE9icU05UFBnWEhOVmxpXzRDMjEyZxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "source": "Facebook · English with DEBU SIR"
+     },
+     {
+      "position": 9,
+      "title": "Want to run multiple steps in same app session - Support",
+      "link": "https://discuss.appium.io/t/want-to-run-multiple-steps-in-same-app-session/42834",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiwEB6zswFd7GT7mQtPgEP9yS9hzHwgO9vPw8PbnFfb5FwkkPijNJ1Pj82gZey2hoC3bthf1FzV6jTXu8vJWM4_f7Pt4yn4HNjPmyEVnHzTltBlnAi1vHWSBpEwETWjJstZ-AiDg6-BHdeRzvMF42_8ObWpkUOyhQiOlM5Wud6MhFCrxNvL82sDEJOMFE&ved=2ahUKEwjC76Cbz6eXAxUnkYkEHY4SNqIQFnoECA8QAQ&uoh=1",
+      "displayed_link": "https://discuss.appium.io › want-to-run-multiple-steps-i...",
+      "favicon": "https://serpapi.com/images/i/UklGRhIBAABXRUJQVlA4IAYBAABQBQCdASocABwAPtEutFooIagoGAEAGgloACPAByjcs_l_htdsOJPKm-LwHM1s3L50egAA_v7CHmG_bNVV-3oVu_yOUR__L_-lbeFTmRJfc3JKNMMmy87j7J1TD178_BAef6Jf_68fNoeX2DTBp2_Y60-eg26wL_5e1D_7Avgdgd_yDqJxCBqzswyU5tHBx8O1v1hApJ8R6LBpPim-UiDjNqn77dyZ9aUURx_UvOetV_jCPud4GNlxXHQP3fHFAOA-EngtT1BBEd7waIicQGf2ZNGPNUrPRvt1sjWdcGxDzoyurBLsKRQZjogtkUierikmMa3pKVwXn713_X-sVScMJbhSoAAA.webp",
+      "date": "17 Jun 2024",
+      "snippet": "... 9123456780 | enabled | # Valid: starts with 9 | 0987654321 | disabled | # Invalid: starts with 0 | 6000000000 | enabled | # Valid: starts with 6.",
+      "snippet_highlighted_words": [
+       "9123456780"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "... 9123456780 | enabled | # Valid: starts with 9 | 0987654321 | disabled | # Invalid: starts with 0 | 6000000000 | enabled | # Valid: starts with 6.",
+        "source_info_link": "https://discuss.appium.io/t/want-to-run-multiple-steps-in-same-app-session/42834",
+        "icon": "https://serpapi.com/images/i/UklGRhIBAABXRUJQVlA4IAYBAABQBQCdASocABwAPtEutFooIagoGAEAGgloACPAByjcs_l_htdsOJPKm-LwHM1s3L50egAA_v7CHmG_bNVV-3oVu_yOUR__L_-lbeFTmRJfc3JKNMMmy87j7J1TD178_BAef6Jf_68fNoeX2DTBp2_Y60-eg26wL_5e1D_7Avgdgd_yDqJxCBqzswyU5tHBx8O1v1hApJ8R6LBpPim-UiDjNqn77dyZ9aUURx_UvOetV_jCPud4GNlxXHQP3fHFAOA-EngtT1BBEd7waIicQGf2ZNGPNUrPRvt1sjWdcGxDzoyurBLsKRQZjogtkUierikmMa3pKVwXn713_X-sVScMJbhSoAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZkN0dUN21RdFBnRVA5eVM5aHpId2dPOXZQdzhQYm5GZmI1Rndra1Bpak5KMVBqODJnWmV5MmhvQzNidGhmMUZ6VjZqVFh1OHZKV000X2Y3UHQ0eW40SE5qUG15RVZuSHpUbHRCbG5BaTF2SFdTQnBFd0VUV2pKc3RaLUFpRGc2LUJIZGVSenZNRjQyXzhPYldwa1VPeWhRaU9sTTVXdWQ2TWhGQ3J4TnZMODJzREVKT01GRRIEGgIIABr_AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDbAwgAEAAYACAAKisKCjkxMjM0NTY3ODAVdm67PhoLOTEyMzQgNTY3ODAaCzkxMjM0IDU2NzgwMsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZkN0dUN21RdFBnRVA5eVM5aHpId2dPOXZQdzhQYm5GZmI1Rndra1Bpak5KMVBqODJnWmV5MmhvQzNidGhmMUZ6VjZqVFh1OHZKV000X2Y3UHQ0eW40SE5qUG15RVZuSHpUbHRCbG5BaTF2SFdTQnBFd0VUV2pKc3RaLUFpRGc2LUJIZGVSenZNRjQyXzhPYldwa1VPeWhRaU9sTTVXdWQ2TWhGQ3J4TnZMODJzREVKT01GRTo4V2FudCB0byBydW4gbXVsdGlwbGUgc3RlcHMgaW4gc2FtZSBhcHAgc2Vzc2lvbiAtIFN1cHBvcnRCnAEuLi4gPGI-OTEyMzQ1Njc4MDwvYj4gfCBlbmFibGVkIHwgIyBWYWxpZDogc3RhcnRzIHdpdGggOSB8IDA5ODc2NTQzMjEgfCBkaXNhYmxlZCB8ICMgSW52YWxpZDogc3RhcnRzIHdpdGggMCB8IDYwMDAwMDAwMDAgfCBlbmFibGVkIHwgIyBWYWxpZDogc3RhcnRzIHdpdGggNi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZkN0dUN21RdFBnRVA5eVM5aHpId2dPOXZQdzhQYm5GZmI1Rndra1Bpak5KMVBqODJnWmV5MmhvQzNidGhmMUZ6VjZqVFh1OHZKV000X2Y3UHQ0eW40SE5qUG15RVZuSHpUbHRCbG5BaTF2SFdTQnBFd0VUV2pKc3RaLUFpRGc2LUJIZGVSenZNRjQyXzhPYldwa1VPeWhRaU9sTTVXdWQ2TWhGQ3J4TnZMODJzREVKT01GRRIEGgIIABr_AxIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkDbAwgAEAAYACAAKisKCjkxMjM0NTY3ODAVdm67PhoLOTEyMzQgNTY3ODAaCzkxMjM0IDU2NzgwMsoBL2dvdG8_dXJsPUNBRVNpd0VCNnpzd0ZkN0dUN21RdFBnRVA5eVM5aHpId2dPOXZQdzhQYm5GZmI1Rndra1Bpak5KMVBqODJnWmV5MmhvQzNidGhmMUZ6VjZqVFh1OHZKV000X2Y3UHQ0eW40SE5qUG15RVZuSHpUbHRCbG5BaTF2SFdTQnBFd0VUV2pKc3RaLUFpRGc2LUJIZGVSenZNRjQyXzhPYldwa1VPeWhRaU9sTTVXdWQ2TWhGQ3J4TnZMODJzREVKT01GRTo4V2FudCB0byBydW4gbXVsdGlwbGUgc3RlcHMgaW4gc2FtZSBhcHAgc2Vzc2lvbiAtIFN1cHBvcnRCnAEuLi4gPGI-OTEyMzQ1Njc4MDwvYj4gfCBlbmFibGVkIHwgIyBWYWxpZDogc3RhcnRzIHdpdGggOSB8IDA5ODc2NTQzMjEgfCBkaXNhYmxlZCB8ICMgSW52YWxpZDogc3RhcnRzIHdpdGggMCB8IDYwMDAwMDAwMDAgfCBlbmFibGVkIHwgIyBWYWxpZDogc3RhcnRzIHdpdGggNi4iAhABSABYAGgA",
+      "source": "Appium Discuss",
+      "read_more_link": "https://discuss.appium.io/t/want-to-run-multiple-steps-in-same-app-session/42834#:~:text=9123456780%20%7C%20enabled%20%7C%20%23,%23%20Valid%3A%20starts%20with%206"
+     },
+     {
+      "position": 10,
+      "title": "TG EAPCET 2026 Corrections Process Mobile Number ...",
+      "link": "https://www.youtube.com/watch?v=MXJPtQxdsjA",
+      "displayed_link": "200+ views · 5 months ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6144f37ff8dacf9748cb5/images/OILSbs5mKMAi-lt6Cb0z_L1KBe_KzFIJlSl1M2R9SSA.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "... 9123456780 I kindly request you to update my correct mobile number in the TG EAPCET 2026 application form. I have attached the required ...",
+      "duration": "12:58",
+      "about_this_result": {
+       "source": {
+        "description": "... 9123456780 I kindly request you to update my correct mobile number in the TG EAPCET 2026 application form. I have attached the required ...",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjczNnpYNUt6czZsdXY1anI0UVE1N2p3SXFqLTNVVWs2b2o4bWtfSmI3ZHFScmxJcm10QjQyX2RnMnZaa0x5bGJRcVJ2Y1JmMEMzUjhXVXZ6ZXRSa2V3MmFqTHVSNTAyNUJwQXlHMmRZanU4ZTF0Z0RRLXBjMVE4S0FnTmowLTc2a0ESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjczNnpYNUt6czZsdXY1anI0UVE1N2p3SXFqLTNVVWs2b2o4bWtfSmI3ZHFScmxJcm10QjQyX2RnMnZaa0x5bGJRcVJ2Y1JmMEMzUjhXVXZ6ZXRSa2V3MmFqTHVSNTAyNUJwQXlHMmRZanU4ZTF0Z0RRLXBjMVE4S0FnTmowLTc2a0ESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTN5tblvcciMrkaVrZc49MKUSkg8RizNRhFKg",
+      "source": "YouTube · Future Rank Point 247"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"9123456780\" OR \"91234 56780\" OR \"+91 91234 56780\"",
+     "total_results": 2270,
+     "time_taken_displayed": 0.18,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:43:43 UTC"
+   }
+  },
+  "812ac304ec50961de67282143a0d6fe2b78171bfc287b41f336ce8cca9485f86": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"nike-outlet-sale.shop\""
+   },
+   "response": {
+    "knowledge_graph": {
+     "place_id": "ChIJQXzS_v245zsR__HzQmfKcRo"
+    },
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "Amazing Nike Outlet Sale – Shop Now and Save!",
+      "link": "https://www.tiktok.com/@springfield_value/video/7559616302608895240",
+      "displayed_link": "84.5K+ views · 12 months ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6145671a90d736edce780/images/Eqc-sq5-9yoPBqCbT1tK6CjMS2jn221YeU0Bh-0HeRA.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRt4AAABXRUJQVlA4INIAAAAQBQCdASocABwAPtEwtFooIigoGAEAGglqAM7t3At_tZAJkQvdasA_TiHmb7n9FyAAAP7-zMa8xfDsmgP7xucvFaqjgucV4bdksbH7T5hWZ7Spp4joaSpJkn8f-b3-hzHaYTR3orLW5n-k7-6LIWmkysnxryZWSCxzHX2r67D70GXzxOu61ckD56q8XtZWK_x58R4ZRGkSqRdrXLaacnMarnQXOhN4g7KbuRJ_RBQPlFto--LuPK0SDJ5nzs4aUXU65BLOB25fWHRS9zx-6YMAAAA.webp",
+      "snippet": "Amazing Nike Outlet Sale – Shop Now and Save! Discover incredible discounts at the Nike outlet sale. Grab the best deals on footwear and ...",
+      "duration": "0:24",
+      "about_this_result": {
+       "source": {
+        "description": "Amazing Nike Outlet Sale – Shop Now and Save! Discover incredible discounts at the Nike outlet sale. Grab the best deals on footwear and ...",
+        "icon": "https://serpapi.com/images/i/UklGRt4AAABXRUJQVlA4INIAAAAQBQCdASocABwAPtEwtFooIigoGAEAGglqAM7t3At_tZAJkQvdasA_TiHmb7n9FyAAAP7-zMa8xfDsmgP7xucvFaqjgucV4bdksbH7T5hWZ7Spp4joaSpJkn8f-b3-hzHaYTR3orLW5n-k7-6LIWmkysnxryZWSCxzHX2r67D70GXzxOu61ckD56q8XtZWK_x58R4ZRGkSqRdrXLaacnMarnQXOhN4g7KbuRJ_RBQPlFto--LuPK0SDJ5nzs4aUXU65BLOB25fWHRS9zx-6YMAAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrgBL2dvdG8_dXJsPUNBRVNmZ0hyT3pBVjVnNGpIQ3VOZ1B3YjRla19hNXFwSmI4N3piektBUFpQOVJBTGgzSWFGemJRdWJLcjVsSG5XWFhHR0lxQ2RCU0NCS1puMlNOYVhnakNjbFNZclRMN1B6R3ZwYUZOMnlrR0JCS1FTdWxnajN6NGpyNFBtLXo2RUo2QUJCRmk5dXgtcTVYSHBGb09JaHBhMy0tQS1mZVd2SmktUF9Udm9wTDFvdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrgBL2dvdG8_dXJsPUNBRVNmZ0hyT3pBVjVnNGpIQ3VOZ1B3YjRla19hNXFwSmI4N3piektBUFpQOVJBTGgzSWFGemJRdWJLcjVsSG5XWFhHR0lxQ2RCU0NCS1puMlNOYVhnakNjbFNZclRMN1B6R3ZwYUZOMnlrR0JCS1FTdWxnajN6NGpyNFBtLXo2RUo2QUJCRmk5dXgtcTVYSHBGb09JaHBhMy0tQS1mZVd2SmktUF9Udm9wTDFvdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "source": "TikTok · Springfield Value Centre"
+     },
+     {
+      "position": 2,
+      "title": "Nike Sale at Mitsui Outlet Park (1-7 August 2025)",
+      "link": "https://www.syioknya.com/promotion/nike-sale-at-mitsui-outlet-park-1-7-august-2025",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESjQEB6zswFRpU9V1Q5E_VLgmwGOhN1Y0xc4xcQg8lBDvaezOiX164e03KA6mpf0quSdWB-9YBtMCCwCngBq0Z7smVidhWNE0auJq9GveEfO0iSFL2b5h5gu-Xv0BVnHzERh3hzGqKUgRA3WsXQql_fLBohrhw4nGoB9MZDqeNgmW3HNFJGHrPVEfNnu1oZ30&ved=2ahUKEwj-hs-ez6eXAxUcjYkEHUFXJj8QFnoECCkQAQ&uoh=1",
+      "displayed_link": "https://www.syioknya.com › promotion › nike-sale-at-mi...",
+      "thumbnail": "https://serpapi.com/searches/6ac6145671a90d736edce780/images/Eqc-sq5-9yoPBqCbT1tK6IrBYcZZFMrah3oDKy4b0dw.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQABAAAsBMJbACdAEOy_ufq0AA_vqo17P1tq1L24Z4UCHPoxs9kOXMo-xV2qGT4HUwtwFsaT57b9LK8mzP99wdzAsSBJk33gyhovRkzvVJegAA.webp",
+      "date": "7 Aug 2025",
+      "snippet": "Grab your sport essentials and make the most of this exclusive Nike outlet sale. Shop more to unlock bigger savings – enjoy up to 40% off ...",
+      "snippet_highlighted_words": [
+       "Nike outlet sale. Shop"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Grab your sport essentials and make the most of this exclusive Nike outlet sale. Shop more to unlock bigger savings – enjoy up to 40% off ...",
+        "source_info_link": "https://www.syioknya.com/promotion/nike-sale-at-mitsui-outlet-park-1-7-august-2025",
+        "icon": "https://serpapi.com/images/i/UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQABAAAsBMJbACdAEOy_ufq0AA_vqo17P1tq1L24Z4UCHPoxs9kOXMo-xV2qGT4HUwtwFsaT57b9LK8mzP99wdzAsSBJk33gyhovRkzvVJegAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cs0BL2dvdG8_dXJsPUNBRVNqUUVCNnpzd0ZScFU5VjFRNUVfVkxnbXdHT2hOMVkweGM0eGNRZzhsQkR2YWV6T2lYMTY0ZTAzS0E2bXBmMHF1U2RXQi05WUJ0TUNDd0NuZ0JxMFo3c21WaWRoV05FMGF1SnE5R3ZlRWZPMGlTRkwyYjVoNWd1LVh2MEJWbkh6RVJoM2h6R3FLVWdSQTNXc1hRcWxfZkxCb2hyaHc0bkdvQjlNWkRxZU5nbVczSE5GSkdIclBWRWZObnUxb1ozMBIEGgIIABqFBBIAGgIIASIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQN8DCAAQABgAIAAqCwoEbmlrZRUZKvJAKg0KBm91dGxldBWP2clAKgsKBHNhbGUVkkC8QCoLCgRzaG9wFdeEA0AyzQEvZ290bz91cmw9Q0FFU2pRRUI2enN3RlJwVTlWMVE1RV9WTGdtd0dPaE4xWTB4YzR4Y1FnOGxCRHZhZXpPaVgxNjRlMDNLQTZtcGYwcXVTZFdCLTlZQnRNQ0N3Q25nQnEwWjdzbVZpZGhXTkUwYXVKcTlHdmVFZk8waVNGTDJiNWg1Z3UtWHYwQlZuSHpFUmgzaHpHcUtVZ1JBM1dzWFFxbF9mTEJvaHJodzRuR29COU1aRHFlTmdtVzNITkZKR0hyUFZFZk5udTFvWjMwOjFOaWtlIFNhbGUgYXQgTWl0c3VpIE91dGxldCBQYXJrICgxLTcgQXVndXN0IDIwMjUpQpsBR3JhYiB5b3VyIHNwb3J0IGVzc2VudGlhbHMgYW5kIG1ha2UgdGhlIG1vc3Qgb2YgdGhpcyBleGNsdXNpdmUgPGI-TmlrZSBvdXRsZXQgc2FsZS4gU2hvcDwvYj4gbW9yZSB0byB1bmxvY2sgYmlnZ2VyIHNhdmluZ3Mg4oCTIGVuam95IHVwIHRvIDQwJSBvZmYmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cs0BL2dvdG8_dXJsPUNBRVNqUUVCNnpzd0ZScFU5VjFRNUVfVkxnbXdHT2hOMVkweGM0eGNRZzhsQkR2YWV6T2lYMTY0ZTAzS0E2bXBmMHF1U2RXQi05WUJ0TUNDd0NuZ0JxMFo3c21WaWRoV05FMGF1SnE5R3ZlRWZPMGlTRkwyYjVoNWd1LVh2MEJWbkh6RVJoM2h6R3FLVWdSQTNXc1hRcWxfZkxCb2hyaHc0bkdvQjlNWkRxZU5nbVczSE5GSkdIclBWRWZObnUxb1ozMBIEGgIIABqFBBIAGgIIASIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQN8DCAAQABgAIAAqCwoEbmlrZRUZKvJAKg0KBm91dGxldBWP2clAKgsKBHNhbGUVkkC8QCoLCgRzaG9wFdeEA0AyzQEvZ290bz91cmw9Q0FFU2pRRUI2enN3RlJwVTlWMVE1RV9WTGdtd0dPaE4xWTB4YzR4Y1FnOGxCRHZhZXpPaVgxNjRlMDNLQTZtcGYwcXVTZFdCLTlZQnRNQ0N3Q25nQnEwWjdzbVZpZGhXTkUwYXVKcTlHdmVFZk8waVNGTDJiNWg1Z3UtWHYwQlZuSHpFUmgzaHpHcUtVZ1JBM1dzWFFxbF9mTEJvaHJodzRuR29COU1aRHFlTmdtVzNITkZKR0hyUFZFZk5udTFvWjMwOjFOaWtlIFNhbGUgYXQgTWl0c3VpIE91dGxldCBQYXJrICgxLTcgQXVndXN0IDIwMjUpQpsBR3JhYiB5b3VyIHNwb3J0IGVzc2VudGlhbHMgYW5kIG1ha2UgdGhlIG1vc3Qgb2YgdGhpcyBleGNsdXNpdmUgPGI-TmlrZSBvdXRsZXQgc2FsZS4gU2hvcDwvYj4gbW9yZSB0byB1bmxvY2sgYmlnZ2VyIHNhdmluZ3Mg4oCTIGVuam95IHVwIHRvIDQwJSBvZmYmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Syioknya Malaysia",
+      "read_more_link": "https://www.syioknya.com/promotion/nike-sale-at-mitsui-outlet-park-1-7-august-2025#:~:text=Grab%20your%20sport%20essentials%20and,when%20you%20purchase%204%20items!"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"nike-outlet-sale.shop\"",
+     "total_results": 2,
+     "time_taken_displayed": 0.29,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:43:50 UTC"
+   }
+  },
+  "7e26038d65e1b4a470afc15ea603af67a84e229dd24f034c7e0165819cfa7c8a": {
+   "engine": "google_news",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "q": "fake Nike sale website scam"
+   },
+   "response": {
+    "news_results": [
+     {
+      "position": 1,
+      "title": "Nike shoe scam exposed: 12 charged as insiders and resellers allegedly diverted $2 million worth of footwe",
+      "source": {
+       "name": "The Economic Times",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://m.economictimes.com/news/new-updates/nike-shoe-scam-exposed-12-charged-as-insiders-and-resellers-allegedly-diverted-2-million-worth-of-footwear-using-fake-ups-labels-across-the-us/articleshow/132599242.cms",
+      "thumbnail": "https://m.economictimes.com/thumb/msid-132599256,width-1200,height-900,resizemode-4,imgsize-80010/nike-shoe-scam-exposed-12-charged-as-insiders-and-resellers-allegedly-diverted-2-million-worth-of-footwear-using-fake-ups-labels-across-the-us.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXpWRlpOUVZRNVVITktVbm8zVFJEZ0F4aUFCU2dLTWdrQkFJU0xqQ09wYVFF",
+      "date": "07/24/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-24T07:00:00Z"
+     },
+     {
+      "position": 2,
+      "title": "Summer sale scams: How to spot fake deals before you buy",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Cristina Popov"
+       ]
+      },
+      "link": "https://www.bitdefender.com/en-gb/blog/hotforsecurity/summer-sale-scams",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2026/07/summer-sale-scams.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFaRWhMZGxWTWRHcDFOa3RpVFJEU0FoallCQ2dLTWdhNWs0Z3hRUVE",
+      "date": "07/08/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-08T07:00:00Z"
+     },
+     {
+      "position": 3,
+      "title": "Vietnam nets 50,000 pairs of fake Nike shoes in trade fraud bust",
+      "source": {
+       "name": "FashionNetwork - The World's Fashion Business News",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://ww.fashionnetwork.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://ww.fashionnetwork.com/news/Vietnam-nets-50-000-pairs-of-fake-nike-shoes-in-trade-fraud-bust,1855232.html",
+      "thumbnail": "https://media.fashionnetwork.com/cdn-cgi/image/format=auto/m/2e32/00a7/93e1/618e/f04c/8c33/1f81/96e8/40e5/3e6a/3e6a.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUNUREpzZDBOMlVVOXFhWGhzVFJDM0FSaVRBaWdCTWdhUm9ZWnVRUVU",
+      "date": "07/24/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-24T07:00:00Z"
+     },
+     {
+      "position": 4,
+      "title": "Vietnam Nets 50,000 Pairs of Fake Nike Shoes in Trade Fraud Bust",
+      "source": {
+       "name": "Bloomberg.com",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.bloomberg.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nguyen Xuan Quynh"
+       ]
+      },
+      "link": "https://www.bloomberg.com/news/articles/2026-07-24/vietnam-finds-100-000-fake-nike-shoes-as-in-trade-fraud-crackdown",
+      "thumbnail": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.SiWIju8k.g/v1/-1x-1.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVBOMnh3VmxOU01IZEdMVE40VFJEZ0F4aUFCU2dLTWdZaFpJRHNRUUk",
+      "date": "07/24/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-24T07:00:00Z"
+     },
+     {
+      "position": 5,
+      "title": "How to Choose the Best Running Shoes for You",
+      "source": {
+       "name": "The New York Times",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.nytimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Seth Berkman"
+       ]
+      },
+      "link": "https://www.nytimes.com/wirecutter/reviews/best-running-shoes/",
+      "thumbnail": "https://cdn.thewirecutter.com/wp-content/media/2025/06/BG-RUNNING-SHOES-8262-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iOkNnNXdUVU5MYmpkcVIxWTNYMEZLVFJDSEF4aVBCaWdLTWhFQkFJUWlGZWk0c1hnTHNXWlJqMHFHRFE",
+      "date": "09/21/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-21T07:00:00Z"
+     },
+     {
+      "position": 6,
+      "title": "₹88 crore fake sneaker haul: Thousands of bogus Nike, Louis Vuitton, Dior, Gucci shoes seized by customs in Hong Kong",
+      "source": {
+       "name": "Livemint",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.livemint.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.livemint.com/news/rs-88-crore-fake-sneaker-haul-thousands-of-bogus-nike-louis-vuitton-dior-gucci-addidas-shoes-seized-customs-hong-kong-11761193920674.html",
+      "thumbnail": "https://www.livemint.com/lm-img/img/2025/10/23/1600x900/jj_1761194043822_1761194044046.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXdPVlphZUhscFpFNXBYMmh2VFJDZkF4ampCU2dLTWdZSlVJZ3JVZ1E",
+      "date": "10/23/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-23T07:00:00Z"
+     },
+     {
+      "position": 7,
+      "title": "Fake Nike deal spreading on Facebook",
+      "source": {
+       "name": "www.gendigital.com",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.gendigital.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.gendigital.com/blog/insights/research/fake-nike-deal-spreading-on-facebook",
+      "thumbnail": "https://www.gendigital.com/blog/_next/image?url=https%3A%2F%2Fwww.gendigital.com%2Fblog%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fblogs_hero_tiny%2Fpublic%2F2024-08%2FGettyImages-1171809453_1.jpg.webp%3Fh%3Dd0633ac3%26itok%3DG2ucvVBU&w=640&q=75",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVZZWFEwYTBFNVlqTnRYelZFVFJETkFSajJBU2dCTWdZUmdZcTFyQWM",
+      "date": "04/04/2019, 07:00 AM, +0000 UTC",
+      "iso_date": "2019-04-04T07:00:00Z"
+     },
+     {
+      "position": 8,
+      "title": "Gujarat: Rs 84 lakh shoe swap lands dentist in jail",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/ahmedabad/84l-shoe-swap-lands-dentist-in-jail/articleshow/109446975.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-109450055,width-1280,height-720,resizemode-72/109450055.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXRVMGN5U2xkblRHTjJNREE0VFJDZkF4ampCU2dLTWdhcEJZVE5DUXM",
+      "date": "04/20/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-04-20T07:00:00Z"
+     },
+     {
+      "position": 9,
+      "title": "Chinese network behind one of world’s ‘largest online scams’",
+      "source": {
+       "name": "The Guardian",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.theguardian.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.theguardian.com/money/article/2024/may/08/chinese-network-behind-one-of-worlds-largest-online-scams",
+      "thumbnail": "https://i.guim.co.uk/img/media/d2565778ba1779b9f7d80ac748bbb0410a89e0f5/0_0_5000_3000/master/5000.jpg?width=465&dpr=1&s=none&crop=none",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1SMEpqZDJKUlJ6QmlVVlZGVFJDWEFoalJBeWdLTWdZaFk0TE5MUVE",
+      "date": "05/08/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-05-08T07:00:00Z"
+     },
+     {
+      "position": 10,
+      "title": "Shop Smart: How to Avoid Scams and Mid Products on Amazon",
+      "source": {
+       "name": "WIRED",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.wired.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Louryn Strampe"
+       ]
+      },
+      "link": "https://www.wired.com/story/how-shop-safe-amazon/",
+      "thumbnail": "https://media.wired.com/photos/6849b140ab7f5079900d4624/master/w_2560%2Cc_limit/How%2520to%2520Avoid%2520Scams%2520and%2520Shoddy%2520Wares%2520on%2520Amazon.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHpkVmd6TkhsbU5Xd3lhVmxzVFJERUF4aW1CU2dLTWdZZEVZWU5wUU0",
+      "date": "09/20/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-20T07:00:00Z"
+     },
+     {
+      "position": 11,
+      "title": "Walmart’s Marketplace boom: How lax vetting came with identity theft and fakes",
+      "source": {
+       "name": "CNBC",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.cnbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Gabrielle Fonrouge",
+        "Paige Tortorelli"
+       ]
+      },
+      "link": "https://www.cnbc.com/2025/09/19/walmart-marketplace-fakes-scams-investigation.html",
+      "thumbnail": "https://image.cnbcfm.com/api/v1/image/108200774-1758209551428-14_Products_CU.jpg?v=1758209679&w=1600&h=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU1OMGxaWW1oVE5uWjBMV04xVFJDZkF4ampCU2dLTWdtQmNKQUdyU2FTcVFJ",
+      "date": "09/19/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-09-19T07:00:00Z"
+     },
+     {
+      "position": 12,
+      "title": "Got a package you didn’t order? It’s probably a scam",
+      "source": {
+       "name": "Consumer Advice | Federal Trade Commission (.gov)",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://consumer.ftc.gov&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://consumer.ftc.gov/consumer-alerts/2025/01/got-package-you-didnt-order-its-probably-scam",
+      "thumbnail": "https://consumer.ftc.gov/system/files/styles/social_standard/private/consumer_ftc_gov/images/shopping_images_0.jpg?h=2f476482&itok=rPheu7BS",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpjVlZrTjFOQlFqSTJiRlkwVFJDSEF4aVBCaWdLTWdhSlFZckZRZ1k",
+      "date": "01/06/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-01-06T08:00:00Z"
+     },
+     {
+      "position": 13,
+      "title": "Financing fake news: Nike and Amazon advertise on Covid conspiracy sites",
+      "source": {
+       "name": "TBIJ",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.thebureauinvestigates.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jasper Jackson"
+       ]
+      },
+      "link": "https://www.thebureauinvestigates.com/stories/2021-09-18/big-brands-advertising-fuelling-covid-misinformation-websites",
+      "thumbnail": "https://www.thebureauinvestigates.com/cdn-cgi/image/width=1280,quality=82,format=auto,fit=contain,gravity=0.3305x0.3913/filestore/images/Nike-Trainers.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWZjalJoVGxOcE9FNUNOelZMVFJERUF4aW1CU2dLTWdrZE5JNnRJU2RrQlFN",
+      "date": "09/18/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-09-18T07:00:00Z"
+     },
+     {
+      "position": 14,
+      "title": "Powys shop owner 'shocked and disgusted' after falling victim to fraud",
+      "source": {
+       "name": "County Times",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.countytimes.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.countytimes.co.uk/news/25794712.machynlleth-shop-owner-speaks-nike-shoe-scam/",
+      "thumbnail": "https://www.countytimes.co.uk/resources/images/20462249.jpg?type=mds-article-962",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWlkVlpaUkZoWE9ISmtXSFpuVFJDdkF4akhCU2dLTWdrQklvNEhyV1ZicFFJ",
+      "date": "01/25/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-25T08:00:00Z"
+     },
+     {
+      "position": 15,
+      "title": "Bought Nike sneakers online? Here's how to spot the fakes from the real ones",
+      "source": {
+       "name": "ABC7 San Francisco",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://abc7news.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Randall Yip"
+       ]
+      },
+      "link": "https://abc7news.com/post/counterfeit-sneakers-nikes-fake-how-to-tell-if-are/12054273/",
+      "thumbnail": "https://cdn.abcotvs.com/dip/images/12056052_COUNTERFEIT.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXhTV3RSU1hnellXUmxOMUp1VFJDZkF4ampCU2dLTWdhUmVKQ0hyZ1k",
+      "date": "07/16/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-07-16T07:00:00Z"
+     },
+     {
+      "position": 16,
+      "title": "Fake Amazon reviews 'being sold in bulk' online",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.bbc.com/news/business-56069472",
+      "thumbnail": "https://ichef.bbci.co.uk/news/480/cpsprodpb/5D9E/production/_116966932_mediaitem116782476.jpg.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWZSRkZGUW1KR1ZURkVWMk5WVFJDT0FoamdBeWdLTWdZSkE0NnJGUW8",
+      "date": "02/16/2021, 08:00 AM, +0000 UTC",
+      "iso_date": "2021-02-16T08:00:00Z"
+     },
+     {
+      "position": 17,
+      "title": "Welcome to the Era of Fake Products | Wirecutter",
+      "source": {
+       "name": "The New York Times",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.nytimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Ganda Suthivarakom"
+       ]
+      },
+      "link": "https://www.nytimes.com/wirecutter/blog/amazon-counterfeit-fake-products/",
+      "thumbnail": "https://cdn.thewirecutter.com/wp-content/uploads/2020/02/20200205_fakes-1024.png?width=2048&quality=75&crop=2:1&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNHdhakppV1ZjeFRURXpZbmxhVFJDSEF4aVBCaWdLTWdNVllRWQ",
+      "date": "02/11/2020, 08:00 AM, +0000 UTC",
+      "iso_date": "2020-02-11T08:00:00Z"
+     },
+     {
+      "position": 18,
+      "title": "Brushing scams: What to do if you receive ‘free’ goods in the mail without ordering them",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.bitdefender.com/en-gb/blog/hotforsecurity/brushing-scams-what-to-do-if-you-receive-free-goods-in-the-mail-without-ordering-them",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2023/11/Brushing-scams-What-to-do-if-you-receive--free--goods-in-the-mail-without-ordering-them.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU9jVWwzUkdoT2FXRmFlRGxWVFJEU0FoallCQ2dLTWdtTk1JaHRJYVNhYUFJ",
+      "date": "11/29/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-11-29T08:00:00Z"
+     },
+     {
+      "position": 19,
+      "title": "Is AliExpress safe? Unpacking the truth behind the deals",
+      "source": {
+       "name": "ESET",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.eset.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.eset.com/blog/en/home-topics/privacy-and-identity-protection/is-aliexpress-safe/",
+      "thumbnail": "https://web-assets.esetstatic.com/tn/-x700/blog/home-topics/1920x1080-1-2-3-4-5-6.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTRVVWRaU1c1eE1VYzRORGxYVFJDZkF4amlCU2dLTWdrSlFJcG9KU1dpOWdB",
+      "date": "09/16/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-09-16T07:00:00Z"
+     },
+     {
+      "position": 20,
+      "title": "Thousands of stolen images and fraudulent websites mimic top fashion brands to scam consumers",
+      "source": {
+       "name": "ABC7 San Francisco",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://abc7news.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Randall Yip"
+       ]
+      },
+      "link": "https://abc7news.com/post/fraudulent-websites-mimic-top-brands-to-scam-consumers/5773002/",
+      "thumbnail": "https://cdn.abcotvs.com/dip/images/5773865_122019-kgo-online-shop-img_Image_00-00-00,04.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUdVR0YwYzJKRlpuUkpSemt5VFJDZkF4ampCU2dLTWdZUlJJeFJ3UVE",
+      "date": "12/20/2019, 08:00 AM, +0000 UTC",
+      "iso_date": "2019-12-20T08:00:00Z"
+     },
+     {
+      "position": 21,
+      "title": "10 Red Flags You’re About to Click on a Fake Social Media Ad",
+      "source": {
+       "name": "Reader's Digest",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.rd.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jaime Alexis Stathis"
+       ]
+      },
+      "link": "https://www.rd.com/list/fake-ads-on-social-media/",
+      "thumbnail": "https://www.rd.com/wp-content/uploads/2023/06/GettyImages-1498127661.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUVaRkpXVFdGTWEybHVSbmhqVFJERUF4aW1CU2dLTWdZcGRZeXVzUVU",
+      "date": "04/16/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-16T07:00:00Z"
+     },
+     {
+      "position": 22,
+      "title": "6 ways to spot a scam shopping site",
+      "source": {
+       "name": "CHOICE",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.choice.com.au&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Liam Kennedy"
+       ]
+      },
+      "link": "https://www.choice.com.au/shopping/online-shopping/buying-online/articles/how-to-spot-a-fake-fraudulent-or-scam-website",
+      "thumbnail": "https://www.choice.com.au/wp-content/uploads/2024/05/Scam-websites-LEAD-1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNaWEJuV2sxSE9XeG1MV2Q2VFJDZkF4ampCU2dLTWdhWlk1Q3RMUWM",
+      "date": "05/30/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-05-30T07:00:00Z"
+     },
+     {
+      "position": 23,
+      "title": "Mystery shopping, (fake) checks, and gift cards",
+      "source": {
+       "name": "Consumer Advice | Federal Trade Commission (.gov)",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://consumer.ftc.gov&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Andrew Rayo"
+       ]
+      },
+      "link": "https://consumer.ftc.gov/consumer-alerts/2024/04/mystery-shopping-fake-checks-gift-cards",
+      "thumbnail": "https://consumer.ftc.gov/system/files/consumer_ftc_gov/images/jobscam-5-shopping-socmed-1200x630.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRUVnBMVEc5Zk1sZHFPVzFKVFJDUkF4ajhCU2dLTWdZQmtwQUZOZ2M",
+      "date": "04/18/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-04-18T07:00:00Z"
+     },
+     {
+      "position": 24,
+      "title": "Israeli company finds over one million online fraud cases, including fake hostage forum listings",
+      "source": {
+       "name": "The Jerusalem Post",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.jpost.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.jpost.com/israel-news/article-908357",
+      "thumbnail": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/732561",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDVkV2h5VDFaWU5qTmZjMWN3VFJDZkF4ampCU2dLTWdhQlFvcU5xUVk",
+      "date": "09/11/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-11T07:00:00Z"
+     },
+     {
+      "position": 25,
+      "title": "Scammers put up fake websites of popular brands in phishing scam: Report",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Aqil Hamzah"
+       ]
+      },
+      "link": "https://www.straitstimes.com/singapore/scammers-put-up-fake-websites-of-popular-brands-on-search-engines-in-phishing-scam-report",
+      "thumbnail": "https://cassette.sphdigital.com.sg/image/straitstimes/97b979a62966b6f88bd4a9e480e84bebc59f0a2eacc25a7e9302d6863283a76d",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDJUSEUzTnpGQ1RHaFhOa2hqVFJERUF4aW1CU2dLTWdZWk01WnVIUWs",
+      "date": "06/14/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-14T07:00:00Z"
+     },
+     {
+      "position": 26,
+      "title": "Jobfished: the con that tricked dozens into working for a fake design agency",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Catrin Nye",
+        "Divya Talwar",
+        "Leo Sands"
+       ]
+      },
+      "link": "https://www.bbc.com/news/uk-60387324",
+      "thumbnail": "https://ichef.bbci.co.uk/news/480/cpsprodpb/EC96/production/_123266506_madbird_graphic1-nc.png.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUtVbGszWmtSMWRESk9lamhIVFJDZkF4ampCU2dLTWdZQk1vcVBHUWc",
+      "date": "02/21/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-02-21T08:00:00Z"
+     },
+     {
+      "position": 27,
+      "title": "Advent calendars: Warning over scam ads for luxury products",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Shanaz Musafer"
+       ]
+      },
+      "link": "https://www.bbc.com/news/articles/cdxvkkjd9vko",
+      "thumbnail": "https://ichef.bbci.co.uk/news/480/cpsprodpb/bce3/live/567349d0-9b80-11ef-8538-e1655f5a8342.jpg.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRjbmMxVldkWlNHaFJXa28zVFJDT0FoamdBeWdLTWdZZE5JaXNIUVk",
+      "date": "11/05/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-11-05T08:00:00Z"
+     },
+     {
+      "position": 28,
+      "title": "Is Temu legit? Customers are fearful of online scams",
+      "source": {
+       "name": "CBS News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.cbsnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Caitlin O'kane"
+       ]
+      },
+      "link": "https://www.cbsnews.com/news/is-temu-legit-safe-bad-reviews-fears-over-online-scams/",
+      "thumbnail": "https://assets2.cbsnewsstatic.com/hub/i/r/2023/07/12/88d90e1a-b3f7-460f-8550-01eed7061b17/thumbnail/640x360/3655725ec35ce4c05a043103110672ca/gettyimages-1249593392.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWthMlZpT1c1UldHeHpSVTlhVFJEb0FoaUFCU2dLTWdhbGhKS01zUVk",
+      "date": "07/13/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-07-13T07:00:00Z"
+     },
+     {
+      "position": 29,
+      "title": "5 common gift card scams and how to spot them",
+      "source": {
+       "name": "WeLiveSecurity",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.welivesecurity.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Phil Muncaster"
+       ]
+      },
+      "link": "https://www.welivesecurity.com/2021/12/07/5-common-gift-card-scams-how-spot-them/",
+      "thumbnail": "https://web-assets.esetstatic.com/tn/-x700/wls/2021/12/gift-card-fraud-scams.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTVhbWhLZFVKMGFHTjZSSEV3VFJDZkF4amlCU2dLTWdtQlVZNjFIT25JY0FF",
+      "date": "12/07/2021, 08:00 AM, +0000 UTC",
+      "iso_date": "2021-12-07T08:00:00Z"
+     },
+     {
+      "position": 30,
+      "title": "'Your fake designer handbag funds criminals'",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sarah-May Buccieri"
+       ]
+      },
+      "link": "https://www.bbc.com/news/articles/cdjr3y0dpdyo",
+      "thumbnail": "https://ichef.bbci.co.uk/news/480/cpsprodpb/f8ee/live/f13ef2c0-af34-11f0-b1c6-736a05ed5483.png.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNXFaMGRWVjNaQ1RrTlRibWxRVFJDT0FoamdBeWdLTWdB",
+      "date": "10/29/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-29T07:00:00Z"
+     },
+     {
+      "position": 31,
+      "title": "Sponsored Ad Fraud: Mystery Box Scams Flood Social Media",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Andrei Anton-aanei"
+       ]
+      },
+      "link": "https://www.bitdefender.com/en-us/blog/labs/sponsored-ad-fraud-mystery-box-scams-flood-social-media",
+      "thumbnail": "https://blogapp.bitdefender.com/labs/content/images/size/w600/2024/02/Sponsored-Ad-Fraud-Mystery-Box-Scams-Flood-Social-Media.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUpRVkJxUTJkTUxYaEZUVVYwVFJENEFSallCQ2dLTWdZUlFJenFKQVk",
+      "date": "02/29/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-02-29T08:00:00Z"
+     },
+     {
+      "position": 32,
+      "title": "Massive impersonation campaign targets apparel firms including Nike and Adidas",
+      "source": {
+       "name": "Cybernews",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://cybernews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Gintaras Radauskas"
+       ]
+      },
+      "link": "https://cybernews.com/editorial/nike-adidas-massive-scam-campaign/",
+      "thumbnail": "https://media.cybernews.com/images/featured-big/2023/06/apparel-main.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNWVnBzY25kNmNETldkMmRZVFJDYkF4anJCU2dLTWdZQlVJZ25MZ1k",
+      "date": "06/14/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-14T07:00:00Z"
+     },
+     {
+      "position": 33,
+      "title": "How to avoid fake goods, phony online deals during the holiday shopping frenzy",
+      "source": {
+       "name": "Detroit Free Press",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.freep.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Susan Tompor"
+       ]
+      },
+      "link": "https://www.freep.com/story/money/personal-finance/susan-tompor/2023/11/23/shopping-scams-holiday-fake-goods-social-media/71419495007/",
+      "thumbnail": "https://www.freep.com/gcdn/presto/2018/11/15/PDTF/36d15384-4f36-4fb0-a8c5-cb177e8ab0e7-IMG_1681.jpg?width=1200&disable=upscale&format=pjpg&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDJNalkxVUhkQlRWUmxPR1Z6VFJEZ0F4aUFCU2dLTWdhbE5KYk5vUWM",
+      "date": "11/23/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-11-23T08:00:00Z"
+     },
+     {
+      "position": 34,
+      "title": "The Olive Oil Scam: If 80% Is Fake, Why Do You Keep Buying It?",
+      "source": {
+       "name": "Forbes",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.forbes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Cecilia Rodriguez"
+       ]
+      },
+      "link": "https://www.forbes.com/sites/ceciliarodriguez/2016/02/10/the-olive-oil-scam-if-80-is-fake-why-do-you-keep-buying-it/",
+      "thumbnail": "https://imageio.forbes.com/blogs-images/ceciliarodriguez/files/2016/02/Screen-Shot-2016-02-10-at-18.26.251-1200x769.png?format=png&height=600&width=1200&fit=bounds",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXlVMmRMU1VsdFVXczNOamhLVFJDN0F4aTBCU2dLTWdZVlpaWUpLZ2c",
+      "date": "02/10/2016, 08:00 AM, +0000 UTC",
+      "iso_date": "2016-02-10T08:00:00Z"
+     },
+     {
+      "position": 35,
+      "title": "It’s Not Just Secondhand Retailers That Have a Counterfeit Problem",
+      "source": {
+       "name": "The Business of Fashion",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.businessoffashion.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Malique Morris"
+       ]
+      },
+      "link": "https://www.businessoffashion.com/articles/luxury/how-counterfeits-make-it-onto-ssense/",
+      "thumbnail": "https://img.businessoffashion.com/resizer/v2/MHEG4PNNSNFVNPJPY4WSNLIWDI.jpg?auth=4f9c2543147939249ce1ac9a5b24a789fdc7511e18a809498ce9202c9e8c14c8&width=1440",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUJXV1oyVlhadlpsZDJTbEJQVFJDZkF4ampCU2dLTWdrQlVKcVhwR2pnU1FJ",
+      "date": "04/22/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-22T07:00:00Z"
+     },
+     {
+      "position": 36,
+      "title": "DSW Outlet Scam",
+      "source": {
+       "name": "TrendLife",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://trendlife.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://trendlife.com/en-us/blog/2023/09/07/dsw-outlet-scam",
+      "thumbnail": "https://news.trendmicro.com/api/wp-content/uploads/2023/09/DSW-Outlet-Scam_Sample-fake-website-1024x769.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRSMEppTVdKQlZHVkROWEZwVFJEZ0F4al9CQ2dLTWdZQk1JS0NvQWs",
+      "date": "09/07/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-09-07T07:00:00Z"
+     },
+     {
+      "position": 37,
+      "title": "Fake Facebook pages, websites offering sales items claiming to be from Marina Bay Sands",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Qing Ang"
+       ]
+      },
+      "link": "https://www.straitstimes.com/singapore/fake-facebook-pages-websites-offering-sales-items-purportedly-from-marina-bay-sands",
+      "thumbnail": "https://cassette.sphdigital.com.sg/image/straitstimes/83159eec7e1b2fe9c8a1a995cd4b96a841f33ce24e88fec29f7d37ce8b7f7391",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUZSRVoxYjB0R1FrTkxVRmRqVFJERUF4aW1CU2dLTWdtWkE0Q0tqU3RVbUFB",
+      "date": "05/03/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-05-03T07:00:00Z"
+     },
+     {
+      "position": 38,
+      "title": "Facebook users warned to watch out for fake posts promising Adidas and Nike 'clearance sales'",
+      "source": {
+       "name": "The Sun",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.thesun.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thesun.co.uk/money/9323475/facebook-scam-clearance-sales/",
+      "thumbnail": "https://www.thesun.co.uk/wp-content/uploads/2019/06/ac-comp-facebook-scam.jpg?strip=all&w=960",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpYM3BwTjFkbFNsbGxPVmRrVFJERUF4aW1CU2dLTWdhQllZNnJ0UVk",
+      "date": "07/05/2019, 07:00 AM, +0000 UTC",
+      "iso_date": "2019-07-05T07:00:00Z"
+     },
+     {
+      "position": 39,
+      "title": "England football shirt: Why fans are turning to fake kits",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Harry Low"
+       ]
+      },
+      "link": "https://www.bbc.com/news/articles/c5112y0wqj1o",
+      "thumbnail": "https://ichef.bbci.co.uk/news/480/cpsprodpb/05a8/live/7b4cd950-27e6-11ef-b0c1-85d9ceb9fef8.jpg.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTNRWGhCV2xSMWVHRldURlJwVFJDT0FoamdBeWdLTWdZdFZaalBwUWc",
+      "date": "06/12/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-06-12T07:00:00Z"
+     },
+     {
+      "position": 40,
+      "title": "Wendy Knowler | Need a Bok jersey for Saturday’s game? How to sidestep scammers",
+      "source": {
+       "name": "News24",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.news24.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Wendy Knowler"
+       ]
+      },
+      "link": "https://www.news24.com/business/consumer-lookout/wendy-knowler-need-a-bok-jersey-for-saturdays-game-how-to-sidestep-scammers-20240905",
+      "thumbnail": "https://cdn.24.co.za/files/Cms/General/d/12176/4e5be4ae9be6412abbcb3ce24b8f3f9c.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVVObU5UVWpscGFUaGtlREZ1VFJDM0FSaVRBaWdCTWdZMVZKaHdJUWc",
+      "date": "09/05/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-09-05T07:00:00Z"
+     },
+     {
+      "position": 41,
+      "title": "Stylish (and Comfy) White Sneakers We’ll Be Wearing All Year",
+      "source": {
+       "name": "The New York Times",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.nytimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Zoe Vanderweide"
+       ]
+      },
+      "link": "https://www.nytimes.com/wirecutter/reviews/best-white-sneakers/",
+      "thumbnail": "https://cdn.thewirecutter.com/wp-content/media/2025/06/BEST-WHITE-SNEAKERS-SUB-2048px-3864-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWhXRTFuUlVzeE9WbHlVMGh4VFJDSEF4aVBCaWdLTWdZQlVJN0dLQWM",
+      "date": "06/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-23T07:00:00Z"
+     },
+     {
+      "position": 42,
+      "title": "Influencer sued by Nike for swapping real brand with fakes and selling dupes",
+      "source": {
+       "name": "IOL",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://iol.co.za&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://iol.co.za/business/2024-01-19-influencer-sued-by-nike-for-swapping-real-brand-with-fakes-and-selling-dupes/",
+      "thumbnail": "https://iol-prod.appspot.com/image/193b3d2dc2652c036afdcb5dd57fd304ba058350=w700",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW5WRGhmU0U4eGVIbHhObGxmVFJDeEFSaWRBaWdCTWdZQkE0NnNsUVU",
+      "date": "01/19/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-01-19T08:00:00Z"
+     },
+     {
+      "position": 43,
+      "title": "Life Is Too Short for Socks That Suck. We Found 35 Pairs That Make Us Smile.",
+      "source": {
+       "name": "The New York Times",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.nytimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Zoe Vanderweide"
+       ]
+      },
+      "link": "https://www.nytimes.com/wirecutter/reviews/best-socks/",
+      "thumbnail": "https://cdn.thewirecutter.com/wp-content/media/2025/10/BEST-SOCKS-SUB-02281-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhZMGx1Y1dsdlNGaFBaMHBvVFJDSEF4aVBCaWdLTWdhQkVaSU91Z1k",
+      "date": "12/02/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-12-02T08:00:00Z"
+     },
+     {
+      "position": 44,
+      "title": "Buyers beware: authorities warn of fake goods sold online",
+      "source": {
+       "name": "The Vibes",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.thevibes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thevibes.com/articles/news/94321/buyers-beware-authorities-warn-of-fake-goods-sold-online",
+      "thumbnail": "https://media.thevibes.com/images/uploads/covers/_large/230609-penang_fake_goods-ian.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU9jMFk0Tm5selNUbE9aVlU1VFJEZ0F4aUFCU2dLTWdtQkVJcTFuQ2lhS3dJ",
+      "date": "06/09/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-09T07:00:00Z"
+     },
+     {
+      "position": 45,
+      "title": "Little Rock women's clothing store dealing with upset customers after fake website created",
+      "source": {
+       "name": "KATV",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://katv.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Marine Glisovic"
+       ]
+      },
+      "link": "https://katv.com/community/7-on-your-side/little-rock-womens-clothing-store-dealing-with-upset-customers-after-fake-website-created",
+      "thumbnail": "https://katv.com/resources/media2/16x9/full/800/center/80/01db3b13-2316-45fb-9e6e-bd7e3bacacba-large16x9_owners.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNXNUR0p1TFVzdGRXRTFkVEpsVFJDZkF4ampCU2dLTWdB",
+      "date": "09/02/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-09-02T07:00:00Z"
+     },
+     {
+      "position": 46,
+      "title": "Vintage fashion warning amid fears criminals selling fakes online",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bbc.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Matthew Bassett"
+       ]
+      },
+      "link": "https://www.bbc.co.uk/news/articles/cg41qpykg0no",
+      "thumbnail": "https://ichef.bbci.co.uk/ace/standard/720/cpsprodpb/0059/live/4230b670-1460-11f0-90d3-7d5441ca7ed3.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHplRlF5TlZsS09VVTFZVFZIVFJDVkF4alFCU2dLTWdZQk01UXhIUWs",
+      "date": "04/12/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-12T07:00:00Z"
+     },
+     {
+      "position": 47,
+      "title": "Scammers Are Already Making Money From Selling Fake Views on Instagram Reels",
+      "source": {
+       "name": "Hypebae",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://hypebae.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Yeeun Kim"
+       ]
+      },
+      "link": "https://hypebae.com/2020/8/instagram-reels-selling-buying-fake-views-scammers-botnet-websites-price-tiktok",
+      "thumbnail": "https://image-cdn.hypb.st/https%3A%2F%2Fbae.hypebeast.com%2Ffiles%2F2020%2F08%2Finstagram-reels-scammers-faking-views-social-media-1.jpg?q=90&w=800&cbr=1&fit=max",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNDROWGhyZEV4UlRtVlhVbUpSVFJERUF4aW5CU2dLTWdrRllaRGtxcWR6N1FF",
+      "date": "08/11/2020, 07:00 AM, +0000 UTC",
+      "iso_date": "2020-08-11T07:00:00Z"
+     },
+     {
+      "position": 48,
+      "title": "FDA warns of scam involving fake letters to pharmaceutical buyers",
+      "source": {
+       "name": "USA Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.usatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "David Pan"
+       ]
+      },
+      "link": "https://www.usatoday.com/story/money/2018/07/13/fda-warns-scam-related-online-pharmaceutical-orders/784292002/",
+      "thumbnail": "https://www.usatoday.com/gcdn/-mm-/3b8b0abcb585d9841e5193c3d072eed1e5ce62bc/c=0-30-580-356/local/-/media/2018/06/07/USATODAY/usatsports/MotleyFool-TMOT-b59cde64-scam-alert_large.jpg?width=1200&disable=upscale&format=pjpg&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVBNbll0V0ZGa1NuVkJWamRsVFJER0FoakVCQ2dLTWdhcHRKS3RPUVk",
+      "date": "07/13/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-07-13T07:00:00Z"
+     },
+     {
+      "position": 49,
+      "title": "At least $53,000 lost to scams involving sale of cruise packages since April: Singapore police",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sherlyn Sim"
+       ]
+      },
+      "link": "https://www.straitstimes.com/singapore/at-least-53000-lost-to-scams-involving-sale-of-cruise-packages-since-april-singapore-police",
+      "thumbnail": "https://cassette.sphdigital.com.sg/image/straitstimes/7c34465a2de0cdb2e7b66d2b59157d0a5f54afb5c2d7459788881826c066f31c",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVZTbTgyZVMxYU1WbHdhbloyVFJERUF4aW1CU2dLTWdrTkU0WkpHV21pVGdF",
+      "date": "05/15/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-15T07:00:00Z"
+     },
+     {
+      "position": 50,
+      "title": "All that glitters is not gold: Consumers in China on alert over hard-to-detect fakes",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Cheng Wei",
+        "Joyce Lim"
+       ]
+      },
+      "link": "https://www.straitstimes.com/asia/scam-alert-fake-gold-that-is-hard-to-detect-emerges-in-china",
+      "thumbnail": "https://cassette.sphdigital.com.sg/image/straitstimes/b4949bf7aaa8fe1b292b34f391f4f48e9796e7af5783214aa90397fcf40f84f1",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUtObFZCZUdGdFNWOXBTbmg1VFJERUF4aW1CU2dLTWdrTklZalVHT1dwY0FF",
+      "date": "05/01/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-01T07:00:00Z"
+     },
+     {
+      "position": 51,
+      "title": "How to spot fake NFL gear",
+      "source": {
+       "name": "FOX 26 Houston",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.fox26houston.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Heather J Sullivan"
+       ]
+      },
+      "link": "https://www.fox26houston.com/news/fake-nfl-merchandise-scams-increase-how-to-spot-fake",
+      "thumbnail": "https://static-media.fox.com/fmcv3/prod/fts/A-600942/4nioyhx42o8m3o0t.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNWpNMXBDTm5OVWFEaFFSVWhxVFJDZkF4ampCU2dLTWdzQkFJVHBQQ1NDMkRqVGln",
+      "date": "09/03/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-09-03T07:00:00Z"
+     },
+     {
+      "position": 52,
+      "title": "Thousands of imposter websites discovered mimicking top brands to steal your banking info",
+      "source": {
+       "name": "Fox News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.foxnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Kurt Knutsson"
+       ]
+      },
+      "link": "https://www.foxnews.com/tech/thousands-imposter-websites-discovered-mimicking-top-brands-steal-banking-info",
+      "thumbnail": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/06/1280/720/1-fake_sites.jpg?ve=1&tl=1",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXlMVVp3WDBkeGNESlRXakJyVFJDZkF4ampCU2dLTWdrQkVJU0ZuS1JySkFN",
+      "date": "06/16/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-16T07:00:00Z"
+     },
+     {
+      "position": 53,
+      "title": "How to Avoid Buying Fake Products When Shopping on Amazon, Walmart",
+      "source": {
+       "name": "Business Insider",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.businessinsider.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Hillary Hoffower"
+       ]
+      },
+      "link": "https://www.businessinsider.com/how-to-find-fake-products-online-shopping-amazon-ebay-walmart-2018-3",
+      "thumbnail": "https://i.insider.com/5ab5639b36b886eb018b47a0?width=700",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHphblp2UkdSUGJrRnFOMjF5VFJEZ0F4aUFCU2dLTWdhNVU1UlJKUWc",
+      "date": "03/29/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-03-29T07:00:00Z"
+     },
+     {
+      "position": 54,
+      "title": "Beware: Fake sneaker shops are targeting South Africans",
+      "source": {
+       "name": "News24",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.news24.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jan Cronje"
+       ]
+      },
+      "link": "https://www.news24.com/business/companies/beware-fake-sneaker-shops-are-targeting-south-africans-20220217",
+      "thumbnail": "https://cdn.24.co.za/files/Cms/General/d/3090/b93128906145464db448eed599693491.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNOemswUzJ0c2JVbFlUMGRuVFJEcUF4anlCQ2dLTWdhVk1wUnFuUWc",
+      "date": "02/17/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-02-17T08:00:00Z"
+     },
+     {
+      "position": 55,
+      "title": "Man who trafficked counterfeit Nike shoes sentenced in multimillion-dollar fraud",
+      "source": {
+       "name": "OregonLive.com",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.oregonlive.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Maxine Bernstein"
+       ]
+      },
+      "link": "https://www.oregonlive.com/portland/2018/04/man_who_trafficked_rare_counte.html",
+      "thumbnail": "https://image.oregonlive.com/home/olive-media/width600/img/portland_impact/photo/niketownjpg-2acb98df7e475a54.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUVjVXRhTjB0MVpsUkJXbmd4VFJEM0FSajhBaWdLTWdZUlFJWkpSUVE",
+      "date": "04/04/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-04-04T07:00:00Z"
+     },
+     {
+      "position": 56,
+      "title": "Real estate agent loses $20K after buying counterfeit sneakers from teenager: ‘Scam artist’",
+      "source": {
+       "name": "New York Post",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://nypost.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Chloe Overington Whelan"
+       ]
+      },
+      "link": "https://nypost.com/2024/01/02/lifestyle/real-estate-agent-loses-20k-after-buying-counterfeit-sneakers-from-teenager-scam-artist/",
+      "thumbnail": "https://nypost.com/wp-content/uploads/sites/2/2024/01/2020-new-sale-explores-pop-74330911.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWthMXBoVXpKdFVFVnZWbGRDVFJERUF4aW5CU2dLTWdPVlV3UQ",
+      "date": "01/02/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-01-02T08:00:00Z"
+     },
+     {
+      "position": 57,
+      "title": "Jail for pair involved in trading fake gold bars for Rolex watches worth $30,000",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Andrew Wong"
+       ]
+      },
+      "link": "https://www.straitstimes.com/singapore/courts-crime/jail-for-pair-who-traded-fake-gold-bars-for-rolex-watches-worth-30000",
+      "thumbnail": "https://cassette.sphdigital.com.sg/image/straitstimes/279e2adfa1b7b02387f5c8a4576ae8c28dd3847392b0beccab630663e97cbb23",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWFSVEU1TVdWNVdWTlFRemc0VFJERUF4aW1CU2dLTWdZbFpwYnNKUWc",
+      "date": "01/23/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-23T08:00:00Z"
+     },
+     {
+      "position": 58,
+      "title": "Fake Disney, Coca-Cola, Nike job adverts 'trying to steal your digital life'",
+      "source": {
+       "name": "Chronicle Live",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.chroniclelive.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Steven Cole Smith"
+       ]
+      },
+      "link": "https://www.chroniclelive.co.uk/news/uk-news/fake-disney-coca-cola-nike-34692854",
+      "thumbnail": "https://i2-prod.chroniclelive.co.uk/news/uk-news/article34692852.ece/ALTERNATES/s1200b/0_Overwhelmed-woman-rubbing-her-eyes-in-front-of-laptop.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDNiSEYyZW5wblNsRnJUVFl6VFJEZ0F4aUFCU2dLTWdZbElvcnNuUWM",
+      "date": "10/03/2026, 12:01 AM, +0000 UTC",
+      "iso_date": "2026-10-03T00:01:00Z"
+     },
+     {
+      "position": 59,
+      "title": "Scam leaves Wellington woman out of pocket, with fake Nike shoes",
+      "source": {
+       "name": "Stuff",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.stuff.co.nz&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Chloe Winter"
+       ]
+      },
+      "link": "https://www.stuff.co.nz/business/money/75255655/scam-leaves-wellington-woman-out-of-pocket-with-fake-nike-shoes",
+      "thumbnail": "https://www.stuff.co.nz/media/images/9Tzi8ywRz924XE3uHaD6DfGZQfjEdZd7oKlsiR53VLF3Mqfk4hrKlb19ysdt4TG2fxUEOV1kDpWjKA4Tju912iIye8fTegeBLnZc2Etx03zEkZnWNJSkudSTiPLOujLpOR5oB25Lno2pnaEGx80dOA==",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVVkVEJQZEdkWk9IcEpkVXczVFJDZ0F4amhCU2dLTWdhWkJJenVMUWc",
+      "date": "12/17/2015, 08:00 AM, +0000 UTC",
+      "iso_date": "2015-12-17T08:00:00Z"
+     },
+     {
+      "position": 60,
+      "title": "The Terrible Tale of Tiaan CONradie: The Lying Dutchman",
+      "source": {
+       "name": "The Running Mann",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://runningmann.co.za&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Stuart Mann"
+       ]
+      },
+      "link": "https://runningmann.co.za/2025/02/13/the-terrible-tale-of-tiaan-conradie-the-lying-dutchman/",
+      "thumbnail": "https://runningmann.co.za/wp-content/uploads/2025/02/TFD-scammer-header-2000x1200.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iNkNnNW5aVVpZTjB4V1RHbHFURzlrVFJDdEF4akxCU2dLTWc0Qk1JU094V1FleFNwME5acXJJZw",
+      "date": "02/13/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-02-13T08:00:00Z"
+     },
+     {
+      "position": 61,
+      "title": "I Answered a Job Scam Text on Purpose, and Here’s What I Learned",
+      "source": {
+       "name": "Lifehacker",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://lifehacker.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Stephen Johnson"
+       ]
+      },
+      "link": "https://lifehacker.com/entertainment/what-happens-when-you-respond-to-a-job-offer-scam-text",
+      "thumbnail": "https://lifehacker.com/imagery/articles/01JP68GVTCVQC6GGZEK70RE27W/hero-image.fill.size_1248x702.v1742919378.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxjWEF3WjJaTWFtdEJWblI2VFJDZkF4ampCU2dLTWdZTlpZcnNxUWM",
+      "date": "04/04/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-04-04T07:00:00Z"
+     },
+     {
+      "position": 62,
+      "title": "Nike Fans Scammed by Fake Influencer Recruitment Campaign",
+      "source": {
+       "name": "Hypebeast",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://hypebeast.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jack Stanley"
+       ]
+      },
+      "link": "https://hypebeast.com/2018/6/fake-nike-recruitment-campaign-scam",
+      "thumbnail": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F06%2Ffake-nike-recruitment-campaign-scam-0.jpg?fit=max&cbr=1&q=90&w=750&h=500",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNVJUeTFaVjBWYWVVUlNTMU14VFJERUF4aW1CU2dLTWdzQlFJWXJNU1VXUnVyY1BR",
+      "date": "06/20/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-06-20T07:00:00Z"
+     },
+     {
+      "position": 63,
+      "title": "Police warn of scam targeting those selling their gaming accounts",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Shermaine Ang"
+       ]
+      },
+      "link": "https://www.straitstimes.com/singapore/courts-crime/police-warn-of-scam-targeting-those-selling-their-gaming-accounts",
+      "thumbnail": "https://static1.straitstimes.com.sg/s3fs-public/articles/2021/09/28/mi_phonescam_280921.jpg?VersionId=k.xAwjpx4Ehs.4rgwvbxfwCANWYZ3KFH",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTFka016UjBSQlpqTlVXR2gzVFJEREF4aW5CU2dLTWdrUlE0NElLaVpza0FF",
+      "date": "09/28/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-09-28T07:00:00Z"
+     },
+     {
+      "position": 64,
+      "title": "10 most common affiliate marketing scams and how to avoid them",
+      "source": {
+       "name": "Hostinger",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.hostinger.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.hostinger.com/tutorials/affiliate-marketing-scams/",
+      "thumbnail": "https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/wp-content/uploads/sites/2/2022/08/affiliate-marketing-scams-2.jpg/w=1110,h=454,fit=scale-down",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhNVEJtWlVwdGJuSk9VbmRXVFJDbUF4aldCU2dLTWdhaGxJek50UVk",
+      "date": "04/27/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-27T07:00:00Z"
+     },
+     {
+      "position": 65,
+      "title": "10 Best Running Shoes of 2026",
+      "source": {
+       "name": "GearLab",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.outdoorgearlab.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.outdoorgearlab.com/topics/shoes-and-boots/best-running-shoes",
+      "thumbnail": "https://outdoorgearlab.b-cdn.net/photos/32/90/450537_8584_XXL.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU5jMFpxYWtZM2EwSTRXVXBpVFJDZkF4ampCU2dLTWdrQmNJNmtOT2V3a2dF",
+      "date": "09/18/2017, 09:10 AM, +0000 UTC",
+      "iso_date": "2017-09-18T09:10:18Z"
+     },
+     {
+      "position": 66,
+      "title": "The Flourishing Business of Fake YouTube Views (Published 2018)",
+      "source": {
+       "name": "The New York Times",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.nytimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Michael H. Keller"
+       ]
+      },
+      "link": "https://www.nytimes.com/interactive/2018/08/11/technology/youtube-fake-view-sellers.html",
+      "thumbnail": "https://static01.nyt.com/images/2018/08/02/technology/00Youtube-Promo/00Youtube-Promo-facebookJumbo.png?year=2018&h=551&w=1050&s=1e5acc91356c6920163adf148c01580bae68003d470fc95d61c4f586415437aa&k=ZQJBKqZ0VN",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUhORzR3VHpCUWVtZzROSEZxVFJDUkF4ajlCU2dLTWdZeFU1YVBxUWM",
+      "date": "08/11/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-08-11T07:00:00Z"
+     },
+     {
+      "position": 67,
+      "title": "SARU warns against scammers selling fake Bok jerseys",
+      "source": {
+       "name": "Algoa FM",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.algoafm.co.za&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.algoafm.co.za/sport/saru-warns-against-scammers-selling-fake-bok-jerseys",
+      "thumbnail": "https://www.algoafm.co.za/images/cmsimages/main/bokjersey-news-1694007187115953.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWFUMkZ0VjFKWVYzUTBWbWczVFJDSEF4aVFCaWdLTWdPMUFnQQ",
+      "date": "09/06/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-09-06T07:00:00Z"
+     },
+     {
+      "position": 68,
+      "title": "21 people lose at least $210k in malware scams involving sale of used goods",
+      "source": {
+       "name": "The Straits Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.straitstimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Wallace Woon"
+       ]
+      },
+      "link": "https://www.straitstimes.com/singapore/21-people-lose-at-least-210k-in-malware-scams-involving-sale-of-used-goods",
+      "thumbnail": "https://cassette.sphdigital.com.sg/image/straitstimes/cf83950f8d63485000e3e824e3352d953d6c8e372d5e220a95899dfee8781db4",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHdlbTA1TmtzMWFsWTBTMWROVFJERUF4aW1CU2dLTWdZZFJJNnNJUWM",
+      "date": "10/10/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-10-10T07:00:00Z"
+     },
+     {
+      "position": 69,
+      "title": "'I paid £145 for Nike Dunk trainers for my daughter and they ended up being fake'",
+      "source": {
+       "name": "Manchester Evening News",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.manchestereveningnews.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Emma Gill"
+       ]
+      },
+      "link": "https://www.manchestereveningnews.co.uk/whats-on/shopping/i-paid-145-nike-dunk-27797745",
+      "thumbnail": "https://i2-prod.manchestereveningnews.co.uk/incoming/article27801697.ece/ALTERNATES/s1200b/0_EGR_270923Laced_13.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWZSSGwwVldweVZsUllWVzU2VFJEZ0F4aUFCU2dLTWdhUmxKRHF0UVk",
+      "date": "09/30/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-09-30T07:00:00Z"
+     },
+     {
+      "position": 70,
+      "title": "Thousands of fake designer shoes seized in raid on counterfeit scam",
+      "source": {
+       "name": "Wales Online",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.walesonline.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jason Evans"
+       ]
+      },
+      "link": "https://www.walesonline.co.uk/news/wales-news/raid-counterfeit-scam-sees-thousands-14935028",
+      "thumbnail": "https://i2-prod.walesonline.co.uk/incoming/article14935213.ece/ALTERNATES/s1200b/0_JE_SWA120072010RhysHarriesHookyDaps1JPG.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHdWM2RVVFRZNVUyMXdUREp1VFJEZ0F4aUFCU2dLTWdZVkNJaW5FZ3M",
+      "date": "07/25/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-07-25T07:00:00Z"
+     },
+     {
+      "position": 71,
+      "title": "Police Log: Threatening Flyer Left at Home, Suspected Organized Crime Scam Used at Nike, Shoplifters Busted",
+      "source": {
+       "name": "watertownmanews.com",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://watertownmanews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Charlie Breitrose"
+       ]
+      },
+      "link": "https://watertownmanews.com/2025/09/26/police-log-threatening-flyer-left-at-home-suspected-organized-crime-scam-used-at-nike-shoplifters-busted/",
+      "date": "09/26/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-09-26T07:00:00Z"
+     },
+     {
+      "position": 72,
+      "title": "Woman selling fake trainers on Facebook caught in undercover sting",
+      "source": {
+       "name": "Kent Online",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.kentonline.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Chantal Weller"
+       ]
+      },
+      "link": "https://www.kentonline.co.uk/ashford/news/woman-selling-fake-trainers-on-facebook-caught-in-undercover-271170/",
+      "thumbnail": "https://www.kentonline.co.uk/_media/img/LNHF3HLQ5QZXBSXIIO1O.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWhTVVJpY21OR1lYVm9URXBhVFJERUF4aW1CU2dLTWdhRlVZanpwQWM",
+      "date": "08/01/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-08-01T07:00:00Z"
+     },
+     {
+      "position": 73,
+      "title": "BUYER BEWARE! Fanatics Is Selling Counterfeit Sports Memorabilia!",
+      "source": {
+       "name": "Teal Town USA",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://tealtownusa.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://tealtownusa.com/2020/08/buyer-beware-fanatics-is-selling-counterfeit-sports-memorabilia/",
+      "thumbnail": "https://tealtownusa.com/wp-content/uploads/2020/07/fanatics-scam.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRlRkZOT0VkbWVXbEtaMUpxVFJDdEF4akxCU2dLTWdZUk00aEtJUWc",
+      "date": "08/06/2020, 07:00 AM, +0000 UTC",
+      "iso_date": "2020-08-06T07:00:00Z"
+     },
+     {
+      "position": 74,
+      "title": "Did Nike Offer 'People of Color' a 75 Percent Off Coupon?",
+      "source": {
+       "name": "Snopes.com",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.snopes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Dan Mac Guill"
+       ]
+      },
+      "link": "https://www.snopes.com/fact-check/nike-coupon-color/",
+      "thumbnail": "https://mediaproxy.snopes.com/width/600/https://media.snopes.com/2018/09/1536191287664_1200.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRSMFo0V0VoR1owOW1Za2x4VFJDNkFoallCQ2dLTWdZQkFwYlZxQWM",
+      "date": "09/07/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-09-07T07:00:00Z"
+     },
+     {
+      "position": 75,
+      "title": "Fake Nike Influencer Recruitment Scam Goes Viral",
+      "source": {
+       "name": "HotNewHipHop",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hotnewhiphop.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Kyle Rooney"
+       ]
+      },
+      "link": "https://www.hotnewhiphop.com/142157-fake-nike-influencer-recruitment-scam-goes-viral-news",
+      "thumbnail": "https://www.hotnewhiphop.com/i/v1/390x219-cover-81-auto/cover/59/95/1529519559_f35d21f087a51b5744aab8acc9829e33.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXBjbXBYVTBSVldHUkhSV05vVFJEYkFSaUdBeWdLTWdZaEJJcXNPUVk",
+      "date": "09/26/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-09-26T07:00:00Z"
+     }
+    ],
+    "_searched_at": "2026-10-07 09:43:49 UTC"
+   }
+  }
+ }
+}

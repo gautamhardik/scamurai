@@ -245,6 +245,9 @@ class SerpClient:
         request = {"engine": engine, **params}
         try:
             async with self._sem:
+                if budget.quota_exhausted:  # another search hit the quota while this one was queued
+                    budget.used -= 1
+                    return SerpOutcome("skipped_quota", key=key)
                 if engine == "google_lens":
                     if image is not None:
                         request["image_id"] = await self._upload(image, timeout)

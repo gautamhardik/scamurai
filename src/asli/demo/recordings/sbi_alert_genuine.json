@@ -1,0 +1,554 @@
+{
+ "scenario": "sbi_alert_genuine",
+ "recorded_at": "2026-10-07T15:24:39+05:30",
+ "input_hash": "97406dee9b08504000e55aa1e54a49e56c98b0150fea4ee924797388fa2fd6ab",
+ "llm": {
+  "data": {
+   "language": "en",
+   "ocr_text": "",
+   "content_kind": "sms",
+   "scheme": "other",
+   "claimed_org": {
+    "name": "SBI",
+    "category": "bank"
+   },
+   "sender": {
+    "name": "SBI",
+    "email": null,
+    "phone": "1800 1234"
+   },
+   "phones": [
+    "1800 1234"
+   ],
+   "urls": [],
+   "emails": [],
+   "upi_ids": [],
+   "amounts": [
+    {
+     "text": "Rs.500.00",
+     "purpose": "payment"
+    }
+   ],
+   "product": {
+    "name": null,
+    "brand": null,
+    "claimed_price_text": null
+   },
+   "job": {
+    "company": null,
+    "role": null,
+    "salary_text": null,
+    "location": null,
+    "fee_requested": false
+   },
+   "address": null,
+   "app_name": null,
+   "requested_actions": [
+    {
+     "type": "call",
+     "quote": "Call 1800 1234"
+    }
+   ],
+   "pressure": [
+    {
+     "type": "urgency",
+     "quote": "Not you? Call 1800 1234"
+    }
+   ],
+   "ai_directed_text": []
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+ },
+ "expected": {
+  "level": "LOW_RISK",
+  "flags": [
+   "phone_on_official_site"
+  ]
+ },
+ "searches": {
+  "68c32541e8ed9784d16771dbc4391e31dbe172d8c643ca927bcec4c5a4a80f0f": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"1800 1234\" OR \"18001234\" OR \"1800-1234\""
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "Contact Centre - Customer Care - SBI Bank",
+      "link": "https://sbi.bank.in/web/customer-care/contact-centre",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbwHrOzAVCaonInaHnUCBYf2RbIgBou0t9xKuH3OnWkVSZYGNuq_c0x8uSsrJSMhxMGpHkF-kgA96-pRgd47jZXIbGe-viMSUVbEzEfjim5ktc3sD6hKMbp-E99rU-BS0wcaaMgruhg7jj-1KiL1_yw&ved=2ahUKEwjd4piHz6eXAxXktokEHQUvGIkQFnoECCoQAQ&uoh=1",
+      "displayed_link": "https://sbi.bank.in › web › customer-care › contact-centre",
+      "favicon": "https://serpapi.com/images/i/UklGRrAAAABXRUJQVlA4IKQAAABQAwCdASoQABAAAsBMJbACdLoAfhW3wGQY9rhj1RKO4dmC4AD-9BNY09VLt7hVIUKxO6WtqVV7Nnbto00iEDFv-P8Z9StDNWopICOWMZuQdyYTb2TfwKJMKIkiCt8ico0_8e91ZsLiYEiz0TwzhOdbZcLhs_FHSBlhLf-_45jx9AeUzLIyeApa0ZCE-5AmdhDLpQv-VmM2jfeTiwN-I8chPIAAAA.webp",
+      "snippet": "18001234. 2. 18002100. 3. 1800112211. 4. 18004253800. 5. 1800111101. *Currently, the ... Call Contact Centre Toll-Free Number 1800 1234 from your mobile. Opt ...",
+      "snippet_highlighted_words": [
+       "18001234",
+       "1800 1234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "18001234. 2. 18002100. 3. 1800112211. 4. 18004253800. 5. 1800111101. *Currently, the ... Call Contact Centre Toll-Free Number 1800 1234 from your mobile. Opt ...",
+        "source_info_link": "https://sbi.bank.in/web/customer-care/contact-centre",
+        "icon": "https://serpapi.com/images/i/UklGRrAAAABXRUJQVlA4IKQAAABQAwCdASoQABAAAsBMJbACdLoAfhW3wGQY9rhj1RKO4dmC4AD-9BNY09VLt7hVIUKxO6WtqVV7Nnbto00iEDFv-P8Z9StDNWopICOWMZuQdyYTb2TfwKJMKIkiCt8ico0_8e91ZsLiYEiz0TwzhOdbZcLhs_FHSBlhLf-_45jx9AeUzLIyeApa0ZCE-5AmdhDLpQv-VmM2jfeTiwN-I8chPIAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkNhb25JbmFIblVDQllmMlJiSWdCb3UwdDl4S3VIM09uV2tWU1pZR051cV9jMHg4dVNzckpTTWh4TUdwSGtGLWtnQTk2LXBSZ2Q0N2paWEliR2UtdmlNU1VWYkV6RWZqaW01a3RjM3NENmhLTWJwLUU5OXJVLUJTMHdjYWFNZ3J1aGc3amotMUtpTDFfeXcSBBoCCAAaxAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCeAwgAEAAYACAAKgsKBDE4MDAVHsr4PjKkAS9nb3RvP3VybD1DQUVTYndIck96QVZDYW9uSW5hSG5VQ0JZZjJSYklnQm91MHQ5eEt1SDNPbldrVlNaWUdOdXFfYzB4OHVTc3JKU01oeE1HcEhrRi1rZ0E5Ni1wUmdkNDdqWlhJYkdlLXZpTVNVVmJFekVmamltNWt0YzNzRDZoS01icC1FOTlyVS1CUzB3Y2FhTWdydWhnN2pqLTFLaUwxX3l3OilDb250YWN0IENlbnRyZSAtIEN1c3RvbWVyIENhcmUgLSBTQkkgQmFua0K0ATxiPjE4MDAxMjM0PC9iPi4gMi4gMTgwMDIxMDAuIDMuIDE4MDAxMTIyMTEuIDQuIDE4MDA0MjUzODAwLiA1LiAxODAwMTExMTAxLiAqQ3VycmVudGx5LCB0aGUgLi4uIENhbGwgQ29udGFjdCBDZW50cmUgVG9sbC1GcmVlIE51bWJlciA8Yj4xODAwIDEyMzQ8L2I-IGZyb20geW91ciBtb2JpbGUuIE9wdCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVkNhb25JbmFIblVDQllmMlJiSWdCb3UwdDl4S3VIM09uV2tWU1pZR051cV9jMHg4dVNzckpTTWh4TUdwSGtGLWtnQTk2LXBSZ2Q0N2paWEliR2UtdmlNU1VWYkV6RWZqaW01a3RjM3NENmhLTWJwLUU5OXJVLUJTMHdjYWFNZ3J1aGc3amotMUtpTDFfeXcSBBoCCAAaxAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCeAwgAEAAYACAAKgsKBDE4MDAVHsr4PjKkAS9nb3RvP3VybD1DQUVTYndIck96QVZDYW9uSW5hSG5VQ0JZZjJSYklnQm91MHQ5eEt1SDNPbldrVlNaWUdOdXFfYzB4OHVTc3JKU01oeE1HcEhrRi1rZ0E5Ni1wUmdkNDdqWlhJYkdlLXZpTVNVVmJFekVmamltNWt0YzNzRDZoS01icC1FOTlyVS1CUzB3Y2FhTWdydWhnN2pqLTFLaUwxX3l3OilDb250YWN0IENlbnRyZSAtIEN1c3RvbWVyIENhcmUgLSBTQkkgQmFua0K0ATxiPjE4MDAxMjM0PC9iPi4gMi4gMTgwMDIxMDAuIDMuIDE4MDAxMTIyMTEuIDQuIDE4MDA0MjUzODAwLiA1LiAxODAwMTExMTAxLiAqQ3VycmVudGx5LCB0aGUgLi4uIENhbGwgQ29udGFjdCBDZW50cmUgVG9sbC1GcmVlIE51bWJlciA8Yj4xODAwIDEyMzQ8L2I-IGZyb20geW91ciBtb2JpbGUuIE9wdCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "sbi.bank.in",
+      "read_more_link": "https://sbi.bank.in/web/customer-care/contact-centre#:~:text=18001234,*Currently%2C%20the&text=Last%20Updated%20On%20%3A%20Wednesday%2C"
+     },
+     {
+      "position": 2,
+      "title": "Just call on 1800 1234 or 1800 2100, and get an update on the ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/videos/just-call-on-1800-1234-or-1800-2100-and-get-an-update-on-the-dispatch-status-of-/983631263464643/",
+      "displayed_link": "520+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142573ae60591a97732f/images/-a8AN_NW7w59hrAjuAswZTQqnHsDBt0ha-6etDKgP20.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Just call on 1800 1234 or 1800 2100, and get an update on the dispatch status of your SBI Debit Card. #SBI #TheBankerToEveryIndian # ...",
+      "duration": "0:30",
+      "about_this_result": {
+       "source": {
+        "description": "Just call on 1800 1234 or 1800 2100, and get an update on the dispatch status of your SBI Debit Card. #SBI #TheBankerToEveryIndian # ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZTWG40VkNvMTJjcVJXRDJxQ2owbDNDN2lGRzgyRUJST19STWk2cGp6WUdNY0xIbFM2UThGRG9pdGpTRl9scXo2YldEVjVfZnloMkcxY0NaUjdsaldxV1NWa1pFSS1nUURHbUF1eDBPQmtsY0lXZ1B1anNuR0hRT1ctV3ZvWDJfSWdfTnFEd2doVTVSOW50Z0JOay03TF9ERmRyVHIzT01iRGlkcVViLWJ5WVRaZ3lwUTdUTHNpekl4UVpGaEpQZ3BPLWQ0VFg5cWd1WUZkclU3R2dRekFmYXZnNTZwNER5Z2ZzVDBseDU5VTRrd2NaYmd2Wkw5ckhVWjZDbUN1d3I0YXozTHAtSmxLSThwdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZTWG40VkNvMTJjcVJXRDJxQ2owbDNDN2lGRzgyRUJST19STWk2cGp6WUdNY0xIbFM2UThGRG9pdGpTRl9scXo2YldEVjVfZnloMkcxY0NaUjdsaldxV1NWa1pFSS1nUURHbUF1eDBPQmtsY0lXZ1B1anNuR0hRT1ctV3ZvWDJfSWdfTnFEd2doVTVSOW50Z0JOay03TF9ERmRyVHIzT01iRGlkcVViLWJ5WVRaZ3lwUTdUTHNpekl4UVpGaEpQZ3BPLWQ0VFg5cWd1WUZkclU3R2dRekFmYXZnNTZwNER5Z2ZzVDBseDU5VTRrd2NaYmd2Wkw5ckhVWjZDbUN1d3I0YXozTHAtSmxLSThwdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTiAgDeSeBLjymfTNvjFwfrV8cpTnJEIeuFlw",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 3,
+      "title": "Tune in with our contact centre and dial 18001234 or ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/posts/tune-in-with-our-contact-centre-and-dial-18001234-or-18002100-for-banking-at-you/830509032436847/",
+      "displayed_link": "280+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142573ae60591a97732f/images/-a8AN_NW7w59hrAjuAswZebVB2AXJgVEMqNiW7Y02e0.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+      "duration": "0:56",
+      "about_this_result": {
+       "source": {
+        "description": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZSdzBpWmRqZnRTdkFGaFlMWTJ0WXJrOS1meHlibGNlRjBFX25abnpZaTlCOTRoVXg1dHhBT3lUdlNTbzlTX3FsSHFqaHdCbjZPaC0wazBSV0lYSFZBWTlGUnNjWFBzbnRYUnV5T185U2ZqZmdBWEQyYURCQ3huazJneEdsbm1CbzRwdUlyTzRESExOYzN1SVBOZmY1empDd1Fkd0l4RnJCTW03LWNnWGt2aHZQVTkwV3RVLXdJQmFncld4RUxrMnFXV2VMR3ZpLVIwWXhwbGYwYWJ5ZFNKODBHUEtIYlN2YS1SckJhVmxWanoxemR5LTlhZ1lHLWZPajA4VTl2ckstZ2tCdmVhWno1T0cSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZSdzBpWmRqZnRTdkFGaFlMWTJ0WXJrOS1meHlibGNlRjBFX25abnpZaTlCOTRoVXg1dHhBT3lUdlNTbzlTX3FsSHFqaHdCbjZPaC0wazBSV0lYSFZBWTlGUnNjWFBzbnRYUnV5T185U2ZqZmdBWEQyYURCQ3huazJneEdsbm1CbzRwdUlyTzRESExOYzN1SVBOZmY1empDd1Fkd0l4RnJCTW03LWNnWGt2aHZQVTkwV3RVLXdJQmFncld4RUxrMnFXV2VMR3ZpLVIwWXhwbGYwYWJ5ZFNKODBHUEtIYlN2YS1SckJhVmxWanoxemR5LTlhZ1lHLWZPajA4VTl2ckstZ2tCdmVhWno1T0cSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcSIFsgAE32KtDAFxhcPz-uoyT7qJJgTYlsL-Q",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 4,
+      "title": "Tune in with our contact centre and dial 18001234 or ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/videos/tune-in-with-our-contact-centre-and-dial-18001234-or-18002100-for-banking-at-you/2102342866831236/",
+      "displayed_link": "280+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142573ae60591a97732f/images/-a8AN_NW7w59hrAjuAswZZNcmZeY-KQc2g0E5Wuitb8.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+      "duration": "0:56",
+      "about_this_result": {
+       "source": {
+        "description": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqUCL2dvdG8_dXJsPUNBRVN6d0VCNnpzd0ZYNzZlNnRYRnpBbmNjMF9PX1p4Ujl6UkVQbGloUjVla0M2bjkydk1VUjFCQU9nWkhXd0JIcG1uVkZwUWhvZHNzVmNLd2t3aFc3S29vWnhJR2g0TmJ3eS1mQVJPQVlhUDM4M1BVV245UWMtVWUzUnZRQllTRXVRMy1rdXZlaG4tWGlzbTYxckVjZkNLc09yeHd3MmtKdnJmNlVTZlRXdEl6aDhQeDdzQWg1Nk1nMG9UWDZEbm1tQ0dKcHI3SjNRR25qcnpkQ0d6emZrTTlEWTJ4TlJRQ2ZkbWg5eUh0Z1FrLVRTZWoteGpMOEVINXlkSXB1UlRwelZDQS1BVGNGWkxaZzliTmczNHp2X0hJZm8SFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqUCL2dvdG8_dXJsPUNBRVN6d0VCNnpzd0ZYNzZlNnRYRnpBbmNjMF9PX1p4Ujl6UkVQbGloUjVla0M2bjkydk1VUjFCQU9nWkhXd0JIcG1uVkZwUWhvZHNzVmNLd2t3aFc3S29vWnhJR2g0TmJ3eS1mQVJPQVlhUDM4M1BVV245UWMtVWUzUnZRQllTRXVRMy1rdXZlaG4tWGlzbTYxckVjZkNLc09yeHd3MmtKdnJmNlVTZlRXdEl6aDhQeDdzQWg1Nk1nMG9UWDZEbm1tQ0dKcHI3SjNRR25qcnpkQ0d6emZrTTlEWTJ4TlJRQ2ZkbWg5eUh0Z1FrLVRTZWoteGpMOEVINXlkSXB1UlRwelZDQS1BVGNGWkxaZzliTmczNHp2X0hJZm8SFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcSIFsgAE32KtDAFxhcPz-uoyT7qJJgTYlsL-Q",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 5,
+      "title": "Connect with our toll-free numbers 1800 1234 or 1800 2100!",
+      "link": "https://www.youtube.com/watch?v=ZnAOYuBslxI",
+      "displayed_link": "16.1L+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142573ae60591a97732f/images/-a8AN_NW7w59hrAjuAswZQXxSvyp8-cDL20ETFcCN00.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "Eager to receive your new ATM/Debit Card? You can check the dispatch status of your card by calling 1800 1234 or 1800 2100, and we will let you",
+      "duration": "0:53",
+      "about_this_result": {
+       "source": {
+        "description": "Eager to receive your new ATM/Debit Card? You can check the dispatch status of your card by calling 1800 1234 or 1800 2100, and we will let you",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkFhLXJDcHpPZDJoX3ZjZ0xjaDYxSVk1U2RSYkhSUTRKLUo0RkoxS3ZtOTZLekNDWkIyM19Ha3BiSUpOWjlIbEdMMnY5VncxODQ3WTRzV1ZQRWZIdlF6cy0tcXo3S3YwYkRhRlFFRXlLZTNpUEZuLTNPVi1ueEUwMzg5V0U1MjhTVWcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkFhLXJDcHpPZDJoX3ZjZ0xjaDYxSVk1U2RSYkhSUTRKLUo0RkoxS3ZtOTZLekNDWkIyM19Ha3BiSUpOWjlIbEdMMnY5VncxODQ3WTRzV1ZQRWZIdlF6cy0tcXo3S3YwYkRhRlFFRXlLZTNpUEZuLTNPVi1ueEUwMzg5V0U1MjhTVWcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQoAimt191B3d6ZyVTdmv04eZYkTkPoOGDgLg",
+      "source": "YouTube · State Bank of India"
+     },
+     {
+      "position": 6,
+      "title": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/posts/calling-1800-1234-or-1800-2100-is-your-mantra-for-hassle-free-banking-with-conve/773802584774159/",
+      "displayed_link": "3.3K+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142573ae60591a97732f/images/-a8AN_NW7w59hrAjuAswZeSSUQydTeuciiQPIrqYneY.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free banking with convenience from home ... Call 18001234 or 18002100 for quick ...",
+      "duration": "0:46",
+      "about_this_result": {
+       "source": {
+        "description": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free banking with convenience from home ... Call 18001234 or 18002100 for quick ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZkeXJweXI2RTJpMDh2SDhjbEgyUEFiSGZFcFo5N0x4V3dvRFFvaTF4Ym83UHRpLUFHbnEyV3VjSkQ3Qk5mYlJrR1pXU1l2Vi04b2tTdERGVGpkbDd2MFFra3V6eUQ2TlV5UEljRW9ZeFlkRkprSUFYYm1XakotZlhqMHczMElSTEZwLUxZRE0zSGpuTFpTR3RSXzctZlB0a181aDNsOS1BR3RYUGxJYzRWM3JmN09KZjloWDI4N3dndVBJZjdKbTRpSlM4UHBJR054bWdrNEplVVZydjVsNk1pUmRNVjFQdFI0WVJ5U2J3NzNhanhmZURONU1ZMjJyZWQxdkdxVmZYRUY2MC1WdGdISXUSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZkeXJweXI2RTJpMDh2SDhjbEgyUEFiSGZFcFo5N0x4V3dvRFFvaTF4Ym83UHRpLUFHbnEyV3VjSkQ3Qk5mYlJrR1pXU1l2Vi04b2tTdERGVGpkbDd2MFFra3V6eUQ2TlV5UEljRW9ZeFlkRkprSUFYYm1XakotZlhqMHczMElSTEZwLUxZRE0zSGpuTFpTR3RSXzctZlB0a181aDNsOS1BR3RYUGxJYzRWM3JmN09KZjloWDI4N3dndVBJZjdKbTRpSlM4UHBJR054bWdrNEplVVZydjVsNk1pUmRNVjFQdFI0WVJ5U2J3NzNhanhmZURONU1ZMjJyZWQxdkdxVmZYRUY2MC1WdGdISXUSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRaV7UGKVf-6seqhrLH_R2eveLEDcyeR8C52g",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 7,
+      "title": "SBI Customer Care No. 1800 1234",
+      "link": "https://m.indiacustomercare.com/sbi-customer-care-helpline-numbers",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESfQHrOzAV9FJaRnvjEkqIo6d24elIFenWypI_0mhGgmH2EHmiZCC_JbJIMj5Kg1sx2JqeA_qdf_wxBzO6sK5sUD_ll3_rNxlgo8Vzhi1xrUhED0EMsu64tQjLOSXvz8bvOBtG1mJYcsg9DDFUcFcd3VNo0Iy8V8N5eqp3T3tS&ved=2ahUKEwjd4piHz6eXAxXktokEHQUvGIkQFnoECCEQAQ&uoh=1",
+      "displayed_link": "https://m.indiacustomercare.com › sbi-customer-care-he...",
+      "favicon": "https://serpapi.com/images/i/UklGRtoAAABXRUJQVlA4IM4AAADQBQCdASocABwAPtEutFooIagoGAEAGglsAMHPLBhgmZxf7McLETRfP_PRtSvBFNg4L_xyYgAAAP72B8hX7FAOQi-ckKWa_d5hjYi36GFr0aP-2P9-72yC5kS_eULPdXkcsFCNMflN8dlJ58_FH_wYvpPY6AUklli5Jjr6MC06gmyRYUKTDLn2fmbLAWH_AQ3TRjAP6iW56bE5ItMfzYdYfZohwV9neZ7zyUC4gj9KrD66DbT3nZ8-SicmlXe_HTNjjMWOsBr7Sn1F6TOAAA.webp",
+      "snippet": "1800 1234. Updated on Friday, 25 September 2026 ... By Contact No.:You can call customer care at 18001234, 18002100, 1800112211, 18004253800, 080-26599990.",
+      "snippet_highlighted_words": [
+       "1800 1234",
+       "18001234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "1800 1234. Updated on Friday, 25 September 2026 ... By Contact No.:You can call customer care at 18001234, 18002100, 1800112211, 18004253800, 080-26599990.",
+        "source_info_link": "https://m.indiacustomercare.com/sbi-customer-care-helpline-numbers",
+        "icon": "https://serpapi.com/images/i/UklGRtoAAABXRUJQVlA4IM4AAADQBQCdASocABwAPtEutFooIagoGAEAGglsAMHPLBhgmZxf7McLETRfP_PRtSvBFNg4L_xyYgAAAP72B8hX7FAOQi-ckKWa_d5hjYi36GFr0aP-2P9-72yC5kS_eULPdXkcsFCNMflN8dlJ58_FH_wYvpPY6AUklli5Jjr6MC06gmyRYUKTDLn2fmbLAWH_AQ3TRjAP6iW56bE5ItMfzYdYfZohwV9neZ7zyUC4gj9KrD66DbT3nZ8-SicmlXe_HTNjjMWOsBr7Sn1F6TOAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVjlGSmFSbnZqRWtxSW82ZDI0ZWxJRmVuV3lwSV8wbWhHZ21IMkVIbWlaQ0NfSmJKSU1qNUtnMXN4MkpxZUFfcWRmX3d4QnpPNnNLNXNVRF9sbDNfck54bGdvOFZ6aGkxeHJVaEVEMEVNc3U2NHRRakxPU1h2ejhidk9CdEcxbUpZY3NnOURERlVjRmNkM1ZObzBJeThWOE41ZXFwM1QzdFMSBBoCCAAayAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCiAwgAEAAYACAAKgsKBDE4MDAVF61GQDK2AS9nb3RvP3VybD1DQUVTZlFIck96QVY5RkphUm52akVrcUlvNmQyNGVsSUZlbld5cElfMG1oR2dtSDJFSG1pWkNDX0piSklNajVLZzFzeDJKcWVBX3FkZl93eEJ6TzZzSzVzVURfbGwzX3JOeGxnbzhWemhpMXhyVWhFRDBFTXN1NjR0UWpMT1NYdno4YnZPQnRHMW1KWWNzZzlEREZVY0ZjZDNWTm8wSXk4VjhONWVxcDNUM3RTOiZTQkkgQ3VzdG9tZXIgQ2FyZSBOby4gPGI-MTgwMCAxMjM0PC9iPkKpATxiPjE4MDAgMTIzNDwvYj4uIFVwZGF0ZWQgb24gRnJpZGF5LCAyNSBTZXB0ZW1iZXIgMjAyNiAuLi4gQnkgQ29udGFjdCBOby46WW91IGNhbiBjYWxsIGN1c3RvbWVyIGNhcmUgYXQgPGI-MTgwMDEyMzQ8L2I-LCAxODAwMjEwMCwgMTgwMDExMjIxMSwgMTgwMDQyNTM4MDAsIDA4MC0yNjU5OTk5MC4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrYBL2dvdG8_dXJsPUNBRVNmUUhyT3pBVjlGSmFSbnZqRWtxSW82ZDI0ZWxJRmVuV3lwSV8wbWhHZ21IMkVIbWlaQ0NfSmJKSU1qNUtnMXN4MkpxZUFfcWRmX3d4QnpPNnNLNXNVRF9sbDNfck54bGdvOFZ6aGkxeHJVaEVEMEVNc3U2NHRRakxPU1h2ejhidk9CdEcxbUpZY3NnOURERlVjRmNkM1ZObzBJeThWOE41ZXFwM1QzdFMSBBoCCAAayAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCiAwgAEAAYACAAKgsKBDE4MDAVF61GQDK2AS9nb3RvP3VybD1DQUVTZlFIck96QVY5RkphUm52akVrcUlvNmQyNGVsSUZlbld5cElfMG1oR2dtSDJFSG1pWkNDX0piSklNajVLZzFzeDJKcWVBX3FkZl93eEJ6TzZzSzVzVURfbGwzX3JOeGxnbzhWemhpMXhyVWhFRDBFTXN1NjR0UWpMT1NYdno4YnZPQnRHMW1KWWNzZzlEREZVY0ZjZDNWTm8wSXk4VjhONWVxcDNUM3RTOiZTQkkgQ3VzdG9tZXIgQ2FyZSBOby4gPGI-MTgwMCAxMjM0PC9iPkKpATxiPjE4MDAgMTIzNDwvYj4uIFVwZGF0ZWQgb24gRnJpZGF5LCAyNSBTZXB0ZW1iZXIgMjAyNiAuLi4gQnkgQ29udGFjdCBOby46WW91IGNhbiBjYWxsIGN1c3RvbWVyIGNhcmUgYXQgPGI-MTgwMDEyMzQ8L2I-LCAxODAwMjEwMCwgMTgwMDExMjIxMSwgMTgwMDQyNTM4MDAsIDA4MC0yNjU5OTk5MC4iAhABSABYAGgA",
+      "source": "India Customer Care",
+      "read_more_link": "https://m.indiacustomercare.com/sbi-customer-care-helpline-numbers#:~:text=1800%201234,25%20September%202026%20%2D%2012%3A52pm&text=By%20Contact%20No.%3AYou%20can%20call,18001234%2C%2018002100%2C%201800112211%2C%2018004253800%2C%20080%2D26599990"
+     },
+     {
+      "position": 8,
+      "title": "\"Call us toll-free on 1800 1234 and get a wide range of ...",
+      "link": "https://x.com/TheOfficialSBI/status/1453268348658139137?lang=en",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESegHrOzAV1pqljQq_B43FxcoNvNbVnbQXd0d07e2UBMg-SYuRKQGcZR0pSOxXKU5DS7JNpXTa7XiqtQ-GZmnxVlO1-amWv9s5szYqbwgnTzc9nMU_rbrLw5Mvw2OXCCmLcu49OufvWR0BTQaRoHJ--AhVrXkcIy2UGLtY&ved=2ahUKEwjd4piHz6eXAxXktokEHQUvGIkQFnoECDMQAQ&uoh=1",
+      "displayed_link": "13.6K+ likes · 4 years ago",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png",
+      "snippet": "Call us toll-free on 1800 1234 and get a wide range of services on the go with SBI Contact Centre. What are you waiting for?",
+      "snippet_highlighted_words": [
+       "1800 1234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Call us toll-free on 1800 1234 and get a wide range of services on the go with SBI Contact Centre. What are you waiting for?",
+        "source_info_link": "https://x.com/TheOfficialSBI/status/1453268348658139137?lang=en",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVjFwcWxqUXFfQjQzRnhjb052TmJWbmJRWGQwZDA3ZTJVQk1nLVNZdVJLUUdjWlIwcFNPeFhLVTVEUzdKTnBYVGE3WGlxdFEtR1ptbnhWbE8xLWFtV3Y5czVzellxYndnblR6YzluTVVfcmJyTHc1TXZ3Mk9YQ0NtTGN1NDlPdWZ2V1IwQlRRYVJvSEotLUFoVnJYa2NJeTJVR0x0WRIEGgIIABrFAxICCAAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJ8DCAAQABgAIAAqCwoEMTgwMBUwWGJAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVjFwcWxqUXFfQjQzRnhjb052TmJWbmJRWGQwZDA3ZTJVQk1nLVNZdVJLUUdjWlIwcFNPeFhLVTVEUzdKTnBYVGE3WGlxdFEtR1ptbnhWbE8xLWFtV3Y5czVzellxYndnblR6YzluTVVfcmJyTHc1TXZ3Mk9YQ0NtTGN1NDlPdWZ2V1IwQlRRYVJvSEotLUFoVnJYa2NJeTJVR0x0WTpNU3RhdGUgQmFuayBvZiBJbmRpYSBvbiBYOiAmcXVvdDtDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCAuLi5CgwFDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCBnZXQgYSB3aWRlIHJhbmdlIG9mIHNlcnZpY2VzIG9uIHRoZSBnbyB3aXRoIFNCSSBDb250YWN0IENlbnRyZS4gV2hhdCBhcmUgeW91IHdhaXRpbmcgZm9yPyICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVjFwcWxqUXFfQjQzRnhjb052TmJWbmJRWGQwZDA3ZTJVQk1nLVNZdVJLUUdjWlIwcFNPeFhLVTVEUzdKTnBYVGE3WGlxdFEtR1ptbnhWbE8xLWFtV3Y5czVzellxYndnblR6YzluTVVfcmJyTHc1TXZ3Mk9YQ0NtTGN1NDlPdWZ2V1IwQlRRYVJvSEotLUFoVnJYa2NJeTJVR0x0WRIEGgIIABrFAxICCAAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJ8DCAAQABgAIAAqCwoEMTgwMBUwWGJAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVjFwcWxqUXFfQjQzRnhjb052TmJWbmJRWGQwZDA3ZTJVQk1nLVNZdVJLUUdjWlIwcFNPeFhLVTVEUzdKTnBYVGE3WGlxdFEtR1ptbnhWbE8xLWFtV3Y5czVzellxYndnblR6YzluTVVfcmJyTHc1TXZ3Mk9YQ0NtTGN1NDlPdWZ2V1IwQlRRYVJvSEotLUFoVnJYa2NJeTJVR0x0WTpNU3RhdGUgQmFuayBvZiBJbmRpYSBvbiBYOiAmcXVvdDtDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCAuLi5CgwFDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCBnZXQgYSB3aWRlIHJhbmdlIG9mIHNlcnZpY2VzIG9uIHRoZSBnbyB3aXRoIFNCSSBDb250YWN0IENlbnRyZS4gV2hhdCBhcmUgeW91IHdhaXRpbmcgZm9yPyICEAFIAFgAaAA",
+      "source": "X · TheOfficialSBI"
+     },
+     {
+      "position": 9,
+      "title": "Dial 18001234 or 18002100 and connect with the Contact ...",
+      "link": "https://www.youtube.com/watch?v=GS7DGTcpU44",
+      "displayed_link": "2.3K+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142573ae60591a97732f/images/-a8AN_NW7w59hrAjuAswZcNgW-m307VcCfGbulTMfUU.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "For any banking queries, remember, that we are just a call away. Dial 18001234 or 18002100 and connect with the Contact Centre today!",
+      "duration": "0:31",
+      "about_this_result": {
+       "source": {
+        "description": "For any banking queries, remember, that we are just a call away. Dial 18001234 or 18002100 and connect with the Contact Centre today!",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkY0SjhxOXlzS0dVcW1mNWFjcFJUS0tCMG42RmhaNTAzMFV1M3VJTHpzY2ZrZGYxWk56bHVEQXo1bXMxaXNjeTZSYTVnbUNYQjlTcW9nVmdETHg1NEJpc3RMWnZyd3NXTUdNNXAzbGV6dGJ5aGRRU242MG1BLU5hSGdJWTBrNk90aUESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVkY0SjhxOXlzS0dVcW1mNWFjcFJUS0tCMG42RmhaNTAzMFV1M3VJTHpzY2ZrZGYxWk56bHVEQXo1bXMxaXNjeTZSYTVnbUNYQjlTcW9nVmdETHg1NEJpc3RMWnZyd3NXTUdNNXAzbGV6dGJ5aGRRU242MG1BLU5hSGdJWTBrNk90aUESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTk1Dptuj5oc9evBZYfPaGhZMOrSSKq1OefNA",
+      "source": "YouTube · State Bank of India"
+     },
+     {
+      "position": 10,
+      "title": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ...",
+      "link": "https://www.instagram.com/reel/C0x6YG1s6nW/?hl=en",
+      "displayed_link": "540+ likes · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142573ae60591a97732f/images/-a8AN_NW7w59hrAjuAswZQ_qvQ8jP6mpqpya6X5cbIM.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp",
+      "snippet": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free banking with convenience from home. Connect with our Contact Centre today! #SBI # ...",
+      "duration": "0:45",
+      "about_this_result": {
+       "source": {
+        "description": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free banking with convenience from home. Connect with our Contact Centre today! #SBI # ...",
+        "icon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqABL2dvdG8_dXJsPUNBRVNiQUhyT3pBVk5nbGM4TlY5eGw2THd5Ulptd2pSM1o1UmNleEU1d29DV21ZMDhDSXdlZUdGdUR2SEhKQnhFRGpTUmE4V2o2VmZxTl9GcDk5MjNtQVhaRXlCWE9VN1d0U2dmNVNCZElueERlOGVRQkxzYUdMTzJ0QjllXzhYcnNiUjhzWW1ZWGRDNm42NGNvYldjURIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqABL2dvdG8_dXJsPUNBRVNiQUhyT3pBVk5nbGM4TlY5eGw2THd5Ulptd2pSM1o1UmNleEU1d29DV21ZMDhDSXdlZUdGdUR2SEhKQnhFRGpTUmE4V2o2VmZxTl9GcDk5MjNtQVhaRXlCWE9VN1d0U2dmNVNCZElueERlOGVRQkxzYUdMTzJ0QjllXzhYcnNiUjhzWW1ZWGRDNm42NGNvYldjURIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRs6jHbJinn4tPwO1JddgCFTfJwkDSs6__LGQ",
+      "source": "Instagram · theofficialsbi"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"1800 1234\" OR \"18001234\" OR \"1800-1234\"",
+     "total_results": 85800,
+     "time_taken_displayed": 0.19,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:43:01 UTC"
+   }
+  },
+  "3a003f380a3a30005a7c944524b70d6de627a4c68f4f93188ca09698c643cab9": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "site:sbi.co.in (\"1800 1234\" OR \"18001234\")"
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "Contact Centre - Customer Care - SBI Bank",
+      "link": "https://sbi.bank.in/web/customer-care/contact-centre",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESbwHrOzAVi7zx9ID2NrslsIAo51T6RNOW2yU2HWLIPluH3LQWGX3TD-jE-jTmfTM2p2wKz0Z4HCWe0XFuzIX-As7ycrKJ8ZLr9XYv2Ef3lh8N4O3aMAJrkC9Oy-lpqgFihTJXtdv8qGM8TBW9MkCptw&ved=2ahUKEwisnZSIz6eXAxUM78kDHbySN-IQFnoECB0QAQ&uoh=1",
+      "displayed_link": "https://sbi.bank.in › web › customer-care › contact-centre",
+      "favicon": "https://serpapi.com/images/i/UklGRrAAAABXRUJQVlA4IKQAAABQAwCdASoQABAAAsBMJbACdLoAfhW3wGQY9rhj1RKO4dmC4AD-9BNY09VLt7hVIUKxO6WtqVV7Nnbto00iEDFv-P8Z9StDNWopICOWMZuQdyYTb2TfwKJMKIkiCt8ico0_8e91ZsLiYEiz0TwzhOdbZcLhs_FHSBlhLf-_45jx9AeUzLIyeApa0ZCE-5AmdhDLpQv-VmM2jfeTiwN-I8chPIAAAA.webp",
+      "snippet": "18001234. 2. 18002100. 3. 1800112211. 4. 18004253800. 5. 1800111101. *Currently, the ... Call Contact Centre Toll-Free Number 1800 1234 from your mobile. Opt ...",
+      "snippet_highlighted_words": [
+       "18001234",
+       "1800 1234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "18001234. 2. 18002100. 3. 1800112211. 4. 18004253800. 5. 1800111101. *Currently, the ... Call Contact Centre Toll-Free Number 1800 1234 from your mobile. Opt ...",
+        "source_info_link": "https://sbi.bank.in/web/customer-care/contact-centre",
+        "icon": "https://serpapi.com/images/i/UklGRrAAAABXRUJQVlA4IKQAAABQAwCdASoQABAAAsBMJbACdLoAfhW3wGQY9rhj1RKO4dmC4AD-9BNY09VLt7hVIUKxO6WtqVV7Nnbto00iEDFv-P8Z9StDNWopICOWMZuQdyYTb2TfwKJMKIkiCt8ico0_8e91ZsLiYEiz0TwzhOdbZcLhs_FHSBlhLf-_45jx9AeUzLIyeApa0ZCE-5AmdhDLpQv-VmM2jfeTiwN-I8chPIAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVmk3eng5SUQyTnJzbHNJQW81MVQ2Uk5PVzJ5VTJIV0xJUGx1SDNMUVdHWDNURC1qRS1qVG1mVE0ycDJ3S3owWjRIQ1dlMFhGdXpJWC1Bczd5Y3JLSjhaTHI5WFl2MkVmM2xoOE40TzNhTUFKcmtDOU95LWxwcWdGaWhUSlh0ZHY4cUdNOFRCVzlNa0NwdHcSBBoCCAAaxAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCeAwgAEAAYACAAKgsKBDE4MDAVHsr4PjKkAS9nb3RvP3VybD1DQUVTYndIck96QVZpN3p4OUlEMk5yc2xzSUFvNTFUNlJOT1cyeVUySFdMSVBsdUgzTFFXR1gzVEQtakUtalRtZlRNMnAyd0t6MFo0SENXZTBYRnV6SVgtQXM3eWNyS0o4WkxyOVhZdjJFZjNsaDhONE8zYU1BSnJrQzlPeS1scHFnRmloVEpYdGR2OHFHTThUQlc5TWtDcHR3OilDb250YWN0IENlbnRyZSAtIEN1c3RvbWVyIENhcmUgLSBTQkkgQmFua0K0ATxiPjE4MDAxMjM0PC9iPi4gMi4gMTgwMDIxMDAuIDMuIDE4MDAxMTIyMTEuIDQuIDE4MDA0MjUzODAwLiA1LiAxODAwMTExMTAxLiAqQ3VycmVudGx5LCB0aGUgLi4uIENhbGwgQ29udGFjdCBDZW50cmUgVG9sbC1GcmVlIE51bWJlciA8Yj4xODAwIDEyMzQ8L2I-IGZyb20geW91ciBtb2JpbGUuIE9wdCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQBL2dvdG8_dXJsPUNBRVNid0hyT3pBVmk3eng5SUQyTnJzbHNJQW81MVQ2Uk5PVzJ5VTJIV0xJUGx1SDNMUVdHWDNURC1qRS1qVG1mVE0ycDJ3S3owWjRIQ1dlMFhGdXpJWC1Bczd5Y3JLSjhaTHI5WFl2MkVmM2xoOE40TzNhTUFKcmtDOU95LWxwcWdGaWhUSlh0ZHY4cUdNOFRCVzlNa0NwdHcSBBoCCAAaxAMSAggAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCeAwgAEAAYACAAKgsKBDE4MDAVHsr4PjKkAS9nb3RvP3VybD1DQUVTYndIck96QVZpN3p4OUlEMk5yc2xzSUFvNTFUNlJOT1cyeVUySFdMSVBsdUgzTFFXR1gzVEQtakUtalRtZlRNMnAyd0t6MFo0SENXZTBYRnV6SVgtQXM3eWNyS0o4WkxyOVhZdjJFZjNsaDhONE8zYU1BSnJrQzlPeS1scHFnRmloVEpYdGR2OHFHTThUQlc5TWtDcHR3OilDb250YWN0IENlbnRyZSAtIEN1c3RvbWVyIENhcmUgLSBTQkkgQmFua0K0ATxiPjE4MDAxMjM0PC9iPi4gMi4gMTgwMDIxMDAuIDMuIDE4MDAxMTIyMTEuIDQuIDE4MDA0MjUzODAwLiA1LiAxODAwMTExMTAxLiAqQ3VycmVudGx5LCB0aGUgLi4uIENhbGwgQ29udGFjdCBDZW50cmUgVG9sbC1GcmVlIE51bWJlciA8Yj4xODAwIDEyMzQ8L2I-IGZyb20geW91ciBtb2JpbGUuIE9wdCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "sbi.bank.in",
+      "read_more_link": "https://sbi.bank.in/web/customer-care/contact-centre#:~:text=18001234,*Currently%2C%20the&text=Last%20Updated%20On%20%3A%20Wednesday%2C"
+     },
+     {
+      "position": 2,
+      "title": "Just call on 1800 1234 or 1800 2100, and get an update on the ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/videos/just-call-on-1800-1234-or-1800-2100-and-get-an-update-on-the-dispatch-status-of-/983631263464643/",
+      "displayed_link": "520+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0EqisBljVMcOIHRRdYZligEYg.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Just call on 1800 1234 or 1800 2100, and get an update on the dispatch status of your SBI Debit Card. #SBI #TheBankerToEveryIndian # ...",
+      "duration": "0:30",
+      "about_this_result": {
+       "source": {
+        "description": "Just call on 1800 1234 or 1800 2100, and get an update on the dispatch status of your SBI Debit Card. #SBI #TheBankerToEveryIndian # ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZUanh1VG9KaTZzNFk1YTNtcVNweXJMc1Y3UnVvUVRIb2dQSnpudF9OWXU2SVVYNGJzVTE5RnZxS3EybDlxXzJtc0psaWdXTk52WHJWVFE0ODV2MS0yeXlZR0JUR0NZdWgyM0pqc1VqaUwyMXJWVG9lVngtNjRTcGUxaHJKNmt1WEx0TUVtSU1oMUtxZHdyZFRVT0ZDRUxBanVUZ2FUdjFsbm9wbGptNnNHZUx5U0t3YzNGT0hIaDlkYi1KdUlvSzN1azVkUmhJMjRtV2RaZy1qOHlRN0ZGdmlreXU2c045TmhDSmt2anJ1WHp4T3ktNFdMaTN6ejJyZUJaWExTQ083RG9iNkE2WGNsbjZpURIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZUanh1VG9KaTZzNFk1YTNtcVNweXJMc1Y3UnVvUVRIb2dQSnpudF9OWXU2SVVYNGJzVTE5RnZxS3EybDlxXzJtc0psaWdXTk52WHJWVFE0ODV2MS0yeXlZR0JUR0NZdWgyM0pqc1VqaUwyMXJWVG9lVngtNjRTcGUxaHJKNmt1WEx0TUVtSU1oMUtxZHdyZFRVT0ZDRUxBanVUZ2FUdjFsbm9wbGptNnNHZUx5U0t3YzNGT0hIaDlkYi1KdUlvSzN1azVkUmhJMjRtV2RaZy1qOHlRN0ZGdmlreXU2c045TmhDSmt2anJ1WHp4T3ktNFdMaTN6ejJyZUJaWExTQ083RG9iNkE2WGNsbjZpURIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTiAgDeSeBLjymfTNvjFwfrV8cpTnJEIeuFlw",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 3,
+      "title": "Tune in with our contact centre and dial 18001234 or ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/posts/tune-in-with-our-contact-centre-and-dial-18001234-or-18002100-for-banking-at-you/830509032436847/",
+      "displayed_link": "280+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0EqqOniZAQ5MwFcFzVy58rbXc.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+      "duration": "0:56",
+      "about_this_result": {
+       "source": {
+        "description": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZkZlljUUs4SEw5RElaZTdXdFN0ZkV1WE12dEdQSEV4RWNsWndvZkhtNHhwX2JERnRCbUpNcnRBbEh1OXUtY2R0U29nMzgxMC01VTMwYXpjLVNBRmNtMHh0RjJ4Q3BXemU0WkY1MjhHNzc2Tm00TWllSFl6VlFVLWE3eXdxNFpXd3ZmcURYdWxfVXZuVkZUQTd1MERPWWhyUEVBTGVLZ1h0dDFIT3JUUDY0SS0xX3dxMmNrQk94bFJKa2JkZzFoa0cyWnZOQlVqNEFQVkhmWXFIeDdDbFpJaWh5VkpyTHNuZFRuVDVKOGU2SXAtM09BNU8yUVg2NzNrc05zWG51eEZhRzJsX2xNRS12bFQSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZkZlljUUs4SEw5RElaZTdXdFN0ZkV1WE12dEdQSEV4RWNsWndvZkhtNHhwX2JERnRCbUpNcnRBbEh1OXUtY2R0U29nMzgxMC01VTMwYXpjLVNBRmNtMHh0RjJ4Q3BXemU0WkY1MjhHNzc2Tm00TWllSFl6VlFVLWE3eXdxNFpXd3ZmcURYdWxfVXZuVkZUQTd1MERPWWhyUEVBTGVLZ1h0dDFIT3JUUDY0SS0xX3dxMmNrQk94bFJKa2JkZzFoa0cyWnZOQlVqNEFQVkhmWXFIeDdDbFpJaWh5VkpyTHNuZFRuVDVKOGU2SXAtM09BNU8yUVg2NzNrc05zWG51eEZhRzJsX2xNRS12bFQSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcSIFsgAE32KtDAFxhcPz-uoyT7qJJgTYlsL-Q",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 4,
+      "title": "Tune in with our contact centre and dial 18001234 or ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/videos/tune-in-with-our-contact-centre-and-dial-18001234-or-18002100-for-banking-at-you/2102342866831236/",
+      "displayed_link": "280+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0EqjHmzIrb9ltY3Uf1ziSks1Q.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+      "duration": "0:56",
+      "about_this_result": {
+       "source": {
+        "description": "Tune in with our contact centre and dial 18001234 or 18002100 for banking at your fingertips ... Calling 1800 1234 or 1800 2100 is your mantra for ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqUCL2dvdG8_dXJsPUNBRVN6d0VCNnpzd0ZUZDZXVmJ0Q0RNOFp6TWVLRnlzY2FwWE9LNnduOGRHZXUtZ215bmlzVldMWXB6T3hkc3loTmVacnZqOU9yWmQxZEJ3UF8teE1uVFgxQVdOMkwtaDZEOXk5eG5aMnZUdE00d3BlY3Npd1pKOHYtNFJPNm1zUVRFR2ZuR2VYTUJPWi1kenZzOXNNNGdfN3pib1pLWDVHNEFjb0U2VkRETW9LNzRjcHY0SHBxMnZNS09kcnc2WVoySzhJVmdnQ0h3YWowZzRWOW50TFpkUzFXTDdsMkxWUHZFWmtzUDZPLXczb2Y3amZfZVp5SVhVcElldV9jYlI3c1lDbkI1OVhZYjhQM1AxSnZqV0dCZHA1REUSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqUCL2dvdG8_dXJsPUNBRVN6d0VCNnpzd0ZUZDZXVmJ0Q0RNOFp6TWVLRnlzY2FwWE9LNnduOGRHZXUtZ215bmlzVldMWXB6T3hkc3loTmVacnZqOU9yWmQxZEJ3UF8teE1uVFgxQVdOMkwtaDZEOXk5eG5aMnZUdE00d3BlY3Npd1pKOHYtNFJPNm1zUVRFR2ZuR2VYTUJPWi1kenZzOXNNNGdfN3pib1pLWDVHNEFjb0U2VkRETW9LNzRjcHY0SHBxMnZNS09kcnc2WVoySzhJVmdnQ0h3YWowZzRWOW50TFpkUzFXTDdsMkxWUHZFWmtzUDZPLXczb2Y3amZfZVp5SVhVcElldV9jYlI3c1lDbkI1OVhZYjhQM1AxSnZqV0dCZHA1REUSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcSIFsgAE32KtDAFxhcPz-uoyT7qJJgTYlsL-Q",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 5,
+      "title": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/posts/calling-1800-1234-or-1800-2100-is-your-mantra-for-hassle-free-banking-with-conve/773802584774159/",
+      "displayed_link": "3.3K+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0EqjWpv9Eb1agA6BK_HDA76Rg.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free banking with convenience from home ... Call 18001234 or 18002100 for quick ...",
+      "duration": "0:46",
+      "about_this_result": {
+       "source": {
+        "description": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free banking with convenience from home ... Call 18001234 or 18002100 for quick ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZTMFg4SElVRENmZGJZc3VVaGlZOElEOTlEWVM4TmNVMGtlRTJtNnVUZEVfZDhKOXk5WktvaXFZdHN4WjUyZDZTU2pGc3RCZGg2ampfN0Njb1plalBtc1lMeDhEeVVzUGttZnpkcVRmVVowdnNxbVp3M29NaWFBTXd5Xy02cWJZZlJTWFJNaG15cDlUV01RekZtNE80WGIza3owSXN2X3A4ckNRbGpuUV9HZUNKalVmY2M0UnpkU25jXzNxRXYwR25mb3FQTzlFRkZfSGxaMmVHMkpETFpfa1hLZ0lqTXZFMEhJVy10d2NIUjZKaS1NTDItT01NelF0M2l5ZTgtcVpBbWE2Njg2LWNwWmUSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqICL2dvdG8_dXJsPUNBRVN6UUVCNnpzd0ZTMFg4SElVRENmZGJZc3VVaGlZOElEOTlEWVM4TmNVMGtlRTJtNnVUZEVfZDhKOXk5WktvaXFZdHN4WjUyZDZTU2pGc3RCZGg2ampfN0Njb1plalBtc1lMeDhEeVVzUGttZnpkcVRmVVowdnNxbVp3M29NaWFBTXd5Xy02cWJZZlJTWFJNaG15cDlUV01RekZtNE80WGIza3owSXN2X3A4ckNRbGpuUV9HZUNKalVmY2M0UnpkU25jXzNxRXYwR25mb3FQTzlFRkZfSGxaMmVHMkpETFpfa1hLZ0lqTXZFMEhJVy10d2NIUjZKaS1NTDItT01NelF0M2l5ZTgtcVpBbWE2Njg2LWNwWmUSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRaV7UGKVf-6seqhrLH_R2eveLEDcyeR8C52g",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 6,
+      "title": "Connect with our toll-free numbers 1800 1234 or 1800 2100!",
+      "link": "https://www.youtube.com/watch?v=ZnAOYuBslxI",
+      "displayed_link": "16.1L+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0Eqja87moAK-VUrIm_HU4efao.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "Eager to receive your new ATM/Debit Card? You can check the dispatch status of your card by calling 1800 1234 or 1800 2100, and we will let you",
+      "duration": "0:53",
+      "about_this_result": {
+       "source": {
+        "description": "Eager to receive your new ATM/Debit Card? You can check the dispatch status of your card by calling 1800 1234 or 1800 2100, and we will let you",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlI5MUliYzhhOGQ3VnVTQmVBbTR2X0pwQXV2Ylp0ek1LTDFzUjRNU1VtQm5qclRCS210SC1zeUhaV0o2emd3OGJUb1JrMmM3MUF1NVhib3hhZmZBWVVsZVZLWTBBeUd2NE9CTDU3djVndllFTEZfMmQ4dm5mZWkwYXk4b2lKQXFJNlESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlI5MUliYzhhOGQ3VnVTQmVBbTR2X0pwQXV2Ylp0ek1LTDFzUjRNU1VtQm5qclRCS210SC1zeUhaV0o2emd3OGJUb1JrMmM3MUF1NVhib3hhZmZBWVVsZVZLWTBBeUd2NE9CTDU3djVndllFTEZfMmQ4dm5mZWkwYXk4b2lKQXFJNlESFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQoAimt191B3d6ZyVTdmv04eZYkTkPoOGDgLg",
+      "source": "YouTube · State Bank of India"
+     },
+     {
+      "position": 7,
+      "title": "State Bank of India",
+      "link": "https://www.facebook.com/StateBankOfIndia/posts/one-call-multiple-solutionsreliable-assistance-just-a-call-awayfrom-cheque-books/1208952501259163/",
+      "displayed_link": "11K+ reactions · 1 year ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0Equ-Q3ttFr23lOOQuy6O9gG4.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ... Call 18001234 or 18002100 for quick assistance. We're here to help ...",
+      "duration": "0:13",
+      "about_this_result": {
+       "source": {
+        "description": "Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ... Call 18001234 or 18002100 for quick assistance. We're here to help ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZlYWc2YmNWdjNvNGZTS2ZZY3NZUi1qa3BNbDZBYkRtUjVpVS11NU1sVFA3QTBENDZxamxfUnBUaTZoMDQ5RDdWVHpMazNYRGRBZEp3VTlaNDkwTUo0bFZkTkJqTTl1SzNBVXB6bkZiYXh1OGFndlV1SW5VWS0zSUg2ZHlSLWgxRGxseDFzamxoMUZpZ1ZxNGhuZGRXRUJZZ0FwTlc1Nkp2bUpoMk9wcC03cENJdkVxVmJZRDB1RVQtQ3l2dHFjdUVndl9HZVNQLU1vSElvb1NEQk9Ia3N4SmVEVUpQeWNuSUNjR28zZGRrUXFWY0xvN1VINEN4MUNuTHRjRkRYcHRnTjNfaTZJMEJlNXlEdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CqQCL2dvdG8_dXJsPUNBRVN6Z0VCNnpzd0ZlYWc2YmNWdjNvNGZTS2ZZY3NZUi1qa3BNbDZBYkRtUjVpVS11NU1sVFA3QTBENDZxamxfUnBUaTZoMDQ5RDdWVHpMazNYRGRBZEp3VTlaNDkwTUo0bFZkTkJqTTl1SzNBVXB6bkZiYXh1OGFndlV1SW5VWS0zSUg2ZHlSLWgxRGxseDFzamxoMUZpZ1ZxNGhuZGRXRUJZZ0FwTlc1Nkp2bUpoMk9wcC03cENJdkVxVmJZRDB1RVQtQ3l2dHFjdUVndl9HZVNQLU1vSElvb1NEQk9Ia3N4SmVEVUpQeWNuSUNjR28zZGRrUXFWY0xvN1VINEN4MUNuTHRjRkRYcHRnTjNfaTZJMEJlNXlEdxIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 8,
+      "title": "For any banking queries, remember, that we ...",
+      "link": "https://www.facebook.com/StateBankOfIndia/videos/dial-18001234-or-18002100-and-connect-with-the-contact-centre-today/1136301084217394/",
+      "displayed_link": "340+ reactions · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0EqtoVfsJC6OCMFFMZZ5V-Ack.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Dial 18001234 or 18002100 and connect with the Contact Centre today! ... Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ...",
+      "duration": "0:31",
+      "about_this_result": {
+       "source": {
+        "description": "Dial 18001234 or 18002100 and connect with the Contact Centre today! ... Calling 1800 1234 or 1800 2100 is your mantra for hassle-free ...",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZjZUJ6aV9TZzBoc1dxMGtWd2FOWEJtX1FLNC1Yck9YTWwyUF9xQTBzYWNjSzBna0RRMUFIaG5rOEhvQlMtTTVWcDFPZWVoazNnN1EweFMwRHRBTzFEMExlc2hob1VCTnFjWlJHYlpsSDJCa1dVMG1qZ1JPdlBaZnR3Rml3blRJWnFBbk1YOHVqMmhnTUJJZ2FvVnVJNW15QVZGNWdXeTNKVmZSY05EUEhnZ2pBVjVhaW5XYTBTOFY2MDVYczFmbWhuVnYwdU1EdmZ5Y1ZheF9jMmM2VGh2RDhPR1ZNWW9zZllFR2x0QkNWZHhwdFljempFYThWSzNFZlV4eFVnEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGhYSABoAIgAqADIAOgBCAEoAWgByAHoAIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpQCL2dvdG8_dXJsPUNBRVN3Z0VCNnpzd0ZjZUJ6aV9TZzBoc1dxMGtWd2FOWEJtX1FLNC1Yck9YTWwyUF9xQTBzYWNjSzBna0RRMUFIaG5rOEhvQlMtTTVWcDFPZWVoazNnN1EweFMwRHRBTzFEMExlc2hob1VCTnFjWlJHYlpsSDJCa1dVMG1qZ1JPdlBaZnR3Rml3blRJWnFBbk1YOHVqMmhnTUJJZ2FvVnVJNW15QVZGNWdXeTNKVmZSY05EUEhnZ2pBVjVhaW5XYTBTOFY2MDVYczFmbWhuVnYwdU1EdmZ5Y1ZheF9jMmM2VGh2RDhPR1ZNWW9zZllFR2x0QkNWZHhwdFljempFYThWSzNFZlV4eFVnEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGhYSABoAIgAqADIAOgBCAEoAWgByAHoAIgIQAUgAWABoAA",
+      "source": "Facebook · State Bank of India"
+     },
+     {
+      "position": 9,
+      "title": "Dial 18001234 or 18002100 and connect with the Contact ...",
+      "link": "https://www.youtube.com/watch?v=GS7DGTcpU44",
+      "displayed_link": "2.3K+ views · 2 years ago",
+      "thumbnail": "https://serpapi.com/searches/6ac6142700a7fb1d1f53a48f/images/f3WykHPWBXWhSKkrjZ0Eqq5FdrY5T1bPlrsNMiwC3lk.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "For any banking queries, remember, that we are just a call away. Dial 18001234 or 18002100 and connect with the Contact Centre today!",
+      "duration": "0:31",
+      "about_this_result": {
+       "source": {
+        "description": "For any banking queries, remember, that we are just a call away. Dial 18001234 or 18002100 and connect with the Contact Centre today!",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVndBTlJkd1B3UWJQTGppbklpSHdFMTNVblM1SXRyUDRMaGc5SXZ3aGh0M1NudHhHMlJodW5zMzMwZ1Zock5GNHBqVVpkazBmNm1hSE04b3NnM0VDTmNRVUhELS02aXZTYjQtQ05qZnR0RW1BM3lEVjVVNHp6WjdLTk1uU3JXUkNhUHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVndBTlJkd1B3UWJQTGppbklpSHdFMTNVblM1SXRyUDRMaGc5SXZ3aGh0M1NudHhHMlJodW5zMzMwZ1Zock5GNHBqVVpkazBmNm1hSE04b3NnM0VDTmNRVUhELS02aXZTYjQtQ05qZnR0RW1BM3lEVjVVNHp6WjdLTk1uU3JXUkNhUHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTk1Dptuj5oc9evBZYfPaGhZMOrSSKq1OefNA",
+      "source": "YouTube · State Bank of India"
+     },
+     {
+      "position": 10,
+      "title": "\"Call us toll-free on 1800 1234 and get a wide range of ...",
+      "link": "https://x.com/TheOfficialSBI/status/1453268348658139137?lang=en",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESegHrOzAVDRp2ntAGtkLahHFSO0p9TcO3qgttKMRvvb9xRAEaHZa2TvHgIrX5zSyH4XoOrlZKmrm5yO-6idAipHm5iLsNQVnnxAM9T6lIuo76q97KD61BcTmejSUfIOE0QQWi_ORK9z9UNqhQrOBdkzlDCcyflLSRSj5-&ved=2ahUKEwisnZSIz6eXAxUM78kDHbySN-IQFnoECCkQAQ&uoh=1",
+      "displayed_link": "13.6K+ likes · 4 years ago",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png",
+      "snippet": "Call us toll-free on 1800 1234 and get a wide range of services on the go with SBI Contact Centre. What are you waiting for?",
+      "snippet_highlighted_words": [
+       "1800 1234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "Call us toll-free on 1800 1234 and get a wide range of services on the go with SBI Contact Centre. What are you waiting for?",
+        "source_info_link": "https://x.com/TheOfficialSBI/status/1453268348658139137?lang=en",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAqUlEQVR4AdXQEQwCUQDG8b87pFkcRmGuyfFpFB-HuZ20_DA4yndLHj17dHJ08G_V1qp7vvWjT77t28cfKlIIMS54KmPa8uli35l4WGvNtyQ7G2CmF37M7WncQe-NidKW5CyYyDhboY5kRZelLshz5OyevK0dySVZNz1iT07r0LkpbJmqdcUoJyt-VVrAxkB0NRnzKhysGQfevt--mgavfOpi844hhFjyf-4xHWjgrPr73gAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkRScDJudEFHdGtMYWhIRlNPMHA5VGNPM3FndHRLTVJ2dmI5eFJBRWFIWmEyVHZIZ0lyWDV6U3lINFhvT3JsWkttcm01eU8tNmlkQWlwSG01aUxzTlFWbm54QU05VDZsSXVvNzZxOTdLRDYxQmNUbWVqU1VmSU9FMFFRV2lfT1JLOXo5VU5xaFFyT0Jka3psRENjeWZsTFNSU2o1LRIEGgIIABrFAxICCAAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJ8DCAAQABgAIAAqCwoEMTgwMBUwWGJAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkRScDJudEFHdGtMYWhIRlNPMHA5VGNPM3FndHRLTVJ2dmI5eFJBRWFIWmEyVHZIZ0lyWDV6U3lINFhvT3JsWkttcm01eU8tNmlkQWlwSG01aUxzTlFWbm54QU05VDZsSXVvNzZxOTdLRDYxQmNUbWVqU1VmSU9FMFFRV2lfT1JLOXo5VU5xaFFyT0Jka3psRENjeWZsTFNSU2o1LTpNU3RhdGUgQmFuayBvZiBJbmRpYSBvbiBYOiAmcXVvdDtDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCAuLi5CgwFDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCBnZXQgYSB3aWRlIHJhbmdlIG9mIHNlcnZpY2VzIG9uIHRoZSBnbyB3aXRoIFNCSSBDb250YWN0IENlbnRyZS4gV2hhdCBhcmUgeW91IHdhaXRpbmcgZm9yPyICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkRScDJudEFHdGtMYWhIRlNPMHA5VGNPM3FndHRLTVJ2dmI5eFJBRWFIWmEyVHZIZ0lyWDV6U3lINFhvT3JsWkttcm01eU8tNmlkQWlwSG01aUxzTlFWbm54QU05VDZsSXVvNzZxOTdLRDYxQmNUbWVqU1VmSU9FMFFRV2lfT1JLOXo5VU5xaFFyT0Jka3psRENjeWZsTFNSU2o1LRIEGgIIABrFAxICCAAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJ8DCAAQABgAIAAqCwoEMTgwMBUwWGJAMrIBL2dvdG8_dXJsPUNBRVNlZ0hyT3pBVkRScDJudEFHdGtMYWhIRlNPMHA5VGNPM3FndHRLTVJ2dmI5eFJBRWFIWmEyVHZIZ0lyWDV6U3lINFhvT3JsWkttcm01eU8tNmlkQWlwSG01aUxzTlFWbm54QU05VDZsSXVvNzZxOTdLRDYxQmNUbWVqU1VmSU9FMFFRV2lfT1JLOXo5VU5xaFFyT0Jka3psRENjeWZsTFNSU2o1LTpNU3RhdGUgQmFuayBvZiBJbmRpYSBvbiBYOiAmcXVvdDtDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCAuLi5CgwFDYWxsIHVzIHRvbGwtZnJlZSBvbiA8Yj4xODAwIDEyMzQ8L2I-IGFuZCBnZXQgYSB3aWRlIHJhbmdlIG9mIHNlcnZpY2VzIG9uIHRoZSBnbyB3aXRoIFNCSSBDb250YWN0IENlbnRyZS4gV2hhdCBhcmUgeW91IHdhaXRpbmcgZm9yPyICEAFIAFgAaAA",
+      "source": "X · TheOfficialSBI"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "site:sbi.co.in (\"1800 1234\" OR \"18001234\")",
+     "total_results": 88100,
+     "time_taken_displayed": 0.17,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:43:03 UTC"
+   }
+  }
+ }
+}

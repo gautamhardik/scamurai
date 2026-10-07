@@ -15,7 +15,7 @@ _URL = re.compile(
     re.IGNORECASE,
 )
 _EMAIL = re.compile(r"\b[a-z0-9._%+-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,24}\b", re.IGNORECASE)
-_UPI = re.compile(r"\b[a-z0-9._-]{2,64}@[a-z]{2,20}\b(?![.@])", re.IGNORECASE)
+_UPI = re.compile(r"\b[a-z0-9._-]{2,64}@[a-z]{2,20}\b(?!\.[a-z0-9])(?!@)", re.IGNORECASE)
 _TOLL_FREE = re.compile(r"\b1(?:800|860)[\s-]?\d{2,4}[\s-]?\d{2,4}(?:[\s-]?\d{2,4})?\b")
 _AMOUNT = re.compile(
     r"(?:₹|\brs\.?|\binr\b|rupees?)\s*([\d,]+(?:\.\d{1,2})?)"

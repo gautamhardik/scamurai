@@ -75,7 +75,7 @@ def resolve_official(ctx: Ctx) -> Official | None:
         off = Official(org_def.name, domains.official_domains_for(org_def), 0.95, [ref.id], source="curated")
         ctx.book.mark_official(off.domains)
         return off
-    for spec, outcome in ctx.ok("org_lookup"):
+    for spec, _outcome in ctx.ok("org_lookup"):
         items = ctx.book.for_search(spec.id)
         kg = next((i for i in items if i.kind == "knowledge_graph" and i.data.get("website")), None)
         if kg and fuzz.token_set_ratio(kg.title.lower(), org.value.lower()) >= 70:
@@ -217,7 +217,7 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
             out.append(make("phone_on_official_site", confidence=0.85, evidence_ids=off.evidence_ids,
                             entity_ids=[phone.id], phone=phone.attrs.get("display"), official=off.domains[0]))
             confirmed.add(phone.id)
-    for spec, outcome in ctx.ok("official_phone_check"):
+    for spec, _outcome in ctx.ok("official_phone_check"):
         pid = spec.entity_ids[0]
         phone = next(e for e in g.entities if e.id == pid)
         if pid in confirmed:
@@ -250,7 +250,7 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
     # Reputation: same result must contain the number AND a scam word, on another site.
     # Official numbers get quoted in fraud warnings ("report fraud at 1800…"), so once a number
     # is confirmed on the official site it takes 3+ independent reports to flag it.
-    for spec, outcome in ctx.ok("phone_reputation"):
+    for spec, _outcome in ctx.ok("phone_reputation"):
         pid = spec.entity_ids[0]
         phone = next(e for e in g.entities if e.id == pid)
         items = [i for i in book.for_search(spec.id)
@@ -269,7 +269,7 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
 def domain_signals(ctx: Ctx) -> list[Signal]:
     g, book = ctx.graph, ctx.book
     out: list[Signal] = []
-    for spec, outcome in ctx.ok("domain_reputation"):
+    for spec, _outcome in ctx.ok("domain_reputation"):
         eid = spec.entity_ids[0]
         ent = next(e for e in g.entities if e.id == eid)
         reg = ent.attrs.get("registrable")
@@ -293,7 +293,7 @@ def pattern_signals(ctx: Ctx) -> list[Signal]:
     g, book = ctx.graph, ctx.book
     out: list[Signal] = []
     keywords = SCHEME_NEWS_KEYWORDS.get(g.scheme, [])
-    for spec, outcome in ctx.ok("pattern_news"):
+    for spec, _outcome in ctx.ok("pattern_news"):
         items = book.for_search(spec.id)
         today = date.today()
         relevant = []
@@ -410,7 +410,7 @@ def job_signals(ctx: Ctx) -> list[Signal]:
         return out
     company = g.first("company") or g.first("org")
     role = g.first("job_role")
-    for spec, outcome in ctx.ok("job_listing"):
+    for spec, _outcome in ctx.ok("job_listing"):
         items = book.for_search(spec.id)
         matches = [i for i in items if company and fuzz.token_set_ratio(company.value.lower(),
                                                                         (i.data.get("company") or "").lower()) >= 85]
@@ -428,7 +428,7 @@ def job_signals(ctx: Ctx) -> list[Signal]:
                             role=role.value if role else "", query=spec.params.get("q"), n_results=len(items)))
     # Company with no web presence at all (only for non-curated names).
     if company and not company.attrs.get("curated") and ctx.official is None:
-        for spec, outcome in ctx.ok("org_lookup"):
+        for spec, _outcome in ctx.ok("org_lookup"):
             items = book.for_search(spec.id)
             if not any(company.id in i.matched_entities and i.source_class != "complaint_forum" for i in items):
                 span = book.add_message_span(_context(g.haystack, company.raw), [company.id])
@@ -441,7 +441,7 @@ def place_signals(ctx: Ctx) -> list[Signal]:
     g, book = ctx.graph, ctx.book
     out: list[Signal] = []
     company = g.first("company") or g.first("org")
-    for spec, outcome in ctx.ok("address_check"):
+    for spec, _outcome in ctx.ok("address_check"):
         address = next(e for e in g.entities if e.id == spec.entity_ids[0])
         places = book.for_search(spec.id)
         if company:

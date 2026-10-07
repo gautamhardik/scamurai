@@ -1,0 +1,1551 @@
+{
+ "scenario": "customer_care_amazon",
+ "recorded_at": "2026-10-07T15:24:39+05:30",
+ "input_hash": "6a530274d01425d3c9e6c1f81fe434cbff0bf2a37f63ff476d487e43ab6f0517",
+ "llm": {
+  "data": {
+   "language": "en",
+   "ocr_text": "",
+   "content_kind": "sms",
+   "scheme": "customer_care",
+   "claimed_org": {
+    "name": "Amazon",
+    "category": "ecommerce"
+   },
+   "sender": {
+    "name": null,
+    "email": null,
+    "phone": null
+   },
+   "phones": [
+    "9876501234"
+   ],
+   "urls": [],
+   "emails": [],
+   "upi_ids": [],
+   "amounts": [],
+   "product": {
+    "name": null,
+    "brand": null,
+    "claimed_price_text": null
+   },
+   "job": {
+    "company": null,
+    "role": null,
+    "salary_text": null,
+    "location": null,
+    "fee_requested": false
+   },
+   "address": null,
+   "app_name": null,
+   "requested_actions": [
+    {
+     "type": "call",
+     "quote": "Call now for the refund of your cancelled order"
+    }
+   ],
+   "pressure": [
+    {
+     "type": "urgency",
+     "quote": "refund will expire today"
+    }
+   ],
+   "ai_directed_text": []
+  },
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+ },
+ "expected": {
+  "level": "HIGH_RISK",
+  "flags": [
+   "helpline_is_mobile",
+   "known_scam_pattern",
+   "official_contact_mismatch",
+   "org_impersonation_reports",
+   "threat_or_urgency"
+  ]
+ },
+ "searches": {
+  "3ff24738f89e7f68d6bad808c46a28fb1740e652da81b2b2631e8fac29ca4465": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "\"9876501234\" OR \"98765 01234\" OR \"+91 98765 01234\""
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "The number 9876501234 can be easily read by placing ...",
+      "link": "https://askfilo.com/user-question-answers-smart-solutions/the-number-9876501234-can-be-easily-read-by-placing-commas-3334393136303133",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESwQEB6zswFRANLqJiw_VxFvBT7B-oNXFRb9hJsfm35C36zYchgD8AuDXtgjkC4GNGzN-KwTytGxmbrP9Z8djFdDAF1WnNmclc5OnTwRT2RFhC0NA0BMoMumBN2Y0IjNWdcAJfRr-TUKPgsaZ92_oa4fm0cBRlisLPz2K-J_-3VJzmE7k4r4-3_OEUULd_nXc_031Peqp5RXl7bW0nQcvX9uNGlFiPOdL_nYtVdrgb_E2qdd1mipPLtIQbiWTapS_KVlQC&ved=2ahUKEwiU5dPUzqeXAxUlrYkEHdVfPBcQFnoECBYQAQ&uoh=1",
+      "displayed_link": "https://askfilo.com › ICSE › Smart Solutions",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png",
+      "date": "24 May 2025",
+      "snippet": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234→9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 crore ...",
+      "snippet_highlighted_words": [
+       "9876501234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234→9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 crore ...",
+        "source_info_link": "https://askfilo.com/user-question-answers-smart-solutions/the-number-9876501234-can-be-easily-read-by-placing-commas-3334393136303133",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSQU5McUppd19WeEZ2QlQ3Qi1vTlhGUmI5aEpzZm0zNUMzNnpZY2hnRDhBdURYdGdqa0M0R05Hek4tS3dUeXRHeG1iclA5WjhkakZkREFGMVduTm1jbGM1T25Ud1JUMlJGaEMwTkEwQk1vTXVtQk4yWTBJak5XZGNBSmZSci1UVUtQZ3NhWjkyX29hNGZtMGNCUmxpc0xQejJLLUpfLTNWSnptRTdrNHI0LTNfT0VVVUxkX25YY18wMzFQZXFwNVJYbDdiVzBuUWN2WDl1TkdsRmlQT2RMX25ZdFZkcmdiX0UycWRkMW1pcFBMdElRYmlXVGFwU19LVmxRQxIEGgIIABrXBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCzBAgAEAAYACAAKisKCjk4NzY1MDEyMzQVNkGbQBoLOTg3NjUgMDEyMzQaCzk4NzY1IDAxMjM0MpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSQU5McUppd19WeEZ2QlQ3Qi1vTlhGUmI5aEpzZm0zNUMzNnpZY2hnRDhBdURYdGdqa0M0R05Hek4tS3dUeXRHeG1iclA5WjhkakZkREFGMVduTm1jbGM1T25Ud1JUMlJGaEMwTkEwQk1vTXVtQk4yWTBJak5XZGNBSmZSci1UVUtQZ3NhWjkyX29hNGZtMGNCUmxpc0xQejJLLUpfLTNWSnptRTdrNHI0LTNfT0VVVUxkX25YY18wMzFQZXFwNVJYbDdiVzBuUWN2WDl1TkdsRmlQT2RMX25ZdFZkcmdiX0UycWRkMW1pcFBMdElRYmlXVGFwU19LVmxRQzpFVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyAuLi4gLSBGaWxvQp8BVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXMgZmlyc3Q6IChhKSA5LDg3LDY1LDAxLDIzNOKGkjkgYXJhYiA4NyBjcm9yZSA2NSBsYWtocyAxIHRob3VzYW5kIGFuZCAyMzQgb3IgOTg3IGNyb3JlJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSQU5McUppd19WeEZ2QlQ3Qi1vTlhGUmI5aEpzZm0zNUMzNnpZY2hnRDhBdURYdGdqa0M0R05Hek4tS3dUeXRHeG1iclA5WjhkakZkREFGMVduTm1jbGM1T25Ud1JUMlJGaEMwTkEwQk1vTXVtQk4yWTBJak5XZGNBSmZSci1UVUtQZ3NhWjkyX29hNGZtMGNCUmxpc0xQejJLLUpfLTNWSnptRTdrNHI0LTNfT0VVVUxkX25YY18wMzFQZXFwNVJYbDdiVzBuUWN2WDl1TkdsRmlQT2RMX25ZdFZkcmdiX0UycWRkMW1pcFBMdElRYmlXVGFwU19LVmxRQxIEGgIIABrXBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCzBAgAEAAYACAAKisKCjk4NzY1MDEyMzQVNkGbQBoLOTg3NjUgMDEyMzQaCzk4NzY1IDAxMjM0MpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSQU5McUppd19WeEZ2QlQ3Qi1vTlhGUmI5aEpzZm0zNUMzNnpZY2hnRDhBdURYdGdqa0M0R05Hek4tS3dUeXRHeG1iclA5WjhkakZkREFGMVduTm1jbGM1T25Ud1JUMlJGaEMwTkEwQk1vTXVtQk4yWTBJak5XZGNBSmZSci1UVUtQZ3NhWjkyX29hNGZtMGNCUmxpc0xQejJLLUpfLTNWSnptRTdrNHI0LTNfT0VVVUxkX25YY18wMzFQZXFwNVJYbDdiVzBuUWN2WDl1TkdsRmlQT2RMX25ZdFZkcmdiX0UycWRkMW1pcFBMdElRYmlXVGFwU19LVmxRQzpFVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyAuLi4gLSBGaWxvQp8BVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXMgZmlyc3Q6IChhKSA5LDg3LDY1LDAxLDIzNOKGkjkgYXJhYiA4NyBjcm9yZSA2NSBsYWtocyAxIHRob3VzYW5kIGFuZCAyMzQgb3IgOTg3IGNyb3JlJm5ic3A7Li4uIgIQAUgAWABoAA",
+      "source": "Filo",
+      "read_more_link": "https://askfilo.com/user-question-answers-smart-solutions/the-number-9876501234-can-be-easily-read-by-placing-commas-3334393136303133#:~:text=The%20number%209876501234%20can%20be,234%20(in%20the%20Indian%20system)."
+     },
+     {
+      "position": 2,
+      "title": "The number 9876501234 can be easily read by placing ...",
+      "link": "https://brainly.com/question/62415816",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESYAHrOzAVLEMYIVCLnxkO7Z8z3zQRB4OAAjLeuFvefY9K7brC3abml3BGrCcOUtKReqV1oPHRpqFJ1JUuhI3VCkG3JzXIL5uqv8FoJaSLcrkE5sHabM15IzamHOmEJNmB2g&ved=2ahUKEwiU5dPUzqeXAxUlrYkEHdVfPBcQFnoECBEQAQ&uoh=1",
+      "displayed_link": "https://brainly.com › Mathematics › High School",
+      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
+      "date": "5 Jun 2025",
+      "snippet": "The number 9876501234 can be easily read by placing commas: Indian system: 9,87,65,01,234 → 9 arab 87 crore 65 lakhs 1 thousand and 234.",
+      "snippet_highlighted_words": [
+       "9876501234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "The number 9876501234 can be easily read by placing commas: Indian system: 9,87,65,01,234 → 9 arab 87 crore 65 lakhs 1 thousand and 234.",
+        "source_info_link": "https://brainly.com/question/62415816",
+        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpABL2dvdG8_dXJsPUNBRVNZQUhyT3pBVkxFTVlJVkNMbnhrTzdaOHozelFSQjRPQUFqTGV1RnZlZlk5SzdickMzYWJtbDNCR3JDY09VdEtSZXFWMW9QSFJwcUZKMUpVdWhJM1ZDa0czSnpYSUw1dXF2OEZvSmFTTGNya0U1c0hhYk0xNUl6YW1IT21FSk5tQjJnEgQaAggAGsADEgAaACIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQJwDCAAQABgAIAAqKwoKOTg3NjUwMTIzNBU81YFAGgs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQykAEvZ290bz91cmw9Q0FFU1lBSHJPekFWTEVNWUlWQ0xueGtPN1o4ejN6UVJCNE9BQWpMZXVGdmVmWTlLN2JyQzNhYm1sM0JHckNjT1V0S1JlcVYxb1BIUnBxRkoxSlV1aEkzVkNrRzNKelhJTDV1cXY4Rm9KYVNMY3JrRTVzSGFiTTE1SXphbUhPbUVKTm1CMmc6PlRoZSBudW1iZXIgPGI-OTg3NjUwMTIzNDwvYj4gY2FuIGJlIGVhc2lseSByZWFkIGJ5IHBsYWNpbmcgLi4uQpEBVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXM6IEluZGlhbiBzeXN0ZW06IDksODcsNjUsMDEsMjM0IOKGkiA5IGFyYWIgODcgY3JvcmUgNjUgbGFraHMgMSB0aG91c2FuZCBhbmQgMjM0LiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpABL2dvdG8_dXJsPUNBRVNZQUhyT3pBVkxFTVlJVkNMbnhrTzdaOHozelFSQjRPQUFqTGV1RnZlZlk5SzdickMzYWJtbDNCR3JDY09VdEtSZXFWMW9QSFJwcUZKMUpVdWhJM1ZDa0czSnpYSUw1dXF2OEZvSmFTTGNya0U1c0hhYk0xNUl6YW1IT21FSk5tQjJnEgQaAggAGsADEgAaACIAKgAyBggCEgJpbjoAQgQIARAASgBaAHIAegCCQJwDCAAQABgAIAAqKwoKOTg3NjUwMTIzNBU81YFAGgs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQykAEvZ290bz91cmw9Q0FFU1lBSHJPekFWTEVNWUlWQ0xueGtPN1o4ejN6UVJCNE9BQWpMZXVGdmVmWTlLN2JyQzNhYm1sM0JHckNjT1V0S1JlcVYxb1BIUnBxRkoxSlV1aEkzVkNrRzNKelhJTDV1cXY4Rm9KYVNMY3JrRTVzSGFiTTE1SXphbUhPbUVKTm1CMmc6PlRoZSBudW1iZXIgPGI-OTg3NjUwMTIzNDwvYj4gY2FuIGJlIGVhc2lseSByZWFkIGJ5IHBsYWNpbmcgLi4uQpEBVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXM6IEluZGlhbiBzeXN0ZW06IDksODcsNjUsMDEsMjM0IOKGkiA5IGFyYWIgODcgY3JvcmUgNjUgbGFraHMgMSB0aG91c2FuZCBhbmQgMjM0LiICEAFIAFgAaAA",
+      "source": "Brainly",
+      "read_more_link": "https://brainly.com/question/62415816#:~:text=The%20number%209876501234%20can%20be,lakhs%201%20thousand%20and%20234"
+     },
+     {
+      "position": 3,
+      "title": "Class 7 Maths Ganita Prakash CHAPTER 1 Page 8 to 13 All ...",
+      "link": "https://www.youtube.com/watch?v=zGVqymwxdLA&xstg=CAMSBhUDze3xHw%3D%3D",
+      "displayed_link": "670+ views · 1 year ago",
+      "thumbnail": "https://serpapi.com/searches/6ac613bb18dc930dc0ecf48b/images/NEZD2tRjw8xatSi9JQpyP0hEprkUBicl0gY6-mZofk8.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
+      "snippet": "... 9876501234 can be easily read by placing commas first: (a) 9,87,65,01234 → 9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 crore 65 lakh ...",
+      "duration": "9:58",
+      "about_this_result": {
+       "source": {
+        "description": "... 9876501234 can be easily read by placing commas first: (a) 9,87,65,01234 → 9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 crore 65 lakh ...",
+        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjBlTGZBYzlnblNrWmhEYXlaNEFQUXB2UzdNUTlUWkxYa19tRGVfWXhPTHd6eUxtNFpQMVFHVFhBX2NYdWxfZU5pWUxzU3NyakYzUS1jNVRoQmRTd2xmZTlYQy1odlY0ZHAzWWFVVjViLTJmejF4bEpWbTZmYVlaeS1ydXIyM3Nnd2cSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVjBlTGZBYzlnblNrWmhEYXlaNEFQUXB2UzdNUTlUWkxYa19tRGVfWXhPTHd6eUxtNFpQMVFHVFhBX2NYdWxfZU5pWUxzU3NyakYzUS1jNVRoQmRTd2xmZTlYQy1odlY0ZHAzWWFVVjViLTJmejF4bEpWbTZmYVlaeS1ydXIyM3Nnd2cSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTM4eNrcwWGOmJh8dvKp45r7da-dgWUNUx_FQ",
+      "source": "YouTube · FUSION BASIC"
+     },
+     {
+      "position": 4,
+      "title": "1. How many zeros does a hundred thousand have?",
+      "link": "https://askfilo.com/user-question-answers-smart-solutions/1-how-many-zeros-does-a-hundred-thousand-have-2-the-number-3335373535383537",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESwQEB6zswFR3hodcE9v6KIJgkVewpnmFaL3YRxHZPQuargVBtQrtRYJHwNgkPcbMszhLpyz7mzfuDfgyNuymoAi9ajOIAh2VByf0DMLGGEoN38D18hc5JP0DvfzMXyoQzol8GydiQEYPRkv7og5Y7bsk0h-dhiqH-fnGoB_l8QkAWOL36yeBuNQbWMb2Do_U00wfk_Jjxu1KPT-Fm3dlnxsH6ZL76OOKIRIeSfj_7-AM3Et5hUCs1fTiFmWsKfdwj57K0&ved=2ahUKEwiU5dPUzqeXAxUlrYkEHdVfPBcQFnoECBAQAQ&uoh=1",
+      "displayed_link": "https://askfilo.com › CBSE › Smart Solutions",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png",
+      "date": "29 Jun 2025",
+      "snippet": "The number 9876501234 can be easily read by placing commas as: (a) 9,87,65,01,234 → 9 arab 87 crore 65 lakh or 987 crore 65 lakh 1 thousand ...",
+      "snippet_highlighted_words": [
+       "9876501234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "The number 9876501234 can be easily read by placing commas as: (a) 9,87,65,01,234 → 9 arab 87 crore 65 lakh or 987 crore 65 lakh 1 thousand ...",
+        "source_info_link": "https://askfilo.com/user-question-answers-smart-solutions/1-how-many-zeros-does-a-hundred-thousand-have-2-the-number-3335373535383537",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSM2hvZGNFOXY2S0lKZ2tWZXdwbm1GYUwzWVJ4SFpQUXVhcmdWQnRRcnRSWUpId05na1BjYk1zemhMcHl6N216ZnVEZmd5TnV5bW9BaTlhak9JQWgyVkJ5ZjBETUxHR0VvTjM4RDE4aGM1SlAwRHZmek1YeW9Rem9sOEd5ZGlRRVlQUmt2N29nNVk3YnNrMGgtZGhpcUgtZm5Hb0JfbDhRa0FXT0wzNnllQnVOUWJXTWIyRG9fVTAwd2ZrX0pqeHUxS1BULUZtM2RsbnhzSDZaTDc2T09LSVJJZVNmal83LUFNM0V0NWhVQ3MxZlRpRm1Xc0tmZHdqNTdLMBIEGgIIABrGBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCiBAgAEAAYACAAKisKCjk4NzY1MDEyMzQVXwWCQBoLOTg3NjUgMDEyMzQaCzk4NzY1IDAxMjM0MpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSM2hvZGNFOXY2S0lKZ2tWZXdwbm1GYUwzWVJ4SFpQUXVhcmdWQnRRcnRSWUpId05na1BjYk1zemhMcHl6N216ZnVEZmd5TnV5bW9BaTlhak9JQWgyVkJ5ZjBETUxHR0VvTjM4RDE4aGM1SlAwRHZmek1YeW9Rem9sOEd5ZGlRRVlQUmt2N29nNVk3YnNrMGgtZGhpcUgtZm5Hb0JfbDhRa0FXT0wzNnllQnVOUWJXTWIyRG9fVTAwd2ZrX0pqeHUxS1BULUZtM2RsbnhzSDZaTDc2T09LSVJJZVNmal83LUFNM0V0NWhVQ3MxZlRpRm1Xc0tmZHdqNTdLMDo2MS4gSG93IG1hbnkgemVyb3MgZG9lcyBhIGh1bmRyZWQgdGhvdXNhbmQgaGF2ZT8gLSBGaWxvQp0BVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXMgYXM6IChhKSA5LDg3LDY1LDAxLDIzNCDihpIgOSBhcmFiIDg3IGNyb3JlIDY1IGxha2ggb3IgOTg3IGNyb3JlIDY1IGxha2ggMSB0aG91c2FuZCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSM2hvZGNFOXY2S0lKZ2tWZXdwbm1GYUwzWVJ4SFpQUXVhcmdWQnRRcnRSWUpId05na1BjYk1zemhMcHl6N216ZnVEZmd5TnV5bW9BaTlhak9JQWgyVkJ5ZjBETUxHR0VvTjM4RDE4aGM1SlAwRHZmek1YeW9Rem9sOEd5ZGlRRVlQUmt2N29nNVk3YnNrMGgtZGhpcUgtZm5Hb0JfbDhRa0FXT0wzNnllQnVOUWJXTWIyRG9fVTAwd2ZrX0pqeHUxS1BULUZtM2RsbnhzSDZaTDc2T09LSVJJZVNmal83LUFNM0V0NWhVQ3MxZlRpRm1Xc0tmZHdqNTdLMBIEGgIIABrGBBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCiBAgAEAAYACAAKisKCjk4NzY1MDEyMzQVXwWCQBoLOTg3NjUgMDEyMzQaCzk4NzY1IDAxMjM0MpICL2dvdG8_dXJsPUNBRVN3UUVCNnpzd0ZSM2hvZGNFOXY2S0lKZ2tWZXdwbm1GYUwzWVJ4SFpQUXVhcmdWQnRRcnRSWUpId05na1BjYk1zemhMcHl6N216ZnVEZmd5TnV5bW9BaTlhak9JQWgyVkJ5ZjBETUxHR0VvTjM4RDE4aGM1SlAwRHZmek1YeW9Rem9sOEd5ZGlRRVlQUmt2N29nNVk3YnNrMGgtZGhpcUgtZm5Hb0JfbDhRa0FXT0wzNnllQnVOUWJXTWIyRG9fVTAwd2ZrX0pqeHUxS1BULUZtM2RsbnhzSDZaTDc2T09LSVJJZVNmal83LUFNM0V0NWhVQ3MxZlRpRm1Xc0tmZHdqNTdLMDo2MS4gSG93IG1hbnkgemVyb3MgZG9lcyBhIGh1bmRyZWQgdGhvdXNhbmQgaGF2ZT8gLSBGaWxvQp0BVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXMgYXM6IChhKSA5LDg3LDY1LDAxLDIzNCDihpIgOSBhcmFiIDg3IGNyb3JlIDY1IGxha2ggb3IgOTg3IGNyb3JlIDY1IGxha2ggMSB0aG91c2FuZCZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Filo",
+      "read_more_link": "https://askfilo.com/user-question-answers-smart-solutions/1-how-many-zeros-does-a-hundred-thousand-have-2-the-number-3335373535383537#:~:text=The%20number%209876501234%20can%20be,234%20(in%20the%20Indian%20system)."
+     },
+     {
+      "position": 5,
+      "title": "+91 add பண்ண formula கூட தேவையில்லை! Excel ...",
+      "link": "https://www.facebook.com/mrexceltamil/videos/91-add-%E0%AE%AA%E0%AE%A3%E0%AF%8D%E0%AE%A3-formula-%E0%AE%95%E0%AF%82%E0%AE%9F-%E0%AE%A4%E0%AF%87%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AF%88-excel-custom-format-%E0%AE%B2-%E0%AE%92%E0%AE%B0%E0%AF%81-line-%E0%AE%AA%E0%AF%8B%E0%AE%A4%E0%AF%81%E0%AE%AE%E0%AF%8D/4662692050687256/",
+      "displayed_link": "5 reactions · 5 days ago",
+      "thumbnail": "https://serpapi.com/searches/6ac613bb18dc930dc0ecf48b/images/NEZD2tRjw8xatSi9JQpyP1Eh7etzg1oPisCktN2VxE8.png",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "+91 add பண்ண formula கூட தேவையில்லை! How to add +91 in Microsoft Excel. Still calculating Running Total manually?",
+      "duration": "1:12",
+      "about_this_result": {
+       "source": {
+        "description": "+91 add பண்ண formula கூட தேவையில்லை! How to add +91 in Microsoft Excel. Still calculating Running Total manually?",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrUEL2dvdG8_dXJsPUNBRVNtd01CNnpzd0ZXcXVyMV94Wm5JTENjTUxvb1NKWnF0XzAwMHdDNjlMNmZIZVpwakxESFBVYkUycDFOalVXWl9Ed2ZhbTEySWZNTk5CemdISFdMRTA2cWpVaVFqUmtlUktKTmFhMlBQVUFNT1dqQ1ZwaWdNY2U1TjN5NHdBYUhtdjhJbHhWMER0OWpUSlUxbU1YMGx4MzRkV3B1eGRRdlNPdXV4N0dSWnpwTHB6XzFWbGNSX3ZVb19xNkYxUFBLSTJ2Tzd0YlRzNndRdlJKZXlFZFV2VFM2LVczeXBHVHd3N0RoNHcwTXUxbl9sUHdWb1EzWmtGUU1Vc2tfRGk1UlFPN0lSbkF5eWR4RTJDNnZSSWpHaWJuYlZuLWlqakhOSjczZWY1UmNtVEt1WnNoWU11b0xXT1ZndlJDSUxVM0xFQl9MQkd6dTdkNUk4bVAweXBUdFZYbGhVbDRBZTdhZ2UwX1JUd0ZXZUFFNkZuLVZkZFpBb2VFYlZhbG91YjlyOTRIOG1KZlRqTnpKX1QxcmFQdEZqVU81UlFVOHZYZXpkLXF5aWM4NHlxOERzLVB5N2libGZkcXd3WG91MGlhQjZPUDBrdTVXb1AxclF4TURTaTl5ZTNrVTB4cjdvSkttd18zUEk0cTloZXc4bUdTUGl3cVktWmxXeElIM0h3eVJISGtqWXZaSlJkTlVlNkNUTkZZTV9RUG9Wamd5YzRXMV9vUWhqWlJDURIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrUEL2dvdG8_dXJsPUNBRVNtd01CNnpzd0ZXcXVyMV94Wm5JTENjTUxvb1NKWnF0XzAwMHdDNjlMNmZIZVpwakxESFBVYkUycDFOalVXWl9Ed2ZhbTEySWZNTk5CemdISFdMRTA2cWpVaVFqUmtlUktKTmFhMlBQVUFNT1dqQ1ZwaWdNY2U1TjN5NHdBYUhtdjhJbHhWMER0OWpUSlUxbU1YMGx4MzRkV3B1eGRRdlNPdXV4N0dSWnpwTHB6XzFWbGNSX3ZVb19xNkYxUFBLSTJ2Tzd0YlRzNndRdlJKZXlFZFV2VFM2LVczeXBHVHd3N0RoNHcwTXUxbl9sUHdWb1EzWmtGUU1Vc2tfRGk1UlFPN0lSbkF5eWR4RTJDNnZSSWpHaWJuYlZuLWlqakhOSjczZWY1UmNtVEt1WnNoWU11b0xXT1ZndlJDSUxVM0xFQl9MQkd6dTdkNUk4bVAweXBUdFZYbGhVbDRBZTdhZ2UwX1JUd0ZXZUFFNkZuLVZkZFpBb2VFYlZhbG91YjlyOTRIOG1KZlRqTnpKX1QxcmFQdEZqVU81UlFVOHZYZXpkLXF5aWM4NHlxOERzLVB5N2libGZkcXd3WG91MGlhQjZPUDBrdTVXb1AxclF4TURTaTl5ZTNrVTB4cjdvSkttd18zUEk0cTloZXc4bUdTUGl3cVktWmxXeElIM0h3eVJISGtqWXZaSlJkTlVlNkNUTkZZTV9RUG9Wamd5YzRXMV9vUWhqWlJDURIWChAKBAgwSAIKBAhISAIKAgg_GgIIABoWEgAaACIAKgAyADoAQgBKAFoAcgB6ACICEAFIAFgAaAA",
+      "source": "Facebook · Mr Excel Tamil"
+     },
+     {
+      "position": 6,
+      "title": "The number 9876501234 can be easily read by",
+      "link": "https://studyx.ai/questions/4lvgh8s/the-number-9876501234-can-be-easily-read-by-placing-commas-first-a-9-87-65-01-234-9-arab",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAEStwEB6zswFfMrq__uTJ8WhyTzbNDQab2rmgtAZcaRCF3eESt3KQuAhWX8gCYuEfrw8XJPid8jO5NwXU3kJfu9EeSiCeMZpyLGoSV1kthQpy98MTsQKHOGWFar6iQCkHS1OCMMqz3aGtB2YpHqsmwGhX7OIdgmDPpDZpP87oiWvRPZljajq4U4NJN8dhwi9Im-Uu6S7T2nsAVkfr1QKy5HXJdEf3fqJjBB8KGWh1xfp4NcupXFSVUaO0k&ved=2ahUKEwiU5dPUzqeXAxUlrYkEHdVfPBcQFnoECBUQAQ&uoh=1",
+      "displayed_link": "https://studyx.ai › Homework Help › Math › Basic Math",
+      "favicon": "https://serpapi.com/images/i/UklGRrgBAABXRUJQVlA4IKwBAAAwCACdASogACAAPtEutFooIagoGAEAGglsAJ0zaH4ZADnwNMA3iJv1fAGL-5tmZL-wC6WK3T3hv-iITz3X0ssQ__02enFRep5gbAD-9WMYKlnW5213H8aa41PCFOnLlgi2OeNVgAgWQ5EW8GGWD29ORrYghPAbBFduMjJIv4VgNEwoOKKtW9Z40ZImIPbfmU94HQBnkLb-oGczNI_9K_iF41P_rgPVClduedP3zNu5bjHfT46_SnUAWdKIPJjZVJctQlx_6aYLCbRxvZeqn_9S3-A-RdkbyhmuWefF1Yric6SL93C3emVsHkTphy7P8hha0Nc_zZU-XqHuTx3_tnnwX2iQ_5alM_5nbae2oa8jDwjzNMcNyXKGz5v1ReHhfgw5_m9vWcj_nr8pk_7icwhAq0y5Ea2-fIdzJ3NrwyZvSbg7kXWvQL7qBWCqJXZEEhe_lWiArf5KwWJdVdF-S7d_3hKQc9SdtLZnBHjbLAVXQRokEcUXte9o_hwrXvT_MgpQ9MKgD2903HeyxERLTZ6MX6rP6LRwtoFpxnVCQ4zCaRyC0uFbQTzEIWAAAA.webp",
+      "date": "14 May 2025",
+      "snippet": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234 → 9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 crore 65 ...",
+      "about_this_result": {
+       "source": {
+        "description": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234 → 9 arab 87 crore 65 lakhs 1 thousand and 234",
+        "source_info_link": "https://studyx.ai/questions/4lvgh8s/the-number-9876501234-can-be-easily-read-by-placing-commas-first-a-9-87-65-01-234-9-arab",
+        "icon": "https://serpapi.com/images/i/UklGRrgBAABXRUJQVlA4IKwBAAAwCACdASogACAAPtEutFooIagoGAEAGglsAJ0zaH4ZADnwNMA3iJv1fAGL-5tmZL-wC6WK3T3hv-iITz3X0ssQ__02enFRep5gbAD-9WMYKlnW5213H8aa41PCFOnLlgi2OeNVgAgWQ5EW8GGWD29ORrYghPAbBFduMjJIv4VgNEwoOKKtW9Z40ZImIPbfmU94HQBnkLb-oGczNI_9K_iF41P_rgPVClduedP3zNu5bjHfT46_SnUAWdKIPJjZVJctQlx_6aYLCbRxvZeqn_9S3-A-RdkbyhmuWefF1Yric6SL93C3emVsHkTphy7P8hha0Nc_zZU-XqHuTx3_tnnwX2iQ_5alM_5nbae2oa8jDwjzNMcNyXKGz5v1ReHhfgw5_m9vWcj_nr8pk_7icwhAq0y5Ea2-fIdzJ3NrwyZvSbg7kXWvQL7qBWCqJXZEEhe_lWiArf5KwWJdVdF-S7d_3hKQc9SdtLZnBHjbLAVXQRokEcUXte9o_hwrXvT_MgpQ9MKgD2903HeyxERLTZ6MX6rP6LRwtoFpxnVCQ4zCaRyC0uFbQTzEIWAAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CoUCL2dvdG8_dXJsPUNBRVN0d0VCNnpzd0ZmTXJxX191VEo4V2h5VHpiTkRRYWIycm1ndEFaY2FSQ0YzZUVTdDNLUXVBaFdYOGdDWXVFZnJ3OFhKUGlkOGpPNU53WFUza0pmdTlFZVNpQ2VNWnB5TEdvU1Yxa3RoUXB5OThNVHNRS0hPR1dGYXI2aVFDa0hTMU9DTU1xejNhR3RCMllwSHFzbXdHaFg3T0lkZ21EUHBEWnBQODdvaVd2UlBabGphanE0VTROSk44ZGh3aTlJbS1VdTZTN1QybnNBVmtmcjFRS3k1SFhKZEVmM2ZxSmpCQjhLR1doMXhmcDROY3VwWEZTVlVhTzBrEgQaAggAGqwEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQIgECAAQABgAIAAqKwoKOTg3NjUwMTIzNBWMI4VAGgs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQyhQIvZ290bz91cmw9Q0FFU3R3RUI2enN3RmZNcnFfX3VUSjhXaHlUemJORFFhYjJybWd0QVpjYVJDRjNlRVN0M0tRdUFoV1g4Z0NZdUVmcnc4WEpQaWQ4ak81TndYVTNrSmZ1OUVlU2lDZU1acHlMR29TVjFrdGhRcHk5OE1Uc1FLSE9HV0ZhcjZpUUNrSFMxT0NNTXF6M2FHdEIyWXBIcXNtd0doWDdPSWRnbURQcERacFA4N29pV3ZSUFpsamFqcTRVNE5KTjhkaHdpOUltLVV1NlM3VDJuc0FWa2ZyMVFLeTVIWEpkRWYzZnFKakJCOEtHV2gxeGZwNE5jdXBYRlNWVWFPMGs6O1RoZSBudW1iZXIgPGI-OTg3NjUwMTIzNDwvYj4gY2FuIGJlIGVhc2lseSByZWFkIGJ5IC0gU3R1ZHlYQosBVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXMgZmlyc3Q6IChhKSA5LDg3LDY1LDAxLDIzNCDihpIgOSBhcmFiIDg3IGNyb3JlIDY1IGxha2hzIDEgdGhvdXNhbmQgYW5kIDIzNCICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CoUCL2dvdG8_dXJsPUNBRVN0d0VCNnpzd0ZmTXJxX191VEo4V2h5VHpiTkRRYWIycm1ndEFaY2FSQ0YzZUVTdDNLUXVBaFdYOGdDWXVFZnJ3OFhKUGlkOGpPNU53WFUza0pmdTlFZVNpQ2VNWnB5TEdvU1Yxa3RoUXB5OThNVHNRS0hPR1dGYXI2aVFDa0hTMU9DTU1xejNhR3RCMllwSHFzbXdHaFg3T0lkZ21EUHBEWnBQODdvaVd2UlBabGphanE0VTROSk44ZGh3aTlJbS1VdTZTN1QybnNBVmtmcjFRS3k1SFhKZEVmM2ZxSmpCQjhLR1doMXhmcDROY3VwWEZTVlVhTzBrEgQaAggAGqwEEgAaACIAKgAyBggDEgJpbjoAQgQIARAASgBaAHIAegCCQIgECAAQABgAIAAqKwoKOTg3NjUwMTIzNBWMI4VAGgs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQyhQIvZ290bz91cmw9Q0FFU3R3RUI2enN3RmZNcnFfX3VUSjhXaHlUemJORFFhYjJybWd0QVpjYVJDRjNlRVN0M0tRdUFoV1g4Z0NZdUVmcnc4WEpQaWQ4ak81TndYVTNrSmZ1OUVlU2lDZU1acHlMR29TVjFrdGhRcHk5OE1Uc1FLSE9HV0ZhcjZpUUNrSFMxT0NNTXF6M2FHdEIyWXBIcXNtd0doWDdPSWRnbURQcERacFA4N29pV3ZSUFpsamFqcTRVNE5KTjhkaHdpOUltLVV1NlM3VDJuc0FWa2ZyMVFLeTVIWEpkRWYzZnFKakJCOEtHV2gxeGZwNE5jdXBYRlNWVWFPMGs6O1RoZSBudW1iZXIgPGI-OTg3NjUwMTIzNDwvYj4gY2FuIGJlIGVhc2lseSByZWFkIGJ5IC0gU3R1ZHlYQosBVGhlIG51bWJlciA8Yj45ODc2NTAxMjM0PC9iPiBjYW4gYmUgZWFzaWx5IHJlYWQgYnkgcGxhY2luZyBjb21tYXMgZmlyc3Q6IChhKSA5LDg3LDY1LDAxLDIzNCDihpIgOSBhcmFiIDg3IGNyb3JlIDY1IGxha2hzIDEgdGhvdXNhbmQgYW5kIDIzNCICEAFIAFgAaAA",
+      "source": "StudyX"
+     },
+     {
+      "position": 7,
+      "title": "2 | PDF",
+      "link": "https://www.scribd.com/document/1034667847/13B89364-AC8D-4061-BFF3-532A3FF31149-2",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESjAEB6zswFdaOzWU9UWIBuBXBEal1lmVx0YantKPXQ0srwt2D9gK9DWEDj5cWt8dULyQaSGSQ_cTUiUEQubEAMkjfcL8ZgkXFf710TidsYeSZ-mwdmyRU3pB__UTgaBERx8dOCboyTDndE6RVYIZaRZ-jhg1h_KiF9pB7ZJEsmhViRElMIpb-dhPmzLR1Hw&ved=2ahUKEwiU5dPUzqeXAxUlrYkEHdVfPBcQFnoECA8QAQ&uoh=1",
+      "displayed_link": "https://www.scribd.com › document",
+      "favicon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp",
+      "snippet": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234 — 9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 crore 65 lakh 1 ...",
+      "snippet_highlighted_words": [
+       "9876501234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234 — 9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 crore 65 lakh 1 ...",
+        "source_info_link": "https://www.scribd.com/document/1034667847/13B89364-AC8D-4061-BFF3-532A3FF31149-2",
+        "icon": "https://serpapi.com/images/i/UklGRigBAABXRUJQVlA4IBwBAAAwBgCdASocABwAPrUurVanIacnG_DgFolsALsNcA6TAiSRiU0ciNsNw4-ckvZckbI8Q0Lri0nWvPTAAP6fWoc5hI1waVpH4HPI-z3W07wkXNBNlhQO9hAKmOv8njeniRb9FCg1c1JmF3efXUUmw2bU_zMmv4y8p_nL016PcG2_Kkra3QUXk6GbHsoOEa89zFXoAnXirQsiNRzPXeKrniAu0unVpGtsEeMjevYRjJ48Bp-DMJ4D_R_y1f316ypJ0S_9mXgcgm8VoTywUh86jiUV9Al4I6yaumsUkda-7a6L12tg8hgBlh0gWv0-rnf3aeCVRG6cfsuzLtT0ruwHdbHm1C0wW2RxRakx4lXvH-JOfzi7UEbqOQ5wVHgAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CswBL2dvdG8_dXJsPUNBRVNqQUVCNnpzd0ZkYU96V1U5VVdJQnVCWEJFYWwxbG1WeDBZYW50S1BYUTBzcnd0MkQ5Z0s5RFdFRGo1Y1d0OGRVTHlRYVNHU1FfY1RVaVVFUXViRUFNa2pmY0w4WmdrWEZmNzEwVGlkc1llU1otbXdkbXlSVTNwQl9fVVRnYUJFUng4ZE9DYm95VERuZEU2UlZZSVphUlotamhnMWhfS2lGOXBCN1pKRXNtaFZpUkVsTUlwYi1kaFBtekxSMUh3EgQaAggAGugDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMQDCAAQABgAIAAqKwoKOTg3NjUwMTIzNBVvZss_Ggs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQyzAEvZ290bz91cmw9Q0FFU2pBRUI2enN3RmRhT3pXVTlVV0lCdUJYQkVhbDFsbVZ4MFlhbnRLUFhRMHNyd3QyRDlnSzlEV0VEajVjV3Q4ZFVMeVFhU0dTUV9jVFVpVUVRdWJFQU1ramZjTDhaZ2tYRmY3MTBUaWRzWWVTWi1td2RteVJVM3BCX19VVGdhQkVSeDhkT0Nib3lURG5kRTZSVllJWmFSWi1qaGcxaF9LaUY5cEI3WkpFc21oVmlSRWxNSXBiLWRoUG16TFIxSHc6EDIgfCBQREYgLSBTY3JpYmRCqwFUaGUgbnVtYmVyIDxiPjk4NzY1MDEyMzQ8L2I-IGNhbiBiZSBlYXNpbHkgcmVhZCBieSBwbGFjaW5nIGNvbW1hcyBmaXJzdDogKGEpIDksODcsNjUsMDEsMjM0IOKAlCA5IGFyYWIgODcgY3JvcmUgNjUgbGFraHMgMSB0aG91c2FuZCBhbmQgMjM0IG9yIDk4NyBjcm9yZSA2NSBsYWtoIDEmbmJzcDsuLi4iAhABSABYAGgA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CswBL2dvdG8_dXJsPUNBRVNqQUVCNnpzd0ZkYU96V1U5VVdJQnVCWEJFYWwxbG1WeDBZYW50S1BYUTBzcnd0MkQ5Z0s5RFdFRGo1Y1d0OGRVTHlRYVNHU1FfY1RVaVVFUXViRUFNa2pmY0w4WmdrWEZmNzEwVGlkc1llU1otbXdkbXlSVTNwQl9fVVRnYUJFUng4ZE9DYm95VERuZEU2UlZZSVphUlotamhnMWhfS2lGOXBCN1pKRXNtaFZpUkVsTUlwYi1kaFBtekxSMUh3EgQaAggAGugDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMQDCAAQABgAIAAqKwoKOTg3NjUwMTIzNBVvZss_Ggs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQyzAEvZ290bz91cmw9Q0FFU2pBRUI2enN3RmRhT3pXVTlVV0lCdUJYQkVhbDFsbVZ4MFlhbnRLUFhRMHNyd3QyRDlnSzlEV0VEajVjV3Q4ZFVMeVFhU0dTUV9jVFVpVUVRdWJFQU1ramZjTDhaZ2tYRmY3MTBUaWRzWWVTWi1td2RteVJVM3BCX19VVGdhQkVSeDhkT0Nib3lURG5kRTZSVllJWmFSWi1qaGcxaF9LaUY5cEI3WkpFc21oVmlSRWxNSXBiLWRoUG16TFIxSHc6EDIgfCBQREYgLSBTY3JpYmRCqwFUaGUgbnVtYmVyIDxiPjk4NzY1MDEyMzQ8L2I-IGNhbiBiZSBlYXNpbHkgcmVhZCBieSBwbGFjaW5nIGNvbW1hcyBmaXJzdDogKGEpIDksODcsNjUsMDEsMjM0IOKAlCA5IGFyYWIgODcgY3JvcmUgNjUgbGFraHMgMSB0aG91c2FuZCBhbmQgMjM0IG9yIDk4NyBjcm9yZSA2NSBsYWtoIDEmbmJzcDsuLi4iAhABSABYAGgA",
+      "source": "Scribd",
+      "read_more_link": "https://www.scribd.com/document/1034667847/13B89364-AC8D-4061-BFF3-532A3FF31149-2#:~:text=The%20number%209876501234%20can%20be,234%20(in%20the%20Indian%20system)."
+     },
+     {
+      "position": 8,
+      "title": "Excel में Mobile Number के आगे +91 लगाएं",
+      "link": "https://www.facebook.com/stylishtechsolutions/videos/excel-%E0%A4%AE%E0%A5%87%E0%A4%82-mobile-number-%E0%A4%95%E0%A5%87-%E0%A4%86%E0%A4%97%E0%A5%87-91-%E0%A4%B2%E0%A4%97%E0%A4%BE%E0%A4%8F%E0%A4%82-easy-excel-trick-%E0%A4%8F%E0%A4%95-%E0%A4%B8%E0%A4%BE%E0%A4%A5-%E0%A4%B8%E0%A4%AD%E0%A5%80-mobile-numbe/1859515718758332/",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAES-wIB6zswFTEAFvZO5A7-b_Y8AhTyDwuxw3ccsZHTPd7hrTDIiWMZn0MhhlfjWThw_WC3hzba9cAFdME_LRmwyK7LWbA1MVeb0QC1TtWPXd8pt6q2QKBd-mBXA8ld0YYD2T9zC3W6PtKIYao5RIMzVSKbM3MClF6Gc6ZRuz5YuahEOcoZVDg-ghtiZSHd1S5emqhSDb1WtbkDRTHnLXTFrf9gPqN6VWgtrfj48Ys1RGtnoz-qYwpbR4StyIK3sarlNEpwiOrzqYdMwDvRGaNhwnnF-AYdEUw51Fd5ZD-f9szhr1JRPgXqOkbkE22hGpfMn4-mbA8nxUxEyBC2YT1IWoL1Rm5HjFVOyNRT0T-cUW648Tc0bcYsKp6fsadMMycRSD8lZ19c4_n9Jgp6qXbXVyxKE1okKc6oW1LfHLZ9cp9yW1BA2CfIvjkhOW5gzyKZWFL1mftf2yaMBBB-MEdc-mABepN8MyCL6XbFo0Ew8L9-Ndi0O5vlz4GAQ44T&ved=2ahUKEwiU5dPUzqeXAxUlrYkEHdVfPBcQFnoECBoQAQ&uoh=1",
+      "displayed_link": "1 reaction · 4 weeks ago",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "Excel में Mobile Number के आगे +91 लगाएं | Easy Excel Trick. Stylish tech solutions for more Excel Tips & Tricks!",
+      "about_this_result": {
+       "source": {
+        "description": "Excel में Mobile Number के आगे +91 लगाएं | Easy Excel Trick. Stylish tech solutions for more Excel Tips & Tricks!",
+        "source_info_link": "https://www.facebook.com/stylishtechsolutions/videos/excel-%E0%A4%AE%E0%A5%87%E0%A4%82-mobile-number-%E0%A4%95%E0%A5%87-%E0%A4%86%E0%A4%97%E0%A5%87-91-%E0%A4%B2%E0%A4%97%E0%A4%BE%E0%A4%8F%E0%A4%82-easy-excel-trick-%E0%A4%8F%E0%A4%95-%E0%A4%B8%E0%A4%BE%E0%A4%A5-%E0%A4%B8%E0%A4%AD%E0%A5%80-mobile-numbe/1859515718758332/",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CooEL2dvdG8_dXJsPUNBRVMtd0lCNnpzd0ZURUFGdlpPNUE3LWJfWThBaFR5RHd1eHczY2NzWkhUUGQ3aHJURElpV01abjBNaGhsZmpXVGh3X1dDM2h6YmE5Y0FGZE1FX0xSbXd5SzdMV2JBMU1WZWIwUUMxVHRXUFhkOHB0NnEyUUtCZC1tQlhBOGxkMFlZRDJUOXpDM1c2UHRLSVlhbzVSSU16VlNLYk0zTUNsRjZHYzZaUnV6NVl1YWhFT2NvWlZEZy1naHRpWlNIZDFTNWVtcWhTRGIxV3Ria0RSVEhuTFhURnJmOWdQcU42VldndHJmajQ4WXMxUkd0bm96LXFZd3BiUjRTdHlJSzNzYXJsTkVwd2lPcnpxWWRNd0R2UkdhTmh3bm5GLUFZZEVVdzUxRmQ1WkQtZjlzemhyMUpSUGdYcU9rYmtFMjJoR3BmTW40LW1iQThueFV4RXlCQzJZVDFJV29MMVJtNUhqRlZPeU5SVDBULWNVVzY0OFRjMGJjWXNLcDZmc2FkTU15Y1JTRDhsWjE5YzRfbjlKZ3A2cVhiWFZ5eEtFMW9rS2M2b1cxTGZITFo5Y3A5eVcxQkEyQ2ZJdmpraE9XNWd6eUtaV0ZMMW1mdGYyeWFNQkJCLU1FZGMtbUFCZXBOOE15Q0w2WGJGbzBFdzhMOS1OZGkwTzV2bHo0R0FRNDRUEgQaAggAGtUGEgAaACIAKgAyBggBEgJpbjoAQgQIAhAASgBaAHIAegCCQLEGCAAQABgAIAAqKwoKOTg3NjUwMTIzNBVB_QJAGgs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQyigQvZ290bz91cmw9Q0FFUy13SUI2enN3RlRFQUZ2Wk81QTctYl9ZOEFoVHlEd3V4dzNjY3NaSFRQZDdoclRESWlXTVpuME1oaGxmaldUaHdfV0MzaHpiYTljQUZkTUVfTFJtd3lLN0xXYkExTVZlYjBRQzFUdFdQWGQ4cHQ2cTJRS0JkLW1CWEE4bGQwWVlEMlQ5ekMzVzZQdEtJWWFvNVJJTXpWU0tiTTNNQ2xGNkdjNlpSdXo1WXVhaEVPY29aVkRnLWdodGlaU0hkMVM1ZW1xaFNEYjFXdGJrRFJUSG5MWFRGcmY5Z1BxTjZWV2d0cmZqNDhZczFSR3Rub3otcVl3cGJSNFN0eUlLM3NhcmxORXB3aU9yenFZZE13RHZSR2FOaHdubkYtQVlkRVV3NTFGZDVaRC1mOXN6aHIxSlJQZ1hxT2tia0UyMmhHcGZNbjQtbWJBOG54VXhFeUJDMllUMUlXb0wxUm01SGpGVk95TlJUMFQtY1VXNjQ4VGMwYmNZc0twNmZzYWRNTXljUlNEOGxaMTljNF9uOUpncDZxWGJYVnl4S0Uxb2tLYzZvVzFMZkhMWjljcDl5VzFCQTJDZkl2amtoT1c1Z3p5S1pXRkwxbWZ0ZjJ5YU1CQkItTUVkYy1tQUJlcE44TXlDTDZYYkZvMEV3OEw5LU5kaTBPNXZsejRHQVE0NFQ6W0V4Y2VsIOCkruClh-CkgiBNb2JpbGUgTnVtYmVyIOCkleClhyDgpIbgpJfgpYcgKzkxIOCksuCkl-CkvuCkj-CkgiB8IFN0eWxpc2ggdGVjaCBzb2x1dGlvbnNCjwFFeGNlbCDgpK7gpYfgpIIgTW9iaWxlIE51bWJlciDgpJXgpYcg4KSG4KSX4KWHICs5MSDgpLLgpJfgpL7gpI_gpIIgfCBFYXN5IEV4Y2VsIFRyaWNrLiBTdHlsaXNoIHRlY2ggc29sdXRpb25zIGZvciBtb3JlIEV4Y2VsIFRpcHMgJmFtcDsgVHJpY2tzISICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CooEL2dvdG8_dXJsPUNBRVMtd0lCNnpzd0ZURUFGdlpPNUE3LWJfWThBaFR5RHd1eHczY2NzWkhUUGQ3aHJURElpV01abjBNaGhsZmpXVGh3X1dDM2h6YmE5Y0FGZE1FX0xSbXd5SzdMV2JBMU1WZWIwUUMxVHRXUFhkOHB0NnEyUUtCZC1tQlhBOGxkMFlZRDJUOXpDM1c2UHRLSVlhbzVSSU16VlNLYk0zTUNsRjZHYzZaUnV6NVl1YWhFT2NvWlZEZy1naHRpWlNIZDFTNWVtcWhTRGIxV3Ria0RSVEhuTFhURnJmOWdQcU42VldndHJmajQ4WXMxUkd0bm96LXFZd3BiUjRTdHlJSzNzYXJsTkVwd2lPcnpxWWRNd0R2UkdhTmh3bm5GLUFZZEVVdzUxRmQ1WkQtZjlzemhyMUpSUGdYcU9rYmtFMjJoR3BmTW40LW1iQThueFV4RXlCQzJZVDFJV29MMVJtNUhqRlZPeU5SVDBULWNVVzY0OFRjMGJjWXNLcDZmc2FkTU15Y1JTRDhsWjE5YzRfbjlKZ3A2cVhiWFZ5eEtFMW9rS2M2b1cxTGZITFo5Y3A5eVcxQkEyQ2ZJdmpraE9XNWd6eUtaV0ZMMW1mdGYyeWFNQkJCLU1FZGMtbUFCZXBOOE15Q0w2WGJGbzBFdzhMOS1OZGkwTzV2bHo0R0FRNDRUEgQaAggAGtUGEgAaACIAKgAyBggBEgJpbjoAQgQIAhAASgBaAHIAegCCQLEGCAAQABgAIAAqKwoKOTg3NjUwMTIzNBVB_QJAGgs5ODc2NSAwMTIzNBoLOTg3NjUgMDEyMzQyigQvZ290bz91cmw9Q0FFUy13SUI2enN3RlRFQUZ2Wk81QTctYl9ZOEFoVHlEd3V4dzNjY3NaSFRQZDdoclRESWlXTVpuME1oaGxmaldUaHdfV0MzaHpiYTljQUZkTUVfTFJtd3lLN0xXYkExTVZlYjBRQzFUdFdQWGQ4cHQ2cTJRS0JkLW1CWEE4bGQwWVlEMlQ5ekMzVzZQdEtJWWFvNVJJTXpWU0tiTTNNQ2xGNkdjNlpSdXo1WXVhaEVPY29aVkRnLWdodGlaU0hkMVM1ZW1xaFNEYjFXdGJrRFJUSG5MWFRGcmY5Z1BxTjZWV2d0cmZqNDhZczFSR3Rub3otcVl3cGJSNFN0eUlLM3NhcmxORXB3aU9yenFZZE13RHZSR2FOaHdubkYtQVlkRVV3NTFGZDVaRC1mOXN6aHIxSlJQZ1hxT2tia0UyMmhHcGZNbjQtbWJBOG54VXhFeUJDMllUMUlXb0wxUm01SGpGVk95TlJUMFQtY1VXNjQ4VGMwYmNZc0twNmZzYWRNTXljUlNEOGxaMTljNF9uOUpncDZxWGJYVnl4S0Uxb2tLYzZvVzFMZkhMWjljcDl5VzFCQTJDZkl2amtoT1c1Z3p5S1pXRkwxbWZ0ZjJ5YU1CQkItTUVkYy1tQUJlcE44TXlDTDZYYkZvMEV3OEw5LU5kaTBPNXZsejRHQVE0NFQ6W0V4Y2VsIOCkruClh-CkgiBNb2JpbGUgTnVtYmVyIOCkleClhyDgpIbgpJfgpYcgKzkxIOCksuCkl-CkvuCkj-CkgiB8IFN0eWxpc2ggdGVjaCBzb2x1dGlvbnNCjwFFeGNlbCDgpK7gpYfgpIIgTW9iaWxlIE51bWJlciDgpJXgpYcg4KSG4KSX4KWHICs5MSDgpLLgpJfgpL7gpI_gpIIgfCBFYXN5IEV4Y2VsIFRyaWNrLiBTdHlsaXNoIHRlY2ggc29sdXRpb25zIGZvciBtb3JlIEV4Y2VsIFRpcHMgJmFtcDsgVHJpY2tzISICEAFIAFgAaAA",
+      "source": "Facebook · Stylish tech solutions"
+     },
+     {
+      "position": 9,
+      "title": "Hide phone numbers in Excel — the smart way! Forget doing ...",
+      "link": "https://www.facebook.com/excelsirji/videos/-hide-phone-numbers-in-excel-the-smart-wayforget-doing-it-manually-use-this-quic/1497153498227106/",
+      "displayed_link": "4 reactions · 11 months ago",
+      "thumbnail": "https://serpapi.com/searches/6ac613bb18dc930dc0ecf48b/images/NEZD2tRjw8xatSi9JQpyP_i_qU-9oVrDFsWAJa-KOis.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp",
+      "snippet": "This video demonstrates a quick and easy hack for hiding phone numbers in Microsoft Excel. It shows how to use the formula \"REGEXREPLACECEL,\"",
+      "duration": "1:15",
+      "about_this_result": {
+       "source": {
+        "description": "This video demonstrates a quick and easy hack for hiding phone numbers in Microsoft Excel. It shows how to use the formula \"REGEXREPLACECEL,\"",
+        "icon": "https://serpapi.com/images/i/UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHA3lfFBO1wAOUA_QD3LbivzzOpj3kDygCma-Rh7ANX--unhjJOlma5yFBwxABGtbBmfGruNiAAA_vYOb16QPF2AohybdBK44SXhExiRjqi-kNM3hHu_Yw7AJrL-7rM8d_rijdiRy0j-ZeW7w6RIRuMqgm_RO4f6lRIhYknlxf6mMoXAQaj6_tRkMRwBV5EdP_uMw4kqy2ZhqPi3PG5PpxthXgQWj6H4uUXexYHFqh3xYBX5dL6Dsx0kaiR__FvN_6m7_QiD5ix90ybowZPZ4EJjzU2ag7SQJ4wrf_2kwO1hPlzmly6sn4r0HSBDYT_CBJqgzjphFkqJAiVh_RCXqM9h1YZk1Q4HA5xuHo3rNsBGkg4DVoQb6lPRqlYEs1YLGkTSOA-pXnCCv-FX4cz9i_E71o22GBeX206C3AI8KMZxPikjU93MZF-5b_bVPypp2kWlnV7cYdOVJ_T0iqe1D8CmirqI-Ktb5K_S123btql4LlRpp_0gELOp_50DZ4WlAAA.webp"
+       }
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cp0CL2dvdG8_dXJsPUNBRVN5UUVCNnpzd0ZabUFteUJJRjhMYWptVE5JUlM0VElGN2wyRFBBd2MzY2kyMmx2MEFJSW9IRGc1dUtSRVA5S3BOMlAtVk5HQW1MaGt3SkM4SFdXbV91UlBlMkhZd1hEU3BzTzBhb3V0U0hnZVY5Rmxud0hjeWt1ck52akhYazRITG4wMlhHRzdkeUpHeEw0RVloU3JXTzhxSV93QUppUXNmSGNyUmtpMzhEN3ZqY3V1T2xNcmU4U3RjY1lNRTNBRExER2tGNVZqd0I5S0NnVWk4WC1WWDJaZjRORDUtTWt0SzJvTkV4aWFJRE1qRHJFdFpOYnhBX1ctZ1RlcjY3aWo4TloydG1oZkxzWTBXUF9NEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGhYSABoAIgAqADIAOgBCAEoAWgByAHoAIgIQAUgAWABoAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cp0CL2dvdG8_dXJsPUNBRVN5UUVCNnpzd0ZabUFteUJJRjhMYWptVE5JUlM0VElGN2wyRFBBd2MzY2kyMmx2MEFJSW9IRGc1dUtSRVA5S3BOMlAtVk5HQW1MaGt3SkM4SFdXbV91UlBlMkhZd1hEU3BzTzBhb3V0U0hnZVY5Rmxud0hjeWt1ck52akhYazRITG4wMlhHRzdkeUpHeEw0RVloU3JXTzhxSV93QUppUXNmSGNyUmtpMzhEN3ZqY3V1T2xNcmU4U3RjY1lNRTNBRExER2tGNVZqd0I5S0NnVWk4WC1WWDJaZjRORDUtTWt0SzJvTkV4aWFJRE1qRHJFdFpOYnhBX1ctZ1RlcjY3aWo4TloydG1oZkxzWTBXUF9NEhYKEAoECDBIAgoECEhIAgoCCD8aAggAGhYSABoAIgAqADIAOgBCAEoAWgByAHoAIgIQAUgAWABoAA",
+      "source": "Facebook · Excelsirji"
+     },
+     {
+      "position": 10,
+      "title": "Large Numbers Around Us ? How many zeros does a ...",
+      "link": "https://askfilo.com/user-question-answers-smart-solutions/large-numbers-around-us-how-many-zeros-does-a-hundred-3334343235333138",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESvAEB6zswFXfRyXIfv-xe6uKn13A3pm5np3POdiD7u6JNyLx4weZ16vk-PStZFc7ic9PGDXChxM7usXD_PE_WEwgdqHIWkGPHa4DlawbHOYg40IlbkITphLutzO-q0AE9gDx7e0u8Rk1vu8QsdgfsJV8qY9Ucn_CzY7iQ8nKTScNa5Vjcl-rW5dm83pYJ4fpiTJ4HirA970p7uWLXjizVabtXe6evkclAOpywG7DPtRNIlzfa4Bo8-4VMaj8-Iw&ved=2ahUKEwiU5dPUzqeXAxUlrYkEHdVfPBcQFnoECBIQAQ&uoh=1",
+      "displayed_link": "https://askfilo.com › CBSE › Smart Solutions",
+      "favicon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png",
+      "date": "19 May 2025",
+      "snippet": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234→9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 ...",
+      "snippet_highlighted_words": [
+       "9876501234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "The number 9876501234 can be easily read by placing commas first: (a) 9,87,65,01,234→9 arab 87 crore 65 lakhs 1 thousand and 234 or 987 ...",
+        "source_info_link": "https://askfilo.com/user-question-answers-smart-solutions/large-numbers-around-us-how-many-zeros-does-a-hundred-3334343235333138",
+        "icon": "https://serpapi.com/images/i/iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAY1BMVEVHcEwTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUTVsUJU8UATsQARsFNfNCmt-PN2vD____o7_qmdWq0xOczaMmRqd2HaoT_kgAAQMEANL5aY5h6mdoWXslCZ6WiIZZTAAAADXRSTlMAN4Ot0OG1Bf-UcHkRflvbLAAAASBJREFUeAGEkgcCgyAMRRFXOhLUtEjrvP8pG-h2Prf_sVE_RDpO0jTNdKQWyDX8cJjlR5hw-s8TmJHmP9WnsMR5PX-Rr9b_In33bxUdBAggIczxuQaPKcoCURwS8X8-nnnFfDHXK5K1Nf5VEYFATnJ3u99vDXPxK0Tq9KrAtiRC9xLw3ZJWsdwRL9wjDOOIQcCmKN1gvJCFSWhYqEq5DV4g8YXShKlI50IjeSWXo7cArTTRGHoJBXPdtJa58UKYZyMC4fASLFup3esoQrwmmCBk6jQXemYwjQtNaBXNBbnYVs9ORkrNBapZCO3Aa7God37-nANyrkY0zpaFeW9e8AZhuH_eXlO9v2H2t1xgb9Oq8862fwxHxiGU9YjNvASzPwD2QCb1RpKkdQAAAABJRU5ErkJggg.png"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CowCL2dvdG8_dXJsPUNBRVN2QUVCNnpzd0ZYZlJ5WElmdi14ZTZ1S24xM0EzcG01bnAzUE9kaUQ3dTZKTnlMeDR3ZVoxNnZrLVBTdFpGYzdpYzlQR0RYQ2h4TTd1c1hEX1BFX1dFd2dkcUhJV2tHUEhhNERsYXdiSE9ZZzQwSWxia0lUcGhMdXR6Ty1xMEFFOWdEeDdlMHU4UmsxdnU4UXNkZ2ZzSlY4cVk5VWNuX0N6WTdpUThuS1RTY05hNVZqY2wtclc1ZG04M3BZSjRmcGlUSjRIaXJBOTcwcDd1V0xYaml6VmFidFhlNmV2a2NsQU9weXdHN0RQdFJOSWx6ZmE0Qm84LTRWTWFqOC1JdxIEGgIIABrABBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCcBAgAEAAYACAAKisKCjk4NzY1MDEyMzQV7p0AQBoLOTg3NjUgMDEyMzQaCzk4NzY1IDAxMjM0MowCL2dvdG8_dXJsPUNBRVN2QUVCNnpzd0ZYZlJ5WElmdi14ZTZ1S24xM0EzcG01bnAzUE9kaUQ3dTZKTnlMeDR3ZVoxNnZrLVBTdFpGYzdpYzlQR0RYQ2h4TTd1c1hEX1BFX1dFd2dkcUhJV2tHUEhhNERsYXdiSE9ZZzQwSWxia0lUcGhMdXR6Ty1xMEFFOWdEeDdlMHU4UmsxdnU4UXNkZ2ZzSlY4cVk5VWNuX0N6WTdpUThuS1RTY05hNVZqY2wtclc1ZG04M3BZSjRmcGlUSjRIaXJBOTcwcDd1V0xYaml6VmFidFhlNmV2a2NsQU9weXdHN0RQdFJOSWx6ZmE0Qm84LTRWTWFqOC1Jdzo6TGFyZ2UgTnVtYmVycyBBcm91bmQgVXMgPyBIb3cgbWFueSB6ZXJvcyBkb2VzIGEgLi4uIC0gRmlsb0KZAVRoZSBudW1iZXIgPGI-OTg3NjUwMTIzNDwvYj4gY2FuIGJlIGVhc2lseSByZWFkIGJ5IHBsYWNpbmcgY29tbWFzIGZpcnN0OiAoYSkgOSw4Nyw2NSwwMSwyMzTihpI5IGFyYWIgODcgY3JvcmUgNjUgbGFraHMgMSB0aG91c2FuZCBhbmQgMjM0IG9yIDk4NyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CowCL2dvdG8_dXJsPUNBRVN2QUVCNnpzd0ZYZlJ5WElmdi14ZTZ1S24xM0EzcG01bnAzUE9kaUQ3dTZKTnlMeDR3ZVoxNnZrLVBTdFpGYzdpYzlQR0RYQ2h4TTd1c1hEX1BFX1dFd2dkcUhJV2tHUEhhNERsYXdiSE9ZZzQwSWxia0lUcGhMdXR6Ty1xMEFFOWdEeDdlMHU4UmsxdnU4UXNkZ2ZzSlY4cVk5VWNuX0N6WTdpUThuS1RTY05hNVZqY2wtclc1ZG04M3BZSjRmcGlUSjRIaXJBOTcwcDd1V0xYaml6VmFidFhlNmV2a2NsQU9weXdHN0RQdFJOSWx6ZmE0Qm84LTRWTWFqOC1JdxIEGgIIABrABBIAGgAiACoAMgYIAxICaW46AEIECAEQAEoAWgByAHoAgkCcBAgAEAAYACAAKisKCjk4NzY1MDEyMzQV7p0AQBoLOTg3NjUgMDEyMzQaCzk4NzY1IDAxMjM0MowCL2dvdG8_dXJsPUNBRVN2QUVCNnpzd0ZYZlJ5WElmdi14ZTZ1S24xM0EzcG01bnAzUE9kaUQ3dTZKTnlMeDR3ZVoxNnZrLVBTdFpGYzdpYzlQR0RYQ2h4TTd1c1hEX1BFX1dFd2dkcUhJV2tHUEhhNERsYXdiSE9ZZzQwSWxia0lUcGhMdXR6Ty1xMEFFOWdEeDdlMHU4UmsxdnU4UXNkZ2ZzSlY4cVk5VWNuX0N6WTdpUThuS1RTY05hNVZqY2wtclc1ZG04M3BZSjRmcGlUSjRIaXJBOTcwcDd1V0xYaml6VmFidFhlNmV2a2NsQU9weXdHN0RQdFJOSWx6ZmE0Qm84LTRWTWFqOC1Jdzo6TGFyZ2UgTnVtYmVycyBBcm91bmQgVXMgPyBIb3cgbWFueSB6ZXJvcyBkb2VzIGEgLi4uIC0gRmlsb0KZAVRoZSBudW1iZXIgPGI-OTg3NjUwMTIzNDwvYj4gY2FuIGJlIGVhc2lseSByZWFkIGJ5IHBsYWNpbmcgY29tbWFzIGZpcnN0OiAoYSkgOSw4Nyw2NSwwMSwyMzTihpI5IGFyYWIgODcgY3JvcmUgNjUgbGFraHMgMSB0aG91c2FuZCBhbmQgMjM0IG9yIDk4NyZuYnNwOy4uLiICEAFIAFgAaAA",
+      "source": "Filo",
+      "read_more_link": "https://askfilo.com/user-question-answers-smart-solutions/large-numbers-around-us-how-many-zeros-does-a-hundred-3334343235333138#:~:text=The%20number%209876501234%20can%20be,234%20(in%20the%20Indian%20system)."
+     }
+    ],
+    "search_information": {
+     "query_displayed": "\"9876501234\" OR \"98765 01234\" OR \"+91 98765 01234\"",
+     "total_results": 682,
+     "time_taken_displayed": 0.18,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:41:15 UTC"
+   }
+  },
+  "85b5099addfcf0075114a1254f3faa82057108e9f9e329c6cc365dcadc72f02f": {
+   "engine": "google_news",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "q": "fake Amazon customer care number fraud"
+   },
+   "response": {
+    "news_results": [
+     {
+      "position": 1,
+      "title": "Elderly man loses ₹1.36 lakh in fake Amazon customer care scam",
+      "source": {
+       "name": "The Hindu",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.thehindu.com/news/cities/Hyderabad/elderly-man-loses-136-lakh-in-fake-amazon-customer-care-scam/article70331180.ece",
+      "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+      "date": "11/27/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-27T08:00:00Z"
+     },
+     {
+      "position": 2,
+      "title": "Amazon Business: The Benefits, the Scams, and How to Stay Safe",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Cristina Popov"
+       ]
+      },
+      "link": "https://www.bitdefender.com/en-au/blog/hotforsecurity/amazon-business-the-benefits-the-scams-and-how-to-stay-safe",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2024/12/Amazon-Business-The-Benefits--the-Scams--and-How-to-Stay-Safe.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXdPVlo1VUhOd2N6ZEdTSGt4VFJDM0FSaVRBaWdCTWdhaGc0WnZMUWM",
+      "date": "10/02/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-10-02T07:00:00Z"
+     },
+     {
+      "position": 3,
+      "title": "Gandhinagar resident loses Rs 1.36 lakh in fake Amazon Customer Care OTP fraud",
+      "source": {
+       "name": "NewsMeter",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://newsmeter.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://newsmeter.in/hyderabad/gandhinagar-resident-loses-rs-136-lakh-in-fake-amazon-customer-care-otp-fraud-758864",
+      "thumbnail": "https://newsmeter.in/h-upload/2025/11/27/417781-new-project-2025-11-27t154150634.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTBka0Z1T0V0SmNVOUJiMHRKVFJDdEF4akxCU2dLTWdZdEZJcVBGUVU",
+      "date": "11/27/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-27T08:00:00Z"
+     },
+     {
+      "position": 4,
+      "title": "Amazon files lawsuit after losing millions in fake laptop and GPU refunds; tells court: We spent over $75",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/amazon-files-lawsuit-after-losing-millions-in-fake-laptop-and-gpu-refunds-tells-court-we-spent-over-75000-investigating-so-give-us-/articleshow/130405360.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-130405356,width-1280,height-720,imgsize-17224,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWlVMnhLVGxwWmJYZFNkSGxKVFJDZkF4ampCU2dLTWdZRmdwQW51UVk",
+      "date": "04/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-23T07:00:00Z"
+     },
+     {
+      "position": 5,
+      "title": "Fraud Alert: Big Online Sale? Cybercriminals Are Also Shopping for Victims",
+      "source": {
+       "name": "Moneylife",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Yogesh Sapkale"
+       ]
+      },
+      "link": "https://www.moneylife.in/article/fraud-alert-big-online-sale-cybercriminals-are-also-shopping-for-victims/80964.html",
+      "thumbnail": "https://www.moneylife.in/site/userimage/image/responsive/Fraud02072026Mian.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXBkVWRUVVVzd1YyODFPRmhMVFJDZUF4amxCU2dLTWdZVllvb0pNZ2M",
+      "date": "07/03/2026, 09:09 AM, +0000 UTC",
+      "iso_date": "2026-07-03T09:09:39Z"
+     },
+     {
+      "position": 6,
+      "title": "Inside a fake Amazon call centre: How 21 scammers fooled customers from Sector 2, Panchkula",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jagpreet Sandhu"
+       ]
+      },
+      "link": "https://indianexpress.com/article/cities/chandigarh/panchkula-fake-amazon-call-centre-us-citizens-scammed-arrests-10722072/",
+      "thumbnail": "https://images.indianexpress.com/2026/06/Untitled-design-30.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW5OMHQwYTJzMFduSlFYMDU0VFJDZkF4ampCU2dLTWdZQlFJZ1NyUVk",
+      "date": "06/03/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-03T07:00:00Z"
+     },
+     {
+      "position": 7,
+      "title": "Gandhinagar man loses Rs 1.3 lakh to OTP-based banking fraud",
+      "source": {
+       "name": "Telangana Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://telanganatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://telanganatoday.com/gandhinagar-man-loses-rs-1-3-lakh-to-otp-based-banking-fraud",
+      "thumbnail": "https://media.telanganatoday.com/wp-content/uploads/2025/11/Online-Fraud-01-1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNPVWhHUVRFd2JqSmlZbGhSVFJDb0F4alVCU2dLTWdZQk5JYkdPZ1k",
+      "date": "11/27/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-27T08:00:00Z"
+     },
+     {
+      "position": 8,
+      "title": "This Week in Scams: Explaining the Fake Amazon Code Surge",
+      "source": {
+       "name": "McAfee",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.mcafee.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Brooke Seipel"
+       ]
+      },
+      "link": "https://www.mcafee.com/blogs/security-news/this-week-in-scams-explaining-the-fake-amazon-code-surge/",
+      "thumbnail": "https://www.mcafee.com/blogs/wp-content/uploads/2025/02/1000x563_Blog_Social-Media-Scams.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxkVmRzY1ZCVFJuUkNhV1V3VFJDZ0F4amlCU2dLTWdheFE0b3hIUWs",
+      "date": "01/09/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-09T08:00:00Z"
+     },
+     {
+      "position": 9,
+      "title": "Holiday shoppers targeted as Amazon and FBI warn of surge in account takeover attacks",
+      "source": {
+       "name": "Malwarebytes",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.malwarebytes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Danny Bradbury"
+       ]
+      },
+      "link": "https://www.malwarebytes.com/blog/news/2025/11/holiday-shoppers-targeted-as-amazon-and-fbi-warn-of-surge-in-account-takeover-attacks",
+      "thumbnail": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2025/11/ATOfraudamazon.jpg?w=600",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUhkR2RPVEZoTE9IVlVUR1JsVFJEUkFoallCQ2dLTWdhbE1ZWVFMUVU",
+      "date": "11/27/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-27T08:00:00Z"
+     },
+     {
+      "position": 10,
+      "title": "How Amazon recall scams work",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.bitdefender.com/en-au/blog/hotforsecurity/amazon-recall-scams",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2026/05/amazon-recall-scams.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNURYM2h6YUhZdGQwbFdMVFJzVFJEU0FoallCQ2dLTWdZWlpvTHNLUWM",
+      "date": "05/20/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-20T07:00:00Z"
+     },
+     {
+      "position": 11,
+      "title": "Watch Out for These Fake Fraud Alerts From Apple and Amazon",
+      "source": {
+       "name": "Lifehacker",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://lifehacker.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Emily Long"
+       ]
+      },
+      "link": "https://lifehacker.com/money/fake-fraud-alerts-apple-amazon-scam",
+      "thumbnail": "https://lifehacker.com/imagery/articles/01KZPBQ1YP4V22B5ZNHCC9DSSX/hero-image.fill.size_400x225.v1786399736.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTVUbG8yYVhGRkxURldja2hQVFJEaEFSaVFBeWdLTWdZQlFJcnJxUVU",
+      "date": "08/11/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-11T07:00:00Z"
+     },
+     {
+      "position": 12,
+      "title": "Why that Amazon product recall text is probably a scam",
+      "source": {
+       "name": "USA Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.usatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Amaris Encinas"
+       ]
+      },
+      "link": "https://www.usatoday.com/story/money/2026/02/07/amazon-recall-scam-message/88567847007/",
+      "thumbnail": "https://www.usatoday.com/gcdn/authoring/authoring-images/2026/02/07/USAT/88569583007-1534378554.jpg?crop=6239,3510,x0,y0&width=660&height=371&format=pjpg&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVhUMGRNVEhGb1RtWkRRVWR2VFJEekFoaVVCU2dLTWdtRkE0WmpFbXBzVVFF",
+      "date": "02/07/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-02-07T08:00:00Z"
+     },
+     {
+      "position": 13,
+      "title": "Amazon recall text scam comes with red flags",
+      "source": {
+       "name": "Fox News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.foxnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.foxnews.com/tech/amazon-recall-text-scam-comes-red-flags",
+      "thumbnail": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/04/1280/720/amazon-prime-day-2026-what-we-know-so-far-and-how-to-shop-the-best-deals.jpg?ve=1&tl=1",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWpNVU5rYTB4SmQxRnljMlpUVFJDZkF4ampCU2dLTWdhTk5ZWXB0Z00",
+      "date": "05/18/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-18T07:00:00Z"
+     },
+     {
+      "position": 14,
+      "title": "Amazon Sues Over Refund Scam Involving GPUs, Laptops",
+      "source": {
+       "name": "PCMag",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.pcmag.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Michael Kan"
+       ]
+      },
+      "link": "https://www.pcmag.com/news/amazon-sues-over-refund-scam-involving-gpus-laptops",
+      "thumbnail": "https://i.pcmag.com/imagery/articles/075anQOsCfXWKBNXh8nu3u3-1..v1776372998.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXBZa2gwYVd0RGVWSnBhR3B2VFJDZkF4ampCU2dLTWdZZFE0SlJJUW8",
+      "date": "04/16/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-16T07:00:00Z"
+     },
+     {
+      "position": 15,
+      "title": "Fake Support: American Airlines Passengers Lose Thousands To Google Search Scam",
+      "source": {
+       "name": "Simple Flying",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://simpleflying.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Jack Mcgarity"
+       ]
+      },
+      "link": "https://simpleflying.com/american-airlines-passengers-lose-thousands-googe-search-scam/",
+      "thumbnail": "https://static0.simpleflyingimages.com/wordpress/wp-content/uploads/2026/07/american-airlines-airbus-a319-n725uw-at-clt.jpg?w=1600&h=900&fit=crop",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNW1aaTFFVlRCMmVWSk5abmR0VFJDZkF4ampCU2dLTWdrQllaUXZPV2U1Q1FJ",
+      "date": "07/09/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-09T07:00:00Z"
+     },
+     {
+      "position": 16,
+      "title": "Man duped of Rs 7.53 Lakh by fake ‘Amazon customer service’",
+      "source": {
+       "name": "The Indian Express",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Mohamed Thaver"
+       ]
+      },
+      "link": "https://indianexpress.com/article/cities/mumbai/man-duped-of-rs-7-53-lakh-by-fake-amazon-customer-service-9060642/",
+      "thumbnail": "https://images.indianexpress.com/2023/12/fake-amazon.jpg?w=640",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdkRVJWU1RCRFpHcE5XbEJ4VFJEb0FoaUFCU2dLTWdhUk5vNW9tZ1U",
+      "date": "12/09/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-09T08:00:00Z"
+     },
+     {
+      "position": 17,
+      "title": "Jaipur fake call centres busted: Amazon, Apple scam duped thousands of Americans; 60 arrested",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/jaipur/cops-bust-fake-us-amazon-apple-call-centres-in-jaipur/articleshow/125493759.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-125499272,width-1280,height-720,resizemode-72/125499272.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBOR3AyZFV4Q1QzbDNPVEpqVFJDZkF4ampCU2dLTWdhQmNaUUlxUWc",
+      "date": "11/22/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-22T08:00:00Z"
+     },
+     {
+      "position": 18,
+      "title": "6 tips to help you spot and avoid scams impersonating Amazon",
+      "source": {
+       "name": "About Amazon",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.aboutamazon.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.aboutamazon.com/news/retail/how-to-avoid-amazon-scams",
+      "thumbnail": "https://i.ytimg.com/vi/ZYQ3C_A9nic/mqdefault.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTBaa3M1VjBVMlVsWTRPRkU1VFJDMEFSakFBaWdLTWdhWlpJeXNOUVk",
+      "date": "11/15/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-11-15T08:00:00Z"
+     },
+     {
+      "position": 19,
+      "title": "Fake Amazon call centre busted at Igatpuri resort: CBI arrests 5 in Nashik; Rs 1.2 crore in cash, 500g go",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/city/mumbai/igatpuri-resort-cbi-raid-5-arrested-in-fake-amazon-call-centre-scam-rs-1-2-crore-cash-500gram-gold-luxury-cars-seized/articleshow/123226790.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-123226805,width-1280,height-720,resizemode-72/123226805.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU9lRkJVZW1OalExcEtaRWRUVFJDZ0F4amlCU2dLTWdZSlVvUk1zUU0",
+      "date": "08/11/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-08-11T07:00:00Z"
+     },
+     {
+      "position": 20,
+      "title": "Amazon warns its 310 million-plus users of fraud and hacking as Black Friday sale 2025 goes live: How to",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/amazon-warns-its-310-million-plus-users-of-fraud-and-hacking-as-black-friday-sale-2025-goes-live-how-to-stay-safe/articleshow/125546046.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-125546002,width-1280,height-720,resizemode-4/125546002.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNTBWMTlhZDFGWGNYZDZlWEpQVFJDZkF4ampCU2dLTWdNaEF3SQ",
+      "date": "11/26/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-26T08:00:00Z"
+     },
+     {
+      "position": 21,
+      "title": "Cybercrooks Pose as Amazon in Phishing Scheme",
+      "source": {
+       "name": "AARP",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.aarp.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sandra Guy"
+       ]
+      },
+      "link": "https://www.aarp.org/money/scams-fraud/amazon-phishing-email/",
+      "thumbnail": "https://cdn.aarp.net/content/dam/aarpe/en/home/money/scams-fraud/account/_jcr_content/root/container_main/container_moreAarp_main/container_moreAarp/container_moreAarp_cmp/featuredlist/tabItem/amazon-phishing-email2.coreimg.50.932.jpeg/content/dam/aarp/money/scams_fraud/2020/07/1140-amazon-logo.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW5VbGRPZEVsemVuZFZUa2d3VFJDakF4amJCU2dLTWdZQllKTEhNQWM",
+      "date": "07/23/2020, 07:00 AM, +0000 UTC",
+      "iso_date": "2020-07-23T07:00:00Z"
+     },
+     {
+      "position": 22,
+      "title": "Amazon Scams: How to spot fake texts, emails and phone calls",
+      "source": {
+       "name": "AZ Family",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.azfamily.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Cyrus Grant"
+       ]
+      },
+      "link": "https://www.azfamily.com/2026/03/30/amazon-scams-how-spot-fake-texts-emails-phone-calls/",
+      "thumbnail": "https://gray-kpho-prod.gtv-cdn.com/resizer/v2/PZS6AAFXIRAYTHMKEWBSER2K3E.png?auth=91e601bfd90bd331636535d4645e3b2a9858270c48eb4b7bbb0424602ec10524&width=1200&height=600&smart=true",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU9Vek50VkdSdk1WSTJOVkF0VFJDSEF4aVBCaWdLTWdZZEY0cEtHZ2c",
+      "date": "03/29/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-03-29T07:00:00Z"
+     },
+     {
+      "position": 23,
+      "title": "iPhone 15 exchange scam on Amazon: Supreme Court lawyer shares how he was 'duped', and what buyers should",
+      "source": {
+       "name": "The Times of India",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://timesofindia.indiatimes.com/technology/tech-news/iphone-15-exchange-scam-on-amazon-supreme-court-lawyer-shares-how-he-was-duped-and-what-buyers-should-not-do/articleshow/112307116.cms",
+      "thumbnail": "https://static.toiimg.com/thumb/msid-112307192,width-1280,height-720,resizemode-4/112307192.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpaVWxDVEZKWVMyOVFUVVU1VFJDZkF4ampCU2dLTWdZWk1vYU9zUVU",
+      "date": "08/06/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-08-06T07:00:00Z"
+     },
+     {
+      "position": 24,
+      "title": "Beware of Amazon 'one-time passcode' scams",
+      "source": {
+       "name": "Which?",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.which.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Tali Ramsey"
+       ]
+      },
+      "link": "https://www.which.co.uk/news/article/beware-of-amazon-one-time-passcode-scams-aAkPb4K9OrMD",
+      "thumbnail": "https://media.product.which.co.uk/prod/images/original/2ff7ab92f505-amazon-app.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXZiVVU1UlRsS2VIVlBiakEyVFJDSEF4aVBCaWdLTWdhcE5aRHVwUWM",
+      "date": "01/06/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-01-06T08:00:00Z"
+     },
+     {
+      "position": 25,
+      "title": "60 fraudsters posing as Amazon, Apple support callers arrested for duping US citizens",
+      "source": {
+       "name": "India Today",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Vishal Sharma"
+       ]
+      },
+      "link": "https://www.indiatoday.in/cities/jaipur/story/60-fake-amazon-apple-support-callers-based-in-jaipur-duped-us-citizens-arrested-2824042-2025-11-21",
+      "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202511/jaipur-cyber-fraud-21435189-16x9_0.png?VersionId=AsUMk3Tb2qWmJeMWSDbyNCX_fJOVWWJP&size=1280:720",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFaMUZGU1V3MmJFZFFWWFJrVFJDZkF4ampCU2dLTWdZQlFKZ0NJUWs",
+      "date": "11/21/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-11-21T08:00:00Z"
+     },
+     {
+      "position": 26,
+      "title": "Amazon Sellers Report Rising Concerns Over Fraudulent Returns",
+      "source": {
+       "name": "Forbes",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.forbes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Kiri Masters"
+       ]
+      },
+      "link": "https://www.forbes.com/sites/kirimasters/2025/01/31/amazon-sellers-report-rising-concerns-over-fraudulent-returns/",
+      "thumbnail": "https://imageio.forbes.com/specials-images/imageserve/679c3e456610cbe4ae81f56a/Amazon/0x0.jpg?format=jpg&width=480",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUtNbGxOZEc1RU4xVTRSVW8yVFJEQUFoamdBeWdLTWdZWnBJckp0UVU",
+      "date": "01/31/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-01-31T08:00:00Z"
+     },
+     {
+      "position": 27,
+      "title": "Amazon Account Hacked? Here's What to Do Immediately",
+      "source": {
+       "name": "McAfee",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.mcafee.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.mcafee.com/learn/is-your-amazon-account-hacked/",
+      "thumbnail": "https://www.mcafee.com/learn/wp-content/uploads/2025/05/amazon-scams.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxWWEJRYUdKMWRsOWlSbmd3VFJDdEF4akxCU2dLTWdhcElvTE5HUWs",
+      "date": "04/25/2026, 03:11 PM, +0000 UTC",
+      "iso_date": "2026-04-25T15:11:18Z"
+     },
+     {
+      "position": 28,
+      "title": "Bogus customer service is just the latest online scam you need to be aware of",
+      "source": {
+       "name": "USA Today",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.usatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Susan Tompor"
+       ]
+      },
+      "link": "https://www.usatoday.com/story/money/2025/05/26/scammers-use-fake-customer-service-numbers/83865743007/",
+      "thumbnail": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/08/28/PDTF/74987111007-062824-power-outages-rg-01.jpg?crop=2399,1351,x0,y124&width=660&height=371&format=pjpg&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVFkemgyZGtFMlgzbEVabGhQVFJDb0FSaXNBaWdCTWdZQmdJck51QVU",
+      "date": "05/27/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-05-27T07:00:00Z"
+     },
+     {
+      "position": 29,
+      "title": "Scammers impersonating Amazon send fake text notices about recalls",
+      "source": {
+       "name": "Detroit Free Press",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.freep.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Susan Tompor"
+       ]
+      },
+      "link": "https://www.freep.com/story/money/personal-finance/susan-tompor/2026/03/31/amazon-shoppers-sent-fake-texts-about-recall-notices/89345912007/",
+      "thumbnail": "https://www.freep.com/gcdn/authoring/authoring-images/2026/03/20/USAT/89243935007-getty-images-1347254197.jpg?crop=3710,2088,x0,y107&width=660&height=371&format=pjpg&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRhWFF4YmpaR1lqRmZWRFJIVFJEekFoaVVCU2dLTWdZWmFJaHBMZ1k",
+      "date": "03/31/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-03-31T07:00:00Z"
+     },
+     {
+      "position": 30,
+      "title": "Amazon warns 200 million Prime customers that scammers are after their login info",
+      "source": {
+       "name": "Malwarebytes",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.malwarebytes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Pieter Arntz"
+       ]
+      },
+      "link": "https://www.malwarebytes.com/blog/news/2025/07/amazon-warns-200-million-prime-customers-that-scammers-are-after-their-login-info",
+      "thumbnail": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2025/07/Prime_logo.png?w=600",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWlUWEZDYTBwaloxSkdNRjlLVFJEM0FoallCQ2dLTWdPTlVSWQ",
+      "date": "07/16/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-16T07:00:00Z"
+     },
+     {
+      "position": 31,
+      "title": "Fake Product Scare: Amazon's Customers Demand Better Redressal",
+      "source": {
+       "name": "Decode Internet",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.decodeinternet.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Hera Rizwan"
+       ]
+      },
+      "link": "https://www.decodeinternet.in/decode/fake-product-scare-amazon-customers-demand-better-redressal-22545",
+      "thumbnail": "https://www.decodeinternet.in/h-upload/2023/07/18/1011337-amazon-021.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRNVk5EVFUxV01XdGlkM055VFJDZkF4ampCU2dLTWdZSk1wb1FJUWc",
+      "date": "10/06/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-06T07:00:00Z"
+     },
+     {
+      "position": 32,
+      "title": "That \"Amazon Safety Recall\" message may well be a scam",
+      "source": {
+       "name": "Malwarebytes",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.malwarebytes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Pieter Arntz"
+       ]
+      },
+      "link": "https://www.malwarebytes.com/blog/news/2025/08/that-amazon-safety-recall-message-may-well-be-a-scam",
+      "thumbnail": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2023/12/Amazon_pick_up_location.jpg?w=600",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWljSFJDT0Y5WVNHOUlhRGN4VFJEUkFoallCQ2dLTWdhbEJZRExpUXM",
+      "date": "08/12/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-08-12T07:00:00Z"
+     },
+     {
+      "position": 33,
+      "title": "If you’re getting fake texts from scammers posing as Amazon, you’re not alone—here’s what you can do",
+      "source": {
+       "name": "CNBC",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.cnbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "T.H. Huddleston"
+       ]
+      },
+      "link": "https://www.cnbc.com/2022/07/31/fake-texts-posing-as-amazon-how-to-handle-phishing-smishing-attacks.html",
+      "thumbnail": "https://image.cnbcfm.com/api/v1/image/107096289-1659122110473-gettyimages-1242112802-BC_2022NumberChart_8764.jpeg?v=1675429823&w=1600&h=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRUVXROUTJaVmMyeFBTV05DVFJDZkF4ampCU2dLTWdZdDBZVFFTQU0",
+      "date": "07/31/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-07-31T07:00:00Z"
+     },
+     {
+      "position": 34,
+      "title": "Shop Smart: How to Avoid Scams and Mid Products on Amazon",
+      "source": {
+       "name": "WIRED",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.wired.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Louryn Strampe"
+       ]
+      },
+      "link": "https://www.wired.com/story/how-shop-safe-amazon/",
+      "thumbnail": "https://media.wired.com/photos/6849b140ab7f5079900d4624/master/w_2560%2Cc_limit/How%2520to%2520Avoid%2520Scams%2520and%2520Shoddy%2520Wares%2520on%2520Amazon.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHpkVmd6TkhsbU5Xd3lhVmxzVFJERUF4aW1CU2dLTWdZZEVZWU5wUU0",
+      "date": "09/20/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-20T07:00:00Z"
+     },
+     {
+      "position": 35,
+      "title": "Amazon and Apple impersonated in \"$149.99 unauthorized charge\" scam",
+      "source": {
+       "name": "Malwarebytes",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.malwarebytes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Stefan Dasic"
+       ]
+      },
+      "link": "https://www.malwarebytes.com/blog/scams/2026/08/amazon-and-apple-impersonated-in-149-99-unauthorized-charge-scam",
+      "thumbnail": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/08/Amazon-and-apple-logos.png?w=600",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU1hR3hqVkY5eVpXVnhhbnBKVFJEUkFoallCQ2dLTWdtUlFZNklxbWM5NlFF",
+      "date": "08/06/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-06T07:00:00Z"
+     },
+     {
+      "position": 36,
+      "title": "'Amazon scam was so authentic it got me hook, line and sinker'",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bbc.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Holly Rattley"
+       ]
+      },
+      "link": "https://www.bbc.co.uk/news/articles/c3wygj8qv8lo",
+      "thumbnail": "https://c.files.bbci.co.uk/fec0/live/e00e8e50-850f-11f1-a08a-6d526d664753.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXpkMUZDZFRKelRuVkVTbWRuVFJDYUF4alpCU2dLTWdhcFZZN05xUWM",
+      "date": "07/22/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-22T07:00:00Z"
+     },
+     {
+      "position": 37,
+      "title": "This Is What an Amazon Email Scam Looks Like",
+      "source": {
+       "name": "Reader's Digest",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.rd.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Brooke Nelson Alexander"
+       ]
+      },
+      "link": "https://www.rd.com/article/amazon-email-scam/",
+      "thumbnail": "https://www.rd.com/wp-content/uploads/2022/01/amazon-email-scams-opener-getty-1161794768-rd.com_.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVZVek5EVFZOaFJGZHJOM1V3VFJERUF4aW1CU2dLTWdhbGhKQ3R0UVk",
+      "date": "03/27/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-03-27T07:00:00Z"
+     },
+     {
+      "position": 38,
+      "title": "ICONY: Detecting and Handling Fake Accounts with Amazon Fraud Detector",
+      "source": {
+       "name": "Amazon Web Services (AWS)",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://aws.amazon.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://aws.amazon.com/blogs/startups/icony-detecting-and-handling-fake-accounts-with-amazon-fraud-detector/",
+      "thumbnail": "https://d2908q01vomqb2.cloudfront.net/cb4e5208b4cd87268b208e49452ed6e89a68e0b8/2021/12/15/ICONY_FraudDetecton_Overview.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNDNOR041VmtKUmEzUTRaRjlOVFJDckJCaXBCQ2dLTWdPQkV3Zw",
+      "date": "12/15/2021, 08:00 AM, +0000 UTC",
+      "iso_date": "2021-12-15T08:00:00Z"
+     },
+     {
+      "position": 39,
+      "title": "Amazon Warns 220 Million Customers Of Prime Account Attacks",
+      "source": {
+       "name": "Forbes",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.forbes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Davey Winder"
+       ]
+      },
+      "link": "https://www.forbes.com/sites/daveywinder/2025/07/19/amazon-warns-220-million-customers-of-prime-account-attacks/",
+      "thumbnail": "https://imageio.forbes.com/specials-images/imageserve/6878f6b6c97afccd60e9d69d/Amazon-and-Prime-logos/0x0.jpg?format=jpg&width=480",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUhNbGw0U0hCMFkwZEtRMjkwVFJEQUFoamdBeWdLTWdrSklZajB0R2FpTkFF",
+      "date": "07/19/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-19T07:00:00Z"
+     },
+     {
+      "position": 40,
+      "title": "3 Revolut Scams to Watch Out For: How Fraudsters Trick Users and How to Stay Safe",
+      "source": {
+       "name": "Bitdefender",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Cristina Popov"
+       ]
+      },
+      "link": "https://www.bitdefender.com/en-gb/blog/hotforsecurity/latest-revolut-scams",
+      "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2025/05/3-Revolut-Scams-to-Watch-Out-For-How-Fraudsters-Trick-Users-and-How-to-Stay-Safe--2-.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJXVTFhTUcxYVdUQnNVSFJYVFJDM0FSaVRBaWdCTWdhWlVZNHVOUVk",
+      "date": "05/29/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-05-29T07:00:00Z"
+     },
+     {
+      "position": 41,
+      "title": "Is Amazon Hand In Glove With Fraudulent Delivery Partners in India?",
+      "source": {
+       "name": "Dazeinfo",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://dazeinfo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://dazeinfo.com/2020/02/25/amazon-delivery-fraud-india/",
+      "thumbnail": "https://dazeinfo.com/wp-content/uploads/2020/02/download.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXlhRlpIVVdoM1VFbEdkbFpCVFJEMEFoaTRCaWdLTWdrQklvd3FyYVdDcHdJ",
+      "date": "02/25/2020, 08:00 AM, +0000 UTC",
+      "iso_date": "2020-02-25T08:00:00Z"
+     },
+     {
+      "position": 42,
+      "title": "Beware these fake Amazon phone numbers",
+      "source": {
+       "name": "WCPO 9 News",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.wcpo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "John Matarese"
+       ]
+      },
+      "link": "https://www.wcpo.com/money/consumer/dont-waste-your-money/beware-these-fake-amazon-phone-numbers",
+      "thumbnail": "https://ewscripps.brightspotcdn.com/dims4/default/15492b0/2147483647/strip/true/crop/640x336+0+46/resize/1200x630!/quality/90/?url=https%3A%2F%2Fsharing.wcpo.com%2Fsharektnv%2Fphoto%2F2018%2F04%2F27%2Famazonprimelogo_1524869192481_85192198_ver1.0_640_480.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNDRiRm94YTNoS1NXNXlUVXRRVFJDUkF4ajhCU2dLTWd1SkFZQ2tRaVJyT0RqTnNB",
+      "date": "05/02/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-05-02T07:00:00Z"
+     },
+     {
+      "position": 43,
+      "title": "How Amazon protects consumers from scams",
+      "source": {
+       "name": "About Amazon UK",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.aboutamazon.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.aboutamazon.co.uk/news/policy-news-views/amazon-consumer-scam-protection",
+      "thumbnail": "https://assets.aboutamazon.com/b5/db/6e21bf3241ce89541a19a345c39d/about-amazon-hero-customertrust-img-9.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBiVlIzYzNCTWMyZG5VVVJRVFJDZkF4ampCU2dLTWdZRlFvaXVtUWs",
+      "date": "03/08/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-03-08T08:00:00Z"
+     },
+     {
+      "position": 44,
+      "title": "What to Know About the Latest Amazon-Impostor Scams",
+      "source": {
+       "name": "AARP",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.aarp.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Christina Ianzito"
+       ]
+      },
+      "link": "https://www.aarp.org/money/scams-fraud/latest-amazon-impostor-scams/",
+      "thumbnail": "https://aarp.widen.net/content/ffbcaga52r/jpeg/101345_Amazon_Fraud.jpg?crop=true&anchor=0,0&q=80&color=ffffffff&u=mh5igy&w=2048&h=1177",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHdkMGxpYmtkRGVFcE1NazVyVFJDa0F4amJCU2dLTWdZcFZZck9wUVU",
+      "date": "02/07/2025, 12:34 AM, +0000 UTC",
+      "iso_date": "2025-02-07T00:34:45Z"
+     },
+     {
+      "position": 45,
+      "title": "Amazon scams warning after spate of reports",
+      "source": {
+       "name": "Nottinghamshire Police",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.nottinghamshire.police.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.nottinghamshire.police.uk/news/nottinghamshire/news/news/2023/october/amazon-scams-warning-after-spate-of-reports/",
+      "thumbnail": "https://www.nottinghamshire.police.uk/SysSiteAssets/media/images/nottinghamshire/news/2023/10-october/20231010-amazon.jpg?crop=(0,106,948,605)&w=600&h=300&scale=both",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXdXRTFuVFRKMU5WaDRiWGMwVFJDZkFSaS1BaWdCTWdhaG81QnNPUVk",
+      "date": "10/10/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-10-10T07:00:00Z"
+     },
+     {
+      "position": 46,
+      "title": "11 Amazon scams to know and avoid in 2026",
+      "source": {
+       "name": "NordVPN",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://nordvpn.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://nordvpn.com/blog/amazon-scams/",
+      "thumbnail": "https://ic.nordcdn.com/v1/https://sb.nordcdn.com/m/4fc3ad6509c087b5/original/blog-featured-is-amazon-safe-svg.svg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU9XV0ZVU2tJd1QwWnZSM05NVFJDUkF4ajlCU2dLTWdhcEpZck9tUWs",
+      "date": "12/28/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-12-28T08:00:00Z"
+     },
+     {
+      "position": 47,
+      "title": "Amazon customer service scam targets your financial data",
+      "source": {
+       "name": "CBS News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.cbsnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Aimee Picchi"
+       ]
+      },
+      "link": "https://www.cbsnews.com/news/amazon-customer-service-scam-targets-your-financial-data/",
+      "thumbnail": "https://assets2.cbsnewsstatic.com/hub/i/r/2017/11/20/8fd15507-0aef-4333-a13a-485c71d927d5/thumbnail/1200x630/527eda736e21836ed1d5b77dd30302b3/amazon-istock-588359470.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDNhRFpSYzBGdGNHOXlXRlZ6VFJDUkF4ajhCU2dLTWdhWlJZenNKUWM",
+      "date": "02/20/2018, 08:00 AM, +0000 UTC",
+      "iso_date": "2018-02-20T08:00:00Z"
+     },
+     {
+      "position": 48,
+      "title": "Fraud Alert: Impersonation on Twitter; Beware of Dubious Apps, Links",
+      "source": {
+       "name": "Moneylife",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://mas360.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://mas360.moneylife.in/cyber-awareness/fraud-alert-impersonation-on-twitter-beware-of-dubious-apps-links/4358.html",
+      "thumbnail": "https://mas360.moneylife.in/media/userimage/image/article_gallery/faceoff1801122.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNVNlSGRvUWtsb1ZVTnJSR3hFVFJDb0FSaXRBaWdCTWdB",
+      "date": "11/18/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-11-18T08:00:00Z"
+     },
+     {
+      "position": 49,
+      "title": "Amazon remains one of the most frequently impersonated companies by scammers",
+      "source": {
+       "name": "Daily Herald",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.dailyherald.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.dailyherald.com/20260622/submitted-content/amazon-remains-one-of-the-most-frequently-impersonated-companies-by-scammers/",
+      "thumbnail": "https://imengine.public.prod.pdh.navigacloud.com/?uuid=a01e5845-09f3-569f-a1de-bfbf07313598&type=preview&function=cover&height=609&width=800",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVVSVnBHYTJ4Q1FWUXpRVmcxVFJERUF4aW5CU2dLTWdZQllJcXRSUVE",
+      "date": "06/22/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-22T07:00:00Z"
+     },
+     {
+      "position": 50,
+      "title": "Most common Amazon scams to avoid",
+      "source": {
+       "name": "MoneyWeek",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://moneyweek.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Oojal Dhanjal"
+       ]
+      },
+      "link": "https://moneyweek.com/personal-finance/amazon-scams-to-avoid",
+      "thumbnail": "https://cdn.mos.cms.futurecdn.net/GDA8Wim7PTNHq2xn9ZVgnF.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTRXbFZ2V2pKNmFtTldabmhTVFJERUF4aW1CU2dLTWdhcGM0cHVyUVU",
+      "date": "02/19/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-02-19T08:00:00Z"
+     },
+     {
+      "position": 51,
+      "title": "How Online Searches Fuel Tech Support Scams",
+      "source": {
+       "name": "AARP",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.aarp.org&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Michael Hedges"
+       ]
+      },
+      "link": "https://www.aarp.org/money/scams-fraud/online-ads-tech-support-scams/",
+      "thumbnail": "https://cdn.aarp.net/content/dam/aarpe/en/home/money/scams-fraud/online-ads-tech-support-scams/_jcr_content/root/container_main/container_body_main/container_body1/container_body_cf/container_image/articlecontentfragment/cfimage.coreimg.50.932.jpeg/content/dam/aarp/money/scams_fraud/2020/09/1140-magnifying-glass-computer.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWpOV3hyV2w5VFpXNWtPVjkyVFJDakF4amJCU2dLTWdrcE00SnZuV0tMSndJ",
+      "date": "09/08/2020, 07:00 AM, +0000 UTC",
+      "iso_date": "2020-09-08T07:00:00Z"
+     },
+     {
+      "position": 52,
+      "title": "Amazon Sues Over Fake Alexa Tech Support Apps",
+      "source": {
+       "name": "Voicebot.ai",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://voicebot.ai&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Eric Hal Schwartz"
+       ]
+      },
+      "link": "https://voicebot.ai/2020/05/18/amazon-sues-over-fake-alexa-tech-support-apps/",
+      "thumbnail": "http://voicebot.ai/wp-content/uploads/2020/05/39623894105_3df4f8e7df_c.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVpWWEZRTmxaRk4yVnFWRVZ5VFJDUUF4allCQ2dLTWdZQk1aQ3VIUWc",
+      "date": "05/18/2020, 07:00 AM, +0000 UTC",
+      "iso_date": "2020-05-18T07:00:00Z"
+     },
+     {
+      "position": 53,
+      "title": "Watch out for fake Amazon Prime Video billing emails hitting inboxes right now",
+      "source": {
+       "name": "AppleInsider",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://appleinsider.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Andrew Orr"
+       ]
+      },
+      "link": "https://appleinsider.com/articles/25/12/02/watch-out-for-fake-amazon-prime-video-billing-emails-hitting-inboxes-right-now",
+      "thumbnail": "https://photos5.appleinsider.com/gallery/65953-138235-IMG_4766-xl.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDVTRzlJZDFOd0xXVmxjV2hNVFJDZkF4ampCU2dLTWdZcFpZck9MUVU",
+      "date": "12/02/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-12-02T08:00:00Z"
+     },
+     {
+      "position": 54,
+      "title": "Amazon Scams On The Rise As Fraudulent Sellers Run Amok And Profit Big",
+      "source": {
+       "name": "Forbes",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.forbes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Wade Shepard"
+       ]
+      },
+      "link": "https://www.forbes.com/sites/wadeshepard/2017/01/02/amazon-scams-on-the-rise-in-2017-as-fraudulent-sellers-run-amok-and-profit-big/",
+      "thumbnail": "https://imageio.forbes.com/specials-images/imageserve/453488534/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVlMVjlwZVhkNmJrVjZVMm81VFJEV0F4aU5CU2dLTWdZdFZKS1BLUWM",
+      "date": "01/02/2017, 08:00 AM, +0000 UTC",
+      "iso_date": "2017-01-02T08:00:00Z"
+     },
+     {
+      "position": 55,
+      "title": "Amazon warns about online scams: How to protect your money",
+      "source": {
+       "name": "Good Morning America",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.goodmorningamerica.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.goodmorningamerica.com/living/story/amazon-warns-rise-scams-holiday-season-93401789",
+      "thumbnail": "https://s.abcnews.com/images/International/amazon-warehouse-sign-gty-jt-220718_1658180042255_hpMain_16x9_608.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJNRjloVTJ0cU5HTlZWR2gxVFJEV0FoamdCQ2dLTWdZWlU1WnFKUWc",
+      "date": "11/16/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-11-16T08:00:00Z"
+     },
+     {
+      "position": 56,
+      "title": "Walmart’s Marketplace boom: How lax vetting came with identity theft and fakes",
+      "source": {
+       "name": "CNBC",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.cnbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Gabrielle Fonrouge",
+        "Paige Tortorelli"
+       ]
+      },
+      "link": "https://www.cnbc.com/2025/09/19/walmart-marketplace-fakes-scams-investigation.html",
+      "thumbnail": "https://image.cnbcfm.com/api/v1/image/108200774-1758209551428-14_Products_CU.jpg?v=1758209679&w=1600&h=900",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU1OMGxaWW1oVE5uWjBMV04xVFJDZkF4ampCU2dLTWdtQmNKQUdyU2FTcVFJ",
+      "date": "09/19/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-09-19T07:00:00Z"
+     },
+     {
+      "position": 57,
+      "title": "Beware these fake Amazon phone numbers",
+      "source": {
+       "name": "KMTV 3 News Now Omaha",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.3newsnow.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "John Matarese"
+       ]
+      },
+      "link": "https://www.3newsnow.com/money/consumer/dont-waste-your-money/beware-these-fake-amazon-phone-numbers",
+      "thumbnail": "https://ewscripps.brightspotcdn.com/dims4/default/4b3a37d/2147483647/strip/true/crop/640x336+0+46/resize/1200x630!/quality/90/?url=https%3A%2F%2Fsharing.3newsnow.com%2Fsharektnv%2Fphoto%2F2018%2F04%2F27%2Famazonprimelogo_1524869192481_85192198_ver1.0_640_480.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNDRiRm94YTNoS1NXNXlUVXRRVFJDUkF4ajhCU2dLTWd1SkFZQ2tRaVJyT0RqTnNB",
+      "date": "05/02/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-05-02T07:00:00Z"
+     },
+     {
+      "position": 58,
+      "title": "Amazon Scams To Look Out for Right Now",
+      "source": {
+       "name": "Tech.co",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://tech.co&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Adam Rowe"
+       ]
+      },
+      "link": "https://tech.co/news/amazon-scams-look-out-for",
+      "thumbnail": "https://images.tech.co/wp-content/uploads/2023/06/14194956/Amazon-package-708x400.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUdObXB2Y1V0WFNHUlBjM1ppVFJDUUF4akVCU2dLTWdhaGdZNzByQVU",
+      "date": "06/15/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-15T07:00:00Z"
+     },
+     {
+      "position": 59,
+      "title": "Watch out for these scams targeting Amazon customers",
+      "source": {
+       "name": "WeLiveSecurity",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.welivesecurity.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Amer Owaida"
+       ]
+      },
+      "link": "https://www.welivesecurity.com/2021/07/30/scams-targeting-amazons-customers/",
+      "thumbnail": "https://web-assets.esetstatic.com/tn/-x700/wls/2021/07/shutterstock_557313232-large.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJOVzE1WkdwakxYaHdNRUpVVFJEREF4aW5CU2dLTWdZaGdaQk90UVk",
+      "date": "07/30/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-07-30T07:00:00Z"
+     },
+     {
+      "position": 60,
+      "title": "Amazon job text scam warning signs",
+      "source": {
+       "name": "Fox News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.foxnews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.foxnews.com/tech/amazon-job-text-scam-warning-signs",
+      "thumbnail": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/04/1280/720/amazon-job-text-scam-1.jpg?ve=1&tl=1",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJSWEpuVEZCMVV6WnZVSGRrVFJDZkF4ampCU2dLTWdZQklJeDNqQW8",
+      "date": "04/06/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-06T07:00:00Z"
+     },
+     {
+      "position": 61,
+      "title": "Scam Alert: Amazon Prime Video users are being tricked into paying fake fees",
+      "source": {
+       "name": "Mashable",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://mashable.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Matt Binder"
+       ]
+      },
+      "link": "https://mashable.com/article/amazon-prime-video-tv-scam",
+      "thumbnail": "https://helios-i.mashable.com/imagery/articles/066vrRMkPOdqfS01c0x5HOr/hero-image.fill.size_1248x702.v1649787969.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVVVSG80YUdaUk0wZGliR001VFJDZkF4ampCU2dLTWdZaE5vN3NvUWM",
+      "date": "04/12/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-04-12T07:00:00Z"
+     },
+     {
+      "position": 62,
+      "title": "The Online Shopping Basket Scam",
+      "source": {
+       "name": "BBC",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bbc.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.bbc.co.uk/programmes/articles/1dC1XxNWyXKjtwrDYJN5Dbx/the-online-shopping-basket-scam",
+      "thumbnail": "https://ichef.bbci.co.uk/images/ic/320xn/p0k798nr.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNW9jV2swY1RWNlMxQlNSMlV5VFJDeUFSakFBaWdLTWd1Qk1aYXVsU3FvYUdwTmtn",
+      "date": "11/28/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-11-28T08:00:00Z"
+     },
+     {
+      "position": 63,
+      "title": "Beware these fake Amazon phone numbers",
+      "source": {
+       "name": "ABC27",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.abc27.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "John Matarese"
+       ]
+      },
+      "link": "https://www.abc27.com/news/consumer/dont-waste-your-money/beware-these-fake-amazon-phone-numbers/",
+      "thumbnail": "https://www.abc27.com/wp-content/uploads/sites/55/2018/05/Beware_these_fake_Amazon_phone_numbers_0_41463427_ver1.0.jpg?strip=1",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhVbFpmTkhwMVJrbE1ORGg2VFJDZkF4ampCU2dLTWdhVkU1SXJFUXM",
+      "date": "05/02/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-05-02T07:00:00Z"
+     },
+     {
+      "position": 64,
+      "title": "AI helps Virgin Media O2 detect and flag 1 billion suspected scam and spam calls to customers",
+      "source": {
+       "name": "Virgin Media O2",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://news.virginmediao2.co.uk&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://news.virginmediao2.co.uk/ai-helps-virgin-media-o2-detect-and-flag-1-billion-suspected-scam-and-spam-calls-to-customers/",
+      "thumbnail": "https://news.virginmediao2.co.uk/wp-content/uploads/2026/03/Fraud-1-Billion-NS-2000x1000-1-1024x576.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxNQzF3YnpJemQxUnNMV2RSVFJDZkF4ampCU2dLTWdhdFZZek9LUVk",
+      "date": "03/06/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-03-06T08:00:00Z"
+     },
+     {
+      "position": 65,
+      "title": "Exclusive: Amazon exec discusses how company is fighting online fraud",
+      "source": {
+       "name": "Chain Store Age",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://chainstoreage.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Dan Berthiaume"
+       ]
+      },
+      "link": "https://chainstoreage.com/exclusive-amazon-exec-discusses-how-company-fighting-online-fraud",
+      "thumbnail": "https://assets1.chainstoreage.com/images/v/max_width_1440/2022-12/dharmesh_mehta_-_headshot.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVZXR3RZTlV3eGVXdGxaSEpEVFJDQUJSamdBeWdLTWdZbFZKQ05xUVk",
+      "date": "12/02/2022, 08:00 AM, +0000 UTC",
+      "iso_date": "2022-12-02T08:00:00Z"
+     },
+     {
+      "position": 66,
+      "title": "Got a package you didn't order? It could be a scam",
+      "source": {
+       "name": "ABC30 Fresno",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://abc30.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nathaniel Meyersohn",
+        "Zach Wasser"
+       ]
+      },
+      "link": "https://abc30.com/post/package-scam-scams-delivery-amazon/9937597/",
+      "thumbnail": "https://cdn.abcotvs.com/dip/images/6338870_072820-kabc-mdchina-seeds-CC-vid.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFkVUZLVG5aRFJUZ3liVVpQVFJDZkF4ampCU2dLTWdZVkFJYktsQWs",
+      "date": "01/23/2021, 08:00 AM, +0000 UTC",
+      "iso_date": "2021-01-23T08:00:00Z"
+     },
+     {
+      "position": 67,
+      "title": "Fraud Alert: Customer service imposter scams",
+      "source": {
+       "name": "KOMO",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://komonews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Herb Weisbaum"
+       ]
+      },
+      "link": "https://komonews.com/news/consumer/fraud-alert-customer-service-imposter-scams-email-text-spoofed-phone-numbers",
+      "thumbnail": "https://komonews.com/resources/media2/16x9/full/800/center/80/890151f7-5ea7-41ce-a252-937c197050b5-large16x9_GettyImagesrobocalls.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWtXa0paUm1zd05GOWtRMk5pVFJDZkF4ampCU2dLTWdNeEVBQQ",
+      "date": "01/17/2023, 08:00 AM, +0000 UTC",
+      "iso_date": "2023-01-17T08:00:00Z"
+     },
+     {
+      "position": 68,
+      "title": "Got a call from Amazon about fraud on your account? It could be a scam. Here's how to tell",
+      "source": {
+       "name": "Cincinnati Enquirer",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.cincinnati.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Sarah Brookbank"
+       ]
+      },
+      "link": "https://www.cincinnati.com/story/news/2021/05/28/scam-got-call-amazon-fraud-your-account/7468125002/",
+      "thumbnail": "https://www.cincinnati.com/gcdn/-mm-/e1c5ade5441051c10f74563e0db1c8758842b6a4/c=0-462-1200-1137/local/-/media/2021/05/10/Somerset/b51dbf94ce14417215619b99a747a576.jpg?width=660&height=371&fit=crop&format=pjpg&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXFSVlZ2TkhKcFdGRllUbU5SVFJEekFoaVVCU2dLTWdrSkFvSnZBU3hNdHdB",
+      "date": "05/28/2021, 07:00 AM, +0000 UTC",
+      "iso_date": "2021-05-28T07:00:00Z"
+     },
+     {
+      "position": 69,
+      "title": "SCAM ALERT: Fake Amazon & Temu Packages with Dangerous QR Codes Hitting Louisiana & Texas Homes",
+      "source": {
+       "name": "KPEL 96.5",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://kpel965.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Joe Cunningham"
+       ]
+      },
+      "link": "https://kpel965.com/louisiana-texas-brushing-scam-amazon-packages/",
+      "thumbnail": "https://townsquare.media/site/36/files/2025/01/attachment-Packages-Claudio-Schwarz-via-Unsplash.jpg?w=780&q=75",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUVRa1UxWjBGU1RWQmpXVTVIVFJEU0F4aVNCU2dLTWdrQlFJUUFIMlUxVUFF",
+      "date": "07/08/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-08T07:00:00Z"
+     },
+     {
+      "position": 70,
+      "title": "Amazon Fined Record $2.25M for Denying Fraud Records to Identity Theft Victims",
+      "source": {
+       "name": "Tech Times",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.techtimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.techtimes.com/articles/319404/20260630/amazon-fined-record-225m-denying-fraud-records-identity-theft-victims.htm",
+      "thumbnail": "https://d.techtimes.com/en/full/467756/illustration-picture-shows-amazon-logo-building-amazon.jpg?w=836&f=f2d84209e494d10e814e45805279ae4a",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTBUaTFHWWsxdlZGZzJjV3hEVFJERUF4aW5CU2dLTWdZRjhJQzNTQVU",
+      "date": "06/30/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-30T07:00:00Z"
+     },
+     {
+      "position": 71,
+      "title": "Got a package you didn't order? It could be a scam",
+      "source": {
+       "name": "ABC11 News",
+       "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://abc11.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Nathaniel Meyersohn",
+        "Zach Wasser"
+       ]
+      },
+      "link": "https://abc11.com/post/package-scam-scams-delivery-amazon/9937597/",
+      "thumbnail": "https://cdn.abcotvs.com/dip/images/6338870_072820-kabc-mdchina-seeds-CC-vid.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFkVUZLVG5aRFJUZ3liVVpQVFJDZkF4ampCU2dLTWdZVkFJYktsQWs",
+      "date": "01/23/2021, 08:00 AM, +0000 UTC",
+      "iso_date": "2021-01-23T08:00:00Z"
+     },
+     {
+      "position": 72,
+      "title": "Scammers impersonating Geico got money after she Googled car insurance deals",
+      "source": {
+       "name": "Detroit Free Press",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.freep.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Susan Tompor"
+       ]
+      },
+      "link": "https://www.freep.com/story/money/personal-finance/susan-tompor/2025/07/08/scam-geico-amazon-dte-customer-service-phone-number/84442356007/",
+      "thumbnail": "https://www.freep.com/gcdn/-mm-/195b3be8445b4d52eb03b74071db7b1b972147ce/c=0-44-1500-891/local/-/media/2015/11/17/Rochester/Rochester/635833528592163870-geico-high-definition-logo.jpg?width=660&height=371&fit=crop&format=pjpg&auto=webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdhMDl5ZEZwWU1XWmhaMVZ4VFJEekFoaVVCU2dLTWdhZEJJRE5oUXM",
+      "date": "07/08/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-07-08T07:00:00Z"
+     },
+     {
+      "position": 73,
+      "title": "Money Laundering Via Author Impersonation on Amazon?",
+      "source": {
+       "name": "Krebs on Security",
+       "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://krebsonsecurity.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://krebsonsecurity.com/2018/02/money-laundering-via-author-impersonation-on-amazon/",
+      "thumbnail": "https://krebsonsecurity.com/wp-content/uploads/2018/02/lowerdaysahead.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUtlVFZrZGpoZlNUSkNkSE5SVFJEN0JCampBeWdLTWdZQk00eVBJUW8",
+      "date": "02/20/2018, 08:00 AM, +0000 UTC",
+      "iso_date": "2018-02-20T08:00:00Z"
+     },
+     {
+      "position": 74,
+      "title": "Masks showing up in mail marked as being sent from Amazon and China are part of latest scam",
+      "source": {
+       "name": "ABC7 Eyewitness News",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://abc7ny.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Diane Wilson"
+       ]
+      },
+      "link": "https://abc7ny.com/post/mask-in-the-mail-amazon-from-china-mailed-scam/10286086/",
+      "thumbnail": "https://cdn.abcotvs.com/dip/images/10285653_mask-diane.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhObDl3TVRGSVVWQmxTR1pUVFJDZkF4ampCU2dLTWdZTnNaQW11UVU",
+      "date": "02/03/2021, 08:00 AM, +0000 UTC",
+      "iso_date": "2021-02-03T08:00:00Z"
+     },
+     {
+      "position": 75,
+      "title": "Fake Customer Care Call Costs Woman ₹2.96 Lakh In Indore",
+      "source": {
+       "name": "Free Press Journal",
+       "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.freepressjournal.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.freepressjournal.in/indore/fake-customer-care-call-costs-woman-296-lakh-in-indore",
+      "thumbnail": "https://media.assettype.com/freepressjournal/2026-08-16/kppmmbol/ChatGPT-Image-Aug-16-2026-085456-AM.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU9NVnBoU3psS01saFZNMnBTVFJDZkF4ampCU2dLTWdhQlVaVGpwZ2M",
+      "date": "09/03/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-03T07:00:00Z"
+     },
+     {
+      "position": 76,
+      "title": "I Almost Got Scammed By A Fake Amazon Call: Here’s Why You Shouldnt Share That OTP",
+      "source": {
+       "name": "ABP Live English",
+       "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://news.abplive.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+       "authors": [
+        "Shayak Majumder"
+       ]
+      },
+      "link": "https://news.abplive.com/technology/amazon-delivery-otp-scam-fake-how-to-spot-how-to-stay-safe-dont-share-otp-code-helpline-1773488",
+      "thumbnail": "https://feeds.abplive.com/onecms/images/uploaded-images/2025/05/20/43cae75344a8951e26825b657b7e706c1747711925671402_original.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDFSM0pvZFROWWRpMHhSMHRpVFJDZkF4ampCU2dLTWdZbE5ZYk5uUVE",
+      "date": "05/20/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-05-20T07:00:00Z"
+     }
+    ],
+    "_searched_at": "2026-10-07 09:41:14 UTC"
+   }
+  },
+  "de5a13c7d25418c332c6a051686b3a5543b1cc991ba53a9d79f19aecdf7ed565": {
+   "engine": "google",
+   "params": {
+    "gl": "in",
+    "hl": "en",
+    "google_domain": "google.co.in",
+    "q": "site:amazon.in (\"9876501234\" OR \"98765 01234\")"
+   },
+   "response": {
+    "organic_results": [
+     {
+      "position": 1,
+      "title": "Seejai Girls' Pink Full Zip Hooded Sweatshirt",
+      "link": "https://www.amazon.in/Seejai-Girls-Pink-Hooded-Sweatshirt/dp/B0GTHTJV1S",
+      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESggEB6zswFaaodFiUhQgn96K6jU7XkojULmnxkBak_RUNZjI1sTKAb28CillMFy48oSvw17Vv_iaQhtBfHxmh0FmKy9eva5w1tlXaI631Pe3vs7-zgxlFIQfSSSEAdlApFEMATjLlByHRZ4WDTJXfE3i8f3LvEAr60_UQvd38GNKzndpY&ved=2ahUKEwjL6JHYzqeXAxUITDABHV5UEZUQFnoECBoQAQ&uoh=1",
+      "displayed_link": "https://www.amazon.in › Seejai-Girls-Pink-Hooded-Swea...",
+      "thumbnail": "https://serpapi.com/searches/6ac613c2f9bee9b47de842ea/images/3lFRKwYyh_c2husF3FKmO5SC9nCMJOq5lh-zICXl4Bg.jpeg",
+      "favicon": "https://serpapi.com/images/i/UklGRgABAABXRUJQVlA4IPQAAACQBgCdASogACAAPrkurlcnIacnG_DgFwlsAJ05QVS9IBfbUgOf_skkiKt1WV__usEhX-9coTL7-50nxt2AAP7rwfv_wVU6YaR6HeZ8T0iiG1fjH-GInxDGplesPRL-O0x4-jLXLJVrMvO3_cJvMj_cRa0JBzOTvJo39P3-X3Vbv2mx--9K7GQfTSHM8rIPEivpW__F5Xr97_T-1Jjmwo86nAPgea8JWswphczyD4Oqa1VSV0cEvnU9Rq9yu8GxSRqQWixFre199AVlKmMOuBLCVngQ9Ht61Y3zlYz_jWnBUkEzf052rF1dTRWK5wiGpvFFxYAA.webp",
+      "snippet": "... 9876501234 Email: support@safepacklogistics.in. Item Weight. 600 g. Item Dimensions LxWxH. 45 x 25 x 5 Centimeters. Net Quantity. 1 Count. Generic Name.",
+      "snippet_highlighted_words": [
+       "9876501234"
+      ],
+      "about_this_result": {
+       "source": {
+        "description": "... 9876501234 Email: support@safepacklogistics.in. Item Weight. 600 g. Item Dimensions LxWxH. 45 x 25 x 5 Centimeters. Net Quantity. 1 Count. Generic Name.",
+        "source_info_link": "https://www.amazon.in/Seejai-Girls-Pink-Hooded-Sweatshirt/dp/B0GTHTJV1S",
+        "icon": "https://serpapi.com/images/i/UklGRgABAABXRUJQVlA4IPQAAACQBgCdASogACAAPrkurlcnIacnG_DgFwlsAJ05QVS9IBfbUgOf_skkiKt1WV__usEhX-9coTL7-50nxt2AAP7rwfv_wVU6YaR6HeZ8T0iiG1fjH-GInxDGplesPRL-O0x4-jLXLJVrMvO3_cJvMj_cRa0JBzOTvJo39P3-X3Vbv2mx--9K7GQfTSHM8rIPEivpW__F5Xr97_T-1Jjmwo86nAPgea8JWswphczyD4Oqa1VSV0cEvnU9Rq9yu8GxSRqQWixFre199AVlKmMOuBLCVngQ9Ht61Y3zlYz_jWnBUkEzf052rF1dTRWK5wiGpvFFxYAA.webp"
+       },
+       "languages": [
+        "en"
+       ],
+       "regions": [
+        "IN"
+       ]
+      },
+      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZhYW9kRmlVaFFnbjk2SzZqVTdYa29qVUxtbnhrQmFrX1JVTlpqSTFzVEtBYjI4Q2lsbE1GeTQ4b1N2dzE3VnZfaWFRaHRCZkh4bWgwRm1LeTlldmE1dzF0bFhhSTYzMVBlM3ZzNy16Z3hsRklRZlNTU0VBZGxBcEZFTUFUakxsQnlIUlo0V0RUSlhmRTNpOGYzTHZFQXI2MF9VUXZkMzhHTkt6bmRwWRIEGgIIABqBBBIAGgIIASIAKgAyBggBEgJpbjoAQgQIARAASgBaDQgBEglhbWF6b24uaW5yAHoAgkDOAwgAEAAYACAAKh4KCjk4NzY1MDEyMzQVls3WPRoLOTg3NjUgMDEyMzQyvgEvZ290bz91cmw9Q0FFU2dnRUI2enN3RmFhb2RGaVVoUWduOTZLNmpVN1hrb2pVTG1ueGtCYWtfUlVOWmpJMXNUS0FiMjhDaWxsTUZ5NDhvU3Z3MTdWdl9pYVFodEJmSHhtaDBGbUt5OWV2YTV3MXRsWGFJNjMxUGUzdnM3LXpneGxGSVFmU1NTRUFkbEFwRkVNQVRqTGxCeUhSWjRXRFRKWGZFM2k4ZjNMdkVBcjYwX1VRdmQzOEdOS3puZHBZOj1TZWVqYWkgR2lybHMmIzM5OyBQaW5rIEZ1bGwgWmlwIEhvb2RlZCBTd2VhdHNoaXJ0IC0gQW1hem9uLmluQqMBLi4uIDxiPjk4NzY1MDEyMzQ8L2I-IEVtYWlsOiBzdXBwb3J0QHNhZmVwYWNrbG9naXN0aWNzLmluLiBJdGVtIFdlaWdodC4gNjAwIGcuIEl0ZW0gRGltZW5zaW9ucyBMeFd4SC4gNDUgeCAyNSB4IDUgQ2VudGltZXRlcnMuIE5ldCBRdWFudGl0eS4gMSBDb3VudC4gR2VuZXJpYyBOYW1lLiICEAFIAFgAaAA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cr4BL2dvdG8_dXJsPUNBRVNnZ0VCNnpzd0ZhYW9kRmlVaFFnbjk2SzZqVTdYa29qVUxtbnhrQmFrX1JVTlpqSTFzVEtBYjI4Q2lsbE1GeTQ4b1N2dzE3VnZfaWFRaHRCZkh4bWgwRm1LeTlldmE1dzF0bFhhSTYzMVBlM3ZzNy16Z3hsRklRZlNTU0VBZGxBcEZFTUFUakxsQnlIUlo0V0RUSlhmRTNpOGYzTHZFQXI2MF9VUXZkMzhHTkt6bmRwWRIEGgIIABqBBBIAGgIIASIAKgAyBggBEgJpbjoAQgQIARAASgBaDQgBEglhbWF6b24uaW5yAHoAgkDOAwgAEAAYACAAKh4KCjk4NzY1MDEyMzQVls3WPRoLOTg3NjUgMDEyMzQyvgEvZ290bz91cmw9Q0FFU2dnRUI2enN3RmFhb2RGaVVoUWduOTZLNmpVN1hrb2pVTG1ueGtCYWtfUlVOWmpJMXNUS0FiMjhDaWxsTUZ5NDhvU3Z3MTdWdl9pYVFodEJmSHhtaDBGbUt5OWV2YTV3MXRsWGFJNjMxUGUzdnM3LXpneGxGSVFmU1NTRUFkbEFwRkVNQVRqTGxCeUhSWjRXRFRKWGZFM2k4ZjNMdkVBcjYwX1VRdmQzOEdOS3puZHBZOj1TZWVqYWkgR2lybHMmIzM5OyBQaW5rIEZ1bGwgWmlwIEhvb2RlZCBTd2VhdHNoaXJ0IC0gQW1hem9uLmluQqMBLi4uIDxiPjk4NzY1MDEyMzQ8L2I-IEVtYWlsOiBzdXBwb3J0QHNhZmVwYWNrbG9naXN0aWNzLmluLiBJdGVtIFdlaWdodC4gNjAwIGcuIEl0ZW0gRGltZW5zaW9ucyBMeFd4SC4gNDUgeCAyNSB4IDUgQ2VudGltZXRlcnMuIE5ldCBRdWFudGl0eS4gMSBDb3VudC4gR2VuZXJpYyBOYW1lLiICEAFIAFgAaAA",
+      "source": "Amazon.in",
+      "read_more_link": "https://www.amazon.in/Seejai-Girls-Pink-Hooded-Sweatshirt/dp/B0GTHTJV1S#:~:text=See%20more"
+     }
+    ],
+    "search_information": {
+     "query_displayed": "site:amazon.in (\"9876501234\" OR \"98765 01234\")",
+     "total_results": 1,
+     "time_taken_displayed": 0.18,
+     "organic_results_state": "Results for exact spelling"
+    },
+    "_searched_at": "2026-10-07 09:41:22 UTC"
+   }
+  }
+ }
+}
