@@ -72,7 +72,9 @@ def phone_display(value: str) -> str:
         return f"+91 {digits[2:7]} {digits[7:]}"
     if digits.startswith(("1800", "1860")):
         rest = digits[4:]
-        return f"{digits[:4]} {rest[:3]} {rest[3:]}".strip() if len(rest) > 4 else f"{digits[:4]} {rest}"
+        if len(rest) == 6:  # 1800 11 2211
+            return f"{digits[:4]} {rest[:2]} {rest[2:]}"
+        return f"{digits[:4]} {rest[:3]} {rest[3:]}" if len(rest) == 7 else f"{digits[:4]} {rest}"  # 1800 425 3800
     return value
 
 

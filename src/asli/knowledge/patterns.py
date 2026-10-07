@@ -185,7 +185,11 @@ _PAYMENT = re.compile(
 # Paid "tasks" (like/subscribe/review for money) are the hallmark of task scams.
 _TASK_PAYOUT = re.compile(
     r"\b(?:like|subscribe|rate|review|follow)\s+\w*\s*(?:videos?|posts?|hotels?|products?|channels?|pages?)\b.{0,60}"
-    r"\b(?:earn|paid|payment|commission|income)\b|\bcomplete\s+\d*\s*tasks?\b|\btask\b.{0,40}\b(?:earn|commission|payment)\b",
+    r"\b(?:earn|paid|payment|commission|income|kamao|kamayein|kamaiye)\b|\bcomplete\s+\d*\s*tasks?\b"
+    r"|\btask\b.{0,40}\b(?:earn|commission|payment|kamao)\b"
+    # Hinglish word order: "YouTube videos like karo aur roz ₹3,000 kamao"
+    r"|\b(?:videos?|posts?|reels?|channels?|pages?|hotels?|products?)\s+(?:ko\s+)?(?:like|subscribe|rate|review|follow)"
+    r"\s+kar\w*\b.{0,60}\b(?:kamao|kamayein|kamaiye|kamai|earn|paise)\b",
     re.IGNORECASE,
 )
 _AI_INJECTION = [
@@ -229,6 +233,19 @@ _UPI_LIKE = re.compile(r"\b[a-z0-9._-]{2,64}@[a-z]{2,20}\b(?!\.[a-z0-9])", re.IG
 # Fraud-safety advice mentions police and money too ("report to 1930", "beware") — not a threat.
 _ADVISORY = re.compile(r"\breport (?:it|this|to)|helpline|\b1930\b|cybercrime\.gov|beware|alert:", re.IGNORECASE)
 _MONEY_WORDS = re.compile(r"\b(deposit|bhejo|bhejiye|transfer|send|pay|paise|amount)\b|₹|\brs\.?\s*\d", re.IGNORECASE)
+# A UPI ID in a transaction notice ("Rs 1,250 debited … to VPA swiggy@icici") names the payee of a payment
+# already made. It is a request only when the reader is asked to pay, send, deposit or return money.
+_TXN_NOTICE = re.compile(r"\b(debited|credited|received|paid to|sent to|transferred to|txn|upi ref|ref\.? no)\b"
+                         r"|डेबिट|क्रेडिट|प्राप्त हुए", re.IGNORECASE)
+_PAY_ASK = re.compile(r"\b(pay|send|transfer|deposit|return|bhej\w*|jama|wapas)\b|भेज|जमा कर|भुगतान कर|लौटा",
+                      re.IGNORECASE)
+
+
+def upi_is_requested(text: str, raw: str) -> bool:
+    for sentence in _sentences(text):
+        if raw in sentence:
+            return not (_TXN_NOTICE.search(sentence) and not _PAY_ASK.search(sentence))
+    return True
 
 
 def _sentences(text: str) -> list[str]:

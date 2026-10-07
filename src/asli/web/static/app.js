@@ -328,6 +328,7 @@ function bindForm() {
   const form = $("#form");
   const file = $("#file");
   file.addEventListener("change", () => file.files[0] && setFile(file.files[0]));
+  $("#pick-file").addEventListener("click", () => file.click()); // a real button, so it's keyboard-reachable
   $("#attach-remove").addEventListener("click", () => { state.file = null; state.imageUrl = null; file.value = ""; $("#attachment").hidden = true; });
   $("#toggle-extra").addEventListener("click", (e) => {
     const extra = $("#extra");
@@ -720,6 +721,7 @@ function renderReport(r) {
   const t = { ...(T[r.language] || T.en), sev: SEVERITY[r.language] || SEVERITY.en };
   const ev = Object.fromEntries((r.evidence || []).map((e) => [e.id, e]));
   const view = $("#view-report");
+  view.lang = r.language === "hi" ? "hi" : r.language === "hinglish" ? "hi-Latn" : "en"; // right voice for screen readers
   const risk = r.flags.filter((f) => f.polarity === "risk");
   const trust = r.flags.filter((f) => f.polarity === "trust");
 
@@ -750,7 +752,8 @@ function renderReport(r) {
       r.checks.length ? r.checks.map((c) => {
         const status = c.status === "done" ? "done" : c.status === "no_results" ? "empty" : "failed";
         const meta = c.status === "done" ? `${c.n_results} result${c.n_results === 1 ? "" : "s"}${c.cached ? " · cached" : ""}`
-          : c.status === "no_results" ? "no results" : c.status === "skipped_quota" ? "skipped (search limit)" : "couldn't run";
+          : c.status === "no_results" ? "no results" : c.status === "skipped_quota" ? "skipped (search limit)"
+          : c.status === "skipped_budget" ? "skipped" : "couldn't run";
         return h("li", { class: `step ${status}` }, h("span", { class: "ic" }, status === "done" ? icon("check") : status === "empty" ? icon("dash") : icon("x")),
           h("div", { class: "label" }, engineTag(c.engine), c.label), h("span", { class: "meta", text: meta }));
       }) : h("li", { class: "step empty" }, h("span", { class: "ic" }, icon("dash")), h("div", { class: "label", text: r.confidence_reason }), h("span"))))));

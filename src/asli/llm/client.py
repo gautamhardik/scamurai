@@ -110,11 +110,16 @@ class LLMClient:
             "X-Title": "Asli",
         }
         started = time.perf_counter()
+        deadline = started + self.settings.asli_llm_timeout_s  # one budget for both attempts
         error = "unknown"
         async with httpx.AsyncClient(timeout=self.settings.asli_llm_timeout_s) as client:
             for attempt in range(2):
+                remaining = deadline - time.perf_counter()
+                if remaining < 10:
+                    error = "llm_timeout"
+                    break
                 try:
-                    r = await client.post(OPENROUTER_URL, json=body, headers=headers)
+                    r = await client.post(OPENROUTER_URL, json=body, headers=headers, timeout=remaining)
                 except httpx.TimeoutException:
                     error = "llm_timeout"
                     break

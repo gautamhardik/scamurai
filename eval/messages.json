@@ -1,0 +1,37 @@
+{
+  "about": "Asli evaluation set: 30 hand-written messages in the style of real Indian SMS/WhatsApp texts. Labels: genuine (should not be flagged), scam (should be flagged HIGH_RISK or SUSPICIOUS), ambiguous (not enough to decide: should be UNVERIFIED or SUSPICIOUS, never HIGH_RISK or LOW_RISK). Phone numbers in scam and ambiguous messages are made up. Official numbers and domains in genuine messages are real.",
+  "messages": [
+    {"id": "g01_sbi_debit", "label": "genuine", "lang": "en", "text": "Dear Customer, Rs 1,250.00 debited from A/c XX4521 on 05-10-26 to VPA swiggy@icici. Not you? Call 1800 11 2211 to block. -SBI"},
+    {"id": "g02_amazon_dispatch", "label": "genuine", "lang": "en", "text": "Your Amazon order of 'boAt Airdopes 141' has been dispatched and will arrive by Thursday. Track it at amazon.in/your-orders"},
+    {"id": "g03_irctc_pnr", "label": "genuine", "lang": "en", "text": "IRCTC: PNR 4521367890, Train 12951, 12-Oct, 3A, CNF B2-34. For help call 14646. Happy journey!"},
+    {"id": "g04_uidai_auth", "label": "genuine", "lang": "en", "text": "Your Aadhaar was used for authentication at 10:42 on 06-10-2026. If this was not you, call 1947. -UIDAI"},
+    {"id": "g05_tatapower_bill_hi", "label": "genuine", "lang": "hi", "text": "प्रिय ग्राहक, आपका टाटा पावर बिल ₹1,840 है, देय तिथि 15/10/2026। भुगतान tatapower.com या टाटा पावर ऐप पर करें।"},
+    {"id": "g06_swiggy_hinglish", "label": "genuine", "lang": "hinglish", "text": "Swiggy: Aapka order Meghana Foods se pick up ho gaya hai, 25 min mein pahunchega. Track karein swiggy.com par."},
+    {"id": "g07_itr_processed", "label": "genuine", "lang": "en", "text": "Income Tax Department: Your ITR for AY 2026-27 has been processed. Refund of Rs 4,320 is determined. View details at incometax.gov.in"},
+    {"id": "g08_flipkart_sale", "label": "genuine", "lang": "en", "text": "Flipkart Big Billion Days is LIVE! Up to 80% off on top brands. Hurry, deals end tonight! Shop now on flipkart.com"},
+    {"id": "g09_epfo_credit", "label": "genuine", "lang": "en", "text": "EPFO: Rs 6,200 credited to your PF account UAN XXXXXX4512 for 09/2026. Check your passbook at epfindia.gov.in"},
+    {"id": "g10_friend_hinglish", "label": "genuine", "lang": "hinglish", "text": "Bhai kal 7 baje office ke bahar milte hain, chai peete hain. Rohit"},
+
+    {"id": "s01_sbi_yono_link", "label": "scam", "lang": "en", "text": "SBI: Dear customer your YONO account will be suspended today. Update PAN immediately at sbi-yono-kyc.top/login"},
+    {"id": "s02_electricity_hi", "label": "scam", "lang": "hi", "text": "प्रिय उपभोक्ता, आपका बिजली कनेक्शन आज रात 9:30 बजे काट दिया जाएगा क्योंकि पिछला बिल अपडेट नहीं है। तुरंत बिजली अधिकारी से 9883421765 पर संपर्क करें।"},
+    {"id": "s03_digital_arrest_hinglish", "label": "scam", "lang": "hinglish", "text": "Main CBI officer bol raha hoon. Aapke naam se ek parcel mein drugs mile hain. Video call par rahiye aur verification ke liye 50,000 rupaye is UPI par bhejiye: cbi.verify@ybl"},
+    {"id": "s04_kbc_lottery", "label": "scam", "lang": "en", "text": "Congratulations! You have won Rs 25,00,000 in the KBC Lucky Draw. To claim, pay processing fee Rs 12,500 to account holder Rana Pratap. Contact WhatsApp 7029384756"},
+    {"id": "s05_task_hinglish", "label": "scam", "lang": "hinglish", "text": "Part time job! Ghar baithe YouTube videos like karo aur roz ₹3,000 kamao. Join karne ke liye Telegram par message karein @earnfast_hr"},
+    {"id": "s06_indiapost_link", "label": "scam", "lang": "en", "text": "India Post: Your parcel is held at our warehouse due to incomplete address. Update within 12 hours: indiapost-redeliver.in/track"},
+    {"id": "s07_paytm_kyc_call", "label": "scam", "lang": "en", "text": "Paytm KYC expired. Your wallet will be blocked in 24 hours. Call our KYC officer at 8001234567 now."},
+    {"id": "s08_electricity_en", "label": "scam", "lang": "en", "text": "Dear Consumer, your electricity power will be disconnected tonight at 9.30 PM because your previous month bill was not updated. Please immediately contact our electricity officer 9832145670. Thank you"},
+    {"id": "s09_job_fee_hi", "label": "scam", "lang": "hi", "text": "बधाई हो! आपका चयन अमेज़न में वर्क फ्रॉम होम पद के लिए हुआ है। वेतन ₹35,000 प्रति माह। रजिस्ट्रेशन शुल्क ₹1,999 इस UPI पर भेजें: amazonhr.jobs@ybl"},
+    {"id": "s10_stock_tips", "label": "scam", "lang": "en", "text": "Join our SEBI registered stock tips group. Guaranteed returns of 30% per month! Limited seats. WhatsApp 9123456780 now"},
+
+    {"id": "a01_wrong_number", "label": "ambiguous", "lang": "en", "text": "Hi, is this Neha? Got your number from the yoga class group."},
+    {"id": "a02_bare_otp", "label": "ambiguous", "lang": "en", "text": "Your OTP for login is 482913. Do not share it with anyone."},
+    {"id": "a03_card_limit_call", "label": "ambiguous", "lang": "en", "text": "Hello sir, I am calling from your bank regarding your credit card limit increase. Please call back on 022-61234567."},
+    {"id": "a04_package_hinglish", "label": "ambiguous", "lang": "hinglish", "text": "Aapka package kal deliver hoga. Koi sawal ho toh reply karein."},
+    {"id": "a05_local_store_offer", "label": "ambiguous", "lang": "en", "text": "Limited offer: 50% off on all shoes this weekend at our store in Koramangala. Visit us!"},
+    {"id": "a06_new_number", "label": "ambiguous", "lang": "en", "text": "Mom, my phone broke, this is my new number. Save it."},
+    {"id": "a07_kyc_branch_hi", "label": "ambiguous", "lang": "hi", "text": "आपका केवाईसी अपडेट करना आवश्यक है। कृपया अपनी नज़दीकी शाखा में जाएं।"},
+    {"id": "a08_interview", "label": "ambiguous", "lang": "en", "text": "Interview scheduled for tomorrow 11 AM at our Pune office. Please bring your resume. - HR Team"},
+    {"id": "a09_bill_due", "label": "ambiguous", "lang": "en", "text": "Your electricity bill of Rs 1,120 is due on 20 Oct. Pay via your usual app to avoid late fees."},
+    {"id": "a10_preapproved_loan", "label": "ambiguous", "lang": "en", "text": "Congratulations, you are eligible for a pre-approved personal loan. Check your offer in the app."}
+  ]
+}

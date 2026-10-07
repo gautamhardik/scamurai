@@ -85,8 +85,7 @@ def evaluate(
         level = "SUSPICIOUS"
         if contradiction:
             caps.append("contradiction_cap")
-    elif coverage >= 0.6 and verifiable >= 1 and checks_with_results >= 1 and any(
-            s.contribution >= TRUST_FLOOR for s in trust):
+    elif coverage >= 0.6 and verifiable >= 1 and any(s.contribution >= TRUST_FLOOR for s in trust):
         # Reassurance needs positive confirmation (official page, official domain, a real listing).
         # Searches that merely returned something prove nothing, and a plausible price or a Maps pin
         # alone is too weak: an unconfirmed message stays UNVERIFIED.

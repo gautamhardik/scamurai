@@ -25,3 +25,15 @@ def lexicon_hits(text: str | None) -> list[str]:
     hits = {m.group(0).lower() for m in _EN_RE.finditer(text)}
     hits.update(term for term in _HI if term in text)
     return sorted(hits)
+
+
+# Words that also appear on helpline directories and on banks' own fraud warnings ("complaint number
+# 1800…", "report fraud at…", "beware of fraudsters; our official number is…"). Alone, they don't make a
+# page a report *about* a number or UPI ID.
+_DIRECTORY_WORDS = {"complaint", "complaints", "warning", "beware", "fraud", "frauds", "cyber crime", "cybercrime",
+                    "cyber fraud", "spam"}
+
+
+def report_hits(hits: list[str]) -> list[str]:
+    """The scam-specific part of `lexicon_hits` (scam, fake, cheated, fraudster, ठगी, dhokha…)."""
+    return [h for h in hits if h not in _DIRECTORY_WORDS]

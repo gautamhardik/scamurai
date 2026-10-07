@@ -8,7 +8,7 @@
 
 > Asli doesn't classify a message from its wording. It checks the message's claims against the live web, and every warning links to its source.
 
-![Asli report for a fake sneaker deal: Google Lens finds the same photo on Myntra, Nike India and VegNonVeg at ₹6,300–₹9,000](docs/screenshots/report-deal.png)
+![Asli report for a fake sneaker deal: Google Lens finds the product photo on Myntra, Nike India and VegNonVeg at ₹6,300–₹9,000](docs/screenshots/report-deal.png)
 
 **Demo video:** _link added at submission_ · **Track:** Knowledge & Public Interest · **Built for:** SerpApi India Hackathon 2026
 
@@ -40,7 +40,7 @@ A language model reading the message alone can only guess. Live search finds the
 
 ## What Asli does
 
-1. **Reads the claims.** It extracts who the message claims to be, plus every phone number, link, email, UPI ID, amount, product, price, job, address and app it mentions. Screenshots in Hindi work too. Every value must appear in the input itself (it is *grounded*), so a hallucinated number can never be searched.
+1. **Reads the claims.** It extracts who the message claims to be, plus every phone number, link, email, UPI ID, amount, product, price, job, address and app it mentions. Screenshots in Hindi work too. Every value must appear in the text you gave, or in the model's transcription of your screenshot (it is *grounded*), so a number the model invents can't be searched.
 2. **Plans the checks.** A rules-based planner chooses only the searches that matter for this kind of message. It plans at most 8 searches in 2 rounds.
 3. **Searches the live web through SerpApi.** It uses Google Search, News, Lens (with the Image API), Shopping, Jobs and Maps.
 4. **Weighs the evidence.** A transparent formula turns evidence into a risk level. The AI never sets the score.
@@ -60,10 +60,10 @@ SerpApi supplies all of Asli's evidence. Without it, Asli could only look for wo
 | Engine | Question it answers | How Asli queries it | What it can prove |
 |---|---|---|---|
 | **Google Search** (`google`) | What is the claimed organisation's official website and contact? | `"{org}" official website` (knowledge graph + top result) | The link or email domain isn't the organisation's (**I2**); all links are official (**T2**) |
-| **Google Search** | Has this exact number, UPI ID or domain been reported? | `"7000012345" OR "70000 12345" OR "+91 70000 12345"` / `"{upi}"` / `"{domain}"` | Reported in scam/complaint posts on independent sites (**W1/W12/W2**); domain has no web presence (**W4**) |
+| **Google Search** | Has this exact number, UPI ID or domain been reported? | `"7000012345" OR "70000 12345" OR "+91 70000 12345"` / `"{upi}"` / `"{domain}"` | Reported in scam posts on independent sites (**W1/W12/W2**); no result mentions the domain (**W4**, cites the search so you can re-run it) |
 | **Google Search** (round 2) | Does the official site list this number? | `site:{official} ("…")` | Listed on an official contact page (**T1**), or not listed (**W3**) |
-| **Google News** (`google_news`) | Has this kind of message been reported as a scam? | Curated per-scheme query (e.g. `electricity bill disconnection SMS scam`) | Independent news reports of the same script (**W6**); the brand is often impersonated (**W7**) |
-| **Image API + Google Lens** (`google_lens`) | Where else does this product photo appear, and at what price? | Upload the screenshot (≤480 KB, 0 credits) → `image_id` | The photo is reused from real listings (**W9**); real ₹ prices for the same product |
+| **Google News** (`google_news`) | Has this kind of message been reported as a scam? | Curated per-scheme query (e.g. `electricity bill disconnection SMS scam`) | Independent news reports of this kind of scam (**W6**); the brand is often impersonated (**W7**). Context only: they count only when the message itself shows a scam's mechanics |
+| **Image API + Google Lens** (`google_lens`) | Where else does this product photo appear, and at what price? | Upload the screenshot (≤480 KB, 0 credits) → `image_id` | The photo (or a near-identical one) is on real listings (**W9**); real ₹ prices for the same product |
 | **Google Shopping** (`google_shopping`) | What does this product really cost? | `{brand} {product}`; only if Lens finds fewer than 3 prices | Price far below the median real price (**W8**), or plausible (**T5**) |
 | **Google Jobs** (`google_jobs`) | Is this company actually hiring for this role? | `{role} {company} {city}` | No matching listing (**W10**) or a match (**T3**) |
 | **Google Maps** (`google_maps`) | Is the company really at this address? | The address from the message | The address resolves to homes or hotels (**W11**), or matches the company (**T4**) |
@@ -99,19 +99,24 @@ Each signal has a fixed weight **w** and a confidence **c**. The confidence come
 - **G1:** *High risk* requires either one strong identity or web signal (c ≥ 0.6 and w·c ≥ 0.25) or a critical request (OTP or PIN, an upfront fee, or money demanded under threat of arrest). The absence of results alone can never make something high risk.
 - **G2:** If only message patterns fired, the score is capped at 55.
 - **G3:** If an official source confirms an entity that also has risk evidence (scammers spoof real helplines), the verdict is *Be careful – mixed evidence*.
+- **G4:** *No major warning signs* needs positive confirmation: an official page listing the number, a link on the official domain, or a real job listing (a trust signal with w·c ≥ 0.3). Searches that merely returned something prove nothing.
 - **Coverage:** If too few checks finished, or nothing could be checked, the verdict is *Couldn't verify* rather than "safe".
 
 | Level | When |
 |---|---|
 | **High risk** | 65+ points and G1 satisfied |
 | **Be careful** | 35–64 points, or a high score demoted by G1 or G3 |
-| **No major warning signs** | Under 35 points with checks completed and something verifiable. The report adds "doesn't guarantee it's genuine". |
-| **Couldn't verify** | Under 35 points with too little evidence either way |
+| **No major warning signs** | Under 35 points, checks completed and positive confirmation (G4). The report adds "doesn't guarantee it's genuine". |
+| **Couldn't verify** | Under 35 points without confirmation, or too little evidence either way |
 
 **Citation rule.** Every flag cites evidence. Web and trust flags must cite a search result or an official reference, and a flag that can't is dropped. Message-pattern flags quote the exact sentence. Click **How Asli decided** in any report to see each signal's w, c and contribution.
 
 **Safeguards against false positives:**
-- A scam word must appear *in the same result* as the number or domain.
+- A scam word must appear *in the same result* as the number or domain, and for numbers and UPI IDs it must be scam-specific ("scam", "fake", "cheated", "ठगी"): words like "complaint" or "fraud" also appear on helpline directories and on banks' own fraud warnings.
+- **A website can't vouch for itself.** A domain the message supplies is never accepted as the claimed organisation's official site, even when it ranks first for a made-up company name.
+- A number counts as official only on an official **contact or help page**, never on a product, seller or forum page, where scammers plant fake helplines.
+- News about a kind of scam counts only when the message itself shows that scam's mechanics, so a genuine SBI alert doesn't inherit every "SBI scam" headline.
+- A merchant UPI ID in a transaction notice ("debited … to VPA swiggy@icici") isn't treated as a request to pay.
 - Several results from the same site count as one source.
 - Official helplines quoted in fraud warnings need 3 or more independent reports before they're flagged.
 - Big platforms are never treated as suspicious domains.
@@ -174,6 +179,8 @@ uv run asli doctor                                  # keys, SerpApi credits, mod
 | `ASLI_DAILY_SEARCH_CAP` | `80` | Live searches per day |
 | `ASLI_MIN_CREDITS_RESERVE` | `10` | Stop live searching below this many SerpApi credits |
 | `ASLI_STORE_REPORTS` | `true` | Keep reports locally for 7 days (`/#r=<id>`) |
+| `ASLI_ALLOWED_HOSTS` | — | Extra host names to serve besides 127.0.0.1/localhost (when deployed) |
+| `ASLI_ACCESS_TOKEN` | — | Require a token for the API (open `/?token=…` once to set the cookie) |
 
 ---
 
@@ -223,15 +230,17 @@ tests/                    unit · integration · e2e (224 tests, run offline)
   - The model returns only closed-vocabulary JSON.
   - Only values that appear in the input can reach a search, and queries come from fixed templates with search operators stripped.
   - The model never sets the score.
-  - Hidden instructions aimed at AI tools are flagged as a warning sign (see the `electricity_injection` scenario).
+  - Hidden instructions aimed at AI tools are flagged as a warning sign (see the `electricity_injection` scenario), in English, Hindi and Hinglish.
+  - Search results never reach the model: web pages can't inject instructions, because the only model call is claim extraction from your own message.
 - **Uploads.** Uploads are limited to 5 MB and checked by file signature (PNG/JPEG/WebP only, never SVG). Images over 40 MP are rejected, and every image is re-encoded, which strips EXIF data.
 - **Secrets.** Keys stay on the server (stored as `SecretStr`). Logs redact `api_key=` and key patterns, including from exception messages. A test checks that no key from your `.env` appears in any tracked file.
-- **Personal data.** OTPs, card numbers, Aadhaar and PAN numbers are removed before text reaches the AI. Logs never contain message text, and phone numbers in logs are masked. Reports stay on your machine and are deleted after 7 days.
+- **Personal data.** OTPs, card numbers, Aadhaar and PAN numbers are removed before text reaches the AI. Logs never contain message text, and phone numbers in logs are masked. Reports stay on your machine and are deleted after 7 days; expired search results (which contain the searched numbers) are purged hourly.
 - **Web hardening.**
   - Strict CSP (no inline scripts, no third-party scripts) and no CORS.
   - All untrusted content is rendered with `textContent`.
   - Suspicious domains are shown defanged and never linked.
   - Binds to `127.0.0.1` by default, with a per-IP rate limit and a cap on concurrent investigations.
+  - **DNS rebinding and CSRF:** requests with an unknown `Host` header are refused, and so are cross-site POSTs, so a web page you visit can't start (and spend credits on) investigations on your machine.
 
 ## Testing
 

@@ -106,6 +106,17 @@ FLAGS: dict[str, dict[Lang, tuple[str, str]]] = {
         "hinglish": ("Helpline ek personal mobile number hai",
                      "{org} ki helplines {official} par di hoti hain, aam taur par toll-free number. {phone} ek normal mobile number hai."),
     },
+    "helpline_is_mobile:generic": {
+        "en": ("Asks you to call a personal mobile number",
+               "Electricity companies, banks and government offices use published helplines, not an officer's personal "
+               "mobile. {phone} is an ordinary mobile number."),
+        "hi": ("निजी मोबाइल नंबर पर कॉल करने को कहता है",
+               "बिजली कंपनियाँ, बैंक और सरकारी दफ़्तर प्रकाशित हेल्पलाइन इस्तेमाल करते हैं, किसी अधिकारी का निजी मोबाइल नहीं। "
+               "{phone} एक साधारण मोबाइल नंबर है।"),
+        "hinglish": ("Personal mobile number par call karne ko kehta hai",
+                     "Bijli companies, banks aur sarkari offices published helplines use karte hain, kisi officer ka personal "
+                     "mobile nahi. {phone} ek normal mobile number hai."),
+    },
     "domain_no_footprint": {
         "en": ("Website has no track record",
                "No Google result mentions {domain}. Scam sites are often brand new, while genuine organisations are usually easy to find."),

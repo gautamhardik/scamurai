@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from asli.knowledge.patterns import news_query, sanitize_query_term
+from asli.knowledge.patterns import news_query, sanitize_query_term, upi_is_requested
 from asli.models import ClaimGraph, Entity, SearchSpec, SkippedCheck
 
 LABELS = {
@@ -64,6 +64,11 @@ def suspicious_domains(graph: ClaimGraph) -> list[Entity]:
     return out
 
 
+def requested_upis(graph: ClaimGraph) -> list[Entity]:
+    """UPI IDs the reader is asked to pay. A payee named in a transaction notice is not one."""
+    return [u for u in graph.of("upi_id") if upi_is_requested(graph.haystack, u.raw)]
+
+
 def _city(address: str | None) -> str | None:
     if not address:
         return None
@@ -110,7 +115,7 @@ def plan_round1(graph: ClaimGraph, max_searches: int, *, has_image: bool, image_
         q = " OR ".join(f'"{v}"' for v in variants[:3])
         spec("google", {"q": q}, "phone_reputation", phone.attrs.get("display") or phone.value, [phone.id], 2)
 
-    for upi in graph.of("upi_id")[:1]:
+    for upi in requested_upis(graph)[:1]:
         spec("google", {"q": f'"{upi.value}"'}, "upi_reputation", upi.value, [upi.id], 2)
 
     for dom in suspicious_domains(graph)[:2]:
@@ -180,8 +185,11 @@ def plan_round2(
         variants = (phone.attrs.get("variants") or [phone.value])[:2]
         alts = " OR ".join(f'"{v}"' for v in variants)
         domain = official_domains[0]
+        # Banks are moving to .bank.in (SBI's contact pages now live on sbi.bank.in): search both.
+        sites = [domain] + [d for d in official_domains[1:] if d.endswith(".bank.in")][:1]
+        site_q = f"site:{domain}" if len(sites) == 1 else "(" + " OR ".join(f"site:{d}" for d in sites) + ")"
         specs.append(SearchSpec(
-            id=f"s{next(n)}", engine="google", params={"q": f"site:{domain} ({alts})"},
+            id=f"s{next(n)}", engine="google", params={"q": f"{site_q} ({alts})"},
             purpose="official_phone_check",
             label=LABELS["official_phone_check"].format(official=official_name or domain, name=""),
             entity_ids=[phone.id], priority=1, round=2,

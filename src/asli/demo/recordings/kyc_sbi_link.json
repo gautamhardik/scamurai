@@ -1,6 +1,6 @@
 {
  "scenario": "kyc_sbi_link",
- "recorded_at": "2026-10-07T15:46:09+05:30",
+ "recorded_at": "2026-10-07T16:58:30+05:30",
  "input_hash": "f23eb5668d0d97d9ba2e031ca93f340bb4e05dc55a2100048404c88f3ea90301",
  "llm": {
   "data": {
@@ -1233,268 +1233,22 @@
     "_searched_at": "2026-10-07 10:07:24 UTC"
    }
   },
-  "0345613a126815d627841bf43da13cdf0fb087dd7719d945ce2d1ddb88a355f4": {
+  "56e8c5551fda490a8d0256bb262949bfce6c5f40dbdd7582a08c2ebecf263a2a": {
    "engine": "google",
    "params": {
     "gl": "in",
     "hl": "en",
     "google_domain": "google.co.in",
-    "q": "site:sbi.co.in (\"7000012345\" OR \"70000 12345\")"
+    "q": "(site:sbi.co.in OR site:sbi.bank.in) (\"7000012345\" OR \"70000 12345\")"
    },
    "response": {
-    "organic_results": [
-     {
-      "position": 1,
-      "title": "1221234567890*12345678900987654321",
-      "link": "https://brainly.in/question/7760598",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXgHrOzAVPpA-ptu77lygnY4xPEg298iwOLAdoZb4Xpzrj57oi0NXgaltPuWmiDh-3L_mqSCOLvf4Mun6K-TII4cPrYuvBWwzmtf30uZqZxd0V-n3xctmT8PjkofpoAw&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBgQAQ&uoh=1",
-      "displayed_link": "https://brainly.in › Math › Secondary School",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "date": "21 Jan 2019",
-      "snippet": "Answer: 1221234567890*12345678900987654321 = 1.534157875140984e + 24. gr8 22 kuch bhi ................. Explore all similar answers.",
-      "about_this_result": {
-       "source": {
-        "description": "Answer: 1221234567890*12345678900987654321 = 1.534157875140984e + 24. gr8 22 kuch bhi ................. Explore all similar answers.",
-        "source_info_link": "https://brainly.in/question/7760598",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co0BL2dvdG8_dXJsPUNBRVNYZ0hyT3pBVlBwQS1wdHU3N2x5Z25ZNHhQRWcyOThpd09MQWRvWmI0WHB6cmo1N29pME5YZ2FsdFB1V21pRGgtM0xfbXFTQ09MdmY0TXVuNkstVElJNGNQcll1dkJXd3ptdGYzMHVacVp4ZDBWLW4zeGN0bVQ4UGprb2Zwb0F3EgQaAggAGpQDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPACCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKNAS9nb3RvP3VybD1DQUVTWGdIck96QVZQcEEtcHR1NzdseWduWTR4UEVnMjk4aXdPTEFkb1piNFhwenJqNTdvaTBOWGdhbHRQdVdtaURoLTNMX21xU0NPTHZmNE11bjZLLVRJSTRjUHJZdXZCV3d6bXRmMzB1WnFaeGQwVi1uM3hjdG1UOFBqa29mcG9BdzovMTIyMTIzNDU2Nzg5MCoxMjM0NTY3ODkwMDk4NzY1NDMyMSAtIEJyYWlubHkuaW5ChAFBbnN3ZXI6IDEyMjEyMzQ1Njc4OTAqMTIzNDU2Nzg5MDA5ODc2NTQzMjEgPSAxLjUzNDE1Nzg3NTE0MDk4NGUgKyAyNC4gZ3I4IDIyIGt1Y2ggYmhpIC4uLi4uLi4uLi4uLi4uLi4uIEV4cGxvcmUgYWxsIHNpbWlsYXIgYW5zd2Vycy4iAhABSABYAGgA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co0BL2dvdG8_dXJsPUNBRVNYZ0hyT3pBVlBwQS1wdHU3N2x5Z25ZNHhQRWcyOThpd09MQWRvWmI0WHB6cmo1N29pME5YZ2FsdFB1V21pRGgtM0xfbXFTQ09MdmY0TXVuNkstVElJNGNQcll1dkJXd3ptdGYzMHVacVp4ZDBWLW4zeGN0bVQ4UGprb2Zwb0F3EgQaAggAGpQDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQPACCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKNAS9nb3RvP3VybD1DQUVTWGdIck96QVZQcEEtcHR1NzdseWduWTR4UEVnMjk4aXdPTEFkb1piNFhwenJqNTdvaTBOWGdhbHRQdVdtaURoLTNMX21xU0NPTHZmNE11bjZLLVRJSTRjUHJZdXZCV3d6bXRmMzB1WnFaeGQwVi1uM3hjdG1UOFBqa29mcG9BdzovMTIyMTIzNDU2Nzg5MCoxMjM0NTY3ODkwMDk4NzY1NDMyMSAtIEJyYWlubHkuaW5ChAFBbnN3ZXI6IDEyMjEyMzQ1Njc4OTAqMTIzNDU2Nzg5MDA5ODc2NTQzMjEgPSAxLjUzNDE1Nzg3NTE0MDk4NGUgKyAyNC4gZ3I4IDIyIGt1Y2ggYmhpIC4uLi4uLi4uLi4uLi4uLi4uIEV4cGxvcmUgYWxsIHNpbWlsYXIgYW5zd2Vycy4iAhABSABYAGgA",
-      "source": "Brainly.in",
-      "read_more_link": "https://brainly.in/question/7760598#:~:text=Answer%3A,Explore%20all%20similar%20answers"
-     },
-     {
-      "position": 2,
-      "title": "What is 10000000000000000 + 678901234567 - 5870485=",
-      "link": "https://brainly.in/question/48810351",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAVy2AQrZqQLbRrlL8TkiW15C2zKW68VV5OL9Wssez9Lj9NgdLOa2T_Q_c7ZecAZj9msQqnHDPHUXf9Z7bokpgwkfFp2SQ1e2EE__Iae5zFfGsQ3XtuTlALxKT3&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECA4QAQ&uoh=1",
-      "displayed_link": "https://brainly.in › Math › Secondary School",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "date": "29 Nov 2021",
-      "snippet": "5870485= - 48810351. Answer: your answer is 10,000,678,895,364,082",
-      "about_this_result": {
-       "source": {
-        "description": "5870485= - 48810351. Answer: your answer is 10,000,678,895,364,082",
-        "source_info_link": "https://brainly.in/question/48810351",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnkyQVFyWnFRTGJScmxMOFRraVcxNUMyektXNjhWVjVPTDlXc3NlejlMajlOZ2RMT2EyVF9RX2M3WmVjQVpqOW1zUXFuSERQSFVYZjlaN2Jva3Bnd2tmRnAyU1ExZTJFRV9fSWFlNXpGZkdzUTNYdHVUbEFMeEtUMxIEGgIIABrVAhIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCxAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWeTJBUXJacVFMYlJybEw4VGtpVzE1QzJ6S1c2OFZWNU9MOVdzc2V6OUxqOU5nZExPYTJUX1FfYzdaZWNBWmo5bXNRcW5IRFBIVVhmOVo3Ym9rcGd3a2ZGcDJTUTFlMkVFX19JYWU1ekZmR3NRM1h0dVRsQUx4S1QzOjJXaGF0IGlzIDEwMDAwMDAwMDAwMDAwMDAwICsgNjc4OTAxMjM0NTY3IC0gNTg3MDQ4NUJCNTg3MDQ4NT0gLSA0ODgxMDM1MS4gQW5zd2VyOiB5b3VyIGFuc3dlciBpcyAxMCwwMDAsNjc4LDg5NSwzNjQsMDgyIgIQAUgAWABoAA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVnkyQVFyWnFRTGJScmxMOFRraVcxNUMyektXNjhWVjVPTDlXc3NlejlMajlOZ2RMT2EyVF9RX2M3WmVjQVpqOW1zUXFuSERQSFVYZjlaN2Jva3Bnd2tmRnAyU1ExZTJFRV9fSWFlNXpGZkdzUTNYdHVUbEFMeEtUMxIEGgIIABrVAhIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCxAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWeTJBUXJacVFMYlJybEw4VGtpVzE1QzJ6S1c2OFZWNU9MOVdzc2V6OUxqOU5nZExPYTJUX1FfYzdaZWNBWmo5bXNRcW5IRFBIVVhmOVo3Ym9rcGd3a2ZGcDJTUTFlMkVFX19JYWU1ekZmR3NRM1h0dVRsQUx4S1QzOjJXaGF0IGlzIDEwMDAwMDAwMDAwMDAwMDAwICsgNjc4OTAxMjM0NTY3IC0gNTg3MDQ4NUJCNTg3MDQ4NT0gLSA0ODgxMDM1MS4gQW5zd2VyOiB5b3VyIGFuc3dlciBpcyAxMCwwMDAsNjc4LDg5NSwzNjQsMDgyIgIQAUgAWABoAA",
-      "source": "Brainly.in"
-     },
-     {
-      "position": 3,
-      "title": "Question 11, 4. Operations On Large Numbers, R S ...",
-      "link": "https://brainly.in/textbook-solutions/q-13256978-6975684-23679",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESeQHrOzAVaPsg-rRy1QjnWXEsLnqPNS_kAil3j-nVxDPpDrZMq-hk3M2BDuCTte56JUucw2AWf9EIIk2eBQm8qUGHM4XJED6KJguS8q0DEfvi7hJpHTHegfqs3Vus8g08LvXBjjddwlP86UtlOC81mMeG09Ui_Dy6QqQ&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECA8QAQ&uoh=1",
-      "displayed_link": "https://brainly.in › textbook-solutions",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "snippet": "Step by step explanation · Starting with addition of unit's place digit of both addends. The resulting number will be the unit's place number of the sum.",
-      "about_this_result": {
-       "source": {
-        "description": "Step by step explanation · Starting with addition of unit's place digit of both addends. The resulting number will be the unit's place number of the sum.",
-        "source_info_link": "https://brainly.in/textbook-solutions/q-13256978-6975684-23679",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CrEBL2dvdG8_dXJsPUNBRVNlUUhyT3pBVmFQc2ctclJ5MVFqbldYRXNMbnFQTlNfa0FpbDNqLW5WeERQcERyWk1xLWhrM00yQkR1Q1R0ZTU2SlV1Y3cyQVdmOUVJSWsyZUJRbThxVUdITTRYSkVENktKZ3VTOHEwREVmdmk3aEpwSFRIZWdmcXMzVnVzOGcwOEx2WEJqamRkd2xQODZVdGxPQzgxbU1lRzA5VWlfRHk2UXFREgQaAggAGuoDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMYDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKxAS9nb3RvP3VybD1DQUVTZVFIck96QVZhUHNnLXJSeTFRam5XWEVzTG5xUE5TX2tBaWwzai1uVnhEUHBEclpNcS1oazNNMkJEdUNUdGU1NkpVdWN3MkFXZjlFSUlrMmVCUW04cVVHSE00WEpFRDZLSmd1UzhxMERFZnZpN2hKcEhUSGVnZnFzM1Z1czhnMDhMdlhCampkZHdsUDg2VXRsT0M4MW1NZUcwOVVpX0R5NlFxUTo9UXVlc3Rpb24gMTEsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKoAVN0ZXAgYnkgc3RlcCBleHBsYW5hdGlvbiAmbWlkZG90OyBTdGFydGluZyB3aXRoIGFkZGl0aW9uIG9mIHVuaXQmIzM5O3MgcGxhY2UgZGlnaXQgb2YgYm90aCBhZGRlbmRzLiBUaGUgcmVzdWx0aW5nIG51bWJlciB3aWxsIGJlIHRoZSB1bml0JiMzOTtzIHBsYWNlIG51bWJlciBvZiB0aGUgc3VtLiICEAFIAFgAaAA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CrEBL2dvdG8_dXJsPUNBRVNlUUhyT3pBVmFQc2ctclJ5MVFqbldYRXNMbnFQTlNfa0FpbDNqLW5WeERQcERyWk1xLWhrM00yQkR1Q1R0ZTU2SlV1Y3cyQVdmOUVJSWsyZUJRbThxVUdITTRYSkVENktKZ3VTOHEwREVmdmk3aEpwSFRIZWdmcXMzVnVzOGcwOEx2WEJqamRkd2xQODZVdGxPQzgxbU1lRzA5VWlfRHk2UXFREgQaAggAGuoDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQMYDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKxAS9nb3RvP3VybD1DQUVTZVFIck96QVZhUHNnLXJSeTFRam5XWEVzTG5xUE5TX2tBaWwzai1uVnhEUHBEclpNcS1oazNNMkJEdUNUdGU1NkpVdWN3MkFXZjlFSUlrMmVCUW04cVVHSE00WEpFRDZLSmd1UzhxMERFZnZpN2hKcEhUSGVnZnFzM1Z1czhnMDhMdlhCampkZHdsUDg2VXRsT0M4MW1NZUcwOVVpX0R5NlFxUTo9UXVlc3Rpb24gMTEsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKoAVN0ZXAgYnkgc3RlcCBleHBsYW5hdGlvbiAmbWlkZG90OyBTdGFydGluZyB3aXRoIGFkZGl0aW9uIG9mIHVuaXQmIzM5O3MgcGxhY2UgZGlnaXQgb2YgYm90aCBhZGRlbmRzLiBUaGUgcmVzdWx0aW5nIG51bWJlciB3aWxsIGJlIHRoZSB1bml0JiMzOTtzIHBsYWNlIG51bWJlciBvZiB0aGUgc3VtLiICEAFIAFgAaAA",
-      "source": "Brainly.in",
-      "read_more_link": "https://brainly.in/textbook-solutions/q-13256978-6975684-23679#:~:text=Step%20by%20step%20explanation&text=%E2%80%A2%20Starting%20with%20addition%20of,place%20number%20of%20the%20sum."
-     },
-     {
-      "position": 4,
-      "title": "Question 13, 4. Operations On Large Numbers, R S ...",
-      "link": "https://brainly.in/textbook-solutions/q-474361279-236554385-53168837-20716314",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESiAEB6zswFffzAcR9i-wcjX_hxeu_GeO7mnmKWrKpj4GdPNTCd2RecCBjdxPjn0nP4frJ4ePtb_72k8z4bt0p38qLQfKX5tSFwp3vJvBFH_7j_o5rmbYEp0vcsv3PfkJ6lfMMmJSGbFmP50ghB1DmsWNrezeHFxrV1Dm0YghHdEYCTix0eUedMCBB&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECA0QAQ&uoh=1",
-      "displayed_link": "https://brainly.in › textbook-solutions",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "snippet": "Solution for Question 13 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
-      "about_this_result": {
-       "source": {
-        "description": "Solution for Question 13 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
-        "source_info_link": "https://brainly.in/textbook-solutions/q-474361279-236554385-53168837-20716314",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZmZnpBY1I5aS13Y2pYX2h4ZXVfR2VPN21ubUtXcktwajRHZFBOVENkMlJlY0NCamR4UGpuMG5QNGZySjRlUHRiXzcyazh6NGJ0MHAzOHFMUWZLWDV0U0Z3cDN2SnZCRkhfN2pfbzVybWJZRXAwdmNzdjNQZmtKNmxmTU1tSlNHYkZtUDUwZ2hCMURtc1dOcmV6ZUhGeHJWMURtMFlnaEhkRVlDVGl4MGVVZWRNQ0JCEgQaAggAGuMDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQL8DCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTLGAS9nb3RvP3VybD1DQUVTaUFFQjZ6c3dGZmZ6QWNSOWktd2NqWF9oeGV1X0dlTzdtbm1LV3JLcGo0R2RQTlRDZDJSZWNDQmpkeFBqbjBuUDRmcko0ZVB0Yl83Mms4ejRidDBwMzhxTFFmS1g1dFNGd3Azdkp2QkZIXzdqX281cm1iWUVwMHZjc3YzUGZrSjZsZk1NbUpTR2JGbVA1MGdoQjFEbXNXTnJlemVIRnhyVjFEbTBZZ2hIZEVZQ1RpeDBlVWVkTUNCQjo9UXVlc3Rpb24gMTMsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMyBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CsYBL2dvdG8_dXJsPUNBRVNpQUVCNnpzd0ZmZnpBY1I5aS13Y2pYX2h4ZXVfR2VPN21ubUtXcktwajRHZFBOVENkMlJlY0NCamR4UGpuMG5QNGZySjRlUHRiXzcyazh6NGJ0MHAzOHFMUWZLWDV0U0Z3cDN2SnZCRkhfN2pfbzVybWJZRXAwdmNzdjNQZmtKNmxmTU1tSlNHYkZtUDUwZ2hCMURtc1dOcmV6ZUhGeHJWMURtMFlnaEhkRVlDVGl4MGVVZWRNQ0JCEgQaAggAGuMDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQL8DCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTLGAS9nb3RvP3VybD1DQUVTaUFFQjZ6c3dGZmZ6QWNSOWktd2NqWF9oeGV1X0dlTzdtbm1LV3JLcGo0R2RQTlRDZDJSZWNDQmpkeFBqbjBuUDRmcko0ZVB0Yl83Mms4ejRidDBwMzhxTFFmS1g1dFNGd3Azdkp2QkZIXzdqX281cm1iWUVwMHZjc3YzUGZrSjZsZk1NbUpTR2JGbVA1MGdoQjFEbXNXTnJlemVIRnhyVjFEbTBZZ2hIZEVZQ1RpeDBlVWVkTUNCQjo9UXVlc3Rpb24gMTMsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMyBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
-      "source": "Brainly.in"
-     },
-     {
-      "position": 5,
-      "title": "find the value of the following using various properties ...",
-      "link": "https://brainly.in/question/60813404",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAVgUOG9zqVsS_zhAgc6A9Bm_rSB2xwnbaAx0HGRNgOigsWkkAOT-FVtAgjFDTUJsvTZvxSGMSSChvmOK53VU_7cRZvCVg-pJ5ZEMCa2rAeg8emYP5O4JaUf5M9&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBAQAQ&uoh=1",
-      "displayed_link": "https://brainly.in › Math › Primary School",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "date": "14 Jul 2024",
-      "snippet": "Click here 👆 to get an answer to your question ✍️ find the value of the following using various properties 12345 × 12345 - 12345 ×2345​",
-      "about_this_result": {
-       "source": {
-        "description": "Click here 👆 to get an answer to your question ✍️ find the value of the following using various properties 12345 × 12345 - 12345 ×2345​",
-        "source_info_link": "https://brainly.in/question/60813404",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVmdVT0c5enFWc1NfemhBZ2M2QTlCbV9yU0IyeHduYmFBeDBIR1JOZ09pZ3NXa2tBT1QtRlZ0QWdqRkRUVUpzdlRadnhTR01TU0Nodm1PSzUzVlVfN2NSWnZDVmctcEo1WkVNQ2EyckFlZzhlbVlQNU80SmFVZjVNORIEGgIIABq2AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCSAwgAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWZ1VPRzl6cVZzU196aEFnYzZBOUJtX3JTQjJ4d25iYUF4MEhHUk5nT2lnc1dra0FPVC1GVnRBZ2pGRFRVSnN2VFp2eFNHTVNTQ2h2bU9LNTNWVV83Y1JadkNWZy1wSjVaRU1DYTJyQWVnOGVtWVA1TzRKYVVmNU05OkJmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSAuLi5CkgFDbGljayBoZXJlIPCfkYYgdG8gZ2V0IGFuIGFuc3dlciB0byB5b3VyIHF1ZXN0aW9uIOKcje-4jyBmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSDDlyAxMjM0NSAtIDEyMzQ1IMOXMjM0NeKAiyICEAFIAFgAaAA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVmdVT0c5enFWc1NfemhBZ2M2QTlCbV9yU0IyeHduYmFBeDBIR1JOZ09pZ3NXa2tBT1QtRlZ0QWdqRkRUVUpzdlRadnhTR01TU0Nodm1PSzUzVlVfN2NSWnZDVmctcEo1WkVNQ2EyckFlZzhlbVlQNU80SmFVZjVNORIEGgIIABq2AxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkCSAwgAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWZ1VPRzl6cVZzU196aEFnYzZBOUJtX3JTQjJ4d25iYUF4MEhHUk5nT2lnc1dra0FPVC1GVnRBZ2pGRFRVSnN2VFp2eFNHTVNTQ2h2bU9LNTNWVV83Y1JadkNWZy1wSjVaRU1DYTJyQWVnOGVtWVA1TzRKYVVmNU05OkJmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSAuLi5CkgFDbGljayBoZXJlIPCfkYYgdG8gZ2V0IGFuIGFuc3dlciB0byB5b3VyIHF1ZXN0aW9uIOKcje-4jyBmaW5kIHRoZSB2YWx1ZSBvZiB0aGUgZm9sbG93aW5nIHVzaW5nIHZhcmlvdXMgcHJvcGVydGllcyAxMjM0NSDDlyAxMjM0NSAtIDEyMzQ1IMOXMjM0NeKAiyICEAFIAFgAaAA",
-      "source": "Brainly.in"
-     },
-     {
-      "position": 6,
-      "title": "Question 10, 4. Operations On Large Numbers, R S ...",
-      "link": "https://brainly.in/textbook-solutions/q-10-182",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESaQHrOzAVkFvriB5PuTCXG-t8Mj8K3weYcK6uOAihEyyAlHzTk4aUn7U8BkljcU9sk0OXljro2iLNGWFs6i1-QPNOUD70GCZJsgtLwRJhWWjbKSG-9KEQO5eqI5H4dgFuU-REyxj2JE90jg&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBUQAQ&uoh=1",
-      "displayed_link": "https://brainly.in › textbook-solutions",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "snippet": "Solution for Question 10 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
-      "about_this_result": {
-       "source": {
-        "description": "Solution for Question 10 from 4. Operations On Large Numbers of R S Aggarwal Mathematics - Class 5 Book for Class Class 5 solved by Experts.",
-        "source_info_link": "https://brainly.in/textbook-solutions/q-10-182",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVmtGdnJpQjVQdVRDWEctdDhNajhLM3dlWWNLNnVPQWloRXl5QWxIelRrNGFVbjdVOEJrbGpjVTlzazBPWGxqcm8yaUxOR1dGczZpMS1RUE5PVUQ3MEdDWkpzZ3RMd1JKaFdXamJLU0ctOUtFUU81ZXFJNUg0ZGdGdVUtUkV5eGoySkU5MGpnEgQaAggAGrkDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJUDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZrRnZyaUI1UHVUQ1hHLXQ4TWo4SzN3ZVljSzZ1T0FpaEV5eUFsSHpUazRhVW43VThCa2xqY1U5c2swT1hsanJvMmlMTkdXRnM2aTEtUVBOT1VENzBHQ1pKc2d0THdSSmhXV2piS1NHLTlLRVFPNWVxSTVINGRnRnVVLVJFeXhqMkpFOTBqZzo9UXVlc3Rpb24gMTAsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMCBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpwBL2dvdG8_dXJsPUNBRVNhUUhyT3pBVmtGdnJpQjVQdVRDWEctdDhNajhLM3dlWWNLNnVPQWloRXl5QWxIelRrNGFVbjdVOEJrbGpjVTlzazBPWGxqcm8yaUxOR1dGczZpMS1RUE5PVUQ3MEdDWkpzZ3RMd1JKaFdXamJLU0ctOUtFUU81ZXFJNUg0ZGdGdVUtUkV5eGoySkU5MGpnEgQaAggAGrkDEgAaACIAKgAyBggBEgJpbjoAQgQIARAASgBaAHIAegCCQJUDCAAQABgAIAAqHgoKNzAwMDAxMjM0NRUAAAAAGgs3MDAwMCAxMjM0NTKcAS9nb3RvP3VybD1DQUVTYVFIck96QVZrRnZyaUI1UHVUQ1hHLXQ4TWo4SzN3ZVljSzZ1T0FpaEV5eUFsSHpUazRhVW43VThCa2xqY1U5c2swT1hsanJvMmlMTkdXRnM2aTEtUVBOT1VENzBHQ1pKc2d0THdSSmhXV2piS1NHLTlLRVFPNWVxSTVINGRnRnVVLVJFeXhqMkpFOTBqZzo9UXVlc3Rpb24gMTAsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkKMAVNvbHV0aW9uIGZvciBRdWVzdGlvbiAxMCBmcm9tIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycyBvZiBSIFMgQWdnYXJ3YWwgTWF0aGVtYXRpY3MgLSBDbGFzcyA1IEJvb2sgZm9yIENsYXNzIENsYXNzIDUgc29sdmVkIGJ5IEV4cGVydHMuIgIQAUgAWABoAA",
-      "source": "Brainly.in"
-     },
-     {
-      "position": 7,
-      "title": "write an algorithm to print that numbers 12345 ...",
-      "link": "https://brainly.in/question/39796703",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESXwHrOzAV_EujLGXgHOjWSyTah0UQeCQiIKVTB_8poQ_gFW8PcFOGZwg8nCl6q_UCBr70eeGVwrXWakFHD2wlxXKbYPEPvzsykZnLL1VKb4L72oDkeyM1pefhpQYQ_aTs&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBcQAQ&uoh=1",
-      "displayed_link": "https://brainly.in › English › Secondary School",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "date": "4 May 2021",
-      "snippet": "Click here 👆 to get an answer to your question ✍️ write an algorithm to print that numbers 12345 12345 12345.",
-      "about_this_result": {
-       "source": {
-        "description": "Click here 👆 to get an answer to your question ✍️ write an algorithm to print that numbers 12345 12345 12345.",
-        "source_info_link": "https://brainly.in/question/39796703",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVl9FdWpMR1hnSE9qV1N5VGFoMFVRZUNRaUlLVlRCXzhwb1FfZ0ZXOFBjRk9HWndnOG5DbDZxX1VDQnI3MGVlR1Z3clhXYWtGSEQyd2x4WEtiWVBFUHZ6c3lrWm5MTDFWS2I0TDcyb0RrZXlNMXBlZmhwUVlRX2FUcxIEGgIIABqUAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDwAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWX0V1akxHWGdIT2pXU3lUYWgwVVFlQ1FpSUtWVEJfOHBvUV9nRlc4UGNGT0dad2c4bkNsNnFfVUNCcjcwZWVHVndyWFdha0ZIRDJ3bHhYS2JZUEVQdnpzeWtabkxMMVZLYjRMNzJvRGtleU0xcGVmaHBRWVFfYVRzOj93cml0ZSBhbiBhbGdvcml0aG0gdG8gcHJpbnQgdGhhdCBudW1iZXJzIDEyMzQ1IC4uLiAtIEJyYWlubHkuaW5CdENsaWNrIGhlcmUg8J-RhiB0byBnZXQgYW4gYW5zd2VyIHRvIHlvdXIgcXVlc3Rpb24g4pyN77iPIHdyaXRlIGFuIGFsZ29yaXRobSB0byBwcmludCB0aGF0IG51bWJlcnMgMTIzNDUgMTIzNDUgMTIzNDUuIgIQAUgAWABoAA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Co4BL2dvdG8_dXJsPUNBRVNYd0hyT3pBVl9FdWpMR1hnSE9qV1N5VGFoMFVRZUNRaUlLVlRCXzhwb1FfZ0ZXOFBjRk9HWndnOG5DbDZxX1VDQnI3MGVlR1Z3clhXYWtGSEQyd2x4WEtiWVBFUHZ6c3lrWm5MTDFWS2I0TDcyb0RrZXlNMXBlZmhwUVlRX2FUcxIEGgIIABqUAxIAGgAiACoAMgYIARICaW46AEIECAEQAEoAWgByAHoAgkDwAggAEAAYACAAKh4KCjcwMDAwMTIzNDUVAAAAABoLNzAwMDAgMTIzNDUyjgEvZ290bz91cmw9Q0FFU1h3SHJPekFWX0V1akxHWGdIT2pXU3lUYWgwVVFlQ1FpSUtWVEJfOHBvUV9nRlc4UGNGT0dad2c4bkNsNnFfVUNCcjcwZWVHVndyWFdha0ZIRDJ3bHhYS2JZUEVQdnpzeWtabkxMMVZLYjRMNzJvRGtleU0xcGVmaHBRWVFfYVRzOj93cml0ZSBhbiBhbGdvcml0aG0gdG8gcHJpbnQgdGhhdCBudW1iZXJzIDEyMzQ1IC4uLiAtIEJyYWlubHkuaW5CdENsaWNrIGhlcmUg8J-RhiB0byBnZXQgYW4gYW5zd2VyIHRvIHlvdXIgcXVlc3Rpb24g4pyN77iPIHdyaXRlIGFuIGFsZ29yaXRobSB0byBwcmludCB0aGF0IG51bWJlcnMgMTIzNDUgMTIzNDUgMTIzNDUuIgIQAUgAWABoAA",
-      "source": "Brainly.in"
-     },
-     {
-      "position": 8,
-      "title": "Question 7, 4. Operations On Large Numbers, R S ...",
-      "link": "https://brainly.in/textbook-solutions/q-8986-700",
-      "redirect_link": "https://www.google.co.in/url?sa=t&source=web&rct=j&opi=89978449&url=CAESawHrOzAVk7gkyUToIGn9l3UIcr3cGl2RzDmEJwzzIFCd-KXwwr3rmlNZTcOWjojhBwO453UQ2iWSkHNetKhvYY27zymea4cojpzBb88rbia7YsdmU8cBiHJN--2WZPvPr7p2q-VVly2wRJ8r&ved=2ahUKEwix5qrP1KeXAxWbafUHHaK2EFMQFnoECBIQAQ&uoh=1",
-      "displayed_link": "https://brainly.in › textbook-solutions",
-      "favicon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp",
-      "snippet": "Take out zeros in last from each number, multiply the obtained numbers then add the zeros at last of the product of numbers.",
-      "about_this_result": {
-       "source": {
-        "description": "Take out zeros in last from each number, multiply the obtained numbers then add the zeros at last of the product of numbers.",
-        "source_info_link": "https://brainly.in/textbook-solutions/q-8986-700",
-        "icon": "https://serpapi.com/images/i/UklGRk4BAABXRUJQVlA4IEIBAAAwBgCdASocABwAPtEwtFooIigoGAEAGglsALEfjujYeVUrmVFvePfopq4YEKkgjGUwSJxNXx6tCxAAAP7ok4Z-oj154nFXNCQfL5_GR-HUt1enSHpQs4JKJaDL_hnAfTMfpZ55AbUU5K3iFy4V43bqjRuhFcxDFm-y03hJoy5ob0biY_OkcraP5PHiwXeb3q4S8md_FJuOkv1fgUUzWnPthUGFaCV_rPW7rbv8vgQEHP4sBf9Ifs1DNP-bQ1RNXNGI6UiGmo-f--lOZSdNV5ldnfgBmfVlmC7J79-4HsgJg_n-bH6WCMoBnjmhRpdmbOJ_96g-aqeWmIKa2s6-ra8hIBiPtz_V1LzGRqRQTn6Rr3JGbYn7bHZBjzBq5-I3v2HwrT5fo6cYvSLDFowWnTW0pbtXoAEV6BTrIzlCv859t1AA.webp"
-       },
-       "languages": [
-        "en"
-       ],
-       "regions": [
-        "IN"
-       ]
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHISBBoCCAAaqQMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAhQMIABAAGAAgACoeCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Mp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHI6PFF1ZXN0aW9uIDcsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkJ8VGFrZSBvdXQgemVyb3MgaW4gbGFzdCBmcm9tIGVhY2ggbnVtYmVyLCBtdWx0aXBseSB0aGUgb2J0YWluZWQgbnVtYmVycyB0aGVuIGFkZCB0aGUgemVyb3MgYXQgbGFzdCBvZiB0aGUgcHJvZHVjdCBvZiBudW1iZXJzLiICEAFIAFgAaAA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=Cp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHISBBoCCAAaqQMSABoAIgAqADIGCAESAmluOgBCBAgBEABKAFoAcgB6AIJAhQMIABAAGAAgACoeCgo3MDAwMDEyMzQ1FQAAAAAaCzcwMDAwIDEyMzQ1Mp4BL2dvdG8_dXJsPUNBRVNhd0hyT3pBVms3Z2t5VVRvSUduOWwzVUljcjNjR2wyUnpEbUVKd3p6SUZDZC1LWHd3cjNybWxOWlRjT1dqb2poQndPNDUzVVEyaVdTa0hOZXRLaHZZWTI3enltZWE0Y29qcHpCYjg4cmJpYTdZc2RtVThjQmlISk4tLTJXWlB2UHI3cDJxLVZWbHkyd1JKOHI6PFF1ZXN0aW9uIDcsIDQuIE9wZXJhdGlvbnMgT24gTGFyZ2UgTnVtYmVycywgUiBTIEFnZ2Fyd2FsIC4uLkJ8VGFrZSBvdXQgemVyb3MgaW4gbGFzdCBmcm9tIGVhY2ggbnVtYmVyLCBtdWx0aXBseSB0aGUgb2J0YWluZWQgbnVtYmVycyB0aGVuIGFkZCB0aGUgemVyb3MgYXQgbGFzdCBvZiB0aGUgcHJvZHVjdCBvZiBudW1iZXJzLiICEAFIAFgAaAA",
-      "source": "Brainly.in"
-     },
-     {
-      "position": 9,
-      "title": "What number has to be added to 345670 to make it divisible by 6",
-      "link": "https://www.youtube.com/watch?v=o2vGLOeU2uw",
-      "displayed_link": "650+ views · 3 years ago",
-      "thumbnail": "https://serpapi.com/searches/6ac619f922abf7b40eca6ff4/images/1ZWQ_Ydt-vArqBKupOrduZ4Kw9u8E0R-p0PtEJ74Kbw.png",
-      "favicon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp",
-      "snippet": "What number has to be added to 345670 to make it divisible by 6 ?",
-      "duration": "2:09",
-      "about_this_result": {
-       "source": {
-        "description": "What number has to be added to 345670 to make it divisible by 6 ?",
-        "icon": "https://serpapi.com/images/i/UklGRpwAAABXRUJQVlA4IJAAAAAQAwCdASoQABAAAsBMJbACdEyAZIBvHZEVF_xH8jFr8RAA_vdfqk7B4h7c7SA9EXLm1jvCcvS12TTPc4SgLiYbbdnDtj5mFYsy9rYK8egN-m_wy1bF7_lqaJwe1kOFY9IH8jmlO7DbAWe9V_-WsvvcWurSf-Cp-rbcVf_uF_E7k7jxw1wX2r_PvJ3PjrggAAA.webp"
-       }
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlE0Q196SkhXSi1Ub2oyN1V3T2thN3ZqWW10dXpSZHJjdXhDUVRkMmhodjBSVUt3dW9BdEQ2Nk9MeTN0VlRTb2g4UHRieEphXzB2eHN2UU9KMlBaNjFwdTNOR1pkaFhiTXNObVNhbGJMSFlnRmVVS3Iwejg1QWxLaXNJY2UtbFdCeXcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVlE0Q196SkhXSi1Ub2oyN1V3T2thN3ZqWW10dXpSZHJjdXhDUVRkMmhodjBSVUt3dW9BdEQ2Nk9MeTN0VlRTb2g4UHRieEphXzB2eHN2UU9KMlBaNjFwdTNOR1pkaFhiTXNObVNhbGJMSFlnRmVVS3Iwejg1QWxLaXNJY2UtbFdCeXcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
-      "source": "YouTube · Question Dictionary"
-     },
-     {
-      "position": 10,
-      "title": "Number system 12345 #math #question #reelviral #treding",
-      "link": "https://www.instagram.com/reel/DdnuUBvTbO5/",
-      "displayed_link": "2 likes · 2 weeks ago",
-      "thumbnail": "https://serpapi.com/searches/6ac619f922abf7b40eca6ff4/images/1ZWQ_Ydt-vArqBKupOrduea3wGEcRxXLVRnZ3tvQiEs.jpeg",
-      "favicon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp",
-      "snippet": "Complete mathe Number System superb quick revision part 2 with tricks for ssc railway upsc ukpsc uppsc upsssc bpsc bpsssc uksssc and all ...",
-      "duration": "0:05",
-      "about_this_result": {
-       "source": {
-        "description": "Complete mathe Number System superb quick revision part 2 with tricks for ssc railway upsc ukpsc uppsc upsssc bpsc bpsssc uksssc and all ...",
-        "icon": "https://serpapi.com/images/i/UklGRs4BAABXRUJQVlA4IMIBAACwCQCdASocABwAPtEutFooIagoGAEAGglsAJ0yhHXnqv4q8gZxcYcQlttR3oGAAfrN6ZPsZeUqUy7yrvQBaXZxUNd6xeyZ_zpu3z7vEbG_rI9uLR3JAAD-bPWFChRsYA73DNfFBGB39AY4cc2rgYfPUbTnZSkmPIT9f5LwLGh1tr6GbI8_Wg5YyMLqPP_I5v8_74-PGNsMjg_WUbMOAh-IjBPzRGbszqR7w-L8gERR1HCDCy9n1undGs3qkDheeBATd9L9I-Aoo9FTSOQx_H8nQUHIFM6kvout0x-QCvYDa5PYNlH6Q0wXP9J5qEyzdAEM65Q3dTRjK18i8klikng6N72k76S7vLx-v9Mv8y6H-iwfMsRMuFs27Yye-WnY5LGgqhsZeH8167oiT3hIlNwprV8Gv8bjmAvv3_4d59fmIOOf_PXX3B5Q_PPQprbEq6U97aH_XlCEDWm5v9GJuV7HyOamOUMgseUuj_-piTqcRYQhGxTGIPcM4c15P3Imbj7QTHY5HyOiSVI1eHnj9YtD1bBIugmEKf-KfDkltWl0LUiTqQwVPaxvhDKQ1Wf35o_kqQp7rNwi0ci1WW30iEwAAAA.webp"
-       }
-      },
-      "about_page_link": "https://www.google.co.in/search/about-this-result?origin=www.google.com&req=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVl9sSENBMUtsTDlaQVF0alRJYmZWNXM1MlMtbGg5VjFwQ0podDN3RFlPTWlabGZaQ2FiYUo0RUlFVWhmeWFpTWo4UWNuQXVRSFlIcFBOczZuX3I4RWlsLVY0WFVoVGNVeFM2LVlNQkZEQmIwYWo4Qm1JMC1udVBKMmNYQjNDeDl0eHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
-      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.co.in&req_token=CpgBL2dvdG8_dXJsPUNBRVNaZ0hyT3pBVl9sSENBMUtsTDlaQVF0alRJYmZWNXM1MlMtbGg5VjFwQ0podDN3RFlPTWlabGZaQ2FiYUo0RUlFVWhmeWFpTWo4UWNuQXVRSFlIcFBOczZuX3I4RWlsLVY0WFVoVGNVeFM2LVlNQkZEQmIwYWo4Qm1JMC1udVBKMmNYQjNDeDl0eHcSFgoQCgQIMEgCCgQISEgCCgIIPxoCCAAaFhIAGgAiACoAMgA6AEIASgBaAHIAegAiAhABSABYAGgA",
-      "source": "Instagram · dream.sarkarinaukari"
-     }
-    ],
     "search_information": {
-     "query_displayed": "site:sbi.co.in (\"7000012345\" OR \"70000 12345\")",
-     "total_results": 56,
-     "time_taken_displayed": 0.21,
-     "organic_results_state": "Results for exact spelling"
+     "query_displayed": "(site:sbi.co.in OR site:sbi.bank.in) (\"7000012345\" OR \"70000 12345\")",
+     "total_results": 0,
+     "time_taken_displayed": 0.14,
+     "organic_results_state": "Fully empty"
     },
-    "_searched_at": "2026-10-07 10:07:53 UTC"
+    "_searched_at": "2026-10-07 11:28:30 UTC"
    }
   }
  }

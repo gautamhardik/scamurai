@@ -11,8 +11,9 @@ from rapidfuzz import fuzz
 
 from asli.ingest import regex_extract as rx
 from asli.investigate.evidence import EvidenceBook
-from asli.investigate.planner import suspicious_domains
+from asli.investigate.planner import requested_upis, suspicious_domains
 from asli.knowledge import domains
+from asli.knowledge.lexicon import report_hits
 from asli.knowledge.patterns import SCHEME_NEWS_KEYWORDS, detect_message_patterns
 from asli.models import ClaimGraph, Entity, EvidenceItem, SearchSpec, Signal
 from asli.risk.signals import ladder, make
@@ -127,7 +128,7 @@ def message_signals(ctx: Ctx) -> list[Signal]:
     for hit in detect_message_patterns(g.haystack):
         span = book.add_message_span(hit.quote)
         weight = None
-        if hit.signal == "payment_request" and g.of("upi_id"):
+        if hit.signal == "payment_request" and requested_upis(g):
             weight = 0.25
         if hit.signal == "too_good_to_be_true" and hit.detail == "task":
             weight = 0.5  # paid likes/reviews/tasks: the task-scam hook, not just optimistic marketing
@@ -147,8 +148,8 @@ def message_signals(ctx: Ctx) -> list[Signal]:
                                 quote=span.title, amount=amt.attrs.get("display")))
                 seen.add("upfront_fee")
     # payment request also implied by a UPI ID handed out in the message
-    if "payment_request" not in seen and g.of("upi_id"):
-        upi = g.of("upi_id")[0]
+    if "payment_request" not in seen and requested_upis(g):
+        upi = requested_upis(g)[0]
         span = book.add_message_span(_context(g.haystack, upi.raw), [upi.id])
         out.append(make("payment_request", confidence=0.85, weight=0.25, evidence_ids=[span.id],
                         entity_ids=[upi.id], quote=span.title))
@@ -221,7 +222,7 @@ def identity_signals(ctx: Ctx) -> list[Signal]:
 
     # Authorities, banks and utilities don't collect money into personal UPI accounts.
     if g.org_category in AUTHORITY_CATEGORIES or g.scheme in AUTHORITY_SCHEMES:
-        for upi in g.of("upi_id"):
+        for upi in requested_upis(g):
             span = book.add_message_span(_context(g.haystack, upi.raw), [upi.id])
             personal = upi.attrs.get("handle") in PERSONAL_UPI
             out.append(make("authority_personal_upi", confidence=0.85 if personal else 0.7, evidence_ids=[span.id],
@@ -266,19 +267,30 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
                             phone=phone.attrs.get("display"), official=(shown or contact_pages)[0].domain))
             confirmed.add(pid)
         elif off:
-            out.append(make("official_contact_mismatch", confidence=0.7, evidence_ids=list(off.evidence_ids),
+            # Absence on the official site is weaker for toll-free numbers: they're registered to
+            # businesses, so scammers rarely hold one.
+            conf = 0.45 if phone.attrs.get("kind") == "toll_free" else 0.7
+            out.append(make("official_contact_mismatch", confidence=conf, evidence_ids=list(off.evidence_ids),
                             entity_ids=[pid], phone=phone.attrs.get("display"), official=off.domains[0], org=off.name,
                             query=spec.params.get("q"), other_pages=len(official_items)))
 
     # Big organisations publish toll-free/landline helplines; a personal mobile number is a red flag.
-    if off and g.scheme in ("customer_care", "kyc_update", "bank_account_block", "courier_customs",
-                            "electricity_disconnection", "tax_refund"):
+    # Without a named organisation ("your electricity will be cut, call our officer on 98…") the same
+    # holds for any utility, bank or authority, so the generic form cites the message alone.
+    helpline_schemes = ("customer_care", "kyc_update", "bank_account_block", "courier_customs",
+                        "electricity_disconnection", "tax_refund")
+    authority_claim = g.org_category in AUTHORITY_CATEGORIES or g.scheme in AUTHORITY_SCHEMES
+    if g.scheme in helpline_schemes and (off or authority_claim):
         for phone in g.of("phone"):
             if phone.attrs.get("kind") == "mobile" and phone.id not in confirmed:
                 span = book.add_message_span(_context(g.haystack, phone.raw), [phone.id])
-                out.append(make("helpline_is_mobile", confidence=0.6, evidence_ids=[span.id, *off.evidence_ids],
-                                entity_ids=[phone.id], phone=phone.attrs.get("display"), org=off.name,
-                                official=off.domains[0]))
+                if off:
+                    out.append(make("helpline_is_mobile", confidence=0.6, evidence_ids=[span.id, *off.evidence_ids],
+                                    entity_ids=[phone.id], phone=phone.attrs.get("display"), org=off.name,
+                                    official=off.domains[0]))
+                else:
+                    out.append(make("helpline_is_mobile", confidence=0.6, evidence_ids=[span.id],
+                                    entity_ids=[phone.id], phone=phone.attrs.get("display"), detail="generic"))
 
     # Whose number is this? A clean mention on a well-known organisation's own contact/help page (not a
     # warning page, and not a product or seller page: marketplaces host third-party text scammers can plant).
@@ -307,7 +319,7 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
         pid = spec.entity_ids[0]
         phone = next(e for e in g.entities if e.id == pid)
         items = [i for i in book.for_search(spec.id)
-                 if pid in i.matched_entities and i.lexicon_hits and i.source_class != "official"]
+                 if pid in i.matched_entities and report_hits(i.lexicon_hits) and i.source_class != "official"]
         independent = EvidenceBook.independent(items)
         if pid in confirmed and len(independent) < 3:
             continue
@@ -324,7 +336,7 @@ def upi_signals(ctx: Ctx) -> list[Signal]:
     for spec, _outcome in ctx.ok("upi_reputation"):
         uid = spec.entity_ids[0]
         upi = next(e for e in g.entities if e.id == uid)
-        items = [i for i in book.for_search(spec.id) if uid in i.matched_entities and i.lexicon_hits]
+        items = [i for i in book.for_search(spec.id) if uid in i.matched_entities and report_hits(i.lexicon_hits)]
         independent = EvidenceBook.independent(items)
         if independent:
             out.append(make("upi_reported", confidence=report_confidence(independent), evidence_ids=_top(independent),
@@ -554,7 +566,18 @@ def all_signals(ctx: Ctx) -> list[Signal]:
         key = (s.id, tuple(sorted(s.entity_ids)))
         if key not in best or s.contribution > best[key].contribution:
             best[key] = s
-    return list(best.values())
+    out = list(best.values())
+    # News about a *kind* of scam is context, not evidence about this message: it only counts when the
+    # message itself shows the scam's mechanics (a request, an identity mismatch, a report…). Otherwise a
+    # genuine SBI alert would inherit every "SBI scam" headline. Urgency and "not found" don't qualify.
+    if not any(s.polarity == "risk" and s.id not in CONTEXT_SIGNALS | NOT_A_HOOK for s in out):
+        out = [s for s in out if s.id not in CONTEXT_SIGNALS]
+    return out
+
+
+CONTEXT_SIGNALS = {"known_scam_pattern", "org_impersonation_reports"}
+NOT_A_HOOK = {"threat_or_urgency", "official_contact_mismatch", "domain_no_footprint", "company_no_footprint",
+              "job_not_listed"}
 
 
 def verifiable_entities(graph: ClaimGraph) -> list[Entity]:
