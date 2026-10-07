@@ -79,10 +79,11 @@ def phone_display(value: str) -> str:
 
 
 def urls(text: str) -> list[Found]:
-    email_spans = [m.span() for m in _EMAIL.finditer(text)]
+    # "amazonhr.jobs@ybl" is a UPI ID, not the website amazonhr.jobs (.jobs is a real TLD)
+    taken = [m.span() for m in _EMAIL.finditer(text)] + [m.span() for m in _UPI.finditer(text)]
     out: dict[str, Found] = {}
     for m in _URL.finditer(text):
-        if any(s <= m.start() < e for s, e in email_spans):
+        if any(s <= m.start() < e for s, e in taken) or text[m.end():m.end() + 1] == "@":
             continue
         raw = m.group(0).rstrip(".,;:!?)]}'\"")
         host = domains.host_of(raw)

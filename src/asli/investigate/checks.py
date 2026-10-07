@@ -569,15 +569,16 @@ def all_signals(ctx: Ctx) -> list[Signal]:
     out = list(best.values())
     # News about a *kind* of scam is context, not evidence about this message: it only counts when the
     # message itself shows the scam's mechanics (a request, an identity mismatch, a report…). Otherwise a
-    # genuine SBI alert would inherit every "SBI scam" headline. Urgency and "not found" don't qualify.
+    # genuine SBI alert would inherit every "SBI scam" headline. Urgency, a plain request to pay and
+    # "not found" don't qualify.
     if not any(s.polarity == "risk" and s.id not in CONTEXT_SIGNALS | NOT_A_HOOK for s in out):
         out = [s for s in out if s.id not in CONTEXT_SIGNALS]
     return out
 
 
 CONTEXT_SIGNALS = {"known_scam_pattern", "org_impersonation_reports"}
-NOT_A_HOOK = {"threat_or_urgency", "official_contact_mismatch", "domain_no_footprint", "company_no_footprint",
-              "job_not_listed"}
+NOT_A_HOOK = {"threat_or_urgency", "payment_request", "official_contact_mismatch", "domain_no_footprint",
+              "company_no_footprint", "job_not_listed"}  # genuine bills also ask you to pay, urgently
 
 
 def verifiable_entities(graph: ClaimGraph) -> list[Entity]:

@@ -1,5 +1,5 @@
-"""Regressions for issues found in the adversarial audit. Each test reproduced a real failure
-before its fix (see docs/AUDIT.md)."""
+"""Regressions for issues found in the adversarial audit (see docs/AUDIT.md). Tests for fixed bugs
+reproduced the failure before the fix; the hostile-upload tests pin behaviour that was already correct."""
 
 import io
 import time
@@ -195,3 +195,57 @@ def test_prune_drops_expired_search_cache(tmp_path):
     store.prune()
     rows = {r[0] for r in store._conn.execute("SELECT key FROM search_cache")}
     assert rows == {"new"}
+
+
+# ----------------------------------------------------------------------------- live-eval false alarm (P1)
+async def test_genuine_bank_alert_does_not_inherit_scam_headlines(live, monkeypatch):
+    """Live eval: a real SBI debit alert scored HIGH_RISK 65 from helpline-directory 'reports',
+    SBI-scam news and a merchant UPI ID. None of those are evidence about this message."""
+    _llm(monkeypatch, {"scheme": "bank_account_block", "language": "en",
+                       "claimed_org": {"name": "SBI", "category": "bank"}})
+
+    def responder(req):
+        q = req.get("q", "")
+        if req["engine"] == "google_news":
+            return {"news_results": [{"title": f"SBI fake message alert {i}: do not fall for account blocked scam",
+                                      "link": f"https://news{i}.example/sbi", "source": {"name": f"News {i}"},
+                                      "iso_date": "2026-09-01T00:00:00Z"} for i in range(1, 6)]}
+        if q.startswith("(site:") or q.startswith("site:"):
+            assert "sbi.bank.in" in q  # the official-number check covers SBI's new domain
+            return NO_RESULTS
+        return {"organic_results": [
+            {"position": 1, "title": "SBI Banking Customer Care Number", "link": "https://www.facebook.com/sbi-help",
+             "snippet": "1800 11 2211 is also listed for other fraud reports and complaints."},
+            {"position": 2, "title": "SBI Complaint 1800 11 2211", "link": "https://complaintmitra.in/sbi",
+             "snippet": "Use the complaint number 1800 11 2211."}]}
+
+    _serp(monkeypatch, responder)
+    report = await _run(live, "Dear Customer, Rs 1,250.00 debited from A/c XX4521 on 05-10-26 to VPA swiggy@icici. "
+                              "Not you? Call 1800 11 2211 to block. -SBI")
+    ids = {f.signal_id for f in report.flags}
+    assert not ids & {"phone_reported", "known_scam_pattern", "org_impersonation_reports", "payment_request",
+                      "authority_personal_upi"}
+    assert report.level not in ("HIGH_RISK", "SUSPICIOUS")
+    assert {"Phone": "1800 11 2211"}.items() <= {c.label: c.value for c in report.claims_summary}.items()
+
+
+def test_upi_payee_in_a_transaction_notice_is_not_a_request():
+    from asli.knowledge.patterns import upi_is_requested
+
+    assert not upi_is_requested("Rs 1,250.00 debited from A/c XX4521 to VPA swiggy@icici. Not you? Call 1800 11 2211.",
+                                "swiggy@icici")
+    assert not upi_is_requested("Rs 300 received from rahul@okaxis. UPI Ref 1234", "rahul@okaxis")
+    assert upi_is_requested("Rs 5,000 credited by mistake. Please return it to refund.desk@ybl", "refund.desk@ybl")
+    assert upi_is_requested("50,000 rupaye is UPI par bhejiye: cbi.verify@ybl", "cbi.verify@ybl")
+    assert upi_is_requested("रजिस्ट्रेशन शुल्क ₹1,999 इस UPI पर भेजें: amazonhr.jobs@ybl", "amazonhr.jobs@ybl")
+
+
+def test_toll_free_numbers_keep_their_grouping():
+    assert rx.phone_display("1800112211") == "1800 11 2211"
+    assert rx.phone_display("18004253800") == "1800 425 3800"
+
+
+def test_upi_id_is_not_mistaken_for_a_website():
+    """'amazonhr.jobs@ybl' produced a 'website has no track record' flag for amazonhr.jobs."""
+    assert rx.urls("Registration fee via UPI: amazonhr.jobs@ybl") == []
+    assert [f.value for f in rx.urls("Pay at sbi-kyc.top or UPI pay.kyc@ybl")] == ["sbi-kyc.top"]

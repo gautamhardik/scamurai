@@ -1,27 +1,29 @@
 {
   "summary": {
-    "mode": "rules-only (no AI reader, no searches)",
-    "scam_recall": "5/10",
+    "mode": "live",
+    "scam_recall": "10/10",
     "genuine_false_alarms": "0/10",
-    "genuine_confirmed_low_risk": "3/10",
+    "genuine_confirmed_low_risk": "6/10",
     "ambiguous_handled": "10/10",
     "precision_of_flags": 1.0,
-    "credits": 0,
-    "searches": 0
+    "credits": 1,
+    "searches": 44
   },
   "rows": [
     {
       "id": "g01_sbi_debit",
       "label": "genuine",
       "lang": "en",
-      "level": "UNVERIFIED",
+      "level": "LOW_RISK",
       "score": 0,
       "correct": true,
-      "flags": [],
-      "searches": 0,
+      "flags": [
+        "T1"
+      ],
+      "searches": 3,
       "credits": 0,
-      "reader": "regex_fallback",
-      "seconds": 0.0
+      "reader": "llm",
+      "seconds": 0.1
     },
     {
       "id": "g02_amazon_dispatch",
@@ -33,9 +35,9 @@
       "flags": [
         "T2"
       ],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -43,12 +45,14 @@
       "label": "genuine",
       "lang": "en",
       "level": "UNVERIFIED",
-      "score": 0,
+      "score": 21,
       "correct": true,
-      "flags": [],
-      "searches": 0,
+      "flags": [
+        "W3"
+      ],
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -61,7 +65,7 @@
       "flags": [],
       "searches": 0,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -72,9 +76,9 @@
       "score": 0,
       "correct": true,
       "flags": [],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -89,38 +93,38 @@
       ],
       "searches": 0,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "g07_itr_processed",
       "label": "genuine",
       "lang": "en",
-      "level": "UNVERIFIED",
+      "level": "LOW_RISK",
       "score": 0,
       "correct": true,
       "flags": [
         "T2"
       ],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "g08_flipkart_sale",
       "label": "genuine",
       "lang": "en",
-      "level": "UNVERIFIED",
+      "level": "LOW_RISK",
       "score": 7,
       "correct": true,
       "flags": [
         "M3",
         "T2"
       ],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -135,7 +139,7 @@
       ],
       "searches": 0,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -148,7 +152,7 @@
       "flags": [],
       "searches": 0,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -156,32 +160,36 @@
       "label": "scam",
       "lang": "en",
       "level": "HIGH_RISK",
-      "score": 68,
+      "score": 83,
       "correct": true,
       "flags": [
         "I1",
+        "W6",
+        "W4",
         "M3",
-        "M6"
+        "M6",
+        "W7"
       ],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "s02_electricity_hi",
       "label": "scam",
       "lang": "hi",
-      "level": "UNVERIFIED",
-      "score": 29,
-      "correct": false,
+      "level": "SUSPICIOUS",
+      "score": 50,
+      "correct": true,
       "flags": [
+        "W6",
         "I6",
         "M3"
       ],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -189,126 +197,139 @@
       "label": "scam",
       "lang": "hinglish",
       "level": "HIGH_RISK",
-      "score": 80,
+      "score": 87,
       "correct": true,
       "flags": [
         "M9",
         "I7",
-        "M4"
+        "W6",
+        "M4",
+        "W7"
       ],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "s04_kbc_lottery",
       "label": "scam",
       "lang": "en",
-      "level": "SUSPICIOUS",
-      "score": 62,
+      "level": "HIGH_RISK",
+      "score": 79,
       "correct": true,
       "flags": [
         "M2",
+        "W6",
+        "W3",
         "M4"
       ],
-      "searches": 0,
-      "credits": 0,
-      "reader": "regex_fallback",
-      "seconds": 0.0
+      "searches": 4,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 1.1
     },
     {
       "id": "s05_task_hinglish",
       "label": "scam",
       "lang": "hinglish",
       "level": "SUSPICIOUS",
-      "score": 45,
+      "score": 61,
       "correct": true,
       "flags": [
-        "M8"
+        "M8",
+        "W6"
       ],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "s06_indiapost_link",
       "label": "scam",
       "lang": "en",
-      "level": "SUSPICIOUS",
-      "score": 63,
+      "level": "HIGH_RISK",
+      "score": 82,
       "correct": true,
       "flags": [
         "I1",
+        "W2",
+        "W6",
         "M3"
       ],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "s07_paytm_kyc_call",
       "label": "scam",
       "lang": "en",
-      "level": "UNVERIFIED",
-      "score": 29,
-      "correct": false,
+      "level": "SUSPICIOUS",
+      "score": 61,
+      "correct": true,
       "flags": [
+        "W6",
+        "W3",
         "I6",
         "M3"
       ],
-      "searches": 0,
+      "searches": 3,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "s08_electricity_en",
       "label": "scam",
       "lang": "en",
-      "level": "UNVERIFIED",
-      "score": 29,
-      "correct": false,
+      "level": "SUSPICIOUS",
+      "score": 50,
+      "correct": true,
       "flags": [
+        "W6",
         "I6",
         "M3"
       ],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "s09_job_fee_hi",
       "label": "scam",
       "lang": "hi",
-      "level": "UNVERIFIED",
-      "score": 21,
-      "correct": false,
+      "level": "SUSPICIOUS",
+      "score": 63,
+      "correct": true,
       "flags": [
-        "M4"
+        "M2",
+        "M4",
+        "W10"
       ],
-      "searches": 0,
+      "searches": 4,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
       "id": "s10_stock_tips",
       "label": "scam",
       "lang": "en",
-      "level": "UNVERIFIED",
-      "score": 33,
-      "correct": false,
+      "level": "SUSPICIOUS",
+      "score": 53,
+      "correct": true,
       "flags": [
+        "W6",
         "M8",
         "M3"
       ],
-      "searches": 0,
+      "searches": 3,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -321,7 +342,7 @@
       "flags": [],
       "searches": 0,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -334,7 +355,7 @@
       "flags": [],
       "searches": 0,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -345,9 +366,9 @@
       "score": 0,
       "correct": true,
       "flags": [],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -358,9 +379,9 @@
       "score": 0,
       "correct": true,
       "flags": [],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -373,9 +394,9 @@
       "flags": [
         "M3"
       ],
-      "searches": 0,
+      "searches": 2,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -388,7 +409,7 @@
       "flags": [],
       "searches": 0,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -399,9 +420,9 @@
       "score": 0,
       "correct": true,
       "flags": [],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -412,9 +433,9 @@
       "score": 0,
       "correct": true,
       "flags": [],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -427,9 +448,9 @@
       "flags": [
         "M4"
       ],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     },
     {
@@ -440,9 +461,9 @@
       "score": 0,
       "correct": true,
       "flags": [],
-      "searches": 0,
+      "searches": 1,
       "credits": 0,
-      "reader": "regex_fallback",
+      "reader": "llm",
       "seconds": 0.0
     }
   ]

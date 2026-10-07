@@ -590,6 +590,7 @@ main { padding-bottom: 72px; min-height: calc(100vh - 160px); }
 .src.news { color: #a78bfa; }
 .src.complaint_forum { color: var(--high); }
 .src.search { color: var(--cyan); }
+a.ev-title.mono { font-family: var(--mono); font-size: 13px; font-weight: 500; }
 .ev-site { color: var(--ink-3); font-size: 13px; }
 .ev-title { font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
 a.ev-title { color: var(--accent-2); text-decoration: none; }

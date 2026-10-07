@@ -532,16 +532,25 @@ async function run(fd) {
   const slow = setTimeout(() => {
     if (steps.read?.classList.contains("running")) setStep("read", "running", "free AI models can take ~30 s…");
   }, 8000);
+  // A visible clock: free models can take a minute, and a still screen looks frozen.
+  const sub = view.querySelector(".run-sub");
+  const t0 = Date.now();
+  const clock = setInterval(() => {
+    if (!sub.isConnected) return clearInterval(clock);
+    sub.textContent = `Reading the claims, then searching the live web · ${Math.round((Date.now() - t0) / 1000)} s`;
+  }, 1000);
 
   state.controller = new AbortController();
   let res;
   try {
     res = await fetch("/api/investigations", { method: "POST", body: fd, signal: state.controller.signal });
   } catch (err) {
+    clearInterval(clock);
     if (err.name === "AbortError") return;
     return renderError("Couldn't reach Asli", "Check that the server is running and try again.");
   }
   if (!res.ok) {
+    clearInterval(clock);
     const j = await res.json().catch(() => ({}));
     show("view-home");
     return formError(j.error?.message || "Something went wrong. Please try again.");
@@ -602,6 +611,8 @@ async function run(fd) {
     }
   } catch (err) {
     if (err.name !== "AbortError") renderError("The connection was interrupted", "Please try again.", true);
+  } finally {
+    clearInterval(clock);
   }
 }
 
@@ -837,7 +848,7 @@ function evidenceItem(e) {
     return h("li", { class: "ev" },
       h("div", { class: "ev-top" }, h("span", { class: "src search", text: "Search Asli ran" }),
         h("span", { class: "ev-site", text: (ENGINES[e.engine] || ["Google Search"])[0] })),
-      h("a", { class: "ev-title", href: e.url, target: "_blank", rel: "noopener noreferrer nofollow" }, `“${e.title}”`, icon("external")),
+      h("a", { class: "ev-title mono", href: e.url, target: "_blank", rel: "noopener noreferrer nofollow" }, e.title, icon("external")),
       h("p", { class: "ev-snippet", text: "Open it to run the same search on Google and check for yourself." }));
   }
   const site = e.data?.source || e.domain || "";

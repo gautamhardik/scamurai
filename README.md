@@ -137,6 +137,25 @@ Each signal has a fixed weight **w** and a confidence **c**. The confidence come
 | "Digital arrest" / extortion | "CBI officer: stay on video call, send a deposit" | Threat + payment, personal UPI ID for an authority, UPI reputation, news reports |
 | Anything else | Vague openers, unknown links | Returns *Couldn't verify* rather than guessing |
 
+## Measured results
+
+A 30-message evaluation set ([`eval/messages.json`](eval/messages.json)) in English, Hindi and Hinglish:
+- **10 genuine messages** in the style of real senders: SBI, IRCTC, UIDAI, Amazon, Swiggy, Flipkart, EPFO, Tata Power, the Income Tax Department, and a friend.
+- **10 scams.**
+- **10 ambiguous messages** with too little to decide either way.
+
+Run it with `uv run python scripts/evaluate.py` (rules only, free) or add `--live`.
+
+| | Live (AI reader + SerpApi) | Rules only (no AI, no search) |
+|---|---|---|
+| Scams flagged (*High risk* or *Be careful*) | **10/10** (4 high risk, 6 be careful) | 5/10 |
+| Genuine messages wrongly flagged | **0/10** | 0/10 |
+| Genuine messages positively confirmed (official page or domain) | 6/10 (the other 4: *Couldn't verify*) | 3/10 |
+| Ambiguous messages kept at *Couldn't verify* | 10/10 | 10/10 |
+| SerpApi credits for all 30 | 21 (first run; re-runs hit the cache) | 0 |
+
+**Read these numbers with care.** The set is small and hand-written by the developer, and it was used while fixing bugs, so it is not a held-out test. Its main job is catching false alarms: the live run found one (a genuine SBI debit alert scored *High risk*), and [docs/AUDIT.md](docs/AUDIT.md) explains the fix.
+
 ---
 
 ## Quick start
@@ -219,7 +238,8 @@ src/asli/
   risk/                   signal registry, engine, report builder
   web/                    FastAPI app + static UI
   demo/                   scenarios + recorded real SerpApi responses
-tests/                    unit · integration · e2e (224 tests, run offline)
+tests/                    unit · integration · e2e (256 tests, run offline)
+eval/                     30 labelled messages + results (scripts/evaluate.py)
 ```
 
 ## Security and privacy
@@ -245,7 +265,7 @@ tests/                    unit · integration · e2e (224 tests, run offline)
 ## Testing
 
 ```bash
-uv run pytest -q          # 224 tests, no keys or network needed
+uv run pytest -q          # 256 tests, no keys or network needed
 ```
 
 - **Unit tests:** extraction and grounding, redaction, domain and lookalike analysis, message patterns in English, Hindi and Hinglish, risk-engine gates, and properties (adding risk never lowers the score, adding trust never raises it).
@@ -254,13 +274,16 @@ uv run pytest -q          # 224 tests, no keys or network needed
 - **Failure injection:** timeouts, quota exhaustion, empty results, and the budget cap.
 - **API streaming.**
 - **End to end:** all 10 demo scenarios replayed from recorded real searches, each with expected verdicts and must/forbid flags.
+- **Audit regressions:** trust poisoning, false reassurance, CSRF and DNS rebinding, hostile uploads, prompt-injection phrasings, the bank-alert false alarm and more. Each fix's test reproduced the failure first; the hostile-upload tests pin behaviour that was already correct (see [docs/AUDIT.md](docs/AUDIT.md)).
 
 CI runs on Ubuntu and Windows.
 
 ## Limitations
 
 - **Asli can only cite what the web already knows.** A brand-new scam number or domain often has no history, so Asli relies on structural signals and may answer *Be careful* or *Couldn't verify*. That's deliberate.
-- **The weights are set by hand** and tuned on a small scenario suite, not learned from labelled data.
+- **The weights are set by hand** and tuned on a small scenario suite and evaluation set, not learned from labelled data.
+- **Screenshot text comes from the AI's transcription.** Grounding checks values against it, so a digit the model misreads in a screenshot can still be searched.
+- **Live checks are slow on free models:** a median of 23 s and a 90th percentile of 65 s, mostly the AI reader. Cached checks take milliseconds.
 - **Free AI models are slow and rate-limited** (often 15–45 s, 50 requests a day). Without the AI, Asli falls back to rules-only extraction, which can't read screenshots.
 - **Some details are Indian-specific:** the official-domain seed list covers about 50 frequently impersonated Indian organisations, and other organisations are looked up live.
 - **It is not legal advice.** Asli reports evidence, not certainties.

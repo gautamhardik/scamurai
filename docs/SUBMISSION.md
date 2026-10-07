@@ -15,6 +15,8 @@ A transparent, deterministic risk engine (not the AI) weighs the evidence. The r
 
 **Who it's for:** anyone in India with a phone, and especially people who check messages on behalf of elderly relatives.
 
+**Measured, not claimed:** on a 30-message evaluation set in English, Hindi and Hinglish, live Asli flagged 10/10 scams and raised no false alarm on 10 genuine messages from real senders (SBI, IRCTC, UIDAI, Amazon, Flipkart…). It confirmed 6 of those 10 against official pages. The set is small and hand-written; the method and results are in the repository (`eval/`, `docs/AUDIT.md`).
+
 ## Track
 Knowledge & Public Interest
 
