@@ -6,7 +6,7 @@ The rules say the video must show the project **running locally**. Narration is 
 
 1. `uv run asli serve` (live mode). The search cache is already warm for the examples, so they load instantly; the "cached" labels are honest.
 2. Open http://127.0.0.1:8000 in a clean browser window at 1280×800. Zoom to 110% so text is readable.
-3. Have ready: a **product screenshot** of a "₹1,499 Nike Air Jordan 1 Low" style post (make your own mock; don't use a real seller's post). Optionally keep the Nike example chip as a fallback.
+3. Have ready: a **product screenshot** of a "₹1,499 Nike Air Jordan 1 Low" style post. A ready-made mock is at `demo-assets/mock-nike-post.png` (git-ignored: it embeds a retailer's product photo, so keep it out of the public repo). Its searches are cached until about 8 pm IST on 8 October (the AI read for 7 days), so until then it runs instantly: HIGH_RISK 92, with Lens finding the photo on Myntra and Nike India. Keep the Nike example chip as a fallback.
 4. Close notifications. Use a screen recorder such as OBS or Xbox Game Bar (Win+Alt+R).
 
 ## Script

@@ -251,3 +251,38 @@ The highest-value improvement I could make safely was to harden the core differe
 - No false alarms on genuine messages, measured live.
 - Absence claims that link to the exact search.
 - Honest, measured numbers in the README.
+
+---
+
+## 17. Follow-up: the screenshot → Lens path and speed (7 October, evening)
+
+### The screenshot → Lens path
+
+A mock Instagram-style post (a fictional seller, the Nike example's product photo and its scam caption) was uploaded through the API.
+
+- **Bug found (P1): Lens never returned evidence for an uploaded screenshot.**
+  - Lens on an upload takes 40–47 s, but Asli's Lens timeout was 40 s.
+  - The retry came back with no results. Most likely it caught SerpApi's duplicate of the same search while it was still *processing*.
+  - Asli then cached that empty response as "no results" for 24 hours.
+  - All three upload-based Lens searches in the cache were empty. A direct diagnostic of the same image returned 59 matches.
+  - **Fix:**
+    - Lens timeout raised to 90 s and search phase to 110 s.
+    - A response whose `search_metadata.status` isn't `Success` is a failure and is never cached.
+    - The poisoned cache rows were removed.
+  - Regression test: `test_a_search_still_processing_is_a_failure_not_cached_no_results`.
+- **After the fix:**
+  - Lens returned 59 matches in 14–17 s.
+  - "Product photo appears on other shops" fires (38 sites).
+  - Price evidence now comes from Lens itself: 83% below the ₹8,995 median of 14 listings.
+  - Verdict: HIGH_RISK 92.
+
+### Speed
+
+| Change | Measurement | Result |
+|---|---|---|
+| Model "thinking" off for extraction (`ASLI_LLM_REASONING=off`) | Same message, Nemotron, reasoning low vs off (1 call each) | **22.2 s → 2.6 s**, 2,061 → 317 tokens, identical phone, link, organisation, scheme and actions |
+| Same, vision (dots) | Mock product post, before vs after (1 read each) | AI read **68 s → about 13 s**, identical extracted claims and the same verdict and flags |
+| Nemotron first for text | 46 of 49 live reads were already answered by Nemotron. Gemma answered once, in 41 s. | Skips a usually rate-limited first attempt |
+| Number/link/UPI searches start while the AI reads | Simulation using delays drawn from 78 observed search latencies, 36 paired runs | Median 27.4 → 24.1 s, mean 34.4 → 30.8 s (about 10%) |
+
+**Caveat:** the reasoning comparison is two calls, because the free tier allows 50 a day and the evaluation had used them. The 30-message evaluation must be re-run with reasoning off to confirm extraction quality before relying on it. `ASLI_LLM_REASONING=low` restores the previous behaviour.

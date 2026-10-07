@@ -64,6 +64,21 @@ def suspicious_domains(graph: ClaimGraph) -> list[Entity]:
     return out
 
 
+def phone_query(phone: Entity) -> dict[str, str]:
+    variants = phone.attrs.get("variants") or [phone.value]
+    return {"q": " OR ".join(f'"{v}"' for v in variants[:3])}
+
+
+def entity_searches(graph: ClaimGraph) -> list[tuple[str, dict[str, str]]]:
+    """Searches that need only what the deterministic extractors find (numbers, UPI IDs, links), so they
+    can start before the AI has read the message. Each is one round 1 will plan for the same graph, with
+    identical parameters, and there are few enough (≤ 4) that the budget never trims them."""
+    out = [("google", phone_query(p)) for p in graph.of("phone")[:2]]
+    out += [("google", {"q": f'"{u.value}"'}) for u in requested_upis(graph)[:1]]
+    out += [("google", {"q": f'"{d.attrs["registrable"]}"'}) for d in suspicious_domains(graph)[:1]]
+    return out
+
+
 def requested_upis(graph: ClaimGraph) -> list[Entity]:
     """UPI IDs the reader is asked to pay. A payee named in a transaction notice is not one."""
     return [u for u in graph.of("upi_id") if upi_is_requested(graph.haystack, u.raw)]
@@ -111,9 +126,7 @@ def plan_round1(graph: ClaimGraph, max_searches: int, *, has_image: bool, image_
 
     # P2 — reputation & claims
     for phone in graph.of("phone")[:2]:
-        variants = phone.attrs.get("variants") or [phone.value]
-        q = " OR ".join(f'"{v}"' for v in variants[:3])
-        spec("google", {"q": q}, "phone_reputation", phone.attrs.get("display") or phone.value, [phone.id], 2)
+        spec("google", phone_query(phone), "phone_reputation", phone.attrs.get("display") or phone.value, [phone.id], 2)
 
     for upi in requested_upis(graph)[:1]:
         spec("google", {"q": f'"{upi.value}"'}, "upi_reputation", upi.value, [upi.id], 2)

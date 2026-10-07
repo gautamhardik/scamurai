@@ -18,9 +18,11 @@ VISION_MODELS = [
     "google/gemma-4-26b-a4b-it:free",
     "dots-studio/dots-3-note-preview:free",
 ]
+# Nemotron first: it answered 46 of 49 live reads anyway (Gemma is usually rate-limited on the free pool,
+# and took 41 s the one time it answered).
 TEXT_MODELS = [
-    "google/gemma-4-31b-it:free",
     "nvidia/nemotron-3-super-120b-a12b:free",
+    "google/gemma-4-31b-it:free",
     "dots-studio/dots-3-note-preview:free",
 ]
 
@@ -42,15 +44,18 @@ class Settings(BaseSettings):
     asli_cache_ttl_hours: float | None = None
     asli_serp_concurrency: int = 4
     asli_serp_timeout_s: float = 25
-    asli_lens_timeout_s: float = 40
+    asli_lens_timeout_s: float = 90  # Lens on an uploaded screenshot measured 40-47 s
     asli_jobs_timeout_s: float = 60  # Google Jobs routinely takes 25-50 s
-    asli_search_phase_budget_s: float = 90
+    asli_search_phase_budget_s: float = 110
 
     # LLM
     asli_vision_models: list[str] = Field(default_factory=lambda: list(VISION_MODELS))
     asli_text_models: list[str] = Field(default_factory=lambda: list(TEXT_MODELS))
     asli_llm_timeout_s: float = 120
     asli_llm_max_tokens: int = 6000
+    # Extraction copies facts; it doesn't need the model to "think". Measured on the same message with
+    # Nemotron: reasoning off 2.6 s / 317 tokens vs low 22.2 s / 2,061 tokens, with identical extraction.
+    asli_llm_reasoning: Literal["off", "low", "medium", "high"] = "off"
 
     # Storage / privacy
     asli_store_reports: bool = True

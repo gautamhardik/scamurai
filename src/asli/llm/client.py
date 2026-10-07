@@ -102,7 +102,8 @@ class LLMClient:
             "response_format": {"type": "json_object"},
             "temperature": 0,
             "max_tokens": self.settings.asli_llm_max_tokens,
-            "reasoning": {"effort": "low"},
+            "reasoning": ({"enabled": False} if self.settings.asli_llm_reasoning == "off"
+                          else {"effort": self.settings.asli_llm_reasoning}),
         }
         headers = {
             "Authorization": "Bearer " + self.settings.openrouter_api_key.get_secret_value().strip(),  # type: ignore[union-attr]

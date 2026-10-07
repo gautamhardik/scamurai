@@ -198,6 +198,7 @@ uv run asli doctor                                  # keys, SerpApi credits, mod
 | `ASLI_DAILY_SEARCH_CAP` | `80` | Live searches per day |
 | `ASLI_MIN_CREDITS_RESERVE` | `10` | Stop live searching below this many SerpApi credits |
 | `ASLI_STORE_REPORTS` | `true` | Keep reports locally for 7 days (`/#r=<id>`) |
+| `ASLI_LLM_REASONING` | `off` | Model "thinking" for claim extraction (`off`, `low`, `medium`, `high`). Off is about 8× faster with the same extraction in our comparison. |
 | `ASLI_ALLOWED_HOSTS` | — | Extra host names to serve besides 127.0.0.1/localhost (when deployed) |
 | `ASLI_ACCESS_TOKEN` | — | Require a token for the API (open `/?token=…` once to set the cookie) |
 
@@ -283,7 +284,7 @@ CI runs on Ubuntu and Windows.
 - **Asli can only cite what the web already knows.** A brand-new scam number or domain often has no history, so Asli relies on structural signals and may answer *Be careful* or *Couldn't verify*. That's deliberate.
 - **The weights are set by hand** and tuned on a small scenario suite and evaluation set, not learned from labelled data.
 - **Screenshot text comes from the AI's transcription.** Grounding checks values against it, so a digit the model misreads in a screenshot can still be searched.
-- **Live checks are slow on free models:** a median of 23 s and a 90th percentile of 65 s, mostly the AI reader. Cached checks take milliseconds.
+- **Live checks depend on free models.** Before model "thinking" was switched off for extraction, checks took a median of 23 s (90th percentile 65 s), mostly the AI reader. In single before/after comparisons, reasoning off cut a text read from 22 s to 3 s and a screenshot read from 68 s to about 13 s. Google Lens on a screenshot adds 15–45 s. Cached checks take milliseconds.
 - **Free AI models are slow and rate-limited** (often 15–45 s, 50 requests a day). Without the AI, Asli falls back to rules-only extraction, which can't read screenshots.
 - **Some details are Indian-specific:** the official-domain seed list covers about 50 frequently impersonated Indian organisations, and other organisations are looked up live.
 - **It is not legal advice.** Asli reports evidence, not certainties.

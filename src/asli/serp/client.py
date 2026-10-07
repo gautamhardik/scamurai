@@ -343,6 +343,11 @@ class SerpClient:
         err = (data.get("error") or "").lower()
         if err and any(m in err for m in _QUOTA_MARKERS):
             raise _Quota()
+        # A retry after a timeout can return the same search still "Processing", with no results yet.
+        # That must count as a failure, never as "no results" (which would be cached for a day).
+        status = (data.get("search_metadata") or {}).get("status")
+        if status and status != "Success" and not err:
+            raise _Failed(f"serpapi_status_{str(status).lower()}", retryable=True)
         return data
 
 

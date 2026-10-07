@@ -1,12 +1,14 @@
 """Runs one investigation end to end and streams progress events.
 
-read → plan → search (round 1, then round 2) → weigh → report. No LLM in the loop after
-extraction; no unbounded search loops (≤ max_searches, ≤ 2 rounds, phase time budget).
+read (number, link and UPI searches already start while the AI reads) → plan → search (round 1, then
+round 2) → weigh → report. No LLM in the loop after extraction; no unbounded search loops
+(≤ max_searches, ≤ 2 rounds, phase time budget).
 """
 
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
 import time
 import uuid
@@ -64,6 +66,8 @@ class Investigator:
         await emit({"type": "stage", "name": "read", "status": "running"})
         # Decoding/resizing a large screenshot is CPU work: keep it off the event loop.
         image: PreparedImage | None = await asyncio.to_thread(prepare_image, inp.image) if inp.image else None
+        budget = Budget(max_searches=self.settings.asli_max_searches)
+        prefetched = await self._prefetch(inp, budget, recorder)
         try:
             graph, llm_record = await extract_claims(inp, image, self.llm)
         except Exception as exc:  # noqa: BLE001 — the reader must never take the check down: fall back to rules
@@ -81,13 +85,15 @@ class Investigator:
         await emit({"type": "stage", "name": "search", "status": "running"})
         book = EvidenceBook(graph)
         ctx = Ctx(graph=graph, book=book)
-        budget = Budget(max_searches=self.settings.asli_max_searches)
         plan = planner.plan_round1(graph, self.settings.asli_max_searches, has_image=image is not None,
                                    image_url=inp.image_url)
         checks: dict[str, CheckResult] = {}
         await self._announce(plan.round1, checks, emit, plan.reason)
         deadline = time.perf_counter() + self.settings.asli_search_phase_budget_s
-        await self._run_specs(plan.round1, ctx, checks, budget, image, inp.image_url, emit, recorder, deadline)
+        await self._run_specs(plan.round1, ctx, checks, budget, image, inp.image_url, emit, recorder, deadline,
+                              prefetched)
+        if prefetched:  # by construction round 1 uses them all; never leave a search task dangling
+            await asyncio.gather(*prefetched.values(), return_exceptions=True)
 
         ctx.official = resolve_official(ctx)
         lens_prices = sum(1 for spec, _ in ctx.ok("lens") for i in book.for_search(spec.id) if i.data.get("price_inr"))
@@ -171,13 +177,30 @@ class Investigator:
             "checks": [{"id": s.id, "engine": s.engine, "label": s.label, "purpose": s.purpose} for s in specs],
         })
 
+    async def _prefetch(self, inp: InvestigationInput, budget: Budget,
+                        recorder: Recorder | None) -> dict[str, asyncio.Task[SerpOutcome]]:
+        """Start the searches that need only deterministic extraction (numbers, UPI IDs, links) so they
+        run while the AI reads the message, which takes 10-60 s on free models."""
+        if not inp.text:
+            return {}
+        try:
+            early, _ = await extract_claims(inp, None, None)
+        except Exception:  # noqa: BLE001 — an optimisation only
+            return {}
+        return {
+            _sig(engine, params): asyncio.create_task(self.serp.search(engine, params, budget, recorder=recorder))
+            for engine, params in planner.entity_searches(early)
+        }
+
     async def _run_specs(self, specs: list[SearchSpec], ctx: Ctx, checks: dict[str, CheckResult], budget: Budget,
                          image: PreparedImage | None, image_url: str | None, emit: Emit,
-                         recorder: Recorder | None, deadline: float) -> None:
+                         recorder: Recorder | None, deadline: float,
+                         prefetched: dict[str, asyncio.Task[SerpOutcome]] | None = None) -> None:
         async def one(spec: SearchSpec) -> None:
             await emit({"type": "check", "id": spec.id, "status": "running"})
-            outcome = await self.serp.search(spec.engine, spec.params, budget, image=image, image_url=image_url,
-                                             recorder=recorder)
+            early = (prefetched or {}).pop(_sig(spec.engine, spec.params), None)
+            outcome = await early if early else await self.serp.search(
+                spec.engine, spec.params, budget, image=image, image_url=image_url, recorder=recorder)
             self._record(spec, outcome, ctx, checks)
             c = checks[spec.id]
             await emit({"type": "check", "id": spec.id, "status": c.status, "cached": c.cached,
@@ -212,6 +235,10 @@ class Investigator:
             c.n_results = len(items)
             if c.n_results == 0:
                 c.status = "no_results"
+
+
+def _sig(engine: str, params: dict[str, str]) -> str:
+    return json.dumps([engine, params], sort_keys=True, ensure_ascii=False)
 
 
 def graph_summary(graph: ClaimGraph) -> dict[str, Any]:

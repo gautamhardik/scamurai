@@ -249,3 +249,26 @@ def test_upi_id_is_not_mistaken_for_a_website():
     """'amazonhr.jobs@ybl' produced a 'website has no track record' flag for amazonhr.jobs."""
     assert rx.urls("Registration fee via UPI: amazonhr.jobs@ybl") == []
     assert [f.value for f in rx.urls("Pay at sbi-kyc.top or UPI pay.kyc@ybl")] == ["sbi-kyc.top"]
+
+
+async def test_a_search_still_processing_is_a_failure_not_cached_no_results(live, monkeypatch):
+    """Lens took 40-47 s; after a timeout the retry returned the same search still 'Processing' with no
+    results, which was cached for 24 h as 'no results'."""
+    from asli.serp.client import Budget, SerpClient
+
+    async def no_credits(self, max_age_s=600):
+        return None
+
+    monkeypatch.setattr(SerpClient, "credits_left", no_credits)
+    monkeypatch.setattr(serp_client.asyncio, "sleep", _fast_sleep)
+    monkeypatch.setattr(serp_client.serpapi.Client, "search",
+                        lambda self, params: {"search_metadata": {"status": "Processing"}})
+    store = Store(live.db_path)
+    client = SerpClient(live, store)
+    outcome = await client.search("google_lens", {}, Budget(max_searches=8), image_url="https://img.example/shoe.jpg")
+    assert outcome.status == "failed" and "processing" in (outcome.error or "")
+    assert store.cache_get(outcome.key) is None
+
+
+async def _fast_sleep(_s):
+    return None
