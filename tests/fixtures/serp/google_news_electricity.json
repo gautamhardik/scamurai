@@ -1,0 +1,750 @@
+{
+ "news_results": [
+  {
+   "position": 1,
+   "title": "Text Message Scams: 20 Examples to Watch Out for in 2026",
+   "source": {
+    "name": "pandasecurity.com",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.pandasecurity.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.pandasecurity.com/en/mediacenter/spam-text-message-examples/",
+   "thumbnail": "https://www.pandasecurity.com/en/mediacenter/src/uploads/2025/04/text-message-scams-hero-1200x900.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBaRXd5V201bFZsVlZPSGRpVFJEZ0F4aUFCU2dLTWdZSlZZNnRJUWc",
+   "date": "01/25/2026, 08:00 AM, +0000 UTC",
+   "iso_date": "2026-01-25T08:00:00Z"
+  },
+  {
+   "position": 2,
+   "title": "MGL Warns Customers Against Fake Gas Bill Messages",
+   "source": {
+    "name": "The420.in",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://the420.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://the420.in/mahanagar-gas-limited-fake-bill-scam-warning/",
+   "thumbnail": "https://the420.in/wp-content/uploads/2026/02/Mahanagar-Gas-Limited.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdkM050U3poek4zTjNUVWxIVFJDZkF4ampCU2dLTWdZcGRZcXRyUVE",
+   "date": "02/28/2026, 08:00 AM, +0000 UTC",
+   "iso_date": "2026-02-28T08:00:00Z"
+  },
+  {
+   "position": 3,
+   "title": "This SMS about your electricity bill is fake",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://timesofindia.indiatimes.com/gadgets-news/this-sms-about-your-electricity-bill-is-fake/articleshow/95102658.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-95102729,width-1280,height-720,resizemode-4/95102729.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWlPRlp3VmtOZlJGYzFTbnAzVFJDZkF4ampCU2dLTWdZZEZwTHFzUVk",
+   "date": "10/26/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-10-26T07:00:00Z"
+  },
+  {
+   "position": 4,
+   "title": "Delhi residents beware: Electricity bill scammers are on the prowl",
+   "source": {
+    "name": "Business Standard",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.business-standard.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Sunainaa Chadha"
+    ]
+   },
+   "link": "https://www.business-standard.com/finance/personal-finance/delhi-residents-beware-electricity-bill-scammers-are-on-the-prowl-124071000422_1.html",
+   "thumbnail": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-05/26/full/1716739054-8349.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVFiSEk1U1RWMFRrdE9iSGczVFJEOUF4amFCQ2dLTWdZVlI0eHFzZ2M",
+   "date": "07/10/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-07-10T07:00:00Z"
+  },
+  {
+   "position": 5,
+   "title": "‘Your electricity will be disconnected…’: Scammers try to lure unsuspecting victims",
+   "source": {
+    "name": "The Indian Express",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://indianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Sethu Pradeep"
+    ]
+   },
+   "link": "https://indianexpress.com/article/technology/tech-news-technology/electricity-disconnected-scam-sms-whatsapp-phishing-8198427/",
+   "thumbnail": "https://images.indianexpress.com/2022/10/SMS-scam-20221009-featured-2.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNDRRbVY0Tm0xNU9GVlVOVGxtVFJDZEF4am5CU2dLTWdrQkFKWkFIMmx6aFFJ",
+   "date": "10/09/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-10-09T07:00:00Z"
+  },
+  {
+   "position": 6,
+   "title": "Fake power bill scam leaves many in shock",
+   "source": {
+    "name": "The Hindu",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Samridhi Tewari"
+    ]
+   },
+   "link": "https://www.thehindu.com/news/cities/Delhi/fake-power-bill-scam-leaves-many-in-shock/article65924190.ece",
+   "thumbnail": "https://th-i.thgim.com/public/incoming/bx4geo/article65924209.ece/alternates/LANDSCAPE_1200/IMG_BL20ITPESKY_2_1_5L9LFFMM.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTRhMWRzV0hobGRsOW9UMHh3VFJDZkF4ampCU2dLTWdrQkVKTGtHdW8xandF",
+   "date": "09/23/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-09-23T07:00:00Z"
+  },
+  {
+   "position": 7,
+   "title": "Electricity Bill Scam: 392 Mobiles Blocked, DoT Orders Re-verification of 31,740 Mobile Connections Linked with Fraud",
+   "source": {
+    "name": "Moneylife",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.moneylife.in/article/electricity-bill-scam-392-mobiles-blocked-dot-orders-reverification-of-31740-mobile-connections-linked-with-fraud/74426.html",
+   "thumbnail": "https://www.moneylife.in/site/userimage/image/responsive/mobilestory_large.png",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNHhVMVpZUlVkTlZraFpiamx4VFJDZUF4amxCU2dLTWdB",
+   "date": "06/18/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-06-18T07:00:00Z"
+  },
+  {
+   "position": 8,
+   "title": "Assam electricity panel warns customers of scam messages",
+   "source": {
+    "name": "India Today NE",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.indiatodayne.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.indiatodayne.in/assam/story/apdcl-warns-customers-of-scam-messages-1012900-2024-05-23",
+   "thumbnail": "https://cf-img-a-in.tosshub.com/lingo/itne/images/story/202405/664f4120a4965-assam-electricity-panel-warns-customers-of-scam-messages-231407603-16x9.jpg?size=1280:720",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVFOemxTYzNCRlIyOWhiR1p2VFJDZkF4ampCU2dLTWdrQlFZWURKNmc5S1FJ",
+   "date": "05/23/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-05-23T07:00:00Z"
+  },
+  {
+   "position": 9,
+   "title": "Online electricity bill scam: What it is, how to stay safe",
+   "source": {
+    "name": "India Today",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Divya Bhati"
+    ]
+   },
+   "link": "https://www.indiatoday.in/technology/news/story/online-electricity-bill-scam-what-it-is-how-to-stay-safe-2452092-2023-10-21",
+   "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202310/scam-142750-16x9.jpg?VersionId=VLhzOZxb7pqJCRKOnHVpY8yoJUqfgwxP&size=1200:675",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNUZVekpCY2tVMVYySklhWGx5VFJDZkF4ampCU2dLTWdB",
+   "date": "10/21/2023, 07:00 AM, +0000 UTC",
+   "iso_date": "2023-10-21T07:00:00Z"
+  },
+  {
+   "position": 10,
+   "title": "Beware! That unpaid power, telecom bill payment message on your phone may be a scamster’s trick",
+   "source": {
+    "name": "CNBC TV18",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.cnbctv18.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Akriti Anand"
+    ]
+   },
+   "link": "https://www.cnbctv18.com/information-technology/power-telecom-bill-payment-scam-how-to-protect-yourself-from-online-fraud-13874562.htm",
+   "thumbnail": "https://images.cnbctv18.com/wp-content/uploads/2022/06/cybeyattack_reuters.png?impolicy=website&width=400&height=225",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWZSVWhXYnpsb1EybFNWalYwVFJEaEFSaVFBeWdLTWdNQk1RWQ",
+   "date": "06/23/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-06-23T07:00:00Z"
+  },
+  {
+   "position": 11,
+   "title": "'Your electricity will be disconnected tonight...': Know the latest scam to save yourself",
+   "source": {
+    "name": "The Economic Times",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://m.economictimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Anulekha Ray"
+    ]
+   },
+   "link": "https://m.economictimes.com/wealth/save/electricity-bill-scam-whatsapp-sms-your-electricity-will-be-disconnected-tonight-know-the-latest-scam-to-save-yourself/articleshow/94875288.cms",
+   "thumbnail": "https://m.economictimes.com/thumb/msid-94875517,width-1200,height-900,resizemode-4,imgsize-377640/whatsapp-electricity-bill-scam.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJNRzF0VUZKVmVtY3RWbmx2VFJEZ0F4aUFCU2dLTWdZcGM1U3VxUWM",
+   "date": "10/15/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-10-15T07:00:00Z"
+  },
+  {
+   "position": 12,
+   "title": "Tamil Nadu woman loses Rs 4.2 lakh to EB phishing fraud",
+   "source": {
+    "name": "The New Indian Express",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.newindianexpress.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.newindianexpress.com/states/tamil-nadu/2022/Jul/25/tamil-nadu-woman-loses-rs-42-lakh-to-eb-phishing-fraud-2480275.html",
+   "thumbnail": "https://cf-images.assettype.com/TNIE/import/2022/7/25/original/Cyber_Crime_Express_Illustrations.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRUVmRRT0VkSVV6bGFOM0ZsVFJDSEF4aVBCaWdLTWdZZEpvaEtGZ2c",
+   "date": "07/25/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-07-25T07:00:00Z"
+  },
+  {
+   "position": 13,
+   "title": "Beware! TGSPDCL alerts consumers about electricity bill payment scams in Hyderabad",
+   "source": {
+    "name": "Telangana Today",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://telanganatoday.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://telanganatoday.com/beware-tgspdcl-alerts-consumers-about-electricity-bill-payment-scams-in-hyderabad",
+   "thumbnail": "https://media.telanganatoday.com/wp-content/uploads/2025/03/Current-Bill-1.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRjVmx4VHpKd2NFZFRhWEV6VFJDdkF4aklCU2dLTWdZQkFaSUVrd28",
+   "date": "03/27/2025, 07:00 AM, +0000 UTC",
+   "iso_date": "2025-03-27T07:00:00Z"
+  },
+  {
+   "position": 14,
+   "title": "Electricity bill KYC scam: Telecom department may disconnect 30,000-plus mobile numbers",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://timesofindia.indiatimes.com/technology/tech-news/electricity-bill-kyc-scam-telecom-department-may-disconnect-30000-plus-mobile-numbers/articleshow/111101901.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-111101892,width-1280,height-720,resizemode-4/111101892.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNVhRbEJ1YzNadFNFNDJUbmRvVFJDZkF4ampCU2dLTWdB",
+   "date": "06/21/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-06-21T07:00:00Z"
+  },
+  {
+   "position": 15,
+   "title": "APSPDCL cautions public against online electricity bill payment scams in Nellore",
+   "source": {
+    "name": "The Hindu",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.thehindu.com/news/national/andhra-pradesh/apspdcl-cautions-public-against-online-electricity-bill-payment-scams-in-nellore/article68469138.ece",
+   "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+   "date": "07/31/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-07-31T07:00:00Z"
+  },
+  {
+   "position": 16,
+   "title": "Electricity Bill scam alert: Beware of WhatsApp message asking you to clear your bill",
+   "source": {
+    "name": "India Today",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Ankita Chakravarti"
+    ]
+   },
+   "link": "https://www.indiatoday.in/technology/news/story/don-t-pay-electricity-bill-if-you-get-a-whatsapp-message-reminding-you-to-do-so-1987294-2022-08-12",
+   "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202208/twitter-292993_1280_1_1200x768.jpeg?VersionId=gNQF.fQyoUoVu5F2JzuqQW2qmLDCgM7u&size=1200:675",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNHRUeTB6VkZOa015MHRhVk5RVFJDZkF4ampCU2dLTWdzQkFJZ21xV2F4eEJyaVhB",
+   "date": "08/12/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-08-12T07:00:00Z"
+  },
+  {
+   "position": 17,
+   "title": "Gurugram: That message to snap your power supply may be a fraud",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Bagish Jha"
+    ]
+   },
+   "link": "https://timesofindia.indiatimes.com/city/gurgaon/gurugram-that-message-to-snap-your-power-supply-may-be-a-fraud/articleshow/93741420.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-93741460,width-1280,height-720,resizemode-72/93741460.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHhTV0ZGVlRGemFXVlNXbm8wVFJDZkF4ampCU2dLTWdZVlFvd3FKUWM",
+   "date": "08/24/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-08-24T07:00:00Z"
+  },
+  {
+   "position": 18,
+   "title": "Your electricity bill is due, supply will be disconnected: This message is a big scam, don't click on it",
+   "source": {
+    "name": "India Today",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.indiatoday.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Divya Bhati"
+    ]
+   },
+   "link": "https://www.indiatoday.in/technology/news/story/your-electricity-bill-is-due-supply-will-be-disconnected-this-message-is-a-big-scam-dont-click-on-it-2312858-2022-12-23",
+   "thumbnail": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202212/smartphone-sixteen_nine.jpg?VersionId=RxMBPdczobTVPuAlIPesDKpMJckbX_UF&size=1200:675",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNUthRWREUXpWM2NrODNWVU5vVFJDZkF4ampCU2dLTWd1aFFZUXRwZVU4OWJqbW1R",
+   "date": "12/23/2022, 08:00 AM, +0000 UTC",
+   "iso_date": "2022-12-23T08:00:00Z"
+  },
+  {
+   "position": 19,
+   "title": "Electricity bill scam: BSES, Tata Power and other power discoms share safety tips",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://timesofindia.indiatimes.com/technology/gaming/electricity-bill-scam-bses-tata-power-and-other-power-discoms-share-safety-tips/articleshow/111704641.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-111704701,width-1280,height-720,resizemode-4/111704701.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdabWxTWkZWS00xWmlWRk5VVFJDZkF4ampCU2dLTWdZSkJJUm54Z00",
+   "date": "07/13/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-07-13T07:00:00Z"
+  },
+  {
+   "position": 20,
+   "title": "Cybercrooks use pending gas bill ruse to swindle money",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Hm Chaithanya Swamy",
+     "Chaithanya Swamy"
+    ]
+   },
+   "link": "https://timesofindia.indiatimes.com/city/bengaluru/cybercrooks-use-pending-gas-bill-ruse-to-swindle-money/articleshow/128720565.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-117518771,width-1280,height-720,imgsize-97769,resizemode-72,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxXVmRmTmpRNGMycHVTRWROVFJDZkF4ampCU2dLTWdhQklZb0hJUWM",
+   "date": "02/23/2026, 08:00 AM, +0000 UTC",
+   "iso_date": "2026-02-23T08:00:00Z"
+  },
+  {
+   "position": 21,
+   "title": "Top 9 Utility Scams: Tips to Recognize and Avoid Them",
+   "source": {
+    "name": "Bitdefender",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.bitdefender.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Cristina Popov"
+    ]
+   },
+   "link": "https://www.bitdefender.com/en-au/blog/hotforsecurity/utility-scams",
+   "thumbnail": "https://blogapp.bitdefender.com/hotforsecurity/content/images/size/w600/2024/06/Utility-Scams.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXJSVk5PTFU1eVpUbFdRWHBOVFJDM0FSaVRBaWdCTWdZZGs1UnNzUWM",
+   "date": "06/24/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-06-24T07:00:00Z"
+  },
+  {
+   "position": 22,
+   "title": "Your electricity connection will be disconnected today: New Scam Alert Targeting Hyd Consumers",
+   "source": {
+    "name": "NewsMeter",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://newsmeter.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Caroline Williams"
+    ]
+   },
+   "link": "https://newsmeter.in/hyderabad/your-electricity-connection-will-be-disconnected-today-new-scam-alert-targeting-hyd-consumers-745932",
+   "thumbnail": "https://newsmeter.in/h-upload/2025/03/27/398198-img8041.webp",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXFTWFYwTTAxc1lqaHhWV0p4VFJDZkF4ampCU2dLTWdhUlFJcUdJZ2c",
+   "date": "03/27/2025, 07:00 AM, +0000 UTC",
+   "iso_date": "2025-03-27T07:00:00Z"
+  },
+  {
+   "position": 23,
+   "title": "Financial fraud targeting KSEB customers on the rise",
+   "source": {
+    "name": "The Hindu",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.thehindu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "praveen mp"
+    ]
+   },
+   "link": "https://www.thehindu.com/news/cities/Kochi/financial-fraud-targeting-kseb-customers-on-the-rise/article65189940.ece",
+   "thumbnail": "https://www.thehindu.com/theme/images/amp-og-image.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxjMll5TjBOVFpUQjRNSEZ4VFJDcUJCaXFCQ2dLTWdhTmtwQUlOUVk",
+   "date": "03/04/2022, 08:00 AM, +0000 UTC",
+   "iso_date": "2022-03-04T08:00:00Z"
+  },
+  {
+   "position": 24,
+   "title": "99-year-old Mumbai man shares bank details fearing ‘power cut’, loses Rs 3 lakh",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Narayan Namboodiri"
+    ]
+   },
+   "link": "https://timesofindia.indiatimes.com/city/mumbai/99-year-old-juhu-resident-loses-rs278-lakhs-in-light-bill-scam-cyber-fraud-alert/articleshow/108570361.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-108572312,width-1280,height-720,resizemode-72/108572312.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUNhbkl5VmpKbmRUbEhWblJLVFJDZkF4ampCU2dLTWdhZEFvcXVpUW8",
+   "date": "03/18/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-03-18T07:00:00Z"
+  },
+  {
+   "position": 25,
+   "title": "Fake gas disconnection notices ‘scamming’ IGL customers: How to spot one",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://timesofindia.indiatimes.com/technology/tech-news/fake-gas-disconnection-notices-scamming-igl-customers-how-to-spot-one/articleshow/111963653.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-111964301,width-1280,height-720,resizemode-4/111964301.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW1WMTgxYTBkM1ptaFBNWFJFVFJDZkF4ampCU2dLTWdZUlFaVHFvQWM",
+   "date": "07/23/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-07-23T07:00:00Z"
+  },
+  {
+   "position": 26,
+   "title": "Frauds target consumers with power cut threats",
+   "source": {
+    "name": "Deccan Chronicle",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.deccanchronicle.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.deccanchronicle.com/southern-states/telangana/frauds-target-consumers-with-power-cut-threats-1869376",
+   "thumbnail": "https://www.deccanchronicle.com/h-upload/2025/03/27/1500x900_1902158-powercut.webp",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXJNa3RWVTBGZmJXRXdSbWxxVFJDdEF4akxCU2dLTWdZOU1ZNjFGQWc",
+   "date": "03/27/2025, 07:00 AM, +0000 UTC",
+   "iso_date": "2025-03-27T07:00:00Z"
+  },
+  {
+   "position": 27,
+   "title": "Chennai: Beware of phishing attacks in name of unpaid electricity bills",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Omjasvin M D"
+    ]
+   },
+   "link": "https://timesofindia.indiatimes.com/city/chennai/beware-of-phishing-attacks-in-name-of-unpaid-eb-bills/articleshow/92775868.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-92777782,width-1280,height-720,resizemode-72/92777782.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVBlalJCTjJONGVsTlllVjh6VFJDZkF4ampCU2dLTWdZaEZJVE5IUVE",
+   "date": "07/10/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-07-10T07:00:00Z"
+  },
+  {
+   "position": 28,
+   "title": "Fraud Alert: Beware of Electricity Bill Scam; Rs14.64 Lakh Withdrawn Using Aadhaar Fingerprints",
+   "source": {
+    "name": "Moneylife",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://mas360.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://mas360.moneylife.in/cyber-awareness/fraud-alert-beware-of-electricity-bill-scam-rs14-64-lakh-withdrawn-using-aadhaar-fingerprints/4268.html",
+   "thumbnail": "https://mas360.moneylife.in/media/userimage/image/article_gallery/lectricitybill210223.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNXJWa2szVm5GNFNIRm9OblJZVFJDb0FSaXRBaWdCTWdB",
+   "date": "06/18/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-06-18T07:00:00Z"
+  },
+  {
+   "position": 29,
+   "title": "60-year-old man loses ₹1.47L to phishing",
+   "source": {
+    "name": "The Times of India",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://timesofindia.indiatimes.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://timesofindia.indiatimes.com/city/chennai/60-year-old-man-loses-1-47l-to-phishing/articleshow/108986306.cms",
+   "thumbnail": "https://static.toiimg.com/thumb/msid-33486062,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXlZVWxXVlhWcWNGcENVVEZFVFJDZkF4ampCU2dLTWdNRm94QQ",
+   "date": "04/03/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-04-03T07:00:00Z"
+  },
+  {
+   "position": 30,
+   "title": "Cyber crooks targeting power consumers",
+   "source": {
+    "name": "RightNow",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.thehitavada.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.thehitavada.com/Encyc/2022/1/20/Cyber-crooks-targeting-power-consumers.html",
+   "thumbnail": "https://www.thehitavada.com/Encyc/2022/1/20/Cyber-crooks_202201200457430073_H@@IGHT_498_W@@IDTH_223.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXJhMGRTYm1oWFN6aGFWRzEzVFJEeUF4amZBU2dLTWdhSkU0Wm1RUVE",
+   "date": "01/20/2022, 08:00 AM, +0000 UTC",
+   "iso_date": "2022-01-20T08:00:00Z"
+  },
+  {
+   "position": 31,
+   "title": "Mumbai: Criminal lawyer loses Rs 6.5 lakh to electricity bill fraud",
+   "source": {
+    "name": "Mid-Day",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.mid-day.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.mid-day.com/mumbai/mumbai-news/article/mumbai-criminal-lawyer-loses-rs-6-5-lakh-to-electricity-bill-fraud-23233522",
+   "thumbnail": "https://images.mid-day.com/images/images/2022/jun/Bijli-meter_d.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVpRbFYyWjBzMmIyeFhlREZWVFJDZkF4ampCU2dLTWdrcEk0S3VGU3BOdHdB",
+   "date": "06/29/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-06-29T07:00:00Z"
+  },
+  {
+   "position": 32,
+   "title": "Tata Power DDL Issues Customer Advisory against Cyber Frauds",
+   "source": {
+    "name": "Energetica India Magazine",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.energetica-india.net&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.energetica-india.net/news/tata-power-ddl-issues-customer-advisory-against-cyber-frauds",
+   "thumbnail": "https://www.energetica-india.net/images/noticias/LRTHNzASVTNoMK5Fuo1SWReHrtyY20jISrVGsobA2FMBSwnHDZCe.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXBaREF4WDBGTVpFcHpMVnBOVFJDaUF4aW1CQ2dLTWdtRmtvUVR5U0twelFF",
+   "date": "06/27/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-06-27T07:00:00Z"
+  },
+  {
+   "position": 33,
+   "title": "New way of scam to rob people of their money",
+   "source": {
+    "name": "The Tech Outlook",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.thetechoutlook.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.thetechoutlook.com/news/security/new-way-of-scam-to-rob-people-of-their-money/",
+   "thumbnail": "https://www.thetechoutlook.com/wp-content/uploads/2022/10/SMS-scam-20221009-featured-2.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNUVOblJrTURCNlpFUnlTVkpHVFJDZkF4ampCU2dLTWdB",
+   "date": "10/12/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-10-12T07:00:00Z"
+  },
+  {
+   "position": 34,
+   "title": "Don’t Be Caught Off Guard by Scammers",
+   "source": {
+    "name": "Energized by Edison",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://energized.edison.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://energized.edison.com/stories/dont-be-caught-off-guard-by-scammers",
+   "thumbnail": "https://s3.amazonaws.com/cms.ipressroom.com/352/files/202210/637291a9b3aed32da9ac24b8_shutterstock_2067982430/shutterstock_2067982430_hero.jpg?v=376e959f-ba07-412b-9283-07e5b879e722",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTZWWGRRTUdjd1JHRjBiV3RTVFJEZUFoanNCaWdLTWdZcEFJYk5uUVE",
+   "date": "11/14/2022, 08:00 AM, +0000 UTC",
+   "iso_date": "2022-11-14T08:00:00Z"
+  },
+  {
+   "position": 35,
+   "title": "DoT takes action against Electricity KYC Update Scam",
+   "source": {
+    "name": "PIB",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.pib.gov.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2025970",
+   "thumbnail": "https://static.pib.gov.in/WriteReadData/userfiles/image/image001WIF7.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWlkMTl3YjA5bFIwMVNVbEpRVFJDRkF4aWxBaWdLTWdhVk5aUUtuZ2s",
+   "date": "06/17/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-06-17T07:00:00Z"
+  },
+  {
+   "position": 36,
+   "title": "Top 10 impostor utility scams to watch out for",
+   "source": {
+    "name": "Entergy",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.entergy.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.entergy.com/blog/top-10-impostor-utility-scams-watch-out-for",
+   "thumbnail": "https://www.entergy.com/wp-content/uploads/1280X720_option1.png",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHhWblYzVkVweVpGSm9TelF5VFJDZkF4ampCU2dLTWdhVko1UkpsZ2s",
+   "date": "11/18/2024, 08:00 AM, +0000 UTC",
+   "iso_date": "2024-11-18T08:00:00Z"
+  },
+  {
+   "position": 37,
+   "title": "Fraud Alert: True Stories about How People Are Being Cheated Everyday",
+   "source": {
+    "name": "Moneylife",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.moneylife.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Yogesh Sapkale"
+    ]
+   },
+   "link": "https://www.moneylife.in/article/fraud-alert-true-stories-about-how-people-are-being-cheated-everyday/66989.html",
+   "thumbnail": "https://www.moneylife.in/site/userimage/image/responsive/Alertbig23april2022.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWhNR1ZqY1VkaGFrZDFjVXR3VFJDZUF4amxCU2dLTWdrQlVJd0RxMmNlelFF",
+   "date": "04/20/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-04-20T07:00:00Z"
+  },
+  {
+   "position": 38,
+   "title": "Beware of scam SMS messages threatening power disconnection",
+   "source": {
+    "name": "News Today",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://newstodaynet.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://newstodaynet.com/2023/11/01/beware-of-scam-sms-messages-threatening-power-disconnection/",
+   "thumbnail": "https://newstodaynet.com/wp-content/uploads/2023/11/download-6.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNURVREkxYjFOZlUxSlBhbUphVFJDb0FSaXNBaWdLTWdrZEZwTHFzYVo3aHdJ",
+   "date": "11/01/2023, 07:00 AM, +0000 UTC",
+   "iso_date": "2023-11-01T07:00:00Z"
+  },
+  {
+   "position": 39,
+   "title": "PGE warns customers of deceptive utility scams: Fraudulent disconnection texts and more",
+   "source": {
+    "name": "KATU",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://katu.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://katu.com/news/local/pge-warns-customers-of-deceptive-utility-scams-fraudulent-disconnection-texts-and-more",
+   "thumbnail": "https://katu.com/resources/media2/16x9/full/1174/center/80/6ffca89d-e549-4223-8c89-799b3929c02e-large16x9_1.JPG",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNURRM3B6UlRGT2VVbEJhVmRTVFJDZkF4ampCU2dLTWdhZFJJanJwUVk",
+   "date": "12/05/2024, 08:00 AM, +0000 UTC",
+   "iso_date": "2024-12-05T08:00:00Z"
+  },
+  {
+   "position": 40,
+   "title": "SCAM ALERT – Fraudulent SMS Notices & Disconnection Threats",
+   "source": {
+    "name": "George Municipality",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.george.gov.za&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Ntobeko Mangqwengqwe (CPRP)"
+    ]
+   },
+   "link": "https://www.george.gov.za/notices/scam-alert-fraudulent-sms-notices-disconnection-threats/",
+   "thumbnail": "https://www.george.gov.za/wp-content/uploads/2026/05/Latest-Scam-Image.jpeg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVhSakZIWlY5clpWbFJkVWhOVFJDNEF4anRCQ2dLTWdZTk1wTG9tQWM",
+   "date": "05/22/2026, 07:00 AM, +0000 UTC",
+   "iso_date": "2026-05-22T07:00:00Z"
+  },
+  {
+   "position": 41,
+   "title": "Manitoba Hydro urges customers to delete fraudulent text messages",
+   "source": {
+    "name": "CBC",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.cbc.ca&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.cbc.ca/news/canada/manitoba/manitoba-hydro-text-message-scam-1.7111986",
+   "thumbnail": "https://i.cbc.ca/ais/1.7112001,1707671265000/full/max/0/default.jpg?im=Crop%2Crect%3D%2823%2C128%2C791%2C444%29%3B",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXdMVU5YZEV4bVJFbDJSMnhhVFJDZkF4ampCU2dLTWdZWkJKSnJHUWc",
+   "date": "02/11/2024, 08:00 AM, +0000 UTC",
+   "iso_date": "2024-02-11T08:00:00Z"
+  },
+  {
+   "position": 42,
+   "title": "Learn the Telltale Signs of a Utility Scam",
+   "source": {
+    "name": "PSEG",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://nj.pseg.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://nj.pseg.com/newsroom/newsrelease354",
+   "thumbnail": "https://nj.pseg.com/-/media/pseg/global/gathercontentimages/ftdcontent4/1-7customersupport/scamalerts.ashx?h=244&w=348&la=en&hash=CD5F0C277CBBCEB393AE7CFDF31891D0",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVNPREZEVW5oT05qQjJVRVpCVFJEMEFSamNBaWdLTWdZQk1JaEl0UVk",
+   "date": "05/03/2023, 06:14 PM, +0000 UTC",
+   "iso_date": "2023-05-03T18:14:35Z"
+  },
+  {
+   "position": 43,
+   "title": "Scam alert: Duke Energy warning customers about text claiming you will have a power outage",
+   "source": {
+    "name": "wtsp.com",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.wtsp.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.wtsp.com/article/news/investigations/scams/duke-energy-scam-texts-power-outage/67-33f10582-a3f7-41c0-9da2-eb0e2b5e4b8a",
+   "thumbnail": "https://media.wtsp.com/assets/WTSP/images/a79c3057-8348-4131-9c20-cfef3530778d/a79c3057-8348-4131-9c20-cfef3530778d_360x203.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTNWR05aU2xoMWJTMHlWbGt3VFJDb0FSaXNBaWdCTWdaSllvTDFNQVU",
+   "date": "01/27/2026, 08:00 AM, +0000 UTC",
+   "iso_date": "2026-01-27T08:00:00Z"
+  },
+  {
+   "position": 44,
+   "title": "SDG&E warns customers of new scam using text messages, email notifications",
+   "source": {
+    "name": "10News.com",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.10news.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.10news.com/news/local-news/sdg-e-warns-customers-of-new-scam-using-text-messages-email-notifications",
+   "thumbnail": "https://ewscripps.brightspotcdn.com/dims4/default/c3e6486/2147483647/strip/true/crop/900x506+0+39/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Ffd%2Fed%2Fa209d9c8484ebeca563e04df406d%2Fsdge-text-email-scam-060624.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDBkMlpVVDBGbmRsWXhUblZSVFJDZkF4ampCU2dLTWdZUmRJSm4xUUk",
+   "date": "06/06/2024, 07:00 AM, +0000 UTC",
+   "iso_date": "2024-06-06T07:00:00Z"
+  },
+  {
+   "position": 45,
+   "title": "Warning over phone scam targeting Victorian energy customers",
+   "source": {
+    "name": "The Age",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.theage.com.au&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Beau Donelly"
+    ]
+   },
+   "link": "https://www.theage.com.au/national/victoria/warning-over-phone-scam-targeting-victorian-energy-customers-20150408-1mgv8j.html",
+   "thumbnail": "https://static.ffx.io/images/$zoom_1%2C$multiply_0.3319%2C$ratio_1.5%2C$width_1868%2C$x_92%2C$y_28/t_crop_custom/q_86%2Cf_auto/t_metro_no_label_social_wm/l_text:PT%20Sans_25_bold_italic:%20from%20%2Cg_north_west%2Cy_7%2Cx_30%2Cco_rgb:0a1633/l_text:AbrilTitling-Bold.ttf_55:%202015%20%2Cg_north_west%2Cy_32%2Cx_20%2Cco_rgb:0a1633/c9dbca3282ce08760b2ae042e146e34af7a6042f",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNW1iVWQzV0V4b1VFaFJVbkZrVFJDUUF4ai1CU2dLTWdNQkRnbw",
+   "date": "04/08/2015, 07:00 AM, +0000 UTC",
+   "iso_date": "2015-04-08T07:00:00Z"
+  },
+  {
+   "position": 46,
+   "title": "Scam threatens Central Hudson customers with power shutoff if they don’t pay up",
+   "source": {
+    "name": "Hudson Valley One",
+    "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://hudsonvalleyone.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://hudsonvalleyone.com/2019/07/10/central-hudson-scam-threatens-customers-with-power-shutoff-if-they-dont-pay-up/",
+   "thumbnail": "https://hudsonvalleyone.com/wp-content/uploads/2019/04/power-lines-600x400.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXlZVzVQTjJwTFVrODRWbkpGVFJDUUF4allCQ2dLTWdPQkZnRQ",
+   "date": "07/10/2019, 07:00 AM, +0000 UTC",
+   "iso_date": "2019-07-10T07:00:00Z"
+  },
+  {
+   "position": 47,
+   "title": "Manitoba Hydro customers to receive automated calls/texts about billing",
+   "source": {
+    "name": "Manitoba Hydro",
+    "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hydro.mb.ca&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.hydro.mb.ca/articles/2024/11/manitoba-hydro-customers-to-receive-automated-calls-texts-about-billing/",
+   "date": "11/26/2024, 08:00 AM, +0000 UTC",
+   "iso_date": "2024-11-26T08:00:00Z"
+  },
+  {
+   "position": 48,
+   "title": "Pay 1c or get disconnected",
+   "source": {
+    "name": "The Citizen",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.citizen.co.za&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.citizen.co.za/north-glen-news/news-headlines/2023/06/29/pay-1c-or-get-disconnected/",
+   "thumbnail": "https://images.caxton.co.za/wp-content/uploads/sites/51/2023/06/26CKSMS2-780x470.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDViazR3TUVzM2JXOTRkVTlZVFJDdUF4aktCU2dLTWdZZE41d3FHZ28",
+   "date": "06/29/2023, 07:00 AM, +0000 UTC",
+   "iso_date": "2023-06-29T07:00:00Z"
+  },
+  {
+   "position": 49,
+   "title": "Beware Mumbai residents, that ‘unpaid electricity bill’ message many of you receive is a scam",
+   "source": {
+    "name": "Times Now",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.timesnownews.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+    "authors": [
+     "Ajmal Aramam"
+    ]
+   },
+   "link": "https://www.timesnownews.com/mumbai/beware-mumbai-residents-that-unpaid-electricity-bill-message-many-of-you-receive-is-a-scam-article-95376340",
+   "thumbnail": "https://images.timesnownews.com/thumb/msid-95377598,thumbsize-25212,width-1280,height-720,resizemode-75/95377598.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVFZMjlpVVhBelgzVnpXVUZ6VFJDZkF4ampCU2dLTWdhbE1veXVxUVk",
+   "date": "11/08/2022, 08:00 AM, +0000 UTC",
+   "iso_date": "2022-11-08T08:00:00Z"
+  },
+  {
+   "position": 50,
+   "title": "Beware of fake SMS on power bills!",
+   "source": {
+    "name": "The Sentinel - of this Land, for its People",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.sentinelassam.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.sentinelassam.com/topheadlines/beware-of-fake-sms-on-power-bills-598773",
+   "thumbnail": "https://media.assettype.com/english-sentinelassam/import/h-upload/2022/06/23/357908-apdcl.webp?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXhiemcxV1ZCRFREaGtNbFIxVFJDbUF4alhCU2dLTWdtNU1vQVNuYWRNT3dB",
+   "date": "06/23/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-06-23T07:00:00Z"
+  },
+  {
+   "position": 51,
+   "title": "WhatsApp Electricity Bill scam alert! Fraudsters asking you to clear your bill? READ the message again",
+   "source": {
+    "name": "Zee News",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://zeenews.india.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://zeenews.india.com/technology/whatsapp-electricity-bill-scam-alert-fraudsters-asking-you-to-clear-your-bill-read-the-message-again-2496316.html",
+   "thumbnail": "https://english.cdn.zeenews.com/sites/default/files/2022/08/12/1076774-electricity-bill-scam.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdYMUZTY0VWWU9HMUlhV0V4VFJDZkF4ampCU2dLTWdZVlE0Q0tUUUk",
+   "date": "08/12/2022, 07:00 AM, +0000 UTC",
+   "iso_date": "2022-08-12T07:00:00Z"
+  },
+  {
+   "position": 52,
+   "title": "Fact Check: Maharashtra DGIPR Warns Of Fake Electricity Bill Messages, Urges Citizens To Stay Alert",
+   "source": {
+    "name": "Free Press Journal",
+    "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.freepressjournal.in&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://www.freepressjournal.in/mumbai/fact-check-maharashtra-dgipr-warns-of-fake-electricity-bill-messages-urges-citizens-to-stay-alert",
+   "thumbnail": "https://media.assettype.com/freepressjournal/2026-05-08/wx4xq7ot/Hero-Image-With-Text-2026-05-08T164259.248.jpg",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNW9RbXQ2UnpSRmRFWkRVV3BEVFJDZkF4ampCU2dLTWdB",
+   "date": "05/08/2026, 07:00 AM, +0000 UTC",
+   "iso_date": "2026-05-08T07:00:00Z"
+  },
+  {
+   "position": 53,
+   "title": "New cyber scam targets electricity consumers",
+   "source": {
+    "name": "newstodaynet.com",
+    "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://newstodaynet.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+   },
+   "link": "https://newstodaynet.com/2026/09/18/new-cyber-scam-targets-electricity-consumers-2/",
+   "thumbnail": "https://newstodaynet.com/wp-content/uploads/2023/08/58662-cybercrime-1024x768.webp",
+   "thumbnail_small": "https://news.google.com/api/attachments/CC8iNkNnNUpURFJOYkZSVGRUbHVXSFk0VFJEZ0F4aUFCU2dLTWc0QlVJNUVLYWMxajJra3NnYi1HQQ",
+   "date": "09/18/2026, 07:00 AM, +0000 UTC",
+   "iso_date": "2026-09-18T07:00:00Z"
+  }
+ ],
+ "_searched_at": "2026-10-07 09:21:53 UTC"
+}

@@ -1,0 +1,578 @@
+{
+ "local_results": [
+  {
+   "position": 1,
+   "title": "Hotel O by OYO A P Residency",
+   "place_id": "ChIJ2XsCAUXlDDkRb1-dp6qSsJI",
+   "data_id": "0x390ce54501027bd9:0x92b092aaa79d5f6f",
+   "data_cid": "10570109587092758383",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce54501027bd9%3A0x92b092aaa79d5f6f&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce54501027bd9%3A0x92b092aaa79d5f6f&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.619887499999997,
+    "longitude": 77.3695908
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ2XsCAUXlDDkRb1-dp6qSsJI",
+   "provider_id": "/g/11h56rp09j",
+   "rating": 2.7,
+   "reviews": 252,
+   "price": "€18",
+   "extracted_price": 18,
+   "type": "Hotel",
+   "types": [
+    "Hotel",
+    "Bed & breakfast",
+    "Guest house",
+    "Holiday home",
+    "Inn",
+    "Lodge",
+    "Motel",
+    "Service Apartment",
+    "Villa"
+   ],
+   "address": "RN 44 RN 44, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "phone": "0124 620 1516",
+   "website": "https://www.oyorooms.com/60948/?utm_source=Google&utm_medium=GMB",
+   "description": "Simple hotel with a restaurant & Wi-Fi. Straightforward hotel featuring a relaxed restaurant & breakfast, plus Wi-Fi & parking.",
+   "amenities": [
+    "Free breakfast",
+    "Free Wi-Fi",
+    "Breakfast",
+    "Wi-Fi"
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmOHM8uyKKZ4vTj-PCrF7GMBHtU9K6ULONY0c5tBpwOMUM1IYknxpBueysKPTnEuS2CFEjZt7XzhaqEpBiBa77o3Czai32TVxkls1xA-630JW796H7ofqXN-6DclOtSJ1CePOK07=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/DRdpmXicHcRdDsEwAADgE9U6Y0XiQWuMmi6x-XtbmtpQba0d44LO4DYS38P3_VTOGTvyPFkFnVLrUorGippr5YRyHa5vXlkX1gJuvQl5GHljcTJoXpQee4_sAlJSz9A8wbHLhzTMV2x9gLzvsHmyJE_8xeGqWoMb8bI0zVTUbLpkFl2ODu3fVXGPDD7jAiEdkHdxDrrZtr1K67cTEAZwuUPDMEb6dN-vQTjlkrnN0iciZRSi8dOHEILqPwfqBz7rQzk"
+  },
+  {
+   "position": 2,
+   "title": "A Chaudhary residency",
+   "place_id": "ChIJO_1ue_jlDDkRU47uNBdzYQc",
+   "data_id": "0x390ce5f87b6efd3b:0x761731734ee8e53",
+   "data_cid": "531832774515920467",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce5f87b6efd3b%3A0x761731734ee8e53&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce5f87b6efd3b%3A0x761731734ee8e53&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6282873,
+    "longitude": 77.3505031
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJO_1ue_jlDDkRU47uNBdzYQc",
+   "provider_id": "/g/11j6pl3pwq",
+   "rating": 3.8,
+   "reviews": 44,
+   "type": "Condominium rental agency",
+   "types": [
+    "Condominium rental agency"
+   ],
+   "address": "Gali Number 2, Makanpur Colony, Sector 62A, Noida, Uttar Pradesh 201020",
+   "country": "India",
+   "open_state": "Open · Closes 11 pm",
+   "hours": "Open · Closes 11 pm",
+   "operating_hours": {
+    "wednesday": "6 am–11 pm",
+    "thursday": "6 am–11 pm",
+    "friday": "6 am–11 pm",
+    "saturday": "6 am–11 pm",
+    "sunday": "6 am–11 pm",
+    "monday": "6 am–11 pm",
+    "tuesday": "6 am–11 pm"
+   },
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmNEdXSjaHxypvC24jdsZe3WQVIGNMYS26WkYdnRSdHqlimwq7px4EBFdULlh1ioHVkFu7lmF6rCVzMUYAm0hlz3eeZrGbOC5Vwz81aciML5YIz7pKhjzl7sOqm32jIUJyWGt2dr1Q=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/R-yaOHicHcTbDoIgAADQLzKvZWvroVxeKmvl1OzNgIkGgkBZ_GGf0N-0dR7O94OV4nJhmgS7k4axhqCHRAKwXqFeTQCjZiNqKQ0gzVXw5IQeNvCSdXX8evNn4HgdlFfklqciiQ5plTmz8l7B_pzBeCAtHQefv7zNOoT5nmC7ZXFxDx8-oeFMBIVO82pFLUy0i9BVRLdjMC1GPbdr0Kb7aZVon-9wp4kvjwN1nS7Jt-8yUg4U9mk52pZlGfg_MPofpBZGyg"
+  },
+  {
+   "position": 3,
+   "title": "Hotel O by OYO Basera Residency",
+   "place_id": "ChIJ_Z5ao7nlDDkREUW-WqbXrf8",
+   "data_id": "0x390ce5b9a35a9efd:0xffadd7a65abe4511",
+   "data_cid": "18423618760129529105",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce5b9a35a9efd%3A0xffadd7a65abe4511&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce5b9a35a9efd%3A0xffadd7a65abe4511&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6183554,
+    "longitude": 77.3695749
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ_Z5ao7nlDDkREUW-WqbXrf8",
+   "provider_id": "/g/11sb3jt1lj",
+   "rating": 2.9,
+   "reviews": 12,
+   "type": "Hotel",
+   "types": [
+    "Hotel",
+    "Bed & breakfast",
+    "Guest house",
+    "Holiday home",
+    "Inn",
+    "Lodge",
+    "Motel",
+    "Service Apartment",
+    "Villa"
+   ],
+   "address": "J999+7QH, Sl1, Rasoolpur Nawada, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "phone": "0124 620 1516",
+   "website": "https://www.oyorooms.com/194924/?utm_source=Google&utm_medium=GMB",
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeU56IQE7DB1u68kEPtprxsuo8iDHZzsCe4VwPZq8BncKuXdpZ6szbBJEwb0eis_DCr-wntW1AmwHn6beYIuVol8wj0BatLMWz9cy4-8mSZbGWU-qnj-si-YfKCLrOQ8EKui89R6w=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/KKGfXXicHcTbboIwGADgJ6qU6Lq6xAsKxAMYT1EGN0a6Cii02L9NlTfcI_g2S_ZdfO_f2pgevjyvrcejSqmqFRaE5koaIc2Iq86r9AUAcfCCgN27VBw_yHIXf0bMt4Te463p9ROsok20KAYIxeTktsWDMskT-_3TFwSGkq1iV2LRwDkKNXLSZH7QuYUkpciX9qRa6m6YXUy6zoYpf00Q7Q5FOc-O6CFvCBqUX5Mw1ZsdjRPb0OmeuJnzMcao_p8j-QdCs0Xj"
+  },
+  {
+   "position": 4,
+   "title": "Trikuta Hills",
+   "place_id": "ChIJpSW5ZGflDDkRDUuGg7npFoQ",
+   "data_id": "0x390ce56764b925a5:0x8416e9b983864b0d",
+   "data_cid": "9518051845478959885",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce56764b925a5%3A0x8416e9b983864b0d&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce56764b925a5%3A0x8416e9b983864b0d&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.614549,
+    "longitude": 77.37055869999999
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJpSW5ZGflDDkRDUuGg7npFoQ",
+   "provider_id": "/g/1tdhcd7t",
+   "rating": 3.8,
+   "reviews": 71,
+   "type": "Apartment complex",
+   "types": [
+    "Apartment complex",
+    "Apartment building"
+   ],
+   "address": "BOIGroup Housing Society, Institutional Area, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdz7PJjFHYGJ7L93LpUVpZXXSC1ruZNLzcm2QLZ7XN2uD9d2ifHv7Zvg_bYIrIjLYfAkfiMXx34epvs-9yXZeel-gi-mKODSEOX2dUMXVrM3cakaJzvZQaRFHPZw-gnD4VJbo0m=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/PkltrXicHcRJDoIwAADAF1UQSAgmHlBUwOIaSenFYCllKyUtoPJB3-BvTJzDfD9F33dqoWlNYc6YEKyhg6KSiLanbT8jgmtMpkoBojTXXdUcZpN9Cqutn-xCGzom7G5xhxG6rudywAc4EW6cIbbRwRg8JzPK3B9tPLL7IwlkUMEkd-u8jNDLtGg3KuC8Eaa0AawEfH_0rpsjMrJbhGIZmSSt03Aa8Tm9bP0TfgLWelYcPoTOl8-5ruug-E9A-wNe1USu"
+  },
+  {
+   "position": 5,
+   "title": "ShaktiKunj Apartment",
+   "place_id": "ChIJq-n1KVvlDDkR2AARF1Fqo6M",
+   "data_id": "0x390ce55b29f5e9ab:0xa3a36a51171100d8",
+   "data_cid": "11791385145897976024",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55b29f5e9ab%3A0xa3a36a51171100d8&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55b29f5e9ab%3A0xa3a36a51171100d8&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6203181,
+    "longitude": 77.371225
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJq-n1KVvlDDkR2AARF1Fqo6M",
+   "provider_id": "/g/11cn06q9xm",
+   "rating": 4,
+   "reviews": 61,
+   "unclaimed_listing": true,
+   "type": "Apartment building",
+   "types": [
+    "Apartment building",
+    "Condominium complex"
+   ],
+   "address": "9/3, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "open_state": "Open 24 hours",
+   "hours": "Open 24 hours",
+   "operating_hours": {
+    "wednesday": "Open 24 hours",
+    "thursday": "Open 24 hours",
+    "friday": "Open 24 hours",
+    "saturday": "Open 24 hours",
+    "sunday": "Open 24 hours",
+    "monday": "Open 24 hours",
+    "tuesday": "Open 24 hours"
+   },
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfUocp3IhAlW-k6Gae3az2if0SsQjgdj_ivn4wDcNCLfjtAmfjO1h57wdceqs-bBPEIUmbY0W9VeBZ28M3NUN6NdfiQD7qIOtlnQ2LxwNdqJWMRjzSHWVTpgTq6zLtKzEwU_6onjQ=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/tSdiGnicHcTbboIwAADQL6pU2PCS7AGUKIpVpkjcC8HSCxVasHU1_OE-wb8x2Xk4rz9uTKfnjtNwb8SUYg15aHLHShoizQir1mH3UmuAtRME4a1NaKZw58U8aHJw81cl8crBrSk86lSwShT1r_ywS4wWCRUmaKnYj_nnxFaY9Bpcw0MUZ-31AvPZmYQ_7nTnoQz5qKJ1upz08d40MnWTp0VVv8l332I4rvPzqWOn3h8Ssx0imxW-kiL9smMIIeD_YyDfUYNGew"
+  },
+  {
+   "position": 6,
+   "title": "Akanksha Apartments",
+   "place_id": "ChIJc7qtE1vlDDkRejgaqtMcDXw",
+   "data_id": "0x390ce55b13adba73:0x7c0d1cd3aa1a387a",
+   "data_cid": "8938832530817824890",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55b13adba73%3A0x7c0d1cd3aa1a387a&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55b13adba73%3A0x7c0d1cd3aa1a387a&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6225456,
+    "longitude": 77.36801729999999
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJc7qtE1vlDDkRejgaqtMcDXw",
+   "provider_id": "/g/11c55j74jx",
+   "rating": 3.7,
+   "reviews": 169,
+   "type": "Apartment building",
+   "types": [
+    "Apartment building"
+   ],
+   "address": "Akanksha Apartment, B-9/12, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmPldZ_tHkCeZs7obErP5K8d7yPdnDJPvyiJG-GINx8lnrCBSnfSxcGDuovtab6zjqwylVWA_jFBaO-H_2x1ss8DzEcsco9oClfOcPlN_txOfGhic6uWIT-FSMR1_pOCHR94VwuY9g=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/iQ8ZOnicHcRbjoIwFADQFVVARwUTP6QoqFEamWjGnwYvL7W2yC0vd-gS3I3JnI_zeRdalzgzDFGMBrlSuUhrTCtQUqdSD0A9jLyKEQmgsaBNKR5MJGeugztNzzhVl2XFxls7mfYskd6GNf114xN_ve9sISvqRjKLOvC9WjU6vkxet2fbi-NpwW8rNw5JwIedhWh7ryUgKEdRkYXAxJ7rLsz84gqT-rT-Jatod7B4GdLg4Pwc2_rPyeetZZomKf4HIr_ou0dR"
+  },
+  {
+   "position": 7,
+   "title": "Yarrows Apartments",
+   "place_id": "ChIJOww1fUTlDDkRRHQmV2yq2cM",
+   "data_id": "0x390ce5447d350c3b:0xc3d9aa6c57267444",
+   "data_cid": "14112498289637487684",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce5447d350c3b%3A0xc3d9aa6c57267444&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce5447d350c3b%3A0xc3d9aa6c57267444&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.613249,
+    "longitude": 77.3722907
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJOww1fUTlDDkRRHQmV2yq2cM",
+   "provider_id": "/g/11c3ty5rnz",
+   "rating": 4,
+   "reviews": 243,
+   "unclaimed_listing": true,
+   "type": "Apartment complex",
+   "types": [
+    "Apartment complex"
+   ],
+   "address": "Plot no. C58/5, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmOeIqbiybQ1aW-wiz70zxA8QpqYnePnPQgTMk2EiluLypGSHgdDcjPq4-By7yin5OJwdf92a2QiJQsxRFxeyp5HRkmQ8U1RkU4YFtqMjGnsn-JYmNmaRNdTFuWP4FM186RuNOaG=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/_Lu5aHicHcRLcoIwAADQE0U-YsXOuLCtYBn5JNVxWMYQQ4SEYIIQL-gZvE1nfIv3etbGKP3pOG09n7GuYy0dNL2RThoqzYx0wmE3rDUg2tl831Urcvrbn7k9Qw-fwMgfS_cxbUKo-lLSQhaQHdLG3_J22FsV_-1Y9UOuRR-AL7u0XC7yZKwuKx_7kCdQTyiaqFWLHWoEDI8eao5BGZk-vcZSS5CUIhMYZdUhGk5FEKVe-IGGLMfxevRc1wX1ewLkPzLDRes"
+  },
+  {
+   "position": 8,
+   "title": "Varun Apartment",
+   "place_id": "ChIJD49diF3lDDkROpRlWy0IHjU",
+   "data_id": "0x390ce55d885d8f0f:0x351e082d5b65943a",
+   "data_cid": "3827505724211434554",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55d885d8f0f%3A0x351e082d5b65943a&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55d885d8f0f%3A0x351e082d5b65943a&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6152238,
+    "longitude": 77.3702696
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJD49diF3lDDkROpRlWy0IHjU",
+   "provider_id": "/g/1hm46rkzf",
+   "rating": 4,
+   "reviews": 70,
+   "unclaimed_listing": true,
+   "type": "Apartment complex",
+   "types": [
+    "Apartment complex",
+    "Apartment building"
+   ],
+   "address": "C-58/28, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmNSzeBdWtrBIVR1vaB4b8N6uutlGDErdS_5InIt-HZtk63I1t8nWuy7drt1RnnVpPKFF8qGGRLaP2ukvoy_25Y0v-ez7ZhNZxnXfhNKQsSG8ya2569hhYUBqrNOp6PzPyyW9JTVEw=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/SR41IHicHcTdboIwGADQJ6r8KIhLdiGbImo6BgqDG8Kg0kRssf1aV95wj-DbLNm5OM9fCjDKF8sa6HzWc94PREkiWs6AMJi1_Gb1opEStdJav-lxuOFsImFXgAjjPHV0Ey6-A-wrBUP0vhFdVnsxiwHtKrj689iBgBXKLDsBTspYPiaH7Ta4R1F6bBJXXTU3teuVtkZkWlYUVz_s60Lx4VNmUWAa1_NXlJbn8C7wx-gnU2JMsdqf8s3j9eHYto3o_y1if2NkRkA"
+  },
+  {
+   "position": 9,
+   "title": "Mecon Apartments",
+   "place_id": "ChIJSW9TdF7lDDkRqbxSiFyvxo0",
+   "data_id": "0x390ce55e74536f49:0x8dc6af5c8852bca9",
+   "data_cid": "10216045616695524521",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55e74536f49%3A0x8dc6af5c8852bca9&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55e74536f49%3A0x8dc6af5c8852bca9&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.616899099999998,
+    "longitude": 77.3731121
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJSW9TdF7lDDkRqbxSiFyvxo0",
+   "provider_id": "/g/1hfbr3qyx",
+   "rating": 4.2,
+   "reviews": 160,
+   "type": "Apartment complex",
+   "types": [
+    "Apartment complex"
+   ],
+   "address": "C-58/10, C-58/10, Sector 62 Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "open_state": "Open · Closes 7 pm",
+   "hours": "Open · Closes 7 pm",
+   "operating_hours": {
+    "wednesday": "9 am–7 pm",
+    "thursday": "9 am–7 pm",
+    "friday": "9 am–7 pm",
+    "saturday": "9 am–7 pm",
+    "sunday": "9 am–7 pm",
+    "monday": "9 am–7 pm",
+    "tuesday": "9 am–7 pm"
+   },
+   "phone": "098100 66158",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdws6pwg4zvSHuC6yDpPLEKlFr7IiGrs5qFlmEyiPMvEMOXermDob7ILrAVlxjadDtsJDF5HzNxZjxIj0lZjuR0qYFCYBl5DAf60K3aP5E9W8MjdqiviFB-jkFJAZ6IhrVFGFzp=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/nZ5_JnicHcRJDoIwAADAFwE1CqiJh2IpoKBEExduCAjUQqEti3zQN_gbE-cw308hZSPWmkaLuZozltOsExlPWC2zWqoJq7Scx0IoidAgtF6Vnw7CaIZ8MfVnt9sab9SEvr2nmJte6XCht5hW9rsMg94OjreMV4g9TM_n8EJHEqdIih3CujsdxoiMHgE0It0JtHe8vVtUR_BpgP08DnV7dV0GJG3LvsSWQl54ByPDK_gFO3hqNsMMAKAU_xOl_gECJEV2"
+  },
+  {
+   "position": 10,
+   "title": "Swagatam Apartments",
+   "place_id": "ChIJbxymVGflDDkROJJz1581-tg",
+   "data_id": "0x390ce56754a61c6f:0xd8fa359fd7739238",
+   "data_cid": "15634868017000845880",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce56754a61c6f%3A0xd8fa359fd7739238&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce56754a61c6f%3A0xd8fa359fd7739238&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6147457,
+    "longitude": 77.3726132
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJbxymVGflDDkROJJz1581-tg",
+   "provider_id": "/g/11b6sp1hy8",
+   "rating": 3.4,
+   "reviews": 67,
+   "unclaimed_listing": true,
+   "type": "Apartment complex",
+   "types": [
+    "Apartment complex",
+    "Apartment building"
+   ],
+   "address": "C-58/7, Sector 62 Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeuJlvUC2MnmDzUldQouZTKwVwtT5e5ayNu5e8mCkqxfEMbW_7-mmVCo7oVjLn_mSsIaIk_M1ssKdHIDvprY1GaNN5B6oWZjekDmRV5cR0dGMF39fCpIfCKGWwqCauIWg3fFQSL=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/hkajA3icHcTbDoIgAADQLzI1R1ZbD4Vp5GXrpqsXR4i6FDCBrH6wb-hv2joP5_uplerk3DTb2hlVQlQt1ZL2RHBFuRoRwcyqx1IaRJrL5aphEdXb9nGC45gz731qi53Ql2M4pIM6AgrwK9GAThls7s9yHV-z3DUYS6FwRXqLeM4OEmHU5LEtZVhskPfo-rMd4CQBq4nILjfaeGyfArK3iiD2nVkJO1TCMMiGO8QaZZVT-rtDtBhsy7KM-j8x-A8eF0W9"
+  },
+  {
+   "position": 11,
+   "title": "Designers Park Apartments",
+   "place_id": "ChIJAQAAb1vlDDkRFBJTTX1d07I",
+   "data_id": "0x390ce55b6f000001:0xb2d35d7d4d531214",
+   "data_cid": "12885745751586705940",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55b6f000001%3A0xb2d35d7d4d531214&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55b6f000001%3A0xb2d35d7d4d531214&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6218307,
+    "longitude": 77.3687985
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJAQAAb1vlDDkRFBJTTX1d07I",
+   "provider_id": "/g/11bwh58dym",
+   "rating": 4.1,
+   "reviews": 595,
+   "unclaimed_listing": true,
+   "type": "Apartment complex",
+   "types": [
+    "Apartment complex",
+    "Apartment building"
+   ],
+   "address": "Oshy Marg, behind Fortis Hospital Residential, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/ACvplmOHVOHLF4veMgDGgTrQvtRcYpTCux3uVYveAQD9wppLn8NE9N6PEzSR4fNOKYQq18EF2IsYLhCSkbHQ-wdmrOSb4GiVHwAKAujtYnI8QZmix54ptGvq3Op4s-PzAzPtX3sIfHlx=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/IEFZ4HicHcRRboIwAADQE1VQugWX-NEgUiKjVAxZ9ze7WlQolZZCuKBn8DYmvo_3fNTWavPleU0dLGTXyUYMRvS8U1You-Bd68n-zxjAjYcip5uW4IrgbAed-JbbRB576uyBM32MhikYKuYEotv1qHWmwjxe559FPJcHeM7JntH7Mox3q9SwrI7K2wlTMP63PSlPMLlUeER7NFwtU2lIf9vL9AG1Tdw9IBoaUMxoLuxPYNIzbqbNuPR9H9TvOVAvvGVFiw"
+  },
+  {
+   "position": 12,
+   "title": "Sagar Apartments",
+   "place_id": "ChIJ9TCj9V3lDDkR2i2lNyNjnOE",
+   "data_id": "0x390ce55df5a330f5:0xe19c632337a52dda",
+   "data_cid": "16256977757809225178",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55df5a330f5%3A0xe19c632337a52dda&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55df5a330f5%3A0xe19c632337a52dda&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6145578,
+    "longitude": 77.3712816
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ9TCj9V3lDDkR2i2lNyNjnOE",
+   "provider_id": "/g/11clpt1xj2",
+   "rating": 3.9,
+   "reviews": 32,
+   "unclaimed_listing": true,
+   "type": "Apartment building",
+   "types": [
+    "Apartment building"
+   ],
+   "address": "near by Shramdeep Apartments, C Block, sec 62 CH1, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "open_state": "Open · Closes 4 pm",
+   "hours": "Open · Closes 4 pm",
+   "operating_hours": {
+    "wednesday": "8 am–4 pm",
+    "thursday": "8 am–4 pm",
+    "friday": "8 am–4 pm",
+    "saturday": "8 am–4 pm",
+    "sunday": "Closed",
+    "monday": "8 am–4 pm",
+    "tuesday": "8 am–4 pm"
+   },
+   "phone": "0120 426 0157",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park",
+      "Wheelchair-accessible entrance"
+     ]
+    }
+   ],
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcWNqXbRsdtDgHUDGVCrNqITZmAI54KSwmvwQUnPOFb4OoDGjo3bjdJo3DuWurKQMBsQVCqP9SxBqzQiovM4gdUnJUSwN4XwOo-w86L_u0yk_78G4_0Ja3cJR-KKaQDBWi6bYQ1=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/8F-6_HicHcTbboIwGADgJ6rUUI_JLsBmKChYGaC7IVBI8UB_ocXOvaDPsLdZ4nfx_b0are9qaVm3xh4JAHGrB1X3HKSupR5xaC3RF0ohrizHca_tlmdhdywPqtJUrBPqpas-7DZf362zmZAgNu3DsETuo8-SREC9C9jlpfLBpkM29AHbuYqlq26_iH_c7ped4bEjokqkn8QmJEcTATLz6TYf8POaz-YeybFf2Nw_oCAoGHWz87Q8sfGHGWOMUfOeI_kPu6tElw"
+  },
+  {
+   "position": 13,
+   "title": "Golden Nest Society",
+   "place_id": "ChIJF_U7klzlDDkRPAo8atakHYk",
+   "data_id": "0x390ce55c923bf517:0x891da4d66a3c0a3c",
+   "data_cid": "9880234398333012540",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55c923bf517%3A0x891da4d66a3c0a3c&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55c923bf517%3A0x891da4d66a3c0a3c&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6193906,
+    "longitude": 77.3689369
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJF_U7klzlDDkRPAo8atakHYk",
+   "provider_id": "/g/11f2s04_lh",
+   "rating": 3,
+   "reviews": 29,
+   "unclaimed_listing": true,
+   "type": "Apartment building",
+   "types": [
+    "Apartment building"
+   ],
+   "address": "J999+QH3, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "extensions": [
+    {
+     "accessibility": [
+      "Wheelchair-accessible car park"
+     ]
+    }
+   ],
+   "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=p4PEFbKHghUqA3N4syuTpQ&cb_client=search.gws-prod.grass&w=80&h=92&yaw=207.04477&pitch=0&thumbfov=100",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/9Mu09HicHc1RCsIgGADg2_iWuhJWgUQPRRBEQT2Hc6aCm3_-brbrdKtuU3SB7_u8Xc6Aa8YwJ2Py6E0B_zIBZ6CojdEGo8Aj1bFjY8WyG7qmVz5sQPXRtxLEebdvjgfrbs_t4iRwGq5wIbq56-BNnyUalbSjtvzEFFtqk0IkRS45cXI1J5Mqcs5ryoWoawI-ayc5-T-POMqK8y_zljpU"
+  },
+  {
+   "position": 14,
+   "title": "Snehkunj Apartments",
+   "place_id": "ChIJO69zw13lDDkRJetH6rvFOns",
+   "data_id": "0x390ce55dc373af3b:0x7b3ac5bbea47eb25",
+   "data_cid": "8879627026194492197",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce55dc373af3b%3A0x7b3ac5bbea47eb25&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce55dc373af3b%3A0x7b3ac5bbea47eb25&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6166949,
+    "longitude": 77.3716614
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJO69zw13lDDkRJetH6rvFOns",
+   "provider_id": "/g/11b6hwd_xk",
+   "rating": 4.2,
+   "reviews": 31,
+   "type": "Apartment building",
+   "types": [
+    "Apartment building"
+   ],
+   "address": "58/13, Sector 62 Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "open_state": "Open 24 hours",
+   "hours": "Open 24 hours",
+   "operating_hours": {
+    "wednesday": "Open 24 hours",
+    "thursday": "Open 24 hours",
+    "friday": "Open 24 hours",
+    "saturday": "Open 24 hours",
+    "sunday": "Open 24 hours",
+    "monday": "Open 24 hours",
+    "tuesday": "Open 24 hours"
+   },
+   "phone": "093507 07325",
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLe0jTeRUQ_DXsPmHu5NPJLR-_p4dYWdmiT6vgKd33wiosAKsu6ccpblQYQIeXCc2vG5uYXGDOiycXU39TQPMC5JwsxfqwKcDRvKxJHHlpgiPDGOkVqI3QYSNfyrXHr1TsvLWQ=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/NwS-zXicHcTdEoFAGADQJ0qxMsOMi2imVGgTbVeGr7VFtdXXnwf0EN7GjHNxvp-0bStcqWqekomQUuS8Q96ALFtethOQhSqaG6ICqBrG5lV4XHuGPDjTq8nQL-xOP_iOFyjXap7EUVJk4aIXbkLIkEk0XOwWANU9pzHdcbaFWW_pXcws85i9gZ3JMqT-fqs7A46PenDBDHp3dGw7r0Tmm9bxdal3hManw-PdMLuZhth7EV0PU03TlPQ_KOUPNGJFJw"
+  },
+  {
+   "position": 15,
+   "title": "Oriental Apartments",
+   "place_id": "ChIJ9RargWflDDkRbDLqHIsftN8",
+   "data_id": "0x390ce56781ab16f5:0xdfb41f8b1cea326c",
+   "data_cid": "16119543648611873388",
+   "reviews_link": "https://serpapi.com/search.json?data_id=0x390ce56781ab16f5%3A0xdfb41f8b1cea326c&engine=google_maps_reviews&hl=en",
+   "photos_link": "https://serpapi.com/search.json?data_id=0x390ce56781ab16f5%3A0xdfb41f8b1cea326c&engine=google_maps_photos&hl=en",
+   "gps_coordinates": {
+    "latitude": 28.6149314,
+    "longitude": 77.3694215
+   },
+   "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ9RargWflDDkRbDLqHIsftN8",
+   "provider_id": "/g/11c208lk7g",
+   "rating": 3.8,
+   "reviews": 13,
+   "unclaimed_listing": true,
+   "type": "Apartment building",
+   "types": [
+    "Apartment building"
+   ],
+   "address": "C-28/26, BHA Millenium Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309",
+   "country": "India",
+   "open_state": "Open 24 hours",
+   "hours": "Open 24 hours",
+   "operating_hours": {
+    "wednesday": "Open 24 hours",
+    "thursday": "Open 24 hours",
+    "friday": "Open 24 hours",
+    "saturday": "Open 24 hours",
+    "sunday": "Open 24 hours",
+    "monday": "Open 24 hours",
+    "tuesday": "Open 24 hours"
+   },
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLeC93O2I0Vl85NcCcCL3R49vyBnfvurWn5NKKKGfsbl73ao_JeQbOcNysFXcNWo5cBF111F0Tr0i0BaQbfKAj4DvtfjsqGAoI4CgHGjHJWpOhN5ntngQIu39zaSd2p_FDpTNjM=w1000-h1000-c-n",
+   "serpapi_thumbnail": "https://serpapi.com/images/url/cjgKgXicHcTBDYIwFADQiZBCIYqJB8CAiJagRrwR-JYiYou0YHBAd3AbE9_hfT-1Up1c6npb4xkTgrV0kLQHwRXlagbiobO-kFIDqbuud3_sqO_gxIzQuV3YBHzwd_hgOePk8Woc-ozbJI7jsJJlO8eFyLc0LRMgkwwuQDJhgxcYhhGgU49uyCvSsordxlqPqmrkM3RFZPlsEzabbdYlNbG54iyNBuy8i-PV7PJg3Z1Is1-9DISQVv8Hjf8ArrZDbw"
+  }
+ ],
+ "_searched_at": "2026-10-07 09:21:53 UTC"
+}

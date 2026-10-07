@@ -1,0 +1,55 @@
+{
+  "_comment": "Demo and end-to-end scenarios. Messages, numbers and links are invented; organisations named are real and appear only as impersonation targets. `expect` is asserted by tests/e2e against recordings of real SerpApi responses.",
+  "scenarios": [
+    {
+      "id": "electricity_hi",
+      "title": "Electricity bill SMS (Hindi)",
+      "kind": "screenshot",
+      "image": "electricity_hi.jpg",
+      "expect": {"level": ["HIGH_RISK"], "must": ["authority_unofficial_domain", "known_scam_pattern", "threat_or_urgency", "payment_request"], "forbid_trust": true}
+    },
+    {
+      "id": "customer_care_amazon",
+      "title": "Customer-care number",
+      "kind": "text",
+      "text": "Amazon customer care number 9876501234. Call now for the refund of your cancelled order, refund will expire today.",
+      "expect": {"level": ["SUSPICIOUS", "HIGH_RISK"], "must_any": ["official_contact_mismatch", "phone_reported"], "forbid": ["phone_on_official_site"]}
+    },
+    {
+      "id": "nike_deal",
+      "title": "Too-good-to-be-true deal",
+      "kind": "text",
+      "text": "🔥 Nike Air Jordan 1 Low — ONLY ₹1,499 (90% OFF)! Limited stock, original box. Order now on WhatsApp 9123456780 or visit nike-outlet-sale.shop. Cash on delivery available.",
+      "image_url": "https://serpapi.com/images/url/F5Zmc3icu9mYUVJSUGylr5-al1xUWVCSmqJbkpRnpJdeXJJYkpmsl5yfq1-ckV9QkJmXbl9oC5SzcvRLsXRPDs7xKE9zMc2qCPQzzjTxNs91d88zKc7MMjbWzS5NDfR2DTUryTLwKPNwdzdLs6gstKiI9Hf3DQkP9cvw0I1PzYhPNKw096lwMQEAX_ct0A",
+      "expect": {"level": ["HIGH_RISK"], "must": ["price_anomaly", "image_reused"], "forbid": ["price_plausible"]}
+    },
+    {
+      "id": "job_offer_fee",
+      "title": "Job offer asking for a fee",
+      "kind": "text",
+      "text": "Dear Candidate, Congratulations! You are selected for Data Entry Executive at Infosys Ltd, salary Rs. 45,000/month, work from home. Pay the refundable registration fee of Rs 2,500 to hr.infosys.careers@gmail.com via UPI infosyshr@ybl to confirm your joining. Office: 4th Floor, Shanti Residency, Sector 62, Noida. Contact HR 98765-43210.",
+      "expect": {"level": ["HIGH_RISK"], "must": ["upfront_fee", "free_email_corporate"], "forbid": ["job_listing_match"]}
+    },
+    {
+      "id": "sbi_alert_genuine",
+      "title": "Genuine bank alert",
+      "kind": "text",
+      "text": "Dear Customer, Rs.500.00 debited from A/c XX1234 on 07-10-26 by UPI ref 627912345678. Not you? Call 1800 1234. Never share your OTP, PIN or password with anyone. -SBI",
+      "expect": {"level": ["LOW_RISK"], "must": ["phone_on_official_site"], "forbid": ["phone_reported", "brand_lookalike_domain", "official_domain_mismatch"]}
+    },
+    {
+      "id": "ambiguous_hello",
+      "title": "Vague message",
+      "kind": "text",
+      "text": "Hi, is this Rahul? I have an opportunity for you. Reply YES to know more.",
+      "expect": {"level": ["UNVERIFIED", "LOW_RISK", "SUSPICIOUS"], "forbid_level": ["HIGH_RISK"]}
+    },
+    {
+      "id": "electricity_injection",
+      "title": "Message with hidden AI instructions",
+      "kind": "screenshot",
+      "image": "electricity_injection.jpg",
+      "expect": {"level": ["HIGH_RISK", "SUSPICIOUS"], "must": ["ai_injection_text"]}
+    }
+  ]
+}

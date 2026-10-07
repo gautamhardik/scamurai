@@ -1,0 +1,49 @@
+[project]
+name = "asli"
+version = "0.1.0"
+description = "Asli investigates suspicious messages, links, numbers and deals against live web evidence (SerpApi) and explains the risk with sources."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Hardik Gautam", email = "181812168+gautamhardik@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.142.2",
+    "httpx>=0.28.1",
+    "phonenumbers>=9.0.40",
+    "pillow>=12.3.0",
+    "pydantic-settings>=2.15.0",
+    "python-multipart>=0.0.32",
+    "rapidfuzz>=3.14.6",
+    "serpapi>=1.1.2",
+    "tldextract>=5.4.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+asli = "asli.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.19,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.16.10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]
