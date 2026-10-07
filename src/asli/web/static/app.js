@@ -86,7 +86,11 @@ const T = {
   },
 };
 
-const SEVERITY = { critical: "Critical", high: "High", medium: "Medium", low: "Low", trust: "Checks out" };
+const SEVERITY = {
+  en: { critical: "Critical", high: "High", medium: "Medium", low: "Low", trust: "Checks out" },
+  hi: { critical: "गंभीर", high: "ज़्यादा", medium: "मध्यम", low: "कम", trust: "सही" },
+  hinglish: { critical: "Critical", high: "High", medium: "Medium", low: "Low", trust: "Sahi" },
+};
 const CAPS = {
   message_only_cap: "Capped at 55: only message patterns were found, no web evidence.",
   contradiction_cap: "Limited to “Be careful”: official confirmation conflicts with other evidence.",
@@ -278,6 +282,9 @@ async function run(fd) {
   ].filter(Boolean));
   addStep("read", "Reading the message", { status: "running" });
   show("view-run");
+  const slow = setTimeout(() => {
+    if (steps.read?.classList.contains("running")) setStep("read", "running", "free AI models can take ~30 s…");
+  }, 8000);
 
   state.controller = new AbortController();
   let res;
@@ -299,6 +306,7 @@ async function run(fd) {
       case "queued":
         setStep("read", "running", "waiting for a free slot…"); break;
       case "claims": {
+        clearTimeout(slow);
         setStep("read", "done", ev.extraction === "llm" ? "" : "basic reading");
         const chips = h("div", { class: "claim-chips" }, (ev.chips || []).map((c) => h("span", { class: "claim" }, h("b", { text: c.label }), c.value)));
         if (!ev.chips?.length) chips.append(h("span", { class: "claim" }, "No phone, link or organisation found"));
@@ -375,7 +383,7 @@ function renderError(title, message, retryable = true) {
 // ------------------------------------------------------------------ report
 function renderReport(r) {
   if (location.hash !== `#r=${r.id}`) history.replaceState(null, "", `#r=${r.id}`);
-  const t = T[r.language] || T.en;
+  const t = { ...(T[r.language] || T.en), sev: SEVERITY[r.language] || SEVERITY.en };
   const ev = Object.fromEntries((r.evidence || []).map((e) => [e.id, e]));
   const view = $("#view-report");
   const risk = r.flags.filter((f) => f.polarity === "risk");
@@ -439,6 +447,11 @@ function renderReport(r) {
     h("button", { class: "btn primary", type: "button", onclick: () => { clearForm(); history.replaceState(null, "", "/"); show("view-home"); $("#text").focus(); } }, t.again),
     copyBtn);
 
+  const llmDown = r.stats.extraction !== "llm" && (r.notes || []).some((n) => n.startsWith("llm:"));
+  const notice = llmDown ? h("p", { class: "notice", text: r.mode === "replay"
+    ? "Replay mode only has the recorded examples, so this message was read with basic rules and couldn't be searched."
+    : "The AI reader was busy, so Asli read this with basic rules. If you uploaded a screenshot, paste its text for a fuller check." }) : null;
+  if (notice) verdict.append(notice);
   const urgentFirst = r.level === "HIGH_RISK" || r.level === "SUSPICIOUS";
   view.replaceChildren(...[verdict, urgentFirst ? todo : null, why, ok, urgentFirst ? null : todo, checked, decided, read, actions].filter(Boolean));
   show("view-report");
@@ -459,7 +472,7 @@ function flagCard(f, ev, t) {
   // The strongest visual evidence is open by default.
   if (products.length || f.severity === "critical") { list.hidden = false; toggle.setAttribute("aria-expanded", "true"); }
   return h("article", { class: `card flag ${f.severity}` },
-    h("div", { class: "flag-head" }, h("span", { class: "flag-title", text: f.title }), h("span", { class: "sev", text: SEVERITY[f.severity] || f.severity })),
+    h("div", { class: "flag-head" }, h("span", { class: "flag-title", text: f.title }), h("span", { class: "sev", text: (t.sev || SEVERITY.en)[f.severity] || f.severity })),
     h("p", { text: f.explanation }),
     items.length ? toggle : null, list);
 }

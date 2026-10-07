@@ -101,9 +101,10 @@ def build_report(
         key = "SUSPICIOUS:mixed" if evaluation.contradiction else "SUSPICIOUS"
         headline = fmt(HEADLINES[lang][key], {"n": n_risk, "target": target})
     elif level == "LOW_RISK":
-        trust = [f for f in flags if f.polarity == "trust" and f.contribution >= 0.5]
-        if trust and official:
-            headline = fmt(HEADLINES[lang]["LOW_RISK:trust"], {"official": official.domains[0]})
+        strong_trust = [s for s in signals if s.polarity == "trust" and s.contribution >= 0.5]
+        if strong_trust:
+            confirmed_by = strong_trust[0].facts.get("official") or (official.domains[0] if official else "")
+            headline = fmt(HEADLINES[lang]["LOW_RISK:trust"], {"official": confirmed_by})
         else:
             headline = HEADLINES[lang]["LOW_RISK"]
     else:

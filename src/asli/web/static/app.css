@@ -162,6 +162,7 @@ main { padding-top: 36px; padding-bottom: 56px; min-height: calc(100vh - 160px);
 .confidence { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 13.5px; color: var(--ink-2); align-items: center; }
 .conf-badge { font-weight: 600; color: var(--tone); }
 .mode-note { font-size: 12.5px; color: var(--ink-3); }
+.notice { margin: 12px 0 0; padding: 9px 12px; border-radius: 8px; background: rgba(255,255,255,.7); font-size: 14px; color: var(--ink-2); border: 1px solid var(--line); }
 
 .section { margin: 24px 0 0; }
 .section > h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); margin: 0 0 10px; font-weight: 700; }
