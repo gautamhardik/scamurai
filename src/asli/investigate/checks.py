@@ -91,18 +91,24 @@ def resolve_official(ctx: Ctx) -> Official | None:
         off = Official(org_def.name, domains.official_domains_for(org_def), 0.95, [ref.id], source="curated")
         ctx.book.mark_official(off.domains)
         return off
+    # A domain the message itself supplies can't vouch for the message: a scammer's site ranks first
+    # for its own made-up company name, and would otherwise "confirm" its own link and number.
+    self_supplied = ctx.book.message_domains
     for spec, _outcome in ctx.ok("org_lookup"):
         items = ctx.book.for_search(spec.id)
         kg = next((i for i in items if i.kind == "knowledge_graph" and i.data.get("website")), None)
         if kg and fuzz.token_set_ratio(kg.title.lower(), org.value.lower()) >= 70:
             host = domains.host_of(kg.data["website"])
             reg = domains.registrable(host) if host else None
-            if reg and not domains.known_platform(reg) or (reg and domains.org_for_domain(reg)):
+            usable = reg and reg not in self_supplied and (not domains.known_platform(reg) or domains.org_for_domain(reg))
+            if usable:
                 off = Official(kg.title, [reg], 0.85, [kg.id], phones=kg.data.get("phones") or [], source="knowledge_graph")
                 ctx.book.mark_official(off.domains)
                 return off
         for it in sorted((i for i in items if i.kind == "organic"), key=lambda x: x.position or 99)[:3]:
             if not it.domain or it.source_class in ("news", "complaint_forum", "social", "job_board", "marketplace"):
+                continue
+            if it.domain in self_supplied:
                 continue
             label = domains.label_of(it.domain)
             name = re.sub(r"[^a-z0-9]", "", org.value.lower())
@@ -274,7 +280,8 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
                                 entity_ids=[phone.id], phone=phone.attrs.get("display"), org=off.name,
                                 official=off.domains[0]))
 
-    # Whose number is this? A clean mention on a well-known organisation's own site (not a warning page).
+    # Whose number is this? A clean mention on a well-known organisation's own contact/help page (not a
+    # warning page, and not a product or seller page: marketplaces host third-party text scammers can plant).
     for spec, _outcome in ctx.ok("phone_reputation"):
         pid = spec.entity_ids[0]
         if pid in confirmed:
@@ -282,7 +289,9 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
         phone = next(e for e in g.entities if e.id == pid)
         owners = [i for i in book.for_search(spec.id)
                   if pid in i.matched_entities and not i.lexicon_hits and i.domain
+                  and i.domain not in book.message_domains
                   and (i.source_class == "official" or domains.org_for_domain(i.domain))
+                  and _CONTACT_PAGE.search(f"{i.url or ''} {i.title}")
                   and (off is None or domains.domain_matches(i.domain, off.domains))]
         if owners:
             owner = domains.org_for_domain(owners[0].domain)
@@ -341,7 +350,8 @@ def domain_signals(ctx: Ctx) -> list[Signal]:
                             entity_ids=[eid], domain=display, n=len(independent), sites=_sites(independent)))
         elif not mentioning:
             span = book.add_message_span(_context(g.haystack, ent.raw), [eid])
-            out.append(make("domain_no_footprint", confidence=0.7, evidence_ids=[span.id], entity_ids=[eid],
+            ref = book.add_search_ref(spec.id, spec.engine, spec.params.get("q", ""), len(items))
+            out.append(make("domain_no_footprint", confidence=0.7, evidence_ids=[span.id, ref.id], entity_ids=[eid],
                             domain=display, query=spec.params.get("q")))
     return out
 
@@ -481,7 +491,8 @@ def job_signals(ctx: Ctx) -> list[Signal]:
         else:
             ref = ctx.official.evidence_ids if ctx.official else []
             span = book.add_message_span(_context(g.haystack, role.raw if role else (company.raw if company else "")))
-            out.append(make("job_not_listed", confidence=0.6, evidence_ids=[span.id, *ref],
+            search = book.add_search_ref(spec.id, spec.engine, spec.params.get("q", ""), len(items))
+            out.append(make("job_not_listed", confidence=0.6, evidence_ids=[span.id, search.id, *ref],
                             entity_ids=[company.id] if company else [], company=company.value if company else "",
                             role=role.value if role else "", query=spec.params.get("q"), n_results=len(items)))
     # Company with no web presence at all (only for non-curated names).
@@ -490,8 +501,9 @@ def job_signals(ctx: Ctx) -> list[Signal]:
             items = book.for_search(spec.id)
             if not any(company.id in i.matched_entities and i.source_class != "complaint_forum" for i in items):
                 span = book.add_message_span(_context(g.haystack, company.raw), [company.id])
-                out.append(make("company_no_footprint", confidence=0.7, evidence_ids=[span.id], entity_ids=[company.id],
-                                company=company.value))
+                ref = book.add_search_ref(spec.id, spec.engine, spec.params.get("q", ""), len(items))
+                out.append(make("company_no_footprint", confidence=0.7, evidence_ids=[span.id, ref.id],
+                                entity_ids=[company.id], company=company.value))
     return out
 
 

@@ -128,8 +128,15 @@ class LLMClient:
                 if r.status_code != 200:
                     error = "llm_rate_limited" if r.status_code == 429 else f"llm_http_{r.status_code}"
                     break
-                payload = r.json()
+                try:
+                    payload = r.json()
+                except ValueError:
+                    payload = None
+                if not isinstance(payload, dict):  # e.g. an HTML error page from an upstream proxy
+                    error = "llm_bad_response"
+                    break
                 choice = (payload.get("choices") or [{}])[0]
+                choice = choice if isinstance(choice, dict) else {}
                 message = choice.get("message") or {}
                 data = parse_json_lenient(message.get("content"))
                 self.store.usage_incr(llm=1)

@@ -108,11 +108,11 @@ FLAGS: dict[str, dict[Lang, tuple[str, str]]] = {
     },
     "domain_no_footprint": {
         "en": ("Website has no track record",
-               "Google has no results for {domain}. Scam sites are often brand new, while genuine organisations are usually easy to find."),
+               "No Google result mentions {domain}. Scam sites are often brand new, while genuine organisations are usually easy to find."),
         "hi": ("वेबसाइट का कोई रिकॉर्ड नहीं",
-               "Google पर {domain} के लिए कोई नतीजा नहीं मिला। स्कैम वेबसाइटें अक्सर नई होती हैं, जबकि असली संस्थाएँ आसानी से मिल जाती हैं।"),
+               "Google के किसी भी नतीजे में {domain} का ज़िक्र नहीं है। स्कैम वेबसाइटें अक्सर नई होती हैं, जबकि असली संस्थाएँ आसानी से मिल जाती हैं।"),
         "hinglish": ("Website ka koi record nahi",
-                     "Google par {domain} ka koi result nahi mila. Scam websites aksar nayi hoti hain, jabki asli organisations aasani se mil jaati hain."),
+                     "Google ke kisi bhi result mein {domain} ka zikr nahi hai. Scam websites aksar nayi hoti hain, jabki asli organisations aasani se mil jaati hain."),
     },
     "company_no_footprint": {
         "en": ("Company not found online", "We couldn't find an official website or listing for {company}."),
@@ -120,12 +120,12 @@ FLAGS: dict[str, dict[Lang, tuple[str, str]]] = {
         "hinglish": ("Company online nahi mili", "{company} ki koi official website ya listing nahi mili."),
     },
     "known_scam_pattern": {
-        "en": ("Matches a reported scam",
-               "News outlets have reported scams using this kind of message: {n} independent reports ({sites})."),
-        "hi": ("यह एक रिपोर्ट किए गए स्कैम जैसा है",
-               "समाचार माध्यमों ने ऐसे मैसेज वाले स्कैम की रिपोर्ट की है: {n} अलग-अलग रिपोर्ट ({sites})।"),
-        "hinglish": ("Yeh ek reported scam jaisa hai",
-                     "News channels ne aise message wale scam report kiye hain: {n} alag reports ({sites})."),
+        "en": ("This kind of scam is in the news",
+               "{n} independent news reports ({sites}) describe scams that use messages like this one."),
+        "hi": ("ऐसे स्कैम की खबरें आई हैं",
+               "{n} अलग-अलग खबरें ({sites}) ऐसे ही मैसेज वाले स्कैम के बारे में बताती हैं।"),
+        "hinglish": ("Aise scam ki khabrein aayi hain",
+                     "{n} alag news reports ({sites}) aise hi message wale scams ke baare mein batati hain."),
     },
     "org_impersonation_reports": {
         "en": ("{org} is often impersonated", "There are {n} reports of scammers pretending to be {org}."),
@@ -142,11 +142,11 @@ FLAGS: dict[str, dict[Lang, tuple[str, str]]] = {
     },
     "image_reused": {
         "en": ("Product photo appears on other shops",
-               "The same photo appears on {n} other sites, including {sites}. Fake sellers often copy photos from real listings."),
+               "Google Lens found this photo, or one almost identical, on {n} other sites, including {sites}. Fake sellers often copy photos from real listings."),
         "hi": ("प्रोडक्ट की फ़ोटो दूसरी दुकानों पर भी है",
-               "यही फ़ोटो {n} दूसरी वेबसाइटों पर है, जैसे {sites}। नकली विक्रेता अक्सर असली लिस्टिंग की फ़ोटो कॉपी करते हैं।"),
+               "Google Lens को यह फ़ोटो (या लगभग यही) {n} दूसरी वेबसाइटों पर मिली, जैसे {sites}। नकली विक्रेता अक्सर असली लिस्टिंग की फ़ोटो कॉपी करते हैं।"),
         "hinglish": ("Product ki photo doosri shops par bhi hai",
-                     "Yahi photo {n} doosri sites par hai, jaise {sites}. Fake sellers aksar asli listings ki photo copy karte hain."),
+                     "Google Lens ko yeh photo (ya lagbhag yahi) {n} doosri sites par mili, jaise {sites}. Fake sellers aksar asli listings ki photo copy karte hain."),
     },
     "job_not_listed": {
         "en": ("No matching job listing",

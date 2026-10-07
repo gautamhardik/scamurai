@@ -102,6 +102,21 @@ class EvidenceBook:
         self.items[item.id] = item
         return item
 
+    def add_search_ref(self, search_id: str, engine: str, query: str, n_results: int) -> EvidenceItem:
+        """The search itself, for findings about what it did NOT find. The link re-runs the query on
+        Google so the absence can be checked; it carries no domain, so it never counts as a source."""
+        for item in self.items.values():
+            if item.kind == "search" and item.search_id == search_id:
+                return item
+        url = "https://www.google.com/search?" + urlencode({"q": query, "gl": "in", **(
+            {"ibp": "htl;jobs"} if engine == "google_jobs" else {})})
+        item = EvidenceItem(
+            id=self._next_id(), engine=engine, search_id=search_id, kind="search", title=query, url=url,
+            data={"n_results": n_results}, source_class="other", relevance=0.5,
+        )
+        self.items[item.id] = item
+        return item
+
     def _make(self, search_id: str, engine: str, raw: dict[str, Any], cached: bool) -> EvidenceItem:
         url = raw.get("url")
         host = domains.host_of(url) if url else None

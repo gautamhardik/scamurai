@@ -60,6 +60,8 @@ class Settings(BaseSettings):
     asli_host: str = "127.0.0.1"
     asli_port: int = 8000
     asli_access_token: SecretStr | None = None
+    # Extra Host names to serve besides 127.0.0.1/localhost (comma-separated), e.g. when deployed.
+    asli_allowed_hosts: str = ""
     asli_rate_limit_per_10min: int = 6
     asli_max_concurrent_investigations: int = 2
 

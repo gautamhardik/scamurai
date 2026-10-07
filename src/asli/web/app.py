@@ -1,7 +1,8 @@
 """FastAPI app: static UI + streaming investigation API.
 
-Local-first: binds 127.0.0.1 by default, same-origin only (no CORS), strict CSP, per-IP rate
-limit and a cap on concurrent investigations to protect the free API quotas.
+Local-first: binds 127.0.0.1 by default, same-origin only (no CORS), Host allow-list (DNS
+rebinding), cross-site POSTs refused (CSRF), strict CSP, per-IP rate limit and a cap on concurrent
+investigations to protect the free API quotas.
 """
 
 from __future__ import annotations
@@ -14,6 +15,7 @@ import time
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
 from fastapi import FastAPI, File, Form, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, Response, StreamingResponse
@@ -58,6 +60,22 @@ def _err(exc: AsliError) -> JSONResponse:
     return JSONResponse({"error": exc.as_dict()}, status_code=exc.status)
 
 
+def _hostname(value: str) -> str:
+    """Host header without the port ("[::1]:8000" → "[::1]", "localhost:8000" → "localhost")."""
+    value = value.strip().lower()
+    if value.startswith("["):
+        return value[: value.find("]") + 1]
+    return value.split(":", 1)[0]
+
+
+def allowed_hosts(host_setting: str, extra: str) -> set[str]:
+    hosts = {"127.0.0.1", "localhost", "[::1]"}
+    hosts |= {h.strip().lower() for h in extra.split(",") if h.strip()}
+    if host_setting not in ("0.0.0.0", "::", ""):
+        hosts.add(_hostname(host_setting))
+    return hosts
+
+
 def create_app() -> FastAPI:
     settings = get_settings()
     setup_logging()
@@ -71,8 +89,22 @@ def create_app() -> FastAPI:
 
     app = FastAPI(title="Asli", version=__version__, docs_url=None, redoc_url=None, openapi_url=None)
 
+    hosts = allowed_hosts(settings.asli_host, settings.asli_allowed_hosts)
+
     @app.middleware("http")
     async def security(request: Request, call_next):  # type: ignore[no-untyped-def]
+        # DNS rebinding: a page on evil.example that re-resolves to 127.0.0.1 still sends its own Host.
+        host_header = request.headers.get("host", "")
+        if _hostname(host_header) not in hosts:
+            return JSONResponse({"error": {"code": "bad_host", "message": "Unknown host."}}, 400)
+        # CSRF: another site can't make the browser start (and pay for) investigations here.
+        if request.method == "POST":
+            origin = request.headers.get("origin")
+            cross = request.headers.get("sec-fetch-site") == "cross-site" or (
+                origin is not None and urlsplit(origin).netloc.lower() != host_header.lower())
+            if cross:
+                return JSONResponse({"error": {"code": "cross_site", "message": "Cross-site requests are not allowed."}},
+                                    403)
         # Refuse oversized bodies before the multipart parser spools them to disk.
         length = request.headers.get("content-length")
         if request.method == "POST" and length and length.isdigit() and int(length) > MAX_UPLOAD_BYTES + 256 * 1024:

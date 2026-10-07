@@ -108,9 +108,10 @@ def _as_list(value: Any) -> list[Any]:
 async def extract_claims(
     inp: InvestigationInput,
     image: PreparedImage | None,
-    llm: LLMClient,
+    llm: LLMClient | None,
 ) -> tuple[ClaimGraph, dict[str, Any]]:
-    """Returns the grounded claim graph and the raw LLM record (for recordings)."""
+    """Returns the grounded claim graph and the raw LLM record (for recordings). With `llm=None`
+    the graph comes from the deterministic extractors alone."""
     text, redactions = redact_pii(inp.text or "")
     ihash = input_hash(inp, image, text)
 
@@ -120,7 +121,7 @@ async def extract_claims(
     if redactions:
         notes.append("redacted:" + ",".join(redactions))
 
-    if image is not None or text:
+    if llm is not None and (image is not None or text):
         nonce = secrets.token_hex(4)
         user_text = (
             "Extract the claims from the content below.\n"

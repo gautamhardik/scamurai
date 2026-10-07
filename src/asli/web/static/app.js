@@ -830,6 +830,13 @@ function evidenceItem(e) {
     return h("li", { class: "ev quote" }, h("div", { class: "ev-top" }, h("span", { class: "src message", text: SOURCE.message })),
       h("div", { class: "ev-title", text: `“${e.title}”` }));
   }
+  if (e.kind === "search") { // cited by "not found" findings: let the reader re-run the exact search
+    return h("li", { class: "ev" },
+      h("div", { class: "ev-top" }, h("span", { class: "src search", text: "Search Asli ran" }),
+        h("span", { class: "ev-site", text: (ENGINES[e.engine] || ["Google Search"])[0] })),
+      h("a", { class: "ev-title", href: e.url, target: "_blank", rel: "noopener noreferrer nofollow" }, `“${e.title}”`, icon("external")),
+      h("p", { class: "ev-snippet", text: "Open it to run the same search on Google and check for yourself." }));
+  }
   const site = e.data?.source || e.domain || "";
   const date = e.published_at ? new Date(e.published_at).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" }) : "";
   const title = e.clickable && e.url
@@ -851,7 +858,7 @@ function defang(url) {
 function summaryText(r, ev) {
   const lines = [`Asli check: ${r.level_title.toUpperCase()}`, r.headline, ""];
   for (const f of r.flags.filter((x) => x.polarity === "risk").slice(0, 5)) {
-    const src = f.evidence_ids.map((id) => ev[id]).find((e) => e && e.url && e.clickable);
+    const src = f.evidence_ids.map((id) => ev[id]).find((e) => e && e.url && e.clickable && (e.data?.source || e.domain));
     lines.push(`• ${f.title}${src ? ` (${src.data?.source || src.domain})` : ""}`);
   }
   if (r.recommendations.length) { lines.push(""); for (const rec of r.recommendations.slice(0, 4)) lines.push(`→ ${rec.text}`); }

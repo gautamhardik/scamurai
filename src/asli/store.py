@@ -182,6 +182,8 @@ class Store:
     def prune(self, *, max_cache_rows: int = 5000, retention_days: int = 7) -> None:
         now = int(time.time())
         with self._lock:
+            # expired results still hold the searched numbers/IDs in their params: don't keep them
+            self._conn.execute("DELETE FROM search_cache WHERE expires_at < ?", (now,))
             self._conn.execute(
                 "DELETE FROM search_cache WHERE key IN (SELECT key FROM search_cache"
                 " ORDER BY COALESCE(last_hit_at, created_at) DESC LIMIT -1 OFFSET ?)",

@@ -11,7 +11,7 @@ def client(replay_settings):
     get_settings.cache_clear()
     from asli.web.app import create_app
 
-    with TestClient(create_app()) as c:
+    with TestClient(create_app(), base_url="http://127.0.0.1:8000") as c:
         yield c
     get_settings.cache_clear()
 

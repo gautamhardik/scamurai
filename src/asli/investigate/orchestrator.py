@@ -46,6 +46,7 @@ class Investigator:
         self.recordings = recordings or (Recordings(settings.asli_recordings_dir) if settings.asli_mode == "replay" else None)
         self.serp = SerpClient(settings, store, self.recordings)
         self.llm = LLMClient(settings, store, self.recordings.llm if self.recordings else None)
+        self._pruned_at = time.time()  # the app prunes at startup
 
     async def run(
         self,
@@ -61,8 +62,14 @@ class Investigator:
 
         # ---------------------------------------------------------------- read
         await emit({"type": "stage", "name": "read", "status": "running"})
-        image: PreparedImage | None = prepare_image(inp.image) if inp.image else None
-        graph, llm_record = await extract_claims(inp, image, self.llm)
+        # Decoding/resizing a large screenshot is CPU work: keep it off the event loop.
+        image: PreparedImage | None = await asyncio.to_thread(prepare_image, inp.image) if inp.image else None
+        try:
+            graph, llm_record = await extract_claims(inp, image, self.llm)
+        except Exception as exc:  # noqa: BLE001 — the reader must never take the check down: fall back to rules
+            log_event(log, "extract_crashed", error=type(exc).__name__)
+            graph, llm_record = await extract_claims(inp, image, None)
+            graph.notes.append(f"llm:crash:{type(exc).__name__}")
         lang = report_language(graph.language, inp.lang, graph.haystack)
         await emit({
             "type": "claims", "language": lang, "scheme": graph.scheme, "scam_type": graph.scam_type,
@@ -142,6 +149,9 @@ class Investigator:
             verdict=report.level, score=report.score, confidence=report.confidence,
             latency_ms=stats.latency_ms, errors=[c.error for c in check_list if c.error] + graph.notes,
         )
+        if time.time() - self._pruned_at > 3600:  # retention applies to long-running servers too
+            self._pruned_at = time.time()
+            self.store.prune(retention_days=self.settings.asli_report_retention_days)
         if self.settings.asli_store_reports:
             self.store.save_investigation(
                 {"id": inv_id, "input_kinds": inp.kinds, "scam_type": graph.scam_type, "level": report.level,

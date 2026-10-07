@@ -161,7 +161,7 @@ class EvidenceItem(BaseModel):
     search_id: str | None = None
     kind: Literal[
         "organic", "knowledge_graph", "news", "lens_match", "shopping_offer", "job", "place", "message_span",
-        "reference",
+        "reference", "search",  # "search": the query itself, cited by absence findings so they can be re-run
     ]
     title: str
     url: str | None = None

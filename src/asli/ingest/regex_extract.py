@@ -14,12 +14,13 @@ _URL = re.compile(
     r"|\b(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.|\[\.\]|\(\.\)))+[a-z]{2,24}(?:/[^\s<>\"'`]*)?",
     re.IGNORECASE,
 )
-_EMAIL = re.compile(r"\b[a-z0-9._%+-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,24}\b", re.IGNORECASE)
+_EMAIL = re.compile(r"\b[a-z0-9._%+-]{1,64}@[a-z0-9-]{1,63}(?:\.[a-z0-9-]{1,63}){0,8}\.[a-z]{2,24}\b", re.IGNORECASE)
 _UPI = re.compile(r"\b[a-z0-9._-]{2,64}@[a-z]{2,20}\b(?!\.[a-z0-9])(?!@)", re.IGNORECASE)
 _TOLL_FREE = re.compile(r"\b1(?:800|860)[\s-]?\d{2,4}[\s-]?\d{2,4}(?:[\s-]?\d{2,4})?\b")
 _AMOUNT = re.compile(
-    r"(?:₹|\brs\.?|\binr\b|rupees?)\s*([\d,]+(?:\.\d{1,2})?)"
-    r"|([\d,]+(?:\.\d{1,2})?)\s*(?:/-|\brs\b\.?|rupees?|रुपये|रुपए|रु\.?)",
+    r"(?:₹|\brs\.?|\binr\b|rupees?|रु\.?)\s*([\d,]{1,15}(?:\.\d{1,2})?)"
+    # bounded, and anchored at the start of a number: unanchored, a long digit run backtracks quadratically
+    r"|(?<![\d,.])([\d,]{1,15}(?:\.\d{1,2})?)\s*(?:/-|\brs\b\.?|rupees?|रुपये|रुपए|रु\.?)",
     re.IGNORECASE,
 )
 _FILE_EXT = {"jpg", "jpeg", "png", "gif", "pdf", "doc", "docx", "apk", "webp", "mp4", "txt", "zip", "html"}

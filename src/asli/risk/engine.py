@@ -8,6 +8,7 @@ Gates keep weak evidence from producing strong verdicts:
   G1  HIGH needs an identity/web signal with c ≥ .6 and w·c ≥ .25, or a critical message signal.
   G2  With no identity/web signal and no critical signal, the score is capped at 55.
   G3  Official confirmation + risk evidence on the same entity → at most SUSPICIOUS ("mixed").
+  G4  LOW needs positive confirmation (a trust signal with w·c ≥ .3); otherwise a low score is UNVERIFIED.
 """
 
 from __future__ import annotations
@@ -21,6 +22,7 @@ from asli.risk.signals import REGISTRY
 HIGH_THRESHOLD = 65
 SUSPICIOUS_THRESHOLD = 35
 MESSAGE_ONLY_CAP = 55
+TRUST_FLOOR = 0.3  # w·c of the weakest trust signal that can support a "no major warning signs" verdict
 CONTRADICTING = {"phone_reported", "domain_reported", "brand_lookalike_domain", "official_domain_mismatch"}
 
 
@@ -83,7 +85,11 @@ def evaluate(
         level = "SUSPICIOUS"
         if contradiction:
             caps.append("contradiction_cap")
-    elif coverage >= 0.6 and verifiable >= 1 and (trust or checks_with_results >= 2):
+    elif coverage >= 0.6 and verifiable >= 1 and checks_with_results >= 1 and any(
+            s.contribution >= TRUST_FLOOR for s in trust):
+        # Reassurance needs positive confirmation (official page, official domain, a real listing).
+        # Searches that merely returned something prove nothing, and a plausible price or a Maps pin
+        # alone is too weak: an unconfirmed message stays UNVERIFIED.
         level = "LOW_RISK"
     else:
         level = "UNVERIFIED"
