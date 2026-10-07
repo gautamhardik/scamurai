@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asli — is this real?</title>
+  <meta name="description" content="Paste a suspicious message, screenshot, link or number. Asli checks its claims on the live web and shows you the evidence.">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <div class="mode-banner" id="mode-banner" hidden></div>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="/" aria-label="Asli home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2.8l7.6 3.1v5.6c0 4.8-3.2 8.9-7.6 10.7-4.4-1.8-7.6-5.9-7.6-10.7V5.9z"/><path class="tick" d="M8.3 12.2l2.6 2.6 5-5.2"/></svg>
+        </span>
+        <span class="brand-word">Asli</span>
+        <span class="brand-tag">Is this real?</span>
+      </a>
+      <div class="status" id="status" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <!-- ============================== Home -->
+    <section id="view-home" class="view">
+      <h1 class="hero">Not sure if it's real? <span>Ask Asli.</span></h1>
+      <p class="lede">Paste a message, upload a screenshot, or enter a link. Asli checks its claims on the live web and shows you the evidence.</p>
+
+      <form id="form" class="card input-card" novalidate>
+        <label class="sr-only" for="text">Suspicious message</label>
+        <textarea id="text" name="text" rows="6" maxlength="4000"
+          placeholder="Paste the message here — English, हिंदी or Hinglish. You can also paste a screenshot (Ctrl+V)."></textarea>
+
+        <div id="attachment" class="attachment" hidden>
+          <img id="attach-thumb" alt="">
+          <div class="attach-text"><strong id="attach-name"></strong><span id="attach-meta"></span></div>
+          <button type="button" id="attach-remove" class="icon-btn" aria-label="Remove image">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+
+        <div id="extra" class="extra" hidden>
+          <label>Link<input id="url" name="url" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="e.g. sbi-kyc-update.in"></label>
+          <label>Phone number<input id="phone" name="phone" type="tel" autocomplete="off" placeholder="e.g. +91 98765 43210"></label>
+        </div>
+
+        <div class="input-actions">
+          <label class="btn ghost" for="file">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 16l5-5 4 4 3-3 4 4"/></svg>
+            Add screenshot
+          </label>
+          <input id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+          <button type="button" class="btn ghost" id="toggle-extra" aria-expanded="false" aria-controls="extra">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+            Link or number
+          </button>
+          <span class="spacer"></span>
+          <button type="submit" class="btn primary" id="submit">Check with Asli</button>
+        </div>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+      </form>
+
+      <p class="privacy">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11h12v10H6z"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg>
+        Don't include OTPs, passwords or card numbers. Your message is read by an AI model, and its claims are searched on Google through SerpApi.
+      </p>
+
+      <div class="examples">
+        <span class="examples-label">Try an example</span>
+        <div id="examples" class="chips"></div>
+      </div>
+
+      <ol class="how" aria-label="How Asli works">
+        <li><b>Reads the claims</b><span>Who it says it's from, the number, the link, the price, the job.</span></li>
+        <li><b>Checks them live</b><span>Google Search, News, Lens, Shopping, Jobs and Maps, through SerpApi.</span></li>
+        <li><b>Shows the evidence</b><span>Every warning links to its source. The score is rules, not an AI's guess.</span></li>
+      </ol>
+    </section>
+
+    <!-- ============================== Investigating -->
+    <section id="view-run" class="view" hidden aria-live="polite"></section>
+
+    <!-- ============================== Report -->
+    <section id="view-report" class="view" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <span>Asli is a research prototype built for the SerpApi India Hackathon 2026. It reports evidence, not certainties.</span>
+      <span>Lost money to fraud? Call <b>1930</b> or visit <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a></span>
+    </div>
+  </footer>
+</body>
+</html>
