@@ -73,6 +73,11 @@ def create_app() -> FastAPI:
 
     @app.middleware("http")
     async def security(request: Request, call_next):  # type: ignore[no-untyped-def]
+        # Refuse oversized bodies before the multipart parser spools them to disk.
+        length = request.headers.get("content-length")
+        if request.method == "POST" and length and length.isdigit() and int(length) > MAX_UPLOAD_BYTES + 256 * 1024:
+            return JSONResponse({"error": {"code": "image_too_large",
+                                           "message": "That image is over 5 MB. Try a smaller screenshot."}}, 413)
         if token and request.url.path.startswith("/api/"):
             supplied = request.headers.get("x-asli-token") or request.cookies.get("asli_token") or ""
             if not secrets.compare_digest(supplied, token):

@@ -274,6 +274,23 @@ def phone_signals(ctx: Ctx) -> list[Signal]:
                                 entity_ids=[phone.id], phone=phone.attrs.get("display"), org=off.name,
                                 official=off.domains[0]))
 
+    # Whose number is this? A clean mention on a well-known organisation's own site (not a warning page).
+    for spec, _outcome in ctx.ok("phone_reputation"):
+        pid = spec.entity_ids[0]
+        if pid in confirmed:
+            continue
+        phone = next(e for e in g.entities if e.id == pid)
+        owners = [i for i in book.for_search(spec.id)
+                  if pid in i.matched_entities and not i.lexicon_hits and i.domain
+                  and (i.source_class == "official" or domains.org_for_domain(i.domain))
+                  and (off is None or domains.domain_matches(i.domain, off.domains))]
+        if owners:
+            owner = domains.org_for_domain(owners[0].domain)
+            out.append(make("phone_on_official_site", confidence=0.85, evidence_ids=_top(owners, 3), entity_ids=[pid],
+                            phone=phone.attrs.get("display"), official=owners[0].domain,
+                            org=owner.name if owner else owners[0].domain))
+            confirmed.add(pid)
+
     # Reputation: same result must contain the number AND a scam word, on another site.
     # Official numbers get quoted in fraud warnings ("report fraud at 1800…"), so once a number
     # is confirmed on the official site it takes 3+ independent reports to flag it.

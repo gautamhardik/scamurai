@@ -53,5 +53,11 @@ def test_streams_a_report(client):
     assert again["id"] == report["id"]
 
 
+def test_oversized_body_rejected_before_parsing(client):
+    big = b"\xff\xd8\xff" + b"0" * (6 * 1024 * 1024)
+    r = client.post("/api/investigations", files={"image": ("big.jpg", big, "image/jpeg")})
+    assert r.status_code == 413 and r.json()["error"]["code"] == "image_too_large"
+
+
 def test_report_ids_are_validated(client):
     assert client.get("/api/investigations/..%2F..%2Fetc").status_code == 404
