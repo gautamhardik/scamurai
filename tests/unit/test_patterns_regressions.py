@@ -81,3 +81,13 @@ def test_text_aimed_at_ai_checkers_is_flagged(text):
 ])
 def test_ordinary_messages_are_not_injection(text):
     assert "ai_injection_text" not in {h.signal for h in detect_message_patterns(text)}
+
+
+@pytest.mark.parametrize(("name", "handle"), [
+    ("sneakerhub.outlet.india", True), ("@earnfast_hr", True), ("zentrixhiring.com", True), ("hr_team", True),
+    ("Zentrix Hiring Solutions", False), ("J.P.Morgan", False), ("TCS", False), ("State Bank of India", False),
+])
+def test_handles_and_domains_get_no_official_website_lookup(name, handle):
+    from asli.investigate.planner import is_handle
+
+    assert is_handle(name) is handle

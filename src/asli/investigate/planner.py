@@ -64,6 +64,16 @@ def suspicious_domains(graph: ClaimGraph) -> list[Entity]:
     return out
 
 
+# "sneakerhub.outlet.india", "@earnfast_hr", "zentrixhiring.com": a seller's handle or a bare domain has no
+# "official website" to find (and domains get their own reputation search). Lower-case only, so a name
+# like "J.P.Morgan" still gets its lookup.
+_HANDLE = re.compile(r"@?[a-z0-9]+(?:[._][a-z0-9]+)+|@[a-z0-9_]{2,}")
+
+
+def is_handle(value: str) -> bool:
+    return bool(_HANDLE.fullmatch(value.strip()))
+
+
 def phone_query(phone: Entity) -> dict[str, str]:
     variants = phone.attrs.get("variants") or [phone.value]
     return {"q": " OR ".join(f'"{v}"' for v in variants[:3])}
@@ -114,10 +124,12 @@ def plan_round1(graph: ClaimGraph, max_searches: int, *, has_image: bool, image_
     curated = bool(org and org.attrs.get("curated"))
 
     # P1 — identity
-    if org and org_name and not curated:
+    if org and org_name and not curated and not is_handle(org.value):
         spec("google", {"q": f'"{org_name}" official website'}, "org_lookup", org_name, [org.id], 1)
     elif org and curated:
         plan.skipped.append(SkippedCheck(purpose="org_lookup", reason="official domain known"))
+    elif org and is_handle(org.value):
+        plan.skipped.append(SkippedCheck(purpose="org_lookup", reason="a handle or domain, not an organisation name"))
 
     product = graph.first("product")
     if graph.scam_type == "shopping_deal" and (has_image or image_url):

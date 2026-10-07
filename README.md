@@ -8,6 +8,16 @@
 
 > Asli doesn't classify a message from its wording. It checks the message's claims against the live web, and every warning links to its source.
 
+**At a glance**
+- **The problem:** fake electricity bills, KYC links, "digital arrest" threats, fake helplines, 90%-off deals and job offers with fees. Checking one properly takes about 15 minutes, so most people don't.
+- **What Asli does:**
+  - Reads the claims, from text or a Hindi screenshot.
+  - Checks them live with **6 Google engines via SerpApi** (Search, News, Lens, Shopping, Jobs, Maps).
+  - Scores the evidence with transparent rules; the AI never sets the score.
+- **Measured:** on 30 test messages, **10/10 scams flagged and 0/10 false alarms on genuine messages** from SBI, IRCTC, Amazon and others ([details](#measured-results)).
+- **Why SerpApi matters:** without live search, the same messages give 5/10.
+- **Try it with no keys:** `uv sync && uv run asli demo` replays real recorded evidence offline.
+
 ![Asli report for a fake sneaker deal: Google Lens finds the product photo on Myntra, Nike India and VegNonVeg at ₹6,300–₹9,000](docs/screenshots/report-deal.png)
 
 **Demo video:** _link added at submission_ · **Track:** Knowledge & Public Interest · **Built for:** SerpApi India Hackathon 2026
