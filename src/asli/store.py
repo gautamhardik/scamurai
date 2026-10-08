@@ -11,7 +11,7 @@ import sqlite3
 import threading
 import time
 import zlib
-from datetime import date
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -160,8 +160,13 @@ class Store:
         return _unpack(row[0])
 
     # ---------------------------------------------------------------- usage
+    @staticmethod
+    def usage_day() -> str:
+        """The counters' day is the UTC date: OpenRouter's free allowance resets at 00:00 UTC (05:30 IST)."""
+        return datetime.now(UTC).date().isoformat()
+
     def usage_incr(self, *, serp: int = 0, llm: int = 0, day: str | None = None) -> None:
-        day = day or date.today().isoformat()
+        day = day or self.usage_day()
         with self._lock:
             self._conn.execute(
                 "INSERT INTO usage (day, serp_calls, llm_calls) VALUES (?, ?, ?)"
@@ -171,7 +176,7 @@ class Store:
             )
 
     def usage_get(self, day: str | None = None) -> dict[str, int]:
-        day = day or date.today().isoformat()
+        day = day or self.usage_day()
         with self._lock:
             row = self._conn.execute(
                 "SELECT serp_calls, llm_calls FROM usage WHERE day = ?", (day,)

@@ -3,6 +3,7 @@ reproduced the failure before the fix; the hostile-upload tests pin behaviour th
 
 import io
 import time
+from datetime import UTC
 
 import httpx
 import pytest
@@ -272,3 +273,16 @@ async def test_a_search_still_processing_is_a_failure_not_cached_no_results(live
 
 async def _fast_sleep(_s):
     return None
+
+
+def test_usage_counter_rolls_over_with_openrouter(tmp_path):
+    """OpenRouter's free allowance resets at 00:00 UTC, so the counter's day is the UTC date, not the local one."""
+    from datetime import datetime
+
+    from asli.store import Store
+
+    store = Store(tmp_path / "s.sqlite3")
+    assert store.usage_day() == datetime.now(UTC).date().isoformat()
+    store.usage_incr(llm=2)
+    assert store.usage_get()["llm_calls"] == 2
+    assert store.usage_get(day="1999-01-01")["llm_calls"] == 0

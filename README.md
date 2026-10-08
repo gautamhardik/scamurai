@@ -164,6 +164,8 @@ Run it with `uv run python scripts/evaluate.py` (rules only, free) or add `--liv
 | Ambiguous messages kept at *Couldn't verify* | 10/10 | 10/10 |
 | SerpApi credits for all 30 | 21 (first run; re-runs hit the cache) | 0 |
 
+The live column was measured again with model "thinking" switched off (the default since then), with every AI reading fresh: the same results on all four rows, and only one score moved (a stock-tip scam, 53 → 58, still *Be careful*). Results: [`eval/results-live-reasoning-off.json`](eval/results-live-reasoning-off.json).
+
 **Read these numbers with care.** The set is small and hand-written by the developer, and it was used while fixing bugs, so it is not a held-out test. Its main job is catching false alarms: the live run found one (a genuine SBI debit alert scored *High risk*), and [docs/AUDIT.md](docs/AUDIT.md) explains the fix.
 
 ---
@@ -249,7 +251,7 @@ src/asli/
   risk/                   signal registry, engine, report builder
   web/                    FastAPI app + static UI
   demo/                   scenarios + recorded real SerpApi responses
-tests/                    unit · integration · e2e (256 tests, run offline)
+tests/                    unit · integration · e2e (266 tests, run offline)
 eval/                     30 labelled messages + results (scripts/evaluate.py)
 ```
 
@@ -276,7 +278,7 @@ eval/                     30 labelled messages + results (scripts/evaluate.py)
 ## Testing
 
 ```bash
-uv run pytest -q          # 256 tests, no keys or network needed
+uv run pytest -q          # 266 tests, no keys or network needed
 ```
 
 - **Unit tests:** extraction and grounding, redaction, domain and lookalike analysis, message patterns in English, Hindi and Hinglish, risk-engine gates, and properties (adding risk never lowers the score, adding trust never raises it).

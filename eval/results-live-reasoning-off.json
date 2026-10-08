@@ -1,0 +1,471 @@
+{
+  "summary": {
+    "mode": "live",
+    "scam_recall": "10/10",
+    "genuine_false_alarms": "0/10",
+    "genuine_confirmed_low_risk": "6/10",
+    "ambiguous_handled": "10/10",
+    "precision_of_flags": 1.0,
+    "credits": 15,
+    "searches": 47
+  },
+  "rows": [
+    {
+      "id": "g01_sbi_debit",
+      "label": "genuine",
+      "lang": "en",
+      "level": "LOW_RISK",
+      "score": 0,
+      "correct": true,
+      "flags": [
+        "T1"
+      ],
+      "searches": 3,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 9.3
+    },
+    {
+      "id": "g02_amazon_dispatch",
+      "label": "genuine",
+      "lang": "en",
+      "level": "LOW_RISK",
+      "score": 0,
+      "correct": true,
+      "flags": [
+        "T2"
+      ],
+      "searches": 2,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 6.4
+    },
+    {
+      "id": "g03_irctc_pnr",
+      "label": "genuine",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 21,
+      "correct": true,
+      "flags": [
+        "W3"
+      ],
+      "searches": 2,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 3.0
+    },
+    {
+      "id": "g04_uidai_auth",
+      "label": "genuine",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 0,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 2.8
+    },
+    {
+      "id": "g05_tatapower_bill_hi",
+      "label": "genuine",
+      "lang": "hi",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 2,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 18.2
+    },
+    {
+      "id": "g06_swiggy_hinglish",
+      "label": "genuine",
+      "lang": "hinglish",
+      "level": "LOW_RISK",
+      "score": 0,
+      "correct": true,
+      "flags": [
+        "T2"
+      ],
+      "searches": 2,
+      "credits": 2,
+      "reader": "llm",
+      "seconds": 18.7
+    },
+    {
+      "id": "g07_itr_processed",
+      "label": "genuine",
+      "lang": "en",
+      "level": "LOW_RISK",
+      "score": 0,
+      "correct": true,
+      "flags": [
+        "T2"
+      ],
+      "searches": 1,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 5.4
+    },
+    {
+      "id": "g08_flipkart_sale",
+      "label": "genuine",
+      "lang": "en",
+      "level": "LOW_RISK",
+      "score": 7,
+      "correct": true,
+      "flags": [
+        "M3",
+        "T2"
+      ],
+      "searches": 1,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 4.1
+    },
+    {
+      "id": "g09_epfo_credit",
+      "label": "genuine",
+      "lang": "en",
+      "level": "LOW_RISK",
+      "score": 0,
+      "correct": true,
+      "flags": [
+        "T2"
+      ],
+      "searches": 0,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 4.2
+    },
+    {
+      "id": "g10_friend_hinglish",
+      "label": "genuine",
+      "lang": "hinglish",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 0,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 2.2
+    },
+    {
+      "id": "s01_sbi_yono_link",
+      "label": "scam",
+      "lang": "en",
+      "level": "HIGH_RISK",
+      "score": 83,
+      "correct": true,
+      "flags": [
+        "I1",
+        "W6",
+        "W4",
+        "M3",
+        "M6",
+        "W7"
+      ],
+      "searches": 2,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 2.7
+    },
+    {
+      "id": "s02_electricity_hi",
+      "label": "scam",
+      "lang": "hi",
+      "level": "SUSPICIOUS",
+      "score": 50,
+      "correct": true,
+      "flags": [
+        "W6",
+        "I6",
+        "M3"
+      ],
+      "searches": 2,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 2.9
+    },
+    {
+      "id": "s03_digital_arrest_hinglish",
+      "label": "scam",
+      "lang": "hinglish",
+      "level": "HIGH_RISK",
+      "score": 87,
+      "correct": true,
+      "flags": [
+        "M9",
+        "I7",
+        "W6",
+        "M4",
+        "W7"
+      ],
+      "searches": 2,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 6.1
+    },
+    {
+      "id": "s04_kbc_lottery",
+      "label": "scam",
+      "lang": "en",
+      "level": "HIGH_RISK",
+      "score": 79,
+      "correct": true,
+      "flags": [
+        "M2",
+        "W6",
+        "W3",
+        "M4"
+      ],
+      "searches": 4,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 6.0
+    },
+    {
+      "id": "s05_task_hinglish",
+      "label": "scam",
+      "lang": "hinglish",
+      "level": "SUSPICIOUS",
+      "score": 61,
+      "correct": true,
+      "flags": [
+        "M8",
+        "W6"
+      ],
+      "searches": 1,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 3.6
+    },
+    {
+      "id": "s06_indiapost_link",
+      "label": "scam",
+      "lang": "en",
+      "level": "HIGH_RISK",
+      "score": 82,
+      "correct": true,
+      "flags": [
+        "I1",
+        "W2",
+        "W6",
+        "M3"
+      ],
+      "searches": 2,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 26.4
+    },
+    {
+      "id": "s07_paytm_kyc_call",
+      "label": "scam",
+      "lang": "en",
+      "level": "SUSPICIOUS",
+      "score": 61,
+      "correct": true,
+      "flags": [
+        "W6",
+        "W3",
+        "I6",
+        "M3"
+      ],
+      "searches": 3,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 4.2
+    },
+    {
+      "id": "s08_electricity_en",
+      "label": "scam",
+      "lang": "en",
+      "level": "SUSPICIOUS",
+      "score": 50,
+      "correct": true,
+      "flags": [
+        "W6",
+        "I6",
+        "M3"
+      ],
+      "searches": 2,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 2.6
+    },
+    {
+      "id": "s09_job_fee_hi",
+      "label": "scam",
+      "lang": "hi",
+      "level": "SUSPICIOUS",
+      "score": 63,
+      "correct": true,
+      "flags": [
+        "M2",
+        "M4",
+        "W10"
+      ],
+      "searches": 4,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 8.9
+    },
+    {
+      "id": "s10_stock_tips",
+      "label": "scam",
+      "lang": "en",
+      "level": "SUSPICIOUS",
+      "score": 58,
+      "correct": true,
+      "flags": [
+        "W6",
+        "M8",
+        "M3",
+        "W7"
+      ],
+      "searches": 3,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 57.2
+    },
+    {
+      "id": "a01_wrong_number",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 0,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 1.4
+    },
+    {
+      "id": "a02_bare_otp",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 0,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 1.5
+    },
+    {
+      "id": "a03_card_limit_call",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 2,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 4.7
+    },
+    {
+      "id": "a04_package_hinglish",
+      "label": "ambiguous",
+      "lang": "hinglish",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 1,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 3.1
+    },
+    {
+      "id": "a05_local_store_offer",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 14,
+      "correct": true,
+      "flags": [
+        "M3"
+      ],
+      "searches": 2,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 6.6
+    },
+    {
+      "id": "a06_new_number",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 0,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 2.4
+    },
+    {
+      "id": "a07_kyc_branch_hi",
+      "label": "ambiguous",
+      "lang": "hi",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 1,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 7.5
+    },
+    {
+      "id": "a08_interview",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 1,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 3.9
+    },
+    {
+      "id": "a09_bill_due",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 18,
+      "correct": true,
+      "flags": [
+        "M4"
+      ],
+      "searches": 1,
+      "credits": 0,
+      "reader": "llm",
+      "seconds": 6.3
+    },
+    {
+      "id": "a10_preapproved_loan",
+      "label": "ambiguous",
+      "lang": "en",
+      "level": "UNVERIFIED",
+      "score": 0,
+      "correct": true,
+      "flags": [],
+      "searches": 1,
+      "credits": 1,
+      "reader": "llm",
+      "seconds": 4.6
+    }
+  ]
+}

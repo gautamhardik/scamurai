@@ -285,4 +285,14 @@ A mock Instagram-style post (a fictional seller, the Nike example's product phot
 | Nemotron first for text | 46 of 49 live reads were already answered by Nemotron. Gemma answered once, in 41 s. | Skips a usually rate-limited first attempt |
 | Number/link/UPI searches start while the AI reads | Simulation using delays drawn from 78 observed search latencies, 36 paired runs | Median 27.4 → 24.1 s, mean 34.4 → 30.8 s (about 10%) |
 
-**Caveat:** the reasoning comparison is two calls, because the free tier allows 50 a day and the evaluation had used them. The 30-message evaluation must be re-run with reasoning off to confirm extraction quality before relying on it. `ASLI_LLM_REASONING=low` restores the previous behaviour.
+**Caveat:** the reasoning comparison is two calls, because the free tier allows 50 a day and the evaluation had used them. The 30-message evaluation was re-run with reasoning off the next morning (§18): same results. `ASLI_LLM_REASONING=low` restores the previous behaviour.
+
+## 18. Follow-up: reasoning-off confirmed, usage day (8 October, morning)
+
+| Item | Method | Result |
+|---|---|---|
+| Extraction quality with reasoning off | 30-message live evaluation on a copy of the database with the AI cache emptied, so all 30 readings were fresh (searches could still hit the cache: 47 searches, 15 credits) | Same as the reasoning-on run on every row: scams 10/10 (4 high, 6 be careful), false alarms 0/10, genuine confirmed 6/10, ambiguous 10/10. One score moved (s10 stock tips 53 → 58, same level). [`eval/results-live-reasoning-off.json`](../eval/results-live-reasoning-off.json) |
+| Demo examples with reasoning off | All 10 examples run live, then checked against their `expect` rules (level, required and forbidden flags) | 10/10 pass |
+| Usage counter day | The counter used the local date, so in India it rolled over at midnight while OpenRouter's free allowance resets at 00:00 UTC (05:30 IST); between those times the app would try calls that OpenRouter refuses | Counter now uses the UTC date (`Store.usage_day`), with a regression test |
+
+Known, left as is: the AI-reading cache key covers the prompt version, model list and input, but not `ASLI_LLM_REASONING`, so after changing that setting, readings cached under the old one are reused for up to 7 days. That's why the evaluation above ran on a copy with the AI cache emptied.
