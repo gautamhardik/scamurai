@@ -1,8 +1,32 @@
-# Scamurai: is this real?
+<p align="center">
+  <img src="docs/media/banner.png" alt="Scamurai: slices through scams" width="100%">
+</p>
 
-[![CI](https://github.com/gautamhardik/scamurai/actions/workflows/ci.yml/badge.svg)](https://github.com/gautamhardik/scamurai/actions/workflows/ci.yml)
-![Python 3.12](https://img.shields.io/badge/python-3.12-1f4e79)
-![License: MIT](https://img.shields.io/badge/license-MIT-1f4e79)
+<h1 align="center">Scamurai: is this real?</h1>
+
+<p align="center">
+  <b>Paste a message, upload a screenshot or enter a link.<br>Scamurai checks every claim against the live web and shows you the proof.</b>
+</p>
+
+<p align="center">
+  <a href="https://github.com/gautamhardik/scamurai/actions/workflows/ci.yml"><img src="https://github.com/gautamhardik/scamurai/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/python-3.12-1f4e79" alt="Python 3.12">
+  <img src="https://img.shields.io/badge/tests-277%20passing-2ea44f" alt="277 tests passing">
+  <img src="https://img.shields.io/badge/SerpApi-6%20Google%20engines-8b5cf6" alt="SerpApi: 6 Google engines">
+  <img src="https://img.shields.io/badge/English%20%C2%B7%20%E0%A4%B9%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%80%20%C2%B7%20Hinglish-0ea5e9" alt="English, Hindi, Hinglish">
+  <img src="https://img.shields.io/badge/license-MIT-1f4e79" alt="License: MIT">
+</p>
+
+<p align="center">
+  <a href="#see-it-in-action">Demo</a> ·
+  <a href="#what-scamurai-does">How it works</a> ·
+  <a href="#how-scamurai-uses-serpapi">SerpApi</a> ·
+  <a href="#the-risk-engine">Risk engine</a> ·
+  <a href="#measured-results">Results</a> ·
+  <a href="#quick-start">Quick start</a>
+</p>
+
+---
 
 **Scamurai** (scam + samurai) checks suspicious messages, screenshots, links and phone numbers. You paste or upload the message. Scamurai pulls out the claims it makes and **checks each claim against live web evidence through SerpApi**. It then returns a calm, source-cited risk report in English, Hindi or Hinglish, and one tap switches any report between English and हिंदी.
 
@@ -18,9 +42,15 @@
 - **Why SerpApi matters:** without live search, the same messages give 5/10.
 - **Try it with no keys:** `uv sync && uv run scamurai demo` replays real recorded evidence offline.
 
-![Scamurai report for a fake sneaker deal: Google Lens finds the product photo on Myntra, Nike India and VegNonVeg at ₹6,300–₹9,000](docs/screenshots/report-deal.png)
+## See it in action
 
-**Demo video:** _link added at submission_ · **Track:** Knowledge & Public Interest · **Built for:** SerpApi India Hackathon 2026
+<p align="center">
+  <img src="docs/media/demo.webp" alt="Scamurai checking a fake SBI KYC text: live Google searches, then a High risk verdict of 87 with 7 warning signs" width="100%">
+</p>
+
+<p align="center"><sub>The real app, recorded live: a fake SBI KYC text, checked with live Google searches (the wait is sped up), comes back <b>High risk</b> with 7 sourced warning signs.</sub></p>
+
+**Demo video (3 min, with voiceover):** _link added at submission_ · **Track:** Knowledge & Public Interest · **Built for:** SerpApi India Hackathon 2026
 
 ---
 
@@ -50,6 +80,10 @@ A language model reading the message alone can only guess. Live search finds the
 
 ## What Scamurai does
 
+<p align="center">
+  <img src="docs/media/how-it-decides.png" alt="How Scamurai decides: a message, the AI reads the claims, live Google searches, rules weigh the evidence, the verdict" width="100%">
+</p>
+
 1. **Reads the claims.** It extracts who the message claims to be, plus every phone number, link, email, UPI ID, amount, product, price, job, address and app it mentions. Screenshots in Hindi work too. Every value must appear in the text you gave, or in the model's transcription of your screenshot (it is *grounded*), so a number the model invents can't be searched.
 2. **Plans the checks.** A rules-based planner chooses only the searches that matter for this kind of message. It plans at most 8 searches in 2 rounds.
 3. **Searches the live web through SerpApi.** It uses Google Search, News, Lens (with the Image API), Shopping, Jobs and Maps.
@@ -60,6 +94,8 @@ A language model reading the message alone can only guess. Live search finds the
 |---|---|
 | ![Hindi report for a fake electricity SMS](docs/screenshots/report-hindi.png) | ![A genuine SBI alert confirmed on SBI's own contact page](docs/screenshots/report-genuine.png) |
 | A Hindi screenshot gets a Hindi report, citing Times of India, Business Standard and Indian Express coverage of this scam. | A genuine SBI alert: the helpline is confirmed on SBI's own contact page, and the report says so with a link. |
+| ![A fake sneaker deal: Google Lens finds the product photo on real listings at ₹6,300–₹9,000](docs/screenshots/report-deal.png) | ![A fake Infosys job offer: High risk 91 with 7 warning signs](docs/screenshots/report-job.png) |
+| A "₹1,499 Nike" deal: Google Lens finds the same photo on Myntra, Nike India and VegNonVeg at ₹6,300–₹9,000. | A fake job offer: a registration fee, a Gmail sender, a number Infosys doesn't list, and an "office" that Google Maps shows is residential. |
 
 ---
 
@@ -149,6 +185,10 @@ Each signal has a fixed weight **w** and a confidence **c**. The confidence come
 
 ## Measured results
 
+<p align="center">
+  <img src="docs/media/results.png" alt="Measured on 30 test messages: 10/10 scams flagged, 0/10 false alarms on genuine messages, 10/10 unclear ones left as Couldn't verify" width="100%">
+</p>
+
 A 30-message evaluation set ([`eval/messages.json`](eval/messages.json)) in English, Hindi and Hinglish:
 - **10 genuine messages** in the style of real senders: SBI, IRCTC, UIDAI, Amazon, Swiggy, Flipkart, EPFO, Tata Power, the Income Tax Department, and a friend.
 - **10 scams.**
@@ -179,6 +219,10 @@ git clone https://github.com/gautamhardik/scamurai && cd scamurai
 uv sync
 uv run scamurai demo          # replay mode: recorded real evidence, no keys or network → http://127.0.0.1:8000
 ```
+
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="The Scamurai home page: paste a message, add a screenshot, or try a real-world example" width="720">
+</p>
 
 **Live mode** needs a free [SerpApi key](https://serpapi.com/users/sign_up) and a free [OpenRouter key](https://openrouter.ai/keys):
 
@@ -252,7 +296,7 @@ src/scamurai/
   risk/                   signal registry, engine, report builder
   web/                    FastAPI app + static UI
   demo/                   scenarios + recorded real SerpApi responses
-tests/                    unit · integration · e2e (266 tests, run offline)
+tests/                    unit · integration · e2e (277 tests, run offline)
 eval/                     30 labelled messages + results (scripts/evaluate.py)
 ```
 
@@ -279,7 +323,7 @@ eval/                     30 labelled messages + results (scripts/evaluate.py)
 ## Testing
 
 ```bash
-uv run pytest -q          # 266 tests, no keys or network needed
+uv run pytest -q          # 277 tests, no keys or network needed
 ```
 
 - **Unit tests:** extraction and grounding, redaction, domain and lookalike analysis, message patterns in English, Hindi and Hinglish, risk-engine gates, and properties (adding risk never lowers the score, adding trust never raises it).
