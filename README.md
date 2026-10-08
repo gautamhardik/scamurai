@@ -211,6 +211,7 @@ uv run scamurai doctor                                  # keys, SerpApi credits,
 | `SCAMURAI_MIN_CREDITS_RESERVE` | `10` | Stop live searching below this many SerpApi credits |
 | `SCAMURAI_STORE_REPORTS` | `true` | Keep reports locally for 7 days (`/#r=<id>`) |
 | `SCAMURAI_LLM_REASONING` | `off` | Model "thinking" for claim extraction (`off`, `low`, `medium`, `high`). Off is about 8× faster with the same extraction in our comparison. |
+| `SCAMURAI_SERPAPI_NO_CACHE` | `false` | Ask SerpApi for fresh results instead of its one-hour cache. Each search then costs a credit; useful for demos and latency benchmarks. |
 | `SCAMURAI_ALLOWED_HOSTS` | — | Extra host names to serve besides 127.0.0.1/localhost (when deployed) |
 | `SCAMURAI_ACCESS_TOKEN` | — | Require a token for the API (open `/?token=…` once to set the cookie) |
 

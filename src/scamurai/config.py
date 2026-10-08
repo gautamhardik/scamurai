@@ -44,6 +44,8 @@ class Settings(BaseSettings):
     scamurai_cache_ttl_hours: float | None = None
     scamurai_serp_concurrency: int = 4
     scamurai_serp_timeout_s: float = 25
+    # Ask SerpApi for fresh results instead of its own one-hour cache (costs a credit per search; for demos and benchmarks)
+    scamurai_serpapi_no_cache: bool = False
     scamurai_lens_timeout_s: float = 90  # Lens on an uploaded screenshot measured 40-47 s
     scamurai_jobs_timeout_s: float = 60  # Google Jobs routinely takes 25-50 s
     scamurai_search_phase_budget_s: float = 110

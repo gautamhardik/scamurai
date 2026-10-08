@@ -275,6 +275,26 @@ async def _fast_sleep(_s):
     return None
 
 
+async def test_no_cache_setting_asks_serpapi_for_fresh_results(live, monkeypatch):
+    """SCAMURAI_SERPAPI_NO_CACHE adds SerpApi's no_cache flag; it never changes our own cache key."""
+    from scamurai.serp.client import Budget, SerpClient
+
+    async def no_credits(self, max_age_s=600):
+        return None
+
+    sent: list[dict] = []
+    monkeypatch.setattr(SerpClient, "credits_left", no_credits)
+    monkeypatch.setattr(serp_client.serpapi.Client, "search",
+                        lambda self, params: sent.append(dict(params)) or {"search_metadata": {"status": "Success"},
+                                                                           "organic_results": [{"title": "t", "link": "https://a.example"}]})
+    for flag in (False, True):
+        settings = live.model_copy(update={"scamurai_serpapi_no_cache": flag})
+        store = Store(settings.db_path)
+        outcome = await SerpClient(settings, store).search("google", {"q": f'"9876501234" {flag}'}, Budget(max_searches=8))
+        assert outcome.status == "done"
+    assert "no_cache" not in sent[0] and sent[1]["no_cache"] == "true"
+
+
 def test_usage_counter_rolls_over_with_openrouter(tmp_path):
     """OpenRouter's free allowance resets at 00:00 UTC, so the counter's day is the UTC date, not the local one."""
     from datetime import datetime

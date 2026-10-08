@@ -243,6 +243,8 @@ class SerpClient:
             "google_jobs": self.settings.scamurai_jobs_timeout_s,
         }.get(engine, self.settings.scamurai_serp_timeout_s)
         request = {"engine": engine, **params}
+        if self.settings.scamurai_serpapi_no_cache:
+            request["no_cache"] = "true"
         try:
             async with self._sem:
                 if budget.quota_exhausted:  # another search hit the quota while this one was queued
