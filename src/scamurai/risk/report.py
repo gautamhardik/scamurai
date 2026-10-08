@@ -18,8 +18,10 @@ from scamurai.models import (
     ClaimChip,
     ClaimGraph,
     Flag,
+    FlagText,
     Recommendation,
     ReportStats,
+    ReportText,
     RiskReport,
     Signal,
 )
@@ -149,6 +151,15 @@ def build_report(
         notes=graph.notes,
         stats=stats,
         recorded_at=recorded_at,
+    )
+
+
+def report_text(report: RiskReport) -> ReportText:
+    return ReportText(
+        level_title=report.level_title, level_subtitle=report.level_subtitle, headline=report.headline,
+        confidence_reason=report.confidence_reason,
+        flags={f.signal_id: FlagText(title=f.title, explanation=f.explanation) for f in report.flags},
+        recommendations={r.id: r.text for r in report.recommendations},
     )
 
 

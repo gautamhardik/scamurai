@@ -27,7 +27,13 @@ from scamurai.llm.extract import extract_claims
 from scamurai.logs import log_event
 from scamurai.models import CheckResult, ClaimGraph, InvestigationInput, ReportStats, RiskReport, SearchSpec
 from scamurai.risk.engine import evaluate
-from scamurai.risk.report import build_report, claim_chips, enforce_citations, independent_sources
+from scamurai.risk.report import (
+    build_report,
+    claim_chips,
+    enforce_citations,
+    independent_sources,
+    report_text,
+)
 from scamurai.serp.client import Budget, Recorder, Recordings, SerpClient, SerpOutcome
 from scamurai.serp.normalize import NORMALIZERS
 from scamurai.store import Store
@@ -140,11 +146,17 @@ class Investigator:
         recorded_at = None
         if self.recordings and llm_record.get("input_hash") in self.recordings.meta:
             recorded_at = self.recordings.meta[llm_record["input_hash"]].get("recorded_at")
-        report = build_report(
-            investigation_id=inv_id, graph=graph, signals=signals, evaluation=evaluation, book=book,
-            checks=check_list, official=ctx.official, lang=lang, mode=self.settings.scamurai_mode, stats=stats,
-            recorded_at=recorded_at,
-        )
+        def report_in(language: str):
+            return build_report(
+                investigation_id=inv_id, graph=graph, signals=signals, evaluation=evaluation, book=book,
+                checks=check_list, official=ctx.official, lang=language, mode=self.settings.scamurai_mode,
+                stats=stats, recorded_at=recorded_at,
+            )
+
+        report = report_in(lang)
+        # The same evidence and rules in every report language, for the page's language switch.
+        report.translations = {code: report_text(report if code == lang else report_in(code))
+                               for code in ("en", "hi", "hinglish")}
         await emit({"type": "stage", "name": "weigh", "status": "done"})
 
         log_event(

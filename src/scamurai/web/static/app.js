@@ -46,6 +46,7 @@ const ICONS = {
   image: ["M4 5h16v14H4z", "M4 16l5-5 4 4 3-3 4 4"],
   refresh: ["M20 11a8 8 0 1 0-2.3 5.7", "M20 5v6h-6"],
   arrow: ["M5 12h14", "M13 6l6 6-6 6"],
+  globe: ["M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z", "M3.5 12h17", "M12 3c2.6 3 2.6 15 0 18", "M12 3c-2.6 3-2.6 15 0 18"],
 };
 
 function icon(name) {
@@ -107,6 +108,11 @@ const CAPS = {
   contradiction_cap: "Limited to “Be careful”: official confirmation conflicts with other evidence.",
   gate_demotion: "High score, but no single strong piece of web evidence, so shown as “Be careful”.",
 };
+// The report's language switch. Every report carries its text in each language (built from the same evidence).
+const LANG_NAME = { en: "English", hi: "हिंदी", hinglish: "Hinglish" };
+const LANG_TAG = { en: "en", hi: "hi", hinglish: "hi-Latn" };
+let QUIET = false; // re-rendering for a language switch: no score count-up
+
 const VERDICT_ICON = { HIGH_RISK: "octagon", SUSPICIOUS: "alert", LOW_RISK: "shield", UNVERIFIED: "help" };
 
 const FLIP_WORDS = ["message", "SMS", "KYC link", "job offer", "₹1,499 deal", "screenshot", "helpline", "बिजली बिल"];
@@ -652,10 +658,11 @@ function gauge(score, label) {
   };
   const arc = circle("arc");
   arc.setAttribute("stroke-dasharray", C.toFixed(2));
-  arc.style.strokeDashoffset = REDUCED ? C * (1 - score / 100) : C;
+  const still = REDUCED || QUIET;
+  arc.style.strokeDashoffset = still ? C * (1 - score / 100) : C;
   svg.append(circle("track"), arc);
-  const num = h("b", { text: REDUCED ? String(score) : "0" });
-  if (!REDUCED) {
+  const num = h("b", { text: still ? String(score) : "0" });
+  if (!still) {
     requestAnimationFrame(() => requestAnimationFrame(() => { arc.style.strokeDashoffset = C * (1 - score / 100); }));
     const t0 = performance.now();
     const tick = (t) => {
@@ -727,6 +734,32 @@ function observeReveals(root) {
 }
 
 // ------------------------------------------------------------------ report
+function localize(r, code, orig) {
+  const tr = r.translations[code];
+  return {
+    ...r, _orig: orig, language: code, level_title: tr.level_title, level_subtitle: tr.level_subtitle,
+    headline: tr.headline, confidence_reason: tr.confidence_reason,
+    flags: r.flags.map((f) => ({ ...f, ...(tr.flags[f.signal_id] || {}) })),
+    recommendations: r.recommendations.map((x) => ({ ...x, text: tr.recommendations[x.id] ?? x.text })),
+  };
+}
+
+function langSwitch(r) {
+  const orig = r._orig || r.language;
+  const langs = ["en", "hi", ...(orig === "hinglish" ? ["hinglish"] : [])].filter((c) => r.translations?.[c]);
+  if (langs.length < 2) return null;
+  return h("div", { class: "lang-switch", role: "group", "aria-label": "Report language" }, icon("globe"),
+    langs.map((c) => h("button", {
+      type: "button", lang: LANG_TAG[c], "aria-pressed": String(c === r.language),
+      onclick: () => {
+        if (c === r.language) return;
+        QUIET = true;
+        try { renderReport(localize(r, c, orig)); } finally { QUIET = false; }
+        $("#view-report .lang-switch [aria-pressed=true]")?.focus();
+      },
+    }, LANG_NAME[c])));
+}
+
 function renderReport(r) {
   if (location.hash !== `#r=${r.id}`) history.replaceState(null, "", `#r=${r.id}`);
   const t = { ...(T[r.language] || T.en), sev: SEVERITY[r.language] || SEVERITY.en };
@@ -805,7 +838,9 @@ function renderReport(r) {
     : "The AI reader was busy, so Scamurai read this with basic rules. If you uploaded a screenshot, paste its text for a fuller check." }) : null;
   if (notice) verdict.append(notice);
   const urgentFirst = r.level === "HIGH_RISK" || r.level === "SUSPICIOUS";
-  view.replaceChildren(...[verdict, urgentFirst ? todo : null, why, ok, urgentFirst ? null : todo, checked, decided, read, actions].filter(Boolean));
+  const tools = langSwitch(r);
+  view.replaceChildren(...[tools ? h("div", { class: "report-tools" }, tools) : null, verdict, urgentFirst ? todo : null, why, ok,
+    urgentFirst ? null : todo, checked, decided, read, actions].filter(Boolean));
   show("view-report");
   observeReveals(view);
 }

@@ -4,7 +4,7 @@
 ![Python 3.12](https://img.shields.io/badge/python-3.12-1f4e79)
 ![License: MIT](https://img.shields.io/badge/license-MIT-1f4e79)
 
-**Scamurai** (scam + samurai) checks suspicious messages, screenshots, links and phone numbers. You paste or upload the message. Scamurai pulls out the claims it makes and **checks each claim against live web evidence through SerpApi**. It then returns a calm, source-cited risk report in English, Hindi or Hinglish.
+**Scamurai** (scam + samurai) checks suspicious messages, screenshots, links and phone numbers. You paste or upload the message. Scamurai pulls out the claims it makes and **checks each claim against live web evidence through SerpApi**. It then returns a calm, source-cited risk report in English, Hindi or Hinglish, and one tap switches any report between English and हिंदी.
 
 > Scamurai doesn't classify a message from its wording. It checks the message's claims against the live web, and every warning links to its source.
 
@@ -233,7 +233,7 @@ flowchart TD
   EV --> CK[Checks → cited signals]
   CG --> CK
   CK --> RE[Risk engine · noisy-OR · gates · confidence]
-  RE --> RP[Report · en/hi/hinglish templates · recommendations]
+  RE --> RP[Report · en/hi/hinglish text, all three for the language switch · recommendations]
   RP --> API
 ```
 

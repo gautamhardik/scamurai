@@ -243,6 +243,22 @@ class ReportStats(BaseModel):
     latency_ms: int = 0
 
 
+class FlagText(BaseModel):
+    title: str
+    explanation: str
+
+
+class ReportText(BaseModel):
+    """The language-dependent text of a report, so the page can switch language without another check."""
+
+    level_title: str
+    level_subtitle: str
+    headline: str
+    confidence_reason: str
+    flags: dict[str, FlagText]  # by signal_id
+    recommendations: dict[str, str]  # by recommendation id
+
+
 class RiskReport(BaseModel):
     id: str
     created_at: datetime
@@ -266,3 +282,4 @@ class RiskReport(BaseModel):
     notes: list[str] = Field(default_factory=list)
     stats: ReportStats = Field(default_factory=ReportStats)
     recorded_at: str | None = None
+    translations: dict[str, ReportText] = Field(default_factory=dict)  # every report language, built from the same evidence
