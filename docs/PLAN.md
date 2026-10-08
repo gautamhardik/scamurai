@@ -1,10 +1,10 @@
-# Asli — Master Plan (approved 2026-10-07)
+# Scamurai — Master Plan (approved 2026-10-07)
 
 > Approved decisions: GitHub account **gautamhardik** · LLM option **(c)** shared free OpenRouter pool · submit by **Sat 10 Oct 2026, 16:00 IST** (deadline 23:59 IST) · feature freeze **Fri 9 Oct, 21:00 IST**.
 
 ## 1. Executive summary
 
-Asli is a local-first web app (FastAPI + static HTML/CSS/vanilla JS). A user submits text, a screenshot, a link or a phone number.
+Scamurai is a local-first web app (FastAPI + static HTML/CSS/vanilla JS). A user submits text, a screenshot, a link or a phone number.
 
 1. An OpenRouter free vision model extracts a **grounded claim graph** (every phone/URL/email/amount must appear verbatim in the input or the screenshot transcript).
 2. A deterministic **planner** turns the claim graph into ≤8 SerpApi searches across 6 engines (+ the free Image API) in ≤2 rounds. The LLM never writes queries.
@@ -28,7 +28,7 @@ Asli is a local-first web app (FastAPI + static HTML/CSS/vanilla JS). A user sub
 ## 3. Product
 
 - **Problem:** fake KYC / electricity / courier / digital-arrest messages, fake customer-care numbers, fake Instagram deals, fee-charging job offers. Verifying one takes 15+ minutes of searching.
-- **Insight:** *scammers reuse scripts, numbers, photos, domains and addresses — every reuse leaves a trace on the web.* Asli checks claims instead of judging wording.
+- **Insight:** *scammers reuse scripts, numbers, photos, domains and addresses — every reuse leaves a trace on the web.* Scamurai checks claims instead of judging wording.
 - **Non-goals:** blocking, crowdsourced number DB, legal determinations, "100% scam".
 
 ## 4. Stack (final)
@@ -96,7 +96,7 @@ Gates: **G1** HIGH needs an identity/web signal with c ≥ .6 and w·c ≥ .25, 
 
 Levels: HIGH_RISK ≥ 65 (+G1, not G3) · SUSPICIOUS 35–64 · LOW_RISK < 35 with coverage ≥ .6, ≥1 verifiable entity and a trust signal or ≥2 checks with results · UNVERIFIED otherwise.
 
-Confidence: high = coverage ≥ .8 and ≥2 independent sites (or deterministic identity c ≥ .85) and no contradiction · medium = coverage ≥ .5 · low otherwise. The score is shown only in "How Asli decided" as risk points, never as a probability.
+Confidence: high = coverage ≥ .8 and ≥2 independent sites (or deterministic identity c ≥ .85) and no contradiction · medium = coverage ≥ .5 · low otherwise. The score is shown only in "How Scamurai decided" as risk points, never as a probability.
 
 ## 8. Evidence engine
 
@@ -109,7 +109,7 @@ Keys as SecretStr, never sent to the browser; redaction filter for `api_key=` / 
 ## 10. Priorities
 
 - **P0:** text + screenshot (+ link/phone) input · extraction + grounding + regex fallback · planner · google/news/lens+Image API/shopping/jobs/maps · cache/budget/replay · evidence + risk engines · 4 MVP scam types · streaming UI + report + evidence drawers + error states · en/hi/hinglish templates · security · tests + CI · README · video · submission.
-- **P1:** Lens price cards · copy summary · report reload endpoint · `asli doctor` · credits indicator · language switch · LLM bbox crop · curated official domains.
+- **P1:** Lens price cards · copy summary · report reload endpoint · `scamurai doctor` · credits indicator · language switch · LLM bbox crop · curated official domains.
 - **P2:** loan apps (google_play) · LLM narrative · stats · entity confirmation · dark mode.
 - **CUT:** Telegram/WhatsApp bot, hosting, Next.js, auth, Postgres/Redis/Docker, URL fetching/expansion, WHOIS/carrier APIs, local OCR, ML training, RAG, Playwright.
 
@@ -142,7 +142,7 @@ Keys as SecretStr, never sent to the browser; redaction filter for `api_key=` / 
 
 ## Implementation log
 
-- 2026-10-07: plan approved; repo initialised; recordings/scenarios live under `src/asli/demo/` so they ship with the package.
+- 2026-10-07: plan approved; repo initialised; recordings/scenarios live under `src/scamurai/demo/` so they ship with the package.
 - 2026-10-07 (build loop, day 0): core pipeline, web UI, 10 recorded scenarios, 224 tests, CI. Changes vs plan:
   search-phase budget 90 s and LLM timeout 120 s (free models are slow); Google Jobs timeout 60 s;
   narration is template-only (1 LLM call per investigation); added signals I6 helpline_is_mobile,

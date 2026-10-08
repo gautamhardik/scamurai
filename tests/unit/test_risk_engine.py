@@ -2,8 +2,8 @@ import itertools
 
 import pytest
 
-from asli.risk.engine import evaluate
-from asli.risk.signals import REGISTRY, make
+from scamurai.risk.engine import evaluate
+from scamurai.risk.signals import REGISTRY, make
 
 
 def sig(signal_id, confidence=0.9, entities=None, weight=None):

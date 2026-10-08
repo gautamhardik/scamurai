@@ -1,5 +1,5 @@
-from asli.serp.client import SerpClient, cache_key, trim
-from asli.serp.normalize import NORMALIZERS, clean, safe_url
+from scamurai.serp.client import SerpClient, cache_key, trim
+from scamurai.serp.normalize import NORMALIZERS, clean, safe_url
 from tests.conftest import load_fixture
 
 

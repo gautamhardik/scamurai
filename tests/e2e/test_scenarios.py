@@ -2,10 +2,10 @@
 
 import pytest
 
-from asli.cli import _scenario_input
-from asli.investigate.orchestrator import Investigator
-from asli.risk.signals import REGISTRY
-from asli.store import Store
+from scamurai.cli import _scenario_input
+from scamurai.investigate.orchestrator import Investigator
+from scamurai.risk.signals import REGISTRY
+from scamurai.store import Store
 from tests.conftest import scenarios
 
 SCENARIOS = scenarios()
@@ -41,7 +41,7 @@ async def test_scenario(sc, replay_settings):
         assert items, f"{f.signal_id} has no evidence"
         if REGISTRY[f.signal_id].category in ("web", "trust"):
             assert any(i.kind != "message_span" for i in items), f"{f.signal_id} lacks web evidence"
-    assert report.stats.searches_run <= replay_settings.asli_max_searches
+    assert report.stats.searches_run <= replay_settings.scamurai_max_searches
     assert report.stats.credits_spent == 0  # replay never spends credits
     assert events[0]["type"] == "accepted" and any(e["type"] == "claims" for e in events)
     assert "score" not in (extra.get("llm") or {}).get("data", {})  # the LLM never scores

@@ -2,17 +2,17 @@
 
 import pytest
 
-from asli.config import Settings
-from asli.ingest.validate import validate_input
-from asli.investigate.orchestrator import Investigator
-from asli.serp import client as serp_client
-from asli.store import Store
+from scamurai.config import Settings
+from scamurai.ingest.validate import validate_input
+from scamurai.investigate.orchestrator import Investigator
+from scamurai.serp import client as serp_client
+from scamurai.store import Store
 
 
 @pytest.fixture
 def live_settings(tmp_path, monkeypatch):
-    monkeypatch.setenv("ASLI_MODE", "live")
-    monkeypatch.setenv("ASLI_DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("SCAMURAI_MODE", "live")
+    monkeypatch.setenv("SCAMURAI_DATA_DIR", str(tmp_path))
     monkeypatch.setenv("SERPAPI_API_KEY", "test-key")
     monkeypatch.setenv("OPENROUTER_API_KEY", "")
     return Settings(_env_file=None)
@@ -61,7 +61,7 @@ async def test_quota_stops_further_searches(live_settings, monkeypatch):
         raise serp_client._Quota()
 
     _patch(monkeypatch, quota)
-    live_settings.asli_serp_concurrency = 1
+    live_settings.scamurai_serp_concurrency = 1
     report, _ = await Investigator(live_settings, Store(live_settings.db_path)).run(validate_input(text=TEXT))
     assert len(calls) == 1
     assert {c.status for c in report.checks} == {"skipped_quota"}
@@ -105,7 +105,7 @@ async def test_budget_cap(live_settings, monkeypatch):
         return {"organic_results": [{"position": 1, "title": "t", "link": "https://example.org/x"}]}
 
     _patch(monkeypatch, ok)
-    live_settings.asli_max_searches = 3
+    live_settings.scamurai_max_searches = 3
     many = "Call 7000012341, 7000012342, 7000012343. Visit a1-offer.top, b2-offer.top, c3-offer.top. Amazon refund."
     report, _ = await Investigator(live_settings, Store(live_settings.db_path)).run(validate_input(text=many))
     assert len(calls) <= 3 and report.stats.searches_run <= 3

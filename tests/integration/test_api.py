@@ -3,13 +3,13 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
-from asli.config import get_settings
+from scamurai.config import get_settings
 
 
 @pytest.fixture
 def client(replay_settings):
     get_settings.cache_clear()
-    from asli.web.app import create_app
+    from scamurai.web.app import create_app
 
     with TestClient(create_app(), base_url="http://127.0.0.1:8000") as c:
         yield c
@@ -26,7 +26,7 @@ def test_health_and_security_headers(client):
 
 
 def test_index_and_examples(client):
-    assert "Ask Asli" in client.get("/").text
+    assert "Ask Scamurai" in client.get("/").text
     assert client.get("/static/app.css").headers["cache-control"] == "no-cache"
     ex = client.get("/api/examples").json()
     assert {e["id"] for e in ex} >= {"electricity_hi", "nike_deal", "sbi_alert_genuine"}

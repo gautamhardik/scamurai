@@ -1,7 +1,7 @@
 [project]
-name = "asli"
+name = "scamurai"
 version = "0.1.0"
-description = "Asli investigates suspicious messages, links, numbers and deals against live web evidence (SerpApi) and explains the risk with sources."
+description = "Scamurai investigates suspicious messages, links, numbers and deals against live web evidence (SerpApi) and explains the risk with sources."
 readme = "README.md"
 license = "MIT"
 authors = [
@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [project.scripts]
-asli = "asli.cli:main"
+scamurai = "scamurai.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.11.19,<0.12.0"]
@@ -49,4 +49,4 @@ select = ["E", "F", "W", "I", "B", "UP"]
 ignore = ["E501"]
 
 [tool.ruff.lint.extend-per-file-ignores]
-"src/asli/web/app.py" = ["B008"]  # FastAPI's Form()/File() defaults are the documented pattern
+"src/scamurai/web/app.py" = ["B008"]  # FastAPI's Form()/File() defaults are the documented pattern

@@ -1,7 +1,7 @@
-from asli.ingest import regex_extract as rx
-from asli.ingest.redact import redact_pii
-from asli.llm.extract import build_graph
-from asli.models import InvestigationInput
+from scamurai.ingest import regex_extract as rx
+from scamurai.ingest.redact import redact_pii
+from scamurai.llm.extract import build_graph
+from scamurai.models import InvestigationInput
 
 
 def test_indian_phone_formats_normalize_to_e164():

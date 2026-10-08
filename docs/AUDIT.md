@@ -1,4 +1,4 @@
-# Asli: final audit report
+# Scamurai: final audit report
 
 **Date:** 7 October 2026.
 
@@ -37,7 +37,7 @@ Fixes that can be tested offline have regression tests; UI and timing fixes were
 |---|---|---|---|---|
 | A1 | **Trust poisoning: a website could vouch for itself.** For organisations not on the curated list, the "official site" came from the top search result. A made-up company's own site ranks first for its own name, so it then "confirmed" its own link (T2) and number (T1). | A fake job offer was rated **No major warning signs** (LOW_RISK). | Yes | Probe: LOW_RISK → UNVERIFIED. `test_a_message_domain_cannot_confirm_itself` |
 | A2 | **Planted helpline counted as official.** A number found on a big platform's *product page* (amazon.in/dp/…) counted as the organisation's own. Scammers plant fake "customer care" numbers in listings and Q&A. | A fake Amazon customer-care number was rated LOW_RISK. | Yes | Probe: LOW_RISK → SUSPICIOUS. `test_number_on_a_marketplace_product_page_is_not_official` |
-| A3 | **The repository was missing its knowledge base.** `.gitignore` had `data/`, which matched every directory named `data`, so `src/asli/knowledge/data/` (official domains, source classes) was never committed. | A fresh clone failed **37 tests**, and the app crashed on its first check. CI would be red, and judges couldn't run it. | Yes | Fresh clone: 37 failed → 256 passed. `asli demo` from the clone streamed a full report over HTTP. |
+| A3 | **The repository was missing its knowledge base.** `.gitignore` had `data/`, which matched every directory named `data`, so `src/scamurai/knowledge/data/` (official domains, source classes) was never committed. | A fresh clone failed **37 tests**, and the app crashed on its first check. CI would be red, and judges couldn't run it. | Yes | Fresh clone: 37 failed → 256 passed. `scamurai demo` from the clone streamed a full report over HTTP. |
 
 ## 3. High-priority findings (P1)
 
@@ -48,7 +48,7 @@ Fixes that can be tested offline have regression tests; UI and timing fixes were
 | B3 | **CSRF.** Any website the user visited could POST to `127.0.0.1:8000/api/investigations`. | Drive-by spending of the user's SerpApi credits. | Yes | Probe: 200 → 403. `test_cross_site_posts_are_refused` |
 | B4 | **DNS rebinding.** Any `Host` header was accepted. | A rebinding page could read stored reports (which contain phone numbers). | Yes | Probe: 200 → 400. `test_foreign_host_header_is_refused` |
 | B5 | **An unparseable AI response crashed the check.** If OpenRouter returned a 200 response with a non-JSON body (an HTML error page), `r.json()` raised. | The user got "Something went wrong" instead of a rules-based report. | Yes, plus a fallback | Probe: crash → SUSPICIOUS via rules. `test_unparseable_llm_response_degrades_to_rules` |
-| B6 | **Three signals never fired.** "Not found" signals (W4 website has no track record, W5 company not found, W10 job not listed) cited only the message, so the citation gate always dropped them. That left 3 of the 33 advertised signals dead. | Missed evidence. | Yes: they now cite the search itself, as a link that re-runs it | Scenarios: W4 now fires for `bijli-bill-pay.top` and `nike-outlet-sale.shop`. The UI shows "Search Asli ran". |
+| B6 | **Three signals never fired.** "Not found" signals (W4 website has no track record, W5 company not found, W10 job not listed) cited only the message, so the citation gate always dropped them. That left 3 of the 33 advertised signals dead. | Missed evidence. | Yes: they now cite the search itself, as a link that re-runs it | Scenarios: W4 now fires for `bijli-bill-pay.top` and `nike-outlet-sale.shop`. The UI shows "Search Scamurai ran". |
 | B7 | **Keyboard users couldn't add a screenshot.** The button was a `<label>` for a hidden file input, and labels aren't focusable. | An accessibility blocker. | Yes | `#pick-file` is a real button with `tabIndex` 0. |
 
 **Root causes of B1:**
@@ -94,7 +94,7 @@ Fixes that can be tested offline have regression tests; UI and timing fixes were
   - UPI IDs in transaction notices aren't requests (`upi_is_requested`), and they aren't searched.
   - The official-number query covers the main domain plus the `.bank.in` domain (`(site:sbi.co.in OR site:sbi.bank.in)`). Absence is weaker evidence for toll-free numbers.
 - **B2:** Gate G4: LOW_RISK needs a trust signal with w·c ≥ 0.3.
-- **B3/B4:** The middleware refuses unknown `Host` values, and refuses POSTs whose `Origin` doesn't match or whose `Sec-Fetch-Site` is `cross-site`. `ASLI_ALLOWED_HOSTS` covers deployments.
+- **B3/B4:** The middleware refuses unknown `Host` values, and refuses POSTs whose `Origin` doesn't match or whose `Sec-Fetch-Site` is `cross-site`. `SCAMURAI_ALLOWED_HOSTS` covers deployments.
 - **B5:** The LLM client handles non-JSON and non-dict bodies. The orchestrator falls back to rules-only extraction if extraction raises at all.
 - **B6:** A new evidence kind, `search`: the query with a Google link to re-run it. It has no domain, so it never counts as a source.
 
@@ -102,13 +102,13 @@ Fixes that can be tested offline have regression tests; UI and timing fixes were
 
 | Area | Result |
 |---|---|
-| **SSRF** | Not possible by design: Asli never fetches user URLs. 12 hostile URLs were rejected at input: `127.0.0.1`, `localhost`, `[::1]`, `10/8`, `192.168/16`, `169.254.169.254`, `0x7f000001`, `2130706433`, `file:`, `javascript:`, `data:` and `ftp:`. IP-literal links in message text are never searched. |
+| **SSRF** | Not possible by design: Scamurai never fetches user URLs. 12 hostile URLs were rejected at input: `127.0.0.1`, `localhost`, `[::1]`, `10/8`, `192.168/16`, `169.254.169.254`, `0x7f000001`, `2130706433`, `file:`, `javascript:`, `data:` and `ftp:`. IP-literal links in message text are never searched. |
 | **Uploads** | Rejected: a 20000×20000 PNG bomb (47 KB), a 49 MP PNG, a JPEG/HTML polyglot, a truncated PNG, SVG and EXE. All under 10 ms. Images are re-encoded (EXIF stripped). |
 | **Prompt injection** | Message and screenshot text is delimited, nonce-tagged untrusted data, and the model returns closed-vocabulary JSON. Values are grounded before use. **Search results never reach a model**: the only model call is extraction, in `llm/extract.py`. Injection attempts are flagged (M5) in EN/HI/Hinglish. |
 | **Web** | Strict CSP, `textContent` only, no CORS, Host allow-list, cross-site POSTs refused, rate limit 6 per 10 minutes per IP, 2 concurrent checks, 5 MB body cap before parsing, optional access token. |
 | **Secrets** | Keys are `SecretStr`, never sent to the browser and redacted from logs. A test scans every tracked file for the real `.env` values. `.env` isn't tracked (verified in the fresh clone). |
 | **Dependencies** | `pip-audit` on the 35 locked runtime packages: **no known vulnerabilities**. All direct dependencies are used. |
-| **Remaining** | No authentication by default; the app is designed for localhost. Deploying it publicly needs `ASLI_ACCESS_TOKEN` and `ASLI_ALLOWED_HOSTS`. **Both API keys were shared in a chat during development and must be rotated after the hackathon.** |
+| **Remaining** | No authentication by default; the app is designed for localhost. Deploying it publicly needs `SCAMURAI_ACCESS_TOKEN` and `SCAMURAI_ALLOWED_HOSTS`. **Both API keys were shared in a chat during development and must be rotated after the hackathon.** |
 
 ## 7. SerpApi audit
 
@@ -159,7 +159,7 @@ The engine is a noisy-OR over w·c. Risk points = 100 · R · (1 − 0.75 T). Th
 | G3 | Official confirmation together with a report on the same entity gives "mixed" (at most *Be careful*). |
 | G4 (new) | Reassurance needs positive confirmation. |
 
-**Explainability:** every report shows each signal's w, c and w·c, plus the formula with the final score ("How Asli decided").
+**Explainability:** every report shows each signal's w, c and w·c, plus the formula with the final score ("How Scamurai decided").
 
 **Uncertainty:**
 - *Couldn't verify* is a first-class outcome: all 10 ambiguous messages and 4 of the 10 genuine ones landed there.
@@ -170,7 +170,7 @@ The engine is a noisy-OR over w·c. Risk points = 100 · R · (1 − 0.75 T). Th
 
 ## 10. UX audit
 
-- **Strongest:** the evidence-first report. Every flag opens to its sources, the Lens price cards are visual, absence claims link to the exact search, and the gauge plus "How Asli decided" make the score legible.
+- **Strongest:** the evidence-first report. Every flag opens to its sources, the Lens price cards are visual, absence claims link to the exact search, and the gauge plus "How Scamurai decided" make the score legible.
 - **Weakest:** live latency. The free AI reader dominates: 23 s median, 65 s at the 90th percentile.
   - Mitigations already in place: the step-by-step timeline, a "free AI models can take ~30 s" hint, and now a live elapsed-time clock.
   - Cached examples are instant.
@@ -208,7 +208,7 @@ The engine is a noisy-OR over w·c. Risk points = 100 · R · (1 − 0.75 T). Th
 
 - All 30 probes were re-run: 0 reproduce.
 - The regression tests mirror probes that reproduced on the old code. The bank-alert and toll-free tests were also run against the pre-fix commit in a temporary worktree: they fail there and pass now.
-- The fresh clone was re-run end to end, including `asli demo` over HTTP.
+- The fresh clone was re-run end to end, including `scamurai demo` over HTTP.
 - The browser flow was re-checked through the new Host and CSRF middleware: an example ran to a report with no console errors.
 - Access-token mode was re-checked after the middleware change: 401 without the token, then the cookie and the header both work.
 - New-code edge cases:
@@ -240,7 +240,7 @@ The engine is a noisy-OR over w·c. Risk points = 100 · R · (1 − 0.75 T). Th
 | SerpApi usage | 9 | Six engines, each essential. Without SerpApi, recall halves. |
 | **Overall** | **8.5** | |
 
-## 16. What stands between Asli and an obvious first place
+## 16. What stands between Scamurai and an obvious first place
 
 1. **The submission isn't live yet.** The repository is still private and unpushed, and there's no demo video. *Fixable before the deadline: you push and record.*
 2. **Live speed.** A first-time check takes 20–60 s on free models. *Partly fixable:* the demo uses cached examples, which are honest and instant, and the run view now shows a live clock. A paid or faster model would fix it properly, but that's outside the free-only constraint.
@@ -261,9 +261,9 @@ The highest-value improvement I could make safely was to harden the core differe
 A mock Instagram-style post (a fictional seller, the Nike example's product photo and its scam caption) was uploaded through the API.
 
 - **Bug found (P1): Lens never returned evidence for an uploaded screenshot.**
-  - Lens on an upload takes 40–47 s, but Asli's Lens timeout was 40 s.
+  - Lens on an upload takes 40–47 s, but Scamurai's Lens timeout was 40 s.
   - The retry came back with no results. Most likely it caught SerpApi's duplicate of the same search while it was still *processing*.
-  - Asli then cached that empty response as "no results" for 24 hours.
+  - Scamurai then cached that empty response as "no results" for 24 hours.
   - All three upload-based Lens searches in the cache were empty. A direct diagnostic of the same image returned 59 matches.
   - **Fix:**
     - Lens timeout raised to 90 s and search phase to 110 s.
@@ -280,12 +280,12 @@ A mock Instagram-style post (a fictional seller, the Nike example's product phot
 
 | Change | Measurement | Result |
 |---|---|---|
-| Model "thinking" off for extraction (`ASLI_LLM_REASONING=off`) | Same message, Nemotron, reasoning low vs off (1 call each) | **22.2 s → 2.6 s**, 2,061 → 317 tokens, identical phone, link, organisation, scheme and actions |
+| Model "thinking" off for extraction (`SCAMURAI_LLM_REASONING=off`) | Same message, Nemotron, reasoning low vs off (1 call each) | **22.2 s → 2.6 s**, 2,061 → 317 tokens, identical phone, link, organisation, scheme and actions |
 | Same, vision (dots) | Mock product post, before vs after (1 read each) | AI read **68 s → about 13 s**, identical extracted claims and the same verdict and flags |
 | Nemotron first for text | 46 of 49 live reads were already answered by Nemotron. Gemma answered once, in 41 s. | Skips a usually rate-limited first attempt |
 | Number/link/UPI searches start while the AI reads | Simulation using delays drawn from 78 observed search latencies, 36 paired runs | Median 27.4 → 24.1 s, mean 34.4 → 30.8 s (about 10%) |
 
-**Caveat:** the reasoning comparison is two calls, because the free tier allows 50 a day and the evaluation had used them. The 30-message evaluation was re-run with reasoning off the next morning (§18): same results. `ASLI_LLM_REASONING=low` restores the previous behaviour.
+**Caveat:** the reasoning comparison is two calls, because the free tier allows 50 a day and the evaluation had used them. The 30-message evaluation was re-run with reasoning off the next morning (§18): same results. `SCAMURAI_LLM_REASONING=low` restores the previous behaviour.
 
 ## 18. Follow-up: reasoning-off confirmed, usage day (8 October, morning)
 
@@ -295,4 +295,4 @@ A mock Instagram-style post (a fictional seller, the Nike example's product phot
 | Demo examples with reasoning off | All 10 examples run live, then checked against their `expect` rules (level, required and forbidden flags) | 10/10 pass |
 | Usage counter day | The counter used the local date, so in India it rolled over at midnight while OpenRouter's free allowance resets at 00:00 UTC (05:30 IST); between those times the app would try calls that OpenRouter refuses | Counter now uses the UTC date (`Store.usage_day`), with a regression test |
 
-Known, left as is: the AI-reading cache key covers the prompt version, model list and input, but not `ASLI_LLM_REASONING`, so after changing that setting, readings cached under the old one are reused for up to 7 days. That's why the evaluation above ran on a copy with the AI cache emptied.
+Known, left as is: the AI-reading cache key covers the prompt version, model list and input, but not `SCAMURAI_LLM_REASONING`, so after changing that setting, readings cached under the old one are reused for up to 7 days. That's why the evaluation above ran on a copy with the AI cache emptied.

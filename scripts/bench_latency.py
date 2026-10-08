@@ -38,14 +38,14 @@ async def main() -> int:
     ap.add_argument("--runs", type=int, default=3)
     ap.add_argument("--samples", help="JSON map of engine -> observed latencies in seconds")
     args = ap.parse_args()
-    os.environ.update({"ASLI_MODE": "live", "SERPAPI_API_KEY": "bench", "OPENROUTER_API_KEY": "bench"})
+    os.environ.update({"SCAMURAI_MODE": "live", "SERPAPI_API_KEY": "bench", "OPENROUTER_API_KEY": "bench"})
     sys.path.insert(0, str(ROOT / "src"))
-    from asli.config import Settings
-    from asli.ingest.validate import validate_input
-    from asli.investigate.orchestrator import Investigator
-    from asli.llm import client as llm_client
-    from asli.serp import client as serp_client
-    from asli.store import Store
+    from scamurai.config import Settings
+    from scamurai.ingest.validate import validate_input
+    from scamurai.investigate.orchestrator import Investigator
+    from scamurai.llm import client as llm_client
+    from scamurai.serp import client as serp_client
+    from scamurai.store import Store
 
     llm_s, search_s = 13.0 * args.scale, {"google": 4.9 * args.scale, "google_news": 4.3 * args.scale}
 
@@ -86,7 +86,7 @@ async def main() -> int:
             current_run["n"] = run
             for text in MESSAGES:
                 settings = Settings(_env_file=None)
-                settings.asli_data_dir = Path(tempfile.mkdtemp(prefix="asli-bench-"))  # cold cache every run
+                settings.scamurai_data_dir = Path(tempfile.mkdtemp(prefix="scamurai-bench-"))  # cold cache every run
                 started = time.perf_counter()
                 await Investigator(settings, Store(settings.db_path)).run(validate_input(text=text))
                 results[label].append((time.perf_counter() - started) / args.scale)

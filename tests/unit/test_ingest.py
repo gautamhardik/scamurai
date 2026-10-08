@@ -3,9 +3,9 @@ import io
 import pytest
 from PIL import Image
 
-from asli.errors import InputError
-from asli.ingest.images import SERP_MAX_BYTES, prepare_image
-from asli.ingest.validate import validate_input
+from scamurai.errors import InputError
+from scamurai.ingest.images import SERP_MAX_BYTES, prepare_image
+from scamurai.ingest.validate import validate_input
 
 
 def _png(w=1200, h=900, noise=True) -> bytes:

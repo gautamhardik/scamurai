@@ -1,24 +1,24 @@
-# Asli: is this real?
+# Scamurai: is this real?
 
-[![CI](https://github.com/gautamhardik/asli/actions/workflows/ci.yml/badge.svg)](https://github.com/gautamhardik/asli/actions/workflows/ci.yml)
+[![CI](https://github.com/gautamhardik/scamurai/actions/workflows/ci.yml/badge.svg)](https://github.com/gautamhardik/scamurai/actions/workflows/ci.yml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-1f4e79)
 ![License: MIT](https://img.shields.io/badge/license-MIT-1f4e79)
 
-**Asli** (असली, "real") checks suspicious messages, screenshots, links and phone numbers. You paste or upload the message. Asli pulls out the claims it makes and **checks each claim against live web evidence through SerpApi**. It then returns a calm, source-cited risk report in English, Hindi or Hinglish.
+**Scamurai** (scam + samurai) checks suspicious messages, screenshots, links and phone numbers. You paste or upload the message. Scamurai pulls out the claims it makes and **checks each claim against live web evidence through SerpApi**. It then returns a calm, source-cited risk report in English, Hindi or Hinglish.
 
-> Asli doesn't classify a message from its wording. It checks the message's claims against the live web, and every warning links to its source.
+> Scamurai doesn't classify a message from its wording. It checks the message's claims against the live web, and every warning links to its source.
 
 **At a glance**
 - **The problem:** fake electricity bills, KYC links, "digital arrest" threats, fake helplines, 90%-off deals and job offers with fees. Checking one properly takes about 15 minutes, so most people don't.
-- **What Asli does:**
+- **What Scamurai does:**
   - Reads the claims, from text or a Hindi screenshot.
   - Checks them live with **6 Google engines via SerpApi** (Search, News, Lens, Shopping, Jobs, Maps).
   - Scores the evidence with transparent rules; the AI never sets the score.
 - **Measured:** on 30 test messages, **10/10 scams flagged and 0/10 false alarms on genuine messages** from SBI, IRCTC, Amazon and others ([details](#measured-results)).
 - **Why SerpApi matters:** without live search, the same messages give 5/10.
-- **Try it with no keys:** `uv sync && uv run asli demo` replays real recorded evidence offline.
+- **Try it with no keys:** `uv sync && uv run scamurai demo` replays real recorded evidence offline.
 
-![Asli report for a fake sneaker deal: Google Lens finds the product photo on Myntra, Nike India and VegNonVeg at ₹6,300–₹9,000](docs/screenshots/report-deal.png)
+![Scamurai report for a fake sneaker deal: Google Lens finds the product photo on Myntra, Nike India and VegNonVeg at ₹6,300–₹9,000](docs/screenshots/report-deal.png)
 
 **Demo video:** _link added at submission_ · **Track:** Knowledge & Public Interest · **Built for:** SerpApi India Hackathon 2026
 
@@ -48,7 +48,7 @@ Checking even one of them properly takes about 15 minutes. You'd have to find th
 
 A language model reading the message alone can only guess. Live search finds the evidence.
 
-## What Asli does
+## What Scamurai does
 
 1. **Reads the claims.** It extracts who the message claims to be, plus every phone number, link, email, UPI ID, amount, product, price, job, address and app it mentions. Screenshots in Hindi work too. Every value must appear in the text you gave, or in the model's transcription of your screenshot (it is *grounded*), so a number the model invents can't be searched.
 2. **Plans the checks.** A rules-based planner chooses only the searches that matter for this kind of message. It plans at most 8 searches in 2 rounds.
@@ -63,11 +63,11 @@ A language model reading the message alone can only guess. Live search finds the
 
 ---
 
-## How Asli uses SerpApi
+## How Scamurai uses SerpApi
 
-SerpApi supplies all of Asli's evidence. Without it, Asli could only look for wording patterns. Each engine answers one specific question:
+SerpApi supplies all of Scamurai's evidence. Without it, Scamurai could only look for wording patterns. Each engine answers one specific question:
 
-| Engine | Question it answers | How Asli queries it | What it can prove |
+| Engine | Question it answers | How Scamurai queries it | What it can prove |
 |---|---|---|---|
 | **Google Search** (`google`) | What is the claimed organisation's official website and contact? | `"{org}" official website` (knowledge graph + top result) | The link or email domain isn't the organisation's (**I2**); all links are official (**T2**) |
 | **Google Search** | Has this exact number, UPI ID or domain been reported? | `"7000012345" OR "70000 12345" OR "+91 70000 12345"` / `"{upi}"` / `"{domain}"` | Reported in scam posts on independent sites (**W1/W12/W2**); no result mentions the domain (**W4**, cites the search so you can re-run it) |
@@ -119,7 +119,7 @@ Each signal has a fixed weight **w** and a confidence **c**. The confidence come
 | **No major warning signs** | Under 35 points, checks completed and positive confirmation (G4). The report adds "doesn't guarantee it's genuine". |
 | **Couldn't verify** | Under 35 points without confirmation, or too little evidence either way |
 
-**Citation rule.** Every flag cites evidence. Web and trust flags must cite a search result or an official reference, and a flag that can't is dropped. Message-pattern flags quote the exact sentence. Click **How Asli decided** in any report to see each signal's w, c and contribution.
+**Citation rule.** Every flag cites evidence. Web and trust flags must cite a search result or an official reference, and a flag that can't is dropped. Message-pattern flags quote the exact sentence. Click **How Scamurai decided** in any report to see each signal's w, c and contribution.
 
 **Safeguards against false positives:**
 - A scam word must appear *in the same result* as the number or domain, and for numbers and UPI IDs it must be scam-specific ("scam", "fake", "cheated", "ठगी"): words like "complaint" or "fraud" also appear on helpline directories and on banks' own fraud warnings.
@@ -175,28 +175,28 @@ The live column was measured again with model "thinking" switched off (the defau
 You need [uv](https://docs.astral.sh/uv/). It installs Python 3.12 automatically.
 
 ```bash
-git clone https://github.com/gautamhardik/asli && cd asli
+git clone https://github.com/gautamhardik/scamurai && cd scamurai
 uv sync
-uv run asli demo          # replay mode: recorded real evidence, no keys or network → http://127.0.0.1:8000
+uv run scamurai demo          # replay mode: recorded real evidence, no keys or network → http://127.0.0.1:8000
 ```
 
 **Live mode** needs a free [SerpApi key](https://serpapi.com/users/sign_up) and a free [OpenRouter key](https://openrouter.ai/keys):
 
 ```bash
 cp .env.example .env      # add SERPAPI_API_KEY and OPENROUTER_API_KEY
-uv run asli serve         # http://127.0.0.1:8000
+uv run scamurai serve         # http://127.0.0.1:8000
 ```
 
-Without uv: `pip install -e . && python -m asli serve`.
+Without uv: `pip install -e . && python -m scamurai serve`.
 
 ### Command line
 
 ```bash
-uv run asli check "Your SBI account will be blocked today. Update KYC at sbi-kyc-update.in"
-uv run asli check --image screenshot.jpg
-uv run asli check --scenario nike_deal --replay     # any demo scenario, offline
-uv run asli record --all                            # re-record demo scenarios from live searches
-uv run asli doctor                                  # keys, SerpApi credits, model availability
+uv run scamurai check "Your SBI account will be blocked today. Update KYC at sbi-kyc-update.in"
+uv run scamurai check --image screenshot.jpg
+uv run scamurai check --scenario nike_deal --replay     # any demo scenario, offline
+uv run scamurai record --all                            # re-record demo scenarios from live searches
+uv run scamurai doctor                                  # keys, SerpApi credits, model availability
 ```
 
 ### Environment variables
@@ -204,15 +204,15 @@ uv run asli doctor                                  # keys, SerpApi credits, mod
 | Variable | Default | Purpose |
 |---|---|---|
 | `SERPAPI_API_KEY` | — | Live searches |
-| `OPENROUTER_API_KEY` | — | Reading messages and screenshots. Without it, Asli falls back to rules-only extraction. |
-| `ASLI_MODE` | `live` | `replay` serves recorded evidence |
-| `ASLI_MAX_SEARCHES` | `8` | Searches per investigation |
-| `ASLI_DAILY_SEARCH_CAP` | `80` | Live searches per day |
-| `ASLI_MIN_CREDITS_RESERVE` | `10` | Stop live searching below this many SerpApi credits |
-| `ASLI_STORE_REPORTS` | `true` | Keep reports locally for 7 days (`/#r=<id>`) |
-| `ASLI_LLM_REASONING` | `off` | Model "thinking" for claim extraction (`off`, `low`, `medium`, `high`). Off is about 8× faster with the same extraction in our comparison. |
-| `ASLI_ALLOWED_HOSTS` | — | Extra host names to serve besides 127.0.0.1/localhost (when deployed) |
-| `ASLI_ACCESS_TOKEN` | — | Require a token for the API (open `/?token=…` once to set the cookie) |
+| `OPENROUTER_API_KEY` | — | Reading messages and screenshots. Without it, Scamurai falls back to rules-only extraction. |
+| `SCAMURAI_MODE` | `live` | `replay` serves recorded evidence |
+| `SCAMURAI_MAX_SEARCHES` | `8` | Searches per investigation |
+| `SCAMURAI_DAILY_SEARCH_CAP` | `80` | Live searches per day |
+| `SCAMURAI_MIN_CREDITS_RESERVE` | `10` | Stop live searching below this many SerpApi credits |
+| `SCAMURAI_STORE_REPORTS` | `true` | Keep reports locally for 7 days (`/#r=<id>`) |
+| `SCAMURAI_LLM_REASONING` | `off` | Model "thinking" for claim extraction (`off`, `low`, `medium`, `high`). Off is about 8× faster with the same extraction in our comparison. |
+| `SCAMURAI_ALLOWED_HOSTS` | — | Extra host names to serve besides 127.0.0.1/localhost (when deployed) |
+| `SCAMURAI_ACCESS_TOKEN` | — | Require a token for the API (open `/?token=…` once to set the cookie) |
 
 ---
 
@@ -240,7 +240,7 @@ flowchart TD
 Everything runs in one process with one SQLite file and no build step. The LLM sees only the user's message, never web content, and its output is closed-vocabulary JSON that is checked against the input.
 
 ```
-src/asli/
+src/scamurai/
   cli.py                  serve · demo · check · record · cache · doctor
   config.py  store.py  logs.py  errors.py  models.py  i18n.py
   ingest/                 validation, image safety, redaction, regex extractors
@@ -257,7 +257,7 @@ eval/                     30 labelled messages + results (scripts/evaluate.py)
 
 ## Security and privacy
 
-- **No SSRF by design.** Asli never fetches a link you give it. Links are parsed and searched. The server only talks to `serpapi.com` and `openrouter.ai`.
+- **No SSRF by design.** Scamurai never fetches a link you give it. Links are parsed and searched. The server only talks to `serpapi.com` and `openrouter.ai`.
 - **Prompt injection.**
   - Message and screenshot text is passed as delimited, untrusted data.
   - The model returns only closed-vocabulary JSON.
@@ -293,17 +293,17 @@ CI runs on Ubuntu and Windows.
 
 ## Limitations
 
-- **Asli can only cite what the web already knows.** A brand-new scam number or domain often has no history, so Asli relies on structural signals and may answer *Be careful* or *Couldn't verify*. That's deliberate.
+- **Scamurai can only cite what the web already knows.** A brand-new scam number or domain often has no history, so Scamurai relies on structural signals and may answer *Be careful* or *Couldn't verify*. That's deliberate.
 - **The weights are set by hand** and tuned on a small scenario suite and evaluation set, not learned from labelled data.
 - **Screenshot text comes from the AI's transcription.** Grounding checks values against it, so a digit the model misreads in a screenshot can still be searched.
 - **Live checks depend on free models.** Before model "thinking" was switched off for extraction, checks took a median of 23 s (90th percentile 65 s), mostly the AI reader. In single before/after comparisons, reasoning off cut a text read from 22 s to 3 s and a screenshot read from 68 s to about 13 s. Google Lens on a screenshot adds 15–45 s. Cached checks take milliseconds.
-- **Free AI models are slow and rate-limited** (often 15–45 s, 50 requests a day). Without the AI, Asli falls back to rules-only extraction, which can't read screenshots.
+- **Free AI models are slow and rate-limited** (often 15–45 s, 50 requests a day). Without the AI, Scamurai falls back to rules-only extraction, which can't read screenshots.
 - **Some details are Indian-specific:** the official-domain seed list covers about 50 frequently impersonated Indian organisations, and other organisations are looked up live.
-- **It is not legal advice.** Asli reports evidence, not certainties.
+- **It is not legal advice.** Scamurai reports evidence, not certainties.
 
 ## AI usage disclosure
 
-- **Built with AI:** Asli was designed and built with **Claude Code (Anthropic Claude Opus 5.5)**, covering architecture, code, tests and documentation. Hardik Gautam reviewed and directed the work.
+- **Built with AI:** Scamurai was designed and built with **Claude Code (Anthropic Claude Opus 5.5)**, covering architecture, code, tests and documentation. Hardik Gautam reviewed and directed the work.
 - **AI at runtime:** free models on OpenRouter (Google Gemma 4, NVIDIA Nemotron and dots.3, with fallback) read messages and screenshots and extract claims. All risk scoring is deterministic code.
 - **Demo content:** the demo messages, phone numbers and links are invented. Real organisations appear only as impersonation targets.
 

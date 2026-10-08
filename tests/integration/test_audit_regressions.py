@@ -10,23 +10,23 @@ import pytest
 from fastapi.testclient import TestClient
 from PIL import Image
 
-from asli.config import Settings, get_settings
-from asli.errors import AsliError
-from asli.ingest import regex_extract as rx
-from asli.ingest.images import prepare_image
-from asli.ingest.validate import validate_input
-from asli.investigate.orchestrator import Investigator
-from asli.llm import client as llm_client
-from asli.serp import client as serp_client
-from asli.store import Store
+from scamurai.config import Settings, get_settings
+from scamurai.errors import ScamuraiError
+from scamurai.ingest import regex_extract as rx
+from scamurai.ingest.images import prepare_image
+from scamurai.ingest.validate import validate_input
+from scamurai.investigate.orchestrator import Investigator
+from scamurai.llm import client as llm_client
+from scamurai.serp import client as serp_client
+from scamurai.store import Store
 
 NO_RESULTS = {"error": "Google hasn't returned any results for this query."}
 
 
 @pytest.fixture
 def live(tmp_path, monkeypatch):
-    monkeypatch.setenv("ASLI_MODE", "live")
-    monkeypatch.setenv("ASLI_DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("SCAMURAI_MODE", "live")
+    monkeypatch.setenv("SCAMURAI_DATA_DIR", str(tmp_path))
     monkeypatch.setenv("SERPAPI_API_KEY", "test-key")
     monkeypatch.setenv("OPENROUTER_API_KEY", "")
     get_settings.cache_clear()
@@ -136,7 +136,7 @@ async def test_unparseable_llm_response_degrades_to_rules(live, monkeypatch):
 # ----------------------------------------------------------------------------- web security (P1)
 @pytest.fixture
 def client(replay_settings):
-    from asli.web.app import create_app
+    from scamurai.web.app import create_app
 
     with TestClient(create_app(), base_url="http://127.0.0.1:8000") as c:
         yield c
@@ -153,7 +153,7 @@ def test_cross_site_posts_are_refused(client):
 
 
 def test_foreign_host_header_is_refused(replay_settings):
-    from asli.web.app import create_app
+    from scamurai.web.app import create_app
 
     app = create_app()
     with TestClient(app, base_url="http://attacker.example") as c:
@@ -179,7 +179,7 @@ def test_amount_regex_is_linear_and_reads_hindi_prefix():
     pytest.param(lambda: b"<svg xmlns='http://www.w3.org/2000/svg' onload='alert(1)'/>", id="svg"),
 ])
 def test_hostile_uploads_are_rejected(data):
-    with pytest.raises(AsliError):
+    with pytest.raises(ScamuraiError):
         prepare_image(data())
 
 
@@ -231,7 +231,7 @@ async def test_genuine_bank_alert_does_not_inherit_scam_headlines(live, monkeypa
 
 
 def test_upi_payee_in_a_transaction_notice_is_not_a_request():
-    from asli.knowledge.patterns import upi_is_requested
+    from scamurai.knowledge.patterns import upi_is_requested
 
     assert not upi_is_requested("Rs 1,250.00 debited from A/c XX4521 to VPA swiggy@icici. Not you? Call 1800 11 2211.",
                                 "swiggy@icici")
@@ -255,7 +255,7 @@ def test_upi_id_is_not_mistaken_for_a_website():
 async def test_a_search_still_processing_is_a_failure_not_cached_no_results(live, monkeypatch):
     """Lens took 40-47 s; after a timeout the retry returned the same search still 'Processing' with no
     results, which was cached for 24 h as 'no results'."""
-    from asli.serp.client import Budget, SerpClient
+    from scamurai.serp.client import Budget, SerpClient
 
     async def no_credits(self, max_age_s=600):
         return None
@@ -279,7 +279,7 @@ def test_usage_counter_rolls_over_with_openrouter(tmp_path):
     """OpenRouter's free allowance resets at 00:00 UTC, so the counter's day is the UTC date, not the local one."""
     from datetime import datetime
 
-    from asli.store import Store
+    from scamurai.store import Store
 
     store = Store(tmp_path / "s.sqlite3")
     assert store.usage_day() == datetime.now(UTC).date().isoformat()

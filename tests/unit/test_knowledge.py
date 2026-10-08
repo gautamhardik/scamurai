@@ -1,8 +1,13 @@
 import pytest
 
-from asli.knowledge import domains
-from asli.knowledge.lexicon import lexicon_hits
-from asli.knowledge.patterns import classify_scheme, detect_message_patterns, news_query, sanitize_query_term
+from scamurai.knowledge import domains
+from scamurai.knowledge.lexicon import lexicon_hits
+from scamurai.knowledge.patterns import (
+    classify_scheme,
+    detect_message_patterns,
+    news_query,
+    sanitize_query_term,
+)
 
 
 @pytest.mark.parametrize(

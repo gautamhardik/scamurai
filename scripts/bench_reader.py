@@ -30,9 +30,9 @@ def main() -> int:
     ap.add_argument("--text", default=DEFAULT_TEXT)
     args = ap.parse_args()
     sys.path.insert(0, str(ROOT / "src"))
-    from asli.config import Settings
-    from asli.llm.client import OPENROUTER_URL, parse_json_lenient
-    from asli.llm.extract import SYSTEM_PROMPT
+    from scamurai.config import Settings
+    from scamurai.llm.client import OPENROUTER_URL, parse_json_lenient
+    from scamurai.llm.extract import SYSTEM_PROMPT
 
     key = Settings().openrouter_api_key.get_secret_value().strip()
     system = SYSTEM_PROMPT.replace("CONTENT-ID", "CONTENT-<id>").replace("END-ID", "END-<id>")
@@ -48,7 +48,7 @@ def main() -> int:
                 }
                 started = time.perf_counter()
                 r = httpx.post(OPENROUTER_URL, json=body, timeout=180,
-                               headers={"Authorization": f"Bearer {key}", "X-Title": "Asli bench"})
+                               headers={"Authorization": f"Bearer {key}", "X-Title": "Scamurai bench"})
                 seconds = time.perf_counter() - started
                 payload = r.json() if r.headers.get("content-type", "").startswith("application/json") else {}
                 choice = (payload.get("choices") or [{}])[0]

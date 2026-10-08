@@ -1,4 +1,4 @@
-"""Run the evaluation set (eval/messages.json) and report how often Asli gets it right.
+"""Run the evaluation set (eval/messages.json) and report how often Scamurai gets it right.
 
     uv run python scripts/evaluate.py                 # rules only: no AI reader, no searches (free)
     uv run python scripts/evaluate.py --live --ids g01_sbi_debit,s07_paytm_kyc_call   # real APIs
@@ -40,13 +40,13 @@ async def main() -> int:
     args = ap.parse_args()
 
     if not args.live:  # isolate: no keys, throwaway data dir, so nothing is spent or cached
-        os.environ.update({"ASLI_MODE": "live", "SERPAPI_API_KEY": "", "OPENROUTER_API_KEY": "",
-                           "ASLI_DATA_DIR": tempfile.mkdtemp(prefix="asli-eval-")})
+        os.environ.update({"SCAMURAI_MODE": "live", "SERPAPI_API_KEY": "", "OPENROUTER_API_KEY": "",
+                           "SCAMURAI_DATA_DIR": tempfile.mkdtemp(prefix="scamurai-eval-")})
     sys.path.insert(0, str(ROOT / "src"))
-    from asli.config import Settings
-    from asli.ingest.validate import validate_input
-    from asli.investigate.orchestrator import Investigator
-    from asli.store import Store
+    from scamurai.config import Settings
+    from scamurai.ingest.validate import validate_input
+    from scamurai.investigate.orchestrator import Investigator
+    from scamurai.store import Store
 
     settings = Settings(_env_file=None) if not args.live else Settings()
     investigator = Investigator(settings, Store(settings.db_path))

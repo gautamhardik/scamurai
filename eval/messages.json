@@ -1,5 +1,5 @@
 {
-  "about": "Asli evaluation set: 30 hand-written messages in the style of real Indian SMS/WhatsApp texts. Labels: genuine (should not be flagged), scam (should be flagged HIGH_RISK or SUSPICIOUS), ambiguous (not enough to decide: should be UNVERIFIED or SUSPICIOUS, never HIGH_RISK or LOW_RISK). Phone numbers in scam and ambiguous messages are made up. Official numbers and domains in genuine messages are real.",
+  "about": "Scamurai evaluation set: 30 hand-written messages in the style of real Indian SMS/WhatsApp texts. Labels: genuine (should not be flagged), scam (should be flagged HIGH_RISK or SUSPICIOUS), ambiguous (not enough to decide: should be UNVERIFIED or SUSPICIOUS, never HIGH_RISK or LOW_RISK). Phone numbers in scam and ambiguous messages are made up. Official numbers and domains in genuine messages are real.",
   "messages": [
     {"id": "g01_sbi_debit", "label": "genuine", "lang": "en", "text": "Dear Customer, Rs 1,250.00 debited from A/c XX4521 on 05-10-26 to VPA swiggy@icici. Not you? Call 1800 11 2211 to block. -SBI"},
     {"id": "g02_amazon_dispatch", "label": "genuine", "lang": "en", "text": "Your Amazon order of 'boAt Airdopes 141' has been dispatched and will arrive by Thursday. Track it at amazon.in/your-orders"},

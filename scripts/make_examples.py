@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-OUT = Path(__file__).resolve().parents[1] / "src" / "asli" / "web" / "static" / "examples"
+OUT = Path(__file__).resolve().parents[1] / "src" / "scamurai" / "web" / "static" / "examples"
 FONT_HI = os.environ.get("FONT_HI", r"C:\Windows\Fonts\Nirmala.ttc")
 FONT_LATIN = os.environ.get("FONT_LATIN", r"C:\Windows\Fonts\segoeui.ttf")
 FONT_BOLD = os.environ.get("FONT_BOLD", r"C:\Windows\Fonts\segoeuib.ttf")

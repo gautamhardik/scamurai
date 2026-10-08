@@ -1,27 +1,27 @@
 # Submission form answers (paste-ready)
 
 ## Project name
-Asli
+Scamurai
 
 ## One-line description
-Asli checks suspicious messages, screenshots, links and numbers against live web evidence from SerpApi, and returns a source-cited risk report in English, Hindi or Hinglish.
+Scamurai checks suspicious messages, screenshots, links and numbers against live web evidence from SerpApi, and returns a source-cited risk report in English, Hindi or Hinglish.
 
 ## Project description
 Indians receive a steady stream of fake electricity-bill SMSes, KYC links, "digital arrest" threats, fake customer-care numbers, too-good-to-be-true deals and job offers that ask for a fee. Checking one properly takes about 15 minutes of searching, so most people don't check.
 
-Asli does that checking for them. You paste or screenshot the message. Asli extracts the claims it makes (who it says it's from, the number, link, UPI ID, price, job, address), plans only the searches that matter, and checks each claim live through SerpApi: Google Search, News, Lens (with the Image API), Shopping, Jobs and Maps.
+Scamurai does that checking for them. You paste or screenshot the message. Scamurai extracts the claims it makes (who it says it's from, the number, link, UPI ID, price, job, address), plans only the searches that matter, and checks each claim live through SerpApi: Google Search, News, Lens (with the Image API), Shopping, Jobs and Maps.
 
 A transparent, deterministic risk engine (not the AI) weighs the evidence. The result is a calm report: a verdict, a confidence level, every warning linked to its source, and what to do next (1930, cybercrime.gov.in, Chakshu). Reports come in English, Hindi or Hinglish, matching the message.
 
 **Who it's for:** anyone in India with a phone, and especially people who check messages on behalf of elderly relatives.
 
-**Measured, not claimed:** on a 30-message evaluation set in English, Hindi and Hinglish, live Asli flagged 10/10 scams and raised no false alarm on 10 genuine messages from real senders (SBI, IRCTC, UIDAI, Amazon, Flipkart…). It confirmed 6 of those 10 against official pages. The set is small and hand-written; the method and results are in the repository (`eval/`, `docs/AUDIT.md`).
+**Measured, not claimed:** on a 30-message evaluation set in English, Hindi and Hinglish, live Scamurai flagged 10/10 scams and raised no false alarm on 10 genuine messages from real senders (SBI, IRCTC, UIDAI, Amazon, Flipkart…). It confirmed 6 of those 10 against official pages. The set is small and hand-written; the method and results are in the repository (`eval/`, `docs/AUDIT.md`).
 
 ## Track
 Knowledge & Public Interest
 
 ## SerpApi usage (APIs and why they matter)
-SerpApi is Asli's evidence layer. Without it, Asli could only guess from a message's wording. Each engine answers one question about a claim:
+SerpApi is Scamurai's evidence layer. Without it, Scamurai could only guess from a message's wording. Each engine answers one question about a claim:
 
 - **Google Search:**
   - Finds the official website and contacts of the organisation the message claims to be (knowledge graph and top results).
@@ -33,7 +33,7 @@ SerpApi is Asli's evidence layer. Without it, Asli could only guess from a messa
 - **Google Jobs:** checks whether the company is actually hiring for the role in a job offer.
 - **Google Maps:** checks whether the "office" address in a job offer belongs to the company, or to apartments and hotels.
 
-Asli uses the official `serpapi` Python SDK. Every search is cached by engine and normalized parameters. Each investigation is limited to 8 searches in 2 rounds, with daily and credit-reserve guards. The 10 demo scenarios replay from recorded real SerpApi responses, so judges can run them without a key.
+Scamurai uses the official `serpapi` Python SDK. Every search is cached by engine and normalized parameters. Each investigation is limited to 8 searches in 2 rounds, with daily and credit-reserve guards. The 10 demo scenarios replay from recorded real SerpApi responses, so judges can run them without a key.
 
 ## Did the project exist before the hackathon?
 No. It was started on 7 October 2026 for this hackathon. The git history shows the build.
@@ -43,7 +43,7 @@ No. It was started on 7 October 2026 for this hackathon. The git history shows t
 - **At runtime:** free models on OpenRouter (Google Gemma 4, NVIDIA Nemotron, dots.3) read messages and screenshots and extract claims. All risk scoring is deterministic code, and the model never decides the verdict.
 
 ## Links
-- Repository: https://github.com/gautamhardik/asli
+- Repository: https://github.com/gautamhardik/scamurai
 - Demo video: _(unlisted YouTube link; test in incognito)_
 
 ## Checklist before pressing Submit

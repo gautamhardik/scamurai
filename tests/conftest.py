@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from asli.config import PACKAGE_DIR, Settings, get_settings
+from scamurai.config import PACKAGE_DIR, Settings, get_settings
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -21,8 +21,8 @@ def scenarios() -> list[dict]:
 @pytest.fixture
 def replay_settings(tmp_path, monkeypatch) -> Settings:
     """Replay mode, isolated data dir, no keys: tests never touch the network."""
-    monkeypatch.setenv("ASLI_MODE", "replay")
-    monkeypatch.setenv("ASLI_DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("SCAMURAI_MODE", "replay")
+    monkeypatch.setenv("SCAMURAI_DATA_DIR", str(tmp_path))
     monkeypatch.setenv("SERPAPI_API_KEY", "")
     monkeypatch.setenv("OPENROUTER_API_KEY", "")
     get_settings.cache_clear()
